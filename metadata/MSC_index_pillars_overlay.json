@@ -1,0 +1,511 @@
+{
+  "format_version": 1,
+  "source_file": "MSC_frontmatter.tex",
+  "derived_from": "Standard MSC 2020 groupings (AMS/zbMATH) mapped to MathKernel Pillars",
+  "sections": [
+    {
+      "msc_code": "00-XX",
+      "short_code": "00",
+      "title": "General and overarching topics; collections",
+      "primary_pillar": "01_fundamentos_logica",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "01-XX",
+      "short_code": "01",
+      "title": "History and biography",
+      "primary_pillar": "01_fundamentos_logica",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "03-XX",
+      "short_code": "03",
+      "title": "Mathematical logic and foundations",
+      "primary_pillar": "01_fundamentos_logica",
+      "secondary_pillars": ["05_discrecion_computacion"],
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "05-XX",
+      "short_code": "05",
+      "title": "Combinatorics",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": ["05_discrecion_computacion"],
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "06-XX",
+      "short_code": "06",
+      "title": "Order, lattices, ordered algebraic structures",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": ["01_fundamentos_logica"],
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "08-XX",
+      "short_code": "08",
+      "title": "General algebraic systems",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "11-XX",
+      "short_code": "11",
+      "title": "Number theory",
+      "primary_pillar": "05_discrecion_computacion",
+      "secondary_pillars": ["02_estructuras_algebraicas"],
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "12-XX",
+      "short_code": "12",
+      "title": "Field theory and polynomials",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "13-XX",
+      "short_code": "13",
+      "title": "Commutative algebra",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "14-XX",
+      "short_code": "14",
+      "title": "Algebraic geometry",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": ["04_espacio_forma"],
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "15-XX",
+      "short_code": "15",
+      "title": "Linear and multilinear algebra; matrix theory",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "16-XX",
+      "short_code": "16",
+      "title": "Associative rings and algebras",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "17-XX",
+      "short_code": "17",
+      "title": "Nonassociative rings and algebras",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "18-XX",
+      "short_code": "18",
+      "title": "Category theory; homological algebra",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": ["01_fundamentos_logica"],
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "19-XX",
+      "short_code": "19",
+      "title": "K-theory",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": ["04_espacio_forma"],
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "20-XX",
+      "short_code": "20",
+      "title": "Group theory and generalizations",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_20_a_28.json"
+    },
+    {
+      "msc_code": "22-XX",
+      "short_code": "22",
+      "title": "Topological groups, Lie groups",
+      "primary_pillar": "02_estructuras_algebraicas",
+      "secondary_pillars": ["04_espacio_forma"],
+      "target_json_file": "MSC_20_a_28.json"
+    },
+    {
+      "msc_code": "26-XX",
+      "short_code": "26",
+      "title": "Real functions",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_20_a_28.json"
+    },
+    {
+      "msc_code": "28-XX",
+      "short_code": "28",
+      "title": "Measure and integration",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_20_a_28.json"
+    },
+    {
+      "msc_code": "30-XX",
+      "short_code": "30",
+      "title": "Functions of a complex variable",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "31-XX",
+      "short_code": "31",
+      "title": "Potential theory",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "32-XX",
+      "short_code": "32",
+      "title": "Several complex variables and analytic spaces",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "33-XX",
+      "short_code": "33",
+      "title": "Special functions",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "34-XX",
+      "short_code": "34",
+      "title": "Ordinary differential equations",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "35-XX",
+      "short_code": "35",
+      "title": "Partial differential equations",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "37-XX",
+      "short_code": "37",
+      "title": "Dynamical systems and ergodic theory",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": ["05_discrecion_computacion"],
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "39-XX",
+      "short_code": "39",
+      "title": "Difference and functional equations",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "40-XX",
+      "short_code": "40",
+      "title": "Sequences, series, summability",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "41-XX",
+      "short_code": "41",
+      "title": "Approximations and expansions",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": ["05_discrecion_computacion"],
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "42-XX",
+      "short_code": "42",
+      "title": "Harmonic analysis on Euclidean spaces",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "43-XX",
+      "short_code": "43",
+      "title": "Abstract harmonic analysis",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "44-XX",
+      "short_code": "44",
+      "title": "Integral transforms, operational calculus",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "45-XX",
+      "short_code": "45",
+      "title": "Integral equations",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "46-XX",
+      "short_code": "46",
+      "title": "Functional analysis",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "47-XX",
+      "short_code": "47",
+      "title": "Operator theory",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "49-XX",
+      "short_code": "49",
+      "title": "Calculus of variations and optimal control; optimization",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": ["05_discrecion_computacion"],
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "51-XX",
+      "short_code": "51",
+      "title": "Geometry",
+      "primary_pillar": "04_espacio_forma",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "52-XX",
+      "short_code": "52",
+      "title": "Convex and discrete geometry",
+      "primary_pillar": "04_espacio_forma",
+      "secondary_pillars": ["05_discrecion_computacion"],
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "53-XX",
+      "short_code": "53",
+      "title": "Differential geometry",
+      "primary_pillar": "04_espacio_forma",
+      "secondary_pillars": ["03_analisis_continuidad"],
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "54-XX",
+      "short_code": "54",
+      "title": "General topology",
+      "primary_pillar": "04_espacio_forma",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "55-XX",
+      "short_code": "55",
+      "title": "Algebraic topology",
+      "primary_pillar": "04_espacio_forma",
+      "secondary_pillars": ["02_estructuras_algebraicas"],
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "57-XX",
+      "short_code": "57",
+      "title": "Manifolds and cell complexes",
+      "primary_pillar": "04_espacio_forma",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "58-XX",
+      "short_code": "58",
+      "title": "Global analysis, analysis on manifolds",
+      "primary_pillar": "04_espacio_forma",
+      "secondary_pillars": ["03_analisis_continuidad"],
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "60-XX",
+      "short_code": "60",
+      "title": "Probability theory and stochastic processes",
+      "primary_pillar": "06_estocastica_incertidumbre",
+      "secondary_pillars": ["03_analisis_continuidad"],
+      "target_json_file": "MSC_60_a_68.json"
+    },
+    {
+      "msc_code": "62-XX",
+      "short_code": "62",
+      "title": "Statistics",
+      "primary_pillar": "06_estocastica_incertidumbre",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_60_a_68.json"
+    },
+    {
+      "msc_code": "65-XX",
+      "short_code": "65",
+      "title": "Numerical analysis",
+      "primary_pillar": "05_discrecion_computacion",
+      "secondary_pillars": ["03_analisis_continuidad"],
+      "target_json_file": "MSC_60_a_68.json"
+    },
+    {
+      "msc_code": "68-XX",
+      "short_code": "68",
+      "title": "Computer science",
+      "primary_pillar": "05_discrecion_computacion",
+      "secondary_pillars": [],
+      "target_json_file": "MSC_60_a_68.json"
+    },
+    {
+      "msc_code": "70-XX",
+      "short_code": "70",
+      "title": "Mechanics of particles and systems",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": ["04_espacio_forma"],
+      "target_json_file": "MSC_70_a_78.json"
+    },
+    {
+      "msc_code": "74-XX",
+      "short_code": "74",
+      "title": "Mechanics of deformable solids",
+      "primary_pillar": "03_analisis_continuidad",
+      "target_json_file": "MSC_70_a_78.json"
+    },
+    {
+      "msc_code": "76-XX",
+      "short_code": "76",
+      "title": "Fluid mechanics",
+      "primary_pillar": "03_analisis_continuidad",
+      "target_json_file": "MSC_70_a_78.json"
+    },
+    {
+      "msc_code": "78-XX",
+      "short_code": "78",
+      "title": "Optics, electromagnetic theory",
+      "primary_pillar": "03_analisis_continuidad",
+      "target_json_file": "MSC_70_a_78.json"
+    },
+    {
+      "msc_code": "80-XX",
+      "short_code": "80",
+      "title": "Classical thermodynamics, heat transfer",
+      "primary_pillar": "03_analisis_continuidad",
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "81-XX",
+      "short_code": "81",
+      "title": "Quantum theory",
+      "primary_pillar": "03_analisis_continuidad",
+      "secondary_pillars": ["02_estructuras_algebraicas"],
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "82-XX",
+      "short_code": "82",
+      "title": "Statistical mechanics, structure of matter",
+      "primary_pillar": "06_estocastica_incertidumbre",
+      "secondary_pillars": ["03_analisis_continuidad"],
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "83-XX",
+      "short_code": "83",
+      "title": "Relativity and gravitational theory",
+      "primary_pillar": "04_espacio_forma",
+      "secondary_pillars": ["03_analisis_continuidad"],
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "85-XX",
+      "short_code": "85",
+      "title": "Astronomy and astrophysics",
+      "primary_pillar": "03_analisis_continuidad",
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "86-XX",
+      "short_code": "86",
+      "title": "Geophysics",
+      "primary_pillar": "03_analisis_continuidad",
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "90-XX",
+      "short_code": "90",
+      "title": "Operations research, mathematical programming",
+      "primary_pillar": "05_discrecion_computacion",
+      "secondary_pillars": ["06_estocastica_incertidumbre"],
+      "target_json_file": "MSC_90_a_97.json"
+    },
+    {
+      "msc_code": "91-XX",
+      "short_code": "91",
+      "title": "Game theory, economics, social and behavioral sciences",
+      "primary_pillar": "06_estocastica_incertidumbre",
+      "secondary_pillars": ["05_discrecion_computacion"],
+      "target_json_file": "MSC_90_a_97.json"
+    },
+    {
+      "msc_code": "92-XX",
+      "short_code": "92",
+      "title": "Biology and other natural sciences",
+      "primary_pillar": "03_analisis_continuidad",
+      "target_json_file": "MSC_90_a_97.json"
+    },
+    {
+      "msc_code": "93-XX",
+      "short_code": "93",
+      "title": "Systems theory; control",
+      "primary_pillar": "03_analisis_continuidad",
+      "target_json_file": "MSC_90_a_97.json"
+    },
+    {
+      "msc_code": "94-XX",
+      "short_code": "94",
+      "title": "Information and communication, circuits",
+      "primary_pillar": "05_discrecion_computacion",
+      "target_json_file": "MSC_90_a_97.json"
+    },
+    {
+      "msc_code": "97-XX",
+      "short_code": "97",
+      "title": "Mathematics education",
+      "primary_pillar": "01_fundamentos_logica",
+      "target_json_file": "MSC_90_a_97.json"
+    }
+  ],
+  "overlay_schema_version": 1.1,
+  "overlay_updated_at": "2026-04-26",
+  "pillar_ids": [
+    "01_fundamentos_logica",
+    "02_estructuras_algebraicas",
+    "03_analisis_continuidad",
+    "04_espacio_forma",
+    "05_discrecion_computacion",
+    "06_estocastica_incertidumbre"
+  ]
+}

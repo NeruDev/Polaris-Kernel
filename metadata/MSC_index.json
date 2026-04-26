@@ -1,0 +1,763 @@
+{
+  "format_version": 1,
+  "source_file": "MSC_frontmatter.tex",
+  "derived_from": "\\begin{description}...\\end{description} (multicols) index",
+  "sections": [
+    {
+      "msc_code": "00-XX",
+      "short_code": "00",
+      "title": "General and overarching topics; collections",
+      "title_tex": "General and overarching topics; collections",
+      "aliases": [
+        "00",
+        "00-XX"
+      ],
+      "target_tex_file": "MSC_00_a_08.tex",
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "01-XX",
+      "short_code": "01",
+      "title": "History and biography",
+      "title_tex": "History and biography",
+      "aliases": [
+        "01",
+        "01-XX"
+      ],
+      "target_tex_file": "MSC_00_a_08.tex",
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "03-XX",
+      "short_code": "03",
+      "title": "Mathematical logic and foundations",
+      "title_tex": "Mathematical logic and foundations",
+      "aliases": [
+        "03",
+        "03-XX"
+      ],
+      "target_tex_file": "MSC_00_a_08.tex",
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "05-XX",
+      "short_code": "05",
+      "title": "Combinatorics",
+      "title_tex": "Combinatorics",
+      "aliases": [
+        "05",
+        "05-XX"
+      ],
+      "target_tex_file": "MSC_00_a_08.tex",
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "06-XX",
+      "short_code": "06",
+      "title": "Order, lattices, ordered algebraic structures",
+      "title_tex": "Order, lattices, ordered algebraic structures",
+      "aliases": [
+        "06",
+        "06-XX"
+      ],
+      "target_tex_file": "MSC_00_a_08.tex",
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "08-XX",
+      "short_code": "08",
+      "title": "General algebraic systems",
+      "title_tex": "General algebraic systems",
+      "aliases": [
+        "08",
+        "08-XX"
+      ],
+      "target_tex_file": "MSC_00_a_08.tex",
+      "target_json_file": "MSC_00_a_08.json"
+    },
+    {
+      "msc_code": "11-XX",
+      "short_code": "11",
+      "title": "Number theory",
+      "title_tex": "Number theory",
+      "aliases": [
+        "11",
+        "11-XX"
+      ],
+      "target_tex_file": "MSC_11_a_19.tex",
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "12-XX",
+      "short_code": "12",
+      "title": "Field theory and polynomials",
+      "title_tex": "Field theory and polynomials",
+      "aliases": [
+        "12",
+        "12-XX"
+      ],
+      "target_tex_file": "MSC_11_a_19.tex",
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "13-XX",
+      "short_code": "13",
+      "title": "Commutative algebra",
+      "title_tex": "Commutative algebra",
+      "aliases": [
+        "13",
+        "13-XX"
+      ],
+      "target_tex_file": "MSC_11_a_19.tex",
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "14-XX",
+      "short_code": "14",
+      "title": "Algebraic geometry",
+      "title_tex": "Algebraic geometry",
+      "aliases": [
+        "14",
+        "14-XX"
+      ],
+      "target_tex_file": "MSC_11_a_19.tex",
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "15-XX",
+      "short_code": "15",
+      "title": "Linear and multilinear algebra; matrix theory",
+      "title_tex": "Linear and multilinear algebra; matrix theory",
+      "aliases": [
+        "15",
+        "15-XX"
+      ],
+      "target_tex_file": "MSC_11_a_19.tex",
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "16-XX",
+      "short_code": "16",
+      "title": "Associative rings and algebras",
+      "title_tex": "Associative rings and algebras",
+      "aliases": [
+        "16",
+        "16-XX"
+      ],
+      "target_tex_file": "MSC_11_a_19.tex",
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "17-XX",
+      "short_code": "17",
+      "title": "Nonassociative rings and algebras",
+      "title_tex": "Nonassociative rings and algebras",
+      "aliases": [
+        "17",
+        "17-XX"
+      ],
+      "target_tex_file": "MSC_11_a_19.tex",
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "18-XX",
+      "short_code": "18",
+      "title": "Category theory; homological algebra",
+      "title_tex": "Category theory; homological algebra",
+      "aliases": [
+        "18",
+        "18-XX"
+      ],
+      "target_tex_file": "MSC_11_a_19.tex",
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "19-XX",
+      "short_code": "19",
+      "title": "K-theory",
+      "title_tex": "$K$-theory",
+      "aliases": [
+        "19",
+        "19-XX"
+      ],
+      "target_tex_file": "MSC_11_a_19.tex",
+      "target_json_file": "MSC_11_a_19.json"
+    },
+    {
+      "msc_code": "20-XX",
+      "short_code": "20",
+      "title": "Group theory and generalizations",
+      "title_tex": "Group theory and generalizations",
+      "aliases": [
+        "20",
+        "20-XX"
+      ],
+      "target_tex_file": "MSC_20_a_28.tex",
+      "target_json_file": "MSC_20_a_28.json"
+    },
+    {
+      "msc_code": "22-XX",
+      "short_code": "22",
+      "title": "Topological groups, Lie groups",
+      "title_tex": "Topological groups, Lie groups",
+      "aliases": [
+        "22",
+        "22-XX"
+      ],
+      "target_tex_file": "MSC_20_a_28.tex",
+      "target_json_file": "MSC_20_a_28.json"
+    },
+    {
+      "msc_code": "26-XX",
+      "short_code": "26",
+      "title": "Real functions",
+      "title_tex": "Real functions",
+      "aliases": [
+        "26",
+        "26-XX"
+      ],
+      "target_tex_file": "MSC_20_a_28.tex",
+      "target_json_file": "MSC_20_a_28.json"
+    },
+    {
+      "msc_code": "28-XX",
+      "short_code": "28",
+      "title": "Measure and integration",
+      "title_tex": "Measure and integration",
+      "aliases": [
+        "28",
+        "28-XX"
+      ],
+      "target_tex_file": "MSC_20_a_28.tex",
+      "target_json_file": "MSC_20_a_28.json"
+    },
+    {
+      "msc_code": "30-XX",
+      "short_code": "30",
+      "title": "Functions of a complex variable",
+      "title_tex": "Functions of a complex variable",
+      "aliases": [
+        "30",
+        "30-XX"
+      ],
+      "target_tex_file": "MSC_30_a_39.tex",
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "31-XX",
+      "short_code": "31",
+      "title": "Potential theory",
+      "title_tex": "Potential theory",
+      "aliases": [
+        "31",
+        "31-XX"
+      ],
+      "target_tex_file": "MSC_30_a_39.tex",
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "32-XX",
+      "short_code": "32",
+      "title": "Several complex variables and analytic spaces",
+      "title_tex": "Several complex variables and analytic spaces",
+      "aliases": [
+        "32",
+        "32-XX"
+      ],
+      "target_tex_file": "MSC_30_a_39.tex",
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "33-XX",
+      "short_code": "33",
+      "title": "Special functions",
+      "title_tex": "Special functions",
+      "aliases": [
+        "33",
+        "33-XX"
+      ],
+      "target_tex_file": "MSC_30_a_39.tex",
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "34-XX",
+      "short_code": "34",
+      "title": "Ordinary differential equations",
+      "title_tex": "Ordinary differential equations",
+      "aliases": [
+        "34",
+        "34-XX"
+      ],
+      "target_tex_file": "MSC_30_a_39.tex",
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "35-XX",
+      "short_code": "35",
+      "title": "Partial differential equations",
+      "title_tex": "Partial differential equations",
+      "aliases": [
+        "35",
+        "35-XX"
+      ],
+      "target_tex_file": "MSC_30_a_39.tex",
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "37-XX",
+      "short_code": "37",
+      "title": "Dynamical systems and ergodic theory",
+      "title_tex": "Dynamical systems and ergodic theory",
+      "aliases": [
+        "37",
+        "37-XX"
+      ],
+      "target_tex_file": "MSC_30_a_39.tex",
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "39-XX",
+      "short_code": "39",
+      "title": "Difference and functional equations",
+      "title_tex": "Difference and functional equations",
+      "aliases": [
+        "39",
+        "39-XX"
+      ],
+      "target_tex_file": "MSC_30_a_39.tex",
+      "target_json_file": "MSC_30_a_39.json"
+    },
+    {
+      "msc_code": "40-XX",
+      "short_code": "40",
+      "title": "Sequences, series, summability",
+      "title_tex": "Sequences, series, summability",
+      "aliases": [
+        "40",
+        "40-XX"
+      ],
+      "target_tex_file": "MSC_40_a_49.tex",
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "41-XX",
+      "short_code": "41",
+      "title": "Approximations and expansions",
+      "title_tex": "Approximations and expansions",
+      "aliases": [
+        "41",
+        "41-XX"
+      ],
+      "target_tex_file": "MSC_40_a_49.tex",
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "42-XX",
+      "short_code": "42",
+      "title": "Harmonic analysis on Euclidean spaces",
+      "title_tex": "Harmonic analysis on Euclidean spaces",
+      "aliases": [
+        "42",
+        "42-XX"
+      ],
+      "target_tex_file": "MSC_40_a_49.tex",
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "43-XX",
+      "short_code": "43",
+      "title": "Abstract harmonic analysis",
+      "title_tex": "Abstract harmonic analysis",
+      "aliases": [
+        "43",
+        "43-XX"
+      ],
+      "target_tex_file": "MSC_40_a_49.tex",
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "44-XX",
+      "short_code": "44",
+      "title": "Integral transforms, operational calculus",
+      "title_tex": "Integral transforms, operational calculus",
+      "aliases": [
+        "44",
+        "44-XX"
+      ],
+      "target_tex_file": "MSC_40_a_49.tex",
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "45-XX",
+      "short_code": "45",
+      "title": "Integral equations",
+      "title_tex": "Integral equations",
+      "aliases": [
+        "45",
+        "45-XX"
+      ],
+      "target_tex_file": "MSC_40_a_49.tex",
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "46-XX",
+      "short_code": "46",
+      "title": "Functional analysis",
+      "title_tex": "Functional analysis",
+      "aliases": [
+        "46",
+        "46-XX"
+      ],
+      "target_tex_file": "MSC_40_a_49.tex",
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "47-XX",
+      "short_code": "47",
+      "title": "Operator theory",
+      "title_tex": "Operator theory",
+      "aliases": [
+        "47",
+        "47-XX"
+      ],
+      "target_tex_file": "MSC_40_a_49.tex",
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "49-XX",
+      "short_code": "49",
+      "title": "Calculus of variations and optimal control; optimization",
+      "title_tex": "Calculus of variations and optimal control; optimization",
+      "aliases": [
+        "49",
+        "49-XX"
+      ],
+      "target_tex_file": "MSC_40_a_49.tex",
+      "target_json_file": "MSC_40_a_49.json"
+    },
+    {
+      "msc_code": "51-XX",
+      "short_code": "51",
+      "title": "Geometry",
+      "title_tex": "Geometry",
+      "aliases": [
+        "51",
+        "51-XX"
+      ],
+      "target_tex_file": "MSC_51_a_58.tex",
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "52-XX",
+      "short_code": "52",
+      "title": "Convex and discrete geometry",
+      "title_tex": "Convex and discrete geometry",
+      "aliases": [
+        "52",
+        "52-XX"
+      ],
+      "target_tex_file": "MSC_51_a_58.tex",
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "53-XX",
+      "short_code": "53",
+      "title": "Differential geometry",
+      "title_tex": "Differential geometry",
+      "aliases": [
+        "53",
+        "53-XX"
+      ],
+      "target_tex_file": "MSC_51_a_58.tex",
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "54-XX",
+      "short_code": "54",
+      "title": "General topology",
+      "title_tex": "General topology",
+      "aliases": [
+        "54",
+        "54-XX"
+      ],
+      "target_tex_file": "MSC_51_a_58.tex",
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "55-XX",
+      "short_code": "55",
+      "title": "Algebraic topology",
+      "title_tex": "Algebraic topology",
+      "aliases": [
+        "55",
+        "55-XX"
+      ],
+      "target_tex_file": "MSC_51_a_58.tex",
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "57-XX",
+      "short_code": "57",
+      "title": "Manifolds and cell complexes",
+      "title_tex": "Manifolds and cell complexes",
+      "aliases": [
+        "57",
+        "57-XX"
+      ],
+      "target_tex_file": "MSC_51_a_58.tex",
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "58-XX",
+      "short_code": "58",
+      "title": "Global analysis, analysis on manifolds",
+      "title_tex": "Global analysis, analysis on manifolds",
+      "aliases": [
+        "58",
+        "58-XX"
+      ],
+      "target_tex_file": "MSC_51_a_58.tex",
+      "target_json_file": "MSC_51_a_58.json"
+    },
+    {
+      "msc_code": "60-XX",
+      "short_code": "60",
+      "title": "Probability theory and stochastic processes",
+      "title_tex": "Probability theory and stochastic processes",
+      "aliases": [
+        "60",
+        "60-XX"
+      ],
+      "target_tex_file": "MSC_60_a_68.tex",
+      "target_json_file": "MSC_60_a_68.json"
+    },
+    {
+      "msc_code": "62-XX",
+      "short_code": "62",
+      "title": "Statistics",
+      "title_tex": "Statistics",
+      "aliases": [
+        "62",
+        "62-XX"
+      ],
+      "target_tex_file": "MSC_60_a_68.tex",
+      "target_json_file": "MSC_60_a_68.json"
+    },
+    {
+      "msc_code": "65-XX",
+      "short_code": "65",
+      "title": "Numerical analysis",
+      "title_tex": "Numerical analysis",
+      "aliases": [
+        "65",
+        "65-XX"
+      ],
+      "target_tex_file": "MSC_60_a_68.tex",
+      "target_json_file": "MSC_60_a_68.json"
+    },
+    {
+      "msc_code": "68-XX",
+      "short_code": "68",
+      "title": "Computer science",
+      "title_tex": "Computer science",
+      "aliases": [
+        "68",
+        "68-XX"
+      ],
+      "target_tex_file": "MSC_60_a_68.tex",
+      "target_json_file": "MSC_60_a_68.json"
+    },
+    {
+      "msc_code": "70-XX",
+      "short_code": "70",
+      "title": "Mechanics of particles and systems",
+      "title_tex": "Mechanics of particles and systems",
+      "aliases": [
+        "70",
+        "70-XX"
+      ],
+      "target_tex_file": "MSC_70_a_78.tex",
+      "target_json_file": "MSC_70_a_78.json"
+    },
+    {
+      "msc_code": "74-XX",
+      "short_code": "74",
+      "title": "Mechanics of deformable solids",
+      "title_tex": "Mechanics of deformable solids",
+      "aliases": [
+        "74",
+        "74-XX"
+      ],
+      "target_tex_file": "MSC_70_a_78.tex",
+      "target_json_file": "MSC_70_a_78.json"
+    },
+    {
+      "msc_code": "76-XX",
+      "short_code": "76",
+      "title": "Fluid mechanics",
+      "title_tex": "Fluid mechanics",
+      "aliases": [
+        "76",
+        "76-XX"
+      ],
+      "target_tex_file": "MSC_70_a_78.tex",
+      "target_json_file": "MSC_70_a_78.json"
+    },
+    {
+      "msc_code": "78-XX",
+      "short_code": "78",
+      "title": "Optics, electromagnetic theory",
+      "title_tex": "Optics, electromagnetic theory",
+      "aliases": [
+        "78",
+        "78-XX"
+      ],
+      "target_tex_file": "MSC_70_a_78.tex",
+      "target_json_file": "MSC_70_a_78.json"
+    },
+    {
+      "msc_code": "80-XX",
+      "short_code": "80",
+      "title": "Classical thermodynamics, heat transfer",
+      "title_tex": "Classical thermodynamics, heat transfer",
+      "aliases": [
+        "80",
+        "80-XX"
+      ],
+      "target_tex_file": "MSC_80_a_86.tex",
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "81-XX",
+      "short_code": "81",
+      "title": "Quantum theory",
+      "title_tex": "Quantum theory",
+      "aliases": [
+        "81",
+        "81-XX"
+      ],
+      "target_tex_file": "MSC_80_a_86.tex",
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "82-XX",
+      "short_code": "82",
+      "title": "Statistical mechanics, structure of matter",
+      "title_tex": "Statistical mechanics, structure of matter",
+      "aliases": [
+        "82",
+        "82-XX"
+      ],
+      "target_tex_file": "MSC_80_a_86.tex",
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "83-XX",
+      "short_code": "83",
+      "title": "Relativity and gravitational theory",
+      "title_tex": "Relativity and gravitational theory",
+      "aliases": [
+        "83",
+        "83-XX"
+      ],
+      "target_tex_file": "MSC_80_a_86.tex",
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "85-XX",
+      "short_code": "85",
+      "title": "Astronomy and astrophysics",
+      "title_tex": "Astronomy and astrophysics",
+      "aliases": [
+        "85",
+        "85-XX"
+      ],
+      "target_tex_file": "MSC_80_a_86.tex",
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "86-XX",
+      "short_code": "86",
+      "title": "Geophysics",
+      "title_tex": "Geophysics",
+      "aliases": [
+        "86",
+        "86-XX"
+      ],
+      "target_tex_file": "MSC_80_a_86.tex",
+      "target_json_file": "MSC_80_a_86.json"
+    },
+    {
+      "msc_code": "90-XX",
+      "short_code": "90",
+      "title": "Operations research, mathematical programming",
+      "title_tex": "Operations research, mathematical programming",
+      "aliases": [
+        "90",
+        "90-XX"
+      ],
+      "target_tex_file": "MSC_90_a_97.tex",
+      "target_json_file": "MSC_90_a_97.json"
+    },
+    {
+      "msc_code": "91-XX",
+      "short_code": "91",
+      "title": "Game theory, economics, social and behavioral sciences",
+      "title_tex": "Game theory, economics, social and behavioral sciences",
+      "aliases": [
+        "91",
+        "91-XX"
+      ],
+      "target_tex_file": "MSC_90_a_97.tex",
+      "target_json_file": "MSC_90_a_97.json"
+    },
+    {
+      "msc_code": "92-XX",
+      "short_code": "92",
+      "title": "Biology and other natural sciences",
+      "title_tex": "Biology and other natural sciences",
+      "aliases": [
+        "92",
+        "92-XX"
+      ],
+      "target_tex_file": "MSC_90_a_97.tex",
+      "target_json_file": "MSC_90_a_97.json"
+    },
+    {
+      "msc_code": "93-XX",
+      "short_code": "93",
+      "title": "Systems theory; control",
+      "title_tex": "Systems theory; control",
+      "aliases": [
+        "93",
+        "93-XX"
+      ],
+      "target_tex_file": "MSC_90_a_97.tex",
+      "target_json_file": "MSC_90_a_97.json"
+    },
+    {
+      "msc_code": "94-XX",
+      "short_code": "94",
+      "title": "Information and communication, circuits",
+      "title_tex": "Information and communication, circuits",
+      "aliases": [
+        "94",
+        "94-XX"
+      ],
+      "target_tex_file": "MSC_90_a_97.tex",
+      "target_json_file": "MSC_90_a_97.json"
+    },
+    {
+      "msc_code": "97-XX",
+      "short_code": "97",
+      "title": "Mathematics education",
+      "title_tex": "Mathematics education",
+      "aliases": [
+        "97",
+        "97-XX"
+      ],
+      "target_tex_file": "MSC_90_a_97.tex",
+      "target_json_file": "MSC_90_a_97.json"
+    }
+  ]
+}
