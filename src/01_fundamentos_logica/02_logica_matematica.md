@@ -11,6 +11,9 @@ status: "stable"
 
 # Lógica matemática
 
+![Metáfora del dominó para inducción](induccion_matematica.svg)
+
+
 ![Representacion de una operacion logica AND](logica_conectivos.svg)
 
 La lógica matemática es el estudio formal de los sistemas de razonamiento. 

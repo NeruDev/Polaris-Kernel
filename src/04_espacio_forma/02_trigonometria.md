@@ -11,6 +11,9 @@ status: "stable"
 
 # Trigonometría Fundamental
 
+![Comparativa de funciones seno y coseno](graficas_seno_coseno.svg)
+
+
 ![Comparativa de funciones trigonométricas](grafica_seno_coseno.svg)
 
 La trigonometría es el estudio de las relaciones entre los ángulos y los lados de los triángulos.
