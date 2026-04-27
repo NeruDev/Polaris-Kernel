@@ -1,0 +1,8 @@
+{
+    "id": "error_handling",
+    "title": "Gestor unificado de errores y recolección de incidencias",
+    "tags": [
+        "core",
+        "error-handling"
+    ]
+}

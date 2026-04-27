@@ -1,0 +1,15 @@
+{
+    "id": "msc11_sistemas_numericos_propiedades",
+    "title": "Aritmética: Propiedades de las Operaciones",
+    "pilar": "01_fundamentos_logica",
+    "msc_code": "11-01",
+    "tags": [
+        "aritmetica",
+        "propiedades",
+        "suma",
+        "multiplicacion"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

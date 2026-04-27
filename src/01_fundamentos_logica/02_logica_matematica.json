@@ -1,0 +1,13 @@
+{
+    "id": "msc03_logica_matematica",
+    "title": "Lógica matemática",
+    "pilar": "01_fundamentos_logica",
+    "msc_code": "03-XX",
+    "tags": [
+        "logica",
+        "proposiciones"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "draft"
+}

@@ -1,0 +1,13 @@
+{
+    "id": "msc60_teoria_de_probabilidad",
+    "title": "Teoría de probabilidad",
+    "pilar": "06_estocastica_incertidumbre",
+    "msc_code": "60-XX",
+    "tags": [
+        "probabilidad",
+        "azar"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

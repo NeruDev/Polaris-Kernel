@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Esquema de Metadatos de Scripts (AI-Ready)",
+    "type": "object",
+    "required": ["id", "title", "role", "inputs", "outputs", "status"],
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Identificador unico del script (ej. build_system)"
+        },
+        "title": {
+            "type": "string"
+        },
+        "script_path": {
+            "type": "string",
+            "description": "Ruta relativa desde la raiz del proyecto"
+        },
+        "role": {
+            "type": "string",
+            "enum": ["orchestrator", "validator", "generator", "utility", "migration"],
+            "description": "Funcion principal del script en el ecosistema"
+        },
+        "inputs": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Archivos o datos que consume"
+        },
+        "outputs": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Archivos o efectos que produce"
+        },
+        "dependencies": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Librerias o modulos criticos necesarios"
+        },
+        "status": {
+            "type": "string",
+            "enum": ["active", "deprecated", "experimental"]
+        }
+    }
+}

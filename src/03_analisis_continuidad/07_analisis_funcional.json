@@ -1,0 +1,14 @@
+{
+    "id": "msc46_analisis_funcional",
+    "title": "Análisis funcional",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "46-XX",
+    "tags": [
+        "banach",
+        "hilbert",
+        "operadores"
+    ],
+    "nivel": "avanzado",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

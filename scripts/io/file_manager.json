@@ -1,0 +1,8 @@
+{
+    "id": "file_manager",
+    "title": "Abstraccion de operaciones de I/O para Markdown y JSON",
+    "tags": [
+        "io",
+        "filesystem"
+    ]
+}

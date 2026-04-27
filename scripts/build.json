@@ -1,0 +1,9 @@
+{
+    "id": "build",
+    "title": "Orquestador unificado de construccion y validacion",
+    "tags": [
+        "build",
+        "pipeline",
+        "automation"
+    ]
+}

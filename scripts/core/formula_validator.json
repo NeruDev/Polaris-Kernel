@@ -1,0 +1,9 @@
+{
+    "id": "formula_validator",
+    "title": "Validador de sintaxis LaTeX y tablas Markdown",
+    "tags": [
+        "core",
+        "validation",
+        "math"
+    ]
+}

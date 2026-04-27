@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Esquema de Metadatos para Logica y Herramientas (AI-Ready)",
+    "type": "object",
+    "required": ["id", "title", "role", "inputs", "outputs", "status"],
+    "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "role": { 
+            "type": "string", 
+            "enum": ["orchestrator", "validator", "generator", "utility", "test_suite", "migration"] 
+        },
+        "description": { "type": "string" },
+        "inputs": { "type": "array", "items": { "type": "string" } },
+        "outputs": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": "string", "enum": ["active", "experimental", "deprecated"] }
+    }
+}

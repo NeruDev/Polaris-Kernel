@@ -1,0 +1,13 @@
+{
+    "id": "msc54_topologia",
+    "title": "Topología",
+    "pilar": "04_espacio_forma",
+    "msc_code": "54-XX",
+    "tags": [
+        "topologia",
+        "metricas"
+    ],
+    "nivel": "avanzado",
+    "updated": "2026-04-26",
+    "status": "draft"
+}

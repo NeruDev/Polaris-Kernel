@@ -1,0 +1,8 @@
+{
+    "id": "encoding_validator",
+    "title": "Validador estricto de codificación UTF-8",
+    "tags": [
+        "core",
+        "validation"
+    ]
+}

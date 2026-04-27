@@ -1,0 +1,15 @@
+{
+    "id": "msc11_teoria_de_numeros",
+    "title": "Teoría de Números y Divisibilidad",
+    "pilar": "05_discrecion_computacion",
+    "msc_code": "11-XX",
+    "tags": [
+        "divisibilidad",
+        "primos",
+        "modular",
+        "aritmetica"
+    ],
+    "nivel": "intermedio",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

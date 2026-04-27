@@ -1,0 +1,13 @@
+{
+    "id": "msc53_geometria_diferencial",
+    "title": "Geometría diferencial",
+    "pilar": "04_espacio_forma",
+    "msc_code": "53-XX",
+    "tags": [
+        "variedades",
+        "curvas"
+    ],
+    "nivel": "avanzado",
+    "updated": "2026-04-26",
+    "status": "draft"
+}
