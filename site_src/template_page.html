@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{TITLE}} | Polaris Kernel</title>
 
-    <link rel="stylesheet" href="{{PREFIX}}styles.css">
-    <script defer src="{{PREFIX}}scripts.js"></script>
+    <!-- Carga critica de MathJax para renderizado inmediato -->
     <script>
         window.MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                displayMath: [['$$', '$$']],
                 processEscapes: true
-            },
-            startup: {
-                typeset: true
             }
         };
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" async></script>
+
+    <link rel="stylesheet" href="{{PREFIX}}styles.css">
+    <script defer src="{{PREFIX}}scripts.js"></script>
 </head>
 
 <body>

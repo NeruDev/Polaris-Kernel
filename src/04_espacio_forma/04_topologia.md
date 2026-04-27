@@ -11,6 +11,9 @@ status: "stable"
 
 # Topología
 
+![Puntos interiores y vecindarios](topologia_vecindarios.svg)
+
+
 ![Equivalencia entre una dona y una taza](topologia_homeomorfismo.svg)
 
 La topología es el estudio de las propiedades de las figuras que permanecen 

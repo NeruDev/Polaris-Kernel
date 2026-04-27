@@ -4,12 +4,12 @@
 #   tags: ['build', 'pipeline', 'automation']
 
 import argparse
-import json
 import subprocess
 import sys
-from pathlib import Path
-
+import os
+import json
 import jsonschema
+from pathlib import Path
 
 # Configuracion de entorno para imports locales
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -17,59 +17,45 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from scripts.config import BuildConfig, Paths
-from scripts.core import encoding_validator, formula_validator
-from scripts.core.error_handling import ErrorCollector
+from scripts.core.error_handling import ErrorCollector, FileOperationError
+from scripts.core import encoding_validator, formula_validator, processors
 from scripts.io.file_manager import FileManager
 from scripts.io.metadata_agent import MetadataAgent
 from utils.logging import log_error, log_info, log_warn
 from utils.markdown import convert_md_to_html
-from utils.pathing import compute_depth
-
+from utils.pathing import compute_depth, get_relative_html_path
 
 def parse_args() -> argparse.Namespace:
-    # ... (parse_args se mantiene igual)
     parser = argparse.ArgumentParser(description="MathKernel Build System")
     parser.add_argument("--verbose", action="store_true", help="Logs detallados")
     parser.add_argument("--skip-assets", action="store_true", help="No generar imagenes")
     parser.add_argument("--strict", action="store_true", help="Falla en cualquier advertencia")
     return parser.parse_args()
 
-
 def validate_project(config: BuildConfig, file_manager: FileManager, collector: ErrorCollector):
-    """Ejecuta la suite de validacion: UTF-8, Estructura y Metadatos por Schema."""
     log_info("Validando integridad del proyecto...")
-
     schema_path = config.paths.schemas_dir / "content.schema.json"
     if not schema_path.exists():
-        collector.add_message(
-            "validation", "No se encontró el esquema JSON de contenido", critical=True
-        )
+        collector.add_message("validation", "No se encontró el esquema JSON de contenido", critical=True)
         return
-
-    with open(schema_path, "r", encoding="utf-8") as f:
+    with open(schema_path, 'r', encoding='utf-8') as f:
         schema = json.load(f)
-
     targets = [config.paths.src_dir, config.paths.scripts_dir, config.paths.project_root / "utils"]
     encoding_errors = encoding_validator.validate_paths(targets)
     for err in encoding_errors:
         collector.add_message("encoding", err, critical=True)
-
     for md_path in config.paths.src_dir.rglob("*.md"):
         try:
             metadata, content = file_manager.read_markdown_with_frontmatter(md_path)
             try:
                 jsonschema.validate(instance=metadata, schema=schema)
             except jsonschema.exceptions.ValidationError as e:
-                collector.add_message(
-                    "schema", f"Error en {md_path.name}: {e.message}", critical=True
-                )
-
+                collector.add_message("schema", f"Error en {md_path.name}: {e.message}", critical=True)
             warnings = formula_validator.validate_markdown_math_tables(content, md_path.name)
             for warn in warnings:
                 collector.add_message("math_syntax", warn, critical=config.strict)
         except Exception as e:
             collector.add_message("parser", f"Error procesando {md_path.name}: {e}", critical=True)
-
 
 def run_assets(config: BuildConfig, collector: ErrorCollector):
     script_path = config.paths.scripts_dir / "generate_assets.py"
@@ -80,7 +66,6 @@ def run_assets(config: BuildConfig, collector: ErrorCollector):
     elif config.verbose:
         print(result.stdout)
 
-
 def run_site(config: BuildConfig, file_manager: FileManager, collector: ErrorCollector):
     paths = config.paths
     log_info("Generando sitio estatico en /site...")
@@ -89,34 +74,62 @@ def run_site(config: BuildConfig, file_manager: FileManager, collector: ErrorCol
     if paths.site_src_dir.exists():
         file_manager.copy_dir(paths.site_src_dir, paths.site_dir)
     template = file_manager.read_text(paths.template_path)
+    
+    index_data = {}
+    
+    # 1. Renderizar archivos MD y recolectar para indice
+    for md_path in sorted(paths.src_dir.rglob("*.md")):
+        rel_path = md_path.relative_to(paths.src_dir)
+        html_rel_path = rel_path.with_suffix(".html")
+        try:
+            metadata, content = file_manager.read_markdown_with_frontmatter(md_path)
+            html_body, _ = convert_md_to_html(content)
+            
+            pilar = metadata.get("pilar", "Otros")
+            page_title = metadata.get("title", md_path.stem)
+            
+            if pilar not in index_data: index_data[pilar] = []
+            index_data[pilar].append({"title": page_title, "url": str(html_rel_path.as_posix())})
+            
+            full_html = template.replace("{{TITLE}}", page_title)
+            full_html = full_html.replace("{{BODY}}", html_body)
+            depth = compute_depth(str(rel_path))
+            full_html = full_html.replace("{{PREFIX}}", "../" * depth)
+            
+            file_manager.write_text(paths.site_dir / html_rel_path, full_html)
+        except Exception as e:
+            collector.add_message("rendering", f"Error en {md_path.name}: {e}")
 
-    for pilar_dir in paths.src_dir.iterdir():
-        if not pilar_dir.is_dir():
-            continue
-        for item in pilar_dir.iterdir():
-            rel_path = item.relative_to(paths.src_dir)
-            dest_path = paths.site_dir / rel_path
-            if item.suffix == ".svg":
-                import shutil
+    # 2. Inyectar indice dinámico en index.html
+    pilar_names = {
+        "01_fundamentos_logica": "Pilar 1: Fundamentos y Lógica",
+        "02_estructuras_algebraicas": "Pilar 2: Estructuras Algebraicas",
+        "03_analisis_continuidad": "Pilar 3: Análisis y Continuidad",
+        "04_espacio_forma": "Pilar 4: Espacio y Forma",
+        "05_discrecion_computacion": "Pilar 5: Discreción y Computación",
+        "06_estocastica_incertidumbre": "Pilar 6: Estocástica e Incertidumbre"
+    }
 
-                file_manager.ensure_dir(dest_path.parent)
-                shutil.copy2(item, dest_path)
-            elif item.suffix == ".md":
-                try:
-                    metadata, content = file_manager.read_markdown_with_frontmatter(item)
-                    html_body, _ = convert_md_to_html(content)
-                    page_title = metadata.get("title", item.stem)
-                    full_html = template.replace("{{TITLE}}", page_title)
-                    full_html = full_html.replace("{{BODY}}", html_body)
+    index_html = "<h2>Explorador de Pilares</h2>"
+    for pilar, items in sorted(index_data.items()):
+        display_name = pilar_names.get(pilar, pilar.replace("_", " ").title())
+        index_html += f"<div class='pilar-section'><h3>{display_name}</h3><ul>"
+        for item in items:
+            index_html += f"<li><a href='{item['url']}'>{item['title']}</a></li>"
+        index_html += "</ul></div>"
 
-                    depth = compute_depth(str(rel_path))
-                    prefix = "../" * depth
-                    full_html = full_html.replace("{{PREFIX}}", prefix)
+    site_index = paths.site_dir / "index.html"
+    if site_index.exists():
+        content = file_manager.read_text(site_index)
+        final_content = content.replace("<!-- Lista dinamica de contenidos -->", index_html)
+        file_manager.write_text(site_index, final_content)
 
-                    file_manager.write_text(dest_path.with_suffix(".html"), full_html)
-                except Exception as e:
-                    collector.add_message("rendering", f"Error en {item.name}: {e}")
-
+    # 3. Copiar SVGs
+    for svg_path in paths.src_dir.rglob("*.svg"):
+        rel_path = svg_path.relative_to(paths.src_dir)
+        import shutil
+        file_manager.ensure_dir((paths.site_dir / rel_path).parent)
+        shutil.copy2(svg_path, paths.site_dir / rel_path)
 
 def run_build():
     args = parse_args()
@@ -125,30 +138,21 @@ def run_build():
     collector = ErrorCollector()
     file_manager = FileManager()
     meta_agent = MetadataAgent(PROJECT_ROOT)
-
-    # Pipeline
-    log_info("Sincronizando metadatos adyacentes...")
+    log_info("Sincronizando metadatos...")
     meta_agent.synchronize()
-
     validate_project(config, file_manager, collector)
     if not args.skip_assets:
         run_assets(config, collector)
-
     if collector.has_critical_errors:
         log_error("Build abortado debido a errores criticos:")
-        for line in collector.format_summary():
-            print(line)
+        for line in collector.format_summary(): print(line)
         sys.exit(1)
-
     run_site(config, file_manager, collector)
-
     if collector.has_errors:
         log_warn("\nBuild finalizado con advertencias:")
-        for line in collector.format_summary():
-            print(line)
+        for line in collector.format_summary(): print(line)
     else:
         log_info("Build completado exitosamente.")
-
 
 if __name__ == "__main__":
     run_build()

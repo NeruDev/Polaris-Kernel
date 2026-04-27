@@ -11,6 +11,9 @@ status: "stable"
 
 # Geometría diferencial
 
+![Plano tangente a superficie curva](geometria_variedad_tangente.svg)
+
+
 ![Triedro de Frenet en una helice 3D](geometria_diferencial_frenet)
 
 La geometría diferencial es la disciplina que utiliza las herramientas del cálculo diferencial e integral para estudiar las propiedades locales y globales de las formas geométricas.

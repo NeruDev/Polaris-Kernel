@@ -11,6 +11,9 @@ status: "stable"
 
 # Estadística descriptiva
 
+![Histograma de frecuencias](histograma_ejemplo.svg)
+
+
 ![Grafico de barras para analisis de datos](estadistica_barras.svg)
 
 La estadística descriptiva se encarga de recolectar, organizar y resumir datos 
