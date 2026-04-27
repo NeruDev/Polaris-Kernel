@@ -1,0 +1,13 @@
+{
+    "id": "msc51_geometria_analitica",
+    "title": "Geometría analítica",
+    "pilar": "04_espacio_forma",
+    "msc_code": "51-XX",
+    "tags": [
+        "analitica",
+        "conicas"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

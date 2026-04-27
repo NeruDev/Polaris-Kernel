@@ -1,0 +1,15 @@
+{
+    "id": "msc26_funciones_y_limites",
+    "title": "Funciones y Límites",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "26-XX",
+    "tags": [
+        "funciones",
+        "limites",
+        "sucesiones",
+        "continuidad"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

@@ -1,0 +1,50 @@
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["scripts", "utils", "tests"]
+exclude = [
+    ".venv",
+    "venv",
+    "env",
+    "site",
+    "assets",
+    "metadata",
+    "content",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+select = ["F", "E9", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["scripts", "utils"]
+
+[tool.mypy]
+python_version = "3.11"
+pretty = true
+show_error_codes = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+check_untyped_defs = false
+disallow_untyped_defs = false
+exclude = "(^site/|^assets/|^content/|^metadata/|^\\.venv/|^venv/)"
+
+[project]
+name = "polaris-kernel"
+version = "0.1.0"
+dependencies = [
+    "markdown==3.6",
+    "types-Markdown==3.6.0.20240316",
+    "pymdown-extensions==10.7.1",
+    "pytest==8.1.1",
+    "matplotlib==3.8.4",
+    "numpy==1.26.4",
+    "scipy==1.13.0",
+    "sympy==1.12",
+    "PyYAML==6.0.1",
+    "jinja2==3.1.3",
+    "jsonschema==4.21.1",
+]

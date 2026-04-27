@@ -1,0 +1,14 @@
+{
+    "id": "msc00_algebra_elemental",
+    "title": "Álgebra Elemental: Potencias, Raíces y Proporciones",
+    "pilar": "02_estructuras_algebraicas",
+    "msc_code": "00-01",
+    "tags": [
+        "algebra",
+        "exponentes",
+        "proporciones"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

@@ -1,0 +1,60 @@
+{
+    // === POLARIS KERNEL: ESTRUCTURA DEL SISTEMA ===
+    // Este archivo describe la jerarquía y propósito de cada componente para agentes de IA.
+
+    "src": {
+        // Núcleo de conocimiento matemático (Teoría + Ilustraciones locales).
+        "01_fundamentos_logica": "Axiomática, conjuntos y lógica proposicional.",
+        "02_estructuras_algebraicas": "Álgebra lineal y estructuras abstractas (Grupos/Categorías).",
+        "03_analisis_continuidad": "Cálculo, EDOs y Análisis Funcional.",
+        "04_espacio_forma": "Geometría Euclidiana, Analítica y Diferencial.",
+        "05_discrecion_computacion": "Combinatoria, Grafos y Métodos Numéricos.",
+        "06_estocastica_incertidumbre": "Probabilidad y Estadística de Datos."
+    },
+
+    "scripts": {
+        // Motor de automatización y orquestación del repositorio.
+        "build.py": "Orquestador principal: Sincroniza metadatos, valida esquemas y renderiza el sitio.",
+        "generate_assets.py": "Orquestador de gráficos: Ejecuta masivamente los scripts en scripts/grafics/.",
+        "templates.py": "Centralización de estilos visuales (Matplotlib) para mantener identidad visual.",
+        "core": {
+            // Lógica de negocio y validadores avanzados.
+            "encoding_validator.py": "Garantiza integridad UTF-8 estricta en todo el repositorio.",
+            "formula_validator.py": "Valida sintaxis LaTeX y balanceo de delimitadores matemáticos.",
+            "processors.py": "Transformación de contenido e inyección dinámica de activos."
+        },
+        "io": {
+            // Abstracción de operaciones de sistema de archivos.
+            "file_manager.py": "Manejo seguro de Markdown con Frontmatter y persistencia JSON.",
+            "metadata_agent.py": "Agente de sincronización: Garantiza la Regla de Adyacencia (MD <-> JSON).",
+            "generate_structure.py": "Genera la documentación técnica de la jerarquía del repo."
+        },
+        "grafics": "Biblioteca de +140 scripts Python para generación de iconografía vectorial (SVG)."
+    },
+
+    "metadata": {
+        // Capa de gobernanza y taxonomía oficial (IA-Ready).
+        "schemas": "Esquemas formales JSON Schema para validación de contenido, lógica y taxonomía.",
+        "MSC_index.json": "Índice de la Mathematics Subject Classification 2020."
+    },
+
+    "utils": "Módulos auxiliares reutilizables (Logging, Pathing, Markdown Render).",
+
+    "tests": "Suite de pruebas unitarias e integración (Integridad Estructural y Validación).",
+
+    "site_src": "Fuentes del frontend (Vanilla CSS, JS, HTML5) con soporte MathJax 3 y Modo Oscuro.",
+
+    "docs": {
+        // Documentación técnica y registros históricos.
+        "ARQUITECTURE.md": "Especificación técnica de alto nivel (C4 Model).",
+        "GENERATED_ASSETS.md": "Registro histórico y auditoría de cobertura gráfica.",
+        "project_structure.json": "Versión en texto plano para parsing por máquinas."
+    },
+
+    // --- ARCHIVOS DE GOBERNANZA (RAÍZ) ---
+    "AGENTS.md": "Estándares globales de operación para agentes autónomos.",
+    "GEMINI.md": "Reglas de comportamiento específicas para LLMs.",
+    "llms.txt": "Archivo de descubrimiento para indexación por IA (Estándar 2026).",
+    "README.md": "Presentación ejecutiva para humanos.",
+    "pyproject.toml": "Configuración central de herramientas de calidad (Ruff/Mypy)."
+}

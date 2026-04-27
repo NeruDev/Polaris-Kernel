@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Esquema de Metadatos de Teoria Matematica",
+    "type": "object",
+    "required": ["id", "title", "pilar", "msc_code", "status"],
+    "properties": {
+        "id": {
+            "type": "string",
+            "pattern": "^msc[0-9]{2}[A-Z]*_.*$",
+            "description": "Identificador unico basado en MSC (ej. msc11_sistemas_numericos)"
+        },
+        "title": {
+            "type": "string",
+            "minLength": 5
+        },
+        "pilar": {
+            "type": "string",
+            "enum": [
+                "01_fundamentos_logica",
+                "02_estructuras_algebraicas",
+                "03_analisis_continuidad",
+                "04_espacio_forma",
+                "05_discrecion_computacion",
+                "06_estocastica_incertidumbre"
+            ]
+        },
+        "msc_code": {
+            "type": "string",
+            "pattern": "^[0-9]{2}[A-Z]?-[X0-9]{2}$",
+            "description": "Codigo MSC 2020 (ej. 11-01)"
+        },
+        "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "nivel": {
+            "type": "string",
+            "enum": ["intro", "intermedio", "avanzado", "abstracto"]
+        },
+        "updated": {
+            "type": "string",
+            "format": "date"
+        },
+        "status": {
+            "type": "string",
+            "enum": ["draft", "stable", "reviewed"]
+        }
+    },
+    "additionalProperties": true
+}

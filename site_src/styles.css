@@ -1,0 +1,107 @@
+/* ===== VARIABLES ===== */
+:root {
+  --bg-color: #fdfdfd;
+  --text-color: #2c2f33;
+  --bg-container: #ffffff;
+  --border-color: #eaeaea;
+  --content-media-max: 760px;
+  --accent-cyan: #39C5BB;
+  --accent-hover: #2ba69d;
+  --accent-fuchsia: #E12885;
+  --table-header: #f4f7f6;
+  --table-border: #e0e0e0;
+  --blockquote-bg: #f5fcfc;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1b26;
+  --text-color: #e0e0e0;
+  --bg-container: #24283b;
+  --border-color: #414868;
+  --accent-cyan: #39C5BB;
+  --accent-hover: #5ee0d6;
+  --accent-fuchsia: #ff479f;
+  --table-header: #1f2335;
+  --table-border: #414868;
+  --blockquote-bg: #1f2635;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  background-color: var(--bg-container);
+  padding: 30px 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--accent-cyan);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-theme {
+  background: none;
+  border: 1px solid var(--accent-cyan);
+  color: var(--text-color);
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ===== NAV ===== */
+nav {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: var(--table-header);
+  border-left: 4px solid var(--accent-cyan);
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 8px 16px;
+  background-color: var(--bg-container);
+  color: var(--text-color) !important;
+  border: 1px solid var(--accent-cyan);
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: var(--accent-cyan);
+  color: white !important;
+}
+
+/* ===== MEDIA ===== */
+main img {
+  display: block;
+  width: 100%;
+  max-width: min(100%, var(--content-media-max));
+  height: auto;
+  margin: 1.25rem auto;
+}
+
+/* ===== MATH RENDERING ===== */
+.MathJax {
+  overflow-x: auto;
+  overflow-y: hidden;
+}

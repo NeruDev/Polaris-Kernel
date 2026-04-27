@@ -1,0 +1,13 @@
+{
+    "id": "msc18_teoria_de_categorias",
+    "title": "Teoria de Categorias",
+    "pilar": "02_estructuras_algebraicas",
+    "msc_code": "18-XX",
+    "tags": [
+        "categorias",
+        "functores"
+    ],
+    "nivel": "abstracto",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

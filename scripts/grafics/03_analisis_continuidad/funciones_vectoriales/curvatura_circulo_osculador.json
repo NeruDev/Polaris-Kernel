@@ -1,0 +1,9 @@
+{
+    "id": "curvatura_circulo_osculador",
+    "title": "Curvatura, radio de curvatura y círculo osculador",
+    "pilar": "03_analisis_continuidad",
+    "tags": [
+        "grafico",
+        "funciones_vectoriales"
+    ]
+}

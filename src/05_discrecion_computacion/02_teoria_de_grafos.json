@@ -1,0 +1,13 @@
+{
+    "id": "msc05C_teoria_de_grafos",
+    "title": "Teoría de grafos",
+    "pilar": "05_discrecion_computacion",
+    "msc_code": "05C-XX",
+    "tags": [
+        "grafos",
+        "arboles"
+    ],
+    "nivel": "intermedio",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

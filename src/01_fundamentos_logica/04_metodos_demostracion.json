@@ -1,0 +1,13 @@
+{
+    "id": "msc03_metodos_demostracion",
+    "title": "Métodos de demostración",
+    "pilar": "01_fundamentos_logica",
+    "msc_code": "03-XX",
+    "tags": [
+        "demostracion",
+        "induccion"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

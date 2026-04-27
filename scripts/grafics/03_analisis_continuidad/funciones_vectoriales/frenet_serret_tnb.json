@@ -1,0 +1,9 @@
+{
+    "id": "frenet_serret_tnb",
+    "title": "Marco de Frenet-Serret: vectores T, N, B",
+    "pilar": "03_analisis_continuidad",
+    "tags": [
+        "grafico",
+        "funciones_vectoriales"
+    ]
+}

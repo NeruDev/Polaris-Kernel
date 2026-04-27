@@ -1,0 +1,8 @@
+{
+    "id": "conftest",
+    "title": "Configuracion global de fixtures para Pytest",
+    "tags": [
+        "tests",
+        "infrastructure"
+    ]
+}

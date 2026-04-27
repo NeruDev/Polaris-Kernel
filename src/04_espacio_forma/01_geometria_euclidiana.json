@@ -1,0 +1,15 @@
+{
+    "id": "msc51_geometria_euclidiana",
+    "title": "Geometría Euclidiana y del Espacio",
+    "pilar": "04_espacio_forma",
+    "msc_code": "51-XX",
+    "tags": [
+        "geometria",
+        "euclidiana",
+        "poligonos",
+        "solidos"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

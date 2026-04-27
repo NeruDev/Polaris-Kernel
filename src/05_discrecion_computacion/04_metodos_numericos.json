@@ -1,0 +1,15 @@
+{
+    "id": "msc65_metodos_numericos",
+    "title": "Métodos Numéricos: Raíces y Aproximación",
+    "pilar": "05_discrecion_computacion",
+    "msc_code": "65-XX",
+    "tags": [
+        "numerico",
+        "raices",
+        "aproximacion",
+        "errores"
+    ],
+    "nivel": "intermedio",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

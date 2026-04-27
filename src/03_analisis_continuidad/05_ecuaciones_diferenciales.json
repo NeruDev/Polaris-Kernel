@@ -1,0 +1,15 @@
+{
+    "id": "msc34_ecuaciones_diferenciales",
+    "title": "Ecuaciones Diferenciales Ordinarias (EDO)",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "34-XX",
+    "tags": [
+        "edo",
+        "diferencial",
+        "laplace",
+        "primer_orden"
+    ],
+    "nivel": "intermedio",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

@@ -1,0 +1,9 @@
+{
+    "id": "triangulo_angulo_exterior",
+    "title": "Ángulo exterior del triángulo = suma de ángulos interiores no adyacentes",
+    "pilar": "04_espacio_forma",
+    "tags": [
+        "grafico",
+        "geometria"
+    ]
+}

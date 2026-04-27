@@ -1,0 +1,13 @@
+{
+    "id": "msc62_estadistica_inferencial",
+    "title": "Estadística inferencial",
+    "pilar": "06_estocastica_incertidumbre",
+    "msc_code": "62-XX",
+    "tags": [
+        "inferencia",
+        "hipotesis"
+    ],
+    "nivel": "intermedio",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

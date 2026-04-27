@@ -1,0 +1,9 @@
+{
+    "id": "diagrama_clasificacion_edo_segundo_orden",
+    "title": "Diagrama de flujo para clasificar EDO de segundo orden",
+    "pilar": "03_analisis_continuidad",
+    "tags": [
+        "grafico",
+        "ecuaciones_diferenciales_2"
+    ]
+}

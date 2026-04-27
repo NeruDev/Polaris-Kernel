@@ -1,0 +1,14 @@
+{
+    "id": "msc08_algebra_abstracta",
+    "title": "Álgebra abstracta",
+    "pilar": "02_estructuras_algebraicas",
+    "msc_code": "08-XX",
+    "tags": [
+        "grupos",
+        "anillos",
+        "campos"
+    ],
+    "nivel": "avanzado",
+    "updated": "2026-04-26",
+    "status": "draft"
+}

@@ -1,0 +1,9 @@
+{
+    "id": "sistema_coordenadas_3d",
+    "title": "Sistema de coordenadas cartesianas 3D con vectores canónicos i, j, k",
+    "pilar": "03_analisis_continuidad",
+    "tags": [
+        "grafico",
+        "vectores"
+    ]
+}

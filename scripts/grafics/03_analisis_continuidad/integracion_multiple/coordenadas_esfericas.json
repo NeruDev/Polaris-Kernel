@@ -1,0 +1,9 @@
+{
+    "id": "coordenadas_esfericas",
+    "title": "Sistema de coordenadas esféricas",
+    "pilar": "03_analisis_continuidad",
+    "tags": [
+        "grafico",
+        "integracion_multiple"
+    ]
+}

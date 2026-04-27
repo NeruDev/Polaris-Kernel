@@ -1,0 +1,13 @@
+{
+    "id": "msc05_combinatoria",
+    "title": "Combinatoria",
+    "pilar": "05_discrecion_computacion",
+    "msc_code": "05-XX",
+    "tags": [
+        "conteo",
+        "permutaciones"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

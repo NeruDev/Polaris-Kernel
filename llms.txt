@@ -1,0 +1,35 @@
+# Polaris Kernel
+
+> High-fidelity mathematical knowledge infrastructure for humans and AI agents.
+
+## Core Purpose
+Polaris Kernel is a structured repository of mathematics based on the Bourbaki pillars. It aims to provide an atomic, semantic, and illustrated knowledge base optimized for Retrieval-Augmented Generation (RAG) and autonomous software engineering.
+
+## Architecture
+- Root: `src/` (6 Pillars of Mathematics)
+- Adjacency Rule: Every `.md` has a `.json` metadata counterpart in the same folder.
+- Governance: Validated via JSON Schemas in `metadata/schemas/`.
+- Automation: Orchestrated by `scripts/build.py`.
+
+## Key Files for AI Agents
+- `AGENTS.md`: Global standards and naming conventions.
+- `ARQUITECTURE.md`: Deep technical design and segmentation rules.
+- `GEMINI.md`: Specific behavioral guidelines for LLMs.
+- `GENERATED_ASSETS.md`: Registry of all SVG graphics.
+
+## Technology Stack
+- Documentation: Markdown (UTF-8, 80 chars/line).
+- Math: LaTeX (MathJax 3).
+- Graphics: Python/Matplotlib (SVG).
+- Quality: Ruff, Mypy, Pytest, Jsonschema.
+
+## Quick Navigation
+- Fundamentals: `src/01_fundamentos_logica/`
+- Algebra: `src/02_estructuras_algebraicas/`
+- Analysis: `src/03_analisis_continuidad/`
+- Geometry: `src/04_espacio_forma/`
+- Discrete Math: `src/05_discrecion_computacion/`
+- Stochastic: `src/06_estocastica_incertidumbre/`
+
+---
+Polaris Kernel: Structuring the beauty of mathematics.

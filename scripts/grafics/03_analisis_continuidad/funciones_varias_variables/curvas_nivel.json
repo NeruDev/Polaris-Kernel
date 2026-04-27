@@ -1,0 +1,9 @@
+{
+    "id": "curvas_nivel",
+    "title": "Curvas de nivel y mapa de contorno",
+    "pilar": "03_analisis_continuidad",
+    "tags": [
+        "grafico",
+        "funciones_varias_variables"
+    ]
+}

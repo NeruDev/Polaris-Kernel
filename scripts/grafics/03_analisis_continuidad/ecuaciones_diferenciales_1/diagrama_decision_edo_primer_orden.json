@@ -1,0 +1,9 @@
+{
+    "id": "diagrama_decision_edo_primer_orden",
+    "title": "Diagrama de flujo para identificar tipo de EDO de primer orden",
+    "pilar": "03_analisis_continuidad",
+    "tags": [
+        "grafico",
+        "ecuaciones_diferenciales_1"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "id": "msc26_analisis_avanzado",
+    "title": "Análisis avanzado",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "26-XX",
+    "tags": [
+        "analisis_real",
+        "variable_compleja"
+    ],
+    "nivel": "avanzado",
+    "updated": "2026-04-26",
+    "status": "draft"
+}

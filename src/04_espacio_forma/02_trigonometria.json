@@ -1,0 +1,14 @@
+{
+    "id": "msc51_trigonometria",
+    "title": "Trigonometría Fundamental",
+    "pilar": "04_espacio_forma",
+    "msc_code": "51-XX",
+    "tags": [
+        "trigonometria",
+        "identidad",
+        "triangulos"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "stable"
+}

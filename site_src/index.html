@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polaris Kernel | MathKernel</title>
+
+  <script>
+    const theme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", theme);
+  </script>
+
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./scripts.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <h1>Polaris Kernel</h1>
+  <button id="theme-toggle" class="btn-theme">MODE</button>
+</header>
+
+<nav>
+  <a href="./index.html" class="nav-btn">Inicio</a>
+  <a href="./index.html" class="nav-btn">Contenidos</a>
+</nav>
+
+<main>
+  <h2>Bienvenido al MathKernel</h2>
+  <p>Base de conocimiento matematica estructurada para consumo humano y sistemas de IA.</p>
+  <p>Esta plataforma organiza la matematica en pilares conceptuales siguiendo la arquitectura Bourbaki.</p>
+  
+  <div style="margin-top: 2rem;">
+      <a href="01_fundamentos_logica/01_sistemas_numericos.html" class="nav-btn">Comenzar Exploracion</a>
+  </div>
+</main>
+
+</div>
+
+</body>
+</html>

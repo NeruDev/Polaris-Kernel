@@ -1,0 +1,107 @@
+name: Deploy Pages
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+
+      - name: Pull LFS objects
+        run: git lfs pull
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "pyproject.toml"
+
+      - name: Install dependencies and quality tooling
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+          pip install ruff mypy pytest
+
+      - name: Ruff checks
+        run: ruff check scripts utils tests
+
+      - name: Mypy report (informativo)
+        continue-on-error: true
+        run: |
+          mypy scripts utils --config-file pyproject.toml --no-error-summary > mypy-report.txt || true
+          tail -n 40 mypy-report.txt || true
+
+      - name: Upload mypy report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mypy-report
+          path: mypy-report.txt
+
+      - name: Run tests
+        run: python -m pytest -q
+
+  deploy:
+    needs: quality
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+
+      - name: Pull LFS objects
+        run: git lfs pull
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "pyproject.toml"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+
+      - name: Unified build
+        run: python scripts/build.py --verbose
+
+      - name: Verify and Disable Jekyll
+        run: |
+          touch site/.nojekyll
+          echo "Contenido de carpeta site:"
+          ls -R site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

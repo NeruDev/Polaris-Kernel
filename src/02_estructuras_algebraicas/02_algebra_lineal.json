@@ -1,0 +1,15 @@
+{
+    "id": "msc15_algebra_lineal",
+    "title": "Álgebra Lineal: Matrices y Espacios Vectoriales",
+    "pilar": "02_estructuras_algebraicas",
+    "msc_code": "15-XX",
+    "tags": [
+        "matrices",
+        "vectores",
+        "lineal",
+        "algebra"
+    ],
+    "nivel": "intro",
+    "updated": "2026-04-26",
+    "status": "stable"
+}
