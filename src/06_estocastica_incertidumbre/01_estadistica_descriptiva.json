@@ -2,12 +2,14 @@
     "id": "msc62_estadistica_descriptiva",
     "title": "Estadística descriptiva",
     "pilar": "06_estocastica_incertidumbre",
-    "msc_code": "62-XX",
+    "msc_code": "62-01",
     "tags": [
         "estadistica",
-        "datos"
+        "datos",
+        "medidas",
+        "tendencia"
     ],
     "nivel": "intro",
     "updated": "2026-04-26",
-    "status": "draft"
+    "status": "stable"
 }

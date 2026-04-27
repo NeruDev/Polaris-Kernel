@@ -2,7 +2,7 @@
     "id": "msc11_teoria_de_numeros",
     "title": "Teoría de Números y Divisibilidad",
     "pilar": "05_discrecion_computacion",
-    "msc_code": "11-XX",
+    "msc_code": "11-01",
     "tags": [
         "divisibilidad",
         "primos",

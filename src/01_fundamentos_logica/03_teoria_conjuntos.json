@@ -2,10 +2,11 @@
     "id": "msc03E_teoria_conjuntos",
     "title": "Teoría de conjuntos",
     "pilar": "01_fundamentos_logica",
-    "msc_code": "03E-XX",
+    "msc_code": "03E-01",
     "tags": [
         "conjuntos",
-        "axiomas"
+        "axiomas",
+        "cardinalidad"
     ],
     "nivel": "intro",
     "updated": "2026-04-26",

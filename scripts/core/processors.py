@@ -3,21 +3,18 @@
 #   title: 'Procesadores de contenido e inyección de activos'
 #   tags: ['core', 'content', 'assets']
 
-import re
 from typing import Tuple
 
+
 def inject_image_markdown(
-    raw_content: str, 
-    image_name: str, 
-    section_id: str, 
-    description: str = "Gráfico descriptivo"
+    raw_content: str, image_name: str, section_id: str, description: str = "Gráfico descriptivo"
 ) -> Tuple[str, bool]:
     """
     Inserta el markdown de una imagen en una sección específica.
     Retorna (nuevo_contenido, si_fue_insertado).
     """
     image_md = f"![{description}]({image_name})"
-    
+
     # Evitar duplicados
     if image_md in raw_content:
         return raw_content, False

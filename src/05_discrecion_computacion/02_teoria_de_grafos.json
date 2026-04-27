@@ -2,10 +2,12 @@
     "id": "msc05C_teoria_de_grafos",
     "title": "Teoría de grafos",
     "pilar": "05_discrecion_computacion",
-    "msc_code": "05C-XX",
+    "msc_code": "05C-01",
     "tags": [
         "grafos",
-        "arboles"
+        "arboles",
+        "conectividad",
+        "redes"
     ],
     "nivel": "intermedio",
     "updated": "2026-04-26",

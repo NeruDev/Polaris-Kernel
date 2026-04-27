@@ -1,5 +1,6 @@
-from pathlib import Path
 from dataclasses import dataclass
+from pathlib import Path
+
 
 @dataclass
 class Paths:
@@ -24,8 +25,9 @@ class Paths:
             scripts_dir=root / "scripts",
             site_src_dir=root / "site_src",
             site_dir=root / "site",
-            template_path=root / "site_src" / "template_page.html"
+            template_path=root / "site_src" / "template_page.html",
         )
+
 
 @dataclass
 class BuildConfig:

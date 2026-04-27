@@ -1,9 +1,0 @@
-{
-    "id": "diagrama_decision_laplace",
-    "title": "Diagrama de flujo para métodos de Transformada de Laplace",
-    "pilar": "03_analisis_continuidad",
-    "tags": [
-        "grafico",
-        "ecuaciones_diferenciales_4"
-    ]
-}
