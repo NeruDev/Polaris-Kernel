@@ -1,15 +1,15 @@
-import os
-from typing import List, Dict, Any
+from typing import Any, Dict, List
+
 
 class ContentValidator:
-    REQUIRED_FIELDS = ['id', 'title', 'pilar', 'msc_code']
+    REQUIRED_FIELDS = ["id", "title", "pilar", "msc_code"]
 
     @staticmethod
     def validate_utf8(file_path: str) -> bool:
         """Verifica que el archivo tenga codificación UTF-8 pura."""
         try:
-            with open(file_path, 'rb') as f:
-                f.read().decode('utf-8')
+            with open(file_path, "rb") as f:
+                f.read().decode("utf-8")
             return True
         except UnicodeDecodeError:
             return False

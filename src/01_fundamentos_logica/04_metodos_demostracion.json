@@ -2,7 +2,7 @@
     "id": "msc03_metodos_demostracion",
     "title": "Métodos de demostración",
     "pilar": "01_fundamentos_logica",
-    "msc_code": "03-XX",
+    "msc_code": "03-01",
     "tags": [
         "demostracion",
         "induccion"

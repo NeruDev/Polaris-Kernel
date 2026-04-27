@@ -2,10 +2,12 @@
     "id": "msc05_combinatoria",
     "title": "Combinatoria",
     "pilar": "05_discrecion_computacion",
-    "msc_code": "05-XX",
+    "msc_code": "05-01",
     "tags": [
         "conteo",
-        "permutaciones"
+        "permutaciones",
+        "combinaciones",
+        "binomio"
     ],
     "nivel": "intro",
     "updated": "2026-04-26",

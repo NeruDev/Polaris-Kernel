@@ -3,11 +3,11 @@
 #   title: 'Auditoria de enlaces internos rotos'
 #   tags: ['utils', 'validation', 'links']
 
-import os
 import re
 from pathlib import Path
 
 HREF_PATTERN = re.compile(r'href="([^"]+)"')
+
 
 def detect_broken_internal_links(generated_pages: list[str]) -> list[tuple[str, str]]:
     """Detecta enlaces que apuntan a archivos inexistentes en el sitio generado."""
@@ -15,9 +15,10 @@ def detect_broken_internal_links(generated_pages: list[str]) -> list[tuple[str, 
 
     for html_path in generated_pages:
         path_obj = Path(html_path)
-        if not path_obj.exists(): continue
-        
-        content = path_obj.read_text(encoding='utf-8')
+        if not path_obj.exists():
+            continue
+
+        content = path_obj.read_text(encoding="utf-8")
         links = HREF_PATTERN.findall(content)
 
         for link in links:

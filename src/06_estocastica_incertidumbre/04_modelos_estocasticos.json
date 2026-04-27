@@ -2,11 +2,12 @@
     "id": "msc60_modelos_estocasticos",
     "title": "Modelos estocásticos",
     "pilar": "06_estocastica_incertidumbre",
-    "msc_code": "60-XX",
+    "msc_code": "60-01",
     "tags": [
         "markov",
         "poisson",
-        "procesos"
+        "procesos",
+        "tiempo"
     ],
     "nivel": "avanzado",
     "updated": "2026-04-26",
