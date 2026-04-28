@@ -17,12 +17,22 @@ DEFAULT_EXTENSIONS = [
     "pymdownx.superfences",
 ]
 
+EXTENSION_CONFIGS = {
+    "pymdownx.arithmatex": {
+        "generic": True,
+    },
+}
+
 
 def convert_md_to_html(md_text: str, asset_prefix: str = "") -> tuple[str, int]:
     """
     Convierte Markdown a HTML con soporte matematico y correccion de enlaces.
     """
-    html = markdown.markdown(md_text, extensions=DEFAULT_EXTENSIONS)
+    html = markdown.markdown(
+        md_text,
+        extensions=DEFAULT_EXTENSIONS,
+        extension_configs=EXTENSION_CONFIGS,
+    )
 
     # 1. Corregir enlaces a archivos .md para que apunten a .html
     html = re.sub(r'href="([^"]+)\.md(#[^"]*)?"', r'href="\1.html\2"', html)
