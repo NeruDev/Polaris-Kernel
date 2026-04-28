@@ -11,7 +11,7 @@ status: "stable"
 
 # Métodos de demostración
 
-![Metafora del domino para el principio de induccion](induccion_domino.svg)
+![Metafora del domino para el principio de induccion](induccion_matematica.svg)
 
 Una demostración es una secuencia lógica de argumentos que establece la verdad 
 de una proposición. En matemáticas, nada se acepta sin una prueba rigurosa 

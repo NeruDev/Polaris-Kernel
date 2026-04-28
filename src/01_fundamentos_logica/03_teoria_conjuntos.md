@@ -11,7 +11,7 @@ status: "stable"
 
 # Teoría de conjuntos
 
-![Diagrama de Venn de tres conjuntos](conjuntos_triple_venn.svg)
+![Diagrama de Venn de tres conjuntos](diagrama_venn_triple.svg)
 
 La teoría de conjuntos es el fundamento sobre el cual se construye casi todo el 
 edificio matemático. Define el concepto de "colección de objetos" y las 

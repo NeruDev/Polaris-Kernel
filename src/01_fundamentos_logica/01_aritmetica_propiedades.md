@@ -11,7 +11,7 @@ status: "stable"
 
 # Aritmética: Propiedades de las Operaciones
 
-![Diagrama de Venn de tres conjuntos](conjuntos_triple_venn.svg)
+![Diagrama de Venn de tres conjuntos](diagrama_venn_triple.svg)
 
 Las propiedades aritméticas definen el comportamiento de las operaciones básicas en los sistemas numéricos.
 Estos axiomas estructurales aseguran que la manipulación algebraica sea consistente y predecible, independientemente de la magnitud de los valores involucrados.
