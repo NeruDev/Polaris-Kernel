@@ -7,8 +7,8 @@
 import sys
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+import matplotlib.pyplot as plt
 
 # Configurar path para imports del proyecto
 PROJECT_ROOT = Path(__file__).resolve().parents[4]

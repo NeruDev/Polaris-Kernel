@@ -1,0 +1,10 @@
+{
+    "id": "grafos_basico",
+    "title": "Estructura basica de un grafo no dirigido",
+    "pilar": "05_discrecion_computacion",
+    "tags": [
+        "grafico",
+        "computacion",
+        "grafos"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "id": "intervalo_confianza",
+    "title": "Visualizacion del margen de error y nivel de confianza",
+    "pilar": "06_estocastica_incertidumbre",
+    "tags": [
+        "grafico",
+        "estadistica",
+        "inferencia"
+    ]
+}

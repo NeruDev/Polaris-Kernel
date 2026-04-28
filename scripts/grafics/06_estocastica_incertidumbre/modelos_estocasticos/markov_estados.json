@@ -1,0 +1,10 @@
+{
+    "id": "markov_estados",
+    "title": "Diagrama de transicion de estados de una cadena de Markov",
+    "pilar": "06_estocastica_incertidumbre",
+    "tags": [
+        "grafico",
+        "procesos",
+        "markov"
+    ]
+}

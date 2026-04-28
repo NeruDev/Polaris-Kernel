@@ -14,7 +14,7 @@ status: "stable"
 ![Diagrama de Venn de tres conjuntos](diagrama_venn_triple.svg)
 
 
-![Representacion de la recta real y conjuntos](sistemas_numericos_recta.svg)
+![Representacion de la recta real y conjuntos](recta_numerica.svg)
 
 La aritmética es la base sobre la cual se edifica toda la estructura matemática.
 Dominar sus conceptos fundamentales es un requisito esencial para el éxito en disciplinas más complejas como el álgebra, el cálculo diferencial y las matemáticas superiores aplicadas a la ingeniería.

@@ -14,8 +14,6 @@ status: "stable"
 ![Comparativa de funciones seno y coseno](graficas_seno_coseno.svg)
 
 
-![Comparativa de funciones trigonométricas](grafica_seno_coseno.svg)
-
 La trigonometría es el estudio de las relaciones entre los ángulos y los lados de los triángulos.
 Más allá de los triángulos, esta disciplina proporciona las funciones periódicas necesarias para modelar ondas, vibraciones y ciclos en la naturaleza y la tecnología.
 

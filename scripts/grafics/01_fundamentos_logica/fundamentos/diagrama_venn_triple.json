@@ -1,0 +1,10 @@
+{
+    "id": "venn_triple",
+    "title": "Diagrama de Venn de tres conjuntos",
+    "pilar": "01_fundamentos_logica",
+    "tags": [
+        "grafico",
+        "conjuntos",
+        "venn"
+    ]
+}

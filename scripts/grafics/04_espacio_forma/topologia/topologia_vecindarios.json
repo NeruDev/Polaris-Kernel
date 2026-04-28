@@ -1,0 +1,10 @@
+{
+    "id": "topologia_vecindarios",
+    "title": "Puntos interiores y vecindarios en un conjunto",
+    "pilar": "04_espacio_forma",
+    "tags": [
+        "grafico",
+        "topologia",
+        "metricas"
+    ]
+}

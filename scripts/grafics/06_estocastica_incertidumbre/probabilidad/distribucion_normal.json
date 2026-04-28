@@ -1,0 +1,10 @@
+{
+    "id": "distribucion_normal",
+    "title": "Visualizacion de la campana de Gauss",
+    "pilar": "06_estocastica_incertidumbre",
+    "tags": [
+        "grafico",
+        "probabilidad",
+        "distribucion"
+    ]
+}

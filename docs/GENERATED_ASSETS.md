@@ -15,7 +15,7 @@ Este archivo contiene la ubicación y descripción de todos los gráficos genera
 | `limite_concepto` | 03_analisis_continuidad | limites | Definición visual de límite | `src/03_analisis_continuidad/limite_concepto.svg` |
 | `derivada_concepto` | 03_analisis_continuidad | derivadas | Recta tangente y pendiente f'(a) | `src/03_analisis_continuidad/derivada_concepto.svg` |
 | `integral_area` | 03_analisis_continuidad | integrales | Área bajo la curva y sumas de Riemann | `src/03_analisis_continuidad/integral_area.svg` |
-| `campo_vectorial` | 03_analisis_continuidad | multivariable | Visualización de campo vectorial rotacional | `src/03_analisis_continuidad/campo_vectorial.svg" |
+| `campo_vectorial` | 03_analisis_continuidad | multivariable | Visualización de campo vectorial rotacional | `src/03_analisis_continuidad/campo_vectorial.svg` |
 | `edo_campo_direcciones` | 03_analisis_continuidad | edo | Campo de pendientes para EDO primer orden | `src/03_analisis_continuidad/edo_campo_direcciones.svg` |
 | `analisis_complejo_contorno` | 03_analisis_continuidad | complejo | Integral de contorno y residuos | `src/03_analisis_continuidad/analisis_complejo_contorno.svg` |
 | `hilbert_proyeccion` | 03_analisis_continuidad | funcional | Proyección ortogonal en espacios funcionales | `src/03_analisis_continuidad/hilbert_proyeccion.svg` |

@@ -1,0 +1,11 @@
+{
+    "id": "campo_vectorial",
+    "title": "Visualizacion de un campo vectorial rotacional",
+    "pilar": "03_analisis_continuidad",
+    "tags": [
+        "grafico",
+        "analisis",
+        "vectores",
+        "gradiente"
+    ]
+}
