@@ -1,0 +1,15 @@
+{
+    "id": "msc68_teoria_automatas",
+    "title": "Teoría de Autómatas y Lenguajes Formales",
+    "pilar": "05_discrecion_computacion",
+    "msc_code": "68-XX",
+    "tags": [
+        "automatas",
+        "turing",
+        "lenguajes",
+        "chomsky"
+    ],
+    "nivel": "avanzado",
+    "updated": "2026-05-24",
+    "status": "stable"
+}

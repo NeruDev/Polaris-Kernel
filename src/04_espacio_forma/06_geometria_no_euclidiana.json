@@ -1,0 +1,15 @@
+{
+    "id": "msc51_geometria_no_euclidiana",
+    "title": "Geometría No Euclidiana",
+    "pilar": "04_espacio_forma",
+    "msc_code": "51-XX",
+    "tags": [
+        "geometria",
+        "hiperbolica",
+        "eliptica",
+        "curvatura"
+    ],
+    "nivel": "intermedio",
+    "updated": "2026-05-24",
+    "status": "stable"
+}

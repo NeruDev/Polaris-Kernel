@@ -1,0 +1,15 @@
+{
+    "id": "msc40_sucesiones_y_series",
+    "title": "Sucesiones y Series",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "40-XX",
+    "tags": [
+        "sucesiones",
+        "series",
+        "convergencia",
+        "taylor"
+    ],
+    "nivel": "intro",
+    "updated": "2026-05-24",
+    "status": "stable"
+}

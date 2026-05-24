@@ -1,0 +1,16 @@
+{
+    "id": "msc13_teoria_anillos_cuerpos",
+    "title": "Teoría de Anillos y Cuerpos",
+    "pilar": "02_estructuras_algebraicas",
+    "msc_code": "13-XX",
+    "tags": [
+        "anillos",
+        "cuerpos",
+        "algebra",
+        "ideales",
+        "dominios"
+    ],
+    "nivel": "intermedio",
+    "updated": "2026-05-24",
+    "status": "stable"
+}

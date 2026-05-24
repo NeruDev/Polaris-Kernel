@@ -1,0 +1,55 @@
+---
+id: msc13_teoria_anillos_cuerpos
+title: "Teoría de Anillos y Cuerpos"
+pilar: "02_estructuras_algebraicas"
+msc_code: "13-XX"
+tags: [anillos, cuerpos, algebra, ideales, dominios]
+nivel: intermedio
+updated: "2026-05-24"
+status: "stable"
+---
+
+# Teoría de Anillos y Cuerpos
+
+Mientras que los grupos algebraicos abstraen las propiedades de una única operación binaria, la teoría de anillos y cuerpos extiende este concepto para abarcar conjuntos equipados con dos operaciones compatibles, tradicionalmente denominadas suma y multiplicación.
+Esta estructura matemática refleja y generaliza profundamente el comportamiento fundamental que observamos a diario en los números enteros y racionales.
+
+## Conceptos Fundamentales de Anillos
+
+Un anillo es un conjunto algebraico $R$ provisto de dos operaciones binarias $(+, \cdot)$ que satisface un conjunto estricto de axiomas.
+En primer lugar, bajo la operación de suma, el anillo debe conformar un grupo abeliano, poseyendo conmutatividad, un elemento neutro aditivo ($0$) y un inverso aditivo para cada uno de sus elementos.
+En segundo lugar, bajo la operación de multiplicación, el anillo debe constituir un monoide, requiriendo que la multiplicación sea asociativa.
+Finalmente, la estructura demanda que la multiplicación se distribuya rigurosamente sobre la suma en ambas direcciones, garantizando la compatibilidad entre ambas operaciones.
+Un ejemplo clásico y fundacional de un anillo conmutativo con elemento unitario es el conjunto de los números enteros $\mathbb{Z}$.
+
+### Dominios de Integridad
+
+Un concepto crucial dentro de la teoría es el de los divisores de cero.
+Un anillo posee divisores de cero si existen dos elementos no nulos cuyo producto resulta ser sorprendentemente el elemento neutro de la suma, es decir, el cero.
+Un anillo conmutativo con unidad que no posee ningún divisor de cero recibe el nombre de dominio de integridad.
+Estos dominios son estructuralmente muy estables y permiten operar algebraicamente con mucha seguridad matemática, ya que admiten la propiedad de cancelación para la multiplicación al igual que ocurre con los números reales convencionales.
+
+## Ideales y Anillos Cociente
+
+En la teoría de grupos, el concepto de subgrupo normal permite la construcción sistemática de grupos cociente de gran valor analítico.
+Paralelamente, en la teoría de anillos, este rol constructivo lo desempeñan los subconjuntos estructurados conocidos como ideales.
+Un ideal $I$ de un anillo $R$ es un subgrupo aditivo altamente absorbente; si multiplicamos cualquier elemento del ideal por absolutamente cualquier elemento del anillo $R$, el resultado recae obligatoriamente dentro del ideal.
+Esta poderosa propiedad de absorción es precisamente lo que legitima la creación de anillos cociente, representados como $R/I$, una herramienta vital en el desarrollo de la geometría algebraica moderna.
+
+## Cuerpos (Campos Algebraicos)
+
+La máxima culminación de la rigidez en las estructuras algebraicas básicas es el concepto de cuerpo, frecuentemente denominado campo en la literatura americana.
+Un cuerpo $\mathbb{F}$ es esencialmente un anillo conmutativo provisto de una identidad multiplicativa donde cada elemento diferente de cero posee de manera garantizada un inverso multiplicativo.
+Esto significa que en un cuerpo, a diferencia de un anillo convencional, es completamente válido y seguro ejecutar la operación de la división.
+Los conjuntos de los números racionales $\mathbb{Q}$, los números reales $\mathbb{R}$ y los números complejos $\mathbb{C}$ son los cuerpos más estudiados y utilizados a lo largo de toda la matemática aplicada.
+
+## Glosario de variables
+
+| Símbolo | Nombre | Tipo |
+| --- | --- | --- |
+| $R$ | Anillo | conjunto |
+| $I$ | Ideal | conjunto |
+| $\mathbb{F}$ | Cuerpo (Campo) | conjunto |
+| $R/I$ | Anillo cociente | conjunto |
+| $0$ | Neutro aditivo | elemento |
+| $1$ | Identidad multiplicativa | elemento |

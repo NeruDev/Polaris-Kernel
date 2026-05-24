@@ -1,0 +1,16 @@
+{
+    "id": "msc94_teoria_informacion",
+    "title": "Teoría de la Información",
+    "pilar": "06_estocastica_incertidumbre",
+    "msc_code": "94-XX",
+    "tags": [
+        "informacion",
+        "entropia",
+        "shannon",
+        "comunicacion",
+        "probabilidad"
+    ],
+    "nivel": "avanzado",
+    "updated": "2026-05-24",
+    "status": "stable"
+}

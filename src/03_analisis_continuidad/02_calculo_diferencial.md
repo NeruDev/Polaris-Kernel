@@ -5,7 +5,7 @@ pilar: "03_analisis_continuidad"
 msc_code: "26-XX"
 tags: [derivadas, optimizacion, diferencial]
 nivel: intro
-updated: "2026-04-26"
+updated: "2026-05-24"
 status: "stable"
 ---
 
@@ -13,22 +13,30 @@ status: "stable"
 
 ![Recta tangente y pendiente $f'(a)$](derivada_concepto.svg)
 
+El cálculo diferencial es la rama de las matemáticas que se encarga del estudio de las tasas de cambio continuas y locales de las funciones.
+A través del concepto de derivada, permite analizar cómo varía una cantidad en respuesta a cambios infinitesimales en otra variable de la cual depende.
+Esta herramienta es fundamental para modelar fenómenos dinámicos en la física, la economía y la ingeniería.
 
 ## Concepto de derivada
 
 ### Definición por Límite
 
-La **derivada** de $f(x)$ en $x = a$ es la tasa de cambio instantánea de la función:
+La **derivada** de una función $f(x)$ evaluada en el punto $x = a$ representa la tasa de cambio instantánea en dicho punto.
+Formalmente, se define a través del límite del cociente de diferencias:
 $$f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}$$
-
-Geométricamente, $f'(a)$ es la **pendiente** de la recta tangente a la gráfica de $f$ en el punto $(a, f(a))$.
+Desde una perspectiva geométrica, el valor numérico de $f'(a)$ corresponde exactamente a la pendiente de la recta tangente a la curva de la función en la coordenada $(a, f(a))$.
+Si la función es derivable en todo su dominio, entonces su derivada constituye una nueva función $f'(x)$.
 
 ### Interpretación Física
-Si $s(t)$ es la función de posición, entonces:
-- $v(t) = s'(t)$ es la **velocidad instantánea**.
-- $a(t) = v'(t) = s''(t)$ es la **aceleración**.
+
+El cálculo diferencial proporciona el lenguaje natural para describir el movimiento en la mecánica clásica.
+Si tomamos una función $s(t)$ que describe la posición de un objeto en el tiempo, obtenemos las siguientes relaciones cinemáticas:
+- La función $v(t) = s'(t)$ define la velocidad instantánea del objeto.
+- La función $a(t) = v'(t) = s''(t)$ define la aceleración, es decir, la tasa de cambio de la velocidad.
 
 ## Reglas de derivación
+
+Para calcular derivadas sin recurrir constantemente a la definición por límite, se aplican reglas algebraicas sistemáticas.
 
 | Regla | Fórmula |
 | --- | --- |
@@ -39,6 +47,8 @@ Si $s(t)$ es la función de posición, entonces:
 | **Cadena** | $\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)$ |
 
 ### Derivadas de funciones elementales
+
+Existen formas canónicas para las derivadas de las funciones más comunes en matemáticas:
 - $\frac{d}{dx}[x^n] = nx^{n-1}$
 - $\frac{d}{dx}[e^x] = e^x$
 - $\frac{d}{dx}[\ln x] = \frac{1}{x}$
@@ -47,10 +57,20 @@ Si $s(t)$ es la función de posición, entonces:
 
 ## Optimización y análisis de curvas
 
-*(Pendiente de expansión sobre máximos, mínimos y puntos de inflexión)*
+Una de las aplicaciones más poderosas del cálculo diferencial es la optimización de funciones.
+Para encontrar los valores extremos de una función, se deben identificar primero sus puntos críticos.
+Un punto crítico ocurre en los valores de $x$ donde la primera derivada es cero ($f'(x) = 0$) o donde la derivada no está definida.
+El criterio de la primera derivada permite clasificar estos puntos críticos determinando si la función pasa de ser creciente a decreciente (máximo local) o de decreciente a creciente (mínimo local).
+Alternativamente, el criterio de la segunda derivada evalúa la concavidad en el punto crítico.
+Si $f''(x) > 0$, la gráfica es cóncava hacia arriba, indicando un mínimo local.
+Si $f''(x) < 0$, la gráfica es cóncava hacia abajo, revelando un máximo local.
+Los puntos de inflexión son aquellos lugares geométricos donde la función cambia de concavidad, lo cual usualmente ocurre cuando la segunda derivada es nula y cambia de signo alrededor de ese punto.
 
 ### Derivación Implícita y Logarítmica
-Se utilizan cuando $y$ no está despejada o cuando la función es de la forma $f(x)^{g(x)}$.
+
+Se utilizan técnicas avanzadas cuando las relaciones matemáticas no pueden expresarse de forma explícita.
+La derivación implícita permite encontrar $\frac{dy}{dx}$ cuando la variable $y$ no está despejada en términos de $x$, aplicando sistemáticamente la regla de la cadena.
+La derivación logarítmica es especialmente útil para derivar funciones que combinan bases y exponentes variables, como en el caso de la forma $f(x)^{g(x)}$.
 
 ## Glosario de variables
 
@@ -60,3 +80,6 @@ Se utilizan cuando $y$ no está despejada o cuando la función es de la forma $f
 | $f''(x)$ | Segunda derivada | función |
 | $\frac{dy}{dx}$ | Notación de Leibniz | operador |
 | $h$ | Incremento infinitesimal | variable |
+| $s(t)$ | Función de posición | función |
+| $v(t)$ | Velocidad | función |
+| $a(t)$ | Aceleración | función |
