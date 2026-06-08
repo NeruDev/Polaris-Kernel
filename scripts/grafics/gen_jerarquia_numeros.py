@@ -2,6 +2,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+
 def main():
     project_root = Path(__file__).resolve().parents[2]
     typ_file = project_root / "scripts" / "grafics" / "typst_src" / "jerarquia_numeros.typ"
