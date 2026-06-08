@@ -16,7 +16,18 @@ status: "stable"
 
 # Ecuaciones diferenciales ordinarias (EDO)
 
-![Campo de pendientes para una EDO de primer orden](edo_campo_direcciones.svg)
+```typst
+#import "@preview/cetz:0.2.2"
+#align(center)[#cetz.canvas({
+  import cetz.draw: *
+  for x in range(-2, 3) {
+    for y in range(-2, 3) {
+        let v = (y - x) * 0.1
+        line((x,y), (x+0.3, y+v), stroke: rgb("FF1493"))
+    }
+  }
+})]
+```
 
 Una ecuación diferencial es una relación entre una función desconocida y sus 
 derivadas. Son el lenguaje natural de la física, la biología y la ingeniería 

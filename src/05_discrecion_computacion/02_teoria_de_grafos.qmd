@@ -16,7 +16,25 @@ status: "stable"
 
 # Teoría de grafos
 
-![Estructura basica de un grafo no dirigido](grafos_basico.svg)
+```typst
+#import "@preview/cetz:0.2.2"
+#align(center)[#cetz.canvas({
+  import cetz.draw: *
+  circle((0,1), radius: 0.3, fill: rgb("39C5BB"), name: "1")
+  content("1", [1], text(fill: white))
+  circle((1,0), radius: 0.3, fill: rgb("39C5BB"), name: "2")
+  content("2", [2], text(fill: white))
+  circle((-1,0), radius: 0.3, fill: rgb("39C5BB"), name: "3")
+  content("3", [3], text(fill: white))
+  circle((0,-1), radius: 0.3, fill: rgb("39C5BB"), name: "4")
+  content("4", [4], text(fill: white))
+  line("1", "2")
+  line("2", "4")
+  line("4", "3")
+  line("3", "1")
+  line("1", "4")
+})]
+```
 
 La teoría de grafos es la rama de las matemáticas que estudia las relaciones entre objetos mediante estructuras de nodos y enlaces.
 Es el lenguaje universal para describir redes complejas, desde la topología de internet y los circuitos integrados hasta las interacciones sociales y las rutas logísticas.

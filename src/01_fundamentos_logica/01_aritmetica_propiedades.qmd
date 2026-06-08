@@ -16,7 +16,18 @@ status: "stable"
 
 # Aritmética: Propiedades de las Operaciones
 
-![Diagrama de Venn de tres conjuntos](diagrama_venn_triple.svg)
+```typst
+#import "@preview/cetz:0.2.2"
+#align(center)[#cetz.canvas({
+  import cetz.draw: *
+  circle((0, 1), radius: 1.5, fill: rgb("39C5BB").transparentize(70%), name: "A")
+  circle((-1, -0.5), radius: 1.5, fill: rgb("FF1493").transparentize(70%), name: "B")
+  circle((1, -0.5), radius: 1.5, fill: rgb("10b981").transparentize(70%), name: "C")
+  content((0, 1.3), [A])
+  content((-1.2, -0.7), [B])
+  content((1.2, -0.7), [C])
+})]
+```
 
 Las propiedades aritméticas definen el comportamiento de las operaciones básicas en los sistemas numéricos.
 Estos axiomas estructurales aseguran que la manipulación algebraica sea consistente y predecible, independientemente de la magnitud de los valores involucrados.

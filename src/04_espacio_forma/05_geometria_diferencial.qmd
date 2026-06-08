@@ -16,7 +16,17 @@ status: "stable"
 
 # Geometría diferencial
 
-![Plano tangente a superficie curva](geometria_variedad_tangente.svg)
+```typst
+#import "@preview/cetz:0.2.2"
+#align(center)[#cetz.canvas({
+  import cetz.draw: *
+  bezier((-2,0), (2,0), (0,2), stroke: rgb("39C5BB") + 2pt)
+  circle((0, 1), radius: 0.1, fill: rgb("FF1493"))
+  line((-1.5, 1), (1.5, 1), stroke: rgb("10b981"))
+  content((0, 1.3), [$p$])
+  content((1.8, 1), [$T_p M$])
+})]
+```
 
 
 ![Triedro de Frenet en una helice 3D](geometria_diferencial_frenet)

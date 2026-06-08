@@ -16,7 +16,21 @@ status: "stable"
 
 # Combinatoria
 
-![Diagrama de arbol para principios de conteo](combinatoria_arbol.svg)
+```typst
+#import "@preview/cetz:0.2.2"
+#align(center)[#cetz.canvas({
+  import cetz.draw: *
+  content((0,0), [A], name: "A")
+  content((2,1), [B], name: "B")
+  content((2,-1), [C], name: "C")
+  line("A", "B")
+  line("A", "C")
+  content((4,1.5), [D], name: "D")
+  content((4,0.5), [E], name: "E")
+  line("B", "D")
+  line("B", "E")
+})]
+```
 
 La combinatoria es el arte de contar y organizar estructuras discretas sin necesidad de enumerarlas una por una.
 Es una rama esencial para la informática, la probabilidad y la optimización, proporcionando los métodos para determinar la viabilidad de algoritmos y el tamaño de espacios de búsqueda.

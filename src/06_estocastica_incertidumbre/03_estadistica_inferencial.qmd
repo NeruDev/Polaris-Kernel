@@ -16,7 +16,17 @@ status: "stable"
 
 # Estadística inferencial
 
-![Visualizacion del margen de error y nivel de confianza](intervalo_confianza.svg)
+```typst
+#import "@preview/cetz:0.2.2"
+#align(center)[#cetz.canvas({
+  import cetz.draw: *
+  import cetz.plot
+  plot.plot(size: (5, 3), {
+    plot.add(domain: (-3, 3), x => calc.exp(-x*x), style: (stroke: rgb("39C5BB")))
+    plot.add(domain: (-1.96, 1.96), x => calc.exp(-x*x), style: (fill: rgb("FF1493").transparentize(70%), stroke: none))
+  })
+})]
+```
 
 La estadística inferencial es la rama que permite extraer conclusiones sobre una población a partir del análisis de una muestra representativa.
 Mediante el uso de modelos de probabilidad, esta disciplina cuantifica la incertidumbre de las estimaciones y proporciona un marco riguroso para la toma de decisiones basada en evidencia.

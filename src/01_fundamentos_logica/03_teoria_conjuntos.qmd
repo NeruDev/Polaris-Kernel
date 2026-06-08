@@ -16,7 +16,18 @@ status: "stable"
 
 # Teoría de conjuntos
 
-![Diagrama de Venn de tres conjuntos](diagrama_venn_triple.svg)
+```typst
+#import "@preview/cetz:0.2.2"
+#align(center)[#cetz.canvas({
+  import cetz.draw: *
+  circle((0, 1), radius: 1.5, fill: rgb("39C5BB").transparentize(70%), name: "A")
+  circle((-1, -0.5), radius: 1.5, fill: rgb("FF1493").transparentize(70%), name: "B")
+  circle((1, -0.5), radius: 1.5, fill: rgb("10b981").transparentize(70%), name: "C")
+  content((0, 1.3), [A])
+  content((-1.2, -0.7), [B])
+  content((1.2, -0.7), [C])
+})]
+```
 
 La teoría de conjuntos es el fundamento sobre el cual se construye casi todo el 
 edificio matemático. Define el concepto de "colección de objetos" y las 

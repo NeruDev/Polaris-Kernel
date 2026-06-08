@@ -16,10 +16,31 @@ status: "stable"
 
 # Estadística descriptiva
 
-![Histograma de frecuencias](histograma_ejemplo.svg)
+```typst
+#import "@preview/cetz:0.2.2"
+#align(center)[#cetz.canvas({
+  import cetz.draw: *
+  line((0,0), (4,0))
+  line((0,0), (0,3))
+  rect((0, 0), (0.8, 1), fill: rgb("39C5BB"))
+  rect((0.8, 0), (1.6, 2.5), fill: rgb("39C5BB"))
+  rect((1.6, 0), (2.4, 1.8), fill: rgb("39C5BB"))
+  rect((2.4, 0), (3.2, 0.5), fill: rgb("39C5BB"))
+})]
+```
 
 
-![Grafico de barras para analisis de datos](estadistica_barras.svg)
+```typst
+#import "@preview/cetz:0.2.2"
+#align(center)[#cetz.canvas({
+  import cetz.draw: *
+  line((0,0), (4,0))
+  line((0,0), (0,3))
+  rect((0.5, 0), (1.2, 2), fill: rgb("39C5BB"))
+  rect((1.5, 0), (2.2, 1.5), fill: rgb("FF1493"))
+  rect((2.5, 0), (3.2, 2.8), fill: rgb("10b981"))
+})]
+```
 
 La estadística descriptiva es una disciplina esencial que se encarga de recolectar, organizar, visualizar y resumir conjuntos de datos empíricos.
 A diferencia de la estadística inferencial, su propósito principal no es formular conclusiones matemáticas generalizadas sobre una población, sino detallar y presentar exhaustivamente las características observables de la muestra analizada.
