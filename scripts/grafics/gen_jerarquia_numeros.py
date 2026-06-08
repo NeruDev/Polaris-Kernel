@@ -1,6 +1,6 @@
 import subprocess
-from pathlib import Path
 import sys
+from pathlib import Path
 
 def main():
     project_root = Path(__file__).resolve().parents[2]
