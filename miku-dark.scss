@@ -1,0 +1,149 @@
+/*-- scss:defaults --*/
+$theme-layout: dark;
+
+// Paleta de Hatsune Miku
+$miku-cyan: #39C5BB;       // El clásico verde turquesa/cian de Miku
+$miku-dark-blue: #0f1618;  // Fondo oscuro con matiz azulado/turquesa
+$miku-darker: #080d0e;     // Fondo de barras y código aún más oscuro
+$miku-gray-bg: #162124;    // Fondo para tarjetas y callouts
+$miku-pink: #FF1493;       // Rosa brillante para acentos y estados activos
+$miku-white: #e6f7f6;      // Texto principal (blanco suave ligeramente cian)
+$miku-muted: #7d9698;      // Texto secundario / silenciado
+
+// Variables del Tema Bootstrap 5
+$body-bg: $miku-dark-blue;
+$body-color: $miku-white;
+$link-color: $miku-cyan;
+$link-hover-color: lighten($miku-cyan, 15%);
+
+$primary: $miku-cyan;
+$secondary: $miku-muted;
+$success: #10b981;
+$info: $miku-cyan;
+$warning: #f59e0b;
+$danger: $miku-pink;
+
+$text-muted: $miku-muted;
+
+// Menús y componentes de Quarto
+$navbar-bg: $miku-darker;
+$navbar-light-color: $miku-white;
+$sidebar-bg: $miku-darker;
+$sidebar-color: $miku-white;
+
+$border-color: rgba($miku-cyan, 0.2);
+
+// Tipografía moderna
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+/*-- scss:rules --*/
+
+// Brillo cibernético y bordes temáticos
+.navbar {
+  border-bottom: 2px solid $miku-cyan !important;
+  box-shadow: 0 0 10px rgba($miku-cyan, 0.2);
+}
+
+.sidebar {
+  border-right: 1px solid rgba($miku-cyan, 0.15) !important;
+}
+
+.quarto-title-block {
+  border-bottom: 1px solid rgba($miku-cyan, 0.2);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+// Colores de títulos
+h1, h2, h3, h4, h5, h6 {
+  color: $miku-cyan;
+  font-weight: 700;
+  text-shadow: 0 0 2px rgba($miku-cyan, 0.1);
+}
+
+// Estilo del Sidebar (Menú lateral)
+.sidebar-item-text, .sidebar-link {
+  color: $miku-white !important;
+}
+
+.sidebar-item a:hover, .sidebar-link:hover {
+  color: lighten($miku-cyan, 10%) !important;
+  text-decoration: none;
+}
+
+.sidebar-item a.active, .sidebar-link.active {
+  color: $miku-pink !important;
+  font-weight: bold;
+  border-left: 2px solid $miku-pink !important;
+  padding-left: 0.5rem !important;
+}
+
+// Callouts y contenedores destacados
+.callout {
+  border-radius: 4px;
+}
+
+.callout.callout-style-default {
+  border-left-width: 5px !important;
+}
+
+.callout-note {
+  border-left-color: #38bdf8 !important;   // Azul brillante
+  background-color: rgba(#38bdf8, 0.12) !important;
+}
+
+.callout-warning {
+  border-left-color: #fbbf24 !important;   // Amarillo/Naranja brillante
+  background-color: rgba(#fbbf24, 0.12) !important;
+}
+
+.callout-important {
+  border-left-color: #f43f5e !important;   // Rojo/Rosa brillante
+  background-color: rgba(#f43f5e, 0.12) !important;
+}
+
+.callout-tip {
+  border-left-color: #34d399 !important;   // Verde brillante
+  background-color: rgba(#34d399, 0.12) !important;
+}
+
+.callout-caution {
+  border-left-color: #fb923c !important;   // Naranja brillante
+  background-color: rgba(#fb923c, 0.12) !important;
+}
+
+.callout-body, .callout-content, .callout-title, .callout-header {
+  color: #e6f7f6 !important;
+}
+
+.callout-title {
+  font-weight: 600;
+}
+
+// Estilo para tablas de datos
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  background-color: rgba($miku-cyan, 0.12) !important;
+  color: $miku-cyan !important;
+  border-bottom: 2px solid $miku-cyan !important;
+}
+td {
+  border-bottom: 1px solid rgba($miku-cyan, 0.1) !important;
+}
+
+// Bloques de código
+pre, code, .sourceCode {
+  background-color: $miku-darker !important;
+  color: $miku-white !important;
+  border: 1px solid rgba($miku-cyan, 0.15);
+  border-radius: 4px;
+}
+
+// Efectos hover en enlaces
+a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 3px rgba($miku-cyan, 0.4);
+}

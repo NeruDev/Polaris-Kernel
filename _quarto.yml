@@ -63,7 +63,9 @@ format:
   html:
     theme:
       light: cosmo
-      dark: site_src/miku-dark.scss
+      dark:
+        - darkly
+        - miku-dark.scss
     toc: true
     html-math-method: mathjax
     code-fold: true

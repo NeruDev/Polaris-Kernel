@@ -7,7 +7,6 @@ Polaris Kernel is a structured repository of mathematics based on the Bourbaki p
 
 ## Architecture
 - Root: `src/` (6 Pillars of Mathematics)
-- Web Source: `site_src/` (Custom styles and SCSS themes like miku-dark)
 - Adjacency Rule: Every `.qmd` has a `.json` metadata counterpart in the same folder.
 - Governance: Validated via JSON Schemas in `metadata/schemas/`.
 - Automation: Orchestrated by `scripts/build.py` leveraging Quarto.
