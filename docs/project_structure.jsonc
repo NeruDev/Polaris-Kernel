@@ -3,7 +3,7 @@
     // Este archivo describe la jerarquía y propósito de cada componente para agentes de IA.
 
     "src": {
-        // Núcleo de conocimiento matemático (Teoría + Ilustraciones locales).
+        // Núcleo de conocimiento matemático (Teoría en .qmd + Ilustraciones locales).
         "01_fundamentos_logica": "Axiomática, conjuntos y lógica proposicional.",
         "02_estructuras_algebraicas": "Álgebra lineal y estructuras abstractas (Grupos/Categorías).",
         "03_analisis_continuidad": "Cálculo, EDOs y Análisis Funcional.",
@@ -14,8 +14,8 @@
 
     "scripts": {
         // Motor de automatización y orquestación del repositorio.
-        "build.py": "Orquestador principal: Sincroniza metadatos, valida esquemas y renderiza el sitio.",
-        "generate_assets.py": "Orquestador de gráficos: Ejecuta masivamente los scripts en scripts/grafics/.",
+        "build.py": "Orquestador principal (Wrapper): Prepara metadatos y lanza Quarto/Render.",
+        "generate_assets.py": "Orquestador de gráficos (Uso Manual Estricto): Ejecuta bajo demanda los scripts SVG históricos.",
         "templates.py": "Centralización de estilos visuales (Matplotlib) para mantener identidad visual.",
         "core": {
             // Lógica de negocio y validadores avanzados.
@@ -25,8 +25,8 @@
         },
         "io": {
             // Abstracción de operaciones de sistema de archivos.
-            "file_manager.py": "Manejo seguro de Markdown con Frontmatter y persistencia JSON.",
-            "metadata_agent.py": "Agente de sincronización: Garantiza la Regla de Adyacencia (MD <-> JSON).",
+            "file_manager.py": "Manejo seguro de Markdown/QMD con Frontmatter y persistencia JSON.",
+            "metadata_agent.py": "Agente de sincronización: Garantiza la Regla de Adyacencia (QMD/MD <-> JSON).",
             "generate_structure.py": "Genera la documentación técnica de la jerarquía del repo."
         },
         "grafics": "Biblioteca de +140 scripts Python para generación de iconografía vectorial (SVG)."
@@ -51,10 +51,12 @@
         "project_structure.json": "Versión en texto plano para parsing por máquinas."
     },
 
-    // --- ARCHIVOS DE GOBERNANZA (RAÍZ) ---
+    // --- ARCHIVOS DE GOBERNANZA E INFRAESTRUCTURA (RAÍZ) ---
     "AGENTS.md": "Estándares globales de operación para agentes autónomos.",
     "GEMINI.md": "Reglas de comportamiento específicas para LLMs.",
     "llms.txt": "Archivo de descubrimiento para indexación por IA (Estándar 2026).",
     "README.md": "Presentación ejecutiva para humanos.",
-    "pyproject.toml": "Configuración central de herramientas de calidad (Ruff/Mypy)."
+    "pyproject.toml": "Configuración central de herramientas de calidad (Ruff/Mypy).",
+    "_quarto.yml": "Archivo central de configuración de Quarto (Orquestador de renderizado Web/PDF).",
+    "transicion_quarto.md": "Plan maestro de migración y auditoría de la etapa de adopción de Quarto/Typst."
 }

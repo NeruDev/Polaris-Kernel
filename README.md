@@ -34,7 +34,7 @@ graph TD
 
 ### 1. Enfoque "AI-Adjacent" (Adyacencia Semántica)
 A diferencia de los repositorios tradicionales, Polaris Kernel aplica la **Regla de Adyacencia**:
-- Cada archivo `.md` (teoría) o `.py` (herramientas) tiene un archivo `.json` homónimo en el mismo directorio.
+- Cada archivo `.qmd` (teoría) o `.py` (herramientas) tiene un archivo `.json` homónimo en el mismo directorio.
 - Esto permite que los agentes de IA descubran capacidades y conceptos mediante inspección de metadatos antes de procesar el código pesado.
 
 ### 2. Atomicidad Semántica (RAG-Ready)
@@ -69,7 +69,7 @@ pip install .
 El orquestador central gestiona el ciclo de vida completo:
 
 ```powershell
-# Sincronizar Metadatos -> Validar por Schema -> Generar Sitio
+# Sincronizar Metadatos -> Validar por Schema -> Renderizar (Quarto/Typst)
 python scripts/build.py --verbose
 ```
 

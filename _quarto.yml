@@ -1,0 +1,72 @@
+project:
+  type: website
+  output-dir: site
+  resources:
+  - src/**/*.svg
+website:
+  title: Polaris Kernel
+  site-url: https://nerudev.github.io/Polaris-Kernel/
+  search: true
+  sidebar:
+    style: docked
+    search: true
+    contents:
+    - section: 01 Fundamentos Logica
+      contents:
+      - src/01_fundamentos_logica/01_aritmetica_propiedades.qmd
+      - src/01_fundamentos_logica/01_sistemas_numericos.qmd
+      - src/01_fundamentos_logica/02_logica_matematica.qmd
+      - src/01_fundamentos_logica/03_teoria_conjuntos.qmd
+      - src/01_fundamentos_logica/04_metodos_demostracion.qmd
+      - src/01_fundamentos_logica/05_relaciones_equivalencia.qmd
+    - section: 02 Estructuras Algebraicas
+      contents:
+      - src/02_estructuras_algebraicas/01_algebra_elemental.qmd
+      - src/02_estructuras_algebraicas/02_algebra_lineal.qmd
+      - src/02_estructuras_algebraicas/03_algebra_abstracta.qmd
+      - src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd
+      - src/02_estructuras_algebraicas/05_teoria_anillos_cuerpos.qmd
+    - section: 03 Analisis Continuidad
+      contents:
+      - src/03_analisis_continuidad/01_funciones_y_limites.qmd
+      - src/03_analisis_continuidad/02_calculo_diferencial.qmd
+      - src/03_analisis_continuidad/03_calculo_integral.qmd
+      - src/03_analisis_continuidad/04_calculo_multivariable.qmd
+      - src/03_analisis_continuidad/05_ecuaciones_diferenciales.qmd
+      - src/03_analisis_continuidad/06_analisis_avanzado.qmd
+      - src/03_analisis_continuidad/07_analisis_funcional.qmd
+      - src/03_analisis_continuidad/08_sucesiones_y_series.qmd
+    - section: 04 Espacio Forma
+      contents:
+      - src/04_espacio_forma/01_geometria_euclidiana.qmd
+      - src/04_espacio_forma/02_trigonometria.qmd
+      - src/04_espacio_forma/03_geometria_analitica.qmd
+      - src/04_espacio_forma/04_topologia.qmd
+      - src/04_espacio_forma/05_geometria_diferencial.qmd
+      - src/04_espacio_forma/06_geometria_no_euclidiana.qmd
+    - section: 05 Discrecion Computacion
+      contents:
+      - src/05_discrecion_computacion/01_combinatoria.qmd
+      - src/05_discrecion_computacion/02_teoria_de_grafos.qmd
+      - src/05_discrecion_computacion/03_teoria_de_numeros.qmd
+      - src/05_discrecion_computacion/04_metodos_numericos.qmd
+      - src/05_discrecion_computacion/05_teoria_automatas.qmd
+    - section: 06 Estocastica Incertidumbre
+      contents:
+      - src/06_estocastica_incertidumbre/01_estadistica_descriptiva.qmd
+      - src/06_estocastica_incertidumbre/02_teoria_de_probabilidad.qmd
+      - src/06_estocastica_incertidumbre/03_estadistica_inferencial.qmd
+      - src/06_estocastica_incertidumbre/04_modelos_estocasticos.qmd
+      - src/06_estocastica_incertidumbre/05_teoria_informacion.qmd
+lang: es
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: miku-dark.scss
+    css: site_src/styles.css
+    toc: true
+    html-math-method: mathjax
+    code-fold: true
+    code-copy: true
+    page-layout: full

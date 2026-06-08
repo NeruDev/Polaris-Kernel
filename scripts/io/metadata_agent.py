@@ -13,10 +13,12 @@ class MetadataAgent:
 
     def extract_yaml(self, file_path):
         content = file_path.read_text(encoding="utf-8")
-        # Soporte para MD (---) y Python (# yaml_frontmatter:)
-        if file_path.suffix == ".md" and content.startswith("---"):
-            parts = content.split("---", 2)
-            return yaml.safe_load(parts[1]) if len(parts) >= 3 else None
+        # Soporte para MD/QMD (---) y Python (# yaml_frontmatter:)
+        if file_path.suffix in [".md", ".qmd"] and content.startswith("---"):
+            match = re.match(r"^---\s*\n(.*?)\n---\s*(?:\n|$)", content, re.DOTALL)
+            if match:
+                return yaml.safe_load(match.group(1))
+            return None
 
         if file_path.suffix == ".py":
             match = re.search(r"# yaml_frontmatter:\n((?:#.*\n)+)", content)
@@ -24,6 +26,15 @@ class MetadataAgent:
                 yaml_str = match.group(1).replace("# ", "").replace("#", "")
                 return yaml.safe_load(yaml_str)
         return None
+
+    def inject_quarto_metadata(self, file_path, quarto_meta, custom_meta):
+        """
+        Futuro: Genera e inyecta los metadatos YAML en dos secciones estructuradas.
+        Sección 1: Quarto (title, date, author, description, categories)
+        Sección 2: Polaris (id, pilar, status, etc.)
+        """
+        # TODO: Implementar lógica de sobreescritura estructurada con comentarios.
+        pass
 
     def synchronize(self):
         targets = ["src", "scripts", "utils", "tests"]
@@ -33,7 +44,7 @@ class MetadataAgent:
                 continue
 
             for f in dir_path.rglob("*"):
-                if f.suffix in [".md", ".py"] and f.name != "__init__.py":
+                if f.suffix in [".md", ".qmd", ".py"] and f.name != "__init__.py":
                     metadata = self.extract_yaml(f)
                     if metadata:
                         json_path = f.with_suffix(".json")

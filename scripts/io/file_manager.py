@@ -4,6 +4,7 @@
 #   tags: ['io', 'filesystem']
 
 import json
+import re
 import shutil
 from pathlib import Path
 from typing import Any, Dict, Tuple
@@ -49,10 +50,10 @@ class FileManager:
         content = self.read_text(path)
         if content.startswith("---"):
             try:
-                parts = content.split("---", 2)
-                if len(parts) >= 3:
-                    metadata = yaml.safe_load(parts[1]) or {}
-                    return metadata, parts[2].strip()
+                match = re.match(r"^---\s*\n(.*?)\n---\s*(?:\n|$)(.*)", content, re.DOTALL)
+                if match:
+                    metadata = yaml.safe_load(match.group(1)) or {}
+                    return metadata, match.group(2).strip()
             except Exception as e:
                 raise FileOperationError(f"Error en Frontmatter YAML de {path.name}: {e}")
         return {}, content.strip()

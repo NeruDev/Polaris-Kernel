@@ -1,0 +1,25 @@
+---
+title: "Polaris Kernel"
+subtitle: "Infraestructura de Conocimiento Matemático (AI-Ready)"
+page-layout: full
+---
+
+# Bienvenido a Polaris Kernel
+
+Polaris Kernel es un repositorio estructurado de conocimiento matemático diseñado con dos propósitos fundamentales:
+
+1. **Agentes de IA (LLMs):** Todo el contenido está granularizado y acompañado de metadatos `JSON` adyacentes para optimizar los sistemas de Recuperación Aumentada (RAG) minimizando el ruido semántico.
+2. **Alta Fidelidad Humana:** La teoría es renderizada interactivamente usando Quarto y Typst para entregar la máxima calidad tipográfica y visual.
+
+## Pilares de Conocimiento
+
+Nuestra infraestructura matemática está modelada en 6 pilares estructurales (basados en la jerarquía de Bourbaki):
+
+* **[01] Fundamentos y Lógica:** Sistemas Numéricos, Lógica y Teoría de Conjuntos.
+* **[02] Estructuras Algebraicas:** Álgebra Lineal, Abstracta y Categorías.
+* **[03] Análisis y Continuidad:** Cálculo, Ecuaciones Diferenciales y Análisis Funcional.
+* **[04] Espacio y Forma:** Geometría, Trigonometría y Topología.
+* **[05] Discreción y Computación:** Combinatoria, Grafos, Métodos Numéricos.
+* **[06] Estocástica e Incertidumbre:** Probabilidad, Estadística y Teoría de la Información.
+
+Navega a través del menú lateral para explorar cada área en profundidad.

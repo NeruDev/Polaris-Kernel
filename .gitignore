@@ -91,3 +91,6 @@ dmypy.json
 # Cursor
 .cursorignore
 .cursorindexingignore
+
+/.quarto/
+**/*.quarto_ipynb
