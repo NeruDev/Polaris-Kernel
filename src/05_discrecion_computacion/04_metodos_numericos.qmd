@@ -16,20 +16,6 @@ status: "stable"
 
 # Métodos Numéricos: Raíces y Aproximación
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  line((-1,0), (4,0), mark: (end: ">"))
-  bezier((0,-1), (3,2), (1.5,0), stroke: rgb("39C5BB") + 1.5pt)
-  circle((1.5, 0), radius: 0.1, fill: rgb("FF1493"))
-  line((0.5, 0.1), (0.5, -0.1))
-  line((2.5, 0.1), (2.5, -0.1))
-  content((0.5, -0.4), [$a$])
-  content((2.5, -0.4), [$b$])
-})]
-```
-
 Los métodos numéricos son técnicas que permiten formular problemas matemáticos para que puedan resolverse mediante operaciones aritméticas.
 Son fundamentales en la era de la computación, permitiendo hallar soluciones aproximadas pero suficientemente precisas a problemas que carecen de una solución analítica exacta.
 

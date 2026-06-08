@@ -1,6 +1,13 @@
 {
-    "id": "msc62_estadistica_descriptiva",
     "title": "Estadística descriptiva",
+    "date": "2026-05-24",
+    "categories": [
+        "estadistica",
+        "datos",
+        "medidas",
+        "tendencia"
+    ],
+    "id": "msc62_estadistica_descriptiva",
     "pilar": "06_estocastica_incertidumbre",
     "msc_code": "62-01",
     "tags": [

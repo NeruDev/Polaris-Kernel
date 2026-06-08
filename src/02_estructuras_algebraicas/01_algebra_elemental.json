@@ -1,6 +1,13 @@
 {
-    "id": "msc00_algebra_elemental",
     "title": "Álgebra Elemental: Potencias, Raíces y Proporciones",
+    "date": "2026-04-26",
+    "categories": [
+        "algebra",
+        "exponentes",
+        "proporciones",
+        "polinomios"
+    ],
+    "id": "msc00_algebra_elemental",
     "pilar": "02_estructuras_algebraicas",
     "msc_code": "00-01",
     "tags": [

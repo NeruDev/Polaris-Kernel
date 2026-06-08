@@ -3,6 +3,14 @@
 #   title: 'Orquestador unificado de construccion y validacion'
 #   tags: ['build', 'pipeline', 'automation']
 
+"""
+Orquestador Principal de Construcción.
+Bajo el nuevo paradigma, este script delega el renderizado final de HTML/PDF
+a Quarto (y por ende a Typst) usando el comando `quarto render`.
+El flujo de CI/CD en GitHub Actions (`pages.yml`) utiliza este script
+antes de empaquetar la carpeta `site/` con `upload-pages-artifact`.
+"""
+
 # ruff: noqa: I001
 
 import argparse

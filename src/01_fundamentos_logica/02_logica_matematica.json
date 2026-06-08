@@ -1,6 +1,12 @@
 {
-    "id": "msc03_logica_matematica",
     "title": "Lógica matemática",
+    "date": "2026-04-26",
+    "categories": [
+        "logica",
+        "proposiciones",
+        "predicados"
+    ],
+    "id": "msc03_logica_matematica",
     "pilar": "01_fundamentos_logica",
     "msc_code": "03-01",
     "tags": [

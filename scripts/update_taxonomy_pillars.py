@@ -1,3 +1,9 @@
+"""
+Script para actualizar dinámicamente la taxonomía base (msc_taxonomy.all.json)
+con los pilares primarios y secundarios definidos en el overlay de metadatos.
+Utilizado durante mantenimientos de metadatos de los pilares de conocimiento.
+"""
+
 import json
 import os
 

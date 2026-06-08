@@ -16,19 +16,6 @@ status: "stable"
 
 # Cálculo Diferencial
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  line((-1,0), (4,0), mark: (end: ">"))
-  line((0,-1), (0,4), mark: (end: ">"))
-  bezier((0,0.5), (3,3.5), (2,1))
-  line((0.5, 0), (3.5, 3), stroke: rgb("39C5BB"))
-  circle((2, 1.5), radius: 0.1, fill: rgb("FF1493"))
-  content((2, -0.4), [$a$])
-})]
-```
-
 El cálculo diferencial es la rama de las matemáticas que se encarga del estudio de las tasas de cambio continuas y locales de las funciones.
 A través del concepto de derivada, permite analizar cómo varía una cantidad en respuesta a cambios infinitesimales en otra variable de la cual depende.
 Esta herramienta es fundamental para modelar fenómenos dinámicos en la física, la economía y la ingeniería.

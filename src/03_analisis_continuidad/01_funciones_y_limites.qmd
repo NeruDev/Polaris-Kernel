@@ -16,22 +16,6 @@ status: "stable"
 
 # Funciones y Límites
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  line((-1,0), (4,0), mark: (end: ">"))
-  line((0,-1), (0,3), mark: (end: ">"))
-  bezier((0,0), (3,2.5), (1,2))
-  circle((2, 1.8), radius: 0.1, fill: rgb("FF1493"))
-  line((2,0), (2,1.8), stroke: (dash: "dashed"))
-  line((0,1.8), (2,1.8), stroke: (dash: "dashed"))
-  content((2, -0.4), [$a$])
-  content((-0.4, 1.8), [$L$])
-})]
-```
-
-
 ## Tipos de funciones y composición
 
 *(Pendiente de expansión detallada sobre funciones base)*

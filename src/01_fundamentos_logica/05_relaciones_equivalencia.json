@@ -1,6 +1,13 @@
 {
-    "id": "msc03_relaciones_equivalencia",
     "title": "Relaciones de Equivalencia y Orden",
+    "date": "2026-05-24",
+    "categories": [
+        "relaciones",
+        "equivalencia",
+        "particiones",
+        "orden"
+    ],
+    "id": "msc03_relaciones_equivalencia",
     "pilar": "01_fundamentos_logica",
     "msc_code": "03-XX",
     "tags": [

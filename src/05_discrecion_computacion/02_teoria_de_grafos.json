@@ -1,6 +1,13 @@
 {
-    "id": "msc05C_teoria_de_grafos",
     "title": "Teoría de grafos",
+    "date": "2026-04-26",
+    "categories": [
+        "grafos",
+        "arboles",
+        "conectividad",
+        "redes"
+    ],
+    "id": "msc05C_teoria_de_grafos",
     "pilar": "05_discrecion_computacion",
     "msc_code": "05C-01",
     "tags": [

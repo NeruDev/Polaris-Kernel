@@ -16,20 +16,6 @@ status: "stable"
 
 # Teoría de Números y Divisibilidad
 
-```typst
-#align(center)[
-#table(
-  columns: 5,
-  fill: (x, y) => if (x+y*5+1) in (2, 3, 5, 7, 11, 13, 17, 19, 23) { rgb("39C5BB").transparentize(60%) } else { none },
-  [1], [2], [3], [4], [5],
-  [6], [7], [8], [9], [10],
-  [11], [12], [13], [14], [15],
-  [16], [17], [18], [19], [20],
-  [21], [22], [23], [24], [25]
-)
-]
-```
-
 La teoría de números es el estudio de las propiedades de los números enteros, a menudo referida como "la reina de las matemáticas".
 Aunque sus planteamientos son frecuentemente sencillos de entender, su resolución ha requerido el desarrollo de las herramientas más sofisticadas del álgebra y el análisis.
 

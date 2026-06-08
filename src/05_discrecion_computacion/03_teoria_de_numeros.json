@@ -1,6 +1,13 @@
 {
-    "id": "msc11_teoria_de_numeros",
     "title": "Teoría de Números y Divisibilidad",
+    "date": "2026-04-26",
+    "categories": [
+        "divisibilidad",
+        "primos",
+        "modular",
+        "aritmetica"
+    ],
+    "id": "msc11_teoria_de_numeros",
     "pilar": "05_discrecion_computacion",
     "msc_code": "11-01",
     "tags": [

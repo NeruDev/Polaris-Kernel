@@ -1,6 +1,13 @@
 {
-    "id": "msc18_teoria_de_categorias",
     "title": "Teoría de categorías",
+    "date": "2026-04-26",
+    "categories": [
+        "categorias",
+        "functores",
+        "morfismos",
+        "abstraccion"
+    ],
+    "id": "msc18_teoria_de_categorias",
     "pilar": "02_estructuras_algebraicas",
     "msc_code": "18-01",
     "tags": [

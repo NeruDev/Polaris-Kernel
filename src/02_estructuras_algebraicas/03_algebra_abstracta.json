@@ -1,6 +1,13 @@
 {
-    "id": "msc08_algebra_abstracta",
     "title": "Álgebra abstracta",
+    "date": "2026-04-26",
+    "categories": [
+        "grupos",
+        "anillos",
+        "campos",
+        "estructuras"
+    ],
+    "id": "msc08_algebra_abstracta",
     "pilar": "02_estructuras_algebraicas",
     "msc_code": "08-01",
     "tags": [

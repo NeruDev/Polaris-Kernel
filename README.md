@@ -12,7 +12,7 @@ Polaris Kernel es una infraestructura de conocimiento matemático de alta fideli
 **Visualiza los resultados directamente en:**  
 👉 [https://nerudev.github.io/Polaris-Kernel/](https://nerudev.github.io/Polaris-Kernel/)
 
-El proyecto implementa una jerarquía modular estricta dividida en 6 pilares fundamentales:
+El proyecto implementa una jerarquía modular estricta dividida en 6 pilares fundamentales, ahora renderizados mediante el **nuevo paradigma de Quarto y Typst**, y desplegados de forma automatizada y sin ramas huérfanas mediante **GitHub Actions (`pages.yml`)**:
 
 ```mermaid
 graph TD
@@ -43,12 +43,15 @@ Todo el contenido está segmentado bajo reglas estrictas para maximizar la efect
 - **Formato:** 80 caracteres por línea (Git-friendly).
 - **Estructura:** Un archivo = Un concepto independiente.
 
-### 3. Iconografía Vectorial Nativa
-Biblioteca de más de 30 activos SVG generados programáticamente con Python y Matplotlib. Los gráficos coexisten con la teoría para asegurar rutas relativas directas y portabilidad total.
+### 3. Iconografía Vectorial Nativa (Quarto & Typst)
+Generación programática de activos gráficos vectoriales utilizando el nuevo paradigma y librerías nativas de **Typst** (ej. CeTZ, Fletcher, Lilaq). Los scripts fuentes se integran a través de la compilación de Typst y Quarto, asegurando rutas relativas directas, portabilidad y alta calidad tipográfica coherente con el proyecto (documentado en `docs/typst_graficos.md`). Quarto actúa como el orquestador principal.
 
 ---
 
-## 🛠️ Flujo de Ingeniería
+## 🛠️ Flujo de Ingeniería y CI/CD
+
+### Despliegue con GitHub Actions (`pages.yml`)
+El flujo de trabajo automatizado se ha modificado. El proyecto ya no depende de la rama `gh-pages` heredada; en su lugar, la acción de GitHub empaqueta directamente la carpeta `site/` y la sube utilizando **`upload-pages-artifact`**, asegurando un despliegue transparente desde `main` manteniendo el CI/CD nativo de Polaris Kernel.
 
 ### Instalación Determinista
 Optimizado para entornos Windows 11 con PowerShell:

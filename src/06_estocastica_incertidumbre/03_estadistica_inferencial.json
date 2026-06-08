@@ -1,6 +1,13 @@
 {
-    "id": "msc62_estadistica_inferencial",
     "title": "Estadística inferencial",
+    "date": "2026-04-26",
+    "categories": [
+        "inferencia",
+        "hipotesis",
+        "intervalos",
+        "significancia"
+    ],
+    "id": "msc62_estadistica_inferencial",
     "pilar": "06_estocastica_incertidumbre",
     "msc_code": "62-01",
     "tags": [

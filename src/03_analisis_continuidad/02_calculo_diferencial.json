@@ -1,6 +1,12 @@
 {
-    "id": "msc26_calculo_diferencial",
     "title": "Cálculo Diferencial",
+    "date": "2026-05-24",
+    "categories": [
+        "derivadas",
+        "optimizacion",
+        "diferencial"
+    ],
+    "id": "msc26_calculo_diferencial",
     "pilar": "03_analisis_continuidad",
     "msc_code": "26-XX",
     "tags": [

@@ -2,7 +2,7 @@
 
 ***
 **Versión:** 2.1 (Migración Quarto/Typst)  
-**Estado:** `Aceptada`  
+**Estado:** `Implementada y Activa`  
 **Estándar de Nomenclatura:** MSC 2020  
 **Última Actualización:** 2026-06-05
 ***

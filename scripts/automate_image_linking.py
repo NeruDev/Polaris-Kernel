@@ -1,3 +1,8 @@
+"""
+Script para vinculación automática de imágenes en los archivos de teoría (Markdown/Quarto).
+Soporta el nuevo paradigma buscando coincidencias y actualizando el contenido MD/QMD con los gráficos generados (SVG de Typst o Python).
+"""
+
 import re
 from pathlib import Path
 

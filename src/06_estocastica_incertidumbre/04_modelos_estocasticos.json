@@ -1,6 +1,13 @@
 {
-    "id": "msc60_modelos_estocasticos",
     "title": "Modelos estocásticos",
+    "date": "2026-04-26",
+    "categories": [
+        "markov",
+        "poisson",
+        "procesos",
+        "tiempo"
+    ],
+    "id": "msc60_modelos_estocasticos",
     "pilar": "06_estocastica_incertidumbre",
     "msc_code": "60-01",
     "tags": [

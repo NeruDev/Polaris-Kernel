@@ -1,6 +1,11 @@
 {
-    "id": "msc03_metodos_demostracion",
     "title": "Métodos de demostración",
+    "date": "2026-04-26",
+    "categories": [
+        "demostracion",
+        "induccion"
+    ],
+    "id": "msc03_metodos_demostracion",
     "pilar": "01_fundamentos_logica",
     "msc_code": "03-01",
     "tags": [

@@ -16,22 +16,6 @@ status: "stable"
 
 # Cálculo multivariable y vectorial
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  for x in range(-2, 3) {
-    for y in range(-2, 3) {
-      if x != 0 or y != 0 {
-        let u = -y * 0.2
-        let v = x * 0.2
-        line((x,y), (x+u, y+v), mark: (end: ">", scale: 0.5), stroke: rgb("39C5BB"))
-      }
-    }
-  }
-})]
-```
-
 El cálculo multivariable extiende los conceptos de una variable a funciones 
 de varias dimensiones $\mathbb{R}^n$. Permite modelar fenómenos físicos como 
 campos de fuerza, flujo de calor y dinámica de fluidos donde las variables 

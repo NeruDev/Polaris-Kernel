@@ -16,22 +16,6 @@ status: "stable"
 
 # Teoría de Categorías
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  content((0,2), [$A$], name: "A")
-  content((3,2), [$B$], name: "B")
-  content((3,0), [$C$], name: "C")
-  line("A", "B", mark: (end: ">"), name: "f")
-  line("B", "C", mark: (end: ">"), name: "g")
-  line("A", "C", mark: (end: ">"), name: "h")
-  content((1.5, 2.3), [$f$])
-  content((3.3, 1), [$g$])
-  content((1.3, 0.8), [$g circ f$])
-})]
-```
-
 La teoría de categorías es el nivel más alto de abstracción en las matemáticas. 
 No se preocupa por los elementos individuales de un conjunto, sino por las 
 relaciones y transformaciones entre estructuras. Es, en esencia, la 

@@ -16,38 +16,6 @@ status: "stable"
 
 # Álgebra Lineal: Matrices y Espacios Vectoriales
 
-```typst
-#align(center)[
-$ mat(a, b; c, d) + mat(e, f; g, h) = mat(a+e, b+f; c+g, d+h) $
-]
-```
-
-
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  line((0,0), (2,0), mark: (end: ">"), name: "x", stroke: rgb("39C5BB"))
-  line((0,0), (0,2), mark: (end: ">"), name: "y", stroke: rgb("FF1493"))
-  line((0,0), (-1.5,-1.5), mark: (end: ">"), name: "z", stroke: rgb("10b981"))
-  content((2.3, 0), [$e_1$])
-  content((0, 2.3), [$e_2$])
-  content((-1.8, -1.8), [$e_3$])
-})]
-```
-
-
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  grid((-2,-2), (2,2), stroke: gray.transparentize(50%))
-  line((0,0), (2,1), mark: (end: ">"), stroke: rgb("39C5BB") + 2pt)
-  line((0,0), (-1,2), mark: (end: ">"), stroke: rgb("FF1493") + 2pt)
-})]
-```
-
-
 El álgebra lineal es el estudio de vectores, espacios vectoriales y transformaciones lineales. Es una herramienta fundamental en física, ingeniería e informática.
 
 ## Sistemas de ecuaciones

@@ -1,6 +1,7 @@
 # Registro de Activos Gráficos Generados
 
 Este archivo contiene la ubicación y descripción de todos los gráficos generados para el repositorio MathKernel.
+> **Nota de Arquitectura:** Bajo el nuevo paradigma, los nuevos activos deben generarse prioritariamente utilizando Typst y compilarse localmente a SVG antes de referenciarse.
 
 | ID Activo | Pilar | Subtema | Descripción | Ruta Física |
 | :--- | :--- | :--- | :--- | :--- |

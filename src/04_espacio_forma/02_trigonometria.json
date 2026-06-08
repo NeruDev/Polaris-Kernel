@@ -1,6 +1,13 @@
 {
-    "id": "msc51_trigonometria",
     "title": "Trigonometría Fundamental",
+    "date": "2026-04-26",
+    "categories": [
+        "trigonometria",
+        "identidad",
+        "triangulos",
+        "ondas"
+    ],
+    "id": "msc51_trigonometria",
     "pilar": "04_espacio_forma",
     "msc_code": "51-01",
     "tags": [

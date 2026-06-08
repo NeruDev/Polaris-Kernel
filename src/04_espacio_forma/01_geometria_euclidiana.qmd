@@ -16,16 +16,6 @@ status: "stable"
 
 # Geometría Euclidiana y del Espacio
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  line((0,0), (3,0), (0,4), close: true, fill: rgb("39C5BB").transparentize(80%))
-  content((1, 1.5), [$c^2 = a^2 + b^2$])
-  line((0,0), (0.4,0), (0.4,0.4), (0,0.4))
-})]
-```
-
 La geometría euclidiana es el estudio de las formas y el espacio basado en los axiomas establecidos por Euclides de Alejandría.
 Es la base de la ingeniería y la arquitectura, proporcionando las leyes que rigen el mundo físico que percibimos.
 

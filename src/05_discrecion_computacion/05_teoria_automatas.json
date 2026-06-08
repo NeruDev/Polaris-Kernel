@@ -1,6 +1,13 @@
 {
-    "id": "msc68_teoria_automatas",
     "title": "Teoría de Autómatas y Lenguajes Formales",
+    "date": "2026-05-24",
+    "categories": [
+        "automatas",
+        "turing",
+        "lenguajes",
+        "chomsky"
+    ],
+    "id": "msc68_teoria_automatas",
     "pilar": "05_discrecion_computacion",
     "msc_code": "68-XX",
     "tags": [

@@ -16,30 +16,6 @@ status: "stable"
 
 # Topología
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  circle((0,0), radius: 2, stroke: (dash: "dashed", paint: gray))
-  circle((0.5, 0.5), radius: 0.1, fill: rgb("FF1493"))
-  circle((0.5, 0.5), radius: 0.8, fill: rgb("39C5BB").transparentize(70%), stroke: rgb("39C5BB"))
-  content((0.5, 0.2), [$x$])
-})]
-```
-
-
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  circle((0,0), radius: (1.5, 1), stroke: rgb("39C5BB"))
-  circle((0,0), radius: (0.5, 0.2), stroke: rgb("39C5BB"))
-  content((3,0), [$tilde.equiv$])
-  circle((6,0), radius: (1.2, 1.2), stroke: rgb("FF1493"))
-  arc((7.2, 0), start: -90deg, stop: 90deg, radius: 0.5, stroke: rgb("FF1493"))
-})]
-```
-
 La topología es el estudio de las propiedades de las figuras que permanecen 
 invariantes ante deformaciones continuas (estiramientos o torsiones, pero 
 sin romper ni pegar). Es conocida como la "geometría de la plastilina".

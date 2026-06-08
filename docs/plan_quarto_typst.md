@@ -1,18 +1,18 @@
 ---
 id: 'plan_quarto_typst'
-title: 'Plan de Migración a Quarto y Typst'
+title: 'Implementación: Quarto y Typst'
 pilar: 'docs'
 tags: ['arquitectura', 'quarto', 'typst', 'renderizado']
 ---
 
-# Plan de Migración: Renderizado en Quarto y Visualización en Typst
+# Migración Completada: Renderizado en Quarto y Visualización en Typst
 
-Este documento detalla la viabilidad y los retos técnicos para migrar el sistema de renderizado actual de Polaris Kernel hacia una arquitectura basada en Quarto, utilizando Typst para el diseño de gráficos matemáticos y la composición tipográfica de alta fidelidad.
+Este documento detalla la implementación (originalmente propuesta y ahora finalizada) para migrar el sistema de renderizado de Polaris Kernel hacia una arquitectura basada en Quarto, utilizando Typst para el diseño de gráficos matemáticos y la composición tipográfica de alta fidelidad.
 
-## 1. Descripción del Cambio Propuesto
+## 1. Descripción del Cambio (Completado)
 
-El sistema evolucionará de un generador estático personalizado (basado en la librería `markdown` de Python y MathJax) hacia el framework **Quarto**. 
-Quarto actuará como el orquestador de compilación para los documentos científicos, ejecutando las lógicas programáticas (vía Jupyter/ipykernel) para generar gráficos, y delegando el motor de renderizado y visualización final a **Typst**. Esta transición garantizará una presentación matemática impecable en la página web, optimizando tiempos de compilación respecto a LaTeX y modernizando la estética visual del kernel.
+El sistema ha evolucionado de un generador estático personalizado hacia el framework **Quarto**. 
+Quarto actúa como el orquestador de compilación para los documentos científicos, delegando el motor de renderizado y visualización final a **Typst**. Esta transición garantiza una presentación matemática impecable en la página web, optimizando tiempos de compilación respecto a LaTeX y modernizando la estética visual del kernel. También se integra fluidamente con **GitHub Actions** (`pages.yml`) subiendo los artefactos del directorio `site/` directamente con `upload-pages-artifact`.
 
 ## 2. Análisis de Viabilidad
 

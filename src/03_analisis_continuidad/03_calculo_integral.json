@@ -1,6 +1,12 @@
 {
-    "id": "msc26_calculo_integral",
     "title": "Cálculo Integral",
+    "date": "2026-04-26",
+    "categories": [
+        "integrales",
+        "antiderivada",
+        "area"
+    ],
+    "id": "msc26_calculo_integral",
     "pilar": "03_analisis_continuidad",
     "msc_code": "26-XX",
     "tags": [

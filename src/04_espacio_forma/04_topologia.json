@@ -1,6 +1,12 @@
 {
-    "id": "msc54_topologia",
     "title": "Topología",
+    "date": "2026-04-26",
+    "categories": [
+        "topologia",
+        "metricas",
+        "continuidad"
+    ],
+    "id": "msc54_topologia",
     "pilar": "04_espacio_forma",
     "msc_code": "54-01",
     "tags": [

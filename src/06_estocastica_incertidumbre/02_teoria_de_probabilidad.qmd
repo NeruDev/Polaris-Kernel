@@ -16,17 +16,6 @@ status: "stable"
 
 # Teoría de probabilidad
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  import cetz.plot
-  plot.plot(size: (5, 3), {
-    plot.add(domain: (-3, 3), x => calc.exp(-x*x), style: (stroke: rgb("39C5BB"), fill: rgb("39C5BB").transparentize(80%)))
-  })
-})]
-```
-
 La teoría de probabilidad es el marco matemático que permite cuantificar la incertidumbre y modelar fenómenos donde el azar desempeña un papel determinante.
 Desde el diseño de experimentos hasta la inteligencia artificial, esta disciplina proporciona las leyes que rigen los eventos aleatorios y su comportamiento a largo plazo.
 

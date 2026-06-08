@@ -16,31 +16,6 @@ status: "stable"
 
 # Lógica matemática
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  for i in range(5) {
-    rect((i*1.5, 0), (i*1.5 + 0.5, 2), fill: rgb("39C5BB"))
-  }
-  content((3, 2.5), [$P(k) => P(k+1)$])
-})]
-```
-
-
-```typst
-#align(center)[
-#table(
-  columns: 3,
-  [$p$], [$q$], [$p and q$],
-  [V], [V], [V],
-  [V], [F], [F],
-  [F], [V], [F],
-  [F], [F], [F]
-)
-]
-```
-
 La lógica matemática es el estudio formal de los sistemas de razonamiento. 
 Proporciona el lenguaje y las reglas necesarias para construir argumentos 
 válidos y demostrar teoremas con precisión absoluta.

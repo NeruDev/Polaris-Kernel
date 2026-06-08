@@ -1,6 +1,13 @@
 {
-    "id": "msc11_sistemas_numericos_propiedades",
     "title": "Aritmética: Propiedades de las Operaciones",
+    "date": "2026-04-26",
+    "categories": [
+        "aritmetica",
+        "propiedades",
+        "axiomas",
+        "pemdas"
+    ],
+    "id": "msc11_sistemas_numericos_propiedades",
     "pilar": "01_fundamentos_logica",
     "msc_code": "11-01",
     "tags": [

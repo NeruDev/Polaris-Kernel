@@ -21,6 +21,8 @@
 
 ## Task Behavior & Linking
 - **The Trinity Rule:** When generating or modifying assets, always preserve the link:
-  `scripts/grafics/` (Generator) → `src/` (SVG Asset) → `GENERATED_ASSETS.md` (Registry).
-- **Metadata Integrity:** Ensure every `.md` file has a valid YAML frontmatter including `id` (MSC standard), `title`, and `pilar`.
-- **Build First:** Before declaring a task finished, ensure `scripts/build.py` runs without critical errors.
+  `scripts/grafics/typst_src/` (Typst Generator) → `src/` (SVG Asset) → `metadata/GENERATED_ASSETS.md` (Registry).
+  *(Consulta `docs/typst_graficos.md` para las librerías oficiales de renderizado. Bajo el nuevo paradigma, prioriza Typst para todo esquema gráfico).*
+- **Metadata Integrity:** Ensure every `.md` o `.qmd` file has a valid YAML frontmatter including `id` (MSC standard), `title`, and `pilar`.
+- **Build First:** Before declaring a task finished, ensure `scripts/build.py` runs without critical errors (this delegates rendering to Quarto).
+- **CI/CD Awareness:** Remember deployment relies on `.github/workflows/pages.yml` with `upload-pages-artifact`, do not introduce `gh-pages` orphan branches.

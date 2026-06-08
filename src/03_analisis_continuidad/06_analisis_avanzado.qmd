@@ -16,19 +16,6 @@ status: "stable"
 
 # Análisis avanzado
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  line((-2.5,0), (2.5,0), mark: (end: ">"))
-  line((0,-1.5), (0,2.5), mark: (end: ">"))
-  arc((0,0), start: 0deg, stop: 180deg, radius: 2, mark: (end: ">", fill: rgb("39C5BB")), stroke: rgb("39C5BB"))
-  line((-2,0), (2,0), mark: (end: ">", fill: rgb("39C5BB")), stroke: rgb("39C5BB"))
-  circle((0.5, 0.8), radius: 0.1, fill: rgb("FF1493"))
-  content((0.5, 1.1), [$z_0$])
-})]
-```
-
 El análisis avanzado profundiza en la estructura de los números reales y 
 extiende los conceptos de cálculo al plano complejo y a espacios de medida 
 abstractos. Proporciona las herramientas para el rigor matemático moderno.

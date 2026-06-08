@@ -13,13 +13,13 @@ Para maximizar la efectividad del sistema RAG (IA):
 - **Metadatos:** Cada `.md` debe empezar con YAML frontmatter válido según `metadata/schemas/content.schema.json`.
 
 ## 3. Flujo de Trabajo
-1.  **Crea el contenido** en la carpeta de pilar correspondiente dentro de `src/`.
-2.  **Genera los activos** necesarios usando scripts de Python en `scripts/grafics/`.
-3.  **Ejecuta el Build Local:**
+1.  **Crea el contenido** en la carpeta de pilar correspondiente dentro de `src/` usando Markdown/Quarto.
+2.  **Genera los activos** necesarios: Adopta el nuevo paradigma usando scripts de **Typst** (`scripts/grafics/typst_src/`) para nuevos gráficos y esquemas vectoriales SVG.
+3.  **Ejecuta el Build Local:** (Esto llamará a Quarto de forma automatizada)
     ```powershell
     python scripts/build.py --verbose
     ```
-4.  **Verifica la Calidad:** Asegúrate de que `ruff` y `pytest` pasen sin errores.
+4.  **Verifica la Calidad:** Asegúrate de que `ruff` y `pytest` pasen sin errores. Tu código será verificado y subido por el **GitHub Action (`pages.yml`)** mediante `upload-pages-artifact`.
 
 ## 4. Convenciones de Código
 - Usamos **Python 3.11+**.

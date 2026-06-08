@@ -16,19 +16,6 @@ status: "stable"
 
 # Trigonometría Fundamental
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  import cetz.plot
-  plot.plot(size: (6, 3), {
-    plot.add(domain: (-3.14, 3.14), x => calc.sin(x * 1rad), style: (stroke: rgb("39C5BB")))
-    plot.add(domain: (-3.14, 3.14), x => calc.cos(x * 1rad), style: (stroke: rgb("FF1493")))
-  })
-})]
-```
-
-
 La trigonometría es el estudio de las relaciones entre los ángulos y los lados de los triángulos.
 Más allá de los triángulos, esta disciplina proporciona las funciones periódicas necesarias para modelar ondas, vibraciones y ciclos en la naturaleza y la tecnología.
 

@@ -1,6 +1,14 @@
 {
-    "id": "msc51_geometria_euclidiana",
     "title": "Geometría Euclidiana y del Espacio",
+    "date": "2026-04-26",
+    "categories": [
+        "geometria",
+        "euclidiana",
+        "poligonos",
+        "solidos",
+        "axiomas"
+    ],
+    "id": "msc51_geometria_euclidiana",
     "pilar": "04_espacio_forma",
     "msc_code": "51-01",
     "tags": [

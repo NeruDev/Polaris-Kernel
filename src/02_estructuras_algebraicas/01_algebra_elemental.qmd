@@ -16,16 +16,6 @@ status: "stable"
 
 # Álgebra Elemental: Potencias, Raíces y Proporciones
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  grid((-2,-2), (2,2), stroke: gray.transparentize(50%))
-  line((0,0), (2,1), mark: (end: ">"), stroke: rgb("39C5BB") + 2pt)
-  line((0,0), (-1,2), mark: (end: ">"), stroke: rgb("FF1493") + 2pt)
-})]
-```
-
 El álgebra elemental es la extensión de la aritmética que introduce variables para generalizar operaciones numéricas.
 Es el lenguaje que permite formular leyes generales y resolver problemas donde los valores exactos son desconocidos o variables.
 

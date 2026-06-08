@@ -1,6 +1,13 @@
 {
-    "id": "msc05_combinatoria",
     "title": "Combinatoria",
+    "date": "2026-04-26",
+    "categories": [
+        "conteo",
+        "permutaciones",
+        "combinaciones",
+        "binomio"
+    ],
+    "id": "msc05_combinatoria",
     "pilar": "05_discrecion_computacion",
     "msc_code": "05-01",
     "tags": [

@@ -1,3 +1,9 @@
+"""
+Configuraciones y rutas estáticas del sistema de construcción de Polaris Kernel.
+Define las estructuras de datos usadas por `build.py` para ubicar archivos
+dentro del nuevo paradigma de Quarto.
+"""
+
 from dataclasses import dataclass
 from pathlib import Path
 

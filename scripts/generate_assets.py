@@ -3,6 +3,14 @@
 #   title: 'Orquestador masivo de generacion de graficos SVG'
 #   tags: ['graphics', 'automation']
 
+"""
+Orquestador Masivo de Gráficos SVG.
+En el paradigma original, ejecutaba scripts de Python locales (matplotlib).
+Bajo el nuevo paradigma Quarto/Typst, los nuevos gráficos deben 
+orquestarse o compilarse usando Typst desde `scripts/grafics/typst_src/`
+hacia `.svg`. Este script mantiene retrocompatibilidad para ejecutar generadores `.py`.
+"""
+
 import subprocess
 import sys
 from pathlib import Path

@@ -16,20 +16,6 @@ status: "stable"
 
 # Álgebra abstracta
 
-```typst
-#import "@preview/cetz:0.2.2"
-#align(center)[#cetz.canvas({
-  import cetz.draw: *
-  content((0,4), box(stroke: rgb("39C5BB"), inset: 8pt)[Magma])
-  line((0,3.5), (0,2.5), mark: (end: ">"))
-  content((0,2), box(stroke: rgb("FF1493"), inset: 8pt)[Semigrupo])
-  line((0,1.5), (0,0.5), mark: (end: ">"))
-  content((0,0), box(stroke: rgb("10b981"), inset: 8pt)[Monoide])
-  line((0,-0.5), (0,-1.5), mark: (end: ">"))
-  content((0,-2), box(stroke: rgb("f59e0b"), inset: 8pt)[Grupo])
-})]
-```
-
 El álgebra abstracta estudia las estructuras algebraicas por sí mismas, 
 prescindiendo de la naturaleza de los elementos. Se enfoca en las propiedades 
 de las operaciones y las leyes que las rigen.

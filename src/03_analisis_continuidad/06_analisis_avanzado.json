@@ -1,6 +1,12 @@
 {
-    "id": "msc26_analisis_avanzado",
     "title": "Análisis avanzado",
+    "date": "2026-04-26",
+    "categories": [
+        "analisis_real",
+        "variable_compleja",
+        "medidas"
+    ],
+    "id": "msc26_analisis_avanzado",
     "pilar": "03_analisis_continuidad",
     "msc_code": "26-01",
     "tags": [

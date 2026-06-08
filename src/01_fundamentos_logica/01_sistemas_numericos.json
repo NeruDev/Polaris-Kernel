@@ -1,6 +1,12 @@
 {
-    "id": "msc11_sistemas_numericos_reales",
     "title": "Sistemas Numéricos: Conjuntos Reales",
+    "date": "2026-04-26",
+    "categories": [
+        "numeros",
+        "conjuntos",
+        "reales"
+    ],
+    "id": "msc11_sistemas_numericos_reales",
     "pilar": "01_fundamentos_logica",
     "msc_code": "11-01",
     "tags": [

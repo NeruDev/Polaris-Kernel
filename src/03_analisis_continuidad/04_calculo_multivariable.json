@@ -1,6 +1,13 @@
 {
-    "id": "msc26_calculo_multivariable",
     "title": "Cálculo multivariable y vectorial",
+    "date": "2026-04-26",
+    "categories": [
+        "multivariable",
+        "vectores",
+        "gradiente",
+        "integrales_multiples"
+    ],
+    "id": "msc26_calculo_multivariable",
     "pilar": "03_analisis_continuidad",
     "msc_code": "26-01",
     "tags": [

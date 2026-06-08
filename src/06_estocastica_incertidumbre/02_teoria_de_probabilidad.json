@@ -1,6 +1,13 @@
 {
-    "id": "msc60_teoria_de_probabilidad",
     "title": "Teoría de probabilidad",
+    "date": "2026-04-26",
+    "categories": [
+        "probabilidad",
+        "azar",
+        "bayes",
+        "aleatoria"
+    ],
+    "id": "msc60_teoria_de_probabilidad",
     "pilar": "06_estocastica_incertidumbre",
     "msc_code": "60-01",
     "tags": [

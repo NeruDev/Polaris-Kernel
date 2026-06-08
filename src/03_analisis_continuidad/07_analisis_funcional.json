@@ -1,6 +1,13 @@
 {
-    "id": "msc46_analisis_funcional",
     "title": "Análisis funcional",
+    "date": "2026-04-26",
+    "categories": [
+        "banach",
+        "hilbert",
+        "operadores",
+        "espacios_funcionales"
+    ],
+    "id": "msc46_analisis_funcional",
     "pilar": "03_analisis_continuidad",
     "msc_code": "46-01",
     "tags": [
