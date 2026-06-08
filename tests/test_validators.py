@@ -23,7 +23,7 @@ def test_utf8_validation_negative(tmp_path):
 
 def test_math_syntax_balanced():
     """Prueba detección de fórmulas LaTeX balanceadas."""
-    text = "Fórmula: $x+y = z$ y bloque $$\int dx$$"
+    text = r"Fórmula: $x+y = z$ y bloque $$\int dx$$"
     assert formula_validator.scan_unbalanced_math(text) is False
 
 

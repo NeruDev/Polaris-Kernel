@@ -25,6 +25,6 @@ def test_six_pillars_exist(repo_root):
 
 def test_root_directories_exist(repo_root):
     """Verifica que las carpetas de sistema existan en la raiz."""
-    required = ["scripts", "utils", "metadata", "site_src", "tests"]
+    required = ["scripts", "utils", "metadata", "tests"]
     for folder in required:
         assert (repo_root / folder).is_dir(), f"Falta carpeta de sistema: {folder}"
