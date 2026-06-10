@@ -43,8 +43,8 @@ def test_naming_hygiene_and_no_accents(repo_root):
     assert src_dir.exists()
 
     for path in src_dir.rglob("*"):
-        # Ignorar archivos temporales o carpetas ocultas si las hay
-        if path.name.startswith("."):
+        # Ignorar archivos temporales, carpetas ocultas, egg-info o cache de python
+        if path.name.startswith(".") or "egg-info" in path.name or path.name == "__pycache__":
             continue
 
         # Verificar que no contenga caracteres con acento o especiales

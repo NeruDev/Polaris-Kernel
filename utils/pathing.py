@@ -31,8 +31,6 @@ def build_relative_prefix(depth: int) -> str:
 
 def is_path_hygienic(path: Path) -> bool:
     """Verifica si la ruta no contiene acentos, espacios ni mayúsculas, cumpliendo el nuevo paradigma."""
-    import re
-    snake_case_pattern = re.compile(r"^[a-z0-9_./\\]+$")
     accent_chars = "áéíóúáéíóúüñÁÉÍÓÚÑ"
     
     path_str = str(path)

@@ -3,8 +3,15 @@
 #   title: 'Pruebas unitarias para validadores de codificacion, matematicas, metadatos y estilo semantico'
 #   tags: ['tests', 'validators', 'encoding', 'jsonschema', 'semantic-breaks']
 
+import json
+
+import jsonschema
 import pytest
+from jsonschema.exceptions import ValidationError
+
 from scripts.core import encoding_validator, formula_validator
+from scripts.io.metadata_agent import MetadataAgent
+from utils.markdown import check_semantic_line_breaks
 
 
 def test_utf8_validation_positive(tmp_path):
@@ -36,8 +43,6 @@ def test_math_syntax_unbalanced():
 
 def test_metadata_agent_synchronization(sandbox_project):
     """Verifica que MetadataAgent sincronice correctamente los metadatos YAML a JSON adyacentes."""
-    from scripts.io.metadata_agent import MetadataAgent
-
     agent = MetadataAgent(sandbox_project)
     agent.synchronize()
 
@@ -45,7 +50,6 @@ def test_metadata_agent_synchronization(sandbox_project):
     json_path = sandbox_project / "src" / "01_fundamentos_logica" / "test_tema.json"
     assert json_path.exists(), "No se creo el archivo JSON adyacente de metadatos"
 
-    import json
     with open(json_path, "r", encoding="utf-8") as f:
         meta = json.load(f)
     
@@ -56,9 +60,6 @@ def test_metadata_agent_synchronization(sandbox_project):
 
 def test_metadata_schema_validation(sandbox_project):
     """Verifica que la validacion contra el esquema JSON funcione correctamente con metadatos validos e invalidos."""
-    import json
-    import jsonschema
-
     schema_path = sandbox_project / "metadata" / "schemas" / "content.schema.json"
     assert schema_path.exists()
 
@@ -83,14 +84,12 @@ def test_metadata_schema_validation(sandbox_project):
         "pilar": "01_fundamentos_logica",
         "msc_code": "03-01"
     }
-    with pytest.raises(jsonschema.exceptions.ValidationError):
+    with pytest.raises(ValidationError):
         jsonschema.validate(instance=invalid_meta, schema=schema)
 
 
 def test_semantic_line_breaks_validator():
     """Valida la regla de 'Salto de línea semántico' (Semantic Line Breaks) mediante utils.markdown."""
-    from utils.markdown import check_semantic_line_breaks
-
     # Prosa correcta (un punto final de linea, o punto y salto de linea)
     prosa_valida = (
         "Esta es una linea de texto.\n"
