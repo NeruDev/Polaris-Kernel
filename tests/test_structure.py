@@ -4,6 +4,9 @@
 #   tags: ['tests', 'structure', 'naming-hygiene', 'metadata-adjacency']
 
 
+import re
+
+
 def test_six_pillars_exist(repo_root):
     """Verifica que los 6 pilares de la arquitectura Bourbaki existan en src/."""
     expected_pillars = [
@@ -32,8 +35,6 @@ def test_root_directories_exist(repo_root):
 
 def test_naming_hygiene_and_no_accents(repo_root):
     """Verifica que todos los archivos y carpetas en src/ sigan snake_case y no tengan acentos."""
-    import re
-
     # Permitir letras minusculas, numeros, guiones bajos y extensiones permitidas
     # Tambien permite carpetas de assets
     snake_case_pattern = re.compile(r"^[a-z0-9_]+(?:\.[a-z0-9]+)?$")
@@ -44,7 +45,7 @@ def test_naming_hygiene_and_no_accents(repo_root):
 
     for path in src_dir.rglob("*"):
         # Ignorar archivos temporales, carpetas ocultas, egg-info o cache de python
-        if path.name.startswith(".") or "egg-info" in path.name or path.name == "__pycache__":
+        if path.name.startswith(".") or any("egg-info" in part for part in path.parts) or "__pycache__" in path.parts:
             continue
 
         # Verificar que no contenga caracteres con acento o especiales
