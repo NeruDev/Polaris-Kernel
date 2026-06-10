@@ -1,0 +1,269 @@
+/*-- scss:defaults --*/
+$theme-layout: dark !default;
+
+// --- Paleta Hatsune Miku Unificada (Claro y Oscuro) ---
+
+// Colores base para tema Oscuro (Dark)
+$miku-cyan-dark: #39C5BB;       // El clásico verde turquesa/cian de Miku
+$miku-bg-dark: #0f1618;         // Fondo oscuro con matiz azulado/turquesa
+$miku-darker-dark: #080d0e;     // Fondo de barras y código aún más oscuro
+$miku-card-bg-dark: #162124;    // Fondo para tarjetas y callouts
+$miku-pink-dark: #FF1493;       // Rosa brillante para acentos y estados activos
+$miku-text-dark: #e6f7f6;       // Texto principal (blanco suave ligeramente cian)
+$miku-muted-dark: #7d9698;      // Texto secundario / silenciado
+
+// Colores base para tema Claro (Light)
+$miku-cyan-light: #008f85;      // Cian de Miku más contrastado para legibilidad en claro
+$miku-bg-light: #f4faf9;        // Fondo claro con matiz turquesa muy suave
+$miku-lighter-light: #e5f3f2;   // Fondo de barras, sidebar y componentes en claro
+$miku-card-bg-light: #dbebe9;   // Fondo para tarjetas y callouts en claro
+$miku-pink-light: #d81b60;      // Rosa/magenta de Miku con buen contraste en claro
+$miku-text-light: #0d1718;      // Texto principal oscuro con matiz cian
+$miku-muted-light: #526f72;     // Texto secundario claro silenciado
+
+// Selección dinámica según el tipo de layout
+$is-dark: $theme-layout == dark;
+
+$miku-cyan: if($is-dark, $miku-cyan-dark, $miku-cyan-light);
+$miku-pink: if($is-dark, $miku-pink-dark, $miku-pink-light);
+$miku-muted: if($is-dark, $miku-muted-dark, $miku-muted-light);
+
+// Variables del Tema Bootstrap 5
+$body-bg: if($is-dark, $miku-bg-dark, $miku-bg-light);
+$body-color: if($is-dark, $miku-text-dark, $miku-text-light);
+$link-color: $miku-cyan;
+$link-hover-color: if($is-dark, lighten($miku-cyan, 15%), darken($miku-cyan, 15%));
+
+$primary: $miku-cyan;
+$secondary: $miku-muted;
+$success: #10b981;
+$info: $miku-cyan;
+$warning: #f59e0b;
+$danger: $miku-pink;
+
+$text-muted: $miku-muted;
+
+// Menús y componentes de Quarto
+$navbar-bg: if($is-dark, $miku-darker-dark, $miku-lighter-light);
+$navbar-light-color: if($is-dark, $miku-text-dark, $miku-text-light);
+$sidebar-bg: if($is-dark, $miku-darker-dark, $miku-lighter-light);
+$sidebar-color: if($is-dark, $miku-text-dark, $miku-text-light);
+
+$border-color: rgba($miku-cyan, 0.2);
+
+// Tipografía moderna
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+/*-- scss:rules --*/
+
+// Brillo cibernético y bordes temáticos
+.navbar {
+  border-bottom: 2px solid $miku-cyan !important;
+  box-shadow: 0 0 10px rgba($miku-cyan, 0.2);
+}
+
+.sidebar {
+  border-right: 1px solid rgba($miku-cyan, 0.15) !important;
+}
+
+.quarto-title-block {
+  border-bottom: 1px solid rgba($miku-cyan, 0.2);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+// Colores de títulos
+h1, h2, h3, h4, h5, h6 {
+  color: $miku-cyan;
+  font-weight: 700;
+  text-shadow: 0 0 2px rgba($miku-cyan, 0.1);
+}
+
+// Estilo del Sidebar (Menú lateral)
+.sidebar-item-text, .sidebar-link {
+  color: $body-color !important;
+}
+
+.sidebar-item a:hover, .sidebar-link:hover {
+  color: if($is-dark, lighten($miku-cyan, 15%), darken($miku-cyan, 15%)) !important;
+  text-decoration: none;
+}
+
+.sidebar-item a.active, .sidebar-link.active {
+  color: $miku-pink !important;
+  font-weight: bold;
+  border-left: 2px solid $miku-pink !important;
+  padding-left: 0.5rem !important;
+}
+
+// Callouts y contenedores destacados
+.callout {
+  border-radius: 4px;
+}
+
+.callout.callout-style-default {
+  border-left-width: 5px !important;
+}
+
+.callout-note {
+  border-left-color: #38bdf8 !important;   // Azul brillante
+  background-color: if($is-dark, rgba(#38bdf8, 0.12), rgba(#38bdf8, 0.08)) !important;
+}
+
+.callout-warning {
+  border-left-color: #fbbf24 !important;   // Amarillo/Naranja brillante
+  background-color: if($is-dark, rgba(#fbbf24, 0.12), rgba(#fbbf24, 0.08)) !important;
+}
+
+.callout-important {
+  border-left-color: #f43f5e !important;   // Rojo/Rosa brillante
+  background-color: if($is-dark, rgba(#f43f5e, 0.12), rgba(#f43f5e, 0.08)) !important;
+}
+
+.callout-tip {
+  border-left-color: #34d399 !important;   // Verde brillante
+  background-color: if($is-dark, rgba(#34d399, 0.12), rgba(#34d399, 0.08)) !important;
+}
+
+.callout-caution {
+  border-left-color: #fb923c !important;   // Naranja brillante
+  background-color: if($is-dark, rgba(#fb923c, 0.12), rgba(#fb923c, 0.08)) !important;
+}
+
+.callout-body, .callout-content, .callout-title, .callout-header {
+  color: inherit !important;
+}
+
+.callout-title {
+  font-weight: 600;
+}
+
+// Estilo para tablas de datos
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  background-color: rgba($miku-cyan, 0.12) !important;
+  color: $miku-cyan !important;
+  border-bottom: 2px solid $miku-cyan !important;
+}
+td {
+  border-bottom: 1px solid rgba($miku-cyan, 0.1) !important;
+}
+
+// Bloques de código
+pre, code, .sourceCode {
+  background-color: if($is-dark, $miku-darker-dark, $miku-lighter-light) !important;
+  color: $body-color !important;
+  border: 1px solid rgba($miku-cyan, 0.15);
+  border-radius: 4px;
+}
+
+// Efectos hover en enlaces
+a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 3px rgba($miku-cyan, 0.4);
+}
+
+// ==============================================================================
+// INTERRUPTOR DE TEMA PERSONALIZADO (SOL Y LUNA)
+// ==============================================================================
+// Coloca el icono flotando en la esquina superior derecha de forma interactiva.
+// Rediseña el interruptor nativo de Quarto con animaciones y leyenda estructurada.
+
+.quarto-color-scheme-toggle {
+  position: fixed !important;
+  top: 15px !important;
+  right: 15px !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  padding: 10px 16px !important;
+  background: if($is-dark, rgba($miku-bg-dark, 0.85), rgba($miku-bg-light, 0.85)) !important;
+  border: 2px solid rgba($miku-cyan, 0.3) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15), 0 0 8px rgba($miku-cyan, 0.2) !important;
+  backdrop-filter: blur(8px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  min-width: 100px !important;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05) !important;
+    border-color: $miku-cyan !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba($miku-cyan, 0.4) !important;
+  }
+
+  // Leyenda superior: "tema:"
+  &::before {
+    content: "tema:" !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: if($is-dark, rgba($miku-text-dark, 0.6), rgba($miku-text-light, 0.6)) !important;
+    margin-bottom: 4px !important;
+  }
+
+  // Leyenda inferior: Nombre del tema actual ("claro" o "oscuro")
+  &::after {
+    font-size: 0.9rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    margin-top: 4px !important;
+    content: if($is-dark, "oscuro" , "claro") !important;
+    color: if($is-dark, $miku-cyan-dark, $miku-cyan-light) !important;
+  }
+
+  // Elemento del icono original (i.bi) transformado a Sol/Luna
+  i.bi {
+    font-family: inherit !important;
+    font-style: normal !important;
+    display: inline-block !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    margin: 4px 0 !important;
+    
+    // Modo Oscuro por defecto: Luna cian
+    background: transparent !important;
+    box-shadow: inset -10px -8px 0 0 $miku-cyan-dark !important;
+    border: none !important;
+    transform: none !important;
+  }
+}
+
+// Modo Claro (body.quarto-light): Sol dorado con rayos rotativos
+body.quarto-light .quarto-color-scheme-toggle {
+  i.bi {
+    background: #f59e0b !important;
+    box-shadow: 0 0 8px #f59e0b, 0 0 15px #fbbf24 !important;
+    border: none !important;
+    transform: scale(1.1) !important;
+    
+    // Rayos del sol
+    &::after {
+      content: "" !important;
+      position: absolute !important;
+      top: -3px !important;
+      left: -3px !important;
+      right: -3px !important;
+      bottom: -3px !important;
+      border: 2px dashed #f59e0b !important;
+      border-radius: 50% !important;
+      animation: spin-sun 12s linear infinite !important;
+    }
+  }
+}
+
+@keyframes spin-sun {
+  100% {
+    transform: rotate(360deg);
+  }
+}

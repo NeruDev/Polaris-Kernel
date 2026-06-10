@@ -98,10 +98,12 @@ format:
     theme:
       light:
         - cosmo
-        - miku-dark.scss
+        - miku-light.scss
+        - miku-theme.scss
       dark:
         - darkly
         - miku-dark.scss
+        - miku-theme.scss
     # Habilita la generacion automatica de la tabla de contenidos (TOC).
     toc: true
     # Motor de visualizacion para formulas matematicas en el navegador.
