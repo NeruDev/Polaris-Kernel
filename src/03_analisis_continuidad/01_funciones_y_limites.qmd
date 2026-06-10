@@ -22,45 +22,27 @@ status: "stable"
 ## Tipos de funciones y composición
 
 Una función formaliza la relación de dependencia determinista entre dos conjuntos.
-
 El dominio representa el conjunto de valores de entrada estrictamente válidos.
-
 El codominio establece el conjunto donde habitan las imágenes resultantes posibles.
-
 Una función es inyectiva si cada imagen de llegada proviene de un único elemento del dominio.
-
 Una función es suprayectiva si todo elemento del codominio es alcanzado por al menos una imagen.
-
 Si cumple simultáneamente ambas condiciones, la función se clasifica como biyectiva y admite una función inversa.
-
 La composición de funciones encadena dos transformaciones secuencialmente en una sola operación.
-
 Dadas las funciones $f: A \to B$ y $g: B \to C$, su composición directa se define como $(g \circ f)(x) = g(f(x))$.
-
 Las funciones algebraicas se construyen mediante operaciones aritméticas finitas y extracción de raíces.
-
 Las funciones trascendentes, como las familias exponenciales y trigonométricas, no satisfacen ecuaciones polinómicas simples con coeficientes enteros.
 
 ## Sucesiones y series
 
 Una sucesión matemática es una función cuyo dominio es exclusivamente el conjunto de los números naturales.
-
 Se denota comúnmente en la literatura mediante la indexación de sus términos como $\{a_n\}$.
-
 Una sucesión converge a un límite $L$ si sus términos se acercan arbitrariamente a este valor conforme el índice crece indefinidamente.
-
 Formalmente, para todo $\varepsilon > 0$, existe un número entero $N$ tal que para todo $n > N$, se cumple la desigualdad $\lvert a_n - L \rvert < \varepsilon$.
-
 Una serie numérica representa la suma infinita de todos los términos de una sucesión dada.
-
 Su estudio analítico se basa en el análisis del límite de la sucesión formada por sus sumas parciales.
-
 Si el límite de las sumas parciales existe y toma un valor finito, se afirma de forma categórica que la serie converge.
-
 En el caso contrario, el comportamiento no está acotado y se dice que la serie diverge.
-
 El criterio básico de divergencia establece que si $\lim_{n \to \infty} a_n \neq 0$, entonces la serie $\sum a_n$ inevitablemente diverge.
-
 Sin embargo, es fundamental recordar que un límite igual a cero no garantiza por sí mismo la convergencia de la suma total.
 
 ## Límites y continuidad

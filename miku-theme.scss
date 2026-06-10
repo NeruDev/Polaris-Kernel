@@ -158,7 +158,7 @@ a:hover {
 .quarto-color-scheme-toggle {
   position: fixed !important;
   bottom: 40px !important; // Reubicado a la parte inferior
-  right: 300px !important; // Reubicado a la izquierda para evitar chocar con la pestaña de secciones
+  right: 40px !important;  // Reubicado a la parte derecha
   top: auto !important;    // Sobreescribimos el top por defecto
   z-index: 9999 !important;
   display: flex !important;
@@ -198,17 +198,17 @@ a:hover {
     display: none !important;
   }
 
-  // Elemento del icono original (i.bi) 3 veces más grande
+  // Elemento del icono original (i.bi)
   i.bi {
     font-family: inherit !important;
     font-style: normal !important;
     display: inline-block !important;
-    width: 66px !important;   // ¡3 VECES MÁS GRANDE! (original 22px)
-    height: 66px !important;  // ¡3 VECES MÁS GRANDE!
+    width: 36px !important;   // Tamaño disminuido para evitar sobreponerse al texto
+    height: 36px !important;
     border-radius: 50% !important;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
     position: relative !important;
-    margin: 4px 15px !important; // Mayor espacio lateral para no cortar animación
+    margin: 0 auto !important; // Centrado para verse completo
     color: transparent !important; // Oculta el color del icono
     
     // Ocultar el glifo o icono original
@@ -219,7 +219,7 @@ a:hover {
     
     // Modo Oscuro: Luna cian gigante
     background: transparent !important;
-    box-shadow: inset -20px -15px 0 0 var(--miku-cyan) !important;
+    box-shadow: inset -10px -8px 0 0 var(--miku-cyan) !important;
     border: none !important;
     transform: none !important;
   }
@@ -236,11 +236,11 @@ body.quarto-light .quarto-color-scheme-toggle, html[data-bs-theme="light"] .quar
     &::after {
       content: "" !important;
       position: absolute !important;
-      top: -8px !important;
-      left: -8px !important;
-      right: -8px !important;
-      bottom: -8px !important;
-      border: 4px dashed #f59e0b !important;
+      top: -6px !important;
+      left: -6px !important;
+      right: -6px !important;
+      bottom: -6px !important;
+      border: 3px dashed #f59e0b !important;
       border-radius: 50% !important;
       animation: spin-sun 12s linear infinite !important;
     }
