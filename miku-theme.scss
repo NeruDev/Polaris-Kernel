@@ -209,6 +209,13 @@ a:hover {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
     position: relative !important;
     margin: 4px 0 !important;
+    color: transparent !important; // Oculta el color del icono
+    
+    // Ocultar el glifo o icono original
+    &::before {
+      display: none !important;
+      content: "" !important;
+    }
     
     // Modo Oscuro: Luna cian gigante
     background: transparent !important;

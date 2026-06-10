@@ -49,4 +49,4 @@ $\neg Q \rightarrow \neg P$, lo cual es lógicamente equivalente.
 | $n$ | Variable natural | escalar |
 | $\neg$ | Negación | conectivo |
 | $\rightarrow$ | Implicación | relación |
-| $\qed$ | Q.E.D. | marcador |
+| $\blacksquare$ | Q.E.D. | marcador |
