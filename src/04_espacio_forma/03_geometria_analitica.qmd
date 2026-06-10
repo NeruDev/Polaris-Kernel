@@ -16,6 +16,9 @@ status: "stable"
 
 # Geometría analítica
 
+![Representación de elipse y parábola](conicas_analitica.svg)
+
+
 La geometría analítica es la rama de las matemáticas que vincula el álgebra con la geometría mediante el uso de un sistema de coordenadas.
 Esta potente herramienta permite representar figuras geométricas mediante ecuaciones algebraicas, facilitando el análisis de sus propiedades mediante el cálculo numérico y simbólico.
 

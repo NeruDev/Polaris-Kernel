@@ -1,0 +1,10 @@
+{
+    "id": "gen_jerarquia_numeros",
+    "title": "Generador de grafico de jerarquia numerica en Typst",
+    "tags": [
+        "scripts",
+        "graphics",
+        "typst",
+        "numeros"
+    ]
+}

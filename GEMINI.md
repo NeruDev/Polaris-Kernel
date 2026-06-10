@@ -17,7 +17,7 @@
   - Use **Semantic Line Breaks** (one sentence per line).
   - **LaTeX Immunity:** Block formulas (`$$...$$`) have no line length limits.
   - **Logical Paragraphs:** Group by logical units, not line count.
-- **Size Target:** 300-500 words per file (Excluding Frontmatter and Glossary).
+- **Size Target:** 300-500 words per file (Excluding Frontmatter and Glossary). For mathematical proofs and dense content, extended to 600-1000 prose words (excluding block LaTeX equations/matrices).
 
 ## Task Behavior & Linking
 - **The Trinity Rule:** When generating or modifying assets, always preserve the link:

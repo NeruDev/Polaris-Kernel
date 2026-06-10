@@ -30,9 +30,20 @@ Para abstracciones más directas, se utilizan paquetes construidos sobre CeTZ o 
 
 ### Uso en la Arquitectura de Polaris Kernel (Integración Quarto & CI/CD)
 
-De acuerdo con **"The Trinity Rule"**, la utilización de estas librerías debe hacerse exclusivamente en archivos fuente `.typ` (alojados en la carpeta base `scripts/grafics/typst_src/`). Los gráficos se diseñan especificando los tamaños de página dinámicos y, posteriormente, se compilan localmente a formato SVG para incrustarlos en la documentación.
+De acuerdo con **"The Trinity Rule"**, la utilización de estas librerías debe hacerse exclusivamente en archivos fuente `.typ` (alojados en la carpeta base `scripts/grafics/typst_src/`).
+Los gráficos se diseñan especificando los tamaños de página dinámicos y, posteriormente, se compilan localmente a formato SVG para incrustarlos en la documentación.
 
-Bajo el nuevo paradigma, **Quarto** actúa como el orquestador principal del contenido. Al renderizar (localmente o mediante el **flujo CI/CD en GitHub Actions** `pages.yml`), Quarto integra nativamente estos SVG e incluso puede procesar código Typst puro embebido en los `.qmd`. La acción de GitHub publicará automáticamente el resultado utilizando `upload-pages-artifact`.
+Para realizar la compilación de Typst a SVG, el sistema cuenta con los siguientes scripts:
+*   `scripts/grafics/compile_typst.py`:
+    Escanea la carpeta `typst_src/` buscando archivos `.typ` con el patrón `folder_name___svg_stem.typ`.
+    Compila automáticamente cada archivo al pilar de destino correspondiente en `src/` y lo registra en `metadata/GENERATED_ASSETS.md`.
+*   `scripts/grafics/gen_jerarquia_numeros.py`:
+    Script de compilación específico y manual para el gráfico de la jerarquía de los números.
+    Genera el archivo SVG correspondiente bajo `src/01_fundamentos_logica/assets/`.
+
+Bajo el nuevo paradigma, **Quarto** actúa como el orquestador principal del contenido.
+Al renderizar (localmente o mediante el **flujo CI/CD en GitHub Actions** `pages.yml`), Quarto integra nativamente estos SVG e incluso puede procesar código Typst puro embebido en los `.qmd`.
+La acción de GitHub publicará automáticamente el resultado utilizando `upload-pages-artifact`.
 
 Ejemplo de plantilla de inicio (`.typ`):
 ```typst

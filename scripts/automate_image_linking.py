@@ -1,3 +1,8 @@
+# yaml_frontmatter:
+#   id: 'automate_image_linking'
+#   title: 'Vinculacion automatica de imagenes en teoria QMD/MD'
+#   tags: ['scripts', 'automation', 'images']
+
 """
 Script para vinculación automática de imágenes en los archivos de teoría (Markdown/Quarto).
 Soporta el nuevo paradigma buscando coincidencias y actualizando el contenido MD/QMD con los gráficos generados (SVG de Typst o Python).
@@ -35,22 +40,25 @@ def parse_assets_record(record_path):
 
 
 def get_md_files(src_dir):
-    """Obtiene metadatos de todos los archivos MD en src."""
+    """Obtiene metadatos de todos los archivos MD y QMD en src."""
     md_data = []
-    for path in src_dir.rglob("*.md"):
-        content = path.read_text(encoding="utf-8")
-        # Extraer ID del frontmatter
-        id_match = re.search(r"id:\s*([^\n]+)", content)
-        tags_match = re.search(r"tags:\s*\[([^\]]+)\]", content)
+    for ext in ("*.md", "*.qmd"):
+        for path in src_dir.rglob(ext):
+            content = path.read_text(encoding="utf-8")
+            # Extraer ID del frontmatter (puede tener comillas simples o dobles)
+            id_match = re.search(r"id:\s*['\"]?([^\n'\"#]+)['\"]?", content)
+            tags_match = re.search(r"tags:\s*\[([^\]]+)\]", content)
 
-        md_data.append(
-            {
-                "path": path,
-                "id": id_match.group(1).strip() if id_match else "",
-                "tags": [t.strip() for t in tags_match.group(1).split(",")] if tags_match else [],
-                "content": content,
-            }
-        )
+            md_data.append(
+                {
+                    "path": path,
+                    "id": id_match.group(1).strip() if id_match else "",
+                    "tags": [t.strip() for t in tags_match.group(1).split(",")]
+                    if tags_match
+                    else [],
+                    "content": content,
+                }
+            )
     return md_data
 
 
@@ -88,13 +96,18 @@ def link_assets():
             img_markdown = f"\n![{asset['desc']}]({img_filename})\n"
 
             if img_filename not in target_file["content"]:
-                # Inyectar tras el primer titulo #
+                # Inyectar tras el primer titulo # fuera del frontmatter YAML
                 lines = target_file["content"].splitlines()
                 new_lines = []
                 injected = False
+                in_frontmatter = False
+                frontmatter_count = 0
                 for line in lines:
                     new_lines.append(line)
-                    if not injected and line.startswith("# "):
+                    if line.strip() == "---":
+                        frontmatter_count += 1
+                        in_frontmatter = frontmatter_count % 2 != 0
+                    if not injected and not in_frontmatter and line.startswith("# "):
                         new_lines.append(img_markdown)
                         injected = True
 

@@ -16,6 +16,9 @@ status: "stable"
 
 # Teoría de Categorías
 
+![Morfismos y composición en categorías](diagrama_conmutativo.svg)
+
+
 La teoría de categorías es el nivel más alto de abstracción en las matemáticas. 
 No se preocupa por los elementos individuales de un conjunto, sino por las 
 relaciones y transformaciones entre estructuras. Es, en esencia, la 

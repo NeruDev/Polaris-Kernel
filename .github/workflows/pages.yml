@@ -1,25 +1,41 @@
+# ==============================================================================
+# FLUJO DE TRABAJO DE CI/CD: DESPLIEGUE A GITHUB PAGES
+# ==============================================================================
+# Este workflow se encarga de ejecutar las pruebas de calidad de codigo y
+# realizar el despliegue del sitio estatico generado con Quarto y Typst.
+# Sigue la decision arquitectonica ADR-007 (despliegue via API de artefactos).
+# ==============================================================================
+
 name: Deploy Pages
 
+# El flujo se activa automaticamente al realizar commits en la rama principal.
 on:
   push:
     branches: ["main"]
 
 jobs:
+  # ----------------------------------------------------------------------------
+  # JOB 1: VALIDACIONES DE CALIDAD E INTEGRIDAD
+  # ----------------------------------------------------------------------------
+  # Ejecuta linters, verificadores de tipo estatico y la suite de pruebas unitarias.
   quality:
     runs-on: ubuntu-latest
     permissions:
       contents: read
 
     steps:
+      # Descarga el codigo fuente del repositorio.
       - name: Checkout
         uses: actions/checkout@v4
         with:
           lfs: true
           fetch-depth: 0
 
+      # Descarga los archivos de gran tamaño gestionados mediante Git LFS.
       - name: Pull LFS objects
         run: git lfs pull
 
+      # Configura el entorno de ejecucion de Python.
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -27,21 +43,25 @@ jobs:
           cache: "pip"
           cache-dependency-path: "pyproject.toml"
 
+      # Instala las herramientas de calidad y dependencias de Polaris Kernel.
       - name: Install dependencies and quality tooling
         run: |
           python -m pip install --upgrade pip
           pip install .
           pip install ruff mypy pytest
 
+      # Analiza el codigo buscando problemas de formato o malas practicas.
       - name: Ruff checks
         run: ruff check scripts utils tests
 
+      # Ejecuta el analizador estatico de tipos de Python de forma informativa.
       - name: Mypy report (informativo)
         continue-on-error: true
         run: |
           mypy scripts utils --config-file pyproject.toml --no-error-summary > mypy-report.txt || true
           tail -n 40 mypy-report.txt || true
 
+      # Almacena el reporte resultante de Mypy en los artefactos del workflow.
       - name: Upload mypy report
         if: always()
         uses: actions/upload-artifact@v4
@@ -49,9 +69,14 @@ jobs:
           name: mypy-report
           path: mypy-report.txt
 
+      # Corre la suite de pruebas de pytest para validar los scripts y utilidades.
       - name: Run tests
         run: python -m pytest -q
 
+  # ----------------------------------------------------------------------------
+  # JOB 2: COMPILACION DE QUARTO Y DESPLIEGUE ESTATICO
+  # ----------------------------------------------------------------------------
+  # Se ejecuta unicamente si las validaciones del job de calidad fueron exitosas.
   deploy:
     needs: quality
     runs-on: ubuntu-latest
@@ -64,15 +89,18 @@ jobs:
       contents: read
 
     steps:
+      # Descarga el codigo fuente para el proceso de compilacion.
       - name: Checkout
         uses: actions/checkout@v4
         with:
           lfs: true
           fetch-depth: 0
 
+      # Descarga los activos vectoriales y recursos enlazados con Git LFS.
       - name: Pull LFS objects
         run: git lfs pull
 
+      # Inicializa el entorno de Python para ejecutar los scripts de soporte.
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -80,36 +108,45 @@ jobs:
           cache: "pip"
           cache-dependency-path: "pyproject.toml"
 
+      # Prepara el entorno para el despliegue integrado con GitHub Pages.
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Instala el paquete local en modo de desarrollo.
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install .
 
+      # Configura el motor de renderizado CLI de Quarto.
+      # La version pre-release es requerida para el soporte de Quarto Live.
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: pre-release
 
+      # Instala la extension de interactividad de codigo en el navegador.
       - name: Install Quarto Extensions
         run: quarto add r-wasm/quarto-live --no-prompt
 
+      # Ejecuta el orquestador que genera metadatos, valida sintaxis y lanza Quarto.
       - name: Unified build
         run: python scripts/build.py --verbose
 
+      # Desactiva el motor Jekyll y verifica la carpeta de salida generada.
       - name: Verify and Disable Jekyll
         run: |
           touch site/.nojekyll
           echo "Contenido de carpeta site:"
           ls -R site
 
+      # Sube la carpeta compilada '/site' al servicio de artefactos de Pages.
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./site
 
+      # Realiza el despliegue del sitio final a la URL publica de GitHub Pages.
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

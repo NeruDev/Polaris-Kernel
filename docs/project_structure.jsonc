@@ -16,12 +16,15 @@
         // Motor de automatización y orquestación del repositorio.
         "build.py": "Orquestador principal (Wrapper): Prepara metadatos y lanza Quarto/Render.",
         "generate_assets.py": "Orquestador de gráficos (Uso Manual Estricto): Ejecuta bajo demanda los scripts SVG históricos.",
-        "templates.py": "Centralización de estilos visuales (Matplotlib) para mantener identidad visual.",
+        "automate_image_linking.py": "Script para vinculación automática de imágenes SVG en los archivos Quarto.",
+        "update_taxonomy_pillars.py": "Actualiza dinámicamente la taxonomía base MSC cruzando datos con los pilares estructurales.",
+        "config.py": "Define configuraciones globales y estructuras de rutas estáticas del proyecto.",
         "core": {
             // Lógica de negocio y validadores avanzados.
             "encoding_validator.py": "Garantiza integridad UTF-8 estricta en todo el repositorio.",
             "formula_validator.py": "Valida sintaxis LaTeX y balanceo de delimitadores matemáticos.",
-            "processors.py": "Transformación de contenido e inyección dinámica de activos."
+            "processors.py": "Transformación de contenido e inyección dinámica de activos.",
+            "validators.py": "Funciones y clases auxiliares para validación general."
         },
         "io": {
             // Abstracción de operaciones de sistema de archivos.
@@ -29,7 +32,12 @@
             "metadata_agent.py": "Agente de sincronización: Garantiza la Regla de Adyacencia (QMD/MD <-> JSON).",
             "generate_structure.py": "Genera la documentación técnica de la jerarquía del repo."
         },
-        "grafics": "Biblioteca de +140 scripts Python para generación de iconografía vectorial (SVG)."
+        "grafics": {
+            // Generación de iconografía y diagramas vectoriales.
+            "compile_typst.py": "Compilador automatizado de archivos Typst a SVG en lote.",
+            "gen_jerarquia_numeros.py": "Generador del gráfico de jerarquía numérica en Typst.",
+            "typst_src": "Directorio de archivos fuente .typ (Typst) para gráficos vectoriales."
+        }
     },
 
     "metadata": {
@@ -48,7 +56,11 @@
         // Documentación técnica y registros históricos.
         "ARQUITECTURE.md": "Especificación técnica de alto nivel (C4 Model).",
         "GENERATED_ASSETS.md": "Registro histórico y auditoría de cobertura gráfica.",
-        "project_structure.json": "Versión en texto plano para parsing por máquinas."
+        "plan_quarto_typst.md": "Plan de implementación y transición para Quarto y Typst.",
+        "typst_graficos.md": "Guía de librerías y generación de gráficos vectoriales mediante Typst.",
+        "quarto_live.md": "Guía técnica para el uso y configuración de la extensión interactiva Quarto Live.",
+        "project_structure.json": "Versión estructurada en JSON del árbol del proyecto para parsing por agentes de IA.",
+        "project_structure.jsonc": "Mapa descriptivo y anotado de los componentes del repositorio para agentes de IA."
     },
 
     // --- ARCHIVOS DE GOBERNANZA E INFRAESTRUCTURA (RAÍZ) ---

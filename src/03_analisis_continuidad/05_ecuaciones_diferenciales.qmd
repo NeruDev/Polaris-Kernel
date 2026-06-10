@@ -16,6 +16,9 @@ status: "stable"
 
 # Ecuaciones diferenciales ordinarias (EDO)
 
+![Campo de pendientes para EDO primer orden](edo_campo_direcciones.svg)
+
+
 Una ecuación diferencial es una relación entre una función desconocida y sus 
 derivadas. Son el lenguaje natural de la física, la biología y la ingeniería 
 para describir cómo cambian los sistemas en el tiempo o el espacio.

@@ -16,6 +16,9 @@ status: "stable"
 
 # Geometría Euclidiana y del Espacio
 
+![Representación de a^2 + b^2 = c^2](pitagoras_visual.svg)
+
+
 La geometría euclidiana es el estudio de las formas y el espacio basado en los axiomas establecidos por Euclides de Alejandría.
 Es la base de la ingeniería y la arquitectura, proporcionando las leyes que rigen el mundo físico que percibimos.
 

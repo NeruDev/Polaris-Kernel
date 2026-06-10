@@ -16,6 +16,9 @@ status: "stable"
 
 # Métodos Numéricos: Raíces y Aproximación
 
+![Visualización del método de bisección](metodos_numericos_raices.svg)
+
+
 Los métodos numéricos son técnicas que permiten formular problemas matemáticos para que puedan resolverse mediante operaciones aritméticas.
 Son fundamentales en la era de la computación, permitiendo hallar soluciones aproximadas pero suficientemente precisas a problemas que carecen de una solución analítica exacta.
 

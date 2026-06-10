@@ -44,7 +44,39 @@ Todo el contenido está segmentado bajo reglas estrictas para maximizar la efect
 - **Estructura:** Un archivo = Un concepto independiente.
 
 ### 3. Iconografía Vectorial Nativa (Quarto & Typst)
-Generación programática de activos gráficos vectoriales utilizando el nuevo paradigma y librerías nativas de **Typst** (ej. CeTZ, Fletcher, Lilaq). Los scripts fuentes se integran a través de la compilación de Typst y Quarto, asegurando rutas relativas directas, portabilidad y alta calidad tipográfica coherente con el proyecto (documentado en `docs/typst_graficos.md`). Quarto actúa como el orquestador principal.
+Generación programática de activos gráficos vectoriales utilizando el nuevo paradigma y librerías nativas de **Typst** (ej. CeTZ, Fletcher, Lilaq).
+Los scripts fuentes se integran a través de la compilación de Typst y Quarto, asegurando rutas relativas directas, portabilidad y alta calidad tipográfica coherente con el proyecto (documentado en [typst_graficos.md](file:///G:/REPOSITORIOS_GITHUB/POLARIS_KERNEL/docs/typst_graficos.md)).
+Quarto actúa como el orquestador principal.
+
+### 4. Computación Interactiva en Vivo (Quarto Live)
+El proyecto integra la extensión oficial **Quarto Live** (ubicada en `_extensions/r-wasm/live`).
+Esta extensión habilita la ejecución interactiva de código y ejercicios interactivos directamente en el navegador del usuario utilizando WebAssembly (Wasm).
+*   **Motores de Ejecución**: Permite ejecutar Python (a través de Pyodide) y R (a través de webR) de forma local en el cliente estático, sin depender de servidores externos.
+*   **Formatos e Integración**: Se activa en los documentos Quarto utilizando el formato `live-html` en el frontmatter del archivo `.qmd`.
+*   **Uso en Python (Pyodide)**:
+    Los bloques interactivos de Python se definen utilizando el motor `{pyodide}`.
+    ```python
+    ```{pyodide}
+    import numpy as np
+    print("¡Hola desde Python interactivo en el navegador!")
+    ```
+    ```
+*   **Uso en R (webR)**:
+    Los bloques interactivos de R se definen utilizando el motor `{webr}`.
+    ```r
+    ```{webr}
+    fit <- lm(mpg ~ wt, data = mtcars)
+    summary(fit)
+    ```
+    ```
+*   **Gestión de Librerías**:
+    Las librerías requeridas se pueden especificar y precargar dinámicamente desde los metadatos YAML del documento `.qmd`.
+    ```yaml
+    pyodide:
+      packages:
+        - numpy
+        - matplotlib
+    ```
 
 ---
 

@@ -36,19 +36,31 @@ def sandbox_project(tmp_path):
 
     (tmp_path / "scripts").mkdir()
     (tmp_path / "utils").mkdir()
-    (tmp_path / "site_src").mkdir()
     (tmp_path / "metadata").mkdir()
+    (tmp_path / "metadata" / "schemas").mkdir()
 
-    # Crear archivo de ejemplo
-    tema_path = src_dir / "01_fundamentos_logica" / "test_tema.md"
-    tema_path.write_text(
-        "---\nid: msc00_test\ntitle: 'Tema de Prueba'\npilar: '01_fundamentos_logica'\n---\n\n## 1.1 Seccion\nContenido.",
+    # Escribir un esquema simplificado para pruebas en el sandbox
+    schema_path = tmp_path / "metadata" / "schemas" / "content.schema.json"
+    schema_path.write_text(
+        """{
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "required": ["id", "title", "pilar", "msc_code", "status"],
+            "properties": {
+                "id": { "type": "string" },
+                "title": { "type": "string" },
+                "pilar": { "type": "string" },
+                "msc_code": { "type": "string" },
+                "status": { "type": "string" }
+            }
+        }""",
         encoding="utf-8",
     )
 
-    # Template base
-    (tmp_path / "site_src" / "template_page.html").write_text(
-        "<html><body><h1>Explorador de Conocimiento</h1><!-- El contenido Markdown se inyectará aquí --></body></html>",
+    # Crear archivo de ejemplo con frontmatter completo bajo el nuevo paradigma
+    tema_path = src_dir / "01_fundamentos_logica" / "test_tema.md"
+    tema_path.write_text(
+        "---\nid: msc01_test_tema\ntitle: 'Tema de Prueba'\npilar: '01_fundamentos_logica'\nmsc_code: '01-01'\nstatus: 'stable'\n---\n\n## 1.1 Seccion\nContenido del tema de prueba con frase unica.",
         encoding="utf-8",
     )
 

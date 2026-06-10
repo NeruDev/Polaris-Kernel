@@ -14,7 +14,8 @@
   - Una frase por línea (Semantic Line Breaks).
   - Bloques LaTeX libres de límites de línea.
   - Párrafos por unidad lógica, no por longitud física.
-  - Target: 300-500 palabras (Excluyendo YAML Frontmatter y Glosario).
+  - Target: 300-500 palabras (Excluyendo YAML Frontmatter y Glosario). Para demostraciones y textos matemáticos complejos, se extiende a 600-1000 palabras de prosa, excluyendo bloques de ecuaciones/matrices LaTeX.
+
 
 ## Tasks
 - generar gráficas vectoriales compilando scripts Typst desde `scripts/grafics/typst_src/` exportando a `.svg` bajo el nuevo paradigma.

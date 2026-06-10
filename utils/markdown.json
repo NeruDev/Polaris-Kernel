@@ -1,9 +1,9 @@
 {
     "id": "markdown",
-    "title": "Procesador avanzado de Markdown a HTML",
+    "title": "Procesador de Markdown y validaciones semanticas para Quarto",
     "tags": [
         "utils",
         "markdown",
-        "render"
+        "validation"
     ]
 }

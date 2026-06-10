@@ -16,6 +16,9 @@ status: "stable"
 
 # Combinatoria
 
+![Diagrama de árbol de decisiones](combinatoria_arbol.svg)
+
+
 La combinatoria es el arte de contar y organizar estructuras discretas sin necesidad de enumerarlas una por una.
 Es una rama esencial para la informática, la probabilidad y la optimización, proporcionando los métodos para determinar la viabilidad de algoritmos y el tamaño de espacios de búsqueda.
 

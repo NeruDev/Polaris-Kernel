@@ -16,6 +16,9 @@ status: "stable"
 
 # Álgebra abstracta
 
+![Jerarquía de Grupos, Anillos y Campos](jerarquia_estructuras.svg)
+
+
 El álgebra abstracta estudia las estructuras algebraicas por sí mismas, 
 prescindiendo de la naturaleza de los elementos. Se enfoca en las propiedades 
 de las operaciones y las leyes que las rigen.

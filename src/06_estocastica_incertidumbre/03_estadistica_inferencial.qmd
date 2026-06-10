@@ -16,6 +16,9 @@ status: "stable"
 
 # Estadística inferencial
 
+![Margen de error y nivel de confianza](intervalo_confianza.svg)
+
+
 La estadística inferencial es la rama que permite extraer conclusiones sobre una población a partir del análisis de una muestra representativa.
 Mediante el uso de modelos de probabilidad, esta disciplina cuantifica la incertidumbre de las estimaciones y proporciona un marco riguroso para la toma de decisiones basada en evidencia.
 

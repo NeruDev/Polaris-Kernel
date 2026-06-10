@@ -16,6 +16,9 @@ status: "stable"
 
 # Topología
 
+![Puntos interiores y vecindarios](topologia_vecindarios.svg)
+
+
 La topología es el estudio de las propiedades de las figuras que permanecen 
 invariantes ante deformaciones continuas (estiramientos o torsiones, pero 
 sin romper ni pegar). Es conocida como la "geometría de la plastilina".

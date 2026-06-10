@@ -1,3 +1,8 @@
+# yaml_frontmatter:
+#   id: 'metadata_agent'
+#   title: 'Agente de sincronizacion de metadatos'
+#   tags: ['scripts', 'io', 'metadata']
+
 import json
 import re
 from pathlib import Path

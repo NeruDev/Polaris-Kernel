@@ -16,6 +16,9 @@ status: "stable"
 
 # Teoría de grafos
 
+![Estructura básica de vértices y aristas](grafos_basico.svg)
+
+
 La teoría de grafos es la rama de las matemáticas que estudia las relaciones entre objetos mediante estructuras de nodos y enlaces.
 Es el lenguaje universal para describir redes complejas, desde la topología de internet y los circuitos integrados hasta las interacciones sociales y las rutas logísticas.
 

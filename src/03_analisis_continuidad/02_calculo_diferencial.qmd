@@ -16,6 +16,9 @@ status: "stable"
 
 # Cálculo Diferencial
 
+![Recta tangente y pendiente f'(a)](derivada_concepto.svg)
+
+
 El cálculo diferencial es la rama de las matemáticas que se encarga del estudio de las tasas de cambio continuas y locales de las funciones.
 A través del concepto de derivada, permite analizar cómo varía una cantidad en respuesta a cambios infinitesimales en otra variable de la cual depende.
 Esta herramienta es fundamental para modelar fenómenos dinámicos en la física, la economía y la ingeniería.

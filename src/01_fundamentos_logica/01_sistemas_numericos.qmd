@@ -16,6 +16,9 @@ status: "stable"
 
 # Sistemas Numéricos: Conjuntos Reales
 
+![Diagrama de Venn de tres conjuntos](diagrama_venn_triple.svg)
+
+
 La aritmética es la base sobre la cual se edifica toda la estructura matemática.
 Dominar sus conceptos fundamentales es un requisito esencial para el éxito en disciplinas más complejas como el álgebra, el cálculo diferencial y las matemáticas superiores aplicadas a la ingeniería.
 
@@ -58,7 +61,7 @@ Una propiedad definitoria de los reales es la completitud, que garantiza que no 
 La relación de inclusión entre estos conjuntos define la estructura jerárquica de los sistemas numéricos:
 $$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$$
 
-![Jerarquía de conjuntos numéricos](assets/jerarquia_numeros.svg)
+![Jerarquía de conjuntos numéricos](jerarquia_numeros.svg)
 
 
 

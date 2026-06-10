@@ -1,0 +1,9 @@
+{
+    "id": "compile_typst",
+    "title": "Compilador de graficos Typst a SVG",
+    "tags": [
+        "scripts",
+        "graphics",
+        "typst"
+    ]
+}

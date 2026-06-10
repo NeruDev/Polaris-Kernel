@@ -16,6 +16,9 @@ status: "stable"
 
 # Teoría de Números y Divisibilidad
 
+![Representación de números primos](primos_criba.svg)
+
+
 La teoría de números es el estudio de las propiedades de los números enteros, a menudo referida como "la reina de las matemáticas".
 Aunque sus planteamientos son frecuentemente sencillos de entender, su resolución ha requerido el desarrollo de las herramientas más sofisticadas del álgebra y el análisis.
 

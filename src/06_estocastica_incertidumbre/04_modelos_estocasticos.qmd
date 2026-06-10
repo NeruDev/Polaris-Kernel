@@ -16,6 +16,9 @@ status: "stable"
 
 # Modelos estocásticos
 
+![Transición de estados de cadena de Markov](markov_estados.svg)
+
+
 Los modelos estocásticos estudian sistemas que evolucionan de forma aleatoria a lo largo del tiempo o el espacio.
 A diferencia de los modelos deterministas, estos capturan la variabilidad inherente a los sistemas dinámicos, permitiendo predecir comportamientos promedio y estados de equilibrio en entornos de alta incertidumbre.
 

@@ -24,7 +24,7 @@
   - **One Sentence per Line:** Use semantic line breaks in prosa.
   - **Unbounded LaTeX:** Do not limit line length in math blocks.
   - **Semantic Paragraphs:** Group by logical units, not line count.
-- **Word Count:** 300-500 words per file (Excluding Frontmatter and Glossary).
+- **Word Count:** 300-500 words per file (Excluding Frontmatter and Glossary). For dense mathematical proofs, extended to 600-1000 prose words (excluding block LaTeX equations/matrices).
 - **Formatting:** Adhere to `pyproject.toml` (Ruff/Mypy).
 
 ## Safety & Intent

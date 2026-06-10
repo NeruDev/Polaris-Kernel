@@ -23,3 +23,21 @@ Administra lógicas avanzadas de rutas.
 * `get_relative_html_path(md_path, base_dir)`: Transforma la ruta original de Markdown en su equivalente HTML relativo para la web.
 * `compute_depth(rel_path)`: Calcula niveles de profundidad recursiva dentro del árbol de directorios.
 * `build_relative_prefix(depth)`: Genera prefijos iterativos de retroceso direccional (`../`) basados en la profundidad calculada para enlaces relativos cruzados.
+
+## Flujo de Trabajo y Funcionalidad
+
+El directorio `utils/` no se ejecuta de manera independiente, sino que funciona como una biblioteca interna estandarizada, proveedora de servicios comunes.
+1. **Rutas y Nomenclaturas:** Módulos como `pathing.py` ofrecen cálculos de profundidad y normalización, asegurando que Polaris Kernel mantenga convenciones limpias sin acentos ni espacios (Higiene de Rutas).
+2. **Validación y Renderizado:** `markdown.py` provee las reglas para validar los saltos de línea semánticos ("Semantic Line Breaks") dentro de los documentos QMD/MD.
+3. **Auditoría Post-Build:** Tras el renderizado con Quarto, `links.py` escanea recursivamente el directorio de salida (ej. `site/`) parseando el HTML para detectar hipervínculos rotos y dependencias de activos (`href`, `src`) faltantes, levantando alarmas.
+4. **Consola:** Todo intercambio de información a la terminal pasa por `logging.py`, manteniendo el formato `[INFO]`, `[WARN]`, `[ERROR]`.
+
+## Conexión entre Directorios
+
+* **Desde `scripts/`:** Las herramientas en `utils/` son consumidas intensivamente por el pipeline de construcción de `scripts/build.py` y el motor de enlace `scripts/automate_image_linking.py`.
+* **Desde `tests/`:** Las pruebas unitarias invocan directamente las funciones utilitarias para verificar su precisión matemática y lógicas de parseo en entornos simulados.
+
+## Manejo de Datos (Data Handling)
+
+* **Abstracción de Rutas:** Evita referencias a rutas absolutas "quemadas" (hardcoded) en código mediante las utilidades estandarizadas.
+* **Parseo HTML:** Emplea herramientas como `BeautifulSoup` en la post-compilación para navegar por el árbol DOM de los documentos HTML generados y auditar el sistema de enlaces internos y las referencias a SVGs, garantizando un manejo robusto de los datos y rutas entre documentos.

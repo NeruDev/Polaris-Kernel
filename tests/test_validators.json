@@ -1,8 +1,11 @@
 {
     "id": "test_validators",
-    "title": "Pruebas unitarias para validadores avanzados",
+    "title": "Pruebas unitarias para validadores de codificacion, matematicas, metadatos y estilo semantico",
     "tags": [
         "tests",
-        "validators"
+        "validators",
+        "encoding",
+        "jsonschema",
+        "semantic-breaks"
     ]
 }

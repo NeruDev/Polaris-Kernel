@@ -1,39 +1,52 @@
 # yaml_frontmatter:
 #   id: 'links'
-#   title: 'Auditoria de enlaces internos rotos'
+#   title: 'Auditoria de enlaces internos y recursos rotos para Quarto'
 #   tags: ['utils', 'validation', 'links']
 
 import re
 from pathlib import Path
 
 HREF_PATTERN = re.compile(r'href="([^"]+)"')
+SRC_PATTERN = re.compile(r'src="([^"]+)"')
 
 
-def detect_broken_internal_links(generated_pages: list[str]) -> list[tuple[str, str]]:
-    """Detecta enlaces que apuntan a archivos inexistentes en el sitio generado."""
+def detect_broken_internal_links(site_dir: Path) -> list[tuple[str, str]]:
+    """
+    Escanea recursivamente el directorio compilado (site/) buscando enlaces e imágenes rotas.
+    Retorna una lista de tuplas (archivo_origen, enlace_roto).
+    """
     broken_links = []
 
-    for html_path in generated_pages:
-        path_obj = Path(html_path)
-        if not path_obj.exists():
+    if not site_dir.exists():
+        return broken_links
+
+    # Encontrar todos los HTML
+    html_files = list(site_dir.rglob("*.html"))
+
+    for html_path in html_files:
+        try:
+            content = html_path.read_text(encoding="utf-8", errors="ignore")
+        except Exception:
             continue
 
-        content = path_obj.read_text(encoding="utf-8")
-        links = HREF_PATTERN.findall(content)
+        # Encontrar hrefs y srcs
+        links = HREF_PATTERN.findall(content) + SRC_PATTERN.findall(content)
 
         for link in links:
-            # Ignorar enlaces externos o anclas locales
-            if any(link.startswith(s) for s in ["http", "mailto:", "#"]):
+            # Ignorar enlaces externos, mails, llamadas javascript, anclas locales puras o vacíos
+            if not link or any(link.startswith(s) for s in ["http://", "https://", "mailto:", "javascript:", "#"]):
                 continue
 
-            # Limpiar anclas del link
-            target = link.split("#", 1)[0]
-            if not target or any(target.endswith(ext) for ext in [".css", ".js"]):
+            # Limpiar anclas y parámetros de consulta del link
+            target = link.split("#", 1)[0].split("?", 1)[0]
+            if not target:
                 continue
 
-            # Verificar existencia fisica
-            target_path = (path_obj.parent / target).resolve()
+            # Construir ruta absoluta y resolver
+            target_path = (html_path.parent / target).resolve()
+
+            # Verificar existencia física
             if not target_path.exists():
-                broken_links.append((html_path, link))
+                broken_links.append((str(html_path.relative_to(site_dir)), link))
 
     return broken_links

@@ -39,6 +39,7 @@ class Paths:
 class BuildConfig:
     paths: Paths
     verbose: bool = False
+    strict: bool = False
     continue_on_error: bool = False
     skip_validation: bool = False
     with_assets: bool = False

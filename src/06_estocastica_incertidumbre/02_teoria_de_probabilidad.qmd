@@ -16,6 +16,9 @@ status: "stable"
 
 # Teoría de probabilidad
 
+![Campana de Gauss](distribucion_normal.svg)
+
+
 La teoría de probabilidad es el marco matemático que permite cuantificar la incertidumbre y modelar fenómenos donde el azar desempeña un papel determinante.
 Desde el diseño de experimentos hasta la inteligencia artificial, esta disciplina proporciona las leyes que rigen los eventos aleatorios y su comportamiento a largo plazo.
 

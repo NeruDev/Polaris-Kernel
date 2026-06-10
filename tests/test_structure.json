@@ -1,8 +1,10 @@
 {
     "id": "test_structure",
-    "title": "Pruebas de integridad de la estructura de pilares",
+    "title": "Pruebas de integridad estructural, nomenclatura y adyacencia de metadatos",
     "tags": [
         "tests",
-        "structure"
+        "structure",
+        "naming-hygiene",
+        "metadata-adjacency"
     ]
 }

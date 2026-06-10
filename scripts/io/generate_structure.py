@@ -1,3 +1,8 @@
+# yaml_frontmatter:
+#   id: 'generate_structure'
+#   title: 'Generador de arbol de estructura del proyecto'
+#   tags: ['scripts', 'io', 'structure']
+
 import json
 import os
 from pathlib import Path
@@ -26,6 +31,7 @@ def get_directory_tree(root_path, ignore_list):
                 continue
             if f_path.suffix in [
                 ".md",
+                ".qmd",
                 ".py",
                 ".svg",
                 ".html",

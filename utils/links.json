@@ -1,6 +1,6 @@
 {
     "id": "links",
-    "title": "Auditoria de enlaces internos rotos",
+    "title": "Auditoria de enlaces internos y recursos rotos para Quarto",
     "tags": [
         "utils",
         "validation",

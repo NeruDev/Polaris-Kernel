@@ -1,8 +1,10 @@
 {
     "id": "pathing",
-    "title": "Utilidades de gestion de rutas y profundidad",
+    "title": "Utilidades de gestion de rutas, profundidad e higiene de nomenclatura",
     "tags": [
         "utils",
-        "pathing"
+        "pathing",
+        "hygiene",
+        "quarto"
     ]
 }

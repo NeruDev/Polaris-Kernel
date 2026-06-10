@@ -16,6 +16,9 @@ status: "stable"
 
 # Análisis funcional
 
+![Proyección ortogonal en espacios funcionales](hilbert_proyeccion.svg)
+
+
 El análisis funcional es la rama del análisis que trata con espacios de funciones de dimensión infinita.
 A diferencia del cálculo clásico que estudia números, esta disciplina trata a las funciones como puntos en un espacio geométrico abstracto, permitiendo resolver ecuaciones diferenciales y problemas de optimización de una complejidad superior.
 

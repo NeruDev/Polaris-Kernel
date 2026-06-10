@@ -1,0 +1,9 @@
+{
+    "id": "metadata_agent",
+    "title": "Agente de sincronizacion de metadatos",
+    "tags": [
+        "scripts",
+        "io",
+        "metadata"
+    ]
+}

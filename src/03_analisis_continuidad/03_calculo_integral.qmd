@@ -16,6 +16,9 @@ status: "stable"
 
 # Cálculo Integral
 
+![Área bajo la curva y sumas de Riemann](integral_area.svg)
+
+
 ## Antiderivada e Integral Indefinida
 
 ### Concepto de Antiderivada

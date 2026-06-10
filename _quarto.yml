@@ -1,16 +1,35 @@
+# ==============================================================================
+# CONFIGURACION CENTRAL DE COMPILACION Y CONFIGURACION DE QUARTO (_quarto.yml)
+# ==============================================================================
+# Este archivo define la estructura de navegacion del sitio web, el motor de
+# renderizado matematico, los temas visuales y la copia de recursos estaticos.
+# ==============================================================================
+
 project:
+  # Define que el proyecto es un sitio web estatico.
   type: website
+  # Especifica el directorio de salida del sitio web compilado (ADR-007).
   output-dir: site
+  # Recursos estaticos adicionales que se copiaran directamente al directorio final.
+  # Copia todos los graficos SVG generados (incluidos los de Typst) de forma recursiva.
   resources:
   - src/**/*.svg
+
 website:
+  # Nombre principal del proyecto.
   title: Polaris Kernel
+  # URL base de publicacion en GitHub Pages.
   site-url: https://nerudev.github.io/Polaris-Kernel/
+  # Habilita el cuadro de busqueda global.
   search: true
+  
+  # Configuracion de la barra de navegacion lateral.
   sidebar:
     style: docked
     search: true
+    # Mapeo estructurado de los contenidos en los 6 pilares Bourbaki.
     contents:
+    # Pilar 01: Fundamentos de las matematicas y logica formal.
     - section: 01 Fundamentos Logica
       contents:
       - src/01_fundamentos_logica/01_aritmetica_propiedades.qmd
@@ -19,6 +38,8 @@ website:
       - src/01_fundamentos_logica/03_teoria_conjuntos.qmd
       - src/01_fundamentos_logica/04_metodos_demostracion.qmd
       - src/01_fundamentos_logica/05_relaciones_equivalencia.qmd
+      
+    # Pilar 02: Estructuras algebraicas y algebra lineal.
     - section: 02 Estructuras Algebraicas
       contents:
       - src/02_estructuras_algebraicas/01_algebra_elemental.qmd
@@ -26,6 +47,8 @@ website:
       - src/02_estructuras_algebraicas/03_algebra_abstracta.qmd
       - src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd
       - src/02_estructuras_algebraicas/05_teoria_anillos_cuerpos.qmd
+      
+    # Pilar 03: Calculo infinitesimal, analisis real y funcional.
     - section: 03 Analisis Continuidad
       contents:
       - src/03_analisis_continuidad/01_funciones_y_limites.qmd
@@ -36,6 +59,8 @@ website:
       - src/03_analisis_continuidad/06_analisis_avanzado.qmd
       - src/03_analisis_continuidad/07_analisis_funcional.qmd
       - src/03_analisis_continuidad/08_sucesiones_y_series.qmd
+      
+    # Pilar 04: Geometria, topologia y variedades diferenciables.
     - section: 04 Espacio Forma
       contents:
       - src/04_espacio_forma/01_geometria_euclidiana.qmd
@@ -44,6 +69,8 @@ website:
       - src/04_espacio_forma/04_topologia.qmd
       - src/04_espacio_forma/05_geometria_diferencial.qmd
       - src/04_espacio_forma/06_geometria_no_euclidiana.qmd
+      
+    # Pilar 05: Matematicas discretas, teoria de grafos y computacion.
     - section: 05 Discrecion Computacion
       contents:
       - src/05_discrecion_computacion/01_combinatoria.qmd
@@ -51,6 +78,8 @@ website:
       - src/05_discrecion_computacion/03_teoria_de_numeros.qmd
       - src/05_discrecion_computacion/04_metodos_numericos.qmd
       - src/05_discrecion_computacion/05_teoria_automatas.qmd
+      
+    # Pilar 06: Probabilidad, procesos estocasticos e inferencia de datos.
     - section: 06 Estocastica Incertidumbre
       contents:
       - src/06_estocastica_incertidumbre/01_estadistica_descriptiva.qmd
@@ -58,16 +87,28 @@ website:
       - src/06_estocastica_incertidumbre/03_estadistica_inferencial.qmd
       - src/06_estocastica_incertidumbre/04_modelos_estocasticos.qmd
       - src/06_estocastica_incertidumbre/05_teoria_informacion.qmd
+
+# Idioma de localizacion por defecto para el sitio generado (Español).
 lang: es
+
+# Parametros especificos de formato para salida HTML.
 format:
   html:
+    # Configuracion de temas visuales personalizados (Light y Dark).
     theme:
-      light: cosmo
+      light:
+        - cosmo
+        - miku-dark.scss
       dark:
         - darkly
         - miku-dark.scss
+    # Habilita la generacion automatica de la tabla de contenidos (TOC).
     toc: true
+    # Motor de visualizacion para formulas matematicas en el navegador.
     html-math-method: mathjax
+    # Permite ocultar el codigo fuente bajo pestañas expandibles por defecto.
     code-fold: true
+    # Añade un boton de copiado directo en cada bloque de codigo.
     code-copy: true
+    # Utiliza un layout de pagina completo sin restricciones estrechas de ancho.
     page-layout: full

@@ -16,6 +16,9 @@ status: "stable"
 
 # Cálculo multivariable y vectorial
 
+![Visualización de campo vectorial rotacional](campo_vectorial.svg)
+
+
 El cálculo multivariable extiende los conceptos de una variable a funciones 
 de varias dimensiones $\mathbb{R}^n$. Permite modelar fenómenos físicos como 
 campos de fuerza, flujo de calor y dinámica de fluidos donde las variables 

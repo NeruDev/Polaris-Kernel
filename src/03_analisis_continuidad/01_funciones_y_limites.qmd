@@ -16,6 +16,9 @@ status: "stable"
 
 # Funciones y Límites
 
+![Definición visual de límite](limite_concepto.svg)
+
+
 ## Tipos de funciones y composición
 
 *(Pendiente de expansión detallada sobre funciones base)*
