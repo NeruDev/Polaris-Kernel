@@ -1,11 +1,12 @@
 ---
-id: "33B20"
+id: "msc00_16_funcion_gamma_incompleta"
 title: "Funcion Gamma Incompleta"
 pilar: "03_analisis_continuidad"
-msc_code: "33B20"
+msc_code: "33B-20"
 difficulty: "avanzado"
 tags:
-  - 33B20
+  - "33B20"
+status: "draft"
 ---
 
 # Funcion Gamma Incompleta

@@ -27,13 +27,15 @@ sin romper ni pegar). Es conocida como la "geometría de la plastilina".
 
 Un espacio métrico es un conjunto dotado de una función de distancia $d(x,y)$. 
 Permite definir conceptos como vecindarios, convergencia de sucesiones y 
-conjuntos abiertos de forma rigurosa. Es la base para generalizar el cálculo 
+conjuntos abiertos de forma rigurosa.
+Es la base para generalizar el cálculo 
 a dimensiones infinitas.
 
 ## Continuidad topológica
 
 En topología, una función $f$ es continua si la preimagen de cada conjunto 
-abierto es abierta. Esta definición es más general que la del cálculo ($\varepsilon-\delta$) 
+abierto es abierta.
+Esta definición es más general que la del cálculo ($\varepsilon-\delta$) 
 y permite estudiar la continuidad en espacios donde no hay una noción de 
 distancia clara.
 

@@ -1,11 +1,12 @@
 ---
-id: "33B10"
+id: "msc00_09_funciones_elementales_trascendentes"
 title: "Funciones Elementales Trascendentes"
 pilar: "03_analisis_continuidad"
-msc_code: "33B10"
+msc_code: "33B-10"
 difficulty: "intro"
 tags:
-  - 33B10
+  - "33B10"
+status: "draft"
 ---
 
 # Funciones Elementales Trascendentes

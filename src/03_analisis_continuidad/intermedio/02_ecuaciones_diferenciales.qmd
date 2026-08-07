@@ -20,7 +20,8 @@ status: "stable"
 
 
 Una ecuación diferencial es una relación entre una función desconocida y sus 
-derivadas. Son el lenguaje natural de la física, la biología y la ingeniería 
+derivadas.
+Son el lenguaje natural de la física, la biología y la ingeniería 
 para describir cómo cambian los sistemas en el tiempo o el espacio.
 
 ## EDO de primer orden
@@ -36,7 +37,8 @@ una sustitución adecuada.
 ## EDO de orden superior
 
 Las ecuaciones de segundo orden o mayor describen sistemas con inercia o 
-aceleración. Las **EDO lineales con coeficientes constantes** son las más 
+aceleración.
+Las **EDO lineales con coeficientes constantes** son las más 
 comunes; se resuelven hallando la solución homogénea mediante la ecuación 
 característica y una solución particular basada en el término fuente $g(x)$.
 

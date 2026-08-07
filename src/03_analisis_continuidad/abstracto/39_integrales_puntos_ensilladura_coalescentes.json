@@ -1,9 +1,12 @@
 {
-  "id": "41A60",
-  "title": "Integrales Puntos Ensilladura Coalescentes",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "41A60, 58K05",
-  "difficulty": "abstracto",
-  "source_dlmf_chapter": 36,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_39_integrales_puntos_ensilladura_coalescentes",
+    "title": "Integrales Puntos Ensilladura Coalescentes",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "41A-60",
+    "difficulty": "abstracto",
+    "tags": [
+        "41A60",
+        "58K05"
+    ],
+    "status": "draft"
 }

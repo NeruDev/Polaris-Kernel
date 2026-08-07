@@ -1,12 +1,13 @@
 ---
-id: "33C15"
+id: "msc00_38_funciones_coulomb"
 title: "Funciones Coulomb"
 pilar: "03_analisis_continuidad"
-msc_code: "33C15, 81V45"
+msc_code: "33C-15"
 difficulty: "avanzado"
 tags:
-  - 33C15
-  - 81V45
+  - "33C15"
+  - "81V45"
+status: "draft"
 ---
 
 # Funciones Coulomb

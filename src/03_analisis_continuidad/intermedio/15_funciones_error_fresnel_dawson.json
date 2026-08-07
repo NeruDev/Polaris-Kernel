@@ -1,9 +1,12 @@
 {
-  "id": "33B20",
-  "title": "Funciones Error Fresnel Dawson",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "33B20, 33C10",
-  "difficulty": "intermedio",
-  "source_dlmf_chapter": 7,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_15_funciones_error_fresnel_dawson",
+    "title": "Funciones Error Fresnel Dawson",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "33B-20",
+    "difficulty": "intermedio",
+    "tags": [
+        "33B20",
+        "33C10"
+    ],
+    "status": "draft"
 }

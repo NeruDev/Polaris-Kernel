@@ -1,11 +1,12 @@
 ---
-id: "33E05"
+id: "msc00_27_integrales_elipticas"
 title: "Integrales Elipticas"
 pilar: "03_analisis_continuidad"
-msc_code: "33E05"
+msc_code: "33E-05"
 difficulty: "intermedio"
 tags:
-  - 33E05
+  - "33E05"
+status: "draft"
 ---
 
 # Integrales Elipticas

@@ -1,9 +1,11 @@
 {
-  "id": "33C10",
-  "title": "Funciones Struve",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "33C10",
-  "difficulty": "avanzado",
-  "source_dlmf_chapter": 11,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_19_funciones_struve",
+    "title": "Funciones Struve",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "33C-10",
+    "difficulty": "avanzado",
+    "tags": [
+        "33C10"
+    ],
+    "status": "draft"
 }

@@ -1,12 +1,13 @@
 ---
-id: "11F11"
+id: "msc00_31_funciones_elipticas_weierstrass_modulares"
 title: "Funciones Elipticas Weierstrass Modulares"
 pilar: "03_analisis_continuidad"
-msc_code: "11F11, 33E05"
+msc_code: "11F-11"
 difficulty: "avanzado"
 tags:
-  - 11F11
-  - 33E05
+  - "11F11"
+  - "33E05"
+status: "draft"
 ---
 
 # Funciones Elipticas Weierstrass Modulares

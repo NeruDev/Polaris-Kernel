@@ -1,3 +1,10 @@
+---
+id: "msc00_readme"
+title: "README"
+pilar: "02_estructuras_algebraicas"
+msc_code: "00-00"
+status: "draft"
+---
 # Pilar 02: Estructuras Algebraicas - Registro de Activos Gráficos
 
 Este documento describe el estándar utilizado para la generación de imágenes y gráficos dentro de este pilar, así como los parámetros clave de los scripts origen para facilitar su futuro mantenimiento y escalabilidad.
@@ -22,8 +29,10 @@ A continuación se detallan los gráficos pertenecientes a este pilar y las vari
 Dibuja un diagrama categórico entre objetos A, B y C mostrando morfismos $f, g$ y su composición.
 - **Estructura:** Nodos de texto y conexiones relativas.
 - **Parámetros a ajustar:**
-  - `content((x, y), [$A$], name: "A")`: Coordenadas absolutas de los objetos. Si el diagrama requiere más objetos (D, E), simplemente agrega nuevas coordenadas en el plano.
-  - `line("A.east", "B.west", ...)`: Las flechas usan anclajes cardinales. Cambiar las direcciones si los nodos se mueven.
+  - `content((x, y), [$A$], name: "A")`: Coordenadas absolutas de los objetos.
+Si el diagrama requiere más objetos (D, E), simplemente agrega nuevas coordenadas en el plano.
+  - `line("A.east", "B.west", ...)`: Las flechas usan anclajes cardinales.
+Cambiar las direcciones si los nodos se mueven.
   - `arc(..., start, delta, radius)`: Controla el arco curvo central que indica la conmutatividad.
 
 ### 2. Ecuaciones y Desigualdades (`ecuaciones_y_desigualdades.svg`)
@@ -31,7 +40,8 @@ Ilustra el punto de intersección de un sistema de ecuaciones lineales de $2 \ti
 - **Estructura:** Trazado de líneas rectas y proyecciones punteadas sobre ejes Cartesianos.
 - **Parámetros a ajustar:**
   - `line((x1, y1), (x2, y2))`: Define las coordenadas de inicio y fin de las rectas numéricas limitando con los ejes.
-  - `circle((x, y), radius)`: Señala el punto de intersección exacto. Modificar si cambian las ecuaciones del modelo.
+  - `circle((x, y), radius)`: Señala el punto de intersección exacto.
+Modificar si cambian las ecuaciones del modelo.
 
 ### 3. Espacios Vectoriales y Bases (`espacios_vectoriales_bases.svg`)
 Muestra cómo dos vectores base ($v_1, v_2$) construyen un vector resultante $u$ mediante combinaciones lineales.
@@ -44,7 +54,8 @@ Muestra cómo dos vectores base ($v_1, v_2$) construyen un vector resultante $u$
 Un diagrama de flujo vertical que traza la especialización desde un Grupo hasta un Campo/Cuerpo.
 - **Estructura:** Cajas redondeadas apiladas en el eje $y$, conectadas por flechas descendentes.
 - **Parámetros a ajustar:**
-  - `rect((x1, y1), (x2, y2), ..style-box(...))`: Las coordenadas delimitan la altura y anchura del contenedor del texto. Si se agrega un nuevo nodo, usar una nueva ventana en el eje $y$ negativo.
+  - `rect((x1, y1), (x2, y2), ..style-box(...))`: Las coordenadas delimitan la altura y anchura del contenedor del texto.
+Si se agrega un nuevo nodo, usar una nueva ventana en el eje $y$ negativo.
   - `style-box`: Variable local para inyectar configuración unificada de estilo, incluyendo el color (`fill`).
 
 ### 5. Polinomios y Factorización (`polinomios_y_factorizacion.svg`)

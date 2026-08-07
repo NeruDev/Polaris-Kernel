@@ -20,7 +20,8 @@ status: "stable"
 
 
 El álgebra abstracta estudia las estructuras algebraicas por sí mismas, 
-prescindiendo de la naturaleza de los elementos. Se enfoca en las propiedades 
+prescindiendo de la naturaleza de los elementos.
+Se enfoca en las propiedades 
 de las operaciones y las leyes que las rigen.
 
 ## Teoría de grupos
@@ -35,7 +36,8 @@ Si además es conmutativo, se llama grupo abeliano.
 
 Un anillo es una estructura con dos operaciones (suma y producto). Debe ser 
 un grupo abeliano bajo la suma y cumplir la asociatividad y distributividad 
-bajo el producto. Ejemplos comunes son los números enteros $\mathbb{Z}$ y 
+bajo el producto.
+Ejemplos comunes son los números enteros $\mathbb{Z}$ y 
 los polinomios.
 
 ## Campos y extensiones de Galois

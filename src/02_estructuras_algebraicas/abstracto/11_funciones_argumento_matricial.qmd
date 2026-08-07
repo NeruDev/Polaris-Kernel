@@ -1,12 +1,13 @@
 ---
-id: "15A15"
+id: "msc00_11_funciones_argumento_matricial"
 title: "Funciones Argumento Matricial"
 pilar: "02_estructuras_algebraicas"
-msc_code: "15A15, 33C99"
+msc_code: "15A-15"
 difficulty: "abstracto"
 tags:
-  - 15A15
-  - 33C99
+  - "15A15"
+  - "33C99"
+status: "draft"
 ---
 
 # Funciones Argumento Matricial

@@ -1,13 +1,14 @@
 ---
-id: "00A05"
+id: "msc00_09_metodos_algebraicos_analiticos"
 title: "Metodos Algebraicos Analiticos"
 pilar: "01_fundamentos_logica"
-msc_code: "00A05, 12Dxx, 26Axx"
+msc_code: "00A-05"
 difficulty: "avanzado"
 tags:
-  - 00A05
-  - 12Dxx
-  - 26Axx
+  - "00A05"
+  - "12Dxx"
+  - "26Axx"
+status: "draft"
 ---
 
 # Metodos Algebraicos Analiticos

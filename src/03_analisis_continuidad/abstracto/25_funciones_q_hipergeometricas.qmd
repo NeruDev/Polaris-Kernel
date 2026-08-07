@@ -1,11 +1,12 @@
 ---
-id: "33D15"
+id: "msc00_25_funciones_q_hipergeometricas"
 title: "Funciones Q Hipergeometricas"
 pilar: "03_analisis_continuidad"
-msc_code: "33D15"
+msc_code: "33D-15"
 difficulty: "abstracto"
 tags:
-  - 33D15
+  - "33D15"
+status: "draft"
 ---
 
 # Funciones Q Hipergeometricas

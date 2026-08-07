@@ -1,12 +1,13 @@
 ---
-id: "33C10"
+id: "msc00_17_funciones_airy"
 title: "Funciones Airy"
 pilar: "03_analisis_continuidad"
-msc_code: "33C10, 34E20"
+msc_code: "33C-10"
 difficulty: "avanzado"
 tags:
-  - 33C10
-  - 34E20
+  - "33C10"
+  - "34E20"
+status: "draft"
 ---
 
 # Funciones Airy

@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto-input82a9e30949201b1a – Polaris Kernel</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-e8a923774aa70043a31c64adf822e8b4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Polaris Kernel
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../../">Polaris Kernel</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">01 Fundamentos Logica</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_aritmetica_propiedades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_sistemas_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/02_logica_matematica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/03_teoria_conjuntos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/04_metodos_demostracion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/05_relaciones_equivalencia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/06_funciones_y_mapeos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/07_logica_predicados_inferencia.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">02 Estructuras Algebraicas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/01_algebra_elemental.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/02_algebra_lineal.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/03_algebra_abstracta.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/05_teoria_de_matrices.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/06_ecuaciones_y_desigualdades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/07_polinomios_y_factorizacion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/08_espacios_vectoriales_bases.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">03 Analisis Continuidad</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/01_funciones_y_limites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/02_calculo_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/03_calculo_integral.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/04_calculo_multivariable.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/05_ecuaciones_diferenciales.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/06_analisis_avanzado.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/07_analisis_funcional.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/08_sucesiones_y_series.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">04 Espacio Forma</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/01_geometria_euclidiana.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/02_trigonometria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/03_geometria_analitica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/04_topologia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/05_geometria_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/06_geometria_no_euclidiana.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">05 Discrecion Computacion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/01_combinatoria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/02_teoria_de_grafos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/03_teoria_de_numeros.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/04_metodos_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/05_teoria_automatas.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">06 Estocastica Incertidumbre</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/01_estadistica_descriptiva.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/02_teoria_de_probabilidad.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/03_estadistica_inferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/04_modelos_estocasticos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/05_teoria_informacion.qmd</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#vectors-and-vector-valued-functions" id="toc-vectors-and-vector-valued-functions" class="nav-link active" data-scroll-target="#vectors-and-vector-valued-functions">§1.6 Vectors and Vector-Valued Functions</a>
+  <ul class="collapse">
+  <li><a href="#i-vectors" id="toc-i-vectors" class="nav-link" data-scroll-target="#i-vectors">§1.6(i) Vectors</a>
+  <ul class="collapse">
+  <li><a href="#dot-product-or-scalar-product" id="toc-dot-product-or-scalar-product" class="nav-link" data-scroll-target="#dot-product-or-scalar-product">Dot Product (or Scalar Product)</a></li>
+  <li><a href="#magnitude-and-angle-of-vector-𝐚" id="toc-magnitude-and-angle-of-vector-𝐚" class="nav-link" data-scroll-target="#magnitude-and-angle-of-vector-𝐚">Magnitude and Angle of Vector 𝐚</a></li>
+  <li><a href="#unit-vectors" id="toc-unit-vectors" class="nav-link" data-scroll-target="#unit-vectors">Unit Vectors</a></li>
+  <li><a href="#cross-product-or-vector-product" id="toc-cross-product-or-vector-product" class="nav-link" data-scroll-target="#cross-product-or-vector-product">Cross Product (or Vector Product)</a></li>
+  </ul></li>
+  <li><a href="#ii-vectors-alternative-notations" id="toc-ii-vectors-alternative-notations" class="nav-link" data-scroll-target="#ii-vectors-alternative-notations">§1.6(ii) Vectors: Alternative Notations</a>
+  <ul class="collapse">
+  <li><a href="#einstein-summation-convention" id="toc-einstein-summation-convention" class="nav-link" data-scroll-target="#einstein-summation-convention">Einstein Summation Convention</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#levi-civita-symbol" id="toc-levi-civita-symbol" class="nav-link" data-scroll-target="#levi-civita-symbol">Levi-Civita Symbol</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
+  </ul></li>
+  <li><a href="#iii-vector-valued-functions" id="toc-iii-vector-valued-functions" class="nav-link" data-scroll-target="#iii-vector-valued-functions">§1.6(iii) Vector-Valued Functions</a>
+  <ul class="collapse">
+  <li><a href="#del-operator" id="toc-del-operator" class="nav-link" data-scroll-target="#del-operator">Del Operator</a></li>
+  </ul></li>
+  <li><a href="#iv-path-and-line-integrals" id="toc-iv-path-and-line-integrals" class="nav-link" data-scroll-target="#iv-path-and-line-integrals">§1.6(iv) Path and Line Integrals</a>
+  <ul class="collapse">
+  <li><a href="#greens-theorem" id="toc-greens-theorem" class="nav-link" data-scroll-target="#greens-theorem">Green’s Theorem</a></li>
+  </ul></li>
+  <li><a href="#v-surfaces-and-integrals-over-surfaces" id="toc-v-surfaces-and-integrals-over-surfaces" class="nav-link" data-scroll-target="#v-surfaces-and-integrals-over-surfaces">§1.6(v) Surfaces and Integrals over Surfaces</a>
+  <ul class="collapse">
+  <li><a href="#stokess-theorem" id="toc-stokess-theorem" class="nav-link" data-scroll-target="#stokess-theorem">Stokes’s Theorem</a></li>
+  <li><a href="#gausss-or-divergence-theorem" id="toc-gausss-or-divergence-theorem" class="nav-link" data-scroll-target="#gausss-or-divergence-theorem">Gauss’s (or Divergence) Theorem</a></li>
+  <li><a href="#greens-theorem-for-volume" id="toc-greens-theorem-for-volume" class="nav-link" data-scroll-target="#greens-theorem-for-volume">Green’s Theorem (for Volume)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="vectors-and-vector-valued-functions" class="level1">
+<h1>§1.6 Vectors and Vector-Valued Functions</h1>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=notations">notations</a> , <a href="http://dlmf.nist.gov/search/search?q=vector-valued%20functions">vector-valued functions</a> , <a href="http://dlmf.nist.gov/search/search?q=vectors">vectors</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.1</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for Ch.1</p>
+</div>
+<section id="i-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="i-vectors">§1.6(i) Vectors</h2>
+<div class="{note}">
+<p><strong>Notes:</strong></p>
+<p>See Marsden and Tromba (<a href="./bib/M.html#bib1554" title="Vector Calculus">1996</a>, Chapter 1). For ( 1.6.9 ) see Hubbard and Hubbard (<a href="./bib/H.html#bib1109" title="Vector Calculus, Linear Algebra, and Differential Forms: A Unified Approach">2002</a>, pp.&nbsp;82–84).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6 and Ch.1</p>
+</div>
+<p><a id="E1"></a></p>
+<p><a id="Ex1"></a> <span class="math display">\[
+\displaystyle\mathbf{a} \displaystyle=(a_{1},a_{2},a_{3}), \tag{1.6.1}
+\]</span></p>
+<p><a id="Ex2"></a> <span class="math display">\[
+\displaystyle\mathbf{b} \displaystyle=(b_{1},b_{2},b_{3}).
+\]</span></p>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6 and Ch.1</p>
+</div>
+<section id="dot-product-or-scalar-product" class="level3">
+<h3 class="anchored" data-anchor-id="dot-product-or-scalar-product">Dot Product (or Scalar Product)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=dot%20product">dot product</a> , <a href="http://dlmf.nist.gov/search/search?q=scalar%20product">scalar product</a> , <a href="http://dlmf.nist.gov/search/search?q=vectors">vectors</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E2"></a> <span class="math display">\[
+\mathbf{a}\cdot\mathbf{b}=a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3}. \tag{1.6.2}
+\]</span></p>
+</section>
+<section id="magnitude-and-angle-of-vector-𝐚" class="level3">
+<h3 class="anchored" data-anchor-id="magnitude-and-angle-of-vector-𝐚">Magnitude and Angle of Vector 𝐚</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=angle">angle</a> , <a href="http://dlmf.nist.gov/search/search?q=magnitude">magnitude</a> , <a href="http://dlmf.nist.gov/search/search?q=vectors">vectors</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E3"></a> <span class="math display">\[
+\left\|{\mathbf{a}}\right\|=\sqrt{\mathbf{a}\cdot\mathbf{a}}, \tag{1.6.3}
+\]</span></p>
+<p><a id="E4"></a> <span class="math display">\[
+\cos\theta=\frac{\mathbf{a}\cdot\mathbf{b}}{\left\|{\mathbf{a}}\right\|\;\left\|{\mathbf{b}}\right\|}; \tag{1.6.4}
+\]</span></p>
+<p><span class="math inline">\(\theta\)</span> is the angle between <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span> .</p>
+</section>
+<section id="unit-vectors" class="level3">
+<h3 class="anchored" data-anchor-id="unit-vectors">Unit Vectors</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=unit">unit</a> , <a href="http://dlmf.nist.gov/search/search?q=vectors">vectors</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E5"></a></p>
+<p><a id="Ex3"></a> <span class="math display">\[
+\displaystyle\mathbf{i} \displaystyle=(1,0,0), \tag{1.6.5}
+\]</span></p>
+<p><a id="Ex4"></a> <span class="math display">\[
+\displaystyle\mathbf{j} \displaystyle=(0,1,0),
+\]</span></p>
+<p><a id="Ex5"></a> <span class="math display">\[
+\displaystyle\mathbf{k} \displaystyle=(0,0,1),
+\]</span></p>
+<div class="{note}">
+<p><strong>Defines:</strong></p>
+<p><span class="math inline">\(\mathbf{i}\)</span> : unit vector (locally) , <span class="math inline">\(\mathbf{j}\)</span> : unit vector (locally) and <span class="math inline">\(\mathbf{k}\)</span> : unit vector (locally)</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.6(ii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6(i) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E6"></a> <span class="math display">\[
+\mathbf{a}=a_{1}\mathbf{i}+a_{2}\mathbf{j}+a_{3}\mathbf{k}. \tag{1.6.6}
+\]</span></p>
+</section>
+<section id="cross-product-or-vector-product" class="level3">
+<h3 class="anchored" data-anchor-id="cross-product-or-vector-product">Cross Product (or Vector Product)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=area">area</a> , <a href="http://dlmf.nist.gov/search/search?q=cross%20product">cross product</a> , <a href="http://dlmf.nist.gov/search/search?q=parallelepiped">parallelepiped</a> , <a href="http://dlmf.nist.gov/search/search?q=parallelogram">parallelogram</a> , <a href="http://dlmf.nist.gov/search/search?q=right-hand%20rule">right-hand rule</a> , <a href="http://dlmf.nist.gov/search/search?q=right-hand%20rule%20for%20cross%20products">right-hand rule for cross products</a> , <a href="http://dlmf.nist.gov/search/search?q=vector%20product">vector product</a> , <a href="http://dlmf.nist.gov/search/search?q=vectors">vectors</a> , <a href="http://dlmf.nist.gov/search/search?q=volume">volume</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E7"></a></p>
+<p><a id="Ex6"></a> <span class="math display">\[
+\displaystyle\mathbf{i}\times\mathbf{j} \displaystyle=\mathbf{k}, \tag{1.6.7}
+\]</span></p>
+<p><a id="Ex7"></a> <span class="math display">\[
+\displaystyle\mathbf{j}\times\mathbf{k} \displaystyle=\mathbf{i},
+\]</span></p>
+<p><a id="Ex8"></a> <span class="math display">\[
+\displaystyle\mathbf{k}\times\mathbf{i} \displaystyle=\mathbf{j},
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{i}\)</span>: unit vector , <span class="math inline">\(\mathbf{j}\)</span>: unit vector and <span class="math inline">\(\mathbf{k}\)</span>: unit vector</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.6(ii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6(i) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E8"></a></p>
+<p><a id="Ex9"></a> <span class="math display">\[
+\displaystyle\mathbf{j}\times\mathbf{i} \displaystyle=-\mathbf{k}, \tag{1.6.8}
+\]</span></p>
+<p><a id="Ex10"></a> <span class="math display">\[
+\displaystyle\mathbf{k}\times\mathbf{j} \displaystyle=-\mathbf{i},
+\]</span></p>
+<p><a id="Ex11"></a> <span class="math display">\[
+\displaystyle\mathbf{i}\times\mathbf{k} \displaystyle=-\mathbf{j}.
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{i}\)</span>: unit vector , <span class="math inline">\(\mathbf{j}\)</span>: unit vector and <span class="math inline">\(\mathbf{k}\)</span>: unit vector</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.6(ii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6(i) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E9"></a> <span class="math display">\[
+\mathbf{a}\times\mathbf{b}=\begin{vmatrix}\mathbf{i}&amp;\mathbf{j}&amp;\mathbf{k}\\
+a_{1}&amp;a_{2}&amp;a_{3}\\
+b_{1}&amp;b_{2}&amp;b_{3}\end{vmatrix}\\
+=(a_{2}b_{3}-a_{3}b_{2})\mathbf{i}+(a_{3}b_{1}-a_{1}b_{3})\mathbf{j}+(a_{1}b_{2}-a_{2}b_{1})\mathbf{k}\\
+=\left\|{\mathbf{a}}\right\|\left\|{\mathbf{b}}\right\|(\sin\theta)\mathbf{n}, \tag{1.6.9}
+\]</span></p>
+<p>where <span class="math inline">\(\mathbf{n}\)</span> is the unit vector normal to <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span> whose direction is determined by the right-hand rule; see Figure 1.6.1 .</p>
+<p><a id="F1"></a></p>
+<p><img src="../html/1/6/F1.png" class="img-fluid" alt="Figure 1.6.1: Vector notation. Right-hand rule for cross products."> :::{note} <strong>Referenced by:</strong></p>
+<p>§1.6(i)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6(i) , §1.6 and Ch.1 :::</p>
+<p>Area of parallelogram with vectors <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span> as sides <span class="math inline">\(=\left\|{\mathbf{a}\times\mathbf{b}}\right\|\)</span> .</p>
+<p>Volume of a parallelepiped with vectors <span class="math inline">\(\mathbf{a}\)</span> , <span class="math inline">\(\mathbf{b}\)</span> , and <span class="math inline">\(\mathbf{c}\)</span> as edges <span class="math inline">\(=\left|\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})\right|\)</span> .</p>
+<p><a id="EGx1"></a></p>
+<p><span class="math display">\[
+\displaystyle\mathbf{a}\times(\mathbf{b}\times\mathbf{c}) \displaystyle=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b}), \tag{1.6.10}
+\]</span></p>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6(i) , §1.6 and Ch.1</p>
+</div>
+<p><span class="math display">\[
+\displaystyle(\mathbf{a}\times\mathbf{b})\times\mathbf{c} \displaystyle=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{a}(\mathbf{b}\cdot\mathbf{c}). \tag{1.6.11}
+\]</span></p>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(i) , §1.6(i) , §1.6 and Ch.1</p>
+</div>
+</section>
+</section>
+<section id="ii-vectors-alternative-notations" class="level2">
+<h2 class="anchored" data-anchor-id="ii-vectors-alternative-notations">§1.6(ii) Vectors: Alternative Notations</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=notations">notations</a> , <a href="http://dlmf.nist.gov/search/search?q=vectors">vectors</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6 and Ch.1</p>
+</div>
+<p>The following notations are often used in the physics literature; see for example Lorentz et al.&nbsp;(<a href="./bib/L.html#bib1467" title="The Principle of Relativity: A Collection of Original Memoirs on the Special and General Theory of Relativity">1923</a>, pp.&nbsp;122–123).</p>
+<section id="einstein-summation-convention" class="level3">
+<h3 class="anchored" data-anchor-id="einstein-summation-convention">Einstein Summation Convention</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Einstein%20summation%20convention">Einstein summation convention</a> , <a href="http://dlmf.nist.gov/search/search?q=Einstein%20summation%20convention%20for%20vectors">Einstein summation convention for vectors</a> , <a href="http://dlmf.nist.gov/search/search?q=vectors">vectors</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(ii) , §1.6 and Ch.1</p>
+</div>
+<p>Much vector algebra involves summation over suffices of products of vector components. In almost all cases of repeated suffices, we can suppress the summation notation entirely, if it is understood that an implicit sum is to be taken over any repeated suffix. Thus pairs of indefinite suffices in an expression are resolved by being summed over (or “traced” over).</p>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(ii) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E12"></a> <span class="math display">\[
+a_{j}b_{j}=\sum_{j=1}^{3}a_{j}b_{j}=\mathbf{a}\cdot\mathbf{b}. \tag{1.6.12}
+\]</span></p>
+<p>Next,</p>
+<p><a id="E13"></a></p>
+<p><a id="Ex12"></a> <span class="math display">\[
+\displaystyle\mathbf{e}_{1} \displaystyle=(1,0,0), \tag{1.6.13}
+\]</span></p>
+<p><a id="Ex13"></a> <span class="math display">\[
+\displaystyle\mathbf{e}_{2} \displaystyle=(0,1,0),
+\]</span></p>
+<p><a id="Ex14"></a> <span class="math display">\[
+\displaystyle\mathbf{e}_{3} \displaystyle=(0,0,1);
+\]</span></p>
+<div class="{note}">
+<p><strong>Defines:</strong></p>
+<p><span class="math inline">\(\mathbf{e}_{j}\)</span> : unit vectors (locally)</p>
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(j\)</span>: integer</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(ii) , §1.6(ii) , §1.6 and Ch.1</p>
+</div>
+<p>compare ( 1.6.5 ). Thus <span class="math inline">\(a_{j}\mathbf{e}_{j}=\mathbf{a}\)</span> .</p>
+</section>
+<section id="levi-civita-symbol" class="level3">
+<h3 class="anchored" data-anchor-id="levi-civita-symbol">Levi-Civita Symbol</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Levi-Civita%20symbol">Levi-Civita symbol</a> , <a href="http://dlmf.nist.gov/search/search?q=Levi-Civita%20symbol%20for%20vectors">Levi-Civita symbol for vectors</a> , <a href="http://dlmf.nist.gov/search/search?q=vectors">vectors</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(ii) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E14"></a> <span class="math display">\[
+\epsilon_{jk\ell}=\begin{cases}+1,&amp;\text{if }j,k,\ell\text{ is even permutation of }1,2,3,\\
+-1,&amp;\text{if }j,k,\ell\text{ is odd permutation of }1,2,3,\\
+\phantom{-}0,&amp;\text{otherwise}.\end{cases} \tag{1.6.14}
+\]</span></p>
+</section>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Einstein%20summation%20convention">Einstein summation convention</a> , <a href="http://dlmf.nist.gov/search/search?q=Einstein%20summation%20convention%20for%20vectors">Einstein summation convention for vectors</a> , <a href="http://dlmf.nist.gov/search/search?q=parallelepiped">parallelepiped</a> , <a href="http://dlmf.nist.gov/search/search?q=vectors">vectors</a> , <a href="http://dlmf.nist.gov/search/search?q=volume">volume</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(ii) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E15"></a></p>
+<p><a id="Ex15"></a> <span class="math display">\[
+\displaystyle\epsilon_{123} \displaystyle=\epsilon_{312}=1, \tag{1.6.15}
+\]</span></p>
+<p><a id="Ex16"></a> <span class="math display">\[
+\displaystyle\epsilon_{213} \displaystyle=\epsilon_{321}=-1,
+\]</span></p>
+<p><a id="Ex17"></a> <span class="math display">\[
+\displaystyle\epsilon_{221} \displaystyle=0.
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\epsilon_{jk\ell}\)</span>: Levi-Civita symbol</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(ii) , §1.6(ii) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E16"></a> <span class="math display">\[
+\epsilon_{jk\ell}\epsilon_{\ell mn}=\delta_{j,m}\delta_{k,n}-\delta_{j,n}\delta_{k,m}, \tag{1.6.16}
+\]</span></p>
+<p>where <span class="math inline">\(\delta_{j,k}\)</span> is the Kronecker delta.</p>
+<p><a id="E17"></a> <span class="math display">\[
+\mathbf{e}_{j}\times\mathbf{e}_{k}=\epsilon_{jk\ell}\mathbf{e}_{\ell}; \tag{1.6.17}
+\]</span></p>
+<p>compare ( 1.6.8 ).</p>
+<p><a id="E18"></a> <span class="math display">\[
+a_{j}\mathbf{e}_{j}\times b_{k}\mathbf{e}_{k}=\epsilon_{jk\ell}a_{j}b_{k}\mathbf{e}_{\ell}; \tag{1.6.18}
+\]</span></p>
+<p>compare ( 1.6.7 )–( 1.6.8 ).</p>
+<p>Lastly, the volume of a parallelepiped with vectors <span class="math inline">\(\mathbf{a}\)</span> , <span class="math inline">\(\mathbf{b}\)</span> , and <span class="math inline">\(\mathbf{c}\)</span> as edges is <span class="math inline">\(\left|\epsilon_{jk\ell}a_{j}b_{k}c_{\ell}\right|\)</span> .</p>
+</section>
+</section>
+<section id="iii-vector-valued-functions" class="level2">
+<h2 class="anchored" data-anchor-id="iii-vector-valued-functions">§1.6(iii) Vector-Valued Functions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=functions">functions</a> , <a href="http://dlmf.nist.gov/search/search?q=vector-valued">vector-valued</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Marsden and Tromba (<a href="./bib/M.html#bib1554" title="Vector Calculus">1996</a>, pp.&nbsp;144–147, 273–283).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6 and Ch.1</p>
+</div>
+<section id="del-operator" class="level3">
+<h3 class="anchored" data-anchor-id="del-operator">Del Operator</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=curl">curl</a> , <a href="http://dlmf.nist.gov/search/search?q=del%20operator">del operator</a> , <a href="http://dlmf.nist.gov/search/search?q=divergence">divergence</a> , <a href="http://dlmf.nist.gov/search/search?q=gradient">gradient</a> , <a href="http://dlmf.nist.gov/search/search?q=vector-valued%20functions">vector-valued functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(iii) , §1.6 and Ch.1</p>
+</div>
+<p><a id="E19"></a> <span class="math display">\[
+\nabla=\mathbf{i}\frac{\partial}{\partial x}+\mathbf{j}\frac{\partial}{\partial y}+\mathbf{k}\frac{\partial}{\partial z}. \tag{1.6.19}
+\]</span></p>
+<p>The <em>gradient</em> of a differentiable scalar function <span class="math inline">\(f(x,y,z)\)</span> is</p>
+<p><a id="E20"></a> <span class="math display">\[
+\operatorname{grad}f=\nabla f=\frac{\partial f}{\partial x}\mathbf{i}+\frac{\partial f}{\partial y}\mathbf{j}+\frac{\partial f}{\partial z}\mathbf{k}. \tag{1.6.20}
+\]</span></p>
+<p>The <em>divergence</em> of a differentiable vector-valued function <span class="math inline">\(\mathbf{F}=F_{1}\mathbf{i}+F_{2}\mathbf{j}+F_{3}\mathbf{k}\)</span> is</p>
+<p><a id="E21"></a> <span class="math display">\[
+\operatorname{div}\mathbf{F}=\nabla\cdot\mathbf{F}=\frac{\partial F_{1}}{\partial x}+\frac{\partial F_{2}}{\partial y}+\frac{\partial F_{3}}{\partial z}. \tag{1.6.21}
+\]</span></p>
+<p>The <em>curl</em> of <span class="math inline">\(\mathbf{F}\)</span> is</p>
+<p><a id="E22"></a> <span class="math display">\[
+\operatorname{curl}\mathbf{F}=\nabla\times\mathbf{F}=\begin{vmatrix}\mathbf{i}&amp;\mathbf{j}&amp;\mathbf{k}\\
+\displaystyle{\frac{\partial}{\partial x}}&amp;\displaystyle{\frac{\partial}{\partial y}}&amp;\displaystyle{\frac{\partial}{\partial z}}\\
+F_{1}&amp;F_{2}&amp;F_{3}\end{vmatrix}\\
+=\left(\frac{\partial F_{3}}{\partial y}-\frac{\partial F_{2}}{\partial z}\right)\mathbf{i}+\left(\frac{\partial F_{1}}{\partial z}-\frac{\partial F_{3}}{\partial x}\right)\mathbf{j}+\left(\frac{\partial F_{2}}{\partial x}-\frac{\partial F_{1}}{\partial y}\right)\mathbf{k}. \tag{1.6.22}
+\]</span></p>
+<p><a id="E23"></a> <span class="math display">\[
+\nabla(fg)=f\nabla g+g\nabla f, \tag{1.6.23}
+\]</span></p>
+<p><a id="E24"></a> <span class="math display">\[
+\nabla(f/g)=(g\nabla f-f\nabla g)/g^{2}, \tag{1.6.24}
+\]</span></p>
+<p><a id="E25"></a> <span class="math display">\[
+\nabla\cdot(f\mathbf{F})=f(\nabla\cdot\mathbf{F})+\mathbf{F}\cdot\nabla f, \tag{1.6.25}
+\]</span></p>
+<p><a id="E26"></a> <span class="math display">\[
+\nabla\cdot(\mathbf{F}\times\mathbf{G})=\mathbf{G}\cdot(\nabla\times\mathbf{F})-\mathbf{F}\cdot(\nabla\times\mathbf{G}), \tag{1.6.26}
+\]</span></p>
+<p><a id="E27"></a> <span class="math display">\[
+\nabla\cdot(\nabla\times\mathbf{F})=\operatorname{div}\operatorname{curl}\mathbf{F}=0, \tag{1.6.27}
+\]</span></p>
+<p><a id="E28"></a> <span class="math display">\[
+\nabla\times(f\mathbf{F})=f(\nabla\times\mathbf{F})+(\nabla f)\times\mathbf{F}, \tag{1.6.28}
+\]</span></p>
+<p><a id="E29"></a> <span class="math display">\[
+\nabla\times(\nabla f)=\operatorname{curl}\operatorname{grad}f=0, \tag{1.6.29}
+\]</span></p>
+<p><a id="E30"></a> <span class="math display">\[
+\nabla^{2}f=\nabla\cdot(\nabla f), \tag{1.6.30}
+\]</span></p>
+<p><a id="E31"></a> <span class="math display">\[
+\nabla^{2}(fg)=f\nabla^{2}g+g\nabla^{2}f+2(\nabla f\cdot\nabla g), \tag{1.6.31}
+\]</span></p>
+<p><a id="E32"></a> <span class="math display">\[
+\nabla\cdot(\nabla f\times\nabla g)=0, \tag{1.6.32}
+\]</span></p>
+<p><a id="E33"></a> <span class="math display">\[
+\nabla\cdot(f\nabla g-g\nabla f)=f\nabla^{2}g-g\nabla^{2}f, \tag{1.6.33}
+\]</span></p>
+<p><a id="E34"></a> <span class="math display">\[
+\nabla\times(\nabla\times\mathbf{F})=\operatorname{curl}\operatorname{curl}\mathbf{F}=\nabla(\nabla\cdot\mathbf{F})-\nabla^{2}\mathbf{F}. \tag{1.6.34}
+\]</span></p>
+</section>
+</section>
+<section id="iv-path-and-line-integrals" class="level2">
+<h2 class="anchored" data-anchor-id="iv-path-and-line-integrals">§1.6(iv) Path and Line Integrals</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=boundary%20points">boundary points</a> , <a href="http://dlmf.nist.gov/search/search?q=closed%20point%20set">closed point set</a> , <a href="http://dlmf.nist.gov/search/search?q=curve">curve</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals%20of%20vector-valued%20functions">integrals of vector-valued functions</a> , <a href="http://dlmf.nist.gov/search/search?q=length">length</a> , <a href="http://dlmf.nist.gov/search/search?q=line">line</a> , <a href="http://dlmf.nist.gov/search/search?q=line%20integral">line integral</a> , <a href="http://dlmf.nist.gov/search/search?q=open%20point%20set">open point set</a> , <a href="http://dlmf.nist.gov/search/search?q=orientation-preserving">orientation-preserving</a> , <a href="http://dlmf.nist.gov/search/search?q=orientation-reversing">orientation-reversing</a> , <a href="http://dlmf.nist.gov/search/search?q=path">path</a> , <a href="http://dlmf.nist.gov/search/search?q=path%20integral">path integral</a> , <a href="http://dlmf.nist.gov/search/search?q=piecewise%20differentiable">piecewise differentiable</a> , <a href="http://dlmf.nist.gov/search/search?q=piecewise%20differentiable%20curve">piecewise differentiable curve</a> , <a href="http://dlmf.nist.gov/search/search?q=reparametrization%20of%20integration%20paths">reparametrization of integration paths</a> , <a href="http://dlmf.nist.gov/search/search?q=simple%20closed">simple closed</a> , <a href="http://dlmf.nist.gov/search/search?q=simple%20closed%20curve">simple closed curve</a> , <a href="http://dlmf.nist.gov/search/search?q=vector-valued%20functions">vector-valued functions</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Marsden and Tromba (<a href="./bib/M.html#bib1554" title="Vector Calculus">1996</a>, pp.&nbsp;396–417, 470).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6 and Ch.1</p>
+</div>
+<p>Note: The terminology <em>open</em> and <em>closed sets</em> and <em>boundary points</em> in the <span class="math inline">\((x,y)\)</span> plane that is used in this subsection and § 1.6(v) is analogous to that introduced for the complex plane in § 1.9(ii) .</p>
+<p>A <em>path</em> is defined by <span class="math inline">\(\mathbf{c}(t)=(x(t),y(t),z(t))\)</span> , with <span class="math inline">\(t\)</span> ranging over an interval and <span class="math inline">\(x(t),y(t),z(t)\)</span> differentiable. Letting</p>
+<p><a id="E35"></a> <span class="math display">\[
+\mathbf{c}^{\prime}(t)=(x^{\prime}(t),y^{\prime}(t),z^{\prime}(t)), \tag{1.6.35}
+\]</span></p>
+<p>then the <em>length</em> of a path for <span class="math inline">\(a\leq t\leq b\)</span> is</p>
+<p><a id="E36"></a> <span class="math display">\[
+\int_{a}^{b}\left\|{\mathbf{c}^{\prime}(t)}\right\|\,\mathrm{d}t. \tag{1.6.36}
+\]</span></p>
+<p>The <em>path integral</em> of a continuous function <span class="math inline">\(f(x,y,z)\)</span> is</p>
+<p><a id="E37"></a> <span class="math display">\[
+\int_{\mathbf{c}}f\,\mathrm{d}s=\int^{b}_{a}f(x(t),y(t),z(t))\left\|{\mathbf{c}^{\prime}(t)}\right\|\,\mathrm{d}t. \tag{1.6.37}
+\]</span></p>
+<p>The <em>line integral</em> of a vector-valued function <span class="math inline">\(\mathbf{F}=F_{1}\mathbf{i}+F_{2}\mathbf{j}+F_{3}\mathbf{k}\)</span> along <span class="math inline">\(\mathbf{c}\)</span> is given by</p>
+<p><a id="E38"></a> <span class="math display">\[
+\int_{\mathbf{c}}\mathbf{F}\cdot\,\mathrm{d}\mathbf{s}=\int^{b}_{a}\mathbf{F}(\mathbf{c}(t))\cdot\mathbf{c}^{\prime}(t)\,\mathrm{d}t=\int^{b}_{a}\left(F_{1}\frac{\mathrm{d}x}{\mathrm{d}t}+F_{2}\frac{\mathrm{d}y}{\mathrm{d}t}+F_{3}\frac{\mathrm{d}z}{\mathrm{d}t}\right)\,\mathrm{d}t=\int_{\mathbf{c}}F_{1}\,\mathrm{d}x+F_{2}\,\mathrm{d}y+F_{3}\,\mathrm{d}z. \tag{1.6.38}
+\]</span></p>
+<p>A path <span class="math inline">\(\mathbf{c}_{1}(t)\)</span> , <span class="math inline">\(t\in[a,b]\)</span> , is a <em>reparametrization</em> of <span class="math inline">\(\mathbf{c}(t^{\prime})\)</span> , <span class="math inline">\(t^{\prime}\in[a^{\prime},b^{\prime}]\)</span> , if <span class="math inline">\(\mathbf{c}_{1}(t)=\mathbf{c}(t^{\prime})\)</span> and <span class="math inline">\(t^{\prime}=h(t)\)</span> with <span class="math inline">\(h(t)\)</span> differentiable and monotonic. If <span class="math inline">\(h(a)=a^{\prime}\)</span> and <span class="math inline">\(h(b)=b^{\prime}\)</span> , then the reparametrization is called <em>orientation-preserving</em> , and</p>
+<p><a id="E39"></a> <span class="math display">\[
+\int_{\mathbf{c}}\mathbf{F}\cdot\,\mathrm{d}\mathbf{s}=\int_{\mathbf{c}_{1}}\mathbf{F}\cdot\,\mathrm{d}\mathbf{s}. \tag{1.6.39}
+\]</span></p>
+<p>If <span class="math inline">\(h(a)=b^{\prime}\)</span> and <span class="math inline">\(h(b)=a^{\prime}\)</span> , then the reparametrization is <em>orientation-reversing</em> and</p>
+<p><a id="E40"></a> <span class="math display">\[
+\int_{\mathbf{c}}\mathbf{F}\cdot\,\mathrm{d}\mathbf{s}=-\int_{\mathbf{c}_{1}}\mathbf{F}\cdot\,\mathrm{d}\mathbf{s}. \tag{1.6.40}
+\]</span></p>
+<p>In either case</p>
+<p><a id="E41"></a> <span class="math display">\[
+\int_{\mathbf{c}}f\,\mathrm{d}s=\int_{\mathbf{c}_{1}}f\,\mathrm{d}s, \tag{1.6.41}
+\]</span></p>
+<p>when <span class="math inline">\(f\)</span> is continuous, and</p>
+<p><a id="E42"></a> <span class="math display">\[
+\int_{\mathbf{c}}\nabla f\cdot\,\mathrm{d}\mathbf{s}=f(\mathbf{c}(b))-f(\mathbf{c}(a)), \tag{1.6.42}
+\]</span></p>
+<p>when <span class="math inline">\(f\)</span> is continuously differentiable.</p>
+<p>The geometrical image <span class="math inline">\(C\)</span> of a path <span class="math inline">\(\mathbf{c}\)</span> is called a <em>simple closed curve</em> if <span class="math inline">\(\mathbf{c}\)</span> is one-to-one, with the exception <span class="math inline">\(\mathbf{c}(a)=\mathbf{c}(b)\)</span> . The curve <span class="math inline">\(C\)</span> is <em>piecewise differentiable</em> if <span class="math inline">\(\mathbf{c}\)</span> is piecewise differentiable. Note that <span class="math inline">\(C\)</span> can be given an orientation by means of <span class="math inline">\(\mathbf{c}\)</span> .</p>
+<section id="greens-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="greens-theorem">Green’s Theorem</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Green%20theorem">Green’s theorem</a> , <a href="http://dlmf.nist.gov/search/search?q=Green%20theorem%20for%20vector-valued%20functions">Green’s theorem for vector-valued functions</a> , <a href="http://dlmf.nist.gov/search/search?q=functions">functions</a> , <a href="http://dlmf.nist.gov/search/search?q=two%20dimensions">two dimensions</a> , <a href="http://dlmf.nist.gov/search/search?q=vector-valued">vector-valued</a> , <a href="http://dlmf.nist.gov/search/search?q=vector-valued%20functions">vector-valued functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(iv) , §1.6 and Ch.1</p>
+</div>
+<p>Let</p>
+<p><a id="E43"></a> <span class="math display">\[
+\mathbf{F}(x,y)=F_{1}(x,y)\mathbf{i}+F_{2}(x,y)\mathbf{j} \tag{1.6.43}
+\]</span></p>
+<p>and <span class="math inline">\(S\)</span> be the closed and bounded point set in the <span class="math inline">\((x,y)\)</span> plane having a simple closed curve <span class="math inline">\(C\)</span> as boundary. If <span class="math inline">\(C\)</span> is oriented in the positive (anticlockwise) sense, then</p>
+<p><a id="E44"></a> <span class="math display">\[
+\iint_{S}\left(\frac{\partial F_{2}}{\partial x}-\frac{\partial F_{1}}{\partial y}\right)\,\mathrm{d}A=\int_{C}\mathbf{F}\cdot\,\mathrm{d}\mathbf{s}=\int_{C}F_{1}\,\mathrm{d}x+F_{2}\,\mathrm{d}y. \tag{1.6.44}
+\]</span></p>
+<p>Sufficient conditions for this result to hold are that <span class="math inline">\(F_{1}(x,y)\)</span> and <span class="math inline">\(F_{2}(x,y)\)</span> are continuously differentiable on <span class="math inline">\(S\)</span> , and <span class="math inline">\(C\)</span> is piecewise differentiable.</p>
+<p>The area of <span class="math inline">\(S\)</span> can be found from ( 1.6.44 ) by taking <span class="math inline">\(\mathbf{F}(x,y)=-y\mathbf{i}\)</span> , <span class="math inline">\(x\mathbf{j}\)</span> , or <span class="math inline">\(-\frac{1}{2}y\mathbf{i}+\frac{1}{2}x\mathbf{j}\)</span> .</p>
+</section>
+</section>
+<section id="v-surfaces-and-integrals-over-surfaces" class="level2">
+<h2 class="anchored" data-anchor-id="v-surfaces-and-integrals-over-surfaces">§1.6(v) Surfaces and Integrals over Surfaces</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=area">area</a> , <a href="http://dlmf.nist.gov/search/search?q=integral%20over">integral over</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=of%20revolution">of revolution</a> , <a href="http://dlmf.nist.gov/search/search?q=orientation">orientation</a> , <a href="http://dlmf.nist.gov/search/search?q=over%20parametrized%20surface">over parametrized surface</a> , <a href="http://dlmf.nist.gov/search/search?q=parametrized%20surfaces">parametrized surfaces</a> , <a href="http://dlmf.nist.gov/search/search?q=smooth">smooth</a> , <a href="http://dlmf.nist.gov/search/search?q=sphere">sphere</a> , <a href="http://dlmf.nist.gov/search/search?q=surface">surface</a> , <a href="http://dlmf.nist.gov/search/search?q=tangent%20vector">tangent vector</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Marsden and Tromba (<a href="./bib/M.html#bib1554" title="Vector Calculus">1996</a>, pp.&nbsp;421–459, 485, 506).</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.6(iv) , Erratum (V1.2.1) for Subsection 1.6(v)</p>
+<p><strong>Modification (effective with 1.2.1):</strong></p>
+<p>Just above ( 1.6.57 ) “clockwise” has been replaced with “anticlockwise”. <em>Suggested 2024-04-10 by Denys Bondar</em></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6 and Ch.1</p>
+</div>
+<p>A <em>parametrized surface</em> <span class="math inline">\(S\)</span> is defined by</p>
+<p><a id="E45"></a> <span class="math display">\[
+\boldsymbol{{\Phi}}(u,v)=(x(u,v),y(u,v),z(u,v)) \tag{1.6.45}
+\]</span></p>
+<p>with <span class="math inline">\((u,v)\in D\)</span> , an open set in the plane.</p>
+<p>For <span class="math inline">\(x\)</span> , <span class="math inline">\(y\)</span> , and <span class="math inline">\(z\)</span> continuously differentiable, the vectors</p>
+<p><a id="E46"></a> <span class="math display">\[
+\mathbf{T}_{u}=\frac{\partial x}{\partial u}(u_{0},v_{0})\mathbf{i}+\frac{\partial y}{\partial u}(u_{0},v_{0})\mathbf{j}+\frac{\partial z}{\partial u}(u_{0},v_{0})\mathbf{k} \tag{1.6.46}
+\]</span></p>
+<p>and</p>
+<p><a id="E47"></a> <span class="math display">\[
+\mathbf{T}_{v}=\frac{\partial x}{\partial v}(u_{0},v_{0})\mathbf{i}+\frac{\partial y}{\partial v}(u_{0},v_{0})\mathbf{j}+\frac{\partial z}{\partial v}(u_{0},v_{0})\mathbf{k} \tag{1.6.47}
+\]</span></p>
+<p>are tangent to the surface at <span class="math inline">\(\boldsymbol{{\Phi}}(u_{0},v_{0})\)</span> . The surface is <em>smooth</em> at this point if <span class="math inline">\(\mathbf{T}_{u}\times\mathbf{T}_{v}\not=0\)</span> . A surface is <em>smooth</em> if it is smooth at every point. The vector <span class="math inline">\(\mathbf{T}_{u}\times\mathbf{T}_{v}\)</span> at <span class="math inline">\((u_{0},v_{0})\)</span> is normal to the surface at <span class="math inline">\(\boldsymbol{{\Phi}}(u_{0},v_{0})\)</span> .</p>
+<p>The <em>area</em> <span class="math inline">\(A(S)\)</span> of a parametrized smooth surface is given by</p>
+<p><a id="E48"></a> <span class="math display">\[
+A(S)=\iint_{D}\left\|{\mathbf{T}_{u}\times\mathbf{T}_{v}}\right\|\,\mathrm{d}u\,\mathrm{d}v, \tag{1.6.48}
+\]</span></p>
+<p>and</p>
+<p><a id="E49"></a> <span class="math display">\[
+\left\|{\mathbf{T}_{u}\times\mathbf{T}_{v}}\right\|=\sqrt{\left(\frac{\partial(x,y)}{\partial(u,v)}\right)^{2}+\left(\frac{\partial(y,z)}{\partial(u,v)}\right)^{2}+\left(\frac{\partial(x,z)}{\partial(u,v)}\right)^{2}}. \tag{1.6.49}
+\]</span></p>
+<p>The area is independent of the parametrizations.</p>
+<p>For a sphere <span class="math inline">\(x=\rho\sin\theta\cos\phi\)</span> , <span class="math inline">\(y=\rho\sin\theta\sin\phi\)</span> , <span class="math inline">\(z=\rho\cos\theta\)</span> ,</p>
+<p><a id="E50"></a> <span class="math display">\[
+\left\|{\mathbf{T}_{\theta}\times\mathbf{T}_{\phi}}\right\|=\rho^{2}\left|\sin\theta\right|. \tag{1.6.50}
+\]</span></p>
+<p>For a surface <span class="math inline">\(z=f(x,y)\)</span> ,</p>
+<p><a id="E51"></a> <span class="math display">\[
+A(S)=\iint_{D}\sqrt{1+\left(\frac{\partial f}{\partial x}\right)^{2}+\left(\frac{\partial f}{\partial y}\right)^{2}}\,\mathrm{d}A. \tag{1.6.51}
+\]</span></p>
+<p>For a surface of revolution, <span class="math inline">\(y=f(x)\)</span> , <span class="math inline">\(x\in[a,b]\)</span> , about the <span class="math inline">\(x\)</span> -axis,</p>
+<p><a id="E52"></a> <span class="math display">\[
+A(S)=2\pi\int^{b}_{a}\left|f(x)\right|\sqrt{1+(f^{\prime}(x))^{2}}\,\mathrm{d}x, \tag{1.6.52}
+\]</span></p>
+<p>and about the <span class="math inline">\(y\)</span> -axis,</p>
+<p><a id="E53"></a> <span class="math display">\[
+A(S)=2\pi\int^{b}_{a}\left|x\right|\sqrt{1+(f^{\prime}(x))^{2}}\,\mathrm{d}x. \tag{1.6.53}
+\]</span></p>
+<p>The integral of a continuous function <span class="math inline">\(f(x,y,z)\)</span> over a surface <span class="math inline">\(S\)</span> is</p>
+<p><a id="E54"></a> <span class="math display">\[
+\iint_{S}f(x,y,z)\,\mathrm{d}S=\iint_{D}f(\boldsymbol{{\Phi}}(u,v))\left\|{\mathbf{T}_{u}\times\mathbf{T}_{v}}\right\|\,\mathrm{d}u\,\mathrm{d}v. \tag{1.6.54}
+\]</span></p>
+<p>For a vector-valued function <span class="math inline">\(\mathbf{F}\)</span> ,</p>
+<p><a id="E55"></a> <span class="math display">\[
+\iint_{S}\mathbf{F}\cdot\,\mathrm{d}\mathbf{S}=\iint_{D}\mathbf{F}\cdot(\mathbf{T}_{u}\times\mathbf{T}_{v})\,\mathrm{d}u\,\mathrm{d}v, \tag{1.6.55}
+\]</span></p>
+<p>where <span class="math inline">\(\,\mathrm{d}\mathbf{S}\)</span> is the surface element with an attached normal direction <span class="math inline">\(\mathbf{T}_{u}\times\mathbf{T}_{v}\)</span> .</p>
+<p>A surface is <em>orientable</em> if a continuously varying normal can be defined at all points of the surface. An orientable surface is <em>oriented</em> if suitable normals have been chosen. A parametrization <span class="math inline">\(\boldsymbol{{\Phi}}(u,v)\)</span> of an oriented surface <span class="math inline">\(S\)</span> is <em>orientation preserving</em> if <span class="math inline">\(\mathbf{T}_{u}\times\mathbf{T}_{v}\)</span> has the same direction as the chosen normal at each point of <span class="math inline">\(S\)</span> , otherwise it is <em>orientation reversing</em> .</p>
+<p>If <span class="math inline">\(\boldsymbol{{\Phi}}_{1}\)</span> and <span class="math inline">\(\boldsymbol{{\Phi}}_{2}\)</span> are both orientation preserving or both orientation reversing parametrizations of <span class="math inline">\(S\)</span> defined on open sets <span class="math inline">\(D_{1}\)</span> and <span class="math inline">\(D_{2}\)</span> respectively, then</p>
+<p><a id="E56"></a> <span class="math display">\[
+\iint_{\boldsymbol{{\Phi}}_{1}(D_{1})}\mathbf{F}\cdot\,\mathrm{d}\mathbf{S}=\iint_{\boldsymbol{{\Phi}}_{2}(D_{2})}\mathbf{F}\cdot\,\mathrm{d}\mathbf{S}; \tag{1.6.56}
+\]</span></p>
+<p>otherwise, one is the negative of the other.</p>
+<section id="stokess-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="stokess-theorem">Stokes’s Theorem</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Stokes%E2%80%99%20theorem">Stokes’ theorem</a> , <a href="http://dlmf.nist.gov/search/search?q=Stokes%E2%80%99%20theorem%20for%20vector-valued%20functions">Stokes’ theorem for vector-valued functions</a> , <a href="http://dlmf.nist.gov/search/search?q=vector-valued%20functions">vector-valued functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(v) , §1.6 and Ch.1</p>
+</div>
+<p>Suppose <span class="math inline">\(S\)</span> is an oriented surface with boundary <span class="math inline">\(\,\partial S\)</span> which is oriented so that its direction is anticlockwise relative to the normals of <span class="math inline">\(S\)</span> . Then</p>
+<p><a id="E57"></a> <span class="math display">\[
+\iint_{S}(\nabla\times\mathbf{F})\cdot\,\mathrm{d}\mathbf{S}=\int_{\,\partial S}\mathbf{F}\cdot\,\mathrm{d}\mathbf{s}, \tag{1.6.57}
+\]</span></p>
+<p>when <span class="math inline">\(\mathbf{F}\)</span> is a continuously differentiable vector-valued function.</p>
+</section>
+<section id="gausss-or-divergence-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="gausss-or-divergence-theorem">Gauss’s (or Divergence) Theorem</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Gauss%20theorem%20for%20vector-valued%20functions">Gauss’s theorem for vector-valued functions</a> , <a href="http://dlmf.nist.gov/search/search?q=divergence%20%28or%20Gauss%29%20theorem">divergence (or Gauss’s) theorem</a> , <a href="http://dlmf.nist.gov/search/search?q=divergence%20theorem">divergence theorem</a> , <a href="http://dlmf.nist.gov/search/search?q=vector-valued%20functions">vector-valued functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(v) , §1.6 and Ch.1</p>
+</div>
+<p>Suppose <span class="math inline">\(S\)</span> is a piecewise smooth surface which forms the complete boundary of a bounded closed point set <span class="math inline">\(V\)</span> , and <span class="math inline">\(S\)</span> is oriented by its normal being outwards from <span class="math inline">\(V\)</span> . Then</p>
+<p><a id="E58"></a> <span class="math display">\[
+\iiint_{V}(\nabla\cdot\mathbf{F})\,\mathrm{d}V=\iint_{S}\mathbf{F}\cdot\,\mathrm{d}\mathbf{S}, \tag{1.6.58}
+\]</span></p>
+<p>when <span class="math inline">\(\mathbf{F}\)</span> is a continuously differentiable vector-valued function.</p>
+</section>
+<section id="greens-theorem-for-volume" class="level3">
+<h3 class="anchored" data-anchor-id="greens-theorem-for-volume">Green’s Theorem (for Volume)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Green%20theorem">Green’s theorem</a> , <a href="http://dlmf.nist.gov/search/search?q=Green%20theorem%20for%20vector-valued%20functions">Green’s theorem for vector-valued functions</a> , <a href="http://dlmf.nist.gov/search/search?q=three%20dimensions">three dimensions</a> , <a href="http://dlmf.nist.gov/search/search?q=vector-valued%20functions">vector-valued functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.6(v) , §1.6 and Ch.1</p>
+</div>
+<p>For <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> twice-continuously differentiable functions</p>
+<p><a id="E59"></a> <span class="math display">\[
+\iiint_{V}(f\nabla^{2}g+\nabla f\cdot\nabla g)\,\mathrm{d}V=\iint_{S}f\frac{\partial g}{\partial n}\,\mathrm{d}A, \tag{1.6.59}
+\]</span></p>
+<p>and</p>
+<p><a id="E60"></a> <span class="math display">\[
+\iiint_{V}(f\nabla^{2}g-g\nabla^{2}f)\,\mathrm{d}V=\iint_{S}\left(f\frac{\partial g}{\partial n}-g\frac{\partial f}{\partial n}\right)\,\mathrm{d}A, \tag{1.6.60}
+\]</span></p>
+<p>where <span class="math inline">\(\frac{\partial g}{\partial n}=\nabla g\cdot\mathbf{n}\)</span> is the derivative of <span class="math inline">\(g\)</span> normal to the surface outwards from <span class="math inline">\(V\)</span> and <span class="math inline">\(\mathbf{n}\)</span> is the unit outer normal vector.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nerudev\.github\.io\/Polaris-Kernel\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

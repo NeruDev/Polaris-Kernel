@@ -1,12 +1,13 @@
 ---
-id: "34M55"
+id: "msc00_37_trascendentes_painleve"
 title: "Trascendentes Painleve"
 pilar: "03_analisis_continuidad"
-msc_code: "34M55, 33E30"
+msc_code: "34M-55"
 difficulty: "abstracto"
 tags:
-  - 34M55
-  - 33E30
+  - "34M55"
+  - "33E30"
+status: "draft"
 ---
 
 # Trascendentes Painleve

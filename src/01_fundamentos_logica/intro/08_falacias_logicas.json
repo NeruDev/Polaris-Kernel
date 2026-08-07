@@ -7,5 +7,8 @@
         "argumentacion",
         "razonamiento"
     ],
-    "id": "msc03_falacias_logicas"
+    "id": "msc03_falacias_logicas",
+    "pilar": "01_fundamentos_logica",
+    "status": "draft",
+    "msc_code": "00-00"
 }

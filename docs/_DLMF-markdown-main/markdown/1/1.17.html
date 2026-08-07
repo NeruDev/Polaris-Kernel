@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto-input697108902e5e9b25 – Polaris Kernel</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-e8a923774aa70043a31c64adf822e8b4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Polaris Kernel
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../../">Polaris Kernel</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">01 Fundamentos Logica</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_aritmetica_propiedades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_sistemas_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/02_logica_matematica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/03_teoria_conjuntos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/04_metodos_demostracion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/05_relaciones_equivalencia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/06_funciones_y_mapeos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/07_logica_predicados_inferencia.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">02 Estructuras Algebraicas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/01_algebra_elemental.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/02_algebra_lineal.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/03_algebra_abstracta.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/05_teoria_de_matrices.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/06_ecuaciones_y_desigualdades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/07_polinomios_y_factorizacion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/08_espacios_vectoriales_bases.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">03 Analisis Continuidad</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/01_funciones_y_limites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/02_calculo_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/03_calculo_integral.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/04_calculo_multivariable.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/05_ecuaciones_diferenciales.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/06_analisis_avanzado.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/07_analisis_funcional.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/08_sucesiones_y_series.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">04 Espacio Forma</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/01_geometria_euclidiana.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/02_trigonometria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/03_geometria_analitica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/04_topologia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/05_geometria_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/06_geometria_no_euclidiana.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">05 Discrecion Computacion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/01_combinatoria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/02_teoria_de_grafos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/03_teoria_de_numeros.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/04_metodos_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/05_teoria_automatas.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">06 Estocastica Incertidumbre</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/01_estadistica_descriptiva.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/02_teoria_de_probabilidad.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/03_estadistica_inferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/04_modelos_estocasticos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/05_teoria_informacion.qmd</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#integral-and-series-representations-of-the-dirac-delta" id="toc-integral-and-series-representations-of-the-dirac-delta" class="nav-link active" data-scroll-target="#integral-and-series-representations-of-the-dirac-delta">§1.17 Integral and Series Representations of the Dirac Delta</a>
+  <ul class="collapse">
+  <li><a href="#i-delta-sequences" id="toc-i-delta-sequences" class="nav-link" data-scroll-target="#i-delta-sequences">§1.17(i) Delta Sequences</a></li>
+  <li><a href="#ii-integral-representations" id="toc-ii-integral-representations" class="nav-link" data-scroll-target="#ii-integral-representations">§1.17(ii) Integral Representations</a>
+  <ul class="collapse">
+  <li><a href="#sine-and-cosine-functions" id="toc-sine-and-cosine-functions" class="nav-link" data-scroll-target="#sine-and-cosine-functions">Sine and Cosine Functions</a></li>
+  <li><a href="#bessel-functions-and-spherical-bessel-functions10.2ii-10.47ii" id="toc-bessel-functions-and-spherical-bessel-functions10.2ii-10.47ii" class="nav-link" data-scroll-target="#bessel-functions-and-spherical-bessel-functions10.2ii-10.47ii">Bessel Functions and Spherical Bessel Functions(§§10.2(ii), 10.47(ii))</a></li>
+  <li><a href="#coulomb-functions-33.14iv" id="toc-coulomb-functions-33.14iv" class="nav-link" data-scroll-target="#coulomb-functions-33.14iv">Coulomb Functions (§33.14(iv))</a></li>
+  <li><a href="#airy-functions-9.2" id="toc-airy-functions-9.2" class="nav-link" data-scroll-target="#airy-functions-9.2">Airy Functions (§9.2)</a></li>
+  </ul></li>
+  <li><a href="#iii-series-representations" id="toc-iii-series-representations" class="nav-link" data-scroll-target="#iii-series-representations">§1.17(iii) Series Representations</a>
+  <ul class="collapse">
+  <li><a href="#legendre-polynomials-14.7i-and-18.3" id="toc-legendre-polynomials-14.7i-and-18.3" class="nav-link" data-scroll-target="#legendre-polynomials-14.7i-and-18.3">Legendre Polynomials (§§14.7(i) and 18.3)</a></li>
+  <li><a href="#laguerre-polynomials-18.3" id="toc-laguerre-polynomials-18.3" class="nav-link" data-scroll-target="#laguerre-polynomials-18.3">Laguerre Polynomials (§18.3)</a></li>
+  <li><a href="#hermite-polynomials-18.3" id="toc-hermite-polynomials-18.3" class="nav-link" data-scroll-target="#hermite-polynomials-18.3">Hermite Polynomials (§18.3)</a></li>
+  <li><a href="#spherical-harmonics-14.30" id="toc-spherical-harmonics-14.30" class="nav-link" data-scroll-target="#spherical-harmonics-14.30">Spherical Harmonics (§14.30)</a></li>
+  </ul></li>
+  <li><a href="#iv-mathematical-definitions" id="toc-iv-mathematical-definitions" class="nav-link" data-scroll-target="#iv-mathematical-definitions">§1.17(iv) Mathematical Definitions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="integral-and-series-representations-of-the-dirac-delta" class="level1">
+<h1>§1.17 Integral and Series Representations of the Dirac Delta</h1>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta%20function">Dirac delta function</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.18(ii) , §1.4(v) , Ch.1 , §18.1(i) , §20.13 , §33.1 , §33.14(iv) , Erratum (V1.2.0) §1.17 , Methodology</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for Ch.1</p>
+</div>
+<section id="i-delta-sequences" class="level2">
+<h2 class="anchored" data-anchor-id="i-delta-sequences">§1.17(i) Delta Sequences</h2>
+<div class="{note}">
+<p><strong>Defines:</strong></p>
+<p><span class="math inline">\(\delta\left(x-a\right)\)</span> : Dirac delta (or Dirac delta function) and <span class="math inline">\(\delta_{n}\left(x\right)\)</span> : Dirac delta sequence</p>
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=delta%20sequence">delta sequence</a> , <a href="http://dlmf.nist.gov/search/search?q=delta%20sequences">delta sequences</a></p>
+<p><strong>Notes:</strong></p>
+<p>( 1.17.6 ) is a special case of Theorem 7.1 of Olver (<a href="./bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, Chapter 3) when <span class="math inline">\(\phi(a)\neq 0\)</span> . This theorem also extends straightforwardly to cover <span class="math inline">\(\phi(a)=0\)</span> . ( 1.17.7 ) is proved in a similar manner.</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.16(iii) , §1.16(iii)</p>
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>In the first sentence, a reference to Friedman (<a href="./bib/F.html#bib2969" title="Principles and Techniques of Applied Mathematics">1990</a>) was added.</p>
+<p><strong>Modification (effective with 1.2.0):</strong></p>
+<p>Immediately above ( 1.17.1 ) “operator” was replaced with “symbolic function”.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17 and Ch.1</p>
+</div>
+<p>In applications in physics, engineering, and applied mathematics, (see Friedman (<a href="./bib/F.html#bib2969" title="Principles and Techniques of Applied Mathematics">1990</a>)), the Dirac delta distribution (§ 1.16(iii) ) is historically and customarily replaced by the <em>Dirac delta</em> (or <em>Dirac delta function</em> ) <span class="math inline">\(\delta\left(x\right)\)</span> . This is a <em>symbolic</em> function with the properties:</p>
+<p><a id="E1"></a> <span class="math display">\[
+\delta\left(x\right)=0, \tag{1.17.1}
+\]</span></p>
+<p>and</p>
+<p><a id="E2"></a> <span class="math display">\[
+\int_{-\infty}^{\infty}\delta\left(x-a\right)\phi(x)\,\mathrm{d}x=\phi(a), \tag{1.17.2}
+\]</span></p>
+<p>subject to certain conditions on the function <span class="math inline">\(\phi(x)\)</span> . From the mathematical standpoint the left-hand side of ( 1.17.2 ) can be interpreted as a generalized integral in the sense that</p>
+<p><a id="E3"></a> <span class="math display">\[
+\lim_{n\to\infty}\int_{-\infty}^{\infty}\delta_{n}\left(x-a\right)\phi(x)\,\mathrm{d}x=\phi(a), \tag{1.17.3}
+\]</span></p>
+<p>for a suitably chosen sequence of functions <span class="math inline">\(\delta_{n}\left(x\right)\)</span> , <span class="math inline">\(n=1,2,\dots\)</span> . Such a sequence is called a <em>delta sequence</em> and we write, symbolically,</p>
+<p><a id="E4"></a> <span class="math display">\[
+\lim_{n\to\infty}\delta_{n}\left(x\right)=\delta\left(x\right), \tag{1.17.4}
+\]</span></p>
+<p>An example of a delta sequence is provided by</p>
+<p><a id="E5"></a> <span class="math display">\[
+\delta_{n}\left(x-a\right)=\sqrt{\frac{n}{\pi}}{\mathrm{e}}^{-n(x-a)^{2}}. \tag{1.17.5}
+\]</span></p>
+<p>In this case</p>
+<p><a id="E6"></a> <span class="math display">\[
+\lim_{n\to\infty}\sqrt{\frac{n}{\pi}}\int_{-\infty}^{\infty}{\mathrm{e}}^{-n(x-a)^{2}}\phi(x)\,\mathrm{d}x=\phi(a), \tag{1.17.6}
+\]</span></p>
+<p>for all functions <span class="math inline">\(\phi(x)\)</span> that are continuous when <span class="math inline">\(x\in(-\infty,\infty)\)</span> , and for each <span class="math inline">\(a\)</span> , <span class="math inline">\(\int_{-\infty}^{\infty}{\mathrm{e}}^{-n(x-a)^{2}}\phi(x)\,\mathrm{d}x\)</span> converges absolutely for all sufficiently large values of <span class="math inline">\(n\)</span> . The last condition is satisfied, for example, when <span class="math inline">\(\phi(x)=O\left({\mathrm{e}}^{\alpha x^{2}}\right)\)</span> as <span class="math inline">\(x\to\pm\infty\)</span> , where <span class="math inline">\(\alpha\)</span> is a real constant.</p>
+<p>More generally, assume <span class="math inline">\(\phi(x)\)</span> is piecewise continuous (§ 1.4(ii) ) when <span class="math inline">\(x\in[-c,c]\)</span> for any finite positive real value of <span class="math inline">\(c\)</span> , and for each <span class="math inline">\(a\)</span> , <span class="math inline">\(\int_{-\infty}^{\infty}{\mathrm{e}}^{-n(x-a)^{2}}\phi(x)\,\mathrm{d}x\)</span> converges absolutely for all sufficiently large values of <span class="math inline">\(n\)</span> . Then</p>
+<p><a id="E7"></a> <span class="math display">\[
+\lim_{n\to\infty}\sqrt{\frac{n}{\pi}}\int_{-\infty}^{\infty}{\mathrm{e}}^{-n(x-a)^{2}}\phi(x)\,\mathrm{d}x=\tfrac{1}{2}\phi(a-)+\tfrac{1}{2}\phi(a+). \tag{1.17.7}
+\]</span></p>
+</section>
+<section id="ii-integral-representations" class="level2">
+<h2 class="anchored" data-anchor-id="ii-integral-representations">§1.17(ii) Integral Representations</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=Fourier">Fourier</a> , <a href="http://dlmf.nist.gov/search/search?q=Fourier%20integral">Fourier integral</a> , <a href="http://dlmf.nist.gov/search/search?q=Fourier%20series">Fourier series</a> , <a href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a></p>
+<p><strong>Notes:</strong></p>
+<p>For ( 1.17.10 ) complete the square in the total power of <span class="math inline">\(\mathrm{e}\)</span> , make the change of variable <span class="math inline">\(\tau=(t/(2\sqrt{n}))-\mathrm{i}(x-a)\sqrt{n}\)</span> , and use <span class="math inline">\(\int_{-\infty}^{\infty}{\mathrm{e}}^{-\tau^{2}}\,\mathrm{d}\tau=\sqrt{\pi}\)</span> .</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.17(iii) , §1.17(iv) , §1.17(iv) , §10.22(iv) , §10.59 , §9.11(iii) , Erratum (V1.2.0) §1.17</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17 and Ch.1</p>
+</div>
+<p>Formal interchange of the order of integration in the Fourier integral formula (( 1.14.1 ) and ( 1.14.4 )):</p>
+<p><a id="E8"></a> <span class="math display">\[
+\frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathrm{e}}^{-\mathrm{i}at}\left(\int_{-\infty}^{\infty}\phi(x){\mathrm{e}}^{\mathrm{i}tx}\,\mathrm{d}x\right)\,\mathrm{d}t=\phi(a) \tag{1.17.8}
+\]</span></p>
+<p>yields</p>
+<p><a id="E9"></a> <span class="math display">\[
+\int_{-\infty}^{\infty}\left(\frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathrm{e}}^{\mathrm{i}(x-a)t}\,\mathrm{d}t\right)\phi(x)\,\mathrm{d}x=\phi(a). \tag{1.17.9}
+\]</span></p>
+<p>The inner integral does not converge. However, for <span class="math inline">\(n=1,2,\dots\)</span> ,</p>
+<p><a id="E10"></a> <span class="math display">\[
+\frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathrm{e}}^{-t^{2}/(4n)}{\mathrm{e}}^{\mathrm{i}(x-a)t}\,\mathrm{d}t=\sqrt{\frac{n}{\pi}}{\mathrm{e}}^{-n(x-a)^{2}}. \tag{1.17.10}
+\]</span></p>
+<p>Hence comparison with ( 1.17.5 ) shows that ( 1.17.9 ) can be interpreted as a generalized integral ( 1.17.3 ) with</p>
+<p><a id="E11"></a> <span class="math display">\[
+\delta_{n}\left(x-a\right)=\frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathrm{e}}^{-t^{2}/(4n)}{\mathrm{e}}^{\mathrm{i}(x-a)t}\,\mathrm{d}t, \tag{1.17.11}
+\]</span></p>
+<p>provided that <span class="math inline">\(\phi(x)\)</span> is continuous when <span class="math inline">\(x\in(-\infty,\infty)\)</span> , and for each <span class="math inline">\(a\)</span> , <span class="math inline">\(\int_{-\infty}^{\infty}{\mathrm{e}}^{-n(x-a)^{2}}\phi(x)\,\mathrm{d}x\)</span> converges absolutely for all sufficiently large values of <span class="math inline">\(n\)</span> (as in the case of ( 1.17.6 )). Then comparison of ( 1.17.2 ) and ( 1.17.9 ) yields the formal integral representation</p>
+<p><a id="E12"></a> <span class="math display">\[
+\delta\left(x-a\right)=\frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathrm{e}}^{\mathrm{i}(x-a)t}\,\mathrm{d}t. \tag{1.17.12}
+\]</span></p>
+<p>Other similar integral representations of the Dirac delta that appear in the physics and applied mathematics literature include the following:</p>
+<section id="sine-and-cosine-functions" class="level3">
+<h3 class="anchored" data-anchor-id="sine-and-cosine-functions">Sine and Cosine Functions</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Cosines">Cosines</a> , <a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=Sines">Sines</a> , <a href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a></p>
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>This paragraph including ( 1.17.12_1 ), ( 1.17.12_2 ) were added.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17(ii) , §1.17 and Ch.1</p>
+</div>
+<p><a id="E12_1"></a> <span class="math display">\[
+\delta\left(x-a\right)=\frac{2}{\pi}\int_{0}^{\infty}\cos\left(xt\right)\cos\left(at\right)\,\mathrm{d}t, \tag{1.17.12_1}
+\]</span></p>
+<p><a id="E12_2"></a> <span class="math display">\[
+\delta\left(x-a\right)=\frac{2}{\pi}\int_{0}^{\infty}\sin\left(xt\right)\sin\left(at\right)\,\mathrm{d}t, \tag{1.17.12_2}
+\]</span></p>
+<p>Integral representation ( 1.17.12_1 ), ( 1.17.12_2 ) is the equivalent of the transform pairs, ( 1.14.9 ) <span class="math inline">\(\&amp;\)</span> ( 1.14.11 ), ( 1.14.10 ) <span class="math inline">\(\&amp;\)</span> ( 1.14.12 ), respectively. See Friedman (<a href="./bib/F.html#bib2969" title="Principles and Techniques of Applied Mathematics">1990</a>, p.&nbsp;250).</p>
+</section>
+<section id="bessel-functions-and-spherical-bessel-functions10.2ii-10.47ii" class="level3">
+<h3 class="anchored" data-anchor-id="bessel-functions-and-spherical-bessel-functions10.2ii-10.47ii">Bessel Functions and Spherical Bessel Functions(§§10.2(ii), 10.47(ii))</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Bessel%20functions">Bessel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a> , <a href="http://dlmf.nist.gov/search/search?q=spherical%20Bessel%20functions">spherical Bessel functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17(ii) , §1.17 and Ch.1</p>
+</div>
+<p><a id="E13"></a> <span class="math display">\[
+\delta\left(x-a\right)=x\int_{0}^{\infty}tJ_{\nu}\left(xt\right)J_{\nu}\left(at\right)\,\mathrm{d}t, \tag{1.17.13}
+\]</span></p>
+<p><a id="E14"></a> <span class="math display">\[
+\delta\left(x-a\right)=\frac{2xa}{\pi}\int_{0}^{\infty}t^{2}\mathsf{j}_{\ell}\left(xt\right)\mathsf{j}_{\ell}\left(at\right)\,\mathrm{d}t, \tag{1.17.14}
+\]</span></p>
+<p>See Arfken and Weber (<a href="./bib/index.html#bib129" title="Mathematical Methods for Physicists">2005</a>, Eq. (11.59)) and Konopinski (<a href="./bib/K.html#bib1321" title="Electromagnetic Fields and Relativistic Particles">1981</a>, p.&nbsp;242). For a generalization of ( 1.17.14 ) see Maximon (<a href="./bib/M.html#bib1570" title="On the evaluation of the integral over the product of two spherical Bessel functions">1991</a>).</p>
+</section>
+<section id="coulomb-functions-33.14iv" class="level3">
+<h3 class="anchored" data-anchor-id="coulomb-functions-33.14iv">Coulomb Functions (§33.14(iv))</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Coulomb%20functions">Coulomb functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17(ii) , §1.17 and Ch.1</p>
+</div>
+<p><a id="E15"></a> <span class="math display">\[
+\delta\left(x-a\right)=\int_{0}^{\infty}s\left(x,\ell;r\right)s\left(a,\ell;r\right)\,\mathrm{d}r, \tag{1.17.15}
+\]</span></p>
+<p>See Seaton (<a href="./bib/S.html#bib2034" title="Coulomb functions for attractive and repulsive potentials and for positive and negative energies">2002a</a>).</p>
+</section>
+<section id="airy-functions-9.2" class="level3">
+<h3 class="anchored" data-anchor-id="airy-functions-9.2">Airy Functions (§9.2)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Airy%20functions">Airy functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a></p>
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>Three sentences were added at the end of this paragraph.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17(ii) , §1.17 and Ch.1</p>
+</div>
+<p><a id="E16"></a> <span class="math display">\[
+\delta\left(x-a\right)=\int_{-\infty}^{\infty}\operatorname{Ai}\left(t-x\right)\operatorname{Ai}\left(t-a\right)\,\mathrm{d}t. \tag{1.17.16}
+\]</span></p>
+<p>See Vallée and Soares (<a href="./bib/V.html#bib2303" title="Airy Functions and Applications to Physics">2010</a>, §3.5.3).</p>
+<p>In the language of physics and applied mathematics, these equations indicate the normalizations chosen for these <em>non-<span class="math inline">\(L^{2}\)</span> improper eigenfunctions</em> of the differential operators (with derivatives respect to spatial co-ordinates) which generate them; the normalizations ( 1.17.12_1 ) and ( 1.17.12_2 ) are explicitly derived in Friedman (<a href="./bib/F.html#bib2969" title="Principles and Techniques of Applied Mathematics">1990</a>, Ch. 4), the others follow similarly. Equations ( 1.17.12_1 ) through ( 1.17.16 ) may re-interpreted as spectral representations of completeness relations, expressed in terms of Dirac delta distributions, as discussed in § 1.18(v) , and § 1.18(vi) Further mathematical underpinnings are referenced in § 1.17(iv) .</p>
+</section>
+</section>
+<section id="iii-series-representations" class="level2">
+<h2 class="anchored" data-anchor-id="iii-series-representations">§1.17(iii) Series Representations</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=Fourier">Fourier</a> , <a href="http://dlmf.nist.gov/search/search?q=series%20representations">series representations</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.17(iv) , §1.17(iv) , §14.30(iii) , Erratum (V1.0.19) for Notation , Erratum (V1.2.1) for §1.17(iii)</p>
+<p><strong>Clarification (effective with 1.2.1):</strong></p>
+<p>Just above ( 1.17.21 ), “formal” has been replaced with “formal ( <span class="math inline">\(2\pi\)</span> -periodic)”. <em>Suggested 2023-08-23 by Scott Glancy</em></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17 and Ch.1</p>
+</div>
+<p>Formal interchange of the order of summation and integration in the Fourier summation formula (( 1.8.3 ) and ( 1.8.4 )):</p>
+<p><a id="E17"></a> <span class="math display">\[
+\frac{1}{2\pi}\sum_{k=-\infty}^{\infty}{\mathrm{e}}^{-\mathrm{i}ka}\left(\int_{-\pi}^{\pi}\phi(x){\mathrm{e}}^{\mathrm{i}kx}\,\mathrm{d}x\right)=\phi(a), \tag{1.17.17}
+\]</span></p>
+<p>yields</p>
+<p><a id="E18"></a> <span class="math display">\[
+\int_{-\pi}^{\pi}\phi(x)\left(\frac{1}{2\pi}\sum_{k=-\infty}^{\infty}{\mathrm{e}}^{\mathrm{i}k(x-a)}\right)\,\mathrm{d}x=\phi(a). \tag{1.17.18}
+\]</span></p>
+<p>The sum <span class="math inline">\(\sum_{k=-\infty}^{\infty}{\mathrm{e}}^{\mathrm{i}k(x-a)}\)</span> does not converge, but ( 1.17.18 ) can be interpreted as a generalized integral in the sense that</p>
+<p><a id="E19"></a> <span class="math display">\[
+\lim_{n\to\infty}\int_{-\pi}^{\pi}\delta_{n}\left(x-a\right)\phi(x)\,\mathrm{d}x=\phi(a), \tag{1.17.19}
+\]</span></p>
+<p>where</p>
+<p><a id="E20"></a> <span class="math display">\[
+\delta_{n}\left(x-a\right)=\frac{1}{2\pi}\sum_{k=-n}^{n}{\mathrm{e}}^{\mathrm{i}k(x-a)}\left(=\frac{\sin\left((n+\frac{1}{2})(x-a)\right)}{2\pi\sin\left(\frac{1}{2}(x-a)\right)}\right), \tag{1.17.20}
+\]</span></p>
+<p>provided that <span class="math inline">\(\phi(x)\)</span> is continuous and of period <span class="math inline">\(2\pi\)</span> ; see § 1.8(ii) .</p>
+<p>By analogy with § 1.17(ii) we have the formal ( <span class="math inline">\(2\pi\)</span> -periodic) series representation</p>
+<p><a id="E21"></a> <span class="math display">\[
+\delta\left(x-a\right)=\frac{1}{2\pi}\sum_{k=-\infty}^{\infty}{\mathrm{e}}^{\mathrm{i}k(x-a)}. \tag{1.17.21}
+\]</span></p>
+<p>Other similar series representations of the Dirac delta that appear in the physics literature include the following:</p>
+<section id="legendre-polynomials-14.7i-and-18.3" class="level3">
+<h3 class="anchored" data-anchor-id="legendre-polynomials-14.7i-and-18.3">Legendre Polynomials (§§14.7(i) and 18.3)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=Legendre%20polynomials">Legendre polynomials</a> , <a href="http://dlmf.nist.gov/search/search?q=series%20representations">series representations</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17(iii) , §1.17 and Ch.1</p>
+</div>
+<p><a id="E22"></a> <span class="math display">\[
+\delta\left(x-a\right)=\sum_{k=0}^{\infty}(k+\tfrac{1}{2})P_{k}\left(x\right)P_{k}\left(a\right). \tag{1.17.22}
+\]</span></p>
+</section>
+<section id="laguerre-polynomials-18.3" class="level3">
+<h3 class="anchored" data-anchor-id="laguerre-polynomials-18.3">Laguerre Polynomials (§18.3)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=Laguerre%20polynomials">Laguerre polynomials</a> , <a href="http://dlmf.nist.gov/search/search?q=series%20representations">series representations</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17(iii) , §1.17 and Ch.1</p>
+</div>
+<p><a id="E23"></a> <span class="math display">\[
+\delta\left(x-a\right)={\mathrm{e}}^{-(x+a)/2}\sum_{k=0}^{\infty}L_{k}\left(x\right)L_{k}\left(a\right). \tag{1.17.23}
+\]</span></p>
+</section>
+<section id="hermite-polynomials-18.3" class="level3">
+<h3 class="anchored" data-anchor-id="hermite-polynomials-18.3">Hermite Polynomials (§18.3)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=Hermite%20polynomials">Hermite polynomials</a> , <a href="http://dlmf.nist.gov/search/search?q=series%20representations">series representations</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17(iii) , §1.17 and Ch.1</p>
+</div>
+<p><a id="E24"></a> <span class="math display">\[
+\delta\left(x-a\right)=\frac{{\mathrm{e}}^{-(x^{2}+a^{2})/2}}{\sqrt{\pi}}\sum_{k=0}^{\infty}\frac{H_{k}\left(x\right)H_{k}\left(a\right)}{2^{k}k!}. \tag{1.17.24}
+\]</span></p>
+</section>
+<section id="spherical-harmonics-14.30" class="level3">
+<h3 class="anchored" data-anchor-id="spherical-harmonics-14.30">Spherical Harmonics (§14.30)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=series%20representations">series representations</a> , <a href="http://dlmf.nist.gov/search/search?q=spherical%20harmonics">spherical harmonics</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17(iii) , §1.17 and Ch.1</p>
+</div>
+<p><a id="E25"></a> <span class="math display">\[
+\delta\left(\cos\theta_{1}-\cos\theta_{2}\right)\delta\left(\phi_{1}-\phi_{2}\right)=\sum_{\ell=0}^{\infty}\sum_{m=-\ell}^{\ell}Y_{{\ell},{m}}\left(\theta_{1},\phi_{1}\right)\overline{Y_{{\ell},{m}}\left(\theta_{2},\phi_{2}\right)}. \tag{1.17.25}
+\]</span></p>
+<p>( 1.17.22 )–( 1.17.24 ) are special cases of Morse and Feshbach (<a href="./bib/M.html#bib1660" title="Methods of Theoretical Physics">1953a</a>, Eq. (6.3.11)). For ( 1.17.25 ) see Arfken and Weber (<a href="./bib/index.html#bib129" title="Mathematical Methods for Physicists">2005</a>, p.&nbsp;792).</p>
+</section>
+</section>
+<section id="iv-mathematical-definitions" class="level2">
+<h2 class="anchored" data-anchor-id="iv-mathematical-definitions">§1.17(iv) Mathematical Definitions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Dirac%20delta">Dirac delta</a> , <a href="http://dlmf.nist.gov/search/search?q=mathematical%20definitions">mathematical definitions</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.17(ii) , Erratum (V1.2.0) §1.17</p>
+<p><strong>Modification (effective with 1.2.0):</strong></p>
+<p>This subsection was almost completely rewritten.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.17 and Ch.1</p>
+</div>
+<p>The references given in § 1.17(ii) – 1.17(iii) are from the physics and applied mathematics literature. A comprehensive and detailed applied mathematics approach is that of Friedman (<a href="./bib/F.html#bib2969" title="Principles and Techniques of Applied Mathematics">1990</a>, Ch. 3 and 4 ).</p>
+<p>For mathematical derivations of the many of the results of § 1.17(ii) and § 1.17(iii) see Li and Wong (<a href="./bib/L.html#bib2650" title="Integral and series representations of the Dirac delta function">2008</a>). Lebedev (<a href="./bib/L.html#bib1394" title="Special Functions and Their Applications">1965</a>) gives an expanded discussion of derivations of ( 1.17.22 )–( 1.17.24 ).</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nerudev\.github\.io\/Polaris-Kernel\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,9 +1,12 @@
 {
-  "id": "11M06",
-  "title": "Funcion Zeta Riemann",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "11M06, 11M35",
-  "difficulty": "avanzado",
-  "source_dlmf_chapter": 25,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_32_funcion_zeta_riemann",
+    "title": "Funcion Zeta Riemann",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "11M-06",
+    "difficulty": "avanzado",
+    "tags": [
+        "11M06",
+        "11M35"
+    ],
+    "status": "draft"
 }

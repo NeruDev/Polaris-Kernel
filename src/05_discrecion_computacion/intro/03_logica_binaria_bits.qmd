@@ -3,6 +3,9 @@ title: "Lógica Binaria y Operaciones a Nivel de Bits"
 date: "2026-07-22"
 categories: ["discrecion", "computacion", "logica", "binario", "bits"]
 id: "msc68_logica_binaria"
+pilar: "01_fundamentos_logica"
+status: "draft"
+msc_code: "00-00"
 ---
 
 ## El Fundamento Discreto de la Computación

@@ -1,11 +1,12 @@
 ---
-id: "33C05"
+id: "msc00_23_funcion_hipergeometrica_gauss"
 title: "Funcion Hipergeometrica Gauss"
 pilar: "03_analisis_continuidad"
-msc_code: "33C05"
+msc_code: "33C-05"
 difficulty: "intermedio"
 tags:
-  - 33C05
+  - "33C05"
+status: "draft"
 ---
 
 # Funcion Hipergeometrica Gauss

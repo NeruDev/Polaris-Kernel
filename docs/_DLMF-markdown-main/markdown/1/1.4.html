@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto-input90529141e842c74c – Polaris Kernel</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-e8a923774aa70043a31c64adf822e8b4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Polaris Kernel
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../../">Polaris Kernel</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">01 Fundamentos Logica</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_aritmetica_propiedades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_sistemas_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/02_logica_matematica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/03_teoria_conjuntos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/04_metodos_demostracion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/05_relaciones_equivalencia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/06_funciones_y_mapeos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/07_logica_predicados_inferencia.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">02 Estructuras Algebraicas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/01_algebra_elemental.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/02_algebra_lineal.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/03_algebra_abstracta.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/05_teoria_de_matrices.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/06_ecuaciones_y_desigualdades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/07_polinomios_y_factorizacion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/08_espacios_vectoriales_bases.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">03 Analisis Continuidad</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/01_funciones_y_limites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/02_calculo_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/03_calculo_integral.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/04_calculo_multivariable.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/05_ecuaciones_diferenciales.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/06_analisis_avanzado.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/07_analisis_funcional.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/08_sucesiones_y_series.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">04 Espacio Forma</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/01_geometria_euclidiana.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/02_trigonometria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/03_geometria_analitica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/04_topologia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/05_geometria_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/06_geometria_no_euclidiana.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">05 Discrecion Computacion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/01_combinatoria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/02_teoria_de_grafos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/03_teoria_de_numeros.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/04_metodos_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/05_teoria_automatas.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">06 Estocastica Incertidumbre</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/01_estadistica_descriptiva.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/02_teoria_de_probabilidad.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/03_estadistica_inferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/04_modelos_estocasticos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/05_teoria_informacion.qmd</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#calculus-of-one-variable" id="toc-calculus-of-one-variable" class="nav-link active" data-scroll-target="#calculus-of-one-variable">§1.4 Calculus of One Variable</a>
+  <ul class="collapse">
+  <li><a href="#i-monotonicity" id="toc-i-monotonicity" class="nav-link" data-scroll-target="#i-monotonicity">§1.4(i) Monotonicity</a></li>
+  <li><a href="#ii-continuity" id="toc-ii-continuity" class="nav-link" data-scroll-target="#ii-continuity">§1.4(ii) Continuity</a></li>
+  <li><a href="#iii-derivatives" id="toc-iii-derivatives" class="nav-link" data-scroll-target="#iii-derivatives">§1.4(iii) Derivatives</a>
+  <ul class="collapse">
+  <li><a href="#higher-derivatives" id="toc-higher-derivatives" class="nav-link" data-scroll-target="#higher-derivatives">Higher Derivatives</a></li>
+  <li><a href="#chain-rule" id="toc-chain-rule" class="nav-link" data-scroll-target="#chain-rule">Chain Rule</a></li>
+  <li><a href="#maxima-and-minima" id="toc-maxima-and-minima" class="nav-link" data-scroll-target="#maxima-and-minima">Maxima and Minima</a></li>
+  <li><a href="#mean-value-theorem" id="toc-mean-value-theorem" class="nav-link" data-scroll-target="#mean-value-theorem">Mean Value Theorem</a></li>
+  <li><a href="#leibnizs-formula" id="toc-leibnizs-formula" class="nav-link" data-scroll-target="#leibnizs-formula">Leibniz’s Formula</a></li>
+  <li><a href="#faà-di-brunos-formula" id="toc-faà-di-brunos-formula" class="nav-link" data-scroll-target="#faà-di-brunos-formula">Faà Di Bruno’s Formula</a></li>
+  <li><a href="#lhôpitals-rule" id="toc-lhôpitals-rule" class="nav-link" data-scroll-target="#lhôpitals-rule">L’Hôpital’s Rule</a></li>
+  </ul></li>
+  <li><a href="#iv-indefinite-integrals" id="toc-iv-indefinite-integrals" class="nav-link" data-scroll-target="#iv-indefinite-integrals">§1.4(iv) Indefinite Integrals</a>
+  <ul class="collapse">
+  <li><a href="#integration-by-parts" id="toc-integration-by-parts" class="nav-link" data-scroll-target="#integration-by-parts">Integration by Parts</a></li>
+  </ul></li>
+  <li><a href="#v-definite-integrals" id="toc-v-definite-integrals" class="nav-link" data-scroll-target="#v-definite-integrals">§1.4(v) Definite Integrals</a>
+  <ul class="collapse">
+  <li><a href="#riemann-integrals" id="toc-riemann-integrals" class="nav-link" data-scroll-target="#riemann-integrals">Riemann Integrals</a></li>
+  <li><a href="#infinite-integrals" id="toc-infinite-integrals" class="nav-link" data-scroll-target="#infinite-integrals">Infinite Integrals</a></li>
+  <li><a href="#stieltjes-lebesgue-and-lebesguestieltjes-integrals" id="toc-stieltjes-lebesgue-and-lebesguestieltjes-integrals" class="nav-link" data-scroll-target="#stieltjes-lebesgue-and-lebesguestieltjes-integrals">Stieltjes, Lebesgue, and Lebesgue–Stieltjes integrals</a></li>
+  <li><a href="#absolutely-continuous-stieltjes-measure" id="toc-absolutely-continuous-stieltjes-measure" class="nav-link" data-scroll-target="#absolutely-continuous-stieltjes-measure">Absolutely Continuous Stieltjes Measure</a></li>
+  <li><a href="#stieltjes-measure-with-αx-discontinuous" id="toc-stieltjes-measure-with-αx-discontinuous" class="nav-link" data-scroll-target="#stieltjes-measure-with-αx-discontinuous">Stieltjes Measure with α⁢(x) Discontinuous</a></li>
+  <li><a href="#cauchy-principal-values" id="toc-cauchy-principal-values" class="nav-link" data-scroll-target="#cauchy-principal-values">Cauchy Principal Values</a></li>
+  <li><a href="#fundamental-theorem-of-calculus" id="toc-fundamental-theorem-of-calculus" class="nav-link" data-scroll-target="#fundamental-theorem-of-calculus">Fundamental Theorem of Calculus</a></li>
+  <li><a href="#change-of-variables" id="toc-change-of-variables" class="nav-link" data-scroll-target="#change-of-variables">Change of Variables</a></li>
+  <li><a href="#first-mean-value-theorem" id="toc-first-mean-value-theorem" class="nav-link" data-scroll-target="#first-mean-value-theorem">First Mean Value Theorem</a></li>
+  <li><a href="#second-mean-value-theorem" id="toc-second-mean-value-theorem" class="nav-link" data-scroll-target="#second-mean-value-theorem">Second Mean Value Theorem</a></li>
+  <li><a href="#repeated-integrals" id="toc-repeated-integrals" class="nav-link" data-scroll-target="#repeated-integrals">Repeated Integrals</a></li>
+  <li><a href="#square-integrable-functions" id="toc-square-integrable-functions" class="nav-link" data-scroll-target="#square-integrable-functions">Square-Integrable Functions</a></li>
+  <li><a href="#functions-of-bounded-variation" id="toc-functions-of-bounded-variation" class="nav-link" data-scroll-target="#functions-of-bounded-variation">Functions of Bounded Variation</a></li>
+  </ul></li>
+  <li><a href="#vi-taylors-theorem-for-real-variables" id="toc-vi-taylors-theorem-for-real-variables" class="nav-link" data-scroll-target="#vi-taylors-theorem-for-real-variables">§1.4(vi) Taylor’s Theorem for Real Variables</a></li>
+  <li><a href="#vii-maxima-and-minima" id="toc-vii-maxima-and-minima" class="nav-link" data-scroll-target="#vii-maxima-and-minima">§1.4(vii) Maxima and Minima</a></li>
+  <li><a href="#viii-convex-functions" id="toc-viii-convex-functions" class="nav-link" data-scroll-target="#viii-convex-functions">§1.4(viii) Convex Functions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="calculus-of-one-variable" class="level1">
+<h1>§1.4 Calculus of One Variable</h1>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=calculus">calculus</a> , <a href="http://dlmf.nist.gov/search/search?q=one%20variable">one variable</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>Erratum (V1.2.0) §1.4</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for Ch.1</p>
+</div>
+<section id="i-monotonicity" class="level2">
+<h2 class="anchored" data-anchor-id="i-monotonicity">§1.4(i) Monotonicity</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=decreasing">decreasing</a> , <a href="http://dlmf.nist.gov/search/search?q=functions">functions</a> , <a href="http://dlmf.nist.gov/search/search?q=increasing">increasing</a> , <a href="http://dlmf.nist.gov/search/search?q=monotonic">monotonic</a> , <a href="http://dlmf.nist.gov/search/search?q=monotonicity">monotonicity</a> , <a href="http://dlmf.nist.gov/search/search?q=nondecreasing">nondecreasing</a> , <a href="http://dlmf.nist.gov/search/search?q=nonincreasing">nonincreasing</a> , <a href="http://dlmf.nist.gov/search/search?q=strictly%20decreasing">strictly decreasing</a> , <a href="http://dlmf.nist.gov/search/search?q=strictly%20increasing">strictly increasing</a> , <a href="http://dlmf.nist.gov/search/search?q=strictly%20monotonic">strictly monotonic</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4 and Ch.1</p>
+</div>
+<p>If <span class="math inline">\(f(x_{1})\leq f(x_{2})\)</span> for every pair <span class="math inline">\(x_{1}\)</span> , <span class="math inline">\(x_{2}\)</span> in an interval <span class="math inline">\(I\)</span> such that <span class="math inline">\(x_{1}&lt;x_{2}\)</span> , then <span class="math inline">\(f(x)\)</span> is <em>nondecreasing</em> on <span class="math inline">\(I\)</span> . If the <span class="math inline">\(\leq\)</span> sign is replaced by <span class="math inline">\(&lt;\)</span> , then <span class="math inline">\(f(x)\)</span> is <em>increasing</em> (also called <em>strictly increasing</em> ) on <span class="math inline">\(I\)</span> . Similarly for <em>nonincreasing</em> and <em>decreasing</em> ( <em>strictly decreasing</em> ) functions. Each of the preceding four cases is classified as <em>monotonic</em> ; sometimes <em>strictly monotonic</em> is used for the strictly increasing or strictly decreasing cases.</p>
+</section>
+<section id="ii-continuity" class="level2">
+<h2 class="anchored" data-anchor-id="ii-continuity">§1.4(ii) Continuity</h2>
+<div class="{note}">
+<p><strong>Defines:</strong></p>
+<p><span class="math inline">\(C(I)\)</span> or <span class="math inline">\(C(a,b)\)</span> : continuous on an interval <span class="math inline">\(I\)</span> or <span class="math inline">\((a,b)\)</span></p>
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=at%20a%20point">at a point</a> , <a href="http://dlmf.nist.gov/search/search?q=continuous">continuous</a> , <a href="http://dlmf.nist.gov/search/search?q=continuous%20function">continuous function</a> , <a href="http://dlmf.nist.gov/search/search?q=discontinuity">discontinuity</a> , <a href="http://dlmf.nist.gov/search/search?q=functions">functions</a> , <a href="http://dlmf.nist.gov/search/search?q=limits">limits</a> , <a href="http://dlmf.nist.gov/search/search?q=limits%20of%20functions">limits of functions</a> , <a href="http://dlmf.nist.gov/search/search?q=notation">notation</a> , <a href="http://dlmf.nist.gov/search/search?q=of%20one%20variable">of one variable</a> , <a href="http://dlmf.nist.gov/search/search?q=on%20an%20interval">on an interval</a> , <a href="http://dlmf.nist.gov/search/search?q=on%20the%20left%20%28or%20right%29">on the left (or right)</a> , <a href="http://dlmf.nist.gov/search/search?q=piecewise">piecewise</a> , <a href="http://dlmf.nist.gov/search/search?q=piecewise%20continuous">piecewise continuous</a> , <a href="http://dlmf.nist.gov/search/search?q=removable">removable</a> , <a href="http://dlmf.nist.gov/search/search?q=removable%20discontinuity">removable discontinuity</a> , <a href="http://dlmf.nist.gov/search/search?q=sectionally">sectionally</a> , <a href="http://dlmf.nist.gov/search/search?q=simple%20discontinuity">simple discontinuity</a> , <a href="http://dlmf.nist.gov/search/search?q=singularity">singularity</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Hardy (<a href="./bib/H.html#bib1043" title="A Course of Pure Mathematics">1952</a>, Chapter 5) and Olver (<a href="./bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, p.&nbsp;73).</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.17(i) , §2.3(ii) , Erratum (V1.0.19) for Notation</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4 and Ch.1</p>
+</div>
+<p>A function <span class="math inline">\(f(x)\)</span> is <em>continuous on the right</em> (or <em>from above</em> ) at <span class="math inline">\(x=c\)</span> if</p>
+<p><a id="E1"></a> <span class="math display">\[
+f(c+)\equiv\lim_{x\to c+}f(x)=f(c), \tag{1.4.1}
+\]</span></p>
+<p>that is, for every arbitrarily small positive constant <span class="math inline">\(\epsilon\)</span> there exists <span class="math inline">\(\delta\)</span> ( <span class="math inline">\(&gt;0\)</span> ) such that</p>
+<p><a id="E2"></a> <span class="math display">\[
+\left|f(c+\alpha)-f(c)\right|&lt;\epsilon, \tag{1.4.2}
+\]</span></p>
+<p>for all <span class="math inline">\(\alpha\)</span> such that <span class="math inline">\(0\leq\alpha&lt;\delta\)</span> . Similarly, it is <em>continuous on the left</em> (or <em>from below</em> ) at <span class="math inline">\(x=c\)</span> if</p>
+<p><a id="E3"></a> <span class="math display">\[
+f(c-)\equiv\lim_{x\to c-}f(x)=f(c). \tag{1.4.3}
+\]</span></p>
+<p>And <span class="math inline">\(f(x)\)</span> is <em>continuous at</em> <span class="math inline">\(c\)</span> when both ( 1.4.1 ) and ( 1.4.3 ) apply.</p>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous at each point <span class="math inline">\(c\in(a,b)\)</span> , then <span class="math inline">\(f(x)\)</span> is <em>continuous on the interval</em> <span class="math inline">\((a,b)\)</span> and we write <span class="math inline">\(f\in C(a,b)\)</span> . If also <span class="math inline">\(f(x)\)</span> is continuous on the right at <span class="math inline">\(x=a\)</span> , and continuous on the left at <span class="math inline">\(x=b\)</span> , then <span class="math inline">\(f(x)\)</span> is <em>continuous on the interval</em> <span class="math inline">\([a,b]\)</span> , and we write <span class="math inline">\(f(x)\in C[a,b]\)</span> .</p>
+<p>A <em>removable singularity</em> of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=c\)</span> occurs when <span class="math inline">\(f(c+)=f(c-)\)</span> but <span class="math inline">\(f(c)\)</span> is undefined. For example, <span class="math inline">\(f(x)=(\sin x)/x\)</span> with <span class="math inline">\(c=0\)</span> .</p>
+<p>A <em>simple discontinuity</em> of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=c\)</span> occurs when <span class="math inline">\(f(c+)\)</span> and <span class="math inline">\(f(c-)\)</span> exist, but <span class="math inline">\(f(c+)\not=f(c-)\)</span> . If <span class="math inline">\(f(x)\)</span> is continuous on an interval <span class="math inline">\(I\)</span> save for a finite number of simple discontinuities, then <span class="math inline">\(f(x)\)</span> is <em>piecewise</em> (or <em>sectionally</em> ) continuous on <span class="math inline">\(I\)</span> . For an example, see Figure 1.4.1</p>
+<p><a id="F1"></a></p>
+<p><img src="../html/1/4/F1.png" class="img-fluid" alt="Figure 1.4.1: Piecewise continuous function on [a,b) ."> :::{note} <strong>Symbols:</strong></p>
+<p><span class="math inline">\([a,b)\)</span>: half-closed interval</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.4(ii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(ii) , §1.4 and Ch.1 :::</p>
+</section>
+<section id="iii-derivatives" class="level2">
+<h2 class="anchored" data-anchor-id="iii-derivatives">§1.4(iii) Derivatives</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=definition">definition</a> , <a href="http://dlmf.nist.gov/search/search?q=derivatives">derivatives</a> , <a href="http://dlmf.nist.gov/search/search?q=notation">notation</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Hardy (<a href="./bib/H.html#bib1043" title="A Course of Pure Mathematics">1952</a>, Chapter 6) or Rudin (<a href="./bib/R.html#bib1981" title="Principles of Mathematical Analysis">1976</a>, Chapter 5). For ( 1.4.13 ) see Riordan (<a href="./bib/R.html#bib1954" title="An Introduction to Combinatorial Analysis">1958</a>, pp.&nbsp;35–36) and Knuth (<a href="./bib/K.html#bib1294" title="The Art of Computer Programming. Vol. 1: Fundamental Algorithms">1968</a>, p.&nbsp;50).</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.2(iii) , §1.4(vii) , Erratum (V1.1.11) for Subsection 1.4(iii)</p>
+<p><strong>Addition (effective with 1.1.11):</strong></p>
+<p>A sentence was added just below ( 1.4.15 ) indicating that we assume that <span class="math inline">\(g^{\prime}(x)\neq 0\)</span> for all <span class="math inline">\(x\)</span> in some neighborhood of <span class="math inline">\(a\)</span> with <span class="math inline">\(x\neq a\)</span> . <em>Suggested 2023-08-21 by Svante Janson</em></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4 and Ch.1</p>
+</div>
+<p>The <em>derivative</em> <span class="math inline">\(f^{\prime}(x)\)</span> of <span class="math inline">\(f(x)\)</span> is defined by</p>
+<p><a id="E4"></a> <span class="math display">\[
+f^{\prime}(x)=\frac{\mathrm{d}f}{\mathrm{d}x}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}. \tag{1.4.4}
+\]</span></p>
+<p>When this limit exists <span class="math inline">\(f\)</span> is <em>differentiable</em> at <span class="math inline">\(x\)</span> .</p>
+<p><a id="E5"></a> <span class="math display">\[
+(f+g)^{\prime}(x)=f^{\prime}(x)+g^{\prime}(x), \tag{1.4.5}
+\]</span></p>
+<p><a id="E6"></a> <span class="math display">\[
+(fg)^{\prime}(x)=f^{\prime}(x)g(x)+f(x)g^{\prime}(x), \tag{1.4.6}
+\]</span></p>
+<p><a id="E7"></a> <span class="math display">\[
+\left(\frac{f}{g}\right)^{\prime}(x)=\frac{f^{\prime}(x)g(x)-f(x)g^{\prime}(x)}{(g(x))^{2}}. \tag{1.4.7}
+\]</span></p>
+<section id="higher-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="higher-derivatives">Higher Derivatives</h3>
+<div class="{note}">
+<p><strong>Defines:</strong></p>
+<p><span class="math inline">\(C^{n}(I)\)</span> or <span class="math inline">\(C^{n}(a,b)\)</span> : continuously differentiable <span class="math inline">\(n\)</span> times on an interval <span class="math inline">\(I\)</span> or <span class="math inline">\((a,b)\)</span></p>
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=continuously%20differentiable">continuously differentiable</a> , <a href="http://dlmf.nist.gov/search/search?q=differentiable">differentiable</a> , <a href="http://dlmf.nist.gov/search/search?q=differentiable%20functions">differentiable functions</a> , <a href="http://dlmf.nist.gov/search/search?q=functions">functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(iii) , §1.4 and Ch.1</p>
+</div>
+<p><a id="E8"></a> <span class="math display">\[
+f^{(2)}(x)=\frac{{\mathrm{d}}^{2}f}{{\mathrm{d}x}^{2}}=\frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\mathrm{d}f}{\mathrm{d}x}\right), \tag{1.4.8}
+\]</span></p>
+<p><a id="E9"></a> <span class="math display">\[
+f^{(n)}=f^{(n)}(x)=\frac{\mathrm{d}}{\mathrm{d}x}f^{(n-1)}(x). \tag{1.4.9}
+\]</span></p>
+<p>If <span class="math inline">\(f^{(n)}\)</span> exists and is continuous on an interval <span class="math inline">\(I\)</span> , then we write <span class="math inline">\(f\in C^{n}(I)\)</span> . When <span class="math inline">\(n\geq 1\)</span> , <span class="math inline">\(f\)</span> is <em>continuously differentiable</em> on <span class="math inline">\(I\)</span> . When <span class="math inline">\(n\)</span> is unbounded, <span class="math inline">\(f\)</span> is <em>infinitely differentiable</em> on <span class="math inline">\(I\)</span> and we write <span class="math inline">\(f\in C^{\infty}(I)\)</span> .</p>
+</section>
+<section id="chain-rule" class="level3">
+<h3 class="anchored" data-anchor-id="chain-rule">Chain Rule</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=chain%20rule">chain rule</a> , <a href="http://dlmf.nist.gov/search/search?q=derivatives">derivatives</a> , <a href="http://dlmf.nist.gov/search/search?q=for%20derivatives">for derivatives</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(iii) , §1.4 and Ch.1</p>
+</div>
+<p>For <span class="math inline">\(h(x)=f(g(x))\)</span> ,</p>
+<p><a id="E10"></a> <span class="math display">\[
+h^{\prime}(x)=f^{\prime}(g(x))g^{\prime}(x). \tag{1.4.10}
+\]</span></p>
+</section>
+<section id="maxima-and-minima" class="level3">
+<h3 class="anchored" data-anchor-id="maxima-and-minima">Maxima and Minima</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=local">local</a> , <a href="http://dlmf.nist.gov/search/search?q=maximum">maximum</a> , <a href="http://dlmf.nist.gov/search/search?q=minimum">minimum</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(iii) , §1.4 and Ch.1</p>
+</div>
+<p>A necessary condition that a differentiable function <span class="math inline">\(f(x)\)</span> has a <em>local maximum</em> ( <em>minimum</em> ) at <span class="math inline">\(x=c\)</span> , that is, <span class="math inline">\(f(x)\leq f(c)\)</span> , ( <span class="math inline">\(f(x)\geq f(c)\)</span> ) in a <em>neighborhood</em> <span class="math inline">\(c-\delta\leq x\leq c+\delta\)</span> ( <span class="math inline">\(\delta&gt;0\)</span> ) of <span class="math inline">\(c\)</span> , is <span class="math inline">\(f^{\prime}(c)=0\)</span> .</p>
+</section>
+<section id="mean-value-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="mean-value-theorem">Mean Value Theorem</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=derivatives">derivatives</a> , <a href="http://dlmf.nist.gov/search/search?q=differentiable%20functions">differentiable functions</a> , <a href="http://dlmf.nist.gov/search/search?q=mean%20value%20theorem">mean value theorem</a> , <a href="http://dlmf.nist.gov/search/search?q=mean%20value%20theorems">mean value theorems</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(iii) , §1.4 and Ch.1</p>
+</div>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous on <span class="math inline">\([a,b]\)</span> and differentiable on <span class="math inline">\((a,b)\)</span> , then there exists a point <span class="math inline">\(c\in(a,b)\)</span> such that</p>
+<p><a id="E11"></a> <span class="math display">\[
+f(b)-f(a)=(b-a)f^{\prime}(c). \tag{1.4.11}
+\]</span></p>
+<p>If <span class="math inline">\(f^{\prime}(x)\geq 0\)</span> ( <span class="math inline">\(\leq 0\)</span> ) ( <span class="math inline">\(=0\)</span> ) for all <span class="math inline">\(x\in(a,b)\)</span> , then <span class="math inline">\(f\)</span> is nondecreasing (nonincreasing) (constant) on <span class="math inline">\((a,b)\)</span> .</p>
+</section>
+<section id="leibnizs-formula" class="level3">
+<h3 class="anchored" data-anchor-id="leibnizs-formula">Leibniz’s Formula</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Leibniz%20formula">Leibniz’s formula</a> , <a href="http://dlmf.nist.gov/search/search?q=Leibniz%20formula%20for%20derivatives">Leibniz’s formula for derivatives</a> , <a href="http://dlmf.nist.gov/search/search?q=derivatives">derivatives</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(iii) , §1.4 and Ch.1</p>
+</div>
+<p><a id="E12"></a> <span class="math display">\[
+(fg)^{(n)}=f^{(n)}g+\genfrac{(}{)}{0.0pt}{}{n}{1}f^{(n-1)}g^{\prime}+\dots+\genfrac{(}{)}{0.0pt}{}{n}{k}f^{(n-k)}g^{(k)}+\dots+fg^{(n)}. \tag{1.4.12}
+\]</span></p>
+</section>
+<section id="faà-di-brunos-formula" class="level3">
+<h3 class="anchored" data-anchor-id="faà-di-brunos-formula">Faà Di Bruno’s Formula</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Fa%C3%A0%20di%20Bruno%20formula">Faà di Bruno’s formula</a> , <a href="http://dlmf.nist.gov/search/search?q=derivatives">derivatives</a> , <a href="http://dlmf.nist.gov/search/search?q=for%20derivatives">for derivatives</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(iii) , §1.4 and Ch.1</p>
+</div>
+<p><a id="E13"></a> <span class="math display">\[
+\frac{{\mathrm{d}}^{n}}{{\mathrm{d}x}^{n}}f(g(x))=\sum\left(\frac{n!}{m_{1}!m_{2}!\cdots m_{n}!}\right)f^{(k)}(g(x))\,\left(\frac{g^{\prime}(x)}{1!}\right)^{m_{1}}\left(\frac{g^{\prime\prime}(x)}{2!}\right)^{m_{2}}\dots\left(\frac{g^{(n)}(x)}{n!}\right)^{m_{n}}, \tag{1.4.13}
+\]</span></p>
+<p>where the sum is over all nonnegative integers <span class="math inline">\(m_{1},m_{2},\dots,m_{n}\)</span> that satisfy <span class="math inline">\(m_{1}+2m_{2}+\dots+nm_{n}=n\)</span> , and <span class="math inline">\(k=m_{1}+m_{2}+\dots+m_{n}\)</span> .</p>
+</section>
+<section id="lhôpitals-rule" class="level3">
+<h3 class="anchored" data-anchor-id="lhôpitals-rule">L’Hôpital’s Rule</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=L%E2%80%99H%C3%B4pital%20rule">L’Hôpital’s rule</a> , <a href="http://dlmf.nist.gov/search/search?q=L%E2%80%99H%C3%B4pital%20rule%20for%20derivatives">L’Hôpital’s rule for derivatives</a> , <a href="http://dlmf.nist.gov/search/search?q=derivatives">derivatives</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(iii) , §1.4 and Ch.1</p>
+</div>
+<p>If</p>
+<p><a id="E14"></a> <span class="math display">\[
+\lim\limits_{x\to a}f(x)=\lim\limits_{x\to a}g(x)=0\;\;\text{(or \infty)}, \tag{1.4.14}
+\]</span></p>
+<p>then</p>
+<p><a id="E15"></a> <span class="math display">\[
+\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f^{\prime}(x)}{g^{\prime}(x)} \tag{1.4.15}
+\]</span></p>
+<p>when the last limit exists. We do assume that <span class="math inline">\(g^{\prime}(x)\neq 0\)</span> for all <span class="math inline">\(x\)</span> in some neighborhood of <span class="math inline">\(a\)</span> with <span class="math inline">\(x\neq a\)</span> .</p>
+</section>
+</section>
+<section id="iv-indefinite-integrals" class="level2">
+<h2 class="anchored" data-anchor-id="iv-indefinite-integrals">§1.4(iv) Indefinite Integrals</h2>
+<div class="{note}">
+<p><strong>Defines:</strong></p>
+<p><span class="math inline">\(\,\mathrm{d}x\)</span> : differential of <span class="math inline">\(x\)</span> and <span class="math inline">\(\int\)</span> : integral</p>
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=indefinite">indefinite</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=integration">integration</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Hardy (<a href="./bib/H.html#bib1043" title="A Course of Pure Mathematics">1952</a>, pp.&nbsp;247–248, 258).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4 and Ch.1</p>
+</div>
+<p>If <span class="math inline">\(F^{\prime}(x)=f(x)\)</span> , then <span class="math inline">\(\int f\,\mathrm{d}x=F(x)+C\)</span> , where <span class="math inline">\(C\)</span> is a constant.</p>
+<section id="integration-by-parts" class="level3">
+<h3 class="anchored" data-anchor-id="integration-by-parts">Integration by Parts</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=by%20parts">by parts</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=integration">integration</a> , <a href="http://dlmf.nist.gov/search/search?q=tables">tables</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(iv) , §1.4 and Ch.1</p>
+</div>
+<p><a id="E16"></a> <span class="math display">\[
+\int fg\,\mathrm{d}x=\left(\int f\,\mathrm{d}x\right)g-\int\left(\int f\,\mathrm{d}x\right)\frac{\mathrm{d}g}{\mathrm{d}x}\,\mathrm{d}x. \tag{1.4.16}
+\]</span></p>
+<p><a id="E17"></a> <span class="math display">\[
+\int x^{n}\,\mathrm{d}x=\begin{cases}\dfrac{x^{n+1}}{n+1}+C,&amp;\quad n\not=-1,\\
+\ln\left|x\right|+C,&amp;\quad n=-1.\end{cases} \tag{1.4.17}
+\]</span></p>
+<p>For the function <span class="math inline">\(\ln\)</span> see § 4.2(i) .</p>
+<p>See §§ <a href="./4.10.md" title="§4.10 Integrals ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions">4.10</a> , 4.26(ii) , 4.26(iv) , 4.40(ii) , and 4.40(iv) for indefinite integrals involving the elementary functions.</p>
+<p>For extensive tables of integrals, see Apelblat (<a href="./bib/index.html#bib111" title="Table of Definite and Infinite Integrals">1983</a>), Bierens de Haan (<a href="./bib/B.html#bib282" title="Nouvelles Tables d’Intégrales Définies">1867</a>), Gradshteyn and Ryzhik (<a href="./bib/G.html#bib972" title="Table of integrals, series, and products">2015</a>), Gröbner and Hofreiter (<a href="./bib/G.html#bib985" title="Integraltafel. Erster Teil. Unbestimmte Integrale">1949</a>, <a href="./bib/G.html#bib986" title="Integraltafel. Zweiter Teil. Bestimmte Integrale">1950</a>), and Prudnikov et al.&nbsp;(<a href="./bib/P.html#bib1902" title="Integrals and Series: Elementary Functions, Vol. 1">1986a</a>, <a href="./bib/P.html#bib1903" title="Integrals and Series: Special Functions, Vol. 2">b</a>, <a href="./bib/P.html#bib1905" title="Integrals and Series: More Special Functions, Vol. 3">1990</a>, <a href="./bib/P.html#bib1906" title="Integrals and Series: Direct Laplace Transforms, Vol. 4">1992a</a>, <a href="./bib/P.html#bib1907" title="Integrals and Series: Inverse Laplace Transforms, Vol. 5">1992b</a>).</p>
+</section>
+</section>
+<section id="v-definite-integrals" class="level2">
+<h2 class="anchored" data-anchor-id="v-definite-integrals">§1.4(v) Definite Integrals</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=definite">definite</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=integration">integration</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Hardy (<a href="./bib/H.html#bib1043" title="A Course of Pure Mathematics">1952</a>, Chapters 6, 7). For ( 1.4.31 ) integrate by parts. For ( 1.4.34 ) see Olver (<a href="./bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, p.&nbsp;28).</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.14(i) , §1.14(ii) , §1.16(i) , §1.16(ii) , §1.16(iv) , §1.18(ii) , §1.9(iii) , §10.22(ii) , §10.23(iii) , §18.17(viii) , §18.2(i) , §19.2(ii) , §2.3(i) , §2.6(ii) , §28.28(iii) , §4.10(i) , §9.10(vii) , §9.12(vii) , Erratum (V1.0.19) for Notation , Erratum (V1.2.0) §1.4</p>
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>Equations ( 1.4.23_1 ), ( 1.4.23_2 ), ( 1.4.23_3 ) were added. A sentence was added about Riemann integrability after ( 1.4.18 ).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4 and Ch.1</p>
+</div>
+<section id="riemann-integrals" class="level3">
+<h3 class="anchored" data-anchor-id="riemann-integrals">Riemann Integrals</h3>
+<div class="{note}">
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>This paragraph was added. Just below ( 1.14.18 ) a sentence regarding Riemann integrability was added.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>Suppose <span class="math inline">\(f(x)\)</span> is defined on <span class="math inline">\([a,b]\)</span> . Let <span class="math inline">\(a=x_{0}&lt;x_{1}&lt;\cdots&lt;x_{n}=b\)</span> , and <span class="math inline">\(\xi_{j}\)</span> denote any point in <span class="math inline">\([x_{j},x_{j+1}]\)</span> , <span class="math inline">\(j=0,1,\dots,n-1\)</span> . Then</p>
+<p><a id="E18"></a> <span class="math display">\[
+\int^{b}_{a}f(x)\,\mathrm{d}x=\lim\sum^{n-1}_{j=0}f(\xi_{j})(x_{j+1}-x_{j}) \tag{1.4.18}
+\]</span></p>
+<p>as <span class="math inline">\(\max(x_{j+1}-x_{j})\to 0\)</span> . If the limit exists then <span class="math inline">\(f\)</span> is called <em>Riemann integrable</em> . Continuity, or piecewise continuity, of <span class="math inline">\(f(x)\)</span> on <span class="math inline">\([a,b]\)</span> is sufficient for the limit to exist.</p>
+<p><a id="E19"></a> <span class="math display">\[
+\int^{b}_{a}(cf(x)+dg(x))\,\mathrm{d}x=c\int^{b}_{a}f(x)\,\mathrm{d}x+d\int^{b}_{a}g(x)\,\mathrm{d}x, \tag{1.4.19}
+\]</span></p>
+<p><span class="math inline">\(c\)</span> and <span class="math inline">\(d\)</span> constants.</p>
+<p><a id="E20"></a> <span class="math display">\[
+\int^{b}_{a}f(x)\,\mathrm{d}x=-\int^{a}_{b}f(x)\,\mathrm{d}x. \tag{1.4.20}
+\]</span></p>
+<p><a id="E21"></a> <span class="math display">\[
+\int^{b}_{a}f(x)\,\mathrm{d}x=\int^{c}_{a}f(x)\,\mathrm{d}x+\int^{b}_{c}f(x)\,\mathrm{d}x. \tag{1.4.21}
+\]</span></p>
+</section>
+<section id="infinite-integrals" class="level3">
+<h3 class="anchored" data-anchor-id="infinite-integrals">Infinite Integrals</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=absolute">absolute</a> , <a href="http://dlmf.nist.gov/search/search?q=convergence">convergence</a> , <a href="http://dlmf.nist.gov/search/search?q=infinite">infinite</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p><a id="E22"></a> <span class="math display">\[
+\int^{\infty}_{a}f(x)\,\mathrm{d}x=\lim_{b\to\infty}\int^{b}_{a}f(x)\,\mathrm{d}x. \tag{1.4.22}
+\]</span></p>
+<p>Similarly for <span class="math inline">\(\int^{a}_{-\infty}\)</span> . Next, if <span class="math inline">\(f(b)=\pm\infty\)</span> , then</p>
+<p><a id="E23"></a> <span class="math display">\[
+\int^{b}_{a}f(x)\,\mathrm{d}x=\lim_{c\to b-}\int^{c}_{a}f(x)\,\mathrm{d}x. \tag{1.4.23}
+\]</span></p>
+<p>Similarly when <span class="math inline">\(f(a)=\pm\infty\)</span> .</p>
+<p>When the limits in ( 1.4.22 ) and ( 1.4.23 ) exist, the integrals are said to be <em>convergent</em> . If the limits exist with <span class="math inline">\(f(x)\)</span> replaced by <span class="math inline">\(\left|f(x)\right|\)</span> , then the integrals are <em>absolutely convergent</em> . Absolute convergence also implies convergence.</p>
+</section>
+<section id="stieltjes-lebesgue-and-lebesguestieltjes-integrals" class="level3">
+<h3 class="anchored" data-anchor-id="stieltjes-lebesgue-and-lebesguestieltjes-integrals">Stieltjes, Lebesgue, and Lebesgue–Stieltjes integrals</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Lebesgue">Lebesgue</a> , <a href="http://dlmf.nist.gov/search/search?q=Lebesgue-Stieltjes">Lebesgue-Stieltjes</a> , <a href="http://dlmf.nist.gov/search/search?q=Stieltjes">Stieltjes</a> , <a href="http://dlmf.nist.gov/search/search?q=absolute">absolute</a> , <a href="http://dlmf.nist.gov/search/search?q=convergence">convergence</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a></p>
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>This paragraph was added.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>A generalization of the Riemann integral is the <em>Stieltjes integral</em> <span class="math inline">\(\int_{a}^{b}f(x)\,\mathrm{d}\alpha(x)\)</span> , where <span class="math inline">\(\alpha(x)\)</span> is a nondecreasing function on the closure of <span class="math inline">\((a,b)\)</span> , which may be bounded, or unbounded, and <span class="math inline">\(\,\mathrm{d}\alpha(x)\)</span> is the <em>Stieltjes measure</em> . See Riesz and Sz.-Nagy (<a href="./bib/R.html#bib2971" title="Functional analysis">1990</a>, Ch. 3). Stieltjes integrability for <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\alpha\)</span> can be defined similarly as Riemann integrability in the case that <span class="math inline">\(\alpha(x)\)</span> is differentiable with respect to <span class="math inline">\(x\)</span> ; a generalization follows below.</p>
+<p>For the functions discussed in the following DLMF chapters these two integration measures are adequate, as these special functions are <em>analytic functions</em> of their variables, and thus <span class="math inline">\(C^{\infty}\)</span> , and well defined for all values of these variables; possible exceptions being at boundary points.</p>
+<p>A more general concept of integrability of a function on a bounded or unbounded interval is <em>Lebesgue integrability</em> , which allows discussion of functions which may not be well defined everywhere (especially on sets of measure zero) for <span class="math inline">\(x\in\mathbb{R}\)</span> . see Rudin (<a href="./bib/R.html#bib2983" title="Real and complex analysis">1966</a>), and often used in more abstract mathematical discussions. Similarly the Stieltjes integral can be generalized to a <em>Lebesgue–Stieltjes integral</em> with respect to the <em>Lebesgue-Stieltjes measure</em> <span class="math inline">\(\,\mathrm{d}\mu(x)\)</span> and it is well defined for functions <span class="math inline">\(f\)</span> which are integrable with respect to that more general measure. See McDonald and Weiss (<a href="./bib/M.html#bib2585" title="A Course in Real Analysis">1999</a>).</p>
+</section>
+<section id="absolutely-continuous-stieltjes-measure" class="level3">
+<h3 class="anchored" data-anchor-id="absolutely-continuous-stieltjes-measure">Absolutely Continuous Stieltjes Measure</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Absolutely%20continuous%20integration%20measure">Absolutely continuous integration measure</a> , <a href="http://dlmf.nist.gov/search/search?q=Stieltjes">Stieltjes</a> , <a href="http://dlmf.nist.gov/search/search?q=absolutely%20convergent">absolutely convergent</a> , <a href="http://dlmf.nist.gov/search/search?q=measure">measure</a></p>
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>This paragraph was added.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>For <span class="math inline">\(\alpha(x)\)</span> nondecreasing on the closure <span class="math inline">\(I\)</span> of an interval <span class="math inline">\((a,b)\)</span> , the measure <span class="math inline">\(\,\mathrm{d}\alpha\)</span> is <em>absolutely continuous</em> if <span class="math inline">\(\alpha(x)\)</span> is continuous and there exists a <em>weight function</em> <span class="math inline">\(w(x)\geq 0\)</span> , Riemann (or Lebesgue) integrable on finite subintervals of <span class="math inline">\(I\)</span> , such that</p>
+<p><a id="E23_1"></a> <span class="math display">\[
+\alpha(d)-\alpha(c)=\int_{c}^{d}w(x)\,\mathrm{d}x, \tag{1.4.23_1}
+\]</span></p>
+<p>Then</p>
+<p><a id="E23_2"></a> <span class="math display">\[
+\int_{a}^{b}f(x)\,\mathrm{d}\alpha(x)=\int_{a}^{b}f(x)w(x)\,\mathrm{d}x, \tag{1.4.23_2}
+\]</span></p>
+<p>In particular, absolute continuity occurs if the function <span class="math inline">\(\alpha(x)\)</span> is differentiable, <span class="math inline">\(\alpha^{\prime}(x)=w(x)\)</span> with <span class="math inline">\(w(x)\)</span> continuous.</p>
+<p>For historical reasons, <span class="math inline">\(w(x)\)</span> is also sometimes referred to as a <em>density</em> , as, for example, the mass per unit length at point <span class="math inline">\(x\)</span> , see Shohat and Tamarkin (<a href="./bib/S.html#bib2973" title="The Problem of Moments">1970</a>, p vii).</p>
+</section>
+<section id="stieltjes-measure-with-αx-discontinuous" class="level3">
+<h3 class="anchored" data-anchor-id="stieltjes-measure-with-αx-discontinuous">Stieltjes Measure with α⁢(x) Discontinuous</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Steiltjes">Steiltjes</a> , <a href="http://dlmf.nist.gov/search/search?q=Stieltjes">Stieltjes</a> , <a href="http://dlmf.nist.gov/search/search?q=Stieltjes%20with%20jumps">Stieltjes with jumps</a> , <a href="http://dlmf.nist.gov/search/search?q=integral">integral</a> , <a href="http://dlmf.nist.gov/search/search?q=measure">measure</a> , <a href="http://dlmf.nist.gov/search/search?q=measure%20with%20jumps">measure with jumps</a></p>
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>This paragraph was added.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>The utility of the generalization implicit in the Stieltjes measure appears when <span class="math inline">\(\alpha(x)\)</span> is not everywhere continuous, but has discontinuous <em>jumps</em> at specific values of <span class="math inline">\(x\)</span> , say <span class="math inline">\(x_{n}\in(a,b)\)</span> . See Riesz and Sz.-Nagy (<a href="./bib/R.html#bib2971" title="Functional analysis">1990</a>, Ch. 3). If, for example, <span class="math inline">\(\alpha(x)=H\left(x-x_{n}\right)\)</span> , the Heaviside unit step-function ( 1.16.14 ), then the corresponding measure <span class="math inline">\(\,\mathrm{d}\alpha(x)\)</span> is <span class="math inline">\(\delta\left(x-x_{n}\right)\,\mathrm{d}x\)</span> , where <span class="math inline">\(\delta\left(x-x_{n}\right)\)</span> is the Dirac <span class="math inline">\(\delta\)</span> -function of § <a href="../../../../docs/DLMF-markdown-main/markdown/1/1.17.html" title="§1.17 Integral and Series Representations of the Dirac Delta ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods">1.17</a> , such that, for <span class="math inline">\(f(x)\)</span> a continuous function on <span class="math inline">\((a,b)\)</span> , <span class="math inline">\(\int_{a}^{b}f(x)\,\mathrm{d}\alpha(x)=f(x_{n})\)</span> for <span class="math inline">\(x_{n}\in(a,b)\)</span> and <span class="math inline">\(0\)</span> otherwise. Delta distributions and Dirac <span class="math inline">\(\delta\)</span> -functions are discussed in §§ 1.16(iii) , 1.16(iv) and <a href="../../../../docs/DLMF-markdown-main/markdown/1/1.17.html" title="§1.17 Integral and Series Representations of the Dirac Delta ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods">1.17</a> .</p>
+<p>Definite integrals over the Stieltjes measure <span class="math inline">\(\,\mathrm{d}\alpha(x)\)</span> could represent a sum, an integral, or a combination of the two. Let <span class="math inline">\(\,\mathrm{d}\alpha(x)=w(x)\,\mathrm{d}x+\sum_{n=1}^{N}w_{n}\delta\left(x-x_{n}\right)\,\mathrm{d}x\)</span> , <span class="math inline">\(x_{n}\in(a,b)\)</span> , <span class="math inline">\(n=1,\dots N\)</span> . Then for <span class="math inline">\(f(x)\)</span> continuous on <span class="math inline">\((a,b)\)</span> ,</p>
+<p><a id="E23_3"></a> <span class="math display">\[
+\int_{a}^{b}f(x)\,\mathrm{d}\alpha(x)=\int_{a}^{b}w(x)f(x)\,\mathrm{d}x+\sum_{n=1}^{N}w_{n}f(x_{n}). \tag{1.4.23_3}
+\]</span></p>
+<p>In the literature where <span class="math inline">\(w(x)\)</span> is considered to be a mass density, the <span class="math inline">\(x_{n}\)</span> are often referred to as <em>mass points</em> , <span class="math inline">\(w_{n}\)</span> being the mass at that point. Ismail (<a href="./bib/I.html#bib1139" title="Classical and Quantum Orthogonal Polynomials in One Variable">2005</a>, p 5) refers to these <span class="math inline">\(x_{n}\)</span> as isolated atoms.</p>
+</section>
+<section id="cauchy-principal-values" class="level3">
+<h3 class="anchored" data-anchor-id="cauchy-principal-values">Cauchy Principal Values</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Cauchy%20principal%20values">Cauchy principal values</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>Let <span class="math inline">\(c\in(a,b)\)</span> and assume that <span class="math inline">\(\int_{a}^{c-\epsilon}f(x)\,\mathrm{d}x\)</span> and <span class="math inline">\(\int_{c+\epsilon}^{b}f(x)\,\mathrm{d}x\)</span> exist when <span class="math inline">\(0&lt;\epsilon&lt;\min(c-a,b-c)\)</span> , but not necessarily when <span class="math inline">\(\epsilon=0\)</span> . Then we define</p>
+<p><a id="E24"></a> <span class="math display">\[
+\fint^{b}_{a}f(x)\,\mathrm{d}x=P\int^{b}_{a}f(x)\,\mathrm{d}x=\lim_{\epsilon\to 0+}\left(\int^{c-\epsilon}_{a}f(x)\,\mathrm{d}x+\int^{b}_{c+\epsilon}f(x)\,\mathrm{d}x\right), \tag{1.4.24}
+\]</span></p>
+<p>when this limit exists.</p>
+<p>Similarly, assume that <span class="math inline">\(\int_{-b}^{b}f(x)\,\mathrm{d}x\)</span> exists for all finite values of <span class="math inline">\(b\)</span> ( <span class="math inline">\(&gt;0\)</span> ), but not necessarily when <span class="math inline">\(b=\infty\)</span> . Then we define</p>
+<p><a id="E25"></a> <span class="math display">\[
+\fint^{\infty}_{-\infty}f(x)\,\mathrm{d}x=P\int^{\infty}_{-\infty}f(x)\,\mathrm{d}x=\lim_{b\to\infty}\int^{b}_{-b}f(x)\,\mathrm{d}x, \tag{1.4.25}
+\]</span></p>
+<p>when this limit exists.</p>
+</section>
+<section id="fundamental-theorem-of-calculus" class="level3">
+<h3 class="anchored" data-anchor-id="fundamental-theorem-of-calculus">Fundamental Theorem of Calculus</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=differentiation">differentiation</a> , <a href="http://dlmf.nist.gov/search/search?q=fundamental%20theorem%20of%20calculus">fundamental theorem of calculus</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>For <span class="math inline">\(F^{\prime}(x)=f(x)\)</span> with <span class="math inline">\(f(x)\)</span> continuous,</p>
+<p><a id="E26"></a> <span class="math display">\[
+\int^{b}_{a}f(x)\,\mathrm{d}x=F(b)-F(a), \tag{1.4.26}
+\]</span></p>
+<p><a id="E27"></a> <span class="math display">\[
+\frac{\mathrm{d}}{\mathrm{d}x}\int^{x}_{a}f(t)\,\mathrm{d}t=f(x). \tag{1.4.27}
+\]</span></p>
+</section>
+<section id="change-of-variables" class="level3">
+<h3 class="anchored" data-anchor-id="change-of-variables">Change of Variables</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=change%20of%20variables">change of variables</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>If <span class="math inline">\(\phi^{\prime}(x)\)</span> is continuous or piecewise continuous, then</p>
+<p><a id="E28"></a> <span class="math display">\[
+\int^{b}_{a}f(\phi(x))\phi^{\prime}(x)\,\mathrm{d}x=\int^{\phi(b)}_{\phi(a)}f(t)\,\mathrm{d}t. \tag{1.4.28}
+\]</span></p>
+</section>
+<section id="first-mean-value-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="first-mean-value-theorem">First Mean Value Theorem</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=first">first</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=mean%20value%20theorems">mean value theorems</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>For <span class="math inline">\(f(x)\)</span> continuous and <span class="math inline">\(\phi(x)\geq 0\)</span> and integrable on <span class="math inline">\([a,b]\)</span> , there exists <span class="math inline">\(c\in[a,b]\)</span> , such that</p>
+<p><a id="E29"></a> <span class="math display">\[
+\int^{b}_{a}f(x)\phi(x)\,\mathrm{d}x=f(c)\int^{b}_{a}\phi(x)\,\mathrm{d}x. \tag{1.4.29}
+\]</span></p>
+</section>
+<section id="second-mean-value-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="second-mean-value-theorem">Second Mean Value Theorem</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=mean%20value%20theorems">mean value theorems</a> , <a href="http://dlmf.nist.gov/search/search?q=second">second</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>For <span class="math inline">\(f(x)\)</span> monotonic and <span class="math inline">\(\phi(x)\)</span> integrable on <span class="math inline">\([a,b]\)</span> , there exists <span class="math inline">\(c\in[a,b]\)</span> , such that</p>
+<p><a id="E30"></a> <span class="math display">\[
+\int^{b}_{a}f(x)\phi(x)\,\mathrm{d}x=f(a)\int^{c}_{a}\phi(x)\,\mathrm{d}x+f(b)\int^{b}_{c}\phi(x)\,\mathrm{d}x. \tag{1.4.30}
+\]</span></p>
+</section>
+<section id="repeated-integrals" class="level3">
+<h3 class="anchored" data-anchor-id="repeated-integrals">Repeated Integrals</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=repeated">repeated</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous or piecewise continuous on <span class="math inline">\([a,b]\)</span> , then</p>
+<p><a id="E31"></a> <span class="math display">\[
+\int_{a}^{b}\,\mathrm{d}x_{n}\int_{a}^{x_{n}}\,\mathrm{d}x_{n-1}\cdots\int_{a}^{x_{2}}\,\mathrm{d}x_{1}\int_{a}^{x_{1}}f(x)\,\mathrm{d}x=\frac{1}{n!}\int_{a}^{b}(b-x)^{n}f(x)\,\mathrm{d}x. \tag{1.4.31}
+\]</span></p>
+</section>
+<section id="square-integrable-functions" class="level3">
+<h3 class="anchored" data-anchor-id="square-integrable-functions">Square-Integrable Functions</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=square-integrable">square-integrable</a> , <a href="http://dlmf.nist.gov/search/search?q=square-integrable%20function">square-integrable function</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>A function <span class="math inline">\(f(x)\)</span> is <em>square-integrable</em> if</p>
+<p><a id="E32"></a> <span class="math display">\[
+\|f\|^{2}_{2}\equiv\int^{b}_{a}{\left|f(x)\right|}^{2}\,\mathrm{d}x&lt;\infty. \tag{1.4.32}
+\]</span></p>
+</section>
+<section id="functions-of-bounded-variation" class="level3">
+<h3 class="anchored" data-anchor-id="functions-of-bounded-variation">Functions of Bounded Variation</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=bounded">bounded</a> , <a href="http://dlmf.nist.gov/search/search?q=bounded%20variation">bounded variation</a> , <a href="http://dlmf.nist.gov/search/search?q=closure">closure</a> , <a href="http://dlmf.nist.gov/search/search?q=functions">functions</a> , <a href="http://dlmf.nist.gov/search/search?q=interval">interval</a> , <a href="http://dlmf.nist.gov/search/search?q=of%20bounded%20variation">of bounded variation</a> , <a href="http://dlmf.nist.gov/search/search?q=of%20interval">of interval</a> , <a href="http://dlmf.nist.gov/search/search?q=total">total</a> , <a href="http://dlmf.nist.gov/search/search?q=variation%20of%20real%20or%20complex%20functions">variation of real or complex functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(v) , §1.4 and Ch.1</p>
+</div>
+<p>With <span class="math inline">\(a&lt;b\)</span> , the <em>total variation</em> of <span class="math inline">\(f(x)\)</span> on a finite or infinite interval <span class="math inline">\((a,b)\)</span> is</p>
+<p><a id="E33"></a> <span class="math display">\[
+\mathcal{V}_{a,b}\left(f\right)=\sup\sum^{n}_{j=1}\left|f(x_{j})-f(x_{j-1})\right|, \tag{1.4.33}
+\]</span></p>
+<p>where the supremum is over all sets of points <span class="math inline">\(x_{0}&lt;x_{1}&lt;\cdots&lt;x_{n}\)</span> in the <em>closure</em> of <span class="math inline">\((a,b)\)</span> , that is, <span class="math inline">\((a,b)\)</span> with <span class="math inline">\(a,b\)</span> added when they are finite. If <span class="math inline">\(\mathcal{V}_{a,b}\left(f\right)&lt;\infty\)</span> , then <span class="math inline">\(f(x)\)</span> is of <em>bounded variation</em> on <span class="math inline">\((a,b)\)</span> . In this case, <span class="math inline">\(g(x)=\mathcal{V}_{a,x}\left(f\right)\)</span> and <span class="math inline">\(h(x)=\mathcal{V}_{a,x}\left(f\right)-f(x)\)</span> are nondecreasing bounded functions and <span class="math inline">\(f(x)=g(x)-h(x)\)</span> .</p>
+<p>If <span class="math inline">\(f(x)\)</span> is continuous on the closure of <span class="math inline">\((a,b)\)</span> and <span class="math inline">\(f^{\prime}(x)\)</span> is continuous on <span class="math inline">\((a,b)\)</span> , then</p>
+<p><a id="E34"></a> <span class="math display">\[
+\mathcal{V}_{a,b}\left(f\right)=\int^{b}_{a}\left|f^{\prime}(x)\right|\,\mathrm{d}x, \tag{1.4.34}
+\]</span></p>
+<p>whenever this integral exists.</p>
+<p>Lastly, whether or not the real numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> satisfy <span class="math inline">\(a&lt;b\)</span> , and whether or not they are finite, we <em>define</em> <span class="math inline">\(\mathcal{V}_{a,b}\left(f\right)\)</span> by ( 1.4.34 ) whenever this integral exists. This definition also applies when <span class="math inline">\(f(x)\)</span> is a complex function of the real variable <span class="math inline">\(x\)</span> . For further information on total variation see Olver (<a href="./bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, pp.&nbsp;27–29).</p>
+</section>
+</section>
+<section id="vi-taylors-theorem-for-real-variables" class="level2">
+<h2 class="anchored" data-anchor-id="vi-taylors-theorem-for-real-variables">§1.4(vi) Taylor’s Theorem for Real Variables</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Taylor%20theorem">Taylor’s theorem</a> , <a href="http://dlmf.nist.gov/search/search?q=one%20variable">one variable</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Hardy (<a href="./bib/H.html#bib1043" title="A Course of Pure Mathematics">1952</a>, pp.&nbsp;285–292, 327–328).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4 and Ch.1</p>
+</div>
+<p>If <span class="math inline">\(f(x)\in C^{n+1}[a,b]\)</span> , then</p>
+<p><a id="E35"></a> <span class="math display">\[
+f(x)=\sum^{n}_{k=0}\frac{f^{(k)}(a)}{k!}(x-a)^{k}+R_{n}, \tag{1.4.35}
+\]</span></p>
+<p><a id="E36"></a> <span class="math display">\[
+R_{n}=\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}, \tag{1.4.36}
+\]</span></p>
+<p>and</p>
+<p><a id="E37"></a> <span class="math display">\[
+R_{n}=\frac{1}{n!}\int^{x}_{a}(x-t)^{n}f^{(n+1)}(t)\,\mathrm{d}t. \tag{1.4.37}
+\]</span></p>
+</section>
+<section id="vii-maxima-and-minima" class="level2">
+<h2 class="anchored" data-anchor-id="vii-maxima-and-minima">§1.4(vii) Maxima and Minima</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=maximum">maximum</a> , <a href="http://dlmf.nist.gov/search/search?q=minimum">minimum</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Hardy (<a href="./bib/H.html#bib1043" title="A Course of Pure Mathematics">1952</a>, pp.&nbsp;234–235).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4 and Ch.1</p>
+</div>
+<p>If <span class="math inline">\(f(x)\)</span> is twice-differentiable, and if also <span class="math inline">\(f^{\prime}(x_{0})=0\)</span> and <span class="math inline">\(f^{\prime\prime}(x_{0})&lt;0\)</span> ( <span class="math inline">\(&gt;0\)</span> ), then <span class="math inline">\(x=x_{0}\)</span> is a local maximum (minimum) (§ 1.4(iii) ) of <span class="math inline">\(f(x)\)</span> . The overall maximum (minimum) of <span class="math inline">\(f(x)\)</span> on <span class="math inline">\([a,b]\)</span> will either be at a local maximum (minimum) or at one of the end points <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> .</p>
+</section>
+<section id="viii-convex-functions" class="level2">
+<h2 class="anchored" data-anchor-id="viii-convex-functions">§1.4(viii) Convex Functions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=calculus">calculus</a> , <a href="http://dlmf.nist.gov/search/search?q=convex">convex</a> , <a href="http://dlmf.nist.gov/search/search?q=convex%20functions">convex functions</a> , <a href="http://dlmf.nist.gov/search/search?q=functions">functions</a> , <a href="http://dlmf.nist.gov/search/search?q=one%20variable">one variable</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Hardy et al.&nbsp;(<a href="./bib/H.html#bib1045" title="Inequalities">1967</a>, pp.&nbsp;70–77).</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.7(iv) , §5.5(iv)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4 and Ch.1</p>
+</div>
+<p>A function <span class="math inline">\(f(x)\)</span> is <em>convex</em> on <span class="math inline">\((a,b)\)</span> if</p>
+<p><a id="E38"></a> <span class="math display">\[
+f((1-t)c+td)\leq(1-t)f(c)+tf(d) \tag{1.4.38}
+\]</span></p>
+<p>for any <span class="math inline">\(c,d\in(a,b)\)</span> , and <span class="math inline">\(t\in[0,1]\)</span> . See Figure 1.4.2 . A similar definition applies to closed intervals <span class="math inline">\([a,b]\)</span> .</p>
+<p>If <span class="math inline">\(f(x)\)</span> is twice differentiable, then <span class="math inline">\(f(x)\)</span> is convex iff <span class="math inline">\(f^{\prime\prime}(x)\geq 0\)</span> on <span class="math inline">\((a,b)\)</span> . A continuously differentiable function is convex iff the curve does not lie below its tangent at any point.</p>
+<p><a id="F2"></a></p>
+<p><img src="../html/1/4/F2.png" class="img-fluid" alt="Figure 1.4.2: Convex function f(x) . g(t)=f((1-t)c+td) , l(t)=(1-t)f(c)+tf(d) , c,d\in(a,b) , 0\leq t\leq 1 ."> :::{note} <strong>Symbols:</strong></p>
+<p><span class="math inline">\(\in\)</span>: element of and <span class="math inline">\((a,b)\)</span>: open interval</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.4(viii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.4(viii) , §1.4 and Ch.1 :::</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nerudev\.github\.io\/Polaris-Kernel\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

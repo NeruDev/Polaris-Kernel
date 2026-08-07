@@ -50,5 +50,6 @@ El Triángulo de Pascal es la representación visual de estos coeficientes, dond
 | $n!$ | Factorial | operación |
 | $P(n, k)$ | Permutaciones | función |
 | $C(n, k)$ | Combinaciones | función |
-| $\binom{n}{k}$ | Coef. Binomial | función |
+| $\binom{n}{k}$ | Coef.
+Binomial | función |
 | $a, b$ | Términos binomio | escalar |

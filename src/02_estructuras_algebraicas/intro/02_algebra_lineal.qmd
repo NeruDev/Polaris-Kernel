@@ -19,7 +19,8 @@ status: "stable"
 ![Efecto de una matriz sobre el espacio](transformacion_lineal.svg)
 
 
-El álgebra lineal es el estudio de vectores, espacios vectoriales y transformaciones lineales. Es una herramienta fundamental en física, ingeniería e informática.
+El álgebra lineal es el estudio de vectores, espacios vectoriales y transformaciones lineales.
+Es una herramienta fundamental en física, ingeniería e informática.
 
 ## Sistemas de ecuaciones
 

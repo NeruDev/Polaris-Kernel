@@ -1,11 +1,12 @@
 ---
-id: "33E10"
+id: "msc00_34_funciones_lame"
 title: "Funciones Lame"
 pilar: "03_analisis_continuidad"
-msc_code: "33E10"
+msc_code: "33E-10"
 difficulty: "abstracto"
 tags:
-  - 33E10
+  - "33E10"
+status: "draft"
 ---
 
 # Funciones Lame

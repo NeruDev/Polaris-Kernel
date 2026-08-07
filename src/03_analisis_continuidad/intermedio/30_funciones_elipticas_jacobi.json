@@ -1,9 +1,11 @@
 {
-  "id": "33E05",
-  "title": "Funciones Elipticas Jacobi",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "33E05",
-  "difficulty": "intermedio",
-  "source_dlmf_chapter": 22,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_30_funciones_elipticas_jacobi",
+    "title": "Funciones Elipticas Jacobi",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "33E-05",
+    "difficulty": "intermedio",
+    "tags": [
+        "33E05"
+    ],
+    "status": "draft"
 }

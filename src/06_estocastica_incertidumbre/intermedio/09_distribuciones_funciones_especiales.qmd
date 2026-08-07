@@ -1,12 +1,13 @@
 ---
-id: "60E05"
+id: "msc00_09_distribuciones_funciones_especiales"
 title: "Distribuciones Funciones Especiales"
 pilar: "06_estocastica_incertidumbre"
-msc_code: "60E05, 62E15"
+msc_code: "60E-05"
 difficulty: "intermedio"
 tags:
-  - 60E05
-  - 62E15
+  - "60E05"
+  - "62E15"
+status: "draft"
 ---
 
 # Distribuciones Funciones Especiales

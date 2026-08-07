@@ -1,11 +1,12 @@
 ---
-id: "33B20"
+id: "msc00_14_integrales_exponenciales_trigonometricas"
 title: "Integrales Exponenciales Trigonométricas"
 pilar: "03_analisis_continuidad"
-msc_code: "33B20"
+msc_code: "33B-20"
 difficulty: "intermedio"
 tags:
-  - 33B20
+  - "33B20"
+status: "draft"
 ---
 
 # Integrales Exponenciales Trigonométricas

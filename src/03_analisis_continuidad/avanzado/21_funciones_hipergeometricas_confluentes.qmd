@@ -1,11 +1,12 @@
 ---
-id: "33C15"
+id: "msc00_21_funciones_hipergeometricas_confluentes"
 title: "Funciones Hipergeometricas Confluentes"
 pilar: "03_analisis_continuidad"
-msc_code: "33C15"
+msc_code: "33C-15"
 difficulty: "avanzado"
 tags:
-  - 33C15
+  - "33C15"
+status: "draft"
 ---
 
 # Funciones Hipergeometricas Confluentes

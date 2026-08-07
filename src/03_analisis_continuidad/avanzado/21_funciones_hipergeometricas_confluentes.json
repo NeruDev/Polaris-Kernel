@@ -1,9 +1,11 @@
 {
-  "id": "33C15",
-  "title": "Funciones Hipergeometricas Confluentes",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "33C15",
-  "difficulty": "avanzado",
-  "source_dlmf_chapter": 13,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_21_funciones_hipergeometricas_confluentes",
+    "title": "Funciones Hipergeometricas Confluentes",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "33C-15",
+    "difficulty": "avanzado",
+    "tags": [
+        "33C15"
+    ],
+    "status": "draft"
 }

@@ -1,3 +1,10 @@
+---
+id: "msc00_readme"
+title: "README"
+pilar: "01_fundamentos_logica"
+msc_code: "00-00"
+status: "draft"
+---
 # Pilar 01: Fundamentos y Lógica - Registro de Activos Gráficos
 
 Este documento describe el estándar utilizado para la generación de imágenes y gráficos dentro de este pilar, así como los parámetros clave de los scripts origen para facilitar su futuro mantenimiento y escalabilidad.
@@ -22,15 +29,18 @@ A continuación se detallan los gráficos pertenecientes a este pilar y las vari
 Ilustra las relaciones inyectiva, sobreyectiva y biyectiva mediante conjuntos (diagramas de Venn).
 - **Estructura:** Se posicionan 3 bloques principales (Inyectiva, Sobreyectiva, Biyectiva) a lo largo del eje X.
 - **Parámetros a ajustar:**
-  - `circle(..., radius: (rx, ry))`: Controla la forma elíptica de los conjuntos. Si se requieren más elementos, incrementa el valor de `ry`.
-  - `content((x, y), [texto])`: Posiciona los elementos dentro de los conjuntos. Asegúrate de modificar `y` espaciadamente para evitar superposiciones.
+  - `circle(..., radius: (rx, ry))`: Controla la forma elíptica de los conjuntos.
+Si se requieren más elementos, incrementa el valor de `ry`.
+  - `content((x, y), [texto])`: Posiciona los elementos dentro de los conjuntos.
+Asegúrate de modificar `y` espaciadamente para evitar superposiciones.
   - `line("origen.east", "destino.west", mark: (end: ">"))`: Dibuja las flechas de mapeo anclándose automáticamente a los bordes de los nodos nombrados.
 
 ### 2. Inducción Matemática (`induccion_matematica.svg`)
 Representa el principio de inducción mediante un efecto dominó, ilustrando el caso base y el paso inductivo.
 - **Estructura:** Utiliza bloques `group({ ... })` para aislar las transformaciones de cada ficha de dominó individual.
 - **Parámetros a ajustar:**
-  - `translate((x, 0))`: Define la posición horizontal de la ficha en la línea de tiempo. Incrementa `x` para separar más las fichas.
+  - `translate((x, 0))`: Define la posición horizontal de la ficha en la línea de tiempo.
+Incrementa `x` para separar más las fichas.
   - `rotate(angulo)`: Controla la inclinación de la ficha (ej. `-25deg` para una ficha cayendo, `0deg` para una en reposo).
   - `rect((-0.2, 0), (0.2, 1.8))`: Modifica el ancho y alto estandarizado de todas las fichas.
 
@@ -38,7 +48,8 @@ Representa el principio de inducción mediante un efecto dominó, ilustrando el 
 Dibuja un Árbol de Derivación Formal (Modus Ponens y Adición).
 - **Estructura:** Uso de anclas (anchors) de posicionamiento semántico mediante nombres de nodos.
 - **Parámetros a ajustar:**
-  - `rect((x1, y1), (x2, y2), name: "Nombre")`: Define el tamaño y posición de las cajas de premisas/conclusiones. Amplía estas coordenadas si el texto interior se desborda.
+  - `rect((x1, y1), (x2, y2), name: "Nombre")`: Define el tamaño y posición de las cajas de premisas/conclusiones.
+Amplía estas coordenadas si el texto interior se desborda.
   - `line("NodoA.south", "NodoB.north")`: La conexión de flechas es relativa (sur a norte). Si cambias los nodos de posición, las flechas se adaptarán automáticamente sin necesidad de re-calcular coordenadas cartesianas.
 
 ---

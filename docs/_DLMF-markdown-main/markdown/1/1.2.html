@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto-input2bf98eb8e0d71d02 – Polaris Kernel</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-e8a923774aa70043a31c64adf822e8b4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Polaris Kernel
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../../">Polaris Kernel</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">01 Fundamentos Logica</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_aritmetica_propiedades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_sistemas_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/02_logica_matematica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/03_teoria_conjuntos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/04_metodos_demostracion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/05_relaciones_equivalencia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/06_funciones_y_mapeos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/07_logica_predicados_inferencia.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">02 Estructuras Algebraicas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/01_algebra_elemental.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/02_algebra_lineal.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/03_algebra_abstracta.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/05_teoria_de_matrices.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/06_ecuaciones_y_desigualdades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/07_polinomios_y_factorizacion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/08_espacios_vectoriales_bases.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">03 Analisis Continuidad</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/01_funciones_y_limites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/02_calculo_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/03_calculo_integral.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/04_calculo_multivariable.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/05_ecuaciones_diferenciales.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/06_analisis_avanzado.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/07_analisis_funcional.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/08_sucesiones_y_series.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">04 Espacio Forma</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/01_geometria_euclidiana.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/02_trigonometria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/03_geometria_analitica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/04_topologia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/05_geometria_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/06_geometria_no_euclidiana.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">05 Discrecion Computacion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/01_combinatoria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/02_teoria_de_grafos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/03_teoria_de_numeros.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/04_metodos_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/05_teoria_automatas.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">06 Estocastica Incertidumbre</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/01_estadistica_descriptiva.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/02_teoria_de_probabilidad.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/03_estadistica_inferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/04_modelos_estocasticos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/05_teoria_informacion.qmd</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#elementary-algebra" id="toc-elementary-algebra" class="nav-link active" data-scroll-target="#elementary-algebra">§1.2 Elementary Algebra</a>
+  <ul class="collapse">
+  <li><a href="#i-binomial-coefficients" id="toc-i-binomial-coefficients" class="nav-link" data-scroll-target="#i-binomial-coefficients">§1.2(i) Binomial Coefficients</a>
+  <ul class="collapse">
+  <li><a href="#binomial-theorem" id="toc-binomial-theorem" class="nav-link" data-scroll-target="#binomial-theorem">Binomial Theorem</a></li>
+  </ul></li>
+  <li><a href="#ii-finite-series" id="toc-ii-finite-series" class="nav-link" data-scroll-target="#ii-finite-series">§1.2(ii) Finite Series</a>
+  <ul class="collapse">
+  <li><a href="#arithmetic-progression" id="toc-arithmetic-progression" class="nav-link" data-scroll-target="#arithmetic-progression">Arithmetic Progression</a></li>
+  <li><a href="#geometric-progression" id="toc-geometric-progression" class="nav-link" data-scroll-target="#geometric-progression">Geometric Progression</a></li>
+  </ul></li>
+  <li><a href="#iii-partial-fractions" id="toc-iii-partial-fractions" class="nav-link" data-scroll-target="#iii-partial-fractions">§1.2(iii) Partial Fractions</a></li>
+  <li><a href="#iv-means" id="toc-iv-means" class="nav-link" data-scroll-target="#iv-means">§1.2(iv) Means</a></li>
+  <li><a href="#v-matrices-vectors-scalar-products-and-norms" id="toc-v-matrices-vectors-scalar-products-and-norms" class="nav-link" data-scroll-target="#v-matrices-vectors-scalar-products-and-norms">§1.2(v) Matrices, Vectors, Scalar Products, and Norms</a>
+  <ul class="collapse">
+  <li><a href="#general-mn-matrices" id="toc-general-mn-matrices" class="nav-link" data-scroll-target="#general-mn-matrices">General m×n Matrices</a></li>
+  <li><a href="#multiplication-of-matrices" id="toc-multiplication-of-matrices" class="nav-link" data-scroll-target="#multiplication-of-matrices">Multiplication of Matrices</a></li>
+  <li><a href="#row-and-column-vectors" id="toc-row-and-column-vectors" class="nav-link" data-scroll-target="#row-and-column-vectors">Row and Column Vectors</a></li>
+  <li><a href="#vector-norms" id="toc-vector-norms" class="nav-link" data-scroll-target="#vector-norms">Vector Norms</a></li>
+  <li><a href="#inequalities" id="toc-inequalities" class="nav-link" data-scroll-target="#inequalities">Inequalities</a></li>
+  </ul></li>
+  <li><a href="#vi-square-matrices" id="toc-vi-square-matrices" class="nav-link" data-scroll-target="#vi-square-matrices">§1.2(vi) Square Matrices</a>
+  <ul class="collapse">
+  <li><a href="#special-forms-of-square-matrices" id="toc-special-forms-of-square-matrices" class="nav-link" data-scroll-target="#special-forms-of-square-matrices">Special Forms of Square Matrices</a></li>
+  <li><a href="#special-properties-and-definitions-relating-to-square-matrices" id="toc-special-properties-and-definitions-relating-to-square-matrices" class="nav-link" data-scroll-target="#special-properties-and-definitions-relating-to-square-matrices">Special Properties and Definitions Relating to Square Matrices</a></li>
+  <li><a href="#the-determinant" id="toc-the-determinant" class="nav-link" data-scroll-target="#the-determinant">The Determinant</a></li>
+  <li><a href="#the-inverse" id="toc-the-inverse" class="nav-link" data-scroll-target="#the-inverse">The Inverse</a></li>
+  <li><a href="#n-linear-equations-in-n-unknowns" id="toc-n-linear-equations-in-n-unknowns" class="nav-link" data-scroll-target="#n-linear-equations-in-n-unknowns">n Linear Equations in n Unknowns</a></li>
+  <li><a href="#the-trace" id="toc-the-trace" class="nav-link" data-scroll-target="#the-trace">The Trace</a></li>
+  <li><a href="#the-commutator" id="toc-the-commutator" class="nav-link" data-scroll-target="#the-commutator">The Commutator</a></li>
+  <li><a href="#norms-of-square-matrices" id="toc-norms-of-square-matrices" class="nav-link" data-scroll-target="#norms-of-square-matrices">Norms of Square Matrices</a></li>
+  <li><a href="#eigenvectors-and-eigenvalues-of-square-matrices" id="toc-eigenvectors-and-eigenvalues-of-square-matrices" class="nav-link" data-scroll-target="#eigenvectors-and-eigenvalues-of-square-matrices">Eigenvectors and Eigenvalues of Square Matrices</a></li>
+  <li><a href="#non-defective-square-matrices" id="toc-non-defective-square-matrices" class="nav-link" data-scroll-target="#non-defective-square-matrices">Non-Defective Square Matrices</a></li>
+  <li><a href="#relation-of-eigenvalues-to-the-determinant-and-trace" id="toc-relation-of-eigenvalues-to-the-determinant-and-trace" class="nav-link" data-scroll-target="#relation-of-eigenvalues-to-the-determinant-and-trace">Relation of Eigenvalues to the Determinant and Trace</a></li>
+  <li><a href="#the-matrix-exponential-and-the-exponential-of-the-trace" id="toc-the-matrix-exponential-and-the-exponential-of-the-trace" class="nav-link" data-scroll-target="#the-matrix-exponential-and-the-exponential-of-the-trace">The Matrix Exponential and the Exponential of the Trace</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="elementary-algebra" class="level1">
+<h1>§1.2 Elementary Algebra</h1>
+<div class="{note}">
+<p><strong>Referenced by:</strong></p>
+<p>Erratum (V1.2.0) §1.2</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for Ch.1</p>
+</div>
+<section id="i-binomial-coefficients" class="level2">
+<h2 class="anchored" data-anchor-id="i-binomial-coefficients">§1.2(i) Binomial Coefficients</h2>
+<div class="{note}">
+<p><strong>Defines:</strong></p>
+<p><span class="math inline">\(\genfrac{(}{)}{0.0pt}{}{m}{n}\)</span> : binomial coefficient</p>
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=binomial%20coefficients">binomial coefficients</a> , <a href="http://dlmf.nist.gov/search/search?q=binomials">binomials</a> , <a href="http://dlmf.nist.gov/search/search?q=definition">definition</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Graham et al.&nbsp;(<a href="./bib/G.html#bib974" title="Concrete Mathematics: A Foundation for Computer Science">1994</a>, pp.&nbsp;157–174). For ( 1.2.1 ), see also Chrystal (<a href="./bib/C.html#bib501" title="Algebra: An Elementary Textbook for the Higher Classes of Secondary Schools and for Colleges">1959b</a>, p.&nbsp;8). For ( 1.2.2 ) and ( 1.2.7 ), see Chrystal (<a href="./bib/C.html#bib500" title="Algebra: An Elementary Textbook for the Higher Classes of Secondary Schools and for Colleges">1959a</a>, pp.&nbsp;62–70).</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.1 , §26.3(i) , §26.3(iv) , Erratum (V1.0.11) for Subsection 1.2(i) , Erratum (V1.0.11) for Clarifications , Erratum (V1.0.5) for Subsection 1.2(i) , Erratum (V1.0.7) for Usability</p>
+<p><strong>Clarification (effective with 1.0.11):</strong></p>
+<p>A sentence has been added after ( 1.2.1 ) to refer to ( 1.2.6 ) as the definition of the binomial coefficient <span class="math inline">\(\genfrac{(}{)}{0.0pt}{}{z}{k}\)</span> when <span class="math inline">\(z\)</span> is complex. As a notational clarification, wherever <span class="math inline">\(n\)</span> appeared originally in ( 1.2.6 )–( 1.2.9 ), it has been replaced by <span class="math inline">\(z\)</span> .</p>
+<p><strong>Addition (effective with 1.0.7):</strong></p>
+<p>The cross-reference to § <a href="./26.3.md" title="§26.3 Lattice Paths: Binomial Coefficients ‣ Properties ‣ Chapter 26 Combinatorial Analysis">26.3</a> has been added at the end of this subsection. <em>Suggested 2013-11-25 by Howard Cohl</em></p>
+<p><strong>Errata (effective with 1.0.5):</strong></p>
+<p>The condition for ( 1.2.2 ), ( 1.2.4 ), and ( 1.2.5 ) was corrected. These equations are true only if <span class="math inline">\(n\)</span> is a positive integer. Previously <span class="math inline">\(n\)</span> was allowed to be zero. <em>Reported 2011-08-10 by Michael Somos</em></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2 and Ch.1</p>
+</div>
+<p>In ( 1.2.1 ) and ( 1.2.3 ) <span class="math inline">\(k\)</span> and <span class="math inline">\(n\)</span> are nonnegative integers and <span class="math inline">\(k\leq n\)</span> . In ( 1.2.2 ), ( 1.2.4 ), and ( 1.2.5 ) <span class="math inline">\(n\)</span> is a positive integer. See also § 26.3(i) .</p>
+<p><a id="E1"></a> <span class="math display">\[
+\genfrac{(}{)}{0.0pt}{}{n}{k}=\frac{n!}{(n-k)!k!}=\genfrac{(}{)}{0.0pt}{}{n}{n-k}. \tag{1.2.1}
+\]</span></p>
+<p>For complex <span class="math inline">\(z\)</span> the binomial coefficient <span class="math inline">\(\genfrac{(}{)}{0.0pt}{}{z}{k}\)</span> is defined via ( 1.2.6 ).</p>
+<section id="binomial-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="binomial-theorem">Binomial Theorem</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=binomial%20theorem">binomial theorem</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(i) , §1.2 and Ch.1</p>
+</div>
+<p><a id="E2"></a> <span class="math display">\[
+(a+b)^{n}=a^{n}+\genfrac{(}{)}{0.0pt}{}{n}{1}a^{n-1}b+\genfrac{(}{)}{0.0pt}{}{n}{2}a^{n-2}b^{2}+\dots+\genfrac{(}{)}{0.0pt}{}{n}{n-1}ab^{n-1}+b^{n}. \tag{1.2.2}
+\]</span></p>
+<p><a id="E3"></a> <span class="math display">\[
+\genfrac{(}{)}{0.0pt}{}{n}{0}+\genfrac{(}{)}{0.0pt}{}{n}{1}+\dots+\genfrac{(}{)}{0.0pt}{}{n}{n}=2^{n}. \tag{1.2.3}
+\]</span></p>
+<p><a id="E4"></a> <span class="math display">\[
+\genfrac{(}{)}{0.0pt}{}{n}{0}-\genfrac{(}{)}{0.0pt}{}{n}{1}+\dots+(-1)^{n}\genfrac{(}{)}{0.0pt}{}{n}{n}=0. \tag{1.2.4}
+\]</span></p>
+<p><a id="E5"></a> <span class="math display">\[
+\genfrac{(}{)}{0.0pt}{}{n}{0}+\genfrac{(}{)}{0.0pt}{}{n}{2}+\genfrac{(}{)}{0.0pt}{}{n}{4}+\dots+\genfrac{(}{)}{0.0pt}{}{n}{\ell}=2^{n-1}, \tag{1.2.5}
+\]</span></p>
+<p>where <span class="math inline">\(\ell\)</span> is <span class="math inline">\(n\)</span> or <span class="math inline">\(n-1\)</span> according as <span class="math inline">\(n\)</span> is even or odd.</p>
+<p>In ( 1.2.6 )–( 1.2.9 ) <span class="math inline">\(k\)</span> and <span class="math inline">\(m\)</span> are nonnegative integers and <span class="math inline">\(z\)</span> is complex.</p>
+<p><a id="E6"></a> <span class="math display">\[
+\genfrac{(}{)}{0.0pt}{}{z}{k}=\frac{z(z-1)\cdots(z-k+1)}{k!}=\frac{(-1)^{k}{\left(-z\right)_{k}}}{k!}=(-1)^{k}\genfrac{(}{)}{0.0pt}{}{k-z-1}{k}. \tag{1.2.6}
+\]</span></p>
+<p><a id="E7"></a> <span class="math display">\[
+\genfrac{(}{)}{0.0pt}{}{z+1}{k}=\genfrac{(}{)}{0.0pt}{}{z}{k}+\genfrac{(}{)}{0.0pt}{}{z}{k-1}. \tag{1.2.7}
+\]</span></p>
+<p><a id="E8"></a> <span class="math display">\[
+\sum^{m}_{k=0}\genfrac{(}{)}{0.0pt}{}{z+k}{k}=\genfrac{(}{)}{0.0pt}{}{z+m+1}{m}. \tag{1.2.8}
+\]</span></p>
+<p><a id="E9"></a> <span class="math display">\[
+\genfrac{(}{)}{0.0pt}{}{z}{0}-\genfrac{(}{)}{0.0pt}{}{z}{1}+\dots+(-1)^{m}\genfrac{(}{)}{0.0pt}{}{z}{m}=(-1)^{m}\genfrac{(}{)}{0.0pt}{}{z-1}{m}. \tag{1.2.9}
+\]</span></p>
+<p>See also § <a href="./26.3.md" title="§26.3 Lattice Paths: Binomial Coefficients ‣ Properties ‣ Chapter 26 Combinatorial Analysis">26.3</a> .</p>
+</section>
+</section>
+<section id="ii-finite-series" class="level2">
+<h2 class="anchored" data-anchor-id="ii-finite-series">§1.2(ii) Finite Series</h2>
+<div class="{note}">
+<p><strong>Notes:</strong></p>
+<p>See Graham et al.&nbsp;(<a href="./bib/G.html#bib974" title="Concrete Mathematics: A Foundation for Computer Science">1994</a>, pp.&nbsp;31–34); see also Chrystal (<a href="./bib/C.html#bib500" title="Algebra: An Elementary Textbook for the Higher Classes of Secondary Schools and for Colleges">1959a</a>, pp.&nbsp;482–483, 489).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2 and Ch.1</p>
+</div>
+<section id="arithmetic-progression" class="level3">
+<h3 class="anchored" data-anchor-id="arithmetic-progression">Arithmetic Progression</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=arithmetic%20progression">arithmetic progression</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(ii) , §1.2 and Ch.1</p>
+</div>
+<p><a id="E10"></a> <span class="math display">\[
+a+(a+d)+(a+2d)+\dots+(a+(n-1)d)=na+\tfrac{1}{2}n(n-1)d=\tfrac{1}{2}n(a+\ell), \tag{1.2.10}
+\]</span></p>
+<p>where <span class="math inline">\(\ell\)</span> = last term of the series = <span class="math inline">\(a+(n-1)d\)</span> .</p>
+</section>
+<section id="geometric-progression" class="level3">
+<h3 class="anchored" data-anchor-id="geometric-progression">Geometric Progression</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=geometric%20progression%20%28or%20series%29">geometric progression (or series)</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(ii) , §1.2 and Ch.1</p>
+</div>
+<p><a id="E11"></a> <span class="math display">\[
+a+ax+ax^{2}+\dots+ax^{n-1}=\frac{a(1-x^{n})}{1-x}, \tag{1.2.11}
+\]</span></p>
+</section>
+</section>
+<section id="iii-partial-fractions" class="level2">
+<h2 class="anchored" data-anchor-id="iii-partial-fractions">§1.2(iii) Partial Fractions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=partial%20fractions">partial fractions</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Graham et al.&nbsp;(<a href="./bib/G.html#bib974" title="Concrete Mathematics: A Foundation for Computer Science">1994</a>, pp.&nbsp;338–345). See also Chrystal (<a href="./bib/C.html#bib500" title="Algebra: An Elementary Textbook for the Higher Classes of Secondary Schools and for Colleges">1959a</a>, pp.&nbsp;151–159).</p>
+<p><strong>Referenced by:</strong></p>
+<p>§5.19(i)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2 and Ch.1</p>
+</div>
+<p>Let <span class="math inline">\(\alpha_{1},\alpha_{2},\dots,\alpha_{n}\)</span> be distinct constants, and <span class="math inline">\(f(x)\)</span> be a polynomial of degree less than <span class="math inline">\(n\)</span> . Then</p>
+<p><a id="E12"></a> <span class="math display">\[
+\frac{f(x)}{(x-\alpha_{1})(x-\alpha_{2})\cdots(x-\alpha_{n})}=\frac{A_{1}}{x-\alpha_{1}}+\frac{A_{2}}{x-\alpha_{2}}+\dots+\frac{A_{n}}{x-\alpha_{n}}, \tag{1.2.12}
+\]</span></p>
+<p>where</p>
+<p><a id="E13"></a> <span class="math display">\[
+A_{j}=\frac{f(\alpha_{j})}{\prod\limits_{k\not=j}(\alpha_{j}-\alpha_{k})}. \tag{1.2.13}
+\]</span></p>
+<p>Also,</p>
+<p><a id="E14"></a> <span class="math display">\[
+\frac{f(x)}{(x-\alpha_{1})^{n}}=\frac{B_{1}}{x-\alpha_{1}}+\frac{B_{2}}{(x-\alpha_{1})^{2}}+\dots+\frac{B_{n}}{(x-\alpha_{1})^{n}}, \tag{1.2.14}
+\]</span></p>
+<p>where</p>
+<p><a id="E15"></a> <span class="math display">\[
+B_{j}=\frac{f^{(n-j)}(\alpha_{1})}{(n-j)!}, \tag{1.2.15}
+\]</span></p>
+<p>and <span class="math inline">\(f^{(k)}\)</span> is the <span class="math inline">\(k\)</span> -th derivative of <span class="math inline">\(f\)</span> (§ 1.4(iii) ).</p>
+<p>If <span class="math inline">\(m_{1},m_{2},\dots,m_{n}\)</span> are positive integers and <span class="math inline">\(\deg f&lt;\sum_{j=1}^{n}m_{j}\)</span> , then there exist polynomials <span class="math inline">\(f_{j}(x)\)</span> , <span class="math inline">\(\deg f_{j}&lt;m_{j}\)</span> , such that</p>
+<p><a id="E16"></a> <span class="math display">\[
+\frac{f(x)}{(x-\alpha_{1})^{m_{1}}(x-\alpha_{2})^{m_{2}}\cdots(x-\alpha_{n})^{m_{n}}}=\frac{f_{1}(x)}{(x-\alpha_{1})^{m_{1}}}+\frac{f_{2}(x)}{(x-\alpha_{2})^{m_{2}}}+\cdots+\frac{f_{n}(x)}{(x-\alpha_{n})^{m_{n}}}. \tag{1.2.16}
+\]</span></p>
+<p>To find the polynomials <span class="math inline">\(f_{j}(x)\)</span> , <span class="math inline">\(j=1,2,\dots,n\)</span> , multiply both sides by the denominator of the left-hand side and equate coefficients. See Chrystal (<a href="./bib/C.html#bib500" title="Algebra: An Elementary Textbook for the Higher Classes of Secondary Schools and for Colleges">1959a</a>, pp.&nbsp;151–159).</p>
+</section>
+<section id="iv-means" class="level2">
+<h2 class="anchored" data-anchor-id="iv-means">§1.2(iv) Means</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=arithmetic%20mean">arithmetic mean</a> , <a href="http://dlmf.nist.gov/search/search?q=geometric%20mean">geometric mean</a> , <a href="http://dlmf.nist.gov/search/search?q=harmonic%20mean">harmonic mean</a> , <a href="http://dlmf.nist.gov/search/search?q=means">means</a> , <a href="http://dlmf.nist.gov/search/search?q=weighted%20means">weighted means</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Hardy et al.&nbsp;(<a href="./bib/H.html#bib1045" title="Inequalities">1967</a>, pp.&nbsp;12–15).</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.7(iii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2 and Ch.1</p>
+</div>
+<p>The <em>arithmetic mean</em> of <span class="math inline">\(n\)</span> numbers <span class="math inline">\(a_{1},a_{2},\dots,a_{n}\)</span> is</p>
+<p><a id="E17"></a> <span class="math display">\[
+A=\frac{a_{1}+a_{2}+\dots+a_{n}}{n}. \tag{1.2.17}
+\]</span></p>
+<p>The <em>geometric mean</em> <span class="math inline">\(G\)</span> and <em>harmonic mean</em> <span class="math inline">\(H\)</span> of <span class="math inline">\(n\)</span> positive numbers <span class="math inline">\(a_{1},a_{2},\dots,a_{n}\)</span> are given by</p>
+<p><a id="E18"></a> <span class="math display">\[
+G=(a_{1}a_{2}\cdots a_{n})^{1/n}, \tag{1.2.18}
+\]</span></p>
+<p><a id="E19"></a> <span class="math display">\[
+\frac{1}{H}=\frac{1}{n}\left(\frac{1}{a_{1}}+\frac{1}{a_{2}}+\dots+\frac{1}{a_{n}}\right). \tag{1.2.19}
+\]</span></p>
+<p>If <span class="math inline">\(r\)</span> is a nonzero real number, then the <em>weighted mean</em> <span class="math inline">\(M(r)\)</span> of <span class="math inline">\(n\)</span> nonnegative numbers <span class="math inline">\(a_{1},a_{2},\dots,a_{n}\)</span> , and <span class="math inline">\(n\)</span> positive numbers <span class="math inline">\(p_{1},p_{2},\dots,p_{n}\)</span> with</p>
+<p><a id="E20"></a> <span class="math display">\[
+p_{1}+p_{2}+\dots+p_{n}=1, \tag{1.2.20}
+\]</span></p>
+<p>is defined by</p>
+<p><a id="E21"></a> <span class="math display">\[
+M(r)=(p_{1}a_{1}^{r}+p_{2}a_{2}^{r}+\dots+p_{n}a_{n}^{r})^{1/r}, \tag{1.2.21}
+\]</span></p>
+<p>with the exception</p>
+<p><a id="E22"></a> <span class="math display">\[
+M(r)=0, \tag{1.2.22}
+\]</span></p>
+<p><a id="EGx1"></a></p>
+<p><span class="math display">\[
+\displaystyle\lim_{r\to\infty}M(r) \displaystyle=\max(a_{1},a_{2},\dots,a_{n}), \tag{1.2.23}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(n\)</span>: nonnegative integer and <span class="math inline">\(M(r)\)</span>: weighted mean</p>
+<p><strong>A&amp;S Ref:</strong></p>
+<p>3.1.16</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(iv) , §1.2 and Ch.1</p>
+</div>
+<p><span class="math display">\[
+\displaystyle\lim_{r\to-\infty}M(r) \displaystyle=\min(a_{1},a_{2},\dots,a_{n}). \tag{1.2.24}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(n\)</span>: nonnegative integer and <span class="math inline">\(M(r)\)</span>: weighted mean</p>
+<p><strong>A&amp;S Ref:</strong></p>
+<p>3.1.17</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(iv) , §1.2 and Ch.1</p>
+</div>
+<p>For <span class="math inline">\(p_{j}=1/n\)</span> , <span class="math inline">\(j=1,2,\dots,n\)</span> ,</p>
+<p><a id="E25"></a></p>
+<p><a id="Ex1"></a> <span class="math display">\[
+\displaystyle M(1) \displaystyle=A, \tag{1.2.25}
+\]</span></p>
+<p><a id="Ex2"></a> <span class="math display">\[
+\displaystyle M(-1) \displaystyle=H,
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(A\)</span>: arithmetic mean , <span class="math inline">\(H\)</span>: harmonic mean and <span class="math inline">\(M(r)\)</span>: weighted mean</p>
+<p><strong>A&amp;S Ref:</strong></p>
+<p>3.1.19 3.1.20</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(iv) , §1.2 and Ch.1</p>
+</div>
+<p>and</p>
+<p><a id="E26"></a> <span class="math display">\[
+\lim_{r\to 0}M(r)=G. \tag{1.2.26}
+\]</span></p>
+<p>The last two equations require <span class="math inline">\(a_{j}&gt;0\)</span> for all <span class="math inline">\(j\)</span> .</p>
+</section>
+<section id="v-matrices-vectors-scalar-products-and-norms" class="level2">
+<h2 class="anchored" data-anchor-id="v-matrices-vectors-scalar-products-and-norms">§1.2(v) Matrices, Vectors, Scalar Products, and Norms</h2>
+<div class="{note}">
+<p><strong>Notes:</strong></p>
+<p>See Axler (<a href="./bib/index.html#bib3097" title="Linear algebra done right">2015</a>, Chapters 3c, 7) and Rudin (<a href="./bib/R.html#bib2983" title="Real and complex analysis">1966</a>, Chapter 3).</p>
+<p><strong>Referenced by:</strong></p>
+<p>Erratum (V1.2.0) §1.2 , Version 1.2.0 (March 27, 2024)</p>
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>This subsection was added.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2 and Ch.1</p>
+</div>
+<section id="general-mn-matrices" class="level3">
+<h3 class="anchored" data-anchor-id="general-mn-matrices">General m×n Matrices</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=matrix%2C%20index%20notation%20for%20m%20by%20n">matrix, index notation for m by n</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(v) , §1.2 and Ch.1</p>
+</div>
+<p>The full index form of an <span class="math inline">\(m\times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is</p>
+<p><a id="E27"></a> <span class="math display">\[
+\mathbf{A}=[a_{ij}]=\left[\begin{matrix}a_{11}&amp;a_{12}&amp;\dots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\dots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\dots&amp;a_{mn}\end{matrix}\right], \tag{1.2.27}
+\]</span></p>
+<p>with matrix elements <span class="math inline">\(a_{ij}\in\mathbb{C}\)</span> , where <span class="math inline">\(i\)</span> , <span class="math inline">\(j\)</span> are the row and column indices, respectively. A matrix is <em>zero</em> if all its elements are zero, denoted <span class="math inline">\(\boldsymbol{{0}}\)</span> . A matrix is <em>real</em> if all its elements are real.</p>
+<p>The <em>transpose</em> of <span class="math inline">\(\mathbf{A}\)</span> = <span class="math inline">\([a_{ij}]\)</span> is the <span class="math inline">\(n\times m\)</span> matrix</p>
+<p><a id="E28"></a> <span class="math display">\[
+\mathbf{A}^{\mathrm{T}}=[a_{ji}], \tag{1.2.28}
+\]</span></p>
+<p>the <em>complex conjugate</em> is</p>
+<p><a id="E29"></a> <span class="math display">\[
+\overline{\mathbf{A}}=[\overline{a_{ij}}], \tag{1.2.29}
+\]</span></p>
+<p>the <em>Hermitian conjugate</em> is</p>
+<p><a id="E30"></a> <span class="math display">\[
+{\mathbf{A}}^{{\rm H}}=[\overline{a_{ji}}]. \tag{1.2.30}
+\]</span></p>
+<p>Multiplication by a scalar is given by</p>
+<p><a id="E31"></a> <span class="math display">\[
+\alpha\mathbf{A}=\mathbf{A}\alpha=[\alpha a_{ij}]. \tag{1.2.31}
+\]</span></p>
+<p>For matrices <span class="math inline">\(\mathbf{A}\)</span> , <span class="math inline">\(\mathbf{B}\)</span> and <span class="math inline">\(\mathbf{C}\)</span> of the same dimensions,</p>
+<p><a id="E32"></a> <span class="math display">\[
+\mathbf{A}+\mathbf{B}=\mathbf{B}+\mathbf{A}=[a_{ij}+b_{ij}], \tag{1.2.32}
+\]</span></p>
+<p><a id="E33"></a> <span class="math display">\[
+\mathbf{A}+\mathbf{B}+\mathbf{C}=(\mathbf{A}+\mathbf{B})+\mathbf{C}=\mathbf{A}+(\mathbf{B}+\mathbf{C})=[a_{ij}+b_{ij}+c_{ij}]. \tag{1.2.33}
+\]</span></p>
+</section>
+<section id="multiplication-of-matrices" class="level3">
+<h3 class="anchored" data-anchor-id="multiplication-of-matrices">Multiplication of Matrices</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(v) , §1.2 and Ch.1</p>
+</div>
+<p>Multiplication of an <span class="math inline">\(m\times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and an <span class="math inline">\(m^{\prime}\times n^{\prime}\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> , giving the <span class="math inline">\(m\times n^{\prime}\)</span> matrix <span class="math inline">\(\mathbf{C}=\mathbf{A}\mathbf{B}\)</span> is <em>defined</em> iff <span class="math inline">\(n=m^{\prime}\)</span> . If defined, <span class="math inline">\(\mathbf{C}=[c_{ij}]\)</span> with</p>
+<p><a id="E34"></a> <span class="math display">\[
+c_{ij}=\sum_{k=1}^{n}a_{ik}b_{kj}. \tag{1.2.34}
+\]</span></p>
+<p>This is the <em>row times column rule</em> .</p>
+<p>Assuming the indicated multiplications are defined: matrix multiplication is <em>associative</em></p>
+<p><a id="E35"></a> <span class="math display">\[
+\mathbf{A}(\mathbf{B}\mathbf{C})=(\mathbf{A}\mathbf{B})\mathbf{C}; \tag{1.2.35}
+\]</span></p>
+<p><em>distributive</em> if <span class="math inline">\(\mathbf{B}\)</span> and <span class="math inline">\(\mathbf{C}\)</span> have the same dimensions</p>
+<p><a id="E36"></a> <span class="math display">\[
+\mathbf{A}(\mathbf{B}+\mathbf{C})=\mathbf{A}\mathbf{B}+\mathbf{A}\mathbf{C}. \tag{1.2.36}
+\]</span></p>
+<p>The <em>transpose of the product</em> is</p>
+<p><a id="E37"></a> <span class="math display">\[
+(\mathbf{A}\mathbf{B})^{\mathrm{T}}=\mathbf{B}^{\mathrm{T}}\mathbf{A}^{\mathrm{T}}. \tag{1.2.37}
+\]</span></p>
+<p>All of the above are defined for <span class="math inline">\(n\times n\)</span> , or <em>square matrices of order n</em> , note that matrix multiplication is not necessarily commutative; see § 1.2(vi) for special properties of square matrices.</p>
+</section>
+<section id="row-and-column-vectors" class="level3">
+<h3 class="anchored" data-anchor-id="row-and-column-vectors">Row and Column Vectors</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(v) , §1.2 and Ch.1</p>
+</div>
+<p>A <em>column vector</em> of <em>length</em> <span class="math inline">\(n\)</span> is an <span class="math inline">\(n\times 1\)</span> matrix</p>
+<p><a id="E38"></a> <span class="math display">\[
+\mathbf{v}=\left[\begin{matrix}v_{1}\\
+v_{2}\\
+\vdots\\
+v_{n}\end{matrix}\right], \tag{1.2.38}
+\]</span></p>
+<p>and the corresponding transposed <em>row vector</em> of length <span class="math inline">\(n\)</span> is</p>
+<p><a id="E39"></a> <span class="math display">\[
+\mathbf{v}^{\mathrm{T}}=\left[\begin{matrix}v_{1}&amp;v_{2}&amp;\dots&amp;v_{n}\\
+\end{matrix}\right]. \tag{1.2.39}
+\]</span></p>
+<p>The column vector <span class="math inline">\(\mathbf{v}\)</span> is often written as <span class="math inline">\([v_{1}~{}v_{2}~{}...~{}v_{n}]^{\mathrm{T}}\)</span> to avoid inconvenient typography. The <em>zero vector</em> <span class="math inline">\(\mathbf{v}=\boldsymbol{{0}}\)</span> has <span class="math inline">\(v_{i}=0\)</span> for <span class="math inline">\(i=1,2,\dots,n\)</span> .</p>
+<p>Column vectors <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> of the same length <span class="math inline">\(n\)</span> have a <em>scalar product</em></p>
+<p><a id="E40"></a> <span class="math display">\[
+\left\langle\mathbf{u},\mathbf{v}\right\rangle=\sum_{i=1}^{n}u_{i}\overline{v_{i}}={\mathbf{v}}^{{\rm H}}\mathbf{u}. \tag{1.2.40}
+\]</span></p>
+<p>The <em>dot product</em> notation <span class="math inline">\(\mathbf{u}\cdot\mathbf{v}\)</span> is reserved for the physical three-dimensional vectors of ( 1.6.2 ).</p>
+<p>The scalar product has properties</p>
+<p><a id="E41"></a> <span class="math display">\[
+\left\langle\mathbf{u},\mathbf{v}\right\rangle=\overline{\left\langle\mathbf{v},\mathbf{u}\right\rangle}, \tag{1.2.41}
+\]</span></p>
+<p>for <span class="math inline">\(\alpha,\beta\in\mathbb{C}\)</span></p>
+<p><a id="E42"></a> <span class="math display">\[
+\left\langle\alpha\mathbf{u},\beta\mathbf{v}\right\rangle=\alpha\overline{\beta}\left\langle\mathbf{u},\mathbf{v}\right\rangle, \tag{1.2.42}
+\]</span></p>
+<p>and</p>
+<p><a id="E43"></a> <span class="math display">\[
+\left\langle\mathbf{v},\mathbf{v}\right\rangle=0, \tag{1.2.43}
+\]</span></p>
+<p>if and only if <span class="math inline">\(\mathbf{v}=\boldsymbol{{0}}\)</span> .</p>
+<p>If <span class="math inline">\(\mathbf{u}\)</span> , <span class="math inline">\(\mathbf{v}\)</span> , <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are real the complex conjugate bars can be omitted in ( 1.2.40 )–( 1.2.42 ).</p>
+<p>Two vectors <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> are <em>orthogonal</em> if</p>
+<p><a id="E44"></a> <span class="math display">\[
+\left\langle\mathbf{u},\mathbf{v}\right\rangle=0. \tag{1.2.44}
+\]</span></p>
+</section>
+<section id="vector-norms" class="level3">
+<h3 class="anchored" data-anchor-id="vector-norms">Vector Norms</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(v) , §1.2 and Ch.1</p>
+</div>
+<p>The <span class="math inline">\(l^{p}\)</span> norm of a (real or complex) vector is</p>
+<p><a id="E45"></a> <span class="math display">\[
+\left\|{\mathbf{v}}\right\|_{p}=\left(\sum_{i=1}^{n}{\left|v_{i}\right|}^{p}\right)^{1/p}, \tag{1.2.45}
+\]</span></p>
+<p>Special cases are the <em>Euclidean length</em> or <em><span class="math inline">\(l^{2}\)</span> norm</em></p>
+<p><a id="E46"></a> <span class="math display">\[
+\left\|{\mathbf{v}}\right\|=\left\|{\mathbf{v}}\right\|_{2}=\sqrt{\left\langle\mathbf{v},\mathbf{v}\right\rangle}, \tag{1.2.46}
+\]</span></p>
+<p>the <span class="math inline">\(l^{1}\)</span> norm</p>
+<p><a id="E47"></a> <span class="math display">\[
+\left\|{\mathbf{v}}\right\|_{1}=\sum_{i=1}^{n}\left|v_{i}\right|, \tag{1.2.47}
+\]</span></p>
+<p>and as <span class="math inline">\(p\to\infty\)</span></p>
+<p><a id="E48"></a> <span class="math display">\[
+\left\|{\mathbf{v}}\right\|_{\infty}=\max(\left|v_{1}\right|,\left|v_{2}\right|,\dots,\left|v_{n}\right|). \tag{1.2.48}
+\]</span></p>
+<p>The <span class="math inline">\(l^{2}\)</span> norm is implied unless otherwise indicated. A vector of <span class="math inline">\(l^{2}\)</span> norm unity is <em>normalized</em> and every non-zero vector <span class="math inline">\(\mathbf{v}\)</span> can be normalized via <span class="math inline">\(\mathbf{v}\to\mathbf{v}/\left\|{\mathbf{v}}\right\|\)</span> .</p>
+</section>
+<section id="inequalities" class="level3">
+<h3 class="anchored" data-anchor-id="inequalities">Inequalities</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(v) , §1.2 and Ch.1</p>
+</div>
+<p>If</p>
+<p><a id="E49"></a> <span class="math display">\[
+\frac{1}{p}+\frac{1}{q}=1 \tag{1.2.49}
+\]</span></p>
+<p>we have <em>Hölder’s Inequality</em></p>
+<p><a id="E50"></a> <span class="math display">\[
+\left|\left\langle\mathbf{u},\mathbf{v}\right\rangle\right|\leq\left\|{\mathbf{u}}\right\|_{p}\,\left\|{\mathbf{v}}\right\|_{q}, \tag{1.2.50}
+\]</span></p>
+<p>which for <span class="math inline">\(p=q=2\)</span> is the <em>Cauchy-Schwartz inequality</em></p>
+<p><a id="E51"></a> <span class="math display">\[
+\left|\left\langle\mathbf{u},\mathbf{v}\right\rangle\right|\leq\left\|{\mathbf{u}}\right\|\,\left\|{\mathbf{v}}\right\|, \tag{1.2.51}
+\]</span></p>
+<p>the equality holding iff <span class="math inline">\(\mathbf{v}\)</span> is a scalar (real or complex) multiple of <span class="math inline">\(\mathbf{u}\)</span> . The <em>triangle inequality</em> ,</p>
+<p><a id="E52"></a> <span class="math display">\[
+\left\|{\mathbf{u}+\mathbf{v}}\right\|\leq\left\|{\mathbf{u}}\right\|+\left\|{\mathbf{v}}\right\|. \tag{1.2.52}
+\]</span></p>
+<p>For similar and more inequalities see § 1.7(i) .</p>
+</section>
+</section>
+<section id="vi-square-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="vi-square-matrices">§1.2(vi) Square Matrices</h2>
+<div class="{note}">
+<p><strong>Notes:</strong></p>
+<p>See Axler (<a href="./bib/index.html#bib3097" title="Linear algebra done right">2015</a>, Chapters 6, 10) or Shilov (<a href="./bib/S.html#bib2970" title="Introduction to the Theory of Linear Spaces">2013</a>, Chapters 1, 7).</p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.2(v) , Erratum (V1.2.0) §1.2 , Version 1.2.0 (March 27, 2024)</p>
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>This subsection was added.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2 and Ch.1</p>
+</div>
+<p>Square <span class="math inline">\(n\times n\)</span> matrices (said to be of <em>order <span class="math inline">\(n\)</span></em> ) dominate the use of matrices in the DLMF, and they have many special properties. Unless otherwise indicated, matrices are assumed square, of order <span class="math inline">\(n\)</span> ; and, when vectors are combined with them, these are of length <span class="math inline">\(n\)</span> .</p>
+<section id="special-forms-of-square-matrices" class="level3">
+<h3 class="anchored" data-anchor-id="special-forms-of-square-matrices">Special Forms of Square Matrices</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>The <em>identity matrix</em> <span class="math inline">\(\mathbf{I}\)</span> , is defined as</p>
+<p><a id="E53"></a> <span class="math display">\[
+\mathbf{I}=[\delta_{i,j}]. \tag{1.2.53}
+\]</span></p>
+<p>A matrix <span class="math inline">\(\mathbf{A}\)</span> is: a <em>diagonal matrix</em> if</p>
+<p><a id="E54"></a> <span class="math display">\[
+a_{ij}=0, \tag{1.2.54}
+\]</span></p>
+<p>a <em>real symmetric matrix</em> if</p>
+<p><a id="E55"></a> <span class="math display">\[
+a_{ji}=a_{ij},~{}~{}a_{ij}\in\mathbb{R}, \tag{1.2.55}
+\]</span></p>
+<p>an <em>Hermitian matrix</em> if</p>
+<p><a id="E56"></a> <span class="math display">\[
+a_{ji}=\overline{a_{ij}},~{}~{}a_{ij}\in\mathbb{C}, \tag{1.2.56}
+\]</span></p>
+<p>a <em>tridiagonal matrix</em> if</p>
+<p><a id="E57"></a> <span class="math display">\[
+a_{ij}=0, \tag{1.2.57}
+\]</span></p>
+<p><span class="math inline">\(\mathbf{A}\)</span> is an <em>upper</em> or <em>lower triangular matrix</em> if all <span class="math inline">\(a_{ij}\)</span> vanish for <span class="math inline">\(i&gt;j\)</span> or <span class="math inline">\(i&lt;j\)</span> , respectively.</p>
+<p>Equation ( 3.2.7 ) displays a <em>tridiagonal</em> matrix in index form; ( 3.2.4 ) does the same for a <em>lower triangular</em> matrix.</p>
+</section>
+<section id="special-properties-and-definitions-relating-to-square-matrices" class="level3">
+<h3 class="anchored" data-anchor-id="special-properties-and-definitions-relating-to-square-matrices">Special Properties and Definitions Relating to Square Matrices</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+</section>
+<section id="the-determinant" class="level3">
+<h3 class="anchored" data-anchor-id="the-determinant">The Determinant</h3>
+<div class="{note}">
+<p><strong>Defines:</strong></p>
+<p><span class="math inline">\(\det\)</span> : determinant</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>The matrix <span class="math inline">\(\mathbf{A}\)</span> has a <em>determinant</em> , <span class="math inline">\(\det(\mathbf{A})\)</span> , explored further in § <a href="../../../../docs/DLMF-markdown-main/markdown/1/1.3.html" title="§1.3 Determinants, Linear Operators, and Spectral Expansions ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods">1.3</a> , denoted, in full index form, as</p>
+<p><a id="E58"></a> <span class="math display">\[
+\left|\mathbf{A}\right|=\det(\mathbf{A})=\left|\begin{matrix}a_{11}&amp;a_{12}&amp;\dots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\dots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\dots&amp;a_{nn}\end{matrix}\right|, \tag{1.2.58}
+\]</span></p>
+<p>where <span class="math inline">\(\det(\mathbf{A})\)</span> is defined by the Leibniz formula</p>
+<p><a id="E59"></a> <span class="math display">\[
+\det(\mathbf{A})=\sum_{\sigma\in\mathfrak{S}_{n}}\operatorname{sign}{\sigma}\prod_{i=1}^{n}a_{i,\sigma(i)}. \tag{1.2.59}
+\]</span></p>
+<p><span class="math inline">\(\mathfrak{S}_{n}\)</span> is the set of all permutations of the set <span class="math inline">\(\{1,2,...,n\}\)</span> . See § <a href="./26.13.md" title="§26.13 Permutations: Cycle Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis">26.13</a> for the terminology used herein.</p>
+</section>
+<section id="the-inverse" class="level3">
+<h3 class="anchored" data-anchor-id="the-inverse">The Inverse</h3>
+<div class="{note}">
+<p><strong>Defines:</strong></p>
+<p><span class="math inline">\({\mathbf{A}}^{-1}\)</span> : matrix inverse</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>If det( <span class="math inline">\(\mathbf{A}\)</span> ) <span class="math inline">\(\neq\)</span> <span class="math inline">\(0\)</span> , <span class="math inline">\(\mathbf{A}\)</span> has a unique <em>inverse</em> , <span class="math inline">\({\mathbf{A}}^{-1}\)</span> , such that</p>
+<p><a id="E60"></a> <span class="math display">\[
+\mathbf{A}{\mathbf{A}}^{-1}={\mathbf{A}}^{-1}\mathbf{A}=\mathbf{I}. \tag{1.2.60}
+\]</span></p>
+<p>A square matrix <span class="math inline">\(\boldsymbol{{A}}\)</span> is <em>singular</em> if <span class="math inline">\(\det(\mathbf{A})=0\)</span> , otherwise it is <em>non-singular</em> . If <span class="math inline">\(\det(\mathbf{A})=0\)</span> then <span class="math inline">\(\mathbf{A}\mathbf{B}=\mathbf{A}\mathbf{C}\)</span> does not imply that <span class="math inline">\(\mathbf{B}=\mathbf{C}\)</span> ; if <span class="math inline">\(\det(\mathbf{A})\neq 0\)</span> , then <span class="math inline">\(\mathbf{B}=\mathbf{C}\)</span> , as both sides may be multiplied by <span class="math inline">\({\mathbf{A}}^{-1}\)</span> .</p>
+</section>
+<section id="n-linear-equations-in-n-unknowns" class="level3">
+<h3 class="anchored" data-anchor-id="n-linear-equations-in-n-unknowns">n Linear Equations in n Unknowns</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>Given a square matrix <span class="math inline">\(\mathbf{A}\)</span> and a vector <span class="math inline">\(\mathbf{c}\)</span> . If <span class="math inline">\(\det(\mathbf{A})\neq 0\)</span> the <em>system of <span class="math inline">\(n\)</span> linear equations in <span class="math inline">\(n\)</span> unknowns</em> ,</p>
+<p><a id="E61"></a> <span class="math display">\[
+\mathbf{A}\mathbf{b}=\mathbf{c} \tag{1.2.61}
+\]</span></p>
+<p>has a unique solution, <span class="math inline">\(\mathbf{b}={\mathbf{A}}^{-1}\mathbf{c}\)</span> . If <span class="math inline">\(\det(\mathbf{A})=0\)</span> then, depending on <span class="math inline">\(\mathbf{c}\)</span> , there is either no solution or there are infinitely many solutions, being the sum of a particular solution of ( 1.2.61 ) and any solution of <span class="math inline">\(\mathbf{A}\mathbf{b}=\boldsymbol{{0}}\)</span> . Numerical methods and issues for solution of ( 1.2.61 ) appear in §§ 3.2(i) to 3.2(iii) .</p>
+</section>
+<section id="the-trace" class="level3">
+<h3 class="anchored" data-anchor-id="the-trace">The Trace</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>The <em>trace</em> of <span class="math inline">\(\mathbf{A}=[a_{ij}]\)</span> is</p>
+<p><a id="E62"></a> <span class="math display">\[
+\operatorname{tr}(\mathbf{A})=\sum_{i=1}^{n}a_{ii}. \tag{1.2.62}
+\]</span></p>
+<p>Further,</p>
+<p><a id="E63"></a> <span class="math display">\[
+\operatorname{tr}(\alpha\mathbf{A})=\alpha\operatorname{tr}(\mathbf{A}), \tag{1.2.63}
+\]</span></p>
+<p><a id="E64"></a> <span class="math display">\[
+\operatorname{tr}(\mathbf{A}+\mathbf{B})=\operatorname{tr}(\mathbf{A})+\operatorname{tr}(\mathbf{B}), \tag{1.2.64}
+\]</span></p>
+<p>and</p>
+<p><a id="E65"></a> <span class="math display">\[
+\operatorname{tr}(\mathbf{A}\mathbf{B})=\operatorname{tr}(\mathbf{B}\mathbf{A}). \tag{1.2.65}
+\]</span></p>
+</section>
+<section id="the-commutator" class="level3">
+<h3 class="anchored" data-anchor-id="the-commutator">The Commutator</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>If <span class="math inline">\(\mathbf{A}\mathbf{B}=\mathbf{B}\mathbf{A}\)</span> the matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> are said to <em>commute</em> . The difference between <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> and <span class="math inline">\(\mathbf{B}\mathbf{A}\)</span> is the <em>commutator</em> denoted as</p>
+<p><a id="E66"></a> <span class="math display">\[
+[{\mathbf{A}},{\mathbf{B}}]=-[{\mathbf{B}},{\mathbf{A}}]=\mathbf{A}\mathbf{B}-\mathbf{B}\mathbf{A}. \tag{1.2.66}
+\]</span></p>
+</section>
+<section id="norms-of-square-matrices" class="level3">
+<h3 class="anchored" data-anchor-id="norms-of-square-matrices">Norms of Square Matrices</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>Let <span class="math inline">\(\left\|{\mathbf{x}}\right\|=\left\|{\mathbf{x}}\right\|_{2}\)</span> the <span class="math inline">\(l^{2}\)</span> norm, and <span class="math inline">\(\mathbf{E}_{n}\)</span> the space of all <span class="math inline">\(n\)</span> -dimensional vectors. We take <span class="math inline">\(\mathbf{E}_{n}\subset{\mathbb{C}}^{n}\)</span> , but we can also restrict ourselves to vectors and matrices with only real elements. The <em>norm</em> of an order <span class="math inline">\(n\)</span> square matrix, <span class="math inline">\(\mathbf{A}\)</span> , is</p>
+<p><a id="E67"></a> <span class="math display">\[
+\left\|{\mathbf{A}}\right\|=\max_{\mathbf{x}\in\mathbf{E}_{n}\setminus\left\{\boldsymbol{{0}}\right\}}\frac{\left\|{\mathbf{A}\mathbf{x}}\right\|}{\left\|{\mathbf{x}}\right\|}=\max_{\left\|{\mathbf{x}}\right\|=1}\left\|{\mathbf{A}\mathbf{x}}\right\|. \tag{1.2.67}
+\]</span></p>
+<p>Then</p>
+<p><a id="E68"></a> <span class="math display">\[
+\left\|{\mathbf{A}\mathbf{B}}\right\|\leq\left\|{\mathbf{A}}\right\|\ \left\|{\mathbf{B}}\right\|, \tag{1.2.68}
+\]</span></p>
+<p>and</p>
+<p><a id="E69"></a> <span class="math display">\[
+\left\|{\mathbf{A}+\mathbf{B}}\right\|\leq\left\|{\mathbf{A}}\right\|+\left\|{\mathbf{B}}\right\|. \tag{1.2.69}
+\]</span></p>
+</section>
+<section id="eigenvectors-and-eigenvalues-of-square-matrices" class="level3">
+<h3 class="anchored" data-anchor-id="eigenvectors-and-eigenvalues-of-square-matrices">Eigenvectors and Eigenvalues of Square Matrices</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>A square matrix <span class="math inline">\(\mathbf{A}\)</span> has an <em>eigenvalue</em> <span class="math inline">\(\lambda\)</span> with corresponding <em>eigenvector</em> <span class="math inline">\(\mathbf{a}\not=\boldsymbol{{0}}\)</span> if</p>
+<p><a id="E70"></a> <span class="math display">\[
+\mathbf{A}\mathbf{a}=\lambda\mathbf{a}. \tag{1.2.70}
+\]</span></p>
+<p>Here <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\lambda\)</span> may be complex even if <span class="math inline">\(\mathbf{A}\)</span> is real. Eigenvalues are the roots of the polynomial equation</p>
+<p><a id="E71"></a> <span class="math display">\[
+\det(\mathbf{A}-\lambda\mathbf{I})=0, \tag{1.2.71}
+\]</span></p>
+<p>and for the corresponding eigenvectors one has to solve the linear system</p>
+<p><a id="E72"></a> <span class="math display">\[
+(\mathbf{A}-\lambda\mathbf{I})\mathbf{a}=\boldsymbol{{0}}. \tag{1.2.72}
+\]</span></p>
+<p>Numerical methods and issues for solution of ( 1.2.72 ) appear in §§ 3.2(iv) to 3.2(vii) .</p>
+</section>
+<section id="non-defective-square-matrices" class="level3">
+<h3 class="anchored" data-anchor-id="non-defective-square-matrices">Non-Defective Square Matrices</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>Nonzero vectors <span class="math inline">\(\mathbf{v}_{1},\dots,\mathbf{v}_{n}\)</span> are <em>linearly independent</em> if <span class="math inline">\(\sum_{i=1}^{n}c_{i}\mathbf{v}_{i}=\boldsymbol{{0}}\)</span> implies that all coefficients <span class="math inline">\(c_{i}\)</span> are zero. A matrix <span class="math inline">\(\mathbf{A}\)</span> of order <span class="math inline">\(n\)</span> is <em>non-defective</em> if it has <span class="math inline">\(n\)</span> linearly independent (possibly complex) eigenvectors, otherwise <span class="math inline">\(\mathbf{A}\)</span> is called <em>defective</em> . Non-defective matrices are precisely the matrices which can be <em>diagonalized</em> via a <em>similarity transformation</em> of the form</p>
+<p><a id="E73"></a> <span class="math display">\[
+\boldsymbol{{\Lambda}}={\mathbf{S}}^{-1}\mathbf{A}\mathbf{S}. \tag{1.2.73}
+\]</span></p>
+<p>The columns of the invertible matrix <span class="math inline">\(\mathbf{S}\)</span> are eigenvectors of <span class="math inline">\(\mathbf{A}\)</span> , and <span class="math inline">\(\boldsymbol{{\Lambda}}\)</span> is a diagonal matrix with the <span class="math inline">\(n\)</span> eigenvalues <span class="math inline">\(\lambda_{i}\)</span> as diagonal elements. The diagonal elements are not necessarily distinct, and the number of identical (degenerate) diagonal elements is the <em>multiplicity</em> of that specific eigenvalue. The sum of all multiplicities is <span class="math inline">\(n\)</span> .</p>
+</section>
+<section id="relation-of-eigenvalues-to-the-determinant-and-trace" class="level3">
+<h3 class="anchored" data-anchor-id="relation-of-eigenvalues-to-the-determinant-and-trace">Relation of Eigenvalues to the Determinant and Trace</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>For <span class="math inline">\(\mathbf{A}\)</span> non-defective we obtain from ( 1.2.73 ) and ( 1.3.7 )</p>
+<p><a id="E74"></a> <span class="math display">\[
+\det(\mathbf{A})=\det(\mathbf{S}{\mathbf{S}}^{-1}\mathbf{A})=\det({\mathbf{S}}^{-1}\mathbf{A}\mathbf{S})=\prod_{i=1}^{n}\lambda_{i}. \tag{1.2.74}
+\]</span></p>
+<p>Thus <span class="math inline">\(\det(\mathbf{A})\)</span> is the product of the <span class="math inline">\(n\)</span> (counted according to their multiplicities) eigenvalues of <span class="math inline">\(\mathbf{A}\)</span> . Similarly, we obtain from ( 1.2.73 ) and ( 1.2.65 )</p>
+<p><a id="E75"></a> <span class="math display">\[
+\operatorname{tr}(\mathbf{A})=\operatorname{tr}(\mathbf{S}{\mathbf{S}}^{-1}\mathbf{A})=\operatorname{tr}({\mathbf{S}}^{-1}\mathbf{A}\mathbf{S})=\sum_{i=1}^{n}\lambda_{i}. \tag{1.2.75}
+\]</span></p>
+<p>Thus <span class="math inline">\(\operatorname{tr}(\mathbf{A})\)</span> is the sum of the (counted according to their multiplicities) eigenvalues of <span class="math inline">\(\mathbf{A}\)</span> .</p>
+</section>
+<section id="the-matrix-exponential-and-the-exponential-of-the-trace" class="level3">
+<h3 class="anchored" data-anchor-id="the-matrix-exponential-and-the-exponential-of-the-trace">The Matrix Exponential and the Exponential of the Trace</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=definition">definition</a> , <a href="http://dlmf.nist.gov/search/search?q=exponential%20of%20the%20trace">exponential of the trace</a> , <a href="http://dlmf.nist.gov/search/search?q=matrix%20exponential">matrix exponential</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.2(vi) , §1.2 and Ch.1</p>
+</div>
+<p>The <em>matrix exponential</em> is defined via</p>
+<p><a id="E76"></a> <span class="math display">\[
+\exp\left(\mathbf{A}\right)=\sum_{n=0}^{\infty}\frac{1}{n!}\mathbf{A}^{n}, \tag{1.2.76}
+\]</span></p>
+<p>which converges, entry-wise or in norm, for all <span class="math inline">\(\mathbf{A}\)</span> .</p>
+<p>It follows from ( 1.2.73 ), ( 1.2.74 ) and ( 1.2.75 ) that, for a non-defective matrix <span class="math inline">\(\mathbf{A}\)</span> ,</p>
+<p><a id="E77"></a> <span class="math display">\[
+\det(\exp\left(\mathbf{A}\right))=\exp\left(\operatorname{tr}(\mathbf{A})\right)=\operatorname{etr}\left(\mathbf{A}\right). \tag{1.2.77}
+\]</span></p>
+<p>Formula ( 1.2.77 ) is more generally valid for all square matrices <span class="math inline">\(\mathbf{A}\)</span> , not necessarily non-defective, see Hall (<a href="./bib/H.html#bib3109" title="Lie groups, Lie algebras, and representations">2015</a>, Thm 2.12).</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nerudev\.github\.io\/Polaris-Kernel\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

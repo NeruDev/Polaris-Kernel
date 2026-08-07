@@ -10,6 +10,8 @@ project:
   type: website
   # Especifica el directorio de salida del sitio web compilado (ADR-007).
   output-dir: site
+  render:
+    - src/
   # Recursos estaticos adicionales que se copiaran directamente al directorio final.
   # Copia todos los graficos SVG generados (incluidos los de Typst) de forma recursiva.
   resources:

@@ -41,7 +41,8 @@ cuantificadores que permiten hablar sobre propiedades de conjuntos de objetos:
 ## Lógica de primer orden
 
 Es un sistema formal potente que utiliza predicados, variables y cuantificadores 
-sobre objetos individuales. Es la base de la mayoría de las demostraciones 
+sobre objetos individuales.
+Es la base de la mayoría de las demostraciones 
 matemáticas modernas, permitiendo definir axiomas y derivar consecuencias 
 mediante reglas de inferencia consistentes.
 

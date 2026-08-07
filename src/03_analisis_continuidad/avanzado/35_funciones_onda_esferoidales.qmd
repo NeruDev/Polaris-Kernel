@@ -1,12 +1,13 @@
 ---
-id: "33E10"
+id: "msc00_35_funciones_onda_esferoidales"
 title: "Funciones Onda Esferoidales"
 pilar: "03_analisis_continuidad"
-msc_code: "33E10, 35Q60"
+msc_code: "33E-10"
 difficulty: "avanzado"
 tags:
-  - 33E10
-  - 35Q60
+  - "33E10"
+  - "35Q60"
+status: "draft"
 ---
 
 # Funciones Onda Esferoidales

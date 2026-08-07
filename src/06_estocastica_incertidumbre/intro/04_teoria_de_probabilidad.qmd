@@ -41,7 +41,8 @@ Este razonamiento es el motor detrás de los clasificadores modernos y los siste
 ## Variables aleatorias discretas y continuas
 
 Una variable aleatoria es una función que asigna un valor numérico al resultado de un experimento aleatorio.
-- **Discretas:** Toman valores aislados, como el resultado de lanzar un dado. Se describen mediante funciones de masa de probabilidad.
+- **Discretas:** Toman valores aislados, como el resultado de lanzar un dado.
+Se describen mediante funciones de masa de probabilidad.
 - **Continuas:** Pueden tomar cualquier valor dentro de un intervalo real, como la estatura de una persona o el tiempo de espera.
 Para las variables continuas, utilizamos funciones de densidad de probabilidad ($f(x)$), donde la probabilidad de un intervalo se calcula mediante la integral del área bajo la curva.
 La **Distribución Normal** es el ejemplo más importante debido al Teorema del Límite Central, que afirma que la suma de muchas variables independientes tiende a seguir esta forma acampanada.

@@ -1,12 +1,13 @@
 ---
-id: "14H52"
+id: "msc00_09_geometria_variedades_elipticas"
 title: "Geometria Variedades Elipticas"
 pilar: "04_espacio_forma"
-msc_code: "14H52, 32G15"
+msc_code: "14H-52"
 difficulty: "avanzado"
 tags:
-  - 14H52
-  - 32G15
+  - "14H52"
+  - "32G15"
+status: "draft"
 ---
 
 # Geometria Variedades Elipticas

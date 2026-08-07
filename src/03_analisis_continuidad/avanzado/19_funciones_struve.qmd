@@ -1,11 +1,12 @@
 ---
-id: "33C10"
+id: "msc00_19_funciones_struve"
 title: "Funciones Struve"
 pilar: "03_analisis_continuidad"
-msc_code: "33C10"
+msc_code: "33C-10"
 difficulty: "avanzado"
 tags:
-  - 33C10
+  - "33C10"
+status: "draft"
 ---
 
 # Funciones Struve

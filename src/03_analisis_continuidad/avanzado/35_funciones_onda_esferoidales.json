@@ -1,9 +1,12 @@
 {
-  "id": "33E10",
-  "title": "Funciones Onda Esferoidales",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "33E10, 35Q60",
-  "difficulty": "avanzado",
-  "source_dlmf_chapter": 30,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_35_funciones_onda_esferoidales",
+    "title": "Funciones Onda Esferoidales",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "33E-10",
+    "difficulty": "avanzado",
+    "tags": [
+        "33E10",
+        "35Q60"
+    ],
+    "status": "draft"
 }

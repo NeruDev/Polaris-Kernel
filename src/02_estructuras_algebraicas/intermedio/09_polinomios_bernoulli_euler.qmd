@@ -1,12 +1,13 @@
 ---
-id: "11B68"
+id: "msc00_09_polinomios_bernoulli_euler"
 title: "Polinomios Bernoulli Euler"
 pilar: "02_estructuras_algebraicas"
-msc_code: "11B68, 33E20"
+msc_code: "11B-68"
 difficulty: "intermedio"
 tags:
-  - 11B68
-  - 33E20
+  - "11B68"
+  - "33E20"
+status: "draft"
 ---
 
 # Polinomios Bernoulli Euler

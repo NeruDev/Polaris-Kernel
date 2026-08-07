@@ -7,5 +7,8 @@
         "area",
         "perimetro"
     ],
-    "id": "msc51_poligonos_perimetros"
+    "id": "msc51_poligonos_perimetros",
+    "pilar": "01_fundamentos_logica",
+    "status": "draft",
+    "msc_code": "00-00"
 }

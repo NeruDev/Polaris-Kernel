@@ -1,11 +1,12 @@
 ---
-id: "33B15"
+id: "msc00_13_funcion_gamma_psi"
 title: "Funcion Gamma Psi"
 pilar: "03_analisis_continuidad"
-msc_code: "33B15"
+msc_code: "33B-15"
 difficulty: "intermedio"
 tags:
-  - 33B15
+  - "33B15"
+status: "draft"
 ---
 
 # Funcion Gamma Psi

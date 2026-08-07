@@ -8,6 +8,10 @@ format:
     toc: true
     toc-depth: 3
     math: true
+id: "msc00_02_identidades_ecuaciones_trigonometricas"
+pilar: "01_fundamentos_logica"
+status: "draft"
+msc_code: "00-00"
 ---
 
 # Identidades y Ecuaciones Trigonométricas

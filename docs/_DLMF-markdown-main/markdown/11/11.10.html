@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto-inputd913468b92fdb412 – Polaris Kernel</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-e8a923774aa70043a31c64adf822e8b4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Polaris Kernel
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../../">Polaris Kernel</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">01 Fundamentos Logica</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_aritmetica_propiedades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_sistemas_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/02_logica_matematica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/03_teoria_conjuntos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/04_metodos_demostracion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/05_relaciones_equivalencia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/06_funciones_y_mapeos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/07_logica_predicados_inferencia.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">02 Estructuras Algebraicas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/01_algebra_elemental.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/02_algebra_lineal.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/03_algebra_abstracta.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/05_teoria_de_matrices.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/06_ecuaciones_y_desigualdades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/07_polinomios_y_factorizacion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/08_espacios_vectoriales_bases.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">03 Analisis Continuidad</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/01_funciones_y_limites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/02_calculo_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/03_calculo_integral.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/04_calculo_multivariable.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/05_ecuaciones_diferenciales.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/06_analisis_avanzado.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/07_analisis_funcional.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/08_sucesiones_y_series.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">04 Espacio Forma</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/01_geometria_euclidiana.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/02_trigonometria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/03_geometria_analitica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/04_topologia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/05_geometria_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/06_geometria_no_euclidiana.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">05 Discrecion Computacion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/01_combinatoria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/02_teoria_de_grafos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/03_teoria_de_numeros.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/04_metodos_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/05_teoria_automatas.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">06 Estocastica Incertidumbre</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/01_estadistica_descriptiva.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/02_teoria_de_probabilidad.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/03_estadistica_inferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/04_modelos_estocasticos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/05_teoria_informacion.qmd</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#angerweber-functions" id="toc-angerweber-functions" class="nav-link active" data-scroll-target="#angerweber-functions">§11.10 Anger–Weber Functions</a>
+  <ul class="collapse">
+  <li><a href="#i-definitions" id="toc-i-definitions" class="nav-link" data-scroll-target="#i-definitions">§11.10(i) Definitions</a></li>
+  <li><a href="#ii-differential-equations" id="toc-ii-differential-equations" class="nav-link" data-scroll-target="#ii-differential-equations">§11.10(ii) Differential Equations</a></li>
+  <li><a href="#iii-maclaurin-series" id="toc-iii-maclaurin-series" class="nav-link" data-scroll-target="#iii-maclaurin-series">§11.10(iii) Maclaurin Series</a></li>
+  <li><a href="#iv-graphics" id="toc-iv-graphics" class="nav-link" data-scroll-target="#iv-graphics">§11.10(iv) Graphics</a></li>
+  <li><a href="#v-interrelations" id="toc-v-interrelations" class="nav-link" data-scroll-target="#v-interrelations">§11.10(v) Interrelations</a></li>
+  <li><a href="#vi-relations-to-other-functions" id="toc-vi-relations-to-other-functions" class="nav-link" data-scroll-target="#vi-relations-to-other-functions">§11.10(vi) Relations to Other Functions</a></li>
+  <li><a href="#vii-special-values" id="toc-vii-special-values" class="nav-link" data-scroll-target="#vii-special-values">§11.10(vii) Special Values</a></li>
+  <li><a href="#viii-expansions-in-series-of-products-of-bessel-functions" id="toc-viii-expansions-in-series-of-products-of-bessel-functions" class="nav-link" data-scroll-target="#viii-expansions-in-series-of-products-of-bessel-functions">§11.10(viii) Expansions in Series of Products of Bessel Functions</a></li>
+  <li><a href="#ix-recurrence-relations-and-derivatives" id="toc-ix-recurrence-relations-and-derivatives" class="nav-link" data-scroll-target="#ix-recurrence-relations-and-derivatives">§11.10(ix) Recurrence Relations and Derivatives</a></li>
+  <li><a href="#x-integrals-and-sums" id="toc-x-integrals-and-sums" class="nav-link" data-scroll-target="#x-integrals-and-sums">§11.10(x) Integrals and Sums</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="angerweber-functions" class="level1">
+<h1>§11.10 Anger–Weber Functions</h1>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for Ch.11</p>
+</div>
+<section id="i-definitions" class="level2">
+<h2 class="anchored" data-anchor-id="i-definitions">§11.10(i) Definitions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=analytic%20properties">analytic properties</a> , <a href="http://dlmf.nist.gov/search/search?q=definitions">definitions</a> , <a href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Watson (<a href="./bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, pp.&nbsp;308 and 312). The notation <span class="math inline">\(\mathbf{A}_{\nu}\left(z\right)\)</span> , without the factor <span class="math inline">\(1/\pi\)</span> , was introduced in Olver (<a href="./bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, p.&nbsp;84).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10 and Ch.11</p>
+</div>
+<p>The Anger function <span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span> and Weber function <span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span> are defined by</p>
+<p><a id="E1"></a> <span class="math display">\[
+\mathbf{J}_{\nu}\left(z\right)=\frac{1}{\pi}\int_{0}^{\pi}\cos\left(\nu\theta-z\sin\theta\right)\,\mathrm{d}\theta, \tag{11.10.1}
+\]</span></p>
+<p><a id="E2"></a> <span class="math display">\[
+\mathbf{E}_{\nu}\left(z\right)=\frac{1}{\pi}\int_{0}^{\pi}\sin\left(\nu\theta-z\sin\theta\right)\,\mathrm{d}\theta. \tag{11.10.2}
+\]</span></p>
+<p>Each is an entire function of <span class="math inline">\(z\)</span> and <span class="math inline">\(\nu\)</span> . Also,</p>
+<p><a id="E3"></a> <span class="math display">\[
+\frac{1}{\pi}\int_{0}^{2\pi}\cos\left(\nu\theta-z\sin\theta\right)\,\mathrm{d}\theta=(1+\cos\left(2\pi\nu\right))\,\mathbf{J}_{\nu}\left(z\right)+\sin\left(2\pi\nu\right)\mathbf{E}_{\nu}\left(z\right). \tag{11.10.3}
+\]</span></p>
+<p>The associated Anger–Weber function <span class="math inline">\(\mathbf{A}_{\nu}\left(z\right)\)</span> is defined by</p>
+<p><a id="E4"></a> <span class="math display">\[
+\mathbf{A}_{\nu}\left(z\right)=\frac{1}{\pi}\int_{0}^{\infty}e^{-\nu t-z\sinh t}\,\mathrm{d}t, \tag{11.10.4}
+\]</span></p>
+<p>( 11.10.4 ) also applies when <span class="math inline">\(\Re z=0\)</span> and <span class="math inline">\(\Re\nu&gt;0\)</span> .</p>
+</section>
+<section id="ii-differential-equations" class="level2">
+<h2 class="anchored" data-anchor-id="ii-differential-equations">§11.10(ii) Differential Equations</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Bessel%20equation">Bessel’s equation</a> , <a href="http://dlmf.nist.gov/search/search?q=differential%20equation">differential equation</a> , <a href="http://dlmf.nist.gov/search/search?q=inhomogeneous%20forms">inhomogeneous forms</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Watson (<a href="./bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, p.&nbsp;312).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10 and Ch.11</p>
+</div>
+<p>The Anger and Weber functions satisfy the inhomogeneous Bessel differential equation</p>
+<p><a id="E5"></a> <span class="math display">\[
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}+\frac{1}{z}\frac{\mathrm{d}w}{\mathrm{d}z}+\left(1-\frac{\nu^{2}}{z^{2}}\right)w=f(\nu,z), \tag{11.10.5}
+\]</span></p>
+<p>where</p>
+<p><a id="E6"></a> <span class="math display">\[
+f(\nu,z)=\frac{(z-\nu)}{\pi z^{2}}\sin\left(\pi\nu\right), \tag{11.10.6}
+\]</span></p>
+<p>or</p>
+<p><a id="E7"></a> <span class="math display">\[
+f(\nu,z)=-\frac{1}{\pi z^{2}}(z+\nu+(z-\nu)\cos\left(\pi\nu\right)), \tag{11.10.7}
+\]</span></p>
+</section>
+<section id="iii-maclaurin-series" class="level2">
+<h2 class="anchored" data-anchor-id="iii-maclaurin-series">§11.10(iii) Maclaurin Series</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Maclaurin%20series">Maclaurin series</a> , <a href="http://dlmf.nist.gov/search/search?q=power%20series">power series</a> , <a href="http://dlmf.nist.gov/search/search?q=series%20expansions">series expansions</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Watson (<a href="./bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, §10.1).</p>
+<p><strong>Referenced by:</strong></p>
+<p>§3.6(vi)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10 and Ch.11</p>
+</div>
+<p><a id="E8"></a> <span class="math display">\[
+\mathbf{J}_{\nu}\left(z\right)=\cos\left(\tfrac{1}{2}\pi\nu\right)\,S_{1}(\nu,z)+\sin\left(\tfrac{1}{2}\pi\nu\right)\,S_{2}(\nu,z), \tag{11.10.8}
+\]</span></p>
+<p><a id="E9"></a> <span class="math display">\[
+\mathbf{E}_{\nu}\left(z\right)=\sin\left(\tfrac{1}{2}\pi\nu\right)\,S_{1}(\nu,z)-\cos\left(\tfrac{1}{2}\pi\nu\right)\,S_{2}(\nu,z), \tag{11.10.9}
+\]</span></p>
+<p>where</p>
+<p><a id="E10"></a> <span class="math display">\[
+S_{1}(\nu,z)=\sum_{k=0}^{\infty}\frac{(-1)^{k}(\tfrac{1}{2}z)^{2k}}{\Gamma\left(k\!+\!\tfrac{1}{2}\nu+1\right)\Gamma\left(k\!-\!\tfrac{1}{2}\nu\!+\!1\right)}, \tag{11.10.10}
+\]</span></p>
+<p><a id="E11"></a> <span class="math display">\[
+S_{2}(\nu,z)=\sum_{k=0}^{\infty}\frac{(-1)^{k}(\tfrac{1}{2}z)^{2k+1}}{\Gamma\left(k\!+\!\tfrac{1}{2}\nu\!+\!\tfrac{3}{2}\right)\Gamma\left(k\!-\!\tfrac{1}{2}\nu\!+\!\tfrac{3}{2}\right)}. \tag{11.10.11}
+\]</span></p>
+<p>These expansions converge absolutely for all finite values of <span class="math inline">\(z\)</span> .</p>
+</section>
+<section id="iv-graphics" class="level2">
+<h2 class="anchored" data-anchor-id="iv-graphics">§11.10(iv) Graphics</h2>
+<div class="{note}">
+<p><strong>Notes:</strong></p>
+<p>These graphics were produced at NIST.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10 and Ch.11</p>
+</div>
+<p><a id="iv.fig1"></a></p>
+<p><img src="../html/11/10/F1.png" class="img-fluid" alt="Figure 11.10.1: Anger function \mathbf{J}_{\nu}\left(x\right) for -8\leq x\leq 8 and \nu=0,\frac{1}{2},1,\frac{3}{2} ."> :::{note} <strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(x\)</span>: real variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=graphics">graphics</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(iv) , §11.10 and Ch.11 :::</p>
+<p><a id="iv.fig2"></a></p>
+<p><img src="../html/11/10/F3.png" class="img-fluid" alt="Figure 11.10.3: Anger function \mathbf{J}_{\nu}\left(x\right) for -10\leq x\leq 10 and 0\leq\nu\leq 5 . 3D Help"> :::{note} <strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(x\)</span>: real variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=graphics">graphics</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(iv) , §11.10 and Ch.11 :::</p>
+</section>
+<section id="v-interrelations" class="level2">
+<h2 class="anchored" data-anchor-id="v-interrelations">§11.10(v) Interrelations</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=interrelations">interrelations</a></p>
+<p><strong>Notes:</strong></p>
+<p>For ( 11.10.12 ) use ( 11.10.1 ), ( 11.10.2 ). For ( 11.10.13 )–( 11.10.15 ) see Watson (<a href="./bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, pp.&nbsp;311–312). For ( 11.10.16 ) combine ( 11.10.14 ), ( 11.10.15 ), and ( 10.2.3 ).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10 and Ch.11</p>
+</div>
+<p><a id="E12"></a></p>
+<p><a id="Ex1"></a> <span class="math display">\[
+\displaystyle\mathbf{J}_{\nu}\left(-z\right) \displaystyle=\mathbf{J}_{-\nu}\left(z\right), \tag{11.10.12}
+\]</span></p>
+<p><a id="Ex2"></a> <span class="math display">\[
+\displaystyle\mathbf{E}_{\nu}\left(-z\right) \displaystyle=-\mathbf{E}_{-\nu}\left(z\right).
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span>: Weber function , <span class="math inline">\(z\)</span>: complex variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(v) , §11.10(vi)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(v) , §11.10 and Ch.11</p>
+</div>
+<p><a id="EGx1"></a></p>
+<p><span class="math display">\[
+\displaystyle\sin\left(\pi\nu\right)\,\mathbf{J}_{\nu}\left(z\right) \displaystyle=\cos\left(\pi\nu\right)\,\mathbf{E}_{\nu}\left(z\right)-\mathbf{E}_{-\nu}\left(z\right), \tag{11.10.13}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span>: Weber function , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter , <span class="math inline">\(\cosz\)</span>: cosine function , <span class="math inline">\(\sinz\)</span>: sine function , <span class="math inline">\(z\)</span>: complex variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>A&amp;S Ref:</strong></p>
+<p>12.3.4</p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(v)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(v) , §11.10 and Ch.11</p>
+</div>
+<p><span class="math display">\[
+\displaystyle\sin\left(\pi\nu\right)\,\mathbf{E}_{\nu}\left(z\right) \displaystyle=\mathbf{J}_{-\nu}\left(z\right)-\cos\left(\pi\nu\right)\,\mathbf{J}_{\nu}\left(z\right). \tag{11.10.14}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span>: Weber function , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter , <span class="math inline">\(\cosz\)</span>: cosine function , <span class="math inline">\(\sinz\)</span>: sine function , <span class="math inline">\(z\)</span>: complex variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>A&amp;S Ref:</strong></p>
+<p>12.3.5</p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(v)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(v) , §11.10 and Ch.11</p>
+</div>
+<p><a id="E15"></a> <span class="math display">\[
+\mathbf{J}_{\nu}\left(z\right)=J_{\nu}\left(z\right)+\sin\left(\pi\nu\right)\,\mathbf{A}_{\nu}\left(z\right), \tag{11.10.15}
+\]</span></p>
+<p><a id="E16"></a> <span class="math display">\[
+\mathbf{E}_{\nu}\left(z\right)=-Y_{\nu}\left(z\right)-\cos\left(\pi\nu\right)\,\mathbf{A}_{\nu}\left(z\right)-\mathbf{A}_{-\nu}\left(z\right). \tag{11.10.16}
+\]</span></p>
+</section>
+<section id="vi-relations-to-other-functions" class="level2">
+<h2 class="anchored" data-anchor-id="vi-relations-to-other-functions">§11.10(vi) Relations to Other Functions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Fresnel%20integrals">Fresnel integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=Lommel%20functions">Lommel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Struve%20functions">Struve functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Struve%20functions%20and%20modified%20Struve%20functions">Struve functions and modified Struve functions</a> , <a href="http://dlmf.nist.gov/search/search?q=relation%20to%20Anger%E2%80%93Weber%20functions">relation to Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=relations%20to%20Anger%E2%80%93Weber%20functions">relations to Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=relations%20to%20other%20functions">relations to other functions</a></p>
+<p><strong>Notes:</strong></p>
+<p>For ( 11.10.17 ), ( 11.10.18 ) see Watson (<a href="./bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, pp.&nbsp;308–310). For ( 11.10.19 ), ( 11.10.20 ), use ( 11.10.8 )–( 11.10.11 ) with <span class="math inline">\(\nu=\pm\frac{1}{2}\)</span> and identify the resulting sums with those associated with the right-hand sides via ( 7.6.5 ), ( 7.6.7 ). For ( 11.10.22 ), ( 11.10.23 ) see Watson (<a href="./bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, pp.&nbsp;336–337) or Erdélyi et al.&nbsp;(<a href="./bib/E.html#bib752" title="Higher Transcendental Functions. Vol. II">1953b</a>, p.&nbsp;40). The upper summation limit in ( 11.10.23 ) is given incorrectly in Watson (<a href="./bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, p.&nbsp;337), and this error is reproduced in Erdélyi et al.&nbsp;(<a href="./bib/E.html#bib752" title="Higher Transcendental Functions. Vol. II">1953b</a>), as well as in later printings of Abramowitz and Stegun (<a href="./bib/index.html#bib24" title="Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables">1964</a>, Chapter 12)—earlier printings of the last reference contained a different error. ( 11.10.23 ) can be derived by combining ( 11.2.1 ) with ( 11.10.12 ), ( 11.10.22 ).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10 and Ch.11</p>
+</div>
+<p><a id="EGx2"></a></p>
+<p><span class="math display">\[
+\displaystyle\mathbf{J}_{\nu}\left(z\right) \displaystyle=\frac{\sin\left(\pi\nu\right)}{\pi}(s_{{0},{\nu}}\left(z\right)-\nu s_{{-1},{\nu}}\left(z\right)), \tag{11.10.17}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(s_{{\mu},{\nu}}\left(z\right)\)</span>: Lommel function , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter , <span class="math inline">\(\sinz\)</span>: sine function , <span class="math inline">\(z\)</span>: complex variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(vi)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(vi) , §11.10 and Ch.11</p>
+</div>
+<p><span class="math display">\[
+\displaystyle\mathbf{E}_{\nu}\left(z\right) \displaystyle=-\frac{1}{\pi}(1+\cos\left(\pi\nu\right))s_{{0},{\nu}}\left(z\right)\\
+-\frac{\nu}{\pi}(1-\cos\left(\pi\nu\right))s_{{-1},{\nu}}\left(z\right). \tag{11.10.18}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(s_{{\mu},{\nu}}\left(z\right)\)</span>: Lommel function , <span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span>: Weber function , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter , <span class="math inline">\(\cosz\)</span>: cosine function , <span class="math inline">\(z\)</span>: complex variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(vi)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(vi) , §11.10 and Ch.11</p>
+</div>
+<p><a id="EGx3"></a></p>
+<p><span class="math display">\[
+\displaystyle\mathbf{J}_{-\frac{1}{2}}\left(z\right) \displaystyle=\mathbf{E}_{\frac{1}{2}}\left(z\right)=(\tfrac{1}{2}\pi z)^{-\frac{1}{2}}(A_{+}(\chi)\cos z-A_{-}(\chi)\sin z), \tag{11.10.19}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span>: Weber function , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter , <span class="math inline">\(\cosz\)</span>: cosine function , <span class="math inline">\(\sinz\)</span>: sine function , <span class="math inline">\(z\)</span>: complex variable , <span class="math inline">\(A\)</span>: expansion function and <span class="math inline">\(\chi\)</span></p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(vi)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(vi) , §11.10 and Ch.11</p>
+</div>
+<p><span class="math display">\[
+\displaystyle\mathbf{J}_{\frac{1}{2}}\left(z\right) \displaystyle=-\mathbf{E}_{-\frac{1}{2}}\left(z\right)=(\tfrac{1}{2}\pi z)^{-\frac{1}{2}}(A_{+}(\chi)\sin z+A_{-}(\chi)\cos z), \tag{11.10.20}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span>: Weber function , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter , <span class="math inline">\(\cosz\)</span>: cosine function , <span class="math inline">\(\sinz\)</span>: sine function , <span class="math inline">\(z\)</span>: complex variable , <span class="math inline">\(A\)</span>: expansion function and <span class="math inline">\(\chi\)</span></p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(vi)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(vi) , §11.10 and Ch.11</p>
+</div>
+<p>where</p>
+<p><a id="E21"></a></p>
+<p><a id="Ex3"></a> <span class="math display">\[
+\displaystyle A_{\pm}(\chi) \displaystyle=C\left(\chi\right)\pm S\left(\chi\right), \tag{11.10.21}
+\]</span></p>
+<p><a id="Ex4"></a> <span class="math display">\[
+\displaystyle\chi \displaystyle=(2z/\pi)^{\frac{1}{2}}.
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(C\left(z\right)\)</span>: Fresnel integral , <span class="math inline">\(S\left(z\right)\)</span>: Fresnel integral , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter , <span class="math inline">\(z\)</span>: complex variable , <span class="math inline">\(A\)</span>: expansion function and <span class="math inline">\(\chi\)</span></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(vi) , §11.10 and Ch.11</p>
+</div>
+<p>For the Fresnel integrals <span class="math inline">\(C\)</span> and <span class="math inline">\(S\)</span> see § 7.2(iii) .</p>
+<p>For <span class="math inline">\(n=1,2,3,\dots\)</span> ,</p>
+<p><a id="E22"></a> <span class="math display">\[
+\mathbf{E}_{n}\left(z\right)=-\mathbf{H}_{n}\left(z\right)+\frac{1}{\pi}\sum_{k=0}^{m_{1}}\frac{\Gamma\left(k+\tfrac{1}{2}\right)}{\Gamma\left(n\!+\!\tfrac{1}{2}\!-\!k\right)}(\tfrac{1}{2}z)^{n-2k-1}, \tag{11.10.22}
+\]</span></p>
+<p>and</p>
+<p><a id="E23"></a> <span class="math display">\[
+\mathbf{E}_{-n}\left(z\right)=-\mathbf{H}_{-n}\left(z\right)+\frac{(-1)^{n+1}}{\pi}\sum_{k=0}^{m_{2}}\frac{\Gamma\left(n\!-\!k\!-\!\tfrac{1}{2}\right)}{\Gamma\left(k+\tfrac{3}{2}\right)}(\tfrac{1}{2}z)^{-n+2k+1}, \tag{11.10.23}
+\]</span></p>
+<p>where</p>
+<p><a id="E24"></a></p>
+<p><a id="Ex5"></a> <span class="math display">\[
+\displaystyle m_{1} \displaystyle=\left\lfloor\tfrac{1}{2}n-\tfrac{1}{2}\right\rfloor, \tag{11.10.24}
+\]</span></p>
+<p><a id="Ex6"></a> <span class="math display">\[
+\displaystyle m_{2} \displaystyle=\left\lceil\tfrac{1}{2}n-\tfrac{3}{2}\right\rceil.
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\left\lceilx\right\rceil\)</span>: ceiling of <span class="math inline">\(x\)</span> , <span class="math inline">\(\left\lfloorx\right\rfloor\)</span>: floor of <span class="math inline">\(x\)</span> and <span class="math inline">\(n\)</span>: integer order</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(vi) , §11.10 and Ch.11</p>
+</div>
+</section>
+<section id="vii-special-values" class="level2">
+<h2 class="anchored" data-anchor-id="vii-special-values">§11.10(vii) Special Values</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=special%20values">special values</a></p>
+<p><strong>Notes:</strong></p>
+<p>For ( 11.10.25 ) use ( 11.10.1 ) and ( 11.10.2 ). For ( 11.10.26 ) use ( 11.10.22 ). ( 11.10.27 ) and ( 11.10.28 ) can be obtained by differentiation of ( 11.10.1 ) and ( 11.10.2 ), followed by straightforward manipulation of the integrals and comparison with ( 11.5.1 ) and ( 11.10.1 ). For ( 11.10.29 ) use ( 11.10.1 ) and ( 10.9.2 ).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10 and Ch.11</p>
+</div>
+<p><a id="Sx2.EGx1"></a></p>
+<p><span class="math display">\[
+\displaystyle\mathbf{J}_{\nu}\left(0\right) \displaystyle=\frac{\sin\left(\pi\nu\right)}{\pi\nu}, \displaystyle\mathbf{E}_{\nu}\left(0\right) \displaystyle=\frac{1-\cos\left(\pi\nu\right)}{\pi\nu}. \tag{11.10.25}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span>: Weber function , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter , <span class="math inline">\(\cosz\)</span>: cosine function , <span class="math inline">\(\sinz\)</span>: sine function and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(vii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(vii) , §11.10 and Ch.11</p>
+</div>
+<p><span class="math display">\[
+\displaystyle\mathbf{E}_{0}\left(z\right) \displaystyle=-\mathbf{H}_{0}\left(z\right), \displaystyle\mathbf{E}_{1}\left(z\right) \displaystyle=\frac{2}{\pi}-\mathbf{H}_{1}\left(z\right). \tag{11.10.26}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{H}_{\nu}\left(z\right)\)</span>: Struve function , <span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span>: Weber function , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter and <span class="math inline">\(z\)</span>: complex variable</p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(vii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(vii) , §11.10 and Ch.11</p>
+</div>
+<p><a id="EGx4"></a></p>
+<p><span class="math display">\[
+\displaystyle\left.\frac{\partial}{\partial\nu}\mathbf{J}_{\nu}\left(z\right)\right|_{\nu=0} \displaystyle=\tfrac{1}{2}\pi\mathbf{H}_{0}\left(z\right), \tag{11.10.27}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(\mathbf{H}_{\nu}\left(z\right)\)</span>: Struve function , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter , <span class="math inline">\(\frac{\partialf}{\partialx}\)</span>: partial derivative of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x\)</span> , <span class="math inline">\(\,\partialx\)</span>: partial differential of <span class="math inline">\(x\)</span> , <span class="math inline">\(z\)</span>: complex variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(vii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(vii) , §11.10 and Ch.11</p>
+</div>
+<p><span class="math display">\[
+\displaystyle\left.\frac{\partial}{\partial\nu}\mathbf{E}_{\nu}\left(z\right)\right|_{\nu=0} \displaystyle=\tfrac{1}{2}\pi J_{0}\left(z\right). \tag{11.10.28}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(J_{\nu}\left(z\right)\)</span>: Bessel function of the first kind , <span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span>: Weber function , <span class="math inline">\(\pi\)</span>: the ratio of the circumference of a circle to its diameter , <span class="math inline">\(\frac{\partialf}{\partialx}\)</span>: partial derivative of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x\)</span> , <span class="math inline">\(\,\partialx\)</span>: partial differential of <span class="math inline">\(x\)</span> , <span class="math inline">\(z\)</span>: complex variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>Referenced by:</strong></p>
+<p>§11.10(vii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(vii) , §11.10 and Ch.11</p>
+</div>
+<p><a id="E29"></a> <span class="math display">\[
+\mathbf{J}_{n}\left(z\right)=J_{n}\left(z\right), \tag{11.10.29}
+\]</span></p>
+</section>
+<section id="viii-expansions-in-series-of-products-of-bessel-functions" class="level2">
+<h2 class="anchored" data-anchor-id="viii-expansions-in-series-of-products-of-bessel-functions">§11.10(viii) Expansions in Series of Products of Bessel Functions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=products%20of%20Bessel%20functions">products of Bessel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=series%20expansions">series expansions</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Luke (<a href="./bib/L.html#bib1496" title="The Special Functions and their Approximations. Vol. 2">1969b</a>, p.&nbsp;55).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10 and Ch.11</p>
+</div>
+<p><a id="E30"></a> <span class="math display">\[
+{\mathbf{J}_{\nu}\left(z\right)=}\\
+{2\sin\left(\tfrac{1}{2}\nu\pi\right)\sum_{k=0}^{\infty}(-1)^{k}J_{k-\frac{1}{2}\nu+\frac{1}{2}}\left(\tfrac{1}{2}z\right)J_{k+\frac{1}{2}\nu+\frac{1}{2}}\left(\tfrac{1}{2}z\right)}+{2\cos\left(\tfrac{1}{2}\nu\pi\right)\sideset{}{{}^{\prime}}{\sum}_{k=0}^{\infty}(-1)^{k}J_{k-\frac{1}{2}\nu}\left(\tfrac{1}{2}z\right)J_{k+\frac{1}{2}\nu}\left(\tfrac{1}{2}z\right)}, \tag{11.10.30}
+\]</span></p>
+<p><a id="E31"></a> <span class="math display">\[
+{\mathbf{E}_{\nu}\left(z\right)=}\\
+{-2\cos\left(\tfrac{1}{2}\nu\pi\right)\sum_{k=0}^{\infty}(-1)^{k}J_{k-\frac{1}{2}\nu+\frac{1}{2}}\left(\tfrac{1}{2}z\right)J_{k+\frac{1}{2}\nu+\frac{1}{2}}\left(\tfrac{1}{2}z\right)}+{2\sin\left(\tfrac{1}{2}\nu\pi\right)\sideset{}{{}^{\prime}}{\sum}_{k=0}^{\infty}(-1)^{k}J_{k-\frac{1}{2}\nu}\left(\tfrac{1}{2}z\right)J_{k+\frac{1}{2}\nu}\left(\tfrac{1}{2}z\right)}, \tag{11.10.31}
+\]</span></p>
+<p>where the prime on the second summation symbols means that the first term is to be halved.</p>
+</section>
+<section id="ix-recurrence-relations-and-derivatives" class="level2">
+<h2 class="anchored" data-anchor-id="ix-recurrence-relations-and-derivatives">§11.10(ix) Recurrence Relations and Derivatives</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=derivatives">derivatives</a> , <a href="http://dlmf.nist.gov/search/search?q=recurrence%20relations">recurrence relations</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Watson (<a href="./bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, pp.&nbsp;311–312).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10 and Ch.11</p>
+</div>
+<p><a id="E32"></a> <span class="math display">\[
+\mathbf{J}_{\nu-1}\left(z\right)+\mathbf{J}_{\nu+1}\left(z\right)=\frac{2\nu}{z}\mathbf{J}_{\nu}\left(z\right)-\frac{2}{\pi z}\sin\left(\pi\nu\right), \tag{11.10.32}
+\]</span></p>
+<p><a id="E33"></a> <span class="math display">\[
+\mathbf{E}_{\nu-1}\left(z\right)+\mathbf{E}_{\nu+1}\left(z\right)=\frac{2\nu}{z}\mathbf{E}_{\nu}\left(z\right)-\frac{2}{\pi z}(1-\cos\left(\pi\nu\right)). \tag{11.10.33}
+\]</span></p>
+<p><a id="EGx5"></a></p>
+<p><span class="math display">\[
+\displaystyle 2\mathbf{J}_{\nu}'\left(z\right) \displaystyle=\mathbf{J}_{\nu-1}\left(z\right)-\mathbf{J}_{\nu+1}\left(z\right), \tag{11.10.34}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{J}_{\nu}\left(z\right)\)</span>: Anger function , <span class="math inline">\(z\)</span>: complex variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(ix) , §11.10 and Ch.11</p>
+</div>
+<p><span class="math display">\[
+\displaystyle 2\mathbf{E}_{\nu}'\left(z\right) \displaystyle=\mathbf{E}_{\nu-1}\left(z\right)-\mathbf{E}_{\nu+1}\left(z\right), \tag{11.10.35}
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\mathbf{E}_{\nu}\left(z\right)\)</span>: Weber function , <span class="math inline">\(z\)</span>: complex variable and <span class="math inline">\(\nu\)</span>: real or complex order</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10(ix) , §11.10 and Ch.11</p>
+</div>
+<p><a id="E36"></a> <span class="math display">\[
+z\mathbf{J}_{\nu}'\left(z\right)\pm\nu\mathbf{J}_{\nu}\left(z\right)=\pm z\mathbf{J}_{\nu\mp 1}\left(z\right)\pm\frac{\sin\left(\pi\nu\right)}{\pi}, \tag{11.10.36}
+\]</span></p>
+<p><a id="E37"></a> <span class="math display">\[
+z\mathbf{E}_{\nu}'\left(z\right)\pm\nu\mathbf{E}_{\nu}\left(z\right)=\pm z\mathbf{E}_{\nu\mp 1}\left(z\right)\pm\frac{(1-\cos\left(\pi\nu\right))}{\pi}. \tag{11.10.37}
+\]</span></p>
+</section>
+<section id="x-integrals-and-sums" class="level2">
+<h2 class="anchored" data-anchor-id="x-integrals-and-sums">§11.10(x) Integrals and Sums</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=sums">sums</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §11.10 and Ch.11</p>
+</div>
+<p>For collections of integral representations and integrals see Erdélyi et al.&nbsp;(<a href="./bib/E.html#bib753" title="Tables of Integral Transforms. Vol. I">1954a</a>, §§4.19 and 5.17), Marichev (<a href="./bib/M.html#bib1546" title="Handbook of Integral Transforms of Higher Transcendental Functions: Theory and Algorithmic Tables">1983</a>, pp.&nbsp;194–195 and 214–215), Oberhettinger (<a href="./bib/O.html#bib1742" title="Tables of Bessel Transforms">1972</a>, p.&nbsp;128), Oberhettinger (<a href="./bib/O.html#bib1744" title="Tables of Mellin Transforms">1974</a>, §§1.12 and 2.7), Oberhettinger (<a href="./bib/O.html#bib1745" title="Tables of Fourier Transforms and Fourier Transforms of Distributions">1990</a>, pp.&nbsp;105 and 189–190), Prudnikov et al.&nbsp;(<a href="./bib/P.html#bib1905" title="Integrals and Series: More Special Functions, Vol. 3">1990</a>, §§1.5 and 2.8), Prudnikov et al.&nbsp;(<a href="./bib/P.html#bib1906" title="Integrals and Series: Direct Laplace Transforms, Vol. 4">1992a</a>, §3.18), Prudnikov et al.&nbsp;(<a href="./bib/P.html#bib1907" title="Integrals and Series: Inverse Laplace Transforms, Vol. 5">1992b</a>, §3.18), and Zanovello (<a href="./bib/Z.html#bib2481" title="Integrali di funzioni di Anger, Weber ed Airy-Hardy">1977</a>).</p>
+<p>For sums see Hansen (<a href="./bib/H.html#bib1035" title="A Table of Series and Products">1975</a>, pp.&nbsp;456–457) and Prudnikov et al.&nbsp;(<a href="./bib/P.html#bib1905" title="Integrals and Series: More Special Functions, Vol. 3">1990</a>, §§6.4.2–6.4.3).</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nerudev\.github\.io\/Polaris-Kernel\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,9 +1,12 @@
 {
-  "id": "22E70",
-  "title": "Simbolos Acoplamiento Angular",
-  "pilar": "02_estructuras_algebraicas",
-  "msc_code": "22E70, 81R05",
-  "difficulty": "avanzado",
-  "source_dlmf_chapter": 34,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_10_simbolos_acoplamiento_angular",
+    "title": "Simbolos Acoplamiento Angular",
+    "pilar": "02_estructuras_algebraicas",
+    "msc_code": "22E-70",
+    "difficulty": "avanzado",
+    "tags": [
+        "22E70",
+        "81R05"
+    ],
+    "status": "draft"
 }

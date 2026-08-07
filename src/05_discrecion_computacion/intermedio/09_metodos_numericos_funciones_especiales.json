@@ -1,9 +1,12 @@
 {
-  "id": "65D20",
-  "title": "Metodos Numericos Funciones Especiales",
-  "pilar": "05_discrecion_computacion",
-  "msc_code": "65D20, 65D05",
-  "difficulty": "intermedio",
-  "source_dlmf_chapter": 3,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_09_metodos_numericos_funciones_especiales",
+    "title": "Metodos Numericos Funciones Especiales",
+    "pilar": "05_discrecion_computacion",
+    "msc_code": "65D-20",
+    "difficulty": "intermedio",
+    "tags": [
+        "65D20",
+        "65D05"
+    ],
+    "status": "draft"
 }

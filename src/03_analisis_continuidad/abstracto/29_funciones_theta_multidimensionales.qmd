@@ -1,12 +1,13 @@
 ---
-id: "14K25"
+id: "msc00_29_funciones_theta_multidimensionales"
 title: "Funciones Theta Multidimensionales"
 pilar: "03_analisis_continuidad"
-msc_code: "14K25, 32G20"
+msc_code: "14K-25"
 difficulty: "abstracto"
 tags:
-  - 14K25
-  - 32G20
+  - "14K25"
+  - "32G20"
+status: "draft"
 ---
 
 # Funciones Theta Multidimensionales

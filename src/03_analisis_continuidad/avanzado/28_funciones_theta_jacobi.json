@@ -1,9 +1,12 @@
 {
-  "id": "14K25",
-  "title": "Funciones Theta Jacobi",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "14K25, 33E05",
-  "difficulty": "avanzado",
-  "source_dlmf_chapter": 20,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_28_funciones_theta_jacobi",
+    "title": "Funciones Theta Jacobi",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "14K-25",
+    "difficulty": "avanzado",
+    "tags": [
+        "14K25",
+        "33E05"
+    ],
+    "status": "draft"
 }

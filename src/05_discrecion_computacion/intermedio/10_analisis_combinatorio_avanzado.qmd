@@ -1,12 +1,13 @@
 ---
-id: "05A15"
+id: "msc00_10_analisis_combinatorio_avanzado"
 title: "Analisis Combinatorio Avanzado"
 pilar: "05_discrecion_computacion"
-msc_code: "05A15, 05A19"
+msc_code: "05A-15"
 difficulty: "intermedio"
 tags:
-  - 05A15
-  - 05A19
+  - "05A15"
+  - "05A19"
+status: "draft"
 ---
 
 # Analisis Combinatorio Avanzado

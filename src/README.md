@@ -1,3 +1,10 @@
+---
+id: "msc00_readme"
+title: "README"
+pilar: "01_fundamentos_logica"
+msc_code: "00-00"
+status: "draft"
+---
 # Contenido Teórico y Pilares de Conocimiento (`src/`)
 
 Este directorio constituye el núcleo teórico y pedagógico de Polaris Kernel.

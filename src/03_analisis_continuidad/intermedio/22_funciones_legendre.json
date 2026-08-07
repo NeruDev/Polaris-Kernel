@@ -1,9 +1,12 @@
 {
-  "id": "33C45",
-  "title": "Funciones Legendre",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "33C45, 33C05",
-  "difficulty": "intermedio",
-  "source_dlmf_chapter": 14,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_22_funciones_legendre",
+    "title": "Funciones Legendre",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "33C-45",
+    "difficulty": "intermedio",
+    "tags": [
+        "33C45",
+        "33C05"
+    ],
+    "status": "draft"
 }

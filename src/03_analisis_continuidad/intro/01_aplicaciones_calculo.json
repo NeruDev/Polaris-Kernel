@@ -14,5 +14,9 @@
             "toc-depth": 3,
             "math": true
         }
-    }
+    },
+    "id": "msc00_01_aplicaciones_calculo",
+    "pilar": "01_fundamentos_logica",
+    "status": "draft",
+    "msc_code": "00-00"
 }

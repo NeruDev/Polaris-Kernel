@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto-inputff7db7cabd608468 – Polaris Kernel</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-e8a923774aa70043a31c64adf822e8b4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Polaris Kernel
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../../">Polaris Kernel</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">01 Fundamentos Logica</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_aritmetica_propiedades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_sistemas_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/02_logica_matematica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/03_teoria_conjuntos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/04_metodos_demostracion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/05_relaciones_equivalencia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/06_funciones_y_mapeos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/07_logica_predicados_inferencia.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">02 Estructuras Algebraicas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/01_algebra_elemental.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/02_algebra_lineal.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/03_algebra_abstracta.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/05_teoria_de_matrices.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/06_ecuaciones_y_desigualdades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/07_polinomios_y_factorizacion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/08_espacios_vectoriales_bases.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">03 Analisis Continuidad</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/01_funciones_y_limites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/02_calculo_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/03_calculo_integral.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/04_calculo_multivariable.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/05_ecuaciones_diferenciales.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/06_analisis_avanzado.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/07_analisis_funcional.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/08_sucesiones_y_series.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">04 Espacio Forma</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/01_geometria_euclidiana.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/02_trigonometria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/03_geometria_analitica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/04_topologia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/05_geometria_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/06_geometria_no_euclidiana.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">05 Discrecion Computacion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/01_combinatoria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/02_teoria_de_grafos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/03_teoria_de_numeros.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/04_metodos_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/05_teoria_automatas.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">06 Estocastica Incertidumbre</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/01_estadistica_descriptiva.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/02_teoria_de_probabilidad.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/03_estadistica_inferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/04_modelos_estocasticos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/05_teoria_informacion.qmd</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#methods-of-computation" id="toc-methods-of-computation" class="nav-link active" data-scroll-target="#methods-of-computation">§10.74 Methods of Computation</a>
+  <ul class="collapse">
+  <li><a href="#i-series-expansions" id="toc-i-series-expansions" class="nav-link" data-scroll-target="#i-series-expansions">§10.74(i) Series Expansions</a></li>
+  <li><a href="#ii-differential-equations" id="toc-ii-differential-equations" class="nav-link" data-scroll-target="#ii-differential-equations">§10.74(ii) Differential Equations</a></li>
+  <li><a href="#iii-integral-representations" id="toc-iii-integral-representations" class="nav-link" data-scroll-target="#iii-integral-representations">§10.74(iii) Integral Representations</a></li>
+  <li><a href="#iv-recurrence-relations" id="toc-iv-recurrence-relations" class="nav-link" data-scroll-target="#iv-recurrence-relations">§10.74(iv) Recurrence Relations</a></li>
+  <li><a href="#v-continued-fractions" id="toc-v-continued-fractions" class="nav-link" data-scroll-target="#v-continued-fractions">§10.74(v) Continued Fractions</a></li>
+  <li><a href="#vi-zeros-and-associated-values" id="toc-vi-zeros-and-associated-values" class="nav-link" data-scroll-target="#vi-zeros-and-associated-values">§10.74(vi) Zeros and Associated Values</a>
+  <ul class="collapse">
+  <li><a href="#real-zeros" id="toc-real-zeros" class="nav-link" data-scroll-target="#real-zeros">Real Zeros</a></li>
+  <li><a href="#complex-zeros" id="toc-complex-zeros" class="nav-link" data-scroll-target="#complex-zeros">Complex Zeros</a></li>
+  <li><a href="#multiple-zeros" id="toc-multiple-zeros" class="nav-link" data-scroll-target="#multiple-zeros">Multiple Zeros</a></li>
+  </ul></li>
+  <li><a href="#vii-integrals" id="toc-vii-integrals" class="nav-link" data-scroll-target="#vii-integrals">§10.74(vii) Integrals</a>
+  <ul class="collapse">
+  <li><a href="#hankel-transform" id="toc-hankel-transform" class="nav-link" data-scroll-target="#hankel-transform">Hankel Transform</a></li>
+  <li><a href="#fourierbessel-expansion" id="toc-fourierbessel-expansion" class="nav-link" data-scroll-target="#fourierbessel-expansion">Fourier–Bessel Expansion</a></li>
+  <li><a href="#spherical-bessel-transform" id="toc-spherical-bessel-transform" class="nav-link" data-scroll-target="#spherical-bessel-transform">Spherical Bessel Transform</a></li>
+  <li><a href="#kontorovichlebedev-transform" id="toc-kontorovichlebedev-transform" class="nav-link" data-scroll-target="#kontorovichlebedev-transform">Kontorovich–Lebedev Transform</a></li>
+  <li><a href="#products" id="toc-products" class="nav-link" data-scroll-target="#products">Products</a></li>
+  </ul></li>
+  <li><a href="#viii-functions-of-imaginary-order" id="toc-viii-functions-of-imaginary-order" class="nav-link" data-scroll-target="#viii-functions-of-imaginary-order">§10.74(viii) Functions of Imaginary Order</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="methods-of-computation" class="level1">
+<h1>§10.74 Methods of Computation</h1>
+<div class="{note}">
+<p><strong>Referenced by:</strong></p>
+<p>§9.17(iv)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for Ch.10</p>
+</div>
+<section id="i-series-expansions" class="level2">
+<h2 class="anchored" data-anchor-id="i-series-expansions">§10.74(i) Series Expansions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=hyperasymptotic%20expansions">hyperasymptotic expansions</a> , <a href="http://dlmf.nist.gov/search/search?q=modified%20Bessel%20functions">modified Bessel functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74 and Ch.10</p>
+</div>
+<p>The power-series expansions given in §§ <a href="../../../../docs/DLMF-markdown-main/markdown/10/10.2.html" title="§10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions">10.2</a> and <a href="../../../../docs/DLMF-markdown-main/markdown/10/10.8.html" title="§10.8 Power Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions">10.8</a> , together with the connection formulas of § <a href="../../../../docs/DLMF-markdown-main/markdown/10/10.4.html" title="§10.4 Connection Formulas ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions">10.4</a> , can be used to compute the Bessel and Hankel functions when the argument <span class="math inline">\(x\)</span> or <span class="math inline">\(z\)</span> is sufficiently small in absolute value. In the case of the modified Bessel function <span class="math inline">\(K_{\nu}\left(z\right)\)</span> see especially Temme (<a href="./bib/T.html#bib2209" title="On the numerical evaluation of the modified Bessel function of the third kind">1975</a>).</p>
+<p>In other circumstances the power series are prone to slow convergence and heavy numerical cancellation.</p>
+<p>If <span class="math inline">\(x\)</span> or <span class="math inline">\(|z|\)</span> is large compared with <span class="math inline">\(|\nu|^{2}\)</span> , then the asymptotic expansions of §§ 10.17(i) – 10.17(iv) are available. Furthermore, the attainable accuracy can be increased substantially by use of the exponentially-improved expansions given in § 10.17(v) , even more so by application of the hyperasymptotic expansions to be found in the references in that subsection.</p>
+<p>For large positive real values of <span class="math inline">\(\nu\)</span> the uniform asymptotic expansions of §§ 10.20(i) and 10.20(ii) can be used. Moreover, because of their double asymptotic properties (§ 10.41(v) ) these expansions can also be used for large <span class="math inline">\(x\)</span> or <span class="math inline">\(|z|\)</span> , whether or not <span class="math inline">\(\nu\)</span> is large. It should be noted, however, that there is a difficulty in evaluating the coefficients <span class="math inline">\(A_{k}(\zeta)\)</span> , <span class="math inline">\(B_{k}(\zeta)\)</span> , <span class="math inline">\(C_{k}(\zeta)\)</span> , and <span class="math inline">\(D_{k}(\zeta)\)</span> , from the explicit expressions ( 10.20.10 )–( 10.20.13 ) when <span class="math inline">\(z\)</span> is close to <span class="math inline">\(1\)</span> owing to severe cancellation. Temme (<a href="./bib/T.html#bib2232" title="Numerical algorithms for uniform Airy-type asymptotic expansions">1997</a>) shows how to overcome this difficulty by use of the Maclaurin expansions for these coefficients or by use of auxiliary functions.</p>
+<p>Similar observations apply to the computation of modified Bessel functions, spherical Bessel functions, and Kelvin functions. In the case of the spherical Bessel functions the explicit formulas given in §§ 10.49(i) and 10.49(ii) are terminating cases of the asymptotic expansions given in §§ 10.17(i) and 10.40(i) for the Bessel functions and modified Bessel functions. And since there are no error terms they could, in theory, be used for all values of <span class="math inline">\(z\)</span> ; however, there may be severe cancellation when <span class="math inline">\(|z|\)</span> is not large compared with <span class="math inline">\(n^{2}\)</span> .</p>
+</section>
+<section id="ii-differential-equations" class="level2">
+<h2 class="anchored" data-anchor-id="ii-differential-equations">§10.74(ii) Differential Equations</h2>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74 and Ch.10</p>
+</div>
+<p>A comprehensive and powerful approach is to integrate the differential equations ( 10.2.1 ) and ( 10.25.1 ) by direct numerical methods. As described in § 3.7(ii) , to insure stability the integration path must be chosen in such a way that as we proceed along it the wanted solution grows in magnitude at least as fast as all other solutions of the differential equation.</p>
+<p>In the interval <span class="math inline">\(0&lt;x&lt;\nu\)</span> , <span class="math inline">\(J_{\nu}\left(x\right)\)</span> needs to be integrated in the forward direction and <span class="math inline">\(Y_{\nu}\left(x\right)\)</span> in the backward direction, with initial values for the former obtained from the power-series expansion ( 10.2.2 ) and for the latter from asymptotic expansions (§§ 10.17(i) and 10.20(i) ). In the interval <span class="math inline">\(\nu&lt;x&lt;\infty\)</span> either direction of integration can be used for both functions.</p>
+<p>Similarly, to maintain stability in the interval <span class="math inline">\(0&lt;x&lt;\infty\)</span> the integration direction has to be forwards in the case of <span class="math inline">\(I_{\nu}\left(x\right)\)</span> and backwards in the case of <span class="math inline">\(K_{\nu}\left(x\right)\)</span> , with initial values obtained in an analogous manner to those for <span class="math inline">\(J_{\nu}\left(x\right)\)</span> and <span class="math inline">\(Y_{\nu}\left(x\right)\)</span> .</p>
+<p>For <span class="math inline">\(z\in\mathbb{C}\)</span> the function <span class="math inline">\({H^{(1)}_{\nu}}\left(z\right)\)</span> , for example, can always be computed in a stable manner in the sector <span class="math inline">\(0\leq\operatorname{ph}z\leq\pi\)</span> by integrating along rays towards the origin.</p>
+<p>Similar considerations apply to the spherical Bessel functions and Kelvin functions.</p>
+<p>For further information, including parallel methods for solving the differential equations, see Lozier and Olver (<a href="./bib/L.html#bib1477" title="Airy and Bessel Functions by Parallel Integration of ODEs">1993</a>).</p>
+</section>
+<section id="iii-integral-representations" class="level2">
+<h2 class="anchored" data-anchor-id="iii-integral-representations">§10.74(iii) Integral Representations</h2>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74 and Ch.10</p>
+</div>
+<p>For evaluation of the Hankel functions <span class="math inline">\({H^{(1)}_{\nu}}\left(z\right)\)</span> and <span class="math inline">\({H^{(2)}_{\nu}}\left(z\right)\)</span> for complex values of <span class="math inline">\(\nu\)</span> and <span class="math inline">\(z\)</span> based on the integral representations ( 10.9.18 ) see Remenets (<a href="./bib/R.html#bib1942" title="Computation of Hankel (Bessel) functions of complex index and argument by numerical integration of a Schläfli contour integral">1973</a>).</p>
+<p>For applications of generalized Gauss–Laguerre quadrature (§ 3.5(v) ) to the evaluation of the modified Bessel functions <span class="math inline">\(K_{\nu}\left(z\right)\)</span> for <span class="math inline">\(0&lt;\nu&lt;1\)</span> and <span class="math inline">\(0&lt;x&lt;\infty\)</span> see Gautschi (<a href="./bib/G.html#bib897" title="Computation of Bessel and Airy functions and of related Gaussian quadrature formulae">2002a</a>). The integral representation used is based on ( 10.32.8 ).</p>
+<p>For evaluation of <span class="math inline">\(K_{\nu}\left(z\right)\)</span> from ( 10.32.14 ) with <span class="math inline">\(\nu=n\)</span> and <span class="math inline">\(z\)</span> complex, see Mechel (<a href="./bib/M.html#bib1589" title="Calculation of the modified Bessel functions of the second kind with complex argument">1966</a>).</p>
+</section>
+<section id="iv-recurrence-relations" class="level2">
+<h2 class="anchored" data-anchor-id="iv-recurrence-relations">§10.74(iv) Recurrence Relations</h2>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74 and Ch.10</p>
+</div>
+<p>If values of the Bessel functions <span class="math inline">\(J_{\nu}\left(z\right)\)</span> , <span class="math inline">\(Y_{\nu}\left(z\right)\)</span> , or the other functions treated in this chapter, are needed for integer-spaced ranges of values of the order <span class="math inline">\(\nu\)</span> , then a simple and powerful procedure is provided by recurrence relations typified by the first of ( 10.6.1 ).</p>
+<p>Suppose, for example, <span class="math inline">\(\nu=n\in 0,1,2,\dotsc\)</span> , and <span class="math inline">\(x\in(0,\infty)\)</span> . Then <span class="math inline">\(J_{n}\left(x\right)\)</span> and <span class="math inline">\(Y_{n}\left(x\right)\)</span> can be generated by either forward or backward recurrence on <span class="math inline">\(n\)</span> when <span class="math inline">\(n&lt;x\)</span> , but if <span class="math inline">\(n&gt;x\)</span> then to maintain stability <span class="math inline">\(J_{n}\left(x\right)\)</span> has to be generated by backward recurrence on <span class="math inline">\(n\)</span> , and <span class="math inline">\(Y_{n}\left(x\right)\)</span> has to be generated by forward recurrence on <span class="math inline">\(n\)</span> . In the case of <span class="math inline">\(J_{n}\left(x\right)\)</span> , the need for initial values can be avoided by application of Olver’s algorithm (§ 3.6(v) ) in conjunction with Equation ( 10.12.4 ) used as a normalizing condition, or in the case of noninteger orders, ( 10.23.15 ).</p>
+<p>For further information see Gautschi (<a href="./bib/G.html#bib877" title="Computational aspects of three-term recurrence relations">1967</a>), Olver and Sookne (<a href="./bib/O.html#bib1812" title="Note on backward recurrence algorithms">1972</a>), Temme (<a href="./bib/T.html#bib2209" title="On the numerical evaluation of the modified Bessel function of the third kind">1975</a>), Campbell (<a href="./bib/C.html#bib407" title="On Temme’s algorithm for the modified Bessel function of the third kind">1980</a>), and Kerimov and Skorokhodov (<a href="./bib/K.html#bib1249" title="Calculation of modified Bessel functions in a complex domain">1984a</a>).</p>
+</section>
+<section id="v-continued-fractions" class="level2">
+<h2 class="anchored" data-anchor-id="v-continued-fractions">§10.74(v) Continued Fractions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Bessel%20functions">Bessel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Hankel%20functions">Hankel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Kelvin%20functions">Kelvin functions</a> , <a href="http://dlmf.nist.gov/search/search?q=computation">computation</a> , <a href="http://dlmf.nist.gov/search/search?q=modified%20Bessel%20functions">modified Bessel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=spherical%20Bessel%20functions">spherical Bessel functions</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§3.10(iii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74 and Ch.10</p>
+</div>
+<p>For applications of the continued-fraction expansions ( 10.10.1 ), ( 10.10.2 ), ( 10.33.1 ), and ( 10.33.2 ) to the computation of Bessel functions and modified Bessel functions see Gargantini and Henrici (<a href="./bib/G.html#bib857" title="A continued fraction algorithm for the computation of higher transcendental functions in the complex plane">1967</a>), Amos (<a href="./bib/index.html#bib71" title="Computation of modified Bessel functions and their ratios">1974</a>), Gautschi and Slavik (<a href="./bib/G.html#bib885" title="On the computation of modified Bessel function ratios">1978</a>), Tretter and Walster (<a href="./bib/T.html#bib2273" title="Further comments on the computation of modified Bessel function ratios">1980</a>), Thompson and Barnett (<a href="./bib/T.html#bib2244" title="Coulomb and Bessel functions of complex arguments and order">1986</a>), and Cuyt et al.&nbsp;(<a href="./bib/C.html#bib608" title="Handbook of Continued Fractions for Special Functions">2008</a>).</p>
+</section>
+<section id="vi-zeros-and-associated-values" class="level2">
+<h2 class="anchored" data-anchor-id="vi-zeros-and-associated-values">§10.74(vi) Zeros and Associated Values</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Hankel%20functions">Hankel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Kelvin%20functions">Kelvin functions</a> , <a href="http://dlmf.nist.gov/search/search?q=computation">computation</a> , <a href="http://dlmf.nist.gov/search/search?q=modified%20Bessel%20functions">modified Bessel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a> , <a href="http://dlmf.nist.gov/search/search?q=zeros%20of%20Bessel%20functions">zeros of Bessel functions (including derivatives)</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§10.21(ix) , Erratum (V1.0.10) for References</p>
+<p><strong>Addition (effective with 1.0.10):</strong></p>
+<p>A reference to Segura (<a href="./bib/S.html#bib2835" title="Computing the complex zeros of special functions">2013</a>) was added in the paragraph headed Complex Zeros .</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74 and Ch.10</p>
+</div>
+<p>Newton’s rule (§ 3.8(i) ) or Halley’s rule (§ 3.8(v) ) can be used to compute to arbitrarily high accuracy the real or complex zeros of all the functions treated in this chapter. Necessary values of the first derivatives of the functions are obtained by the use of ( 10.6.2 ), for example. Newton’s rule is quadratically convergent and Halley’s rule is cubically convergent. See also Segura (<a href="./bib/S.html#bib2040" title="A global Newton method for the zeros of cylinder functions">1998</a>, <a href="./bib/S.html#bib2041" title="Bounds on differences of adjacent zeros of Bessel functions and iterative relations between consecutive zeros">2001</a>).</p>
+<p>Methods for obtaining initial approximations to the zeros include asymptotic expansions (§§ 10.21(vi) - 10.21(ix) ), graphical intersection of <span class="math inline">\(2D\)</span> graphs in <span class="math inline">\(\mathbb{R}\)</span> (e.g., § 10.3(i) ) with the <span class="math inline">\(x\)</span> -axis, or graphical intersection of <span class="math inline">\(3D\)</span> complex-variable surfaces (e.g., § 10.3(ii) ) with the plane <span class="math inline">\(z=0\)</span> .</p>
+<p>To ensure that no zeros are overlooked, standard tools are the phase principle and Rouché’s theorem; see § 1.10(iv) .</p>
+<section id="real-zeros" class="level3">
+<h3 class="anchored" data-anchor-id="real-zeros">Real Zeros</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74(vi) , §10.74 and Ch.10</p>
+</div>
+<p>See Olver (<a href="./bib/O.html#bib1783" title="Bessel Functions. Part III: Zeros and Associated Values">1960</a>, pp.&nbsp;xvi–xxix), Grad and Zakrajšek (<a href="./bib/G.html#bib969" title="Method for evaluation of zeros of Bessel functions">1973</a>), Temme (<a href="./bib/T.html#bib2213" title="An algorithm with ALGOL 60 program for the computation of the zeros of ordinary Bessel functions and those of their derivatives">1979a</a>), Ikebe et al.&nbsp;(<a href="./bib/I.html#bib1122" title="Computing zeros and orders of Bessel functions">1991</a>), Zafiropoulos et al.&nbsp;(<a href="./bib/Z.html#bib2477" title="On the Computation of Zeros of Bessel and Bessel-related Functions">1996</a>), Vrahatis et al.&nbsp;(<a href="./bib/V.html#bib2346" title="On the localization and computation of zeros of Bessel functions">1997a</a>), Ball (<a href="./bib/B.html#bib182" title="Automatic computation of zeros of Bessel functions and other special functions">2000</a>), and Gil and Segura (<a href="./bib/G.html#bib919" title="Computing the zeros and turning points of solutions of second order homogeneous linear ODEs">2003</a>).</p>
+</section>
+<section id="complex-zeros" class="level3">
+<h3 class="anchored" data-anchor-id="complex-zeros">Complex Zeros</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74(vi) , §10.74 and Ch.10</p>
+</div>
+<p>See Leung and Ghaderpanah (<a href="./bib/L.html#bib1422" title="An application of the finite element approximation method to find the complex zeros of the modified Bessel function ⁢ K n ( z )">1979</a>), Kerimov and Skorokhodov (<a href="./bib/K.html#bib1248" title="Calculation of the complex zeros of the modified Bessel function of the second kind and its derivatives">1984b</a>, <a href="./bib/K.html#bib1250" title="Evaluation of complex zeros of Bessel functions ⁢ J ν ( z ) and ⁢ I ν ( z ) and their derivatives">c</a>, <a href="./bib/K.html#bib1251" title="Calculation of the complex zeros of a Bessel function of the second kind and its derivatives">1985a</a>, <a href="./bib/K.html#bib1252" title="Calculation of the complex zeros of Hankel functions and their derivatives">1985b</a>), Skorokhodov (<a href="./bib/S.html#bib2095" title="On the calculation of complex zeros of the modified Bessel function of the second kind">1985</a>), Modenov and Filonov (<a href="./bib/M.html#bib1644" title="Calculation of zeros of cylindrical functions and their derivatives">1986</a>), Vrahatis et al.&nbsp;(<a href="./bib/V.html#bib2348" title="The topological degree theory for the localization and computation of complex zeros of Bessel functions">1997b</a>), and Segura (<a href="./bib/S.html#bib2835" title="Computing the complex zeros of special functions">2013</a>).</p>
+</section>
+<section id="multiple-zeros" class="level3">
+<h3 class="anchored" data-anchor-id="multiple-zeros">Multiple Zeros</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=computation">computation</a> , <a href="http://dlmf.nist.gov/search/search?q=zeros%20of%20Bessel%20functions">zeros of Bessel functions (including derivatives)</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74(vi) , §10.74 and Ch.10</p>
+</div>
+<p>See Kerimov and Skorokhodov (<a href="./bib/K.html#bib1253" title="Calculation of the multiple zeros of the derivatives of the cylindrical Bessel functions ⁢ J ν ( z ) and ⁢ Y ν ( z )">1985c</a>, <a href="./bib/K.html#bib1254" title="On multiple zeros of derivatives of Bessel’s cylindrical functions">1986</a>, <a href="./bib/K.html#bib1255" title="On the calculation of the multiple complex roots of the derivatives of cylindrical Bessel functions">1987</a>, <a href="./bib/K.html#bib1256" title="Multiple complex zeros of derivatives of the cylindrical Bessel functions">1988</a>).</p>
+</section>
+</section>
+<section id="vii-integrals" class="level2">
+<h2 class="anchored" data-anchor-id="vii-integrals">§10.74(vii) Integrals</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Bessel%20functions">Bessel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=computation">computation</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals%20of%20modified%20Bessel%20functions">integrals of modified Bessel functions</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>Erratum (V1.0.22) for References , Erratum (V1.0.5) for References</p>
+<p><strong>Addition (effective with 1.0.5):</strong></p>
+<p>The reference to Van Deun and Cools (<a href="./bib/V.html#bib2767" title="Integrating products of Bessel functions with an additional exponential or rational factor">2008</a>) has been added at the end of this subsection.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74 and Ch.10</p>
+</div>
+<section id="hankel-transform" class="level3">
+<h3 class="anchored" data-anchor-id="hankel-transform">Hankel Transform</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Hankel%20transform">Hankel transform</a> , <a href="http://dlmf.nist.gov/search/search?q=computation">computation</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74(vii) , §10.74 and Ch.10</p>
+</div>
+<p>See Cornille (<a href="./bib/C.html#bib589" title="Computation of Hankel transforms">1972</a>), Johansen and Sørensen (<a href="./bib/J.html#bib1173" title="Fast Hankel transforms">1979</a>), Gabutti (<a href="./bib/G.html#bib851" title="On high precision methods for computing integrals involving Bessel functions">1979</a>), Gabutti and Minetti (<a href="./bib/G.html#bib853" title="A new application of the discrete Laguerre polynomials in the numerical evaluation of the Hankel transform of a strongly decreasing even function">1981</a>), Candel (<a href="./bib/C.html#bib412" title="An algorithm for the Fourier-Bessel transform">1981</a>), Wong (<a href="./bib/W.html#bib2436" title="Quadrature formulas for oscillatory integral transforms">1982</a>), Lund (<a href="./bib/L.html#bib1504" title="Bessel transforms and rational extrapolation">1985</a>), Piessens and Branders (<a href="./bib/P.html#bib1884" title="A survey of numerical methods for the computation of Bessel function integrals">1985</a>), Hansen (<a href="./bib/H.html#bib1036" title="Fast Hankel transform algorithm">1985</a>), Bezvoda et al.&nbsp;(<a href="./bib/B.html#bib273" title="On numerical evaluation of integrals involving Bessel functions">1986</a>), Puoskari (<a href="./bib/P.html#bib1909" title="A method for computing Bessel function integrals">1988</a>), Christensen (<a href="./bib/C.html#bib496" title="Optimized fast Hankel transform filters">1990</a>), Campos (<a href="./bib/C.html#bib411" title="A quadrature formula for the Hankel transform">1995</a>), Lucas and Stone (<a href="./bib/L.html#bib1483" title="Evaluating infinite integrals involving Bessel functions of arbitrary order">1995</a>), Barakat and Parshall (<a href="./bib/B.html#bib188" title="Numerical evaluation of the zero-order Hankel transform using Filon quadrature philosophy">1996</a>), Sidi (<a href="./bib/S.html#bib2074" title="Computation of infinite integrals involving Bessel functions of arbitrary order by the ¯ D -transformation">1997</a>), Secada (<a href="./bib/S.html#bib2038" title="Numerical evaluation of the Hankel transform">1999</a>).</p>
+</section>
+<section id="fourierbessel-expansion" class="level3">
+<h3 class="anchored" data-anchor-id="fourierbessel-expansion">Fourier–Bessel Expansion</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Bessel%20functions">Bessel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=Fourier%E2%80%93Bessel%20expansion">Fourier–Bessel expansion</a> , <a href="http://dlmf.nist.gov/search/search?q=computation">computation</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74(vii) , §10.74 and Ch.10</p>
+</div>
+<p>For the computation of the integral ( 10.23.19 ) see Piessens and Branders (<a href="./bib/P.html#bib1882" title="Modified Clenshaw-Curtis method for the computation of Bessel function integrals">1983</a>, <a href="./bib/P.html#bib1884" title="A survey of numerical methods for the computation of Bessel function integrals">1985</a>), Lewanowicz (<a href="./bib/L.html#bib1430" title="Evaluation of Bessel function integrals with algebraic singularities">1991</a>), and Zhileĭkin and Kukarkin (<a href="./bib/Z.html#bib2495" title="A fast Fourier-Bessel transform algorithm">1995</a>).</p>
+</section>
+<section id="spherical-bessel-transform" class="level3">
+<h3 class="anchored" data-anchor-id="spherical-bessel-transform">Spherical Bessel Transform</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=computation">computation</a> , <a href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a> , <a href="http://dlmf.nist.gov/search/search?q=spherical%20Bessel%20functions">spherical Bessel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=spherical%20Bessel%20transform">spherical Bessel transform</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74(vii) , §10.74 and Ch.10</p>
+</div>
+<p>The <em>spherical Bessel transform</em> is the Hankel transform ( 10.22.76 ) in the case when <span class="math inline">\(\nu\)</span> is half an odd positive integer.</p>
+<p>See Lehman et al.&nbsp;(<a href="./bib/L.html#bib1404" title="Numerical evaluation of integrals containing a spherical Bessel function by product integration">1981</a>), Puoskari (<a href="./bib/P.html#bib1909" title="A method for computing Bessel function integrals">1988</a>), and Sharafeddin et al.&nbsp;(<a href="./bib/S.html#bib2057" title="Numerical evaluation of spherical Bessel transforms via fast Fourier transforms">1992</a>).</p>
+</section>
+<section id="kontorovichlebedev-transform" class="level3">
+<h3 class="anchored" data-anchor-id="kontorovichlebedev-transform">Kontorovich–Lebedev Transform</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Kontorovich%E2%80%93Lebedev%20transform">Kontorovich–Lebedev transform</a> , <a href="http://dlmf.nist.gov/search/search?q=computation">computation</a> , <a href="http://dlmf.nist.gov/search/search?q=modified%20Bessel%20functions">modified Bessel functions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74(vii) , §10.74 and Ch.10</p>
+</div>
+<p>See Ehrenmark (<a href="./bib/E.html#bib732" title="The numerical inversion of two classes of Kontorovich-Lebedev transform by direct quadrature">1995</a>).</p>
+</section>
+<section id="products" class="level3">
+<h3 class="anchored" data-anchor-id="products">Products</h3>
+<div class="{note}">
+<p><strong>Referenced by:</strong></p>
+<p>Erratum (V1.0.22) for References</p>
+<p><strong>Addition (effective with 1.0.22):</strong></p>
+<p>A reference and sentence describing Ratnanather et al.&nbsp;(<a href="./bib/R.html#bib2885" title="Algorithm 935: IIPBF, a MATLAB toolbox for infinite integral of products of two Bessel functions">2014</a>) has been added in this paragraph.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74(vii) , §10.74 and Ch.10</p>
+</div>
+<p>For infinite integrals involving products of Bessel functions of the first kind, see Linz and Kropp (<a href="./bib/L.html#bib1443" title="A note on the computation of integrals involving products of trigonometric and Bessel functions">1973</a>), Gabutti (<a href="./bib/G.html#bib852" title="On the generalization of a method for computing Bessel function integrals">1980</a>), Ikonomou et al.&nbsp;(<a href="./bib/I.html#bib1124" title="Computation of integrals over the half-line involving products of Bessel functions, with application to microwave transmission lines">1995</a>), Lucas (<a href="./bib/L.html#bib1482" title="Evaluating infinite integrals involving products of Bessel functions of arbitrary order">1995</a>), and Van Deun and Cools (<a href="./bib/V.html#bib2767" title="Integrating products of Bessel functions with an additional exponential or rational factor">2008</a>). For infinite integrals involving products of Bessel functions of the first and second kinds, see Ratnanather et al.&nbsp;(<a href="./bib/R.html#bib2885" title="Algorithm 935: IIPBF, a MATLAB toolbox for infinite integral of products of two Bessel functions">2014</a>).</p>
+</section>
+</section>
+<section id="viii-functions-of-imaginary-order" class="level2">
+<h2 class="anchored" data-anchor-id="viii-functions-of-imaginary-order">§10.74(viii) Functions of Imaginary Order</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=computation">computation</a> , <a href="http://dlmf.nist.gov/search/search?q=modified%20Bessel%20functions">modified Bessel functions</a> , <a href="http://dlmf.nist.gov/search/search?q=of%20imaginary%20order">of imaginary order</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §10.74 and Ch.10</p>
+</div>
+<p>For the computation of the functions <span class="math inline">\(\widetilde{I}_{\nu}\left(x\right)\)</span> and <span class="math inline">\(\widetilde{K}_{\nu}\left(x\right)\)</span> defined by ( 10.45.2 ) see Temme (<a href="./bib/T.html#bib2226" title="Steepest descent paths for integrals defining the modified Bessel functions of imaginary order">1994c</a>) and Gil et al.&nbsp;(<a href="./bib/G.html#bib925" title="Evaluation of the modified Bessel function of the third kind of imaginary orders">2002d</a>, <a href="./bib/G.html#bib926" title="Computation of the modified Bessel function of the third kind of imaginary orders: Uniform Airy-type asymptotic expansion">2003a</a>, <a href="./bib/G.html#bib930" title="Computing solutions of the modified Bessel differential equation for imaginary orders and positive arguments">2004b</a>).</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nerudev\.github\.io\/Polaris-Kernel\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

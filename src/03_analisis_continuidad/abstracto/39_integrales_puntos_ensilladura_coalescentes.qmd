@@ -1,12 +1,13 @@
 ---
-id: "41A60"
+id: "msc00_39_integrales_puntos_ensilladura_coalescentes"
 title: "Integrales Puntos Ensilladura Coalescentes"
 pilar: "03_analisis_continuidad"
-msc_code: "41A60, 58K05"
+msc_code: "41A-60"
 difficulty: "abstracto"
 tags:
-  - 41A60
-  - 58K05
+  - "41A60"
+  - "58K05"
+status: "draft"
 ---
 
 # Integrales Puntos Ensilladura Coalescentes

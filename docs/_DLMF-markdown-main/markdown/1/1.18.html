@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto-inputaab05a1ee5423d2c – Polaris Kernel</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-e8a923774aa70043a31c64adf822e8b4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-487eed6e91c0b3e15df421b3d172223a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Polaris Kernel
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../../">Polaris Kernel</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">01 Fundamentos Logica</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_aritmetica_propiedades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/01_sistemas_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/02_logica_matematica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/03_teoria_conjuntos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/04_metodos_demostracion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/05_relaciones_equivalencia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/06_funciones_y_mapeos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/01_fundamentos_logica/07_logica_predicados_inferencia.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">02 Estructuras Algebraicas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/01_algebra_elemental.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/02_algebra_lineal.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/03_algebra_abstracta.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/05_teoria_de_matrices.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/06_ecuaciones_y_desigualdades.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/07_polinomios_y_factorizacion.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/02_estructuras_algebraicas/08_espacios_vectoriales_bases.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">03 Analisis Continuidad</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/01_funciones_y_limites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/02_calculo_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/03_calculo_integral.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/04_calculo_multivariable.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/05_ecuaciones_diferenciales.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/06_analisis_avanzado.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/07_analisis_funcional.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/03_analisis_continuidad/08_sucesiones_y_series.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">04 Espacio Forma</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/01_geometria_euclidiana.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/02_trigonometria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/03_geometria_analitica.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/04_topologia.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/05_geometria_diferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/04_espacio_forma/06_geometria_no_euclidiana.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">05 Discrecion Computacion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/01_combinatoria.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/02_teoria_de_grafos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/03_teoria_de_numeros.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/04_metodos_numericos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/05_discrecion_computacion/05_teoria_automatas.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">06 Estocastica Incertidumbre</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/01_estadistica_descriptiva.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/02_teoria_de_probabilidad.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/03_estadistica_inferencial.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/04_modelos_estocasticos.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">src/06_estocastica_incertidumbre/05_teoria_informacion.qmd</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#linear-second-order-differential-operators-and-eigenfunction-expansions" id="toc-linear-second-order-differential-operators-and-eigenfunction-expansions" class="nav-link active" data-scroll-target="#linear-second-order-differential-operators-and-eigenfunction-expansions">§1.18 Linear Second Order Differential Operators and Eigenfunction Expansions</a>
+  <ul class="collapse">
+  <li><a href="#i-hilbert-spaces" id="toc-i-hilbert-spaces" class="nav-link" data-scroll-target="#i-hilbert-spaces">§1.18(i) Hilbert spaces</a></li>
+  <li><a href="#ii-l2-spaces-on-intervals-in-ℝ" id="toc-ii-l2-spaces-on-intervals-in-ℝ" class="nav-link" data-scroll-target="#ii-l2-spaces-on-intervals-in-ℝ">§1.18(ii) L2 spaces on intervals in ℝ</a></li>
+  <li><a href="#iii-linear-operators-on-a-hilbert-space" id="toc-iii-linear-operators-on-a-hilbert-space" class="nav-link" data-scroll-target="#iii-linear-operators-on-a-hilbert-space">§1.18(iii) Linear Operators on a Hilbert Space</a>
+  <ul class="collapse">
+  <li><a href="#bounded-and-unbounded-linear-operators" id="toc-bounded-and-unbounded-linear-operators" class="nav-link" data-scroll-target="#bounded-and-unbounded-linear-operators">Bounded and Unbounded Linear Operators</a></li>
+  <li><a href="#self-adjoint-and-symmetric-operators" id="toc-self-adjoint-and-symmetric-operators" class="nav-link" data-scroll-target="#self-adjoint-and-symmetric-operators">Self-Adjoint and Symmetric Operators</a></li>
+  <li><a href="#formally-self-adjoint-and-self-adjoint-differential-operators-self-adjoint-extensions" id="toc-formally-self-adjoint-and-self-adjoint-differential-operators-self-adjoint-extensions" class="nav-link" data-scroll-target="#formally-self-adjoint-and-self-adjoint-differential-operators-self-adjoint-extensions">Formally Self-Adjoint and Self-Adjoint Differential Operators:&nbsp;Self-Adjoint Extensions</a></li>
+  </ul></li>
+  <li><a href="#iv-formally-self-adjoint-linear-second-order-differential-operators" id="toc-iv-formally-self-adjoint-linear-second-order-differential-operators" class="nav-link" data-scroll-target="#iv-formally-self-adjoint-linear-second-order-differential-operators">§1.18(iv) Formally Self-adjoint Linear Second Order Differential Operators</a></li>
+  <li><a href="#v-point-spectra-and-eigenfunction-expansions" id="toc-v-point-spectra-and-eigenfunction-expansions" class="nav-link" data-scroll-target="#v-point-spectra-and-eigenfunction-expansions">§1.18(v) Point Spectra and Eigenfunction Expansions</a>
+  <ul class="collapse">
+  <li><a href="#general-results" id="toc-general-results" class="nav-link" data-scroll-target="#general-results">General Results</a></li>
+  <li><a href="#example-1-three-simple-cases-where-qx0-x0π" id="toc-example-1-three-simple-cases-where-qx0-x0π" class="nav-link" data-scroll-target="#example-1-three-simple-cases-where-qx0-x0π">Example 1:&nbsp;Three Simple Cases where q⁢(x)=0, X=[0,π]</a></li>
+  <li><a href="#hermites-differential-equation-x" id="toc-hermites-differential-equation-x" class="nav-link" data-scroll-target="#hermites-differential-equation-x">Hermite’s Differential Equation, X=(−∞,∞)</a></li>
+  </ul></li>
+  <li><a href="#vi-continuous-spectra-and-eigenfunction-expansions-simple-cases" id="toc-vi-continuous-spectra-and-eigenfunction-expansions-simple-cases" class="nav-link" data-scroll-target="#vi-continuous-spectra-and-eigenfunction-expansions-simple-cases">§1.18(vi) Continuous Spectra and Eigenfunction Expansions: Simple Cases</a>
+  <ul class="collapse">
+  <li><a href="#general-results-1" id="toc-general-results-1" class="nav-link" data-scroll-target="#general-results-1">General Results</a></li>
+  <li><a href="#example-1-besselhankel-transform-x0" id="toc-example-1-besselhankel-transform-x0" class="nav-link" data-scroll-target="#example-1-besselhankel-transform-x0">Example 1: Bessel–Hankel Transform, X=[0,∞)</a></li>
+  <li><a href="#example-2-sine-and-cosine-transforms-x0" id="toc-example-2-sine-and-cosine-transforms-x0" class="nav-link" data-scroll-target="#example-2-sine-and-cosine-transforms-x0">Example 2: Sine and Cosine Transforms, X=[0,∞)</a></li>
+  </ul></li>
+  <li><a href="#vii-continuous-spectra-more-general-cases" id="toc-vii-continuous-spectra-more-general-cases" class="nav-link" data-scroll-target="#vii-continuous-spectra-more-general-cases">§1.18(vii) Continuous Spectra:&nbsp;More General Cases</a></li>
+  <li><a href="#viii-mixed-spectra-and-eigenfunction-expansions" id="toc-viii-mixed-spectra-and-eigenfunction-expansions" class="nav-link" data-scroll-target="#viii-mixed-spectra-and-eigenfunction-expansions">§1.18(viii) Mixed Spectra and Eigenfunction Expansions</a>
+  <ul class="collapse">
+  <li><a href="#example-1-in-one-and-two-dimensions-any-qx-with-a-dip-or-well-has-a-partly-discrete-spectrum" id="toc-example-1-in-one-and-two-dimensions-any-qx-with-a-dip-or-well-has-a-partly-discrete-spectrum" class="nav-link" data-scroll-target="#example-1-in-one-and-two-dimensions-any-qx-with-a-dip-or-well-has-a-partly-discrete-spectrum">Example 1:&nbsp;In one and two dimensions any q⁢(x) with a ‘Dip, or Well’ has a partly discrete spectrum</a></li>
+  <li><a href="#example-2-radial-3d-schrödinger-operators-including-the-coulomb-potential" id="toc-example-2-radial-3d-schrödinger-operators-including-the-coulomb-potential" class="nav-link" data-scroll-target="#example-2-radial-3d-schrödinger-operators-including-the-coulomb-potential">Example 2:&nbsp;Radial 3D Schrödinger operators, including the Coulomb potential</a></li>
+  </ul></li>
+  <li><a href="#ix-mathematical-background" id="toc-ix-mathematical-background" class="nav-link" data-scroll-target="#ix-mathematical-background">§1.18(ix) Mathematical Background</a>
+  <ul class="collapse">
+  <li><a href="#self-adjoint-operators" id="toc-self-adjoint-operators" class="nav-link" data-scroll-target="#self-adjoint-operators">Self-Adjoint Operators</a></li>
+  <li><a href="#spectrum-of-an-operator" id="toc-spectrum-of-an-operator" class="nav-link" data-scroll-target="#spectrum-of-an-operator">Spectrum of an Operator</a></li>
+  <li><a href="#self-adjoint-extensions-of-a-symmetric-operator" id="toc-self-adjoint-extensions-of-a-symmetric-operator" class="nav-link" data-scroll-target="#self-adjoint-extensions-of-a-symmetric-operator">Self-adjoint extensions of a symmetric Operator</a></li>
+  <li><a href="#self-adjoint-extensions-of-1.18.28-and-the-weyl-alternative" id="toc-self-adjoint-extensions-of-1.18.28-and-the-weyl-alternative" class="nav-link" data-scroll-target="#self-adjoint-extensions-of-1.18.28-and-the-weyl-alternative">Self-adjoint extensions of (1.18.28) and the Weyl alternative</a></li>
+  <li><a href="#spectral-expansions-and-self-adjoint-extensions" id="toc-spectral-expansions-and-self-adjoint-extensions" class="nav-link" data-scroll-target="#spectral-expansions-and-self-adjoint-extensions">Spectral expansions and self-adjoint extensions</a></li>
+  </ul></li>
+  <li><a href="#x-literature" id="toc-x-literature" class="nav-link" data-scroll-target="#x-literature">§1.18(x) Literature</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<section id="linear-second-order-differential-operators-and-eigenfunction-expansions" class="level1">
+<h1>§1.18 Linear Second Order Differential Operators and Eigenfunction Expansions</h1>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=differential%20operators">differential operators</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenfunction%20expansions">eigenfunction expansions</a> , <a href="http://dlmf.nist.gov/search/search?q=linear">linear</a> , <a href="http://dlmf.nist.gov/search/search?q=second%20order">second order</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.18(iii) , §18.39(i) , §18.39(i) , Erratum (V1.2.0) §1.18 , Erratum (V1.2.0) §1.18 , Version 1.2.0 (March 27, 2024)</p>
+<p><strong>Addition (effective with 1.2.0):</strong></p>
+<p>This section was added.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for Ch.1</p>
+</div>
+<p>A survey is given of the formal spectral theory of second order differential operators, typical results being presented in § 1.18(i) through § 1.18(viii) . The various types of spectra and the corresponding eigenfunction expansions are illustrated by examples. These are based on the Liouville normal form of ( 1.13.29 ). A more precise mathematical discussion then follows in § 1.18(ix) .</p>
+<section id="i-hilbert-spaces" class="level2">
+<h2 class="anchored" data-anchor-id="i-hilbert-spaces">§1.18(i) Hilbert spaces</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Hilbert">Hilbert</a> , <a href="http://dlmf.nist.gov/search/search?q=Hilbert%20space">Hilbert space</a> , <a href="http://dlmf.nist.gov/search/search?q=expansion%20of%20arbitrary%20vector">expansion of arbitrary vector</a> , <a href="http://dlmf.nist.gov/search/search?q=inner%20product">inner product</a> , <a href="http://dlmf.nist.gov/search/search?q=l2%20space"><span class="math inline">\(\ell^{2}\)</span> space</a> , <a href="http://dlmf.nist.gov/search/search?q=space">space</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.18(ii) , §1.18 , Erratum (V1.2.0) §1.18 , Version 1.2.0 (March 27, 2024)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18 and Ch.1</p>
+</div>
+<p>A complex linear vector space <span class="math inline">\(V\)</span> is called an <em>inner product space</em> if an <em>inner product</em> <span class="math inline">\(\left\langle u,v\right\rangle\in\mathbb{C}\)</span> is defined for all <span class="math inline">\(u,v\in V\)</span> with the properties: (i) <span class="math inline">\(\left\langle u,v\right\rangle\)</span> is complex linear in <span class="math inline">\(u\)</span> ; (ii) <span class="math inline">\(\left\langle u,v\right\rangle=\overline{\left\langle v,u\right\rangle}\)</span> ; (iii) <span class="math inline">\(\left\langle v,v\right\rangle\geq 0\)</span> ; (iv) if <span class="math inline">\(\left\langle v,v\right\rangle=0\)</span> then <span class="math inline">\(v=0\)</span> . With <em>norm</em> defined by</p>
+<p><a id="E1"></a> <span class="math display">\[
+\left\|{v}\right\|=\sqrt{\left\langle v,v\right\rangle}, \tag{1.18.1}
+\]</span></p>
+<p><span class="math inline">\(V\)</span> becomes a normed linear vector space. If <span class="math inline">\(\left\|{v}\right\|=1\)</span> then <span class="math inline">\(v\)</span> is <em>normalized</em> . Two elements <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> in <span class="math inline">\(V\)</span> are <em>orthogonal</em> if <span class="math inline">\(\left\langle u,v\right\rangle=0\)</span> . A (finite or countably infinite, generalizing the definition of ( 1.2.40 )) set <span class="math inline">\(\{v_{n}\}\)</span> is an <em>orthonormal set</em> if the <span class="math inline">\(v_{n}\)</span> are normalized and pairwise orthogonal.</p>
+<p>An inner product space <span class="math inline">\(V\)</span> is called a <em>Hilbert space</em> if every Cauchy sequence <span class="math inline">\(\{v_{n}\}\)</span> in <span class="math inline">\(V\)</span> (i.e., <span class="math inline">\(\lim_{m,n\to\infty}\left\|{v_{m}-v_{n}}\right\|=0\)</span> ) converges in norm to some <span class="math inline">\(v\in V\)</span> , i.e., <span class="math inline">\(\lim_{n\to\infty}\left\|{v-v_{n}}\right\|=0\)</span> . For an orthonormal set <span class="math inline">\(\{v_{n}\}\)</span> in a Hilbert space <span class="math inline">\(V\)</span> <em>Bessel’s inequality</em> holds:</p>
+<p><a id="E2"></a> <span class="math display">\[
+\sum_{n}{\left|c_{n}\right|}^{2}\leq{\left\|{v}\right\|}^{2}, \tag{1.18.2}
+\]</span></p>
+<p>where <span class="math inline">\(v\in V\)</span> and</p>
+<p><a id="E3"></a> <span class="math display">\[
+c_{n}=\left\langle v,v_{n}\right\rangle. \tag{1.18.3}
+\]</span></p>
+<p>A Hilbert space <span class="math inline">\(V\)</span> is <em>separable</em> if there is an (at most countably infinite) orthonormal set <span class="math inline">\(\{v_{n}\}\)</span> in <span class="math inline">\(V\)</span> such that for every <span class="math inline">\(v\in V\)</span></p>
+<p><a id="E4"></a> <span class="math display">\[
+\sum_{n}{\left|c_{n}\right|}^{2}={\left\|{v}\right\|}^{2}, \tag{1.18.4}
+\]</span></p>
+<p>where <span class="math inline">\(c_{n}\)</span> is given by ( 1.18.3 ). Such orthonormal sets are called <em>complete</em> . By ( 1.18.4 )</p>
+<p><a id="E5"></a> <span class="math display">\[
+\sum_{n=0}^{\infty}{\left|c_{n}\right|}^{2}&lt;\infty. \tag{1.18.5}
+\]</span></p>
+<p>Conversely, if complex numbers <span class="math inline">\(c_{n}\)</span> satisfy ( 1.18.5 ) then there is a unique <span class="math inline">\(v\in V\)</span> such that ( 1.18.3 ) holds and <span class="math inline">\(v\)</span> can be given by</p>
+<p><a id="E6"></a> <span class="math display">\[
+v=\sum_{n=0}^{\infty}c_{n}v_{n}, \tag{1.18.6}
+\]</span></p>
+<p>where the infinite sum means convergence in norm,</p>
+<p><a id="E7"></a> <span class="math display">\[
+\lim_{N\to\infty}\left\|{v-\sum_{n=0}^{N}c_{n}v_{n}}\right\|=0. \tag{1.18.7}
+\]</span></p>
+<p>The standard example of an (infinite dimensional) separable Hilbert space is the space <span class="math inline">\(\ell^{2}\)</span> with elements <span class="math inline">\(v=(c_{0},c_{1},c_{2},\ldots)\)</span> such that</p>
+<p><a id="E8"></a> <span class="math display">\[
+{\left\|{v}\right\|}^{2}=\sum_{n=0}^{\infty}{\left|c_{n}\right|}^{2}&lt;\infty. \tag{1.18.8}
+\]</span></p>
+<p>The inner product of <span class="math inline">\(v\)</span> and <span class="math inline">\(w=(d_{0},d_{1},d_{2},\ldots)\)</span> is</p>
+<p><a id="E9"></a> <span class="math display">\[
+\left\langle v,w\right\rangle=\sum_{n=0}^{\infty}c_{n}\overline{d_{n}}. \tag{1.18.9}
+\]</span></p>
+<p>Every infinite dimensional separable Hilbert space <span class="math inline">\(V\)</span> can be made isomorphic to <span class="math inline">\(\ell^{2}\)</span> by choosing a complete orthonormal set <span class="math inline">\(\left\{v_{n}\right\}_{n=0}^{\infty}\)</span> in <span class="math inline">\(V\)</span> . Then an isomorphism is given by</p>
+<p><a id="E10"></a> <span class="math display">\[
+\sum_{n=0}^{\infty}c_{n}v_{n}\mapsto(c_{0},c_{1},c_{2},\ldots)\colon V\to\ell^{2}. \tag{1.18.10}
+\]</span></p>
+<p>General references for this subsection include Friedman (<a href="./bib/F.html#bib2969" title="Principles and Techniques of Applied Mathematics">1990</a>, pp.&nbsp;4–6), Shilov (<a href="./bib/S.html#bib2970" title="Introduction to the Theory of Linear Spaces">2013</a>, pp.&nbsp;249–256), Riesz and Sz.-Nagy (<a href="./bib/R.html#bib2971" title="Functional analysis">1990</a>, Ch. 5, §82).</p>
+</section>
+<section id="ii-l2-spaces-on-intervals-in-ℝ" class="level2">
+<h2 class="anchored" data-anchor-id="ii-l2-spaces-on-intervals-in-ℝ">§1.18(ii) L2 spaces on intervals in ℝ</h2>
+<div class="{note}">
+<p><strong>Defines:</strong></p>
+<p><span class="math inline">\(L^{2}\left(X,\,\mathrm{d}x\right)\)</span> : Lebesgue–Stieltjes measurable, square integrable, complex-valued functions</p>
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Hilbert%20space">Hilbert space</a> , <a href="http://dlmf.nist.gov/search/search?q=Lebesgue"><span class="math inline">\(L^{2}\)</span></a> , <a href="http://dlmf.nist.gov/search/search?q=Stieltjes%20measure">Stieltjes measure</a> , <a href="http://dlmf.nist.gov/search/search?q=completeness%20relation">completeness relation</a> , <a href="http://dlmf.nist.gov/search/search?q=completness%20relation">completness relation</a> , <a href="http://dlmf.nist.gov/search/search?q=discrete%20spectrum">discrete spectrum</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenfunctions">eigenfunctions</a> , <a href="http://dlmf.nist.gov/search/search?q=expansion%20of%20arbitrary%20function">expansion of arbitrary function</a> , <a href="http://dlmf.nist.gov/search/search?q=inner%20product">inner product</a> , <a href="http://dlmf.nist.gov/search/search?q=ortho-normality%20relation">ortho-normality relation</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.18(v)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18 and Ch.1</p>
+</div>
+<p>Let <span class="math inline">\(X=[a,b]\)</span> or <span class="math inline">\([a,b)\)</span> or <span class="math inline">\((a,b]\)</span> or <span class="math inline">\((a,b)\)</span> be a (possibly infinite, or semi-infinite) interval in <span class="math inline">\(\mathbb{R}\)</span> . For a Lebesgue–Stieltjes measure <span class="math inline">\(\,\mathrm{d}\alpha\)</span> on <span class="math inline">\(X\)</span> let <span class="math inline">\(L^{2}\left(X,\,\mathrm{d}\alpha\right)\)</span> be the space of all Lebesgue–Stieltjes measurable complex-valued functions on <span class="math inline">\(X\)</span> which are square integrable with respect to <span class="math inline">\(\,\mathrm{d}\alpha\)</span> ,</p>
+<p><a id="E11"></a> <span class="math display">\[
+\int_{a}^{b}{\left|f(x)\right|}^{2}\,\mathrm{d}\alpha(x)&lt;\infty. \tag{1.18.11}
+\]</span></p>
+<p>Functions <span class="math inline">\(f,g\in L^{2}\left(X,\,\mathrm{d}\alpha\right)\)</span> for which <span class="math inline">\(\left\langle f-g,f-g\right\rangle=0\)</span> are identified with each other. The space <span class="math inline">\(L^{2}\left(X,\,\mathrm{d}\alpha\right)\)</span> becomes a separable Hilbert space with inner product</p>
+<p><a id="E12"></a> <span class="math display">\[
+\left\langle f,g\right\rangle=\int_{a}^{b}f(x)\overline{g(x)}\,\mathrm{d}\alpha(x), \tag{1.18.12}
+\]</span></p>
+<p>thus generalizing the inner product of ( 1.18.9 ). When <span class="math inline">\(\alpha\)</span> is absolutely continuous, i.e.&nbsp;<span class="math inline">\(\,\mathrm{d}\alpha(x)=w(x)\,\mathrm{d}x\)</span> , see § 1.4(v) , where the nonnegative weight function <span class="math inline">\(w(x)\)</span> is Lebesgue measurable on <span class="math inline">\(X\)</span> . In this section we will only consider the special case <span class="math inline">\(w(x)=1\)</span> , so <span class="math inline">\(\,\mathrm{d}\alpha(x)=\,\mathrm{d}x\)</span> ; in which case <span class="math inline">\(L^{2}\left(X\right)\equiv L^{2}\left(X,\,\mathrm{d}x\right)\)</span> .</p>
+<p>Assume that <span class="math inline">\(\left\{\phi_{n}\right\}_{n=0}^{\infty}\)</span> is an orthonormal basis of <span class="math inline">\(L^{2}\left(X\right)\)</span> . The formulas in § 1.18(i) are then:</p>
+<p><a id="E13"></a> <span class="math display">\[
+c_{n}=\left\langle f,\phi_{n}\right\rangle=\int_{a}^{b}f(x)\overline{\phi_{n}(x)}\,\mathrm{d}x, \tag{1.18.13}
+\]</span></p>
+<p><a id="E14"></a> <span class="math display">\[
+\int_{a}^{b}{\left|f(x)\right|}^{2}\,\mathrm{d}x=\sum_{n=0}^{\infty}{\left|c_{n}\right|}^{2}, \tag{1.18.14}
+\]</span></p>
+<p><a id="E15"></a> <span class="math display">\[
+f(x)=\lim_{m\to\infty}\sum_{n=0}^{m}c_{n}\phi_{n}(x), \tag{1.18.15}
+\]</span></p>
+<p>where the limit has to be understood in the sense of <span class="math inline">\(L^{2}\)</span> convergence in the mean:</p>
+<p><a id="E16"></a> <span class="math display">\[
+\lim_{m\to\infty}\int_{a}^{b}{\left|f(x)-\sum_{n=0}^{m}c_{n}\phi_{n}(x)\right|}^{2}\,\mathrm{d}x=0. \tag{1.18.16}
+\]</span></p>
+<p>Often circumstances allow rather stronger statements, such as uniform convergence, or pointwise convergence at points where <span class="math inline">\(f(x)\)</span> is continuous, with convergence to <span class="math inline">\((f(x_{0}-)+f(x_{0}+))/2\)</span> if <span class="math inline">\(x_{0}\)</span> is an isolated point of discontinuity.</p>
+<p>We can rewrite ( 1.18.15 ), together with ( 1.18.13 ), formally as</p>
+<p><a id="E17"></a> <span class="math display">\[
+f(x)=\sum_{n=0}^{\infty}\left\langle f,\phi_{n}\right\rangle\phi_{n}(x)=\int_{a}^{b}K(x,y)f(y)\,\mathrm{d}y, \tag{1.18.17}
+\]</span></p>
+<p>where the integral kernel is given by</p>
+<p><a id="E18"></a> <span class="math display">\[
+K(x,y)=\sum_{n=0}^{\infty}\phi_{n}(x)\overline{\phi_{n}(y)}. \tag{1.18.18}
+\]</span></p>
+<p>Thus, in the notation of § <a href="../../../../docs/DLMF-markdown-main/markdown/1/1.17.html" title="§1.17 Integral and Series Representations of the Dirac Delta ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods">1.17</a> , we have an expansion</p>
+<p><a id="E19"></a> <span class="math display">\[
+\delta\left(x-y\right)=\sum_{n=0}^{\infty}\phi_{n}(x)\overline{\phi_{n}(y)}, \tag{1.18.19}
+\]</span></p>
+<p>of the Dirac delta distribution. Equation ( 1.18.19 ) is often called the <em>completeness relation</em> . The analogous orthonormality is</p>
+<p><a id="E20"></a> <span class="math display">\[
+\delta_{n,m}=\int_{a}^{b}\phi_{n}(x)\overline{\phi_{m}(x)}\,\mathrm{d}x. \tag{1.18.20}
+\]</span></p>
+</section>
+<section id="iii-linear-operators-on-a-hilbert-space" class="level2">
+<h2 class="anchored" data-anchor-id="iii-linear-operators-on-a-hilbert-space">§1.18(iii) Linear Operators on a Hilbert Space</h2>
+<div class="{note}">
+<p><strong>Notes:</strong></p>
+<p>See <a href="https://www.physicsoverflow.org/27488/physical-interpretation-application-residual-spectrum-operator">https://www.physicsoverflow.org/27488/physical-interpretation-application-residual-spectrum-operator</a> for a sketch of proof that the residual spectrum of a selfadjoint operator is empty.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18 and Ch.1</p>
+</div>
+<section id="bounded-and-unbounded-linear-operators" class="level3">
+<h3 class="anchored" data-anchor-id="bounded-and-unbounded-linear-operators">Bounded and Unbounded Linear Operators</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Hilbert%20space">Hilbert space</a> , <a href="http://dlmf.nist.gov/search/search?q=linear%20operators">linear operators</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(iii) , §1.18 and Ch.1</p>
+</div>
+<p>A <em>linear operator</em> <span class="math inline">\(T\)</span> on a (complex) linear vector space <span class="math inline">\(V\)</span> is a map <span class="math inline">\(T\colon V\to V\)</span> such that</p>
+<p><a id="E21"></a> <span class="math display">\[
+T(\alpha v+\beta w)=\alpha Tv+\beta Tw, \tag{1.18.21}
+\]</span></p>
+<p>In the following let <span class="math inline">\(V\)</span> be a Hilbert space. A linear operator <span class="math inline">\(T\)</span> on <span class="math inline">\(V\)</span> is <em>bounded</em> with norm <span class="math inline">\(\left\|{T}\right\|\)</span> if</p>
+<p><a id="E22"></a> <span class="math display">\[
+\left\|{T}\right\|\equiv\sup_{v\in V,\,\left\|{v}\right\|=1}\left\|{Tv}\right\|&lt;\infty. \tag{1.18.22}
+\]</span></p>
+<p>More generally, a linear operator <span class="math inline">\(T\)</span> on <span class="math inline">\(V\)</span> needs not be defined on all of <span class="math inline">\(V\)</span> , but only on a linear subspace <span class="math inline">\(\mathcal{D}(T)\)</span> of <span class="math inline">\(V\)</span> which is called the <em>domain</em> of <span class="math inline">\(T\)</span> . Then <span class="math inline">\(T\colon\mathcal{D}(T)\to V\)</span> is a linear map. Assume that <span class="math inline">\(\mathcal{D}(T)\)</span> is <em>dense</em> in <span class="math inline">\(V\)</span> , i.e., for each <span class="math inline">\(v\in V\)</span> there is a sequence <span class="math inline">\(\{v_{n}\}\)</span> in <span class="math inline">\(\mathcal{D}(T)\)</span> such that <span class="math inline">\(\left\|{v_{n}-v}\right\|\to 0\)</span> as <span class="math inline">\(n\to\infty\)</span> . If <span class="math inline">\(\sup_{v\in\mathcal{D}(T),\,\left\|{v}\right\|=1}\left\|{Tv}\right\|\)</span> is finite then <span class="math inline">\(T\)</span> is <em>bounded</em> , and <span class="math inline">\(T\)</span> extends uniquely to a bounded linear operator on <span class="math inline">\(V\)</span> . If the supremum is <span class="math inline">\(\infty\)</span> , then <span class="math inline">\(T\)</span> is an <em>unbounded</em> linear operator on <span class="math inline">\(V\)</span> .</p>
+</section>
+<section id="self-adjoint-and-symmetric-operators" class="level3">
+<h3 class="anchored" data-anchor-id="self-adjoint-and-symmetric-operators">Self-Adjoint and Symmetric Operators</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Hilbert%20space">Hilbert space</a> , <a href="http://dlmf.nist.gov/search/search?q=formally%20self-adjoint%20operators">formally self-adjoint operators</a> , <a href="http://dlmf.nist.gov/search/search?q=symmetric%20operators">symmetric operators</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(iii) , §1.18 and Ch.1</p>
+</div>
+<p>If <span class="math inline">\(T\)</span> is a bounded linear operator on <span class="math inline">\(V\)</span> then its <em>adjoint</em> is the bounded linear operator <span class="math inline">\({T}^{*}\)</span> such that, for <span class="math inline">\(v,w\in V\)</span> ,</p>
+<p><a id="E23"></a> <span class="math display">\[
+\left\langle Tv,w\right\rangle=\left\langle v,{T}^{*}w\right\rangle. \tag{1.18.23}
+\]</span></p>
+<p>The operator <span class="math inline">\(T\)</span> is called <em>self-adjoint</em> if <span class="math inline">\({T}^{*}=T\)</span> , and referred to as <em>symmetric</em> if ( 1.18.23 ) holds for <span class="math inline">\(v,w\)</span> in the dense domain <span class="math inline">\(\mathcal{D}(T)\)</span> of <span class="math inline">\(T\)</span> . There is also a notion of self-adjointness for unbounded operators, see § 1.18(ix) . One then needs a <em>self-adjoint extension</em> of a symmetric operator to carry out its spectral theory in a mathematically rigorous manner.</p>
+<p>An essential feature of such symmetric operators is that their eigenvalues <span class="math inline">\(\lambda\)</span> are real, and eigenfunctions</p>
+<p><a id="E24"></a> <span class="math display">\[
+Tu_{\lambda}=\lambda u_{\lambda}, \tag{1.18.24}
+\]</span></p>
+<p><span class="math inline">\(u_{\lambda}\in\mathcal{D}(T)\)</span> , corresponding to distinct eigenvalues, are orthogonal: i.e., <span class="math inline">\(\left\langle u_{\lambda},u_{\lambda^{\prime}}\right\rangle=0\)</span> , for <span class="math inline">\(\lambda\neq\lambda^{\prime}\)</span> . If an eigenvalue has multiplicity <span class="math inline">\(&gt;1\)</span> , the eigenfunctions may always be orthogonalized in this <em>degenerate</em> sub-space.</p>
+</section>
+<section id="formally-self-adjoint-and-self-adjoint-differential-operators-self-adjoint-extensions" class="level3">
+<h3 class="anchored" data-anchor-id="formally-self-adjoint-and-self-adjoint-differential-operators-self-adjoint-extensions">Formally Self-Adjoint and Self-Adjoint Differential Operators:&nbsp;Self-Adjoint Extensions</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Hilbert%20space">Hilbert space</a> , <a href="http://dlmf.nist.gov/search/search?q=formally%20self-adjoint%20differential%20operators">formally self-adjoint differential operators</a> , <a href="http://dlmf.nist.gov/search/search?q=self-adjoint%20differential%20operators">self-adjoint differential operators</a> , <a href="http://dlmf.nist.gov/search/search?q=self-adjoint%20extensions%20of%20differential%20operators">self-adjoint extensions of differential operators</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(iii) , §1.18 and Ch.1</p>
+</div>
+<p>Focus is now placed on <em>second order differential operators</em> as these are the subject of the remainder of § <a href="../../../../docs/DLMF-markdown-main/markdown/1/1.18.html" title="§1.18 Linear Second Order Differential Operators and Eigenfunction Expansions ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods">1.18</a> .</p>
+<p>Consider the second order differential operator acting on real functions of <span class="math inline">\(x\)</span> in the finite interval <span class="math inline">\([a,b]\subset\mathbb{R}\)</span></p>
+<p><a id="E25"></a> <span class="math display">\[
+T=\frac{{\mathrm{d}}^{2}}{{\mathrm{d}x}^{2}}, \tag{1.18.25}
+\]</span></p>
+<p>and functions <span class="math inline">\(f(x),g(x)\in C^{2}(a,b)\)</span> , assumed real for the moment. The adjoint <span class="math inline">\({T}^{*}\)</span> of <span class="math inline">\(T\)</span> does satisfy <span class="math inline">\(\left\langle Tf,g\right\rangle=\left\langle f,{T}^{*}g\right\rangle\)</span> where <span class="math inline">\(\left\langle f,g\right\rangle=\int_{a}^{b}f(x)g(x)\,\mathrm{d}x\)</span> . We integrate by parts twice giving:</p>
+<p><a id="E26"></a> <span class="math display">\[
+\int_{a}^{b}f^{\prime\prime}(x)g(x)\,\mathrm{d}x=\left.f^{\prime}(x)g(x)\right|^{b}_{a}-\left.f(x)g^{\prime}(x)\right|^{b}_{a}+\int_{a}^{b}f(x)g^{\prime\prime}(x)\,\mathrm{d}x. \tag{1.18.26}
+\]</span></p>
+<p>Ignoring the boundary value terms it follows that</p>
+<p><a id="E27"></a> <span class="math display">\[
+{T}^{*}=T=\frac{{\mathrm{d}}^{2}}{{\mathrm{d}x}^{2}}, \tag{1.18.27}
+\]</span></p>
+<p>and thus <span class="math inline">\(T\)</span> is said to be <em>formally self adjoint</em> .</p>
+<p>For <span class="math inline">\(T\)</span> to be actually <em>self adjoint</em> it is necessary to also show that <span class="math inline">\(\mathcal{D}({T}^{*})=\mathcal{D}(T)\)</span> , as it is often the case that <span class="math inline">\(T\)</span> and <span class="math inline">\({T}^{*}\)</span> have different domains, see Friedman (<a href="./bib/F.html#bib2969" title="Principles and Techniques of Applied Mathematics">1990</a>, p 148) for a simple example of such differences involving the differential operator <span class="math inline">\(\frac{\mathrm{d}}{\mathrm{d}x}\)</span> .</p>
+<p>This question may be rephrased by asking: do <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> satisfy the same boundary conditions which are needed to fully specify the solutions of a second order linear differential equation? A simple example is the choice <span class="math inline">\(f(a)=f(b)=0\)</span> , and <span class="math inline">\(g(a)=g(b)=0\)</span> , this being only one of many. This insures the vanishing of the boundary terms in ( 1.18.26 ), and also is a choice which indicates that <span class="math inline">\(\mathcal{D}(T)=\mathcal{D}({T}^{*})\)</span> , as <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> satisfy the same boundary conditions and thus define the same domains. Thus <span class="math inline">\(T\)</span> is indeed self adjoint.</p>
+<p>Other choices of boundary conditions, identical for <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> , and which also lead to the vanishing of the boundary terms in ( 1.18.26 ), each lead to a distinct <em>self adjoint extension</em> of <span class="math inline">\(T\)</span> . The nature of these extensions for unbounded intervals such as <span class="math inline">\([0,\infty)\)</span> , and unbounded operators on them, are the subject of § 1.18(ix) .</p>
+</section>
+</section>
+<section id="iv-formally-self-adjoint-linear-second-order-differential-operators" class="level2">
+<h2 class="anchored" data-anchor-id="iv-formally-self-adjoint-linear-second-order-differential-operators">§1.18(iv) Formally Self-adjoint Linear Second Order Differential Operators</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Liouville%20normal%20form">Liouville normal form</a> , <a href="http://dlmf.nist.gov/search/search?q=Schr%C3%B6dinger%20operator">Schrödinger operator</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenvalue">eigenvalue</a> , <a href="http://dlmf.nist.gov/search/search?q=formally%20self%20adjoint%20linear%20operator">formally self adjoint linear operator</a> , <a href="http://dlmf.nist.gov/search/search?q=linear%20second%20order%20differential%20operator">linear second order differential operator</a> , <a href="http://dlmf.nist.gov/search/search?q=multiplicity">multiplicity</a> , <a href="http://dlmf.nist.gov/search/search?q=set%20of%20eigenvalues%2C%20taking%20multiplicities%20into%20account">set of eigenvalues, taking multiplicities into account</a> , <a href="http://dlmf.nist.gov/search/search?q=spectrum%20of%20a%20self-adjoint%20extension%20of%20a%20linear%20differential%20operator">spectrum of a self-adjoint extension of a linear differential operator</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18 and Ch.1</p>
+</div>
+<p>Let <span class="math inline">\(X=(a,b)\)</span> be a finite or infinite open interval in <span class="math inline">\(\mathbb{R}\)</span> . Consider on <span class="math inline">\(X\)</span> the linear formally self-adjoint second order differential operator</p>
+<p><a id="E28"></a> <span class="math display">\[
+\mathcal{L}=-\frac{{\mathrm{d}}^{2}}{{\mathrm{d}x}^{2}}+q(x), \tag{1.18.28}
+\]</span></p>
+<p>with <span class="math inline">\(q(x)\)</span> real and continuous, unless otherwise noted.</p>
+<p>Eigenvalues and eigenfunctions of <span class="math inline">\(T\)</span> , self-adjoint extensions of <span class="math inline">\(\mathcal{L}\)</span> with well defined boundary conditions, and utilization of such eigenfunctions for expansion of wide classes of <span class="math inline">\(L^{2}\)</span> functions, will be the focus of the remainder of this section.</p>
+<p>The special form of ( 1.18.28 ) is especially useful for applications in physics, as the connection to <em>non-relativistic quantum mechanics</em> is immediate: <span class="math inline">\(-\frac{{\mathrm{d}}^{2}}{{\mathrm{d}x}^{2}}\)</span> being proportional to the <em>kinetic energy operator</em> for a single particle in one dimension, <span class="math inline">\(q(x)\)</span> being proportional to the potential energy, often written as <span class="math inline">\(V(x)\)</span> , of that same particle, and which is simply a multiplicative operator. The sum of the kinetic and potential energies give the quantum <em>Hamiltonian</em> , or energy operator; often also referred to as a <em>Schrödinger operator</em> . Other applications follow from the fact that <span class="math inline">\(\mathcal{L}\)</span> is suitable for describing vibrations, especially standing waves, which arise in many parts of engineering and the physical sciences, see Birkhoff and Rota (<a href="./bib/B.html#bib3098" title="Ordinary differential equations">1989</a>, §§10.3 and 10.16). See § 18.39(i) .</p>
+<p>In what follows <span class="math inline">\(T\)</span> will be taken to be a <em>self adjoint extension</em> of <span class="math inline">\(\mathcal{L}\)</span> following the discussion ending the prior sub-section. For <span class="math inline">\(\mathcal{D}(T)\)</span> we can take <span class="math inline">\(C^{2}(X)\)</span> , with appropriate boundary conditions, and with compact support if <span class="math inline">\(X\)</span> is bounded, which space is dense in <span class="math inline">\(L^{2}\left(X\right)\)</span> , and for <span class="math inline">\(X\)</span> unbounded require that possible <em>non-<span class="math inline">\(L^{2}\)</span> eigenfunctions</em> of ( 1.18.28 ), with real eigenvalues, are non-zero but bounded on open intervals, including <span class="math inline">\(\pm\infty\)</span> .</p>
+<p>Stated informally, the <em>spectrum</em> of <span class="math inline">\(T\)</span> is the set of it’s eigenvalues, these being real as <span class="math inline">\(T\)</span> is self-adjoint. These sets may be discrete, continuous, or a combination of both, as discussed in the following three subsections. Should an eigenvalue correspond to more than a single linearly independent eigenfunction, namely a <em>multiplicity</em> greater than one, all such eigenfunctions will always be implied as being part of any sums or integrals over the spectrum.</p>
+</section>
+<section id="v-point-spectra-and-eigenfunction-expansions" class="level2">
+<h2 class="anchored" data-anchor-id="v-point-spectra-and-eigenfunction-expansions">§1.18(v) Point Spectra and Eigenfunction Expansions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=discrete%20spectra">discrete spectra</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenfunction%20expansions">eigenfunction expansions</a> , <a href="http://dlmf.nist.gov/search/search?q=second%20order%20differential%20operators">second order differential operators</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.17(ii) , §1.18(viii) , §18.39(i) , §18.39(i)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18 and Ch.1</p>
+</div>
+<section id="general-results" class="level3">
+<h3 class="anchored" data-anchor-id="general-results">General Results</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=completeness%20relation">completeness relation</a> , <a href="http://dlmf.nist.gov/search/search?q=completness%20relation">completness relation</a> , <a href="http://dlmf.nist.gov/search/search?q=discrete%20spectrum">discrete spectrum</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenfunctions">eigenfunctions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(v) , §1.18 and Ch.1</p>
+</div>
+<p>Let <span class="math inline">\(T\)</span> be a self-adjoint extension of differential operator <span class="math inline">\(\mathcal{L}\)</span> of the form ( 1.18.28 ) and assume <span class="math inline">\(T\)</span> has a complete set of <span class="math inline">\(L^{2}\)</span> eigenfunctions, <span class="math inline">\(\left\{\phi_{\lambda_{n}}(x)\right\}_{n=0}^{\infty}\)</span> , <span class="math inline">\(x\in X=[a,b]\)</span> this latter being an appropriate sub-set of <span class="math inline">\(\mathbb{R}\)</span> , or, in some cases <span class="math inline">\(X=\mathbb{R}\)</span> itself, with real eigenvalues <span class="math inline">\(\lambda_{n}\)</span> . These eigenvalues will be assumed distinct, i.e., of unit multiplicity, unless otherwise stated. The <em>point, or discrete</em> spectrum of <span class="math inline">\(T\)</span> is then given by <span class="math inline">\(\boldsymbol{\sigma}_{p}=\left\{\lambda_{0},\lambda_{1},\dots\right\}\)</span> . The eigenfunctions form a complete orthogonal basis in <span class="math inline">\(L^{2}\left(X\right)\)</span> , and we can take the basis as orthonormal:</p>
+<p><a id="E29"></a> <span class="math display">\[
+\int_{a}^{b}\phi_{\lambda_{n}}(x)\overline{\phi_{\lambda_{m}}(x)}\,\mathrm{d}x=\delta_{n,m}, \tag{1.18.29}
+\]</span></p>
+<p>and completeness implies</p>
+<p><a id="E30"></a> <span class="math display">\[
+\sum_{n=0}^{\infty}\phi_{\lambda_{n}}(x)\overline{\phi_{\lambda_{n}}(y)}=\delta\left(x-y\right). \tag{1.18.30}
+\]</span></p>
+<p>Now formulas ( 1.18.13 )–( 1.18.20 ) apply. For <span class="math inline">\(f(x)\in C(X)\cap L^{2}\left(X\right)\cap\mathcal{D}(T)\)</span> , <span class="math inline">\(f(x)\)</span> has the eigenfunction expansion, following directly from ( 1.18.17 )–( 1.18.19 ),</p>
+<p><a id="E31"></a> <span class="math display">\[
+f(x)=\sum_{n=0}^{\infty}\phi_{\lambda_{n}}(x)\int_{a}^{b}f(y)\overline{\phi_{\lambda_{n}}(y)}\,\mathrm{d}y=\sum_{n=0}^{\infty}\widehat{f}(\lambda_{n})\phi_{\lambda_{n}}(x) \tag{1.18.31}
+\]</span></p>
+<p>where</p>
+<p><a id="E32"></a> <span class="math display">\[
+\widehat{f}(\lambda_{n})=\left\langle f,\phi_{\lambda_{n}}\right\rangle. \tag{1.18.32}
+\]</span></p>
+<p>Further</p>
+<p><a id="E33"></a> <span class="math display">\[
+\int_{a}^{b}{\left|f(x)\right|}^{2}\,\mathrm{d}x=\sum_{n=0}^{\infty}{\left|\widehat{f}(\lambda_{n})\right|}^{2}. \tag{1.18.33}
+\]</span></p>
+<p>Spectral expansions of <span class="math inline">\(T\)</span> , and of functions <span class="math inline">\(F(T)\)</span> of <span class="math inline">\(T\)</span> , these being expansions of <span class="math inline">\(T\)</span> and <span class="math inline">\(F(T)\)</span> in terms of the eigenvalues and eigenfunctions summed over the spectrum, then follow:</p>
+<p><a id="E34"></a> <span class="math display">\[
+(Tf)(x)=\sum_{n=0}^{\infty}\lambda_{n}\widehat{f}(\lambda_{n})\phi_{\lambda_{n}}(x)=\int_{a}^{b}\left(\sum_{n=0}^{\infty}\lambda_{n}\phi_{\lambda_{n}}(x)\overline{\phi_{\lambda_{n}}(y)}\right)f(y)\,\mathrm{d}y, \tag{1.18.34}
+\]</span></p>
+<p><a id="E35"></a> <span class="math display">\[
+(F(T)f)(x)=\int_{a}^{b}\left(\sum_{n=0}^{\infty}F(\lambda_{n})\phi_{\lambda_{n}}(x)\overline{\phi_{\lambda_{n}}(y)}\right)f(y)\,\mathrm{d}y. \tag{1.18.35}
+\]</span></p>
+</section>
+<section id="example-1-three-simple-cases-where-qx0-x0π" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-three-simple-cases-where-qx0-x0π">Example 1:&nbsp;Three Simple Cases where q⁢(x)=0, X=[0,π]</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Fourier%20eigenfunction%20expansion">Fourier eigenfunction expansion</a> , <a href="http://dlmf.nist.gov/search/search?q=discrete%20spectrum">discrete spectrum</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(v) , §1.18 and Ch.1</p>
+</div>
+<p>Possible eigenfunctions of <span class="math inline">\(-\frac{{\mathrm{d}}^{2}}{{\mathrm{d}x}^{2}}\)</span> being <span class="math inline">\(\sin\left(kx\right)\)</span> , <span class="math inline">\(\cos\left(kx\right)\)</span> , <span class="math inline">\({\mathrm{e}}^{\pm\mathrm{i}kx}\)</span> , consider three cases, which illustrate the importance of boundary conditions.</p>
+<p>Case 1: <span class="math inline">\(\phi(0)=\phi(\pi)=0\)</span> . The <span class="math inline">\(L^{2}\)</span> normalized eigenfunctions on <span class="math inline">\([0,\pi]\)</span> are</p>
+<p><a id="E36"></a> <span class="math display">\[
+\phi_{\mathrm{sin}}(n,x)=\sqrt{\frac{2}{\pi}}\sin\left(nx\right), \tag{1.18.36}
+\]</span></p>
+<p>with <span class="math inline">\(\lambda_{n}=n^{2}\)</span> , <span class="math inline">\(n=1,2,3,\dots\)</span> .</p>
+<p>Case 2: <span class="math inline">\(\phi^{\prime}(0)=\phi^{\prime}(\pi)=0\)</span> . The <span class="math inline">\(L^{2}\)</span> normalized eigenfunctions on <span class="math inline">\([0,\pi]\)</span> are</p>
+<p><a id="E37"></a> <span class="math display">\[
+\phi_{\mathrm{cos}}(0,x)=\frac{1}{\sqrt{\pi}},\quad\phi_{\mathrm{cos}}(n,x)=\sqrt{\frac{2}{\pi}}\cos\left(nx\right), \tag{1.18.37}
+\]</span></p>
+<p>with <span class="math inline">\(\lambda_{n}=n^{2}\)</span> , <span class="math inline">\(n=0,1,2,\dots\)</span> .</p>
+<p>Case 3: Periodic Boundary Conditions: <span class="math inline">\(\phi(0)=\phi(\pi)\)</span> and <span class="math inline">\(\phi^{\prime}(0)=\phi^{\prime}(\pi)\)</span> . The <span class="math inline">\(L^{2}\)</span> normalized eigenfunctions on <span class="math inline">\([0,\pi]\)</span> are</p>
+<p><a id="E38"></a> <span class="math display">\[
+\phi_{\mathrm{exp}}(\pm n,x)=\frac{1}{\sqrt{\pi}}{\mathrm{e}}^{\pm 2\mathrm{i}nx}, \tag{1.18.38}
+\]</span></p>
+<p>with <span class="math inline">\(\lambda_{\pm n}=4n^{2}\)</span> , <span class="math inline">\(n=0,1,2,\dots\)</span> , with all eigenvalues, for <span class="math inline">\(\left|n\right|&gt;0\)</span> , having multiplicity two, as changing the sign of <span class="math inline">\(n\)</span> changes the eigenfunction but not the eigenvalue, and multiplicity one for <span class="math inline">\(n=0\)</span> . Letting <span class="math inline">\(n\)</span> run from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span> this multiplicity change is automatically included:</p>
+<p><a id="E39"></a> <span class="math display">\[
+\delta\left(x-y\right)=\frac{1}{\pi}\sum_{n=-\infty}^{\infty}{\mathrm{e}}^{2\mathrm{i}n(x-y)}. \tag{1.18.39}
+\]</span></p>
+<p>This may be compared to ( 1.17.21 ), the resulting Fourier, or eigenfunction, expansion</p>
+<p><a id="E40"></a> <span class="math display">\[
+f(x)=\frac{1}{\sqrt{\pi}}\sum_{n=-\infty}^{\infty}{\mathrm{e}}^{2\mathrm{i}nx}\widehat{f}(\lambda_{n}), \tag{1.18.40}
+\]</span></p>
+<p>where <span class="math inline">\(\widehat{f}(\lambda_{n})\)</span> = <span class="math inline">\(\frac{1}{\sqrt{\pi}}\int_{0}^{\pi}f(y){\mathrm{e}}^{-2\mathrm{i}ny}\,\mathrm{d}y=\left\langle f,\phi_{\mathrm{exp}}(n)\right\rangle\)</span> , being that of ( 1.8.3 ) and ( 1.8.4 ). The eigenfunction expansions of ( 1.8.1 ) and ( 1.8.2 ) follow from Cases 1, 2, above.</p>
+</section>
+<section id="hermites-differential-equation-x" class="level3">
+<h3 class="anchored" data-anchor-id="hermites-differential-equation-x">Hermite’s Differential Equation, X=(−∞,∞)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Hermite%20differential%20operator">Hermite differential operator</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenfunction%20expansion">eigenfunction expansion</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(v) , §1.18 and Ch.1</p>
+</div>
+<p>The space <span class="math inline">\(X\)</span> is now the full real line, <span class="math inline">\((-\infty,\infty)\)</span> . Writing Hermite’s differential equation (see Tables 18.3.1 and 18.8.1 ) in the form above, the eigenfunctions are <span class="math inline">\({\mathrm{e}}^{-x^{2}/2}H_{n}\left(x\right)\)</span> ( <span class="math inline">\(H_{n}\)</span> a Hermite polynomial, <span class="math inline">\(n=0,1,2,\ldots\)</span> ), with eigenvalues <span class="math inline">\(\lambda_{n}=2n+1\in\boldsymbol{\sigma}_{p}\)</span> , for the differential operator</p>
+<p><a id="E41"></a> <span class="math display">\[
+\mathcal{L}^{\mathrm{Hermite}}=-\frac{{\mathrm{d}}^{2}}{{\mathrm{d}x}^{2}}+x^{2}, \tag{1.18.41}
+\]</span></p>
+<p>Applying equations ( 1.18.29 ) and ( 1.18.30 ), the complete set of normalized eigenfunctions being</p>
+<p><a id="E42"></a> <span class="math display">\[
+\phi_{n}(x)=\frac{1}{\sqrt{{\pi}^{\frac{1}{2}}2^{n}n!}}{\mathrm{e}}^{-x^{2}/2}H_{n}\left(x\right), \tag{1.18.42}
+\]</span></p>
+<p>( 1.18.31 ) becomes</p>
+<p><a id="E43"></a> <span class="math display">\[
+f(x)=\sum_{n=0}^{\infty}\int_{-\infty}^{\infty}\frac{{\mathrm{e}}^{-(x^{2}+y^{2})/2}}{{\pi}^{\frac{1}{2}}2^{n}n!}H_{n}\left(x\right)H_{n}\left(y\right)f(y)\,\mathrm{d}y, \tag{1.18.43}
+\]</span></p>
+<p>for <span class="math inline">\(f(x)\in L^{2}\)</span> and piece-wise continuous, with convergence as discussed in § 1.18(ii) .</p>
+<p>See Titchmarsh (<a href="./bib/T.html#bib2975" title="Eigenfunction expansions associated with second-order differential equations. Part I">1962a</a>, pp.&nbsp;73–75). The implicit boundary conditions taken here are that the <span class="math inline">\(\phi_{n}(x)\)</span> and <span class="math inline">\(\phi_{n}^{\prime}(x)\)</span> vanish as <span class="math inline">\(x\to\pm\infty\)</span> , which in this case is equivalent to requiring <span class="math inline">\(\phi_{n}(x)\in L^{2}\left(X\right)\)</span> , see Pauling and Wilson (<a href="./bib/P.html#bib3060" title="Introduction to quantum mechanics">1985</a>, pp.&nbsp;67–82) for a discussion of this latter point.</p>
+</section>
+</section>
+<section id="vi-continuous-spectra-and-eigenfunction-expansions-simple-cases" class="level2">
+<h2 class="anchored" data-anchor-id="vi-continuous-spectra-and-eigenfunction-expansions-simple-cases">§1.18(vi) Continuous Spectra and Eigenfunction Expansions: Simple Cases</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=continuous%20spectra">continuous spectra</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenfunction%20expansions">eigenfunction expansions</a> , <a href="http://dlmf.nist.gov/search/search?q=second%20order%20differential%20operators">second order differential operators</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.17(ii) , §1.18(viii) , §1.18(viii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18 and Ch.1</p>
+</div>
+<section id="general-results-1" class="level3">
+<h3 class="anchored" data-anchor-id="general-results-1">General Results</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=completeness%20relation">completeness relation</a> , <a href="http://dlmf.nist.gov/search/search?q=continuous%20spectrum">continuous spectrum</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenfunctions">eigenfunctions</a> , <a href="http://dlmf.nist.gov/search/search?q=ortho-normality%20relation">ortho-normality relation</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(vi) , §1.18 and Ch.1</p>
+</div>
+<p>Eigenfunctions corresponding to the continuous spectrum are non- <span class="math inline">\(L^{2}\)</span> functions. Let <span class="math inline">\(T\)</span> be the self adjoint extension of a formally self-adjoint differential operator <span class="math inline">\(\mathcal{L}\)</span> of the form ( 1.18.28 ) on an unbounded interval <span class="math inline">\(X\subset\mathbb{R}\)</span> , which we will take as <span class="math inline">\(X=[0,+\infty)\)</span> , and assume that <span class="math inline">\(q(x)\to 0\)</span> monotonically as <span class="math inline">\(x\to\infty\)</span> , and that the eigenfunctions are non-vanishing but bounded in this same limit. Assume <span class="math inline">\(T\)</span> has no point spectrum, i.e., <span class="math inline">\(T\)</span> has no eigenfunctions in <span class="math inline">\(L^{2}\left(X\right)\)</span> , then the spectrum <span class="math inline">\(\boldsymbol{\sigma}\)</span> of <span class="math inline">\(T\)</span> consists only of a continuous spectrum, referred to as <span class="math inline">\(\boldsymbol{\sigma}_{c}\)</span> . In this subsection it is assumed that <span class="math inline">\(\boldsymbol{\sigma}_{c}=[0,\infty)\)</span> . This will be generalized, along with the choice of <span class="math inline">\(X\)</span> , in § 1.18(vii) .</p>
+<p>Orthogonality and normalization may then be chosen such that analogous to ( 1.18.19 ) and ( 1.18.20 ), we have</p>
+<p><a id="E44"></a> <span class="math display">\[
+\int_{0}^{\infty}{\phi_{\lambda}}(x)\overline{\phi_{\lambda^{\prime}}(x)}\,\mathrm{d}x=\delta\left(\lambda-\lambda^{\prime}\right), \tag{1.18.44}
+\]</span></p>
+<p>and completeness relation</p>
+<p><a id="E45"></a> <span class="math display">\[
+\delta\left(x-y\right)=\int_{0}^{\infty}\phi_{\lambda}(x)\overline{\phi_{\lambda}(y)}\,\mathrm{d}\lambda. \tag{1.18.45}
+\]</span></p>
+<p>See Friedman (<a href="./bib/F.html#bib2969" title="Principles and Techniques of Applied Mathematics">1990</a>, pp.&nbsp;233–252) for elementary discussions of both equations and the normalization process; and also the references in § 1.18(ix) .</p>
+<p>Now formulas ( 1.18.13 )–( 1.18.20 ) apply. For <span class="math inline">\(f(x)\in C(X)\cap L^{2}\left(X\right)\cap\mathcal{D}(T)\)</span> , <span class="math inline">\(f(x)\)</span> has the eigenfunction expansion, analogous to that of ( 1.18.33 ),</p>
+<p><a id="E46"></a> <span class="math display">\[
+f(x)=\int_{0}^{\infty}\phi_{\lambda}(x)\widehat{f}(\lambda)\,\mathrm{d}\lambda, \tag{1.18.46}
+\]</span></p>
+<p>where</p>
+<p><a id="E47"></a> <span class="math display">\[
+\widehat{f}(\lambda)=\left\langle f,\phi_{\lambda}\right\rangle. \tag{1.18.47}
+\]</span></p>
+<p>Further,</p>
+<p><a id="E48"></a> <span class="math display">\[
+\int_{0}^{\infty}{\left|f(x)\right|}^{2}\,\mathrm{d}x=\int_{0}^{\infty}{\left|\widehat{f}(\lambda)\right|}^{2}\,\mathrm{d}\lambda. \tag{1.18.48}
+\]</span></p>
+<p>The analog of ( 1.18.34 ) is</p>
+<p><a id="E49"></a> <span class="math display">\[
+(Tf)(x)=\int_{0}^{\infty}\left(\int_{0}^{\infty}\lambda\phi_{\lambda}(x)\overline{\phi_{\lambda}(y)}\,\mathrm{d}\lambda\right)f(y)\,\mathrm{d}y, \tag{1.18.49}
+\]</span></p>
+<p>and that of ( 1.18.35 ) is</p>
+<p><a id="E50"></a> <span class="math display">\[
+(F(T)f)(x)=\int_{0}^{\infty}\left(\int_{0}^{\infty}F(\lambda)\phi_{\lambda}(x)\overline{\phi_{\lambda}(y)}\,\mathrm{d}\lambda\right)f(y)\,\mathrm{d}y. \tag{1.18.50}
+\]</span></p>
+<p>This implies</p>
+<p><a id="E51"></a> <span class="math display">\[
+\left\langle F(T)f,f\right\rangle=\int_{0}^{\infty}F(\lambda){\left|\widehat{f}(\lambda)\right|}^{2}\,\mathrm{d}\lambda. \tag{1.18.51}
+\]</span></p>
+<p>In particular, this holds for <span class="math inline">\(F(\lambda)=\left(z-\lambda\right)^{-1}\)</span> , <span class="math inline">\(z\in\mathbb{C}\setminus\boldsymbol{\sigma}_{c}\)</span></p>
+<p><a id="E52"></a> <span class="math display">\[
+\left\langle\left(z-T\right)^{-1}f,f\right\rangle=\int_{\boldsymbol{\sigma}}{\left|\widehat{f}(\lambda)\right|}^{2}\frac{\,\mathrm{d}\lambda}{z-\lambda}, \tag{1.18.52}
+\]</span></p>
+<p>this being a matrix element of the <em>resolvent</em> <span class="math inline">\(F(T)=\left(z-T\right)^{-1}\)</span> , this being a key quantity in many parts of physics and applied math, quantum scattering theory being a simple example, see Newton (<a href="./bib/N.html#bib3111" title="Scattering theory of waves and particles">2002</a>, Ch. 7). Then</p>
+<p><a id="E53"></a> <span class="math display">\[
+\lim_{\nu\to 0+}\frac{1}{2\pi\mathrm{i}}\left(\left\langle\left(\mu-\mathrm{i}\nu-T\right)^{-1}f,f\right\rangle-\left\langle\left(\mu+\mathrm{i}\nu-T\right)^{-1}f,f\right\rangle\right) \tag{1.18.53}
+\]</span></p>
+<p>gives <span class="math inline">\({\left|\widehat{f}(\mu)\right|}^{2}\)</span> for <span class="math inline">\(\mu\in\boldsymbol{\sigma}_{c}\)</span> , and <span class="math inline">\(0\)</span> otherwise. This is the discontinuity across the branch cut in ( 1.18.52 ) <span class="math inline">\(\boldsymbol{\sigma}_{c}\subset\mathbb{R}\)</span> , from <span class="math inline">\(z\)</span> below to above the cut, divided by <span class="math inline">\(2\pi\mathrm{i}\)</span> . See Newton (<a href="./bib/N.html#bib3111" title="Scattering theory of waves and particles">2002</a>, §§7.1 and 7.3).</p>
+<p>More generally, for <span class="math inline">\(f\in C(X)\)</span> , <span class="math inline">\(x\in X\)</span> , see ( 1.4.24 ),</p>
+<p><a id="E54"></a> <span class="math display">\[
+\lim_{\epsilon\to 0{+}}\int_{X}\frac{f(y)}{x\pm\mathrm{i}\epsilon-y}\,\mathrm{d}y=P\fint_{X}\frac{f(y)}{x-y}\,\mathrm{d}y\mp\mathrm{i}\pi f(x). \tag{1.18.54}
+\]</span></p>
+</section>
+<section id="example-1-besselhankel-transform-x0" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-besselhankel-transform-x0">Example 1: Bessel–Hankel Transform, X=[0,∞)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Bessel%20eigenfunction%20expansion">Bessel eigenfunction expansion</a> , <a href="http://dlmf.nist.gov/search/search?q=Hankel%20transform">Hankel transform</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(vi) , §1.18 and Ch.1</p>
+</div>
+<p>By Bessel’s differential equation in the form ( 10.13.1 ) we have the functions <span class="math inline">\(\sqrt{x}J_{\nu}\left(x\sqrt{\lambda}\right)\)</span> ( <span class="math inline">\(\lambda\geq 0\)</span> , for <span class="math inline">\(J_{\nu}\)</span> see § 10.2(ii) ) as eigenfunctions with eigenvalue <span class="math inline">\(\lambda\)</span> of the self-adjoint extension of the differential operator</p>
+<p><a id="E55"></a> <span class="math display">\[
+\mathcal{L}^{\mathrm{Bessel}}=-\frac{{\mathrm{d}}^{2}}{{\mathrm{d}x}^{2}}+\frac{\nu^{2}-\frac{1}{4}}{x^{2}}, \tag{1.18.55}
+\]</span></p>
+<p>Applying the representation ( 1.17.13 ), now symmetrized as in ( 1.17.14 ), as <span class="math inline">\(\frac{1}{x}\delta\left(x-y\right)=\frac{1}{\sqrt{xy}}\delta\left(x-y\right)\)</span> ,</p>
+<p><a id="E56"></a> <span class="math display">\[
+\delta\left(x-y\right)=\int_{0}^{\infty}\sqrt{xt}J_{\nu}\left(xt\right)\sqrt{yt}J_{\nu}\left(yt\right)\,\mathrm{d}t, \tag{1.18.56}
+\]</span></p>
+<p>For <span class="math inline">\(f(x)\)</span> piecewise continuously differentiable on <span class="math inline">\([0,\infty)\)</span></p>
+<p><a id="E57"></a> <span class="math display">\[
+\lim_{R\to\infty}\int_{0}^{\infty}f(y)\left(\int_{0}^{R}\sqrt{xt}J_{\nu}\left(xt\right)\sqrt{yt}J_{\nu}\left(yt\right)\,\mathrm{d}t\right)\,\mathrm{d}y=\tfrac{1}{2}\left(f(x+)+f(x-)\right), \tag{1.18.57}
+\]</span></p>
+<p>provided that:</p>
+<p><a id="E58"></a></p>
+<p><a id="Ex1"></a> <span class="math display">\[
+\displaystyle\int_{1}^{\infty}y^{-1}\left|f(y)\right|\,\mathrm{d}y \displaystyle&lt;\infty, \tag{1.18.58}
+\]</span></p>
+<p><a id="Ex2"></a> <span class="math display">\[
+\displaystyle\int_{0}^{1}\left(1+y^{\nu+\frac{1}{2}}\right)\left|f(y)\right|\,\mathrm{d}y \displaystyle&lt;\infty.
+\]</span></p>
+<div class="{note}">
+<p><strong>Symbols:</strong></p>
+<p><span class="math inline">\(\,\mathrm{d}x\)</span>: differential of <span class="math inline">\(x\)</span> , <span class="math inline">\(\int\)</span>: integral and <span class="math inline">\(\left|x\right|\)</span>: absolute value of <span class="math inline">\(x\)</span></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(vi) , §1.18(vi) , §1.18 and Ch.1</p>
+</div>
+<p>( 1.18.57 ) is the Hankel transform ( 10.22.76 )–( 10.22.77 ). See Titchmarsh (<a href="./bib/T.html#bib2975" title="Eigenfunction expansions associated with second-order differential equations. Part I">1962a</a>, pp.&nbsp;87–90) for a first principles derivation for the case <span class="math inline">\(\Re\nu\geq 1\)</span> .</p>
+<p>For generalizations see the Weber transform ( 10.22.78 ) and an extended Bessel transform ( 10.22.79 ).</p>
+</section>
+<section id="example-2-sine-and-cosine-transforms-x0" class="level3">
+<h3 class="anchored" data-anchor-id="example-2-sine-and-cosine-transforms-x0">Example 2: Sine and Cosine Transforms, X=[0,∞)</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=cosine%20transform">cosine transform</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenfunction%20expansion">eigenfunction expansion</a> , <a href="http://dlmf.nist.gov/search/search?q=sine%20transform">sine transform</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(vi) , §1.18 and Ch.1</p>
+</div>
+<p>The Fourier cosine and sine transform pairs ( 1.14.9 ) &amp; ( 1.14.11 ) and ( 1.14.10 ) &amp; ( 1.14.12 ) can be easily obtained from ( 1.18.57 ) as for <span class="math inline">\(\nu=\pm\frac{1}{2}\)</span> the Bessel functions reduce to the trigonometric functions, see ( 10.16.1 ).</p>
+<p>More generally,</p>
+<p><a id="E59"></a> <span class="math display">\[
+f(x)=\frac{1}{\pi}\int_{-\infty}^{\infty}\left(\int_{0}^{\infty}\cos\left(xt\right)\cos\left(yt\right)\,\mathrm{d}t\right)f(y)\,\mathrm{d}y+\frac{1}{\pi}\int_{-\infty}^{\infty}\left(\int_{0}^{\infty}\sin\left(xt\right)\sin\left(yt\right)\,\mathrm{d}t\right)f(y)\,\mathrm{d}y, \tag{1.18.59}
+\]</span></p>
+<p>For <span class="math inline">\(f(x)\)</span> even in <span class="math inline">\(x\)</span> this yields the Fourier cosine transform pair ( 1.14.9 ) &amp; ( 1.14.11 ), and for <span class="math inline">\(f(x)\)</span> odd the Fourier sine transform pair ( 1.14.10 ) &amp; ( 1.14.12 ). These latter results also correspond to use of the <span class="math inline">\(\delta\left(x-y\right)\)</span> as defined in ( 1.17.12_1 ) and ( 1.17.12_2 ).</p>
+</section>
+</section>
+<section id="vii-continuous-spectra-more-general-cases" class="level2">
+<h2 class="anchored" data-anchor-id="vii-continuous-spectra-more-general-cases">§1.18(vii) Continuous Spectra:&nbsp;More General Cases</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Anderson%20localization">Anderson localization</a> , <a href="http://dlmf.nist.gov/search/search?q=almost%20Mathiew%20equation">almost Mathiew equation</a> , <a href="http://dlmf.nist.gov/search/search?q=band%20spectra">band spectra</a> , <a href="http://dlmf.nist.gov/search/search?q=random%20potentials">random potentials</a> , <a href="http://dlmf.nist.gov/search/search?q=second%20order%20differential%20operators">second order differential operators</a> , <a href="http://dlmf.nist.gov/search/search?q=singular%20continuous%20spectra">singular continuous spectra</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.18(vi)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18 and Ch.1</p>
+</div>
+<p>More generally, continuous spectra may occur in sets of disjoint finite intervals <span class="math inline">\([\lambda_{a},\lambda_{b}]\in(0,\infty)\)</span> , often called <em>bands</em> , when <span class="math inline">\(q(x)\)</span> is <em>periodic</em> , see Ashcroft and Mermin (<a href="./bib/index.html#bib2748" title="Solid State Physics">1976</a>, Ch 8) and Kittel (<a href="./bib/K.html#bib3110" title="Introduction to Solid State Physics">1996</a>, Ch 7). Should <span class="math inline">\(q(x)\)</span> be bounded but <em>random</em> , leading to <em>Anderson localization</em> , the spectrum could range from being <em>a dense point spectrum</em> to being <em>singular continuous</em> , see Simon (<a href="./bib/S.html#bib3117" title="Operators with Singular Continuous Spectrum: I. General Operators">1995</a>), Avron and Simon (<a href="./bib/index.html#bib3096" title="Singular Continuous Spectrum for a Class of Almost Periodic Jacobi Matrices">1982</a>); a good general reference being Cycon et al.&nbsp;(<a href="./bib/C.html#bib3102" title="Schrödinger Operators, with Applications to Quantum Mechanics and Global Geometry">2008</a>, Ch. 9 and 10). For example, replacing <span class="math inline">\(2q\cos{(2z)}\)</span> of ( 28.2.1 ) by <span class="math inline">\(\lambda\cos{(2\pi\alpha n+\theta)}\)</span> , <span class="math inline">\(n\in\mathbb{Z}\)</span> gives an <em>almost Mathieu equation</em> which for appropriate <span class="math inline">\(\alpha\)</span> has such properties.</p>
+</section>
+<section id="viii-mixed-spectra-and-eigenfunction-expansions" class="level2">
+<h2 class="anchored" data-anchor-id="viii-mixed-spectra-and-eigenfunction-expansions">§1.18(viii) Mixed Spectra and Eigenfunction Expansions</h2>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=analytic%20continuation%20of%20matrix%20elements%20of%20the%20resolvent%20onto%20higher%20Riemann%20sheets">analytic continuation of matrix elements of the resolvent onto higher Riemann sheets</a> , <a href="http://dlmf.nist.gov/search/search?q=analytic%20continuation%20onto%20higher%20Riemann%20sheets">analytic continuation onto higher Riemann sheets</a> , <a href="http://dlmf.nist.gov/search/search?q=completeness%20relation">completeness relation</a> , <a href="http://dlmf.nist.gov/search/search?q=completness%20relation">completness relation</a> , <a href="http://dlmf.nist.gov/search/search?q=dilatation%20transformations">dilatation transformations</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenfunction%20expansions">eigenfunction expansions</a> , <a href="http://dlmf.nist.gov/search/search?q=eigenfunctions">eigenfunctions</a> , <a href="http://dlmf.nist.gov/search/search?q=matrix%20elements%20of%20the%20resolvent">matrix elements of the resolvent</a> , <a href="http://dlmf.nist.gov/search/search?q=mixed%20spectra">mixed spectra</a> , <a href="http://dlmf.nist.gov/search/search?q=ortho-normality%20relation">ortho-normality relation</a></p>
+<p><strong>Referenced by:</strong></p>
+<p>§1.18 , §18.39(i) , §18.39(ii) , §18.39(ii)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18 and Ch.1</p>
+</div>
+<p>In general, operators <span class="math inline">\(T\)</span> being formally self-adjoint second order differential operators of the form ( 1.18.28 ), with <span class="math inline">\(X\)</span> unbounded, will have both a continuous and a point spectrum, and thus, correspondingly, <span class="math inline">\(non-L^{2}\left(X\right)\)</span> eigenfunctions as in § 1.18(vi) and <span class="math inline">\(L^{2}\left(X\right)\)</span> eigenfunctions as in § 1.18(v) . We assume a continuous spectrum <span class="math inline">\(\lambda\in\boldsymbol{\sigma}_{c}=[0,\infty)\)</span> , and a finite or countably infinite point spectrum <span class="math inline">\(\boldsymbol{\sigma}_{p}\)</span> with elements <span class="math inline">\(\lambda_{n}\)</span> . In what follows, integrals over the continuous parts of the spectrum will be denoted by <span class="math inline">\(\boldsymbol{\sigma}_{c}\)</span> , and sums over the discrete spectrum by <span class="math inline">\(\boldsymbol{\sigma}_{p}\)</span> , with <span class="math inline">\(\boldsymbol{\sigma}=\boldsymbol{\sigma}_{c}\cup\boldsymbol{\sigma}_{p}\)</span> denoting the full spectrum. It is to be noted that if any of the <span class="math inline">\(\lambda\in\boldsymbol{\sigma}\)</span> have degenerate sub-spaces, that is subspaces of orthogonal eigenfunctions with identical eigenvalues, that in the expansions below all such distinct eigenfunctions are to be included. Then orthogonality and normalization relations are</p>
+<p><a id="E60"></a> <span class="math display">\[
+\int_{X}\phi_{\lambda}(x)\overline{\phi_{\lambda^{\prime}}(x)}\,\mathrm{d}x=\delta\left(\lambda-\lambda^{\prime}\right), \tag{1.18.60}
+\]</span></p>
+<p><a id="E61"></a> <span class="math display">\[
+\int_{X}\phi_{\lambda_{n}}(x)\overline{\phi_{\lambda_{m}}(x)}\,\mathrm{d}x=\delta_{n,m}, \tag{1.18.61}
+\]</span></p>
+<p><a id="E62"></a> <span class="math display">\[
+\int_{X}\phi_{\lambda_{n}}(x)\overline{\phi_{\lambda}(x)}\,\mathrm{d}x=0, \tag{1.18.62}
+\]</span></p>
+<p>compare ( 1.18.29 ) and ( 1.18.44 ). The formal completeness relation is now</p>
+<p><a id="E63"></a> <span class="math display">\[
+\delta\left(x-x^{\prime}\right)=\sum_{\boldsymbol{\sigma}_{p}}\phi_{\lambda_{n}}(x)\overline{\phi_{\lambda_{n}}(x^{\prime})}+\int_{\boldsymbol{\sigma}_{c}}\phi_{\lambda}(x)\overline{\phi_{\lambda}(x^{\prime})}\,\mathrm{d}\lambda, \tag{1.18.63}
+\]</span></p>
+<p>compare ( 1.18.30 ) and ( 1.18.45 ), and the eigenfunction expansions are of the form</p>
+<p><a id="E64"></a> <span class="math display">\[
+f(x)=\int_{\boldsymbol{\sigma}_{c}}\widehat{f}(\lambda)\phi_{\lambda}(x)\,\mathrm{d}\lambda+\sum_{\boldsymbol{\sigma}_{p}}\widehat{f}(\lambda_{n})\phi_{\lambda_{n}}(x), \tag{1.18.64}
+\]</span></p>
+<p>Note that the notations of ( 1.18.32 ) and ( 1.18.47 ) are used to distinguish the contributions from the discrete and continuous parts of the spectrum. Then</p>
+<p><a id="E65"></a> <span class="math display">\[
+\int_{X}{\left|f(x)\right|}^{2}\,\mathrm{d}x=\int_{\boldsymbol{\sigma}_{c}}{\left|\widehat{f}(\lambda)\right|}^{2}\,\mathrm{d}\lambda+\sum_{\boldsymbol{\sigma}_{p}}{\left|\widehat{f}(\lambda_{n})\right|}^{2}, \tag{1.18.65}
+\]</span></p>
+<p>The analogs of ( 1.18.49 )–( 1.18.52 ) may be written in a similar fashion each now including contributions from both the discrete and continuous parts of the spectrum, as in ( 1.18.65 ). Showing one, representative, example: the analog of ( 1.18.52 ) is now</p>
+<p><a id="E66"></a> <span class="math display">\[
+\left\langle\left(z-T\right)^{-1}f,f\right\rangle=\sum_{\boldsymbol{\sigma}_{p}}\frac{{\left|\widehat{f}(\lambda_{n})\right|}^{2}}{z-\lambda_{n}}+\int_{\boldsymbol{\sigma}_{c}}{\left|\widehat{f}(\lambda)\right|}^{2}\frac{\,\mathrm{d}\lambda}{z-\lambda}, \tag{1.18.66}
+\]</span></p>
+<p>This representation has poles with residues <span class="math inline">\({\left|\widehat{f}(\lambda_{n})\right|}^{2}\)</span> at the discrete eigenvalues and a branch cut along <span class="math inline">\([0,\infty)\)</span> with discontinuity, from below to above the cut, <span class="math inline">\(2\pi\mathrm{i}{\left|\widehat{f}(\lambda)\right|}^{2}\)</span> , as in ( 1.18.53 ), see Newton (<a href="./bib/N.html#bib3111" title="Scattering theory of waves and particles">2002</a>, §7.1.1).</p>
+<p>Note that the integral in ( 1.18.66 ) is not singular if approached separately from above, or below, the real axis: in fact analytic continuation from the upper half of the complex plane, across the cut, and onto <em>higher Riemann Sheets</em> can access <em>complex poles</em> with singularities at discrete energies <span class="math inline">\(\lambda_{\mathrm{res}}-\mathrm{i}\Gamma_{\mathrm{res}}/2\)</span> corresponding to quantum <em>resonances</em> , or <em>decaying</em> quantum states with lifetimes proportional to <span class="math inline">\(1/\Gamma_{\mathrm{res}}\)</span> . For this latter see Simon (<a href="./bib/S.html#bib3115" title="Resonances in n -body quantum systems with dilatation analytic potentials and the foundations of time-dependent perturbation theory">1973</a>), and Reinhardt (<a href="./bib/R.html#bib3113" title="Complex Coordinates in the Theory of Atomic and Molecular Structure and Dynamics">1982</a>); wherein advantage is taken of the fact that although branch points are actual singularities of an analytic function, the location of the branch cuts are often at our disposal, as they are not singularities of the function, but simply arbitrary lines to keep a function single valued, and thus only singularities of a specific representation of that analytic function. This is accomplished by the variable change <span class="math inline">\(x\to x{\mathrm{e}}^{\mathrm{i}\theta}\)</span> , in <span class="math inline">\(\mathcal{L}\)</span> , which rotates the continuous spectrum <span class="math inline">\(\boldsymbol{\sigma}_{c}\to\boldsymbol{\sigma}_{c}{\mathrm{e}}^{-2\mathrm{i}\theta}\)</span> and the branch cut of ( 1.18.66 ) into the lower half complex plain by the angle <span class="math inline">\(-2\theta\)</span> , with respect to the unmoved branch point at <span class="math inline">\(\lambda=0\)</span> ; thus, providing access to resonances on the higher Riemann sheet should <span class="math inline">\(\theta\)</span> be large enough to expose them. This <em>dilatation transformation</em> , which does require analyticity of <span class="math inline">\(q(x)\)</span> in ( 1.18.28 ), or an analytic approximation thereto, leaves the poles, corresponding to the discrete spectrum, invariant, as they are, as is the branch point, actual singularities of <span class="math inline">\(\left\langle\left(z-T\right)^{-1}f,f\right\rangle\)</span> .</p>
+<section id="example-1-in-one-and-two-dimensions-any-qx-with-a-dip-or-well-has-a-partly-discrete-spectrum" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-in-one-and-two-dimensions-any-qx-with-a-dip-or-well-has-a-partly-discrete-spectrum">Example 1:&nbsp;In one and two dimensions any q⁢(x) with a ‘Dip, or Well’ has a partly discrete spectrum</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=discrete%20spectra">discrete spectra</a> , <a href="http://dlmf.nist.gov/search/search?q=in%20one%20and%20two%20dimensions">in one and two dimensions</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(viii) , §1.18 and Ch.1</p>
+</div>
+<p>Suppose that <span class="math inline">\(X\)</span> is the whole real line in one dimension, and that <span class="math inline">\(q(x)\)</span> , in ( 1.18.28 ) has (non-oscillatory) limits of <span class="math inline">\(0\)</span> at both <span class="math inline">\(\pm\infty\)</span> , and thus a continuous spectrum on <span class="math inline">\(\boldsymbol{\sigma}\geq 0\)</span> . What then is the condition on <span class="math inline">\(q(x)\)</span> to insure the existence of at least a single eigenvalue in the point spectrum? The discussions of § 1.18(vi) imply that if <span class="math inline">\(q(x)\equiv 0\)</span> then there is only a continuous spectrum. Surprisingly, if <span class="math inline">\(q(x)&lt;0\)</span> on any interval on the real line, even if positive elsewhere, as long as <span class="math inline">\(\int_{X}q(x)\,\mathrm{d}x\leq 0\)</span> , see Simon (<a href="./bib/S.html#bib3116" title="The Bound State of Weakly Coupled Schrödinger Operators in One and Two Dimensions">1976</a>, Theorem 2.5), then there will be at least one eigenfunction with a negative eigenvalue, with corresponding <span class="math inline">\(L^{2}\left(X\right)\)</span> eigenfunction. Thus, and this is a case where <span class="math inline">\(q(x)\)</span> is not continuous, if <span class="math inline">\(q(x)=-\alpha\delta\left(x-a\right)\)</span> , <span class="math inline">\(\alpha&gt;0\)</span> , there will be an <span class="math inline">\(L^{2}\)</span> eigenfunction localized in the vicinity of <span class="math inline">\(x=a\)</span> , with a negative eigenvalue, thus disjoint from the continuous spectrum on <span class="math inline">\([0,\infty)\)</span> . Similar results hold for two, but not higher, dimensional quantum systems. See Brownstein (<a href="./bib/B.html#bib3100" title="Criterion for Existence of a Bound State In One Dimension">2000</a>) and Yang and de Llano (<a href="./bib/Y.html#bib3119" title="Simple Variational Proof That Any Two-Dimensional Potential Well Supports at Least One Bound State">1989</a>) for numerical examples, based on variational calculations, and Simon (<a href="./bib/S.html#bib3116" title="The Bound State of Weakly Coupled Schrödinger Operators in One and Two Dimensions">1976</a>) and Chadan et al.&nbsp;(<a href="./bib/C.html#bib3101" title="Bound states in one and two spatial dimensions">2003</a>) for rigorous mathematical discussion.</p>
+</section>
+<section id="example-2-radial-3d-schrödinger-operators-including-the-coulomb-potential" class="level3">
+<h3 class="anchored" data-anchor-id="example-2-radial-3d-schrödinger-operators-including-the-coulomb-potential">Example 2:&nbsp;Radial 3D Schrödinger operators, including the Coulomb potential</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=Schr%C3%B6dinger%20Operators">Schrödinger Operators</a> , <a href="http://dlmf.nist.gov/search/search?q=Schr%C3%B6dinger%E2%80%93Coulomb%20problem">Schrödinger–Coulomb problem</a> , <a href="http://dlmf.nist.gov/search/search?q=mixed%20spectra">mixed spectra</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(viii) , §1.18 and Ch.1</p>
+</div>
+<p>Consider formally self-adjoint operators of the form</p>
+<p><a id="E67"></a> <span class="math display">\[
+\mathcal{L}_{\ell}=-\frac{1}{2}\frac{{\mathrm{d}}^{2}}{{\mathrm{d}r}^{2}}+\frac{\ell(\ell+1)}{2r^{2}}+V(r), \tag{1.18.67}
+\]</span></p>
+<p>which appear in the quantum theory of binding or scattering of a particle in a spherically symmetric <em>potential</em> <span class="math inline">\(V(r)\)</span> in three dimensions, and where <span class="math inline">\(r\in[0,\infty)\)</span> . The <em>bound states</em> are in the negative energy discrete spectrum, and the <em>scattering states</em> are in the positive energy continuous spectrum, <span class="math inline">\(\boldsymbol{\sigma}_{c}=[0,\infty)\)</span> , or, said more simply, <em>in the continuum</em> . See § <a href="./18.39.md" title="§18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials">18.39</a> for discussion of Schrödinger equations and operators. For fixed angular momentum <span class="math inline">\(\ell\)</span> the appropriate self-adjoint extension of the above operator may have both a discrete spectrum of negative eigenvalues <span class="math inline">\(\lambda_{n},n=0,1,\dots,N-1\)</span> , with corresponding <span class="math inline">\(L^{2}\left([0,\infty),r^{2}\,\mathrm{d}r\right)\)</span> eigenfunctions <span class="math inline">\(\phi_{n}(r)\)</span> , and also a continuous spectrum <span class="math inline">\(\lambda\in[0,\infty)\)</span> , with Dirac-delta normalized eigenfunctions <span class="math inline">\(\phi_{\lambda}(r)\)</span> , also with measure <span class="math inline">\(r^{2}\,\mathrm{d}r\)</span> . Unlike in the example in the paragraph above, in 3-dimensions a “dip below zero, or a potential well” in <span class="math inline">\(V(r)\)</span> does not always correspond to the existence of a discrete part of the spectrum. The well must be <em>deep and broad</em> enough to allow existence of such <span class="math inline">\(L^{2}\)</span> discrete states. The number, <span class="math inline">\(N\)</span> , of discrete states depends on the nature of <span class="math inline">\(V(r)\)</span> , as well as <span class="math inline">\(\ell\)</span> , and, again, <span class="math inline">\(V(r)\)</span> must vanish as <span class="math inline">\(r\to\infty\)</span> , corresponding to the traditionally assumed start of the energy continuum at <span class="math inline">\(\lambda=0\)</span> . In unusual cases <span class="math inline">\(N=\infty\)</span> , even for all <span class="math inline">\(\ell\)</span> , such as in the case of the <em>Schrödinger–Coulomb problem</em> ( <span class="math inline">\(V=-r^{-1}\)</span> ) discussed in § <a href="./18.39.md" title="§18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials">18.39</a> and § <a href="./33.14.md" title="§33.14 Definitions and Basic Properties ‣ Variables 𝑟,ϵ ‣ Chapter 33 Coulomb Functions">33.14</a> , where the point spectrum actually <em>accumulates</em> at the onset of the continuum at <span class="math inline">\(\lambda=0\)</span> , implying an <em>essential singularity</em> , as well as a branch point, in matrix elements of the resolvent, ( 1.18.66 ). See Bethe and Salpeter (<a href="./bib/B.html#bib2694" title="Quantum Mechanics of One- and Two-electron Atoms">1977</a>, Ch. 1, (4.12)–(4.13)) for the resulting transform pair in this case.</p>
+</section>
+</section>
+<section id="ix-mathematical-background" class="level2">
+<h2 class="anchored" data-anchor-id="ix-mathematical-background">§1.18(ix) Mathematical Background</h2>
+<div class="{note}">
+<p><strong>Referenced by:</strong></p>
+<p>§1.18(iii) , §1.18(iii) , §1.18(vi) , §1.18 , §10.22(v)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18 and Ch.1</p>
+</div>
+<section id="self-adjoint-operators" class="level3">
+<h3 class="anchored" data-anchor-id="self-adjoint-operators">Self-Adjoint Operators</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=essentially%20self-adjoint%20operator">essentially self-adjoint operator</a> , <a href="http://dlmf.nist.gov/search/search?q=mathematical%20background">mathematical background</a> , <a href="http://dlmf.nist.gov/search/search?q=range%20and%20domain">range and domain</a> , <a href="http://dlmf.nist.gov/search/search?q=self-adjoint%20operator">self-adjoint operator</a></p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(ix) , §1.18 and Ch.1</p>
+</div>
+<p>If <span class="math inline">\(T\)</span> is an unbounded linear operator on a Hilbert space <span class="math inline">\(V\)</span> with dense domain <span class="math inline">\(\mathcal{D}(T)\)</span> then the <em>adjoint</em> <span class="math inline">\({T}^{*}\)</span> of <span class="math inline">\(T\)</span> is the linear operator with domain</p>
+<p><a id="E68"></a> <span class="math display">\[
+\mathcal{D}({T}^{*})=\left\{w\in V\,\Big{|}\,\sup_{v\in\mathcal{D}(T),\,\left\|{v}\right\|=1}\left|\left\langle Tv,w\right\rangle\right|&lt;\infty\right\}, \tag{1.18.68}
+\]</span></p>
+<p>such that</p>
+<p><a id="E69"></a> <span class="math display">\[
+\left\langle Tv,w\right\rangle=\left\langle v,{T}^{*}w\right\rangle, \tag{1.18.69}
+\]</span></p>
+<p>A linear operator <span class="math inline">\(T\)</span> with dense domain is called <em>symmetric</em> if</p>
+<p><a id="E70"></a> <span class="math display">\[
+\left\langle Tv,w\right\rangle=\left\langle v,Tw\right\rangle, \tag{1.18.70}
+\]</span></p>
+<p>If <span class="math inline">\(T\)</span> is symmetric then <span class="math inline">\(T\subset{T}^{*}\)</span> , i.e., <span class="math inline">\(\mathcal{D}(T)\subset\mathcal{D}({T}^{*})\)</span> and <span class="math inline">\({T}^{*}v=Tv\)</span> for <span class="math inline">\(v\in\mathcal{D}(T)\)</span> . Then also <span class="math inline">\(T\subset T^{**}\subset{T}^{*}\)</span> , where <span class="math inline">\(T^{**}={({T}^{*})}^{*}\)</span> . If <span class="math inline">\(T\subset T^{**}={T}^{*}\)</span> then <span class="math inline">\(T\)</span> is <em>essentially self-adjoint</em> and if <span class="math inline">\(T={T}^{*}\)</span> then <span class="math inline">\(T\)</span> is <em>self-adjoint</em> .</p>
+</section>
+<section id="spectrum-of-an-operator" class="level3">
+<h3 class="anchored" data-anchor-id="spectrum-of-an-operator">Spectrum of an Operator</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=mathematical%20background">mathematical background</a> , <a href="http://dlmf.nist.gov/search/search?q=spectrum%20of%20an%20operator">spectrum of an operator</a></p>
+<p><strong>Notes:</strong></p>
+<p>See Dunford and Schwartz (<a href="./bib/D.html#bib3103" title="Linear operators. Part II">1988</a>, §XII.1.1) for the spectrum of an operator.</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(ix) , §1.18 and Ch.1</p>
+</div>
+<p>Let <span class="math inline">\(T\)</span> be a linear operator on <span class="math inline">\(V\)</span> with dense domain <span class="math inline">\(\mathcal{D}(T)\)</span> and with <em>range</em> <span class="math inline">\(\mathcal{R}(T)=\{Tv\mid v\in\mathcal{D}(T)\}\)</span> . Such an operator <span class="math inline">\(T\)</span> is called <em>injective</em> if, for any <span class="math inline">\(u,v\)</span> in its domain, <span class="math inline">\(Tu=Tv\)</span> implies that <span class="math inline">\(u=v\)</span> . The <em>resolvent set</em> <span class="math inline">\(\rho(T)\)</span> consists of all <span class="math inline">\(z\in\mathbb{C}\)</span> such that (i) <span class="math inline">\(z-T\)</span> is injective, (ii) <span class="math inline">\(\mathcal{R}(z-T)\)</span> is dense in <span class="math inline">\(V\)</span> , (iii) the <em>resolvent</em> <span class="math inline">\(\left(z-T\right)^{-1}\)</span> is bounded. The <em>spectrum</em> <span class="math inline">\(\boldsymbol{\sigma}(T)\)</span> is the complement in <span class="math inline">\(\mathbb{C}\)</span> of <span class="math inline">\(\rho(T)\)</span> . The spectrum <span class="math inline">\(\boldsymbol{\sigma}(T)\)</span> is the disjoint union of three sets:</p>
+<p>If <span class="math inline">\(T\)</span> is a bounded operator then its spectrum is a closed bounded subset of <span class="math inline">\(\mathbb{C}\)</span> . If <span class="math inline">\(T\)</span> is self-adjoint (bounded or unbounded) then <span class="math inline">\(\sigma(T)\)</span> is a closed subset of <span class="math inline">\(\mathbb{R}\)</span> and the residual spectrum is empty. Note that eigenfunctions for distinct (necessarily real) eigenvalues of a self-adjoint operator are mutually orthogonal. If an eigenvalue is of multiplicity greater than <span class="math inline">\(1\)</span> then an orthonormal basis of eigenfunctions can be given for the eigenspace.</p>
+</section>
+<section id="self-adjoint-extensions-of-a-symmetric-operator" class="level3">
+<h3 class="anchored" data-anchor-id="self-adjoint-extensions-of-a-symmetric-operator">Self-adjoint extensions of a symmetric Operator</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=deficiency%20indices">deficiency indices</a> , <a href="http://dlmf.nist.gov/search/search?q=mathematical%20background">mathematical background</a> , <a href="http://dlmf.nist.gov/search/search?q=self-adjoint%20extensions%20of%20a%20symmetric%20operator">self-adjoint extensions of a symmetric operator</a></p>
+<p><strong>Notes:</strong></p>
+<p>For self-adjoint extensions of a symmetric operator see Dunford and Schwartz (<a href="./bib/D.html#bib3103" title="Linear operators. Part II">1988</a>, §XII.4.1–19).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(ix) , §1.18 and Ch.1</p>
+</div>
+<p>Let <span class="math inline">\(T\)</span> be a symmetric operator on a Hilbert space <span class="math inline">\(V\)</span> , so <span class="math inline">\(\mathcal{D}(T)\)</span> is dense in <span class="math inline">\(V\)</span> and <span class="math inline">\(T\subset T^{**}\subset{T}^{*}\)</span> . For <span class="math inline">\(z\in\mathbb{C}\backslash\mathbb{R}\)</span> let <span class="math inline">\(N_{z}\)</span> be the <span class="math inline">\(z\)</span> -eigenspace of <span class="math inline">\({T}^{*}\)</span> , i.e., <span class="math inline">\(N_{z}\)</span> is the linear subspace of <span class="math inline">\(\mathcal{D}({T}^{*})\)</span> consisting of all <span class="math inline">\(v\)</span> for which <span class="math inline">\({T}^{*}v=zv\)</span> . Then <span class="math inline">\(\dim N_{z}\)</span> is constant for <span class="math inline">\(\Im z&gt;0\)</span> and also constant for <span class="math inline">\(\Im z&lt;0\)</span> . Put <span class="math inline">\(n_{+}=\dim N_{z}\)</span> ( <span class="math inline">\(\Im z&gt;0\)</span> ) and <span class="math inline">\(n_{-}=\dim N_{z}\)</span> ( <span class="math inline">\(\Im z&lt;0\)</span> ), the <em>deficiency indices</em> for <span class="math inline">\(T\)</span> . Then <span class="math inline">\(T\)</span> has self-adjoint extensions iff <span class="math inline">\(n_{+}=n_{-}\)</span> . We have a direct sum of linear spaces: <span class="math inline">\(\mathcal{D}({T}^{*})=\mathcal{D}(T^{**})+N_{\mathrm{i}}+N_{-\mathrm{i}}\)</span> . Assume <span class="math inline">\(n_{+}=n_{-}\)</span> . Then any self-adjoint extension of <span class="math inline">\(T\)</span> is determined by a linear isometry <span class="math inline">\(U\colon N_{\mathrm{i}}\to N_{-\mathrm{i}}\)</span> and it is the restriction of <span class="math inline">\({T}^{*}\)</span> to <span class="math inline">\(\{v+w+Uw\mid v\in\mathcal{D}(T^{**}),\;w\in N_{\mathrm{i}}\}\)</span> .</p>
+</section>
+<section id="self-adjoint-extensions-of-1.18.28-and-the-weyl-alternative" class="level3">
+<h3 class="anchored" data-anchor-id="self-adjoint-extensions-of-1.18.28-and-the-weyl-alternative">Self-adjoint extensions of (1.18.28) and the Weyl alternative</h3>
+<div class="{note}">
+<p><strong>Keywords:</strong></p>
+<p><a href="http://dlmf.nist.gov/search/search?q=boundary%20conditions">boundary conditions</a> , <a href="http://dlmf.nist.gov/search/search?q=boundary%20conditions%20and%20the%20Weyl%20alternative">boundary conditions and the Weyl alternative</a> , <a href="http://dlmf.nist.gov/search/search?q=limit%20circle">limit circle</a> , <a href="http://dlmf.nist.gov/search/search?q=limit%20point">limit point</a> , <a href="http://dlmf.nist.gov/search/search?q=limit%20point%20and%20limit%20circle%20boundary%20conditions">limit point and limit circle boundary conditions</a> , <a href="http://dlmf.nist.gov/search/search?q=mathematical%20background">mathematical background</a> , <a href="http://dlmf.nist.gov/search/search?q=second%20order%20linear%20differential%20operator">second order linear differential operator</a></p>
+<p><strong>Notes:</strong></p>
+<p>For the Weyl alternative see Dunford and Schwartz (<a href="./bib/D.html#bib3103" title="Linear operators. Part II">1988</a>, p.&nbsp;1306).</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(ix) , §1.18 and Ch.1</p>
+</div>
+<p>For a formally self-adjoint second order differential operator <span class="math inline">\(\mathcal{L}\)</span> , such as that of ( 1.18.28 ), the space <span class="math inline">\(\mathcal{D}({\mathcal{L}}^{*})\)</span> can be seen to consist of all <span class="math inline">\(f\in L^{2}\left(X\right)\)</span> such that the distribution <span class="math inline">\(\mathcal{L}f\)</span> can be identified with a function in <span class="math inline">\(L^{2}\left(X\right)\)</span> , which is the function <span class="math inline">\({\mathcal{L}}^{*}f\)</span> . Then, for <span class="math inline">\(z\in\mathbb{C}\backslash\mathbb{R}\)</span> , <span class="math inline">\(f\in N_{z}\)</span> iff <span class="math inline">\(f\)</span> is an ordinary solution (i.e., <span class="math inline">\(f\in C^{2}(X)\)</span> ) of <span class="math inline">\(Lf=zf\)</span> which is moreover in <span class="math inline">\(L^{2}\left(X\right)\)</span> . Thus <span class="math inline">\(N_{z}\)</span> has dimension 0, 1 or 2. Also, because <span class="math inline">\(q\)</span> is real-valued, <span class="math inline">\(f\in N_{z}\)</span> iff <span class="math inline">\(\overline{f}\in N_{\overline{z}}\)</span> . So <span class="math inline">\(\mathcal{L}\)</span> has self-adjoint extensions with deficiency indices <span class="math inline">\(n_{+}=n_{-}=0\)</span> , or <span class="math inline">\(1\)</span> or <span class="math inline">\(2\)</span> . Pick <span class="math inline">\(c\in(a,b)\)</span> . Let <span class="math inline">\(n_{1},n_{1}\)</span> be the deficiency indices for <span class="math inline">\(\mathcal{L}\)</span> restricted to <span class="math inline">\((a,c)\)</span> , and <span class="math inline">\(n_{2},n_{2}\)</span> the ones for <span class="math inline">\(\mathcal{L}\)</span> restricted to <span class="math inline">\((c,b)\)</span> . Then <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> are independent of <span class="math inline">\(c\)</span> . By <em>Weyl’s alternative</em> <span class="math inline">\(n_{1}\)</span> equals either 1 (the <em>limit point case</em> ) or 2 (the <em>limit circle case</em> ), and similarly for <span class="math inline">\(n_{2}\)</span> . The two (equal) deficiency indices of <span class="math inline">\(\mathcal{L}\)</span> are then equal to <span class="math inline">\(n_{1}+n_{2}-2\)</span> . A <em>boundary value</em> for the end point <span class="math inline">\(a\)</span> is a linear form <span class="math inline">\(\mathcal{B}\)</span> on <span class="math inline">\(\mathcal{D}({\mathcal{L}}^{*})\)</span> of the form</p>
+<p><a id="E71"></a> <span class="math display">\[
+\mathcal{B}(f)=\lim_{x\to a+}\left(\alpha(x)f(x)+\beta(x)f^{\prime}(x)\right), \tag{1.18.71}
+\]</span></p>
+<p>where <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are given functions on <span class="math inline">\(X\)</span> , and where the limit has to exist for all <span class="math inline">\(f\)</span> . Then, if the linear form <span class="math inline">\(\mathcal{B}\)</span> is nonzero, the condition <span class="math inline">\(\mathcal{B}(f)=0\)</span> is called a <em>boundary condition</em> at <span class="math inline">\(a\)</span> . Boundary values and boundary conditions for the end point <span class="math inline">\(b\)</span> are defined in a similar way. If <span class="math inline">\(n_{1}=1\)</span> then there are no nonzero boundary values at <span class="math inline">\(a\)</span> ; if <span class="math inline">\(n_{1}=2\)</span> then the above boundary values at <span class="math inline">\(a\)</span> form a two-dimensional class. Similarly at <span class="math inline">\(b\)</span> . Any self-adjoint extension of <span class="math inline">\(\mathcal{L}\)</span> can be obtained by restricting <span class="math inline">\({\mathcal{L}}^{*}\)</span> to those <span class="math inline">\(f\in\mathcal{D}({\mathcal{L}}^{*})\)</span> for which, if <span class="math inline">\(n_{1}=2\)</span> , <span class="math inline">\(\mathcal{B}_{1}(f)=0\)</span> for a chosen <span class="math inline">\(\mathcal{B}_{1}\)</span> at <span class="math inline">\(a\)</span> and, if <span class="math inline">\(n_{2}=2\)</span> , <span class="math inline">\(\mathcal{B}_{2}(f)=0\)</span> for a chosen <span class="math inline">\(\mathcal{B}_{2}\)</span> at <span class="math inline">\(b\)</span> .</p>
+<p>Integral transforms ( 10.22.78 ) and ( 10.22.79 ) are examples of the utility of these extensions.</p>
+</section>
+<section id="spectral-expansions-and-self-adjoint-extensions" class="level3">
+<h3 class="anchored" data-anchor-id="spectral-expansions-and-self-adjoint-extensions">Spectral expansions and self-adjoint extensions</h3>
+<div class="{note}">
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18(ix) , §1.18 and Ch.1</p>
+</div>
+<p>The above results, especially the discussions of deficiency indices and limit point and limit circle boundary conditions, lay the basis for further applications. The reader is referred to Coddington and Levinson (<a href="./bib/C.html#bib2977" title="Theory of ordinary differential equations">1955</a>), Friedman (<a href="./bib/F.html#bib2969" title="Principles and Techniques of Applied Mathematics">1990</a>, Ch. 3), Titchmarsh (<a href="./bib/T.html#bib2975" title="Eigenfunction expansions associated with second-order differential equations. Part I">1962a</a>), and Everitt (<a href="./bib/E.html#bib3106" title="Charles Sturm and the development of Sturm-Liouville theory in the years 1900 to 1950">2005b</a>, pp.&nbsp;45–74) and Everitt (<a href="./bib/E.html#bib3107" title="A catalogue of Sturm-Liouville differential equations">2005a</a>, pp.&nbsp;272–331), for detailed methods and results.</p>
+</section>
+</section>
+<section id="x-literature" class="level2">
+<h2 class="anchored" data-anchor-id="x-literature">§1.18(x) Literature</h2>
+<div class="{note}">
+<p><strong>Referenced by:</strong></p>
+<p>Erratum (V1.2.0) §1.18 , Version 1.2.0 (March 27, 2024)</p>
+<p><strong>See also:</strong></p>
+<p>Annotations for §1.18 and Ch.1</p>
+</div>
+<p>The materials developed here follow from the extensions of the Sturm–Liouville theory of second order ODEs as developed by Weyl, to include the <em>limit point and limit circle</em> singular cases. This work is well overviewed by Coddington and Levinson (<a href="./bib/C.html#bib2977" title="Theory of ordinary differential equations">1955</a>, Ch. 9), and then applied in detail by Titchmarsh (<a href="./bib/T.html#bib3086" title="Eigenfunction Expansions Associated with Second-Order Differential Equations">1946</a>), Titchmarsh (<a href="./bib/T.html#bib2975" title="Eigenfunction expansions associated with second-order differential equations. Part I">1962a</a>), Titchmarsh (<a href="./bib/T.html#bib2976" title="Eigenfunction Expansions Associated with Second Order Differential Equations, Part 2, Partial Differential Equations">1958</a>), and Levitan and Sargsjan (<a href="./bib/L.html#bib2978" title="Introduction to spectral theory: selfadjoint ordinary differential operators">1975</a>) which also connects the Weyl theory to the relevant functional analysis. In parallel, similar, and more general formulations have grown out of functional analysis itself, as in the work of Stone (<a href="./bib/S.html#bib2979" title="Linear transformations in Hilbert space">1990</a>), Rudin (<a href="./bib/R.html#bib1980" title="Functional Analysis">1973</a>), Reed and Simon (<a href="./bib/R.html#bib2968" title="Methods of Modern Mathematical Physics, Vol. 1, Functional Analysis">1980</a>), Reed and Simon (<a href="./bib/R.html#bib2980" title="Methods of Modern Mathematical Physics, Vol. 2, Fourier Analysis, Self-Adjointness">1975</a>), Reed and Simon (<a href="./bib/R.html#bib2981" title="Methods of Modern Mathematical Physics, Vol. 4, Analysis of Operators">1978</a>), Reed and Simon (<a href="./bib/R.html#bib2982" title="Methods of Modern Mathematical Physics, Vol. 3, Scattering Theory">1979</a>), Cycon et al.&nbsp;(<a href="./bib/C.html#bib3102" title="Schrödinger Operators, with Applications to Quantum Mechanics and Global Geometry">2008</a>), Dunford and Schwartz (<a href="./bib/D.html#bib3103" title="Linear operators. Part II">1988</a>, Ch. XIII), Hall (<a href="./bib/H.html#bib3108" title="Quantum theory for mathematicians">2013</a>, pp.&nbsp;127-223). Friedman (<a href="./bib/F.html#bib2969" title="Principles and Techniques of Applied Mathematics">1990</a>) provides a useful introduction to both approaches; as does the conference proceeding Amrein et al.&nbsp;(<a href="./bib/index.html#bib2986" title="Sturm-Liouville Theory">2005</a>), overviewing the combination of Sturm–Liouville theory and Hilbert space theory. See, in particular, the overview Everitt (<a href="./bib/E.html#bib3106" title="Charles Sturm and the development of Sturm-Liouville theory in the years 1900 to 1950">2005b</a>, pp.&nbsp;45–74), and the uniformly annotated listing of <span class="math inline">\(51\)</span> solved Sturm–Liouville problems in Everitt (<a href="./bib/E.html#bib3107" title="A catalogue of Sturm-Liouville differential equations">2005a</a>, pp.&nbsp;272–331), each with their limit point, or circle, boundary behaviors categorized.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nerudev\.github\.io\/Polaris-Kernel\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

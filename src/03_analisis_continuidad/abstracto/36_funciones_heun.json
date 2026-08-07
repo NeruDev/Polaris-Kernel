@@ -1,9 +1,12 @@
 {
-  "id": "33E30",
-  "title": "Funciones Heun",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "33E30, 34M35",
-  "difficulty": "abstracto",
-  "source_dlmf_chapter": 31,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_36_funciones_heun",
+    "title": "Funciones Heun",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "33E-30",
+    "difficulty": "abstracto",
+    "tags": [
+        "33E30",
+        "34M35"
+    ],
+    "status": "draft"
 }

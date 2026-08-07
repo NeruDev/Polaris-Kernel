@@ -17,7 +17,8 @@ status: "stable"
 # Teoría de conjuntos
 
 La teoría de conjuntos es el fundamento sobre el cual se construye casi todo el 
-edificio matemático. Define el concepto de "colección de objetos" y las 
+edificio matemático.
+Define el concepto de "colección de objetos" y las 
 relaciones entre ellos.
 
 ## Axiomas básicos
@@ -34,8 +35,10 @@ Estos definen la existencia del conjunto vacío, la formación de pares, y el ax
 
 ## Cardinalidad e infinito
 
-La cardinalidad mide el tamaño de un conjunto. Georg Cantor demostró que existen 
-diferentes "tamaños" de infinito. El infinito de los números naturales 
+La cardinalidad mide el tamaño de un conjunto.
+Georg Cantor demostró que existen 
+diferentes "tamaños" de infinito.
+El infinito de los números naturales 
 ($\aleph_0$) es menor que el de los números reales ($c$), lo que llevó a la 
 hipótesis del continuo.
 

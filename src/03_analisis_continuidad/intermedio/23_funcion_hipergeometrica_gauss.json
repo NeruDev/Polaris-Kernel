@@ -1,9 +1,11 @@
 {
-  "id": "33C05",
-  "title": "Funcion Hipergeometrica Gauss",
-  "pilar": "03_analisis_continuidad",
-  "msc_code": "33C05",
-  "difficulty": "intermedio",
-  "source_dlmf_chapter": 15,
-  "status": "volcado_estructural_completado"
+    "id": "msc00_23_funcion_hipergeometrica_gauss",
+    "title": "Funcion Hipergeometrica Gauss",
+    "pilar": "03_analisis_continuidad",
+    "msc_code": "33C-05",
+    "difficulty": "intermedio",
+    "tags": [
+        "33C05"
+    ],
+    "status": "draft"
 }

@@ -17,12 +17,14 @@ status: "stable"
 # Métodos de demostración
 
 Una demostración es una secuencia lógica de argumentos que establece la verdad 
-de una proposición. En matemáticas, nada se acepta sin una prueba rigurosa 
+de una proposición.
+En matemáticas, nada se acepta sin una prueba rigurosa 
 basada en axiomas y teoremas previamente demostrados.
 
 ## Inducción matemática
 
-Se usa para demostrar propiedades sobre los números naturales. Consta de dos 
+Se usa para demostrar propiedades sobre los números naturales.
+Consta de dos 
 pasos:
 1. **Base:** Probar que la propiedad se cumple para $n = 1$.
 2. **Paso Inductivo:** Supone que se cumple para $k$ y demuestra que entonces se 
@@ -31,7 +33,8 @@ cumple para $k+1$. Si ambos pasos son válidos, se cumple para todo $n$.
 ## Reducción al absurdo
 
 Este método (también llamado *reductio ad absurdum*) consiste en suponer que la 
-proposición que queremos demostrar es falsa. Si esto conduce a una contradicción 
+proposición que queremos demostrar es falsa.
+Si esto conduce a una contradicción 
 lógica evidente, entonces la proposición original debe ser necesariamente 
 verdadera.
 

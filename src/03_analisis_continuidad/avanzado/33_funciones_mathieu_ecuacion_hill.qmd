@@ -1,12 +1,13 @@
 ---
-id: "33E10"
+id: "msc00_33_funciones_mathieu_ecuacion_hill"
 title: "Funciones Mathieu Ecuacion Hill"
 pilar: "03_analisis_continuidad"
-msc_code: "33E10, 34B30"
+msc_code: "33E-10"
 difficulty: "avanzado"
 tags:
-  - 33E10
-  - 34B30
+  - "33E10"
+  - "34B30"
+status: "draft"
 ---
 
 # Funciones Mathieu Ecuacion Hill
