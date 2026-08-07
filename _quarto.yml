@@ -29,73 +29,114 @@ website:
   sidebar:
     style: docked
     search: true
-    # Mapeo estructurado de los contenidos en los 6 pilares Bourbaki.
     contents:
-    # Pilar 01: Fundamentos de las matematicas y logica formal.
     - section: 01 Fundamentos Logica
       contents:
-      - src/01_fundamentos_logica/01_aritmetica_propiedades.qmd
-      - src/01_fundamentos_logica/01_sistemas_numericos.qmd
-      - src/01_fundamentos_logica/02_logica_matematica.qmd
-      - src/01_fundamentos_logica/03_teoria_conjuntos.qmd
-      - src/01_fundamentos_logica/04_metodos_demostracion.qmd
-      - src/01_fundamentos_logica/05_relaciones_equivalencia.qmd
-      - src/01_fundamentos_logica/06_funciones_y_mapeos.qmd
-      - src/01_fundamentos_logica/07_logica_predicados_inferencia.qmd
-      
-    # Pilar 02: Estructuras algebraicas y algebra lineal.
+      - src/01_fundamentos_logica/intro/01_aritmetica_propiedades.qmd
+      - src/01_fundamentos_logica/intro/02_funciones_y_mapeos.qmd
+      - src/01_fundamentos_logica/intro/03_logica_matematica.qmd
+      - src/01_fundamentos_logica/intro/04_metodos_demostracion.qmd
+      - src/01_fundamentos_logica/intro/05_relaciones_equivalencia.qmd
+      - src/01_fundamentos_logica/intro/06_sistemas_numericos.qmd
+      - src/01_fundamentos_logica/intro/07_teoria_conjuntos.qmd
+      - src/01_fundamentos_logica/intro/08_falacias_logicas.qmd
+      - src/01_fundamentos_logica/intermedio/01_logica_predicados_inferencia.qmd
+      - src/01_fundamentos_logica/avanzado/09_metodos_algebraicos_analiticos.qmd
     - section: 02 Estructuras Algebraicas
       contents:
-      - src/02_estructuras_algebraicas/01_algebra_elemental.qmd
-      - src/02_estructuras_algebraicas/02_algebra_lineal.qmd
-      - src/02_estructuras_algebraicas/03_algebra_abstracta.qmd
-      - src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd
-      - src/02_estructuras_algebraicas/05_teoria_de_matrices.qmd
-      - src/02_estructuras_algebraicas/06_ecuaciones_y_desigualdades.qmd
-      - src/02_estructuras_algebraicas/07_polinomios_y_factorizacion.qmd
-      - src/02_estructuras_algebraicas/08_espacios_vectoriales_bases.qmd
-      
-    # Pilar 03: Calculo infinitesimal, analisis real y funcional.
+      - src/02_estructuras_algebraicas/intro/01_algebra_elemental.qmd
+      - src/02_estructuras_algebraicas/intro/02_algebra_lineal.qmd
+      - src/02_estructuras_algebraicas/intro/03_ecuaciones_y_desigualdades.qmd
+      - src/02_estructuras_algebraicas/intro/04_polinomios_y_factorizacion.qmd
+      - src/02_estructuras_algebraicas/intro/05_sistemas_lineales_2x2.qmd
+      - src/02_estructuras_algebraicas/intermedio/01_espacios_vectoriales_bases.qmd
+      - src/02_estructuras_algebraicas/intermedio/02_teoria_anillos_cuerpos.qmd
+      - src/02_estructuras_algebraicas/intermedio/09_polinomios_bernoulli_euler.qmd
+      - src/02_estructuras_algebraicas/avanzado/01_algebra_abstracta.qmd
+      - src/02_estructuras_algebraicas/avanzado/10_simbolos_acoplamiento_angular.qmd
+      - src/02_estructuras_algebraicas/abstracto/01_teoria_de_categorias.qmd
+      - src/02_estructuras_algebraicas/abstracto/11_funciones_argumento_matricial.qmd
     - section: 03 Analisis Continuidad
       contents:
-      - src/03_analisis_continuidad/01_funciones_y_limites.qmd
-      - src/03_analisis_continuidad/02_calculo_diferencial.qmd
-      - src/03_analisis_continuidad/03_calculo_integral.qmd
-      - src/03_analisis_continuidad/04_calculo_multivariable.qmd
-      - src/03_analisis_continuidad/05_ecuaciones_diferenciales.qmd
-      - src/03_analisis_continuidad/06_analisis_avanzado.qmd
-      - src/03_analisis_continuidad/07_analisis_funcional.qmd
-      - src/03_analisis_continuidad/08_sucesiones_y_series.qmd
-      
-    # Pilar 04: Geometria, topologia y variedades diferenciables.
+      - src/03_analisis_continuidad/intro/01_aplicaciones_calculo.qmd
+      - src/03_analisis_continuidad/intro/02_calculo_diferencial.qmd
+      - src/03_analisis_continuidad/intro/03_calculo_integral.qmd
+      - src/03_analisis_continuidad/intro/04_funciones_transcendentes.qmd
+      - src/03_analisis_continuidad/intro/05_funciones_y_limites.qmd
+      - src/03_analisis_continuidad/intro/06_sucesiones_y_series.qmd
+      - src/03_analisis_continuidad/intro/07_tecnicas_integracion.qmd
+      - src/03_analisis_continuidad/intro/08_precalculo_asintotas.qmd
+      - src/03_analisis_continuidad/intro/09_funciones_elementales_trascendentes.qmd
+      - src/03_analisis_continuidad/intermedio/01_calculo_multivariable.qmd
+      - src/03_analisis_continuidad/intermedio/02_ecuaciones_diferenciales.qmd
+      - src/03_analisis_continuidad/intermedio/13_funcion_gamma_psi.qmd
+      - src/03_analisis_continuidad/intermedio/14_integrales_exponenciales_trigonometricas.qmd
+      - src/03_analisis_continuidad/intermedio/15_funciones_error_fresnel_dawson.qmd
+      - src/03_analisis_continuidad/intermedio/18_funciones_bessel.qmd
+      - src/03_analisis_continuidad/intermedio/22_funciones_legendre.qmd
+      - src/03_analisis_continuidad/intermedio/23_funcion_hipergeometrica_gauss.qmd
+      - src/03_analisis_continuidad/intermedio/26_polinomios_ortogonales_clasicos.qmd
+      - src/03_analisis_continuidad/intermedio/27_integrales_elipticas.qmd
+      - src/03_analisis_continuidad/intermedio/30_funciones_elipticas_jacobi.qmd
+      - src/03_analisis_continuidad/avanzado/01_analisis_avanzado.qmd
+      - src/03_analisis_continuidad/avanzado/02_analisis_funcional.qmd
+      - src/03_analisis_continuidad/avanzado/16_funcion_gamma_incompleta.qmd
+      - src/03_analisis_continuidad/avanzado/17_funciones_airy.qmd
+      - src/03_analisis_continuidad/avanzado/19_funciones_struve.qmd
+      - src/03_analisis_continuidad/avanzado/20_funciones_cilindro_parabolico.qmd
+      - src/03_analisis_continuidad/avanzado/21_funciones_hipergeometricas_confluentes.qmd
+      - src/03_analisis_continuidad/avanzado/28_funciones_theta_jacobi.qmd
+      - src/03_analisis_continuidad/avanzado/31_funciones_elipticas_weierstrass_modulares.qmd
+      - src/03_analisis_continuidad/avanzado/32_funcion_zeta_riemann.qmd
+      - src/03_analisis_continuidad/avanzado/33_funciones_mathieu_ecuacion_hill.qmd
+      - src/03_analisis_continuidad/avanzado/35_funciones_onda_esferoidales.qmd
+      - src/03_analisis_continuidad/avanzado/38_funciones_coulomb.qmd
+      - src/03_analisis_continuidad/abstracto/24_hipergeometricas_generalizadas_meijer_g.qmd
+      - src/03_analisis_continuidad/abstracto/25_funciones_q_hipergeometricas.qmd
+      - src/03_analisis_continuidad/abstracto/29_funciones_theta_multidimensionales.qmd
+      - src/03_analisis_continuidad/abstracto/34_funciones_lame.qmd
+      - src/03_analisis_continuidad/abstracto/36_funciones_heun.qmd
+      - src/03_analisis_continuidad/abstracto/37_trascendentes_painleve.qmd
+      - src/03_analisis_continuidad/abstracto/39_integrales_puntos_ensilladura_coalescentes.qmd
     - section: 04 Espacio Forma
       contents:
-      - src/04_espacio_forma/01_geometria_euclidiana.qmd
-      - src/04_espacio_forma/02_trigonometria.qmd
-      - src/04_espacio_forma/03_geometria_analitica.qmd
-      - src/04_espacio_forma/04_topologia.qmd
-      - src/04_espacio_forma/05_geometria_diferencial.qmd
-      - src/04_espacio_forma/06_geometria_no_euclidiana.qmd
-      
-    # Pilar 05: Matematicas discretas, teoria de grafos y computacion.
+      - src/04_espacio_forma/intro/01_geometria_analitica.qmd
+      - src/04_espacio_forma/intro/02_geometria_espacio_3d.qmd
+      - src/04_espacio_forma/intro/03_geometria_euclidiana.qmd
+      - src/04_espacio_forma/intro/04_trigonometria.qmd
+      - src/04_espacio_forma/intro/05_poligonos_perimetros.qmd
+      - src/04_espacio_forma/intermedio/01_geometria_no_euclidiana.qmd
+      - src/04_espacio_forma/intermedio/02_identidades_ecuaciones_trigonometricas.qmd
+      - src/04_espacio_forma/avanzado/01_geometria_diferencial.qmd
+      - src/04_espacio_forma/avanzado/02_topologia.qmd
+      - src/04_espacio_forma/avanzado/09_geometria_variedades_elipticas.qmd
     - section: 05 Discrecion Computacion
       contents:
-      - src/05_discrecion_computacion/01_combinatoria.qmd
-      - src/05_discrecion_computacion/02_teoria_de_grafos.qmd
-      - src/05_discrecion_computacion/03_teoria_de_numeros.qmd
-      - src/05_discrecion_computacion/04_metodos_numericos.qmd
-      - src/05_discrecion_computacion/05_teoria_automatas.qmd
-      
-    # Pilar 06: Probabilidad, procesos estocasticos e inferencia de datos.
+      - src/05_discrecion_computacion/intro/01_analisis_complejidad.qmd
+      - src/05_discrecion_computacion/intro/02_combinatoria.qmd
+      - src/05_discrecion_computacion/intro/03_logica_binaria_bits.qmd
+      - src/05_discrecion_computacion/intermedio/01_aritmetica_modular_aplicada.qmd
+      - src/05_discrecion_computacion/intermedio/02_metodos_numericos.qmd
+      - src/05_discrecion_computacion/intermedio/03_relaciones_recurrencia.qmd
+      - src/05_discrecion_computacion/intermedio/04_teoria_de_grafos.qmd
+      - src/05_discrecion_computacion/intermedio/05_teoria_de_numeros.qmd
+      - src/05_discrecion_computacion/intermedio/09_metodos_numericos_funciones_especiales.qmd
+      - src/05_discrecion_computacion/intermedio/10_analisis_combinatorio_avanzado.qmd
+      - src/05_discrecion_computacion/avanzado/01_teoria_automatas.qmd
+      - src/05_discrecion_computacion/avanzado/11_funciones_teoria_numeros.qmd
     - section: 06 Estocastica Incertidumbre
       contents:
-      - src/06_estocastica_incertidumbre/01_estadistica_descriptiva.qmd
-      - src/06_estocastica_incertidumbre/02_teoria_de_probabilidad.qmd
-      - src/06_estocastica_incertidumbre/03_estadistica_inferencial.qmd
-      - src/06_estocastica_incertidumbre/04_modelos_estocasticos.qmd
-      - src/06_estocastica_incertidumbre/05_teoria_informacion.qmd
+      - src/06_estocastica_incertidumbre/intro/01_distribuciones_probabilidad.qmd
+      - src/06_estocastica_incertidumbre/intro/02_estadistica_descriptiva.qmd
+      - src/06_estocastica_incertidumbre/intro/03_regresion_y_correlacion.qmd
+      - src/06_estocastica_incertidumbre/intro/04_teoria_de_probabilidad.qmd
+      - src/06_estocastica_incertidumbre/intro/05_medidas_tendencia.qmd
+      - src/06_estocastica_incertidumbre/intermedio/01_estadistica_inferencial.qmd
+      - src/06_estocastica_incertidumbre/intermedio/02_teoremas_limite.qmd
+      - src/06_estocastica_incertidumbre/intermedio/09_distribuciones_funciones_especiales.qmd
+      - src/06_estocastica_incertidumbre/avanzado/01_modelos_estocasticos.qmd
+      - src/06_estocastica_incertidumbre/avanzado/02_teoria_informacion.qmd
 
-# Idioma de localizacion por defecto para el sitio generado (Español).
 lang: es
 
 # Parametros especificos de formato para salida HTML.
