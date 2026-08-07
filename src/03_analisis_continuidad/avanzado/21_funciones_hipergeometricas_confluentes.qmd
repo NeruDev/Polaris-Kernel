@@ -1,0 +1,101 @@
+---
+id: "33C15"
+title: "Funciones Hipergeometricas Confluentes"
+pilar: "03_analisis_continuidad"
+msc_code: "33C15"
+difficulty: "avanzado"
+tags:
+  - 33C15
+---
+
+# Funciones Hipergeometricas Confluentes
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 13 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+M\left(a,b,z\right)=\Gamma\left(b\right){\mathbf{M}}\left(a,b,z\right). \tag{13.2.4}
+$$
+
+$$
+U\left(a,b,z\right) \tag{13.2.24}
+$$
+
+$$
+e^{z}U\left(b-a,b,e^{-\pi\mathrm{i}}z\right)
+$$
+
+$$
+U\left(a,b,z\right) \tag{13.2.25}
+$$
+
+$$
+e^{z}U\left(b-a,b,e^{\pi\mathrm{i}}z\right)
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+z\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}+(b-z)\frac{\mathrm{d}w}{\mathrm{d}z}-aw=0. \tag{13.2.1}
+$$
+
+$$
+M\left(a,b,z\right)=\sum_{s=0}^{\infty}\frac{{\left(a\right)_{s}}}{{\left(b\right)_{s}}s!}z^{s}=1+\frac{a}{b}z+\frac{a(a+1)}{b(b+1)2!}z^{2}+\cdots, \tag{13.2.2}
+$$
+
+$$
+{\mathbf{M}}\left(a,b,z\right)=\sum_{s=0}^{\infty}\frac{{\left(a\right)_{s}}}{\Gamma\left(b+s\right)s!}z^{s}, \tag{13.2.3}
+$$
+
+$$
+U\left(-m,b,z\right)=(-1)^{m}{\left(b\right)_{m}}M\left(-m,b,z\right)=(-1)^{m}\sum_{s=0}^{m}\genfrac{(}{)}{0.0pt}{}{m}{s}{\left(b+s\right)_{m-s}}(-z)^{s}. \tag{13.2.7}
+$$
+
+$$
+U\left(a,a+n+1,z\right)=\frac{(-1)^{n}{\left(1-a-n\right)_{n}}}{z^{a+n}}M\left(-n,1-a-n,z\right)=z^{-a}\sum_{s=0}^{n}\genfrac{(}{)}{0.0pt}{}{n}{s}{\left(a\right)_{s}}z^{-s}. \tag{13.2.8}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\lim_{b\to-n}\frac{M\left(a,b,z\right)}{\Gamma\left(b\right)}={\mathbf{M}}\left(a,-n,z\right)=\frac{{\left(a\right)_{n+1}}}{(n+1)!}z^{n+1}M\left(a+n+1,n+2,z\right). \tag{13.2.5}
+$$
+
+$$
+U\left(a,b,z\right)\sim z^{-a}, \tag{13.2.6}
+$$
+
+$$
+{\mathbf{M}}\left(a,b,z\right)\sim\frac{e^{z}z^{a-b}}{\Gamma\left(a\right)}, \tag{13.2.23}
+$$
+
+$$
+{\mathbf{M}}\left(a,b,x\right)\sim\frac{e^{x}x^{a-b}}{\Gamma\left(a\right)}\sum_{s=0}^{\infty}\frac{{\left(1-a\right)_{s}}{\left(b-a\right)_{s}}}{s!}x^{-s}, \tag{13.7.1}
+$$
+
+$$
+{\mathbf{M}}\left(a,b,z\right)\sim\frac{e^{z}z^{a-b}}{\Gamma\left(a\right)}\sum_{s=0}^{\infty}\frac{{\left(1-a\right)_{s}}{\left(b-a\right)_{s}}}{s!}z^{-s}+\frac{e^{\pm\pi\mathrm{i}a}z^{-a}}{\Gamma\left(b-a\right)}\sum_{s=0}^{\infty}\frac{{\left(a\right)_{s}}{\left(a-b+1\right)_{s}}}{s!}(-z)^{-s}, \tag{13.7.2}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

@@ -1,0 +1,18 @@
+{
+    "title": "Teorema del Límite Central y Leyes de Grandes Números",
+    "subtitle": "Convergencia Estocástica y Comportamiento Asintótico",
+    "date": "2026-07-22",
+    "categories": [
+        "probabilidad",
+        "teoremas límite",
+        "TLC",
+        "estadística matemática"
+    ],
+    "format": {
+        "html": {
+            "toc": true,
+            "toc-depth": 3,
+            "math": true
+        }
+    }
+}

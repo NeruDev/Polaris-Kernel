@@ -1,0 +1,81 @@
+---
+# --- Metadatos Estándar de Quarto ---
+title: "Lógica de Predicados y Reglas Formales de Inferencia"
+date: "2026-07-22"
+categories: [logica, predicados, inferencia, deduccion, cuantificadores]
+
+# --- Metadatos Estructurales (Polaris Kernel) ---
+id: msc03_logica_predicados_inferencia
+pilar: "01_fundamentos_logica"
+msc_code: "03B-10"
+tags: [logica, predicados, inferencia, deduccion, cuantificadores]
+nivel: intermedio
+updated: "2026-07-22"
+status: "stable"
+---
+
+# Lógica de Predicados y Deducción Formal
+
+La lógica proposicional es insuficiente para expresar afirmaciones matemáticas que dependen de variables y propiedades cuantificadas.
+La lógica de predicados de primer orden amplía esta capacidad introduciendo predicados, variables y cuantificadores.
+Este formalismo es el lenguaje universal subyacente en el cual se redactan todos los teoremas y axiomas rigurosos de las matemáticas modernas.
+
+## Predicados y Cuantificación
+
+Un predicado $P(x)$ es una oración afirmativa que contiene una o más variables y se convierte en una proposición lógica cuando se sustituyen valores específicos.
+Para evaluar predicados sobre un dominio de discurso completo, se emplean los cuantificadores universal y existencial.
+El **cuantificador universal** ($\forall$) expresa que una propiedad se cumple para absolutamente todos los elementos del dominio.
+El **cuantificador existencial** ($\exists$) indica que existe al menos un elemento en el dominio para el cual la propiedad es verdadera.
+La negación de sentencias cuantificadas sigue estrictas reglas lógicas conocidas como las Leyes de De Morgan para cuantificadores:
+$$
+\begin{aligned}
+\neg (\forall x, P(x)) &\equiv \exists x, \neg P(x) \\
+\neg (\exists x, P(x)) &\equiv \forall x, \neg P(x)
+\end{aligned}
+$$
+Estas equivalencias son fundamentales para construir demostraciones matemáticas por reducción al absurdo.
+
+## Reglas de Inferencia Lógica
+
+Las reglas de inferencia son plantillas deductivas válidas que permiten derivar nuevas proposiciones verdaderas a partir de premisas asumidas como ciertas.
+Constituyen los pasos atómicos e irreducibles en cualquier prueba o demostración formal.
+
+### Modus Ponens (Afirmación del antecedente)
+Es la regla deductiva más directa y establece que si una implicación es verdadera y su antecedente es verdadero, entonces su consecuente debe ser verdadero.
+$$
+[P \land (P \implies Q)] \implies Q
+$$
+
+### Modus Tollens (Negación del consecuente)
+Esta regla establece que si una implicación es cierta, pero el consecuente es categóricamente falso, entonces el antecedente también debe ser falso.
+$$
+[\neg Q \land (P \implies Q)] \implies \neg P
+$$
+
+### Silogismo Hipotético (Transitividad de la implicación)
+Permite encadenar implicaciones sucesivas para formar deducciones de mayor alcance.
+$$
+[(P \implies Q) \land (Q \implies R)] \implies (P \implies R)
+$$
+
+### Silogismo Disyuntivo
+Establece que si al menos una de dos proposiciones es verdadera, y se sabe con certeza que la primera es falsa, la segunda debe ser obligatoriamente verdadera.
+$$
+[(P \lor Q) \land \neg P] \implies Q
+$$
+
+## Árbol Deductivo
+
+![Árbol de derivación mostrando la aplicación secuencial de reglas de inferencia formal](logica_predicados_inferencia.svg)
+
+## Glosario de variables
+
+| Símbolo | Nombre | Tipo |
+| --- | --- | --- |
+| $x, y$ | Variables del dominio de discurso | variable |
+| $P(x), Q(x)$ | Funciones proposicionales o predicados | función lógica |
+| $\forall$ | Cuantificador universal ("para todo") | operador lógico |
+| $\exists$ | Cuantificador existencial ("existe") | operador lógico |
+| $P, Q, R$ | Proposiciones atómicas | booleano |
+| $\implies$ | Implicación lógica | conector binario |
+| $\equiv$ | Equivalencia lógica | operador relacional |

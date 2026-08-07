@@ -24,4 +24,17 @@
 ## Rules
 - no modificar estructura sin razón.
 - mantener consistencia naming.
+- las imágenes generadas (.svg) deben tener nombres únicos y descriptivos sin números (ej. no heredar prefijo 01_).
 - delegar todo el renderizado final a Quarto y Typst.
+- **Gestión de Memoria y Contexto (Ahorro de Tokens):**
+  - Consultar e inspeccionar siempre en primer lugar `MEMORY.md` y `PROGRESS.md` para verificar el estado y avance del proyecto.
+  - En `MEMORY.md`, registrar fecha y hora (`YYYY-MM-DD HH:MM`) por cada lección o acción relevante.
+  - En `PROGRESS.md`, registrar fecha, hora y segundos (`YYYY-MM-DD HH:MM:SS`) para cada actualización del diario de trabajo.
+  - Al reanudar una tarea o cuando los archivos sean extensos, consultar únicamente la última fecha/marca de tiempo para continuar la ejecución de forma eficiente y ahorrar tokens.
+
+## Local Dataset Access (DuckDB & Parquet)
+Para consultar datasets globales de referencia (`G:\DATASETS\`):
+1. **Wikipedia:** `powershell.exe -Command "& 'G:\DATASETS\venv\Scripts\python.exe' 'G:\DATASETS\scripts\search_wiki.py' '<busqueda>' '<es/en>'"`
+2. **Rosetta Code:** `powershell.exe -Command "& 'G:\DATASETS\venv\Scripts\python.exe' 'G:\DATASETS\scripts\search_rosetta.py' '<busqueda>'"`
+3. **DLMF (Digital Library of Mathematical Functions):** `powershell.exe -Command "& 'G:\DATASETS\venv\Scripts\python.exe' 'G:\DATASETS\scripts\search_dlmf.py' '<busqueda>'"`
+4. **MSC2020 (Mathematics Subject Classification):** `powershell.exe -Command "& 'G:\DATASETS\venv\Scripts\python.exe' 'G:\DATASETS\scripts\search_msc.py' '<busqueda>'"`

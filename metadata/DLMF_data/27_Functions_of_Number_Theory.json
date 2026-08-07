@@ -1,0 +1,2805 @@
+{
+  "capitulo": 27,
+  "titulo_original": "Functions of Number Theory",
+  "archivo_metadata": "metadata/DLMF_data/27_Functions_of_Number_Theory.json",
+  "rutas_docs": {
+    "docs_original": "docs/DLMF-markdown-main/markdown/27/27.md",
+    "docs_directorio_original": "docs/DLMF-markdown-main/markdown/27/",
+    "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.md"
+  },
+  "total_categorias": 5,
+  "total_secciones": 22,
+  "categorias": [
+    {
+      "categoria": "Notation",
+      "secciones": [
+        {
+          "seccion_id": "27.1",
+          "titulo_original": "Special Notation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.1.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.1.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.1 Special Notation",
+            "prosa_teorica": "(For other notation see Notation for the Special Functions .)",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "additive number theory",
+                "multiplicative number theory",
+                "notation",
+                "number theory",
+                "partition",
+                "primes"
+              ],
+              "definiciones": [
+                "$\\left(m,n\\right)$ : greatest common divisor (gcd)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "tablas": [
+              {
+                "encabezados": [
+                  "$d,k,m,n$",
+                  "positive integers (unless otherwise indicated)."
+                ],
+                "filas": [
+                  {
+                    "$d,k,m,n$": "$\\left(m,n\\right)$",
+                    "positive integers (unless otherwise indicated).": "greatest common divisor of $m,n$ . If $\\left(m,n\\right)=1$ , $m$ and $n$ are called relatively prime, or coprime."
+                  },
+                  {
+                    "$d,k,m,n$": "$\\left(d_{1},\\dots,d_{n}\\right)$",
+                    "positive integers (unless otherwise indicated).": "greatest common divisor of $d_{1},\\dots,d_{n}$ ."
+                  },
+                  {
+                    "$d,k,m,n$": "$\\sum_{\\left(m,n\\right)=1}$",
+                    "positive integers (unless otherwise indicated).": "sum taken over $m$ , $1\\leq m\\leq n$ and $m$ relatively prime to $n$ ."
+                  },
+                  {
+                    "$d,k,m,n$": "$p,p_{1},p_{2},\\dots$",
+                    "positive integers (unless otherwise indicated).": "prime numbers (or primes): integers ( $>1$ ) with only two positive integer divisors, $1$ and the number itself."
+                  },
+                  {
+                    "$d,k,m,n$": "$\\sum_{p}$ , $\\prod_{p}$",
+                    "positive integers (unless otherwise indicated).": "sum, product extended over all primes."
+                  },
+                  {
+                    "$d,k,m,n$": "$x,y$",
+                    "positive integers (unless otherwise indicated).": "real numbers."
+                  },
+                  {
+                    "$d,k,m,n$": "$\\sum_{n\\leq x}$",
+                    "positive integers (unless otherwise indicated).": "$\\sum_{n=1}^{\\left\\lfloor x\\right\\rfloor}$ ."
+                  },
+                  {
+                    "$d,k,m,n$": "$\\zeta\\left(s\\right)$",
+                    "positive integers (unless otherwise indicated).": "Riemann zeta function; see § 25.2(i) ."
+                  }
+                ]
+              }
+            ],
+            "referencias_cruzadas": [
+              {
+                "texto": "27.9",
+                "archivo_destino": "27.9.md",
+                "titulo_referencia": "§27.9 Quadratic Characters ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "27.9",
+                "archivo_destino": "27.9.md",
+                "titulo_referencia": "§27.9 Quadratic Characters ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Multiplicative Number Theory",
+      "secciones": [
+        {
+          "seccion_id": "27.2",
+          "titulo_original": "Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.2.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.2.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.2 Functions",
+            "prosa_teorica": "Functions in this section derive their properties from the *fundamental theorem of arithmetic* , which states that every integer $n>1$ can be represented uniquely as a product of prime powers,\nwhere $p_{1},p_{2},\\dots,p_{\\nu\\left(n\\right)}$ are the distinct prime factors of $n$ , each exponent $a_{r}$ is positive, and $\\nu\\left(n\\right)$ is the number of distinct primes dividing $n$ . ( $\\nu\\left(1\\right)$ is defined to be 0.) Euclid’s Elements (Euclid ([1908](./bib/E.html#bib759 \"The Thirteen Books of Euclid’s Elements\"), Book IX, Proposition 20)) gives an elegant proof that there are infinitely many primes. Tables of primes (§ [27.21](./27.21.md \"§27.21 Tables ‣ Computation ‣ Chapter 27 Functions of Number Theory\") ) reveal great irregularity in their distribution. They tend to thin out among the large integers, but this thinning out is not completely regular. There is great interest in the function $\\pi\\left(x\\right)$ that counts the number of primes not exceeding $x$ . It can be expressed as a sum over all primes $p\\leq x$ :\nGauss and Legendre conjectured that $\\pi\\left(x\\right)$ is asymptotic to $x/\\ln x$ as $x\\to\\infty$ :\n(See Gauss ([1863](./bib/G.html#bib868 \"Werke. Band II\"), Band II, pp. 437–477) and Legendre ([1808](./bib/L.html#bib1401 \"Essai sur la Théorie des Nombres\"), p. 394).)\nThis result, first proved in Hadamard ([1896](./bib/H.html#bib1013 \"Sur la distribution des zéros de la fonction ⁢ ζ ( s ) et ses conséquences arithmétiques\")) and de la Vallée Poussin ([1896a](./bib/D.html#bib642 \"Recherches analytiques sur la théorie des nombres premiers. Première partie. La fonction ⁢ ζ ( s ) de Riemann et les nombres premiers en général, suivi d’un Appendice sur des réflexions applicables à une formule donnée par Riemann\"), [b](./bib/D.html#bib643 \"Recherches analytiques sur la théorie des nombres premiers. Deuxième partie. Les fonctions de Dirichlet et les nombres premiers de la forme linéaire + ⁢ M x N\")), is known as the *prime number theorem* . An equivalent form states that the $n$ th prime $p_{n}$ (when the primes are listed in increasing order) is asymptotic to $n\\ln n$ as $n\\to\\infty$ :\n(See also § [27.12](./27.12.md \"§27.12 Asymptotic Formulas: Primes ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory\") .) Other examples of number-theoretic functions treated in this chapter are as follows.\nthe sum of the $k$ th powers of the positive integers $m\\leq n$ that are relatively prime to $n$ .\nThis is the number of positive integers $\\leq n$ that are relatively prime to $n$ ; $\\phi\\left(n\\right)$ is *Euler’s totient* .\nIf $\\left(a,n\\right)=1$ , then the *Euler–Fermat theorem* states that\nand if $\\phi\\left(n\\right)$ is the smallest positive integer $f$ such that $a^{f}\\equiv 1\\pmod{n}$ , then $a$ is a *primitive root* mod $n$ . The $\\phi\\left(n\\right)$ numbers $a,a^{2},\\dots,a^{\\phi\\left(n\\right)}$ are relatively prime to $n$ and distinct (mod $n$ ). Such a set is a *reduced residue system* modulo $n$ .\nis the number of divisors of $n$ and is the *divisor function* . It is the special case $k=2$ of the function $d_{k}\\left(n\\right)$ that counts the number of ways of expressing $n$ as the product of $k$ factors, with the order of factors taken into account.\nis the sum of the $\\alpha$ th powers of the divisors of $n$ , where the exponent $\\alpha$ can be real or complex. Note that $\\sigma_{0}\\left(n\\right)=d\\left(n\\right)$ .\nis the number of $k$ -tuples of integers $\\leq n$ whose greatest common divisor is relatively prime to $n$ . This is *Jordan’s function* . Note that $J_{1}\\left(n\\right)=\\phi\\left(n\\right)$ .\nIn the following examples, $a_{1},\\dots,a_{\\nu\\left(n\\right)}$ are the exponents in the factorization of $n$ in ( 27.2.1 ).\nThis is the *Möbius function* .\nThis is *Liouville’s function* .\nwhere $p^{a}$ is a prime power with $a\\geq 1$ ; otherwise $\\Lambda\\left(n\\right)=0$ . This is *Mangoldt’s function* .\nTable 27.2.1 lists the first 100 prime numbers $p_{n}$ . Table 27.2.2 tabulates the Euler totient function $\\phi\\left(n\\right)$ , the divisor function $d\\left(n\\right)$ ( $=\\sigma_{0}(n)$ ), and the sum of the divisors $\\sigma(n)$ ( $=\\sigma_{1}(n)$ ), for $n=1(1)52$ .\n<a id=\"T1\"></a>\n: Table 27.2.1: Primes.\n<a id=\"T2\"></a>\n: Table 27.2.2: Functions related to division.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.2.1",
+                "latex": "n=\\prod_{r=1}^{\\nu\\left(n\\right)}p^{a_{r}}_{r}, \\tag{27.2.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.2.2",
+                "latex": "\\pi\\left(x\\right)=\\sum_{p\\leq x}1. \\tag{27.2.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "27.2.3",
+                "latex": "\\pi\\left(x\\right)\\sim\\frac{x}{\\ln x}. \\tag{27.2.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "27.2.4",
+                "latex": "p_{n}\\sim n\\ln n. \\tag{27.2.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "27.2.5",
+                "latex": "\\left\\lfloor\\frac{1}{n}\\right\\rfloor=\\begin{cases}1,&n=1,\\\\\n0,&n>1.\\end{cases} \\tag{27.2.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "27.2.6",
+                "latex": "\\phi_{k}\\left(n\\right)=\\sum_{\\left(m,n\\right)=1}m^{k}, \\tag{27.2.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "27.2.7",
+                "latex": "\\phi\\left(n\\right)=\\phi_{0}\\left(n\\right). \\tag{27.2.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "27.2.8",
+                "latex": "a^{\\phi\\left(n\\right)}\\equiv 1\\pmod{n}, \\tag{27.2.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "27.2.9",
+                "latex": "d\\left(n\\right)=\\sum_{d\\mathbin{|}n}1 \\tag{27.2.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "27.2.10",
+                "latex": "\\sigma_{\\alpha}\\left(n\\right)=\\sum_{d\\mathbin{|}n}d^{\\alpha}, \\tag{27.2.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "27.2.11",
+                "latex": "J_{k}\\left(n\\right)=\\sum_{\\left(\\left(d_{1},\\dots,d_{k}\\right),n\\right)=1}1, \\tag{27.2.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "27.2.12",
+                "latex": "\\mu\\left(n\\right)=\\begin{cases}1,&n=1,\\\\\n(-1)^{\\nu\\left(n\\right)},&a_{1}=a_{2}=\\dots=a_{\\nu\\left(n\\right)}=1,\\\\\n0,&\\mbox{otherwise}.\\end{cases} \\tag{27.2.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "27.2.13",
+                "latex": "\\lambda\\left(n\\right)=\\begin{cases}1,&n=1,\\\\\n(-1)^{a_{1}+\\dots+a_{\\nu\\left(n\\right)}},&n>1.\\end{cases} \\tag{27.2.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "27.2.14",
+                "latex": "\\Lambda\\left(n\\right)=\\ln p, \\tag{27.2.14}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "n=\\prod_{r=1}^{\\nu\\left(n\\right)}p^{a_{r}}_{r}, \\tag{27.2.1}",
+              "\\pi\\left(x\\right)=\\sum_{p\\leq x}1. \\tag{27.2.2}",
+              "\\pi\\left(x\\right)\\sim\\frac{x}{\\ln x}. \\tag{27.2.3}",
+              "p_{n}\\sim n\\ln n. \\tag{27.2.4}",
+              "\\left\\lfloor\\frac{1}{n}\\right\\rfloor=\\begin{cases}1,&n=1,\\\\\n0,&n>1.\\end{cases} \\tag{27.2.5}",
+              "\\phi_{k}\\left(n\\right)=\\sum_{\\left(m,n\\right)=1}m^{k}, \\tag{27.2.6}",
+              "\\phi\\left(n\\right)=\\phi_{0}\\left(n\\right). \\tag{27.2.7}",
+              "a^{\\phi\\left(n\\right)}\\equiv 1\\pmod{n}, \\tag{27.2.8}",
+              "d\\left(n\\right)=\\sum_{d\\mathbin{|}n}1 \\tag{27.2.9}",
+              "\\sigma_{\\alpha}\\left(n\\right)=\\sum_{d\\mathbin{|}n}d^{\\alpha}, \\tag{27.2.10}",
+              "J_{k}\\left(n\\right)=\\sum_{\\left(\\left(d_{1},\\dots,d_{k}\\right),n\\right)=1}1, \\tag{27.2.11}",
+              "\\mu\\left(n\\right)=\\begin{cases}1,&n=1,\\\\\n(-1)^{\\nu\\left(n\\right)},&a_{1}=a_{2}=\\dots=a_{\\nu\\left(n\\right)}=1,\\\\\n0,&\\mbox{otherwise}.\\end{cases} \\tag{27.2.12}",
+              "\\lambda\\left(n\\right)=\\begin{cases}1,&n=1,\\\\\n(-1)^{a_{1}+\\dots+a_{\\nu\\left(n\\right)}},&n>1.\\end{cases} \\tag{27.2.13}",
+              "\\Lambda\\left(n\\right)=\\ln p, \\tag{27.2.14}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Euler–Fermat theorem",
+                "Euler’s totient",
+                "Jordan’s function",
+                "Liouville’s function",
+                "Mangoldt’s function",
+                "Möbius function",
+                "asymptotic estimate",
+                "distribution",
+                "divisor function",
+                "fundamental theorem of arithmetic",
+                "multiplicative number theory",
+                "number theory",
+                "number-theoretic functions",
+                "prime number theorem",
+                "prime numbers",
+                "primitive roots",
+                "reduced residue system",
+                "tables"
+              ],
+              "definiciones": [
+                "$d_{k}\\left(n\\right)$ : divisor function and $\\nu\\left(n\\right)$ : number of distinct primes dividing a number"
+              ],
+              "simbolos": [
+                "$n$: positive integer and $p,p_{1},\\ldots$: prime numbers",
+                "$\\phi\\left(n\\right)$: Euler’s totient , $d_{k}\\left(n\\right)$: divisor function , $\\sigma_{\\alpha}\\left(n\\right)$: sum of powers of divisors of a number and $n$: positive integer"
+              ],
+              "referenciado_por": [
+                "§25.15(i)",
+                "§27.11",
+                "§27.12",
+                "§27.16",
+                "§27.3",
+                "§26.18",
+                "Erratum (V1.0.19) for Notation",
+                "§27.2(ii)"
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), pp. 17–38, 48, 74–80, 113). For ( 27.2.11 ) see Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\"), p. 168).",
+                "Tables 27.2.1 and 27.2.2 are from Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Tables 24.9 and 24.6)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.2 and Ch.27",
+                "Annotations for §27.2(ii) , §27.2 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "tablas": [
+              {
+                "encabezados": [
+                  "**$n$**",
+                  "**$p_{n}$**",
+                  "**$p_{n+10}$**",
+                  "**$p_{n+20}$**",
+                  "**$p_{n+30}$**",
+                  "**$p_{n+40}$**",
+                  "**$p_{n+50}$**",
+                  "**$p_{n+60}$**",
+                  "**$p_{n+70}$**",
+                  "**$p_{n+80}$**",
+                  "**$p_{n+90}$**"
+                ],
+                "filas": [
+                  {
+                    "**$n$**": "**1**",
+                    "**$p_{n}$**": "**2**",
+                    "**$p_{n+10}$**": "**31**",
+                    "**$p_{n+20}$**": "**73**",
+                    "**$p_{n+30}$**": "**127**",
+                    "**$p_{n+40}$**": "**179**",
+                    "**$p_{n+50}$**": "**233**",
+                    "**$p_{n+60}$**": "**283**",
+                    "**$p_{n+70}$**": "**353**",
+                    "**$p_{n+80}$**": "**419**",
+                    "**$p_{n+90}$**": "**467**"
+                  },
+                  {
+                    "**$n$**": "**2**",
+                    "**$p_{n}$**": "**3**",
+                    "**$p_{n+10}$**": "**37**",
+                    "**$p_{n+20}$**": "**79**",
+                    "**$p_{n+30}$**": "**131**",
+                    "**$p_{n+40}$**": "**181**",
+                    "**$p_{n+50}$**": "**239**",
+                    "**$p_{n+60}$**": "**293**",
+                    "**$p_{n+70}$**": "**359**",
+                    "**$p_{n+80}$**": "**421**",
+                    "**$p_{n+90}$**": "**479**"
+                  },
+                  {
+                    "**$n$**": "**3**",
+                    "**$p_{n}$**": "**5**",
+                    "**$p_{n+10}$**": "**41**",
+                    "**$p_{n+20}$**": "**83**",
+                    "**$p_{n+30}$**": "**137**",
+                    "**$p_{n+40}$**": "**191**",
+                    "**$p_{n+50}$**": "**241**",
+                    "**$p_{n+60}$**": "**307**",
+                    "**$p_{n+70}$**": "**367**",
+                    "**$p_{n+80}$**": "**431**",
+                    "**$p_{n+90}$**": "**487**"
+                  },
+                  {
+                    "**$n$**": "**4**",
+                    "**$p_{n}$**": "**7**",
+                    "**$p_{n+10}$**": "**43**",
+                    "**$p_{n+20}$**": "**89**",
+                    "**$p_{n+30}$**": "**139**",
+                    "**$p_{n+40}$**": "**193**",
+                    "**$p_{n+50}$**": "**251**",
+                    "**$p_{n+60}$**": "**311**",
+                    "**$p_{n+70}$**": "**373**",
+                    "**$p_{n+80}$**": "**433**",
+                    "**$p_{n+90}$**": "**491**"
+                  },
+                  {
+                    "**$n$**": "**5**",
+                    "**$p_{n}$**": "**11**",
+                    "**$p_{n+10}$**": "**47**",
+                    "**$p_{n+20}$**": "**97**",
+                    "**$p_{n+30}$**": "**149**",
+                    "**$p_{n+40}$**": "**197**",
+                    "**$p_{n+50}$**": "**257**",
+                    "**$p_{n+60}$**": "**313**",
+                    "**$p_{n+70}$**": "**379**",
+                    "**$p_{n+80}$**": "**439**",
+                    "**$p_{n+90}$**": "**499**"
+                  },
+                  {
+                    "**$n$**": "**6**",
+                    "**$p_{n}$**": "**13**",
+                    "**$p_{n+10}$**": "**53**",
+                    "**$p_{n+20}$**": "**101**",
+                    "**$p_{n+30}$**": "**151**",
+                    "**$p_{n+40}$**": "**199**",
+                    "**$p_{n+50}$**": "**263**",
+                    "**$p_{n+60}$**": "**317**",
+                    "**$p_{n+70}$**": "**383**",
+                    "**$p_{n+80}$**": "**443**",
+                    "**$p_{n+90}$**": "**503**"
+                  },
+                  {
+                    "**$n$**": "**7**",
+                    "**$p_{n}$**": "**17**",
+                    "**$p_{n+10}$**": "**59**",
+                    "**$p_{n+20}$**": "**103**",
+                    "**$p_{n+30}$**": "**157**",
+                    "**$p_{n+40}$**": "**211**",
+                    "**$p_{n+50}$**": "**269**",
+                    "**$p_{n+60}$**": "**331**",
+                    "**$p_{n+70}$**": "**389**",
+                    "**$p_{n+80}$**": "**449**",
+                    "**$p_{n+90}$**": "**509**"
+                  },
+                  {
+                    "**$n$**": "**8**",
+                    "**$p_{n}$**": "**19**",
+                    "**$p_{n+10}$**": "**61**",
+                    "**$p_{n+20}$**": "**107**",
+                    "**$p_{n+30}$**": "**163**",
+                    "**$p_{n+40}$**": "**223**",
+                    "**$p_{n+50}$**": "**271**",
+                    "**$p_{n+60}$**": "**337**",
+                    "**$p_{n+70}$**": "**397**",
+                    "**$p_{n+80}$**": "**457**",
+                    "**$p_{n+90}$**": "**521**"
+                  },
+                  {
+                    "**$n$**": "**9**",
+                    "**$p_{n}$**": "**23**",
+                    "**$p_{n+10}$**": "**67**",
+                    "**$p_{n+20}$**": "**109**",
+                    "**$p_{n+30}$**": "**167**",
+                    "**$p_{n+40}$**": "**227**",
+                    "**$p_{n+50}$**": "**277**",
+                    "**$p_{n+60}$**": "**347**",
+                    "**$p_{n+70}$**": "**401**",
+                    "**$p_{n+80}$**": "**461**",
+                    "**$p_{n+90}$**": "**523**"
+                  },
+                  {
+                    "**$n$**": "**10**",
+                    "**$p_{n}$**": "**29**",
+                    "**$p_{n+10}$**": "**71**",
+                    "**$p_{n+20}$**": "**113**",
+                    "**$p_{n+30}$**": "**173**",
+                    "**$p_{n+40}$**": "**229**",
+                    "**$p_{n+50}$**": "**281**",
+                    "**$p_{n+60}$**": "**349**",
+                    "**$p_{n+70}$**": "**409**",
+                    "**$p_{n+80}$**": "**463**",
+                    "**$p_{n+90}$**": "**541**"
+                  }
+                ]
+              },
+              {
+                "encabezados": [
+                  "**$n$**",
+                  "**$\\phi\\left(n\\right)$**",
+                  "**$d\\left(n\\right)$**",
+                  "**$\\sigma\\left(n\\right)$**",
+                  "**$n$**",
+                  "**$\\phi\\left(n\\right)$**",
+                  "**$d\\left(n\\right)$**",
+                  "**$\\sigma\\left(n\\right)$**",
+                  "**$n$**",
+                  "**$\\phi\\left(n\\right)$**",
+                  "**$d\\left(n\\right)$**",
+                  "**$\\sigma\\left(n\\right)$**",
+                  "**$n$**",
+                  "**$\\phi\\left(n\\right)$**",
+                  "**$d\\left(n\\right)$**",
+                  "**$\\sigma\\left(n\\right)$**"
+                ],
+                "filas": [
+                  {
+                    "**$n$**": "**40**",
+                    "**$\\phi\\left(n\\right)$**": "**16**",
+                    "**$d\\left(n\\right)$**": "**8**",
+                    "**$\\sigma\\left(n\\right)$**": "**90**"
+                  },
+                  {
+                    "**$n$**": "**41**",
+                    "**$\\phi\\left(n\\right)$**": "**40**",
+                    "**$d\\left(n\\right)$**": "**2**",
+                    "**$\\sigma\\left(n\\right)$**": "**42**"
+                  },
+                  {
+                    "**$n$**": "**42**",
+                    "**$\\phi\\left(n\\right)$**": "**12**",
+                    "**$d\\left(n\\right)$**": "**8**",
+                    "**$\\sigma\\left(n\\right)$**": "**96**"
+                  },
+                  {
+                    "**$n$**": "**43**",
+                    "**$\\phi\\left(n\\right)$**": "**42**",
+                    "**$d\\left(n\\right)$**": "**2**",
+                    "**$\\sigma\\left(n\\right)$**": "**44**"
+                  },
+                  {
+                    "**$n$**": "**44**",
+                    "**$\\phi\\left(n\\right)$**": "**20**",
+                    "**$d\\left(n\\right)$**": "**6**",
+                    "**$\\sigma\\left(n\\right)$**": "**84**"
+                  },
+                  {
+                    "**$n$**": "**45**",
+                    "**$\\phi\\left(n\\right)$**": "**24**",
+                    "**$d\\left(n\\right)$**": "**6**",
+                    "**$\\sigma\\left(n\\right)$**": "**78**"
+                  },
+                  {
+                    "**$n$**": "**46**",
+                    "**$\\phi\\left(n\\right)$**": "**22**",
+                    "**$d\\left(n\\right)$**": "**4**",
+                    "**$\\sigma\\left(n\\right)$**": "**72**"
+                  },
+                  {
+                    "**$n$**": "**47**",
+                    "**$\\phi\\left(n\\right)$**": "**46**",
+                    "**$d\\left(n\\right)$**": "**2**",
+                    "**$\\sigma\\left(n\\right)$**": "**48**"
+                  },
+                  {
+                    "**$n$**": "**48**",
+                    "**$\\phi\\left(n\\right)$**": "**16**",
+                    "**$d\\left(n\\right)$**": "**10**",
+                    "**$\\sigma\\left(n\\right)$**": "**124**"
+                  },
+                  {
+                    "**$n$**": "**49**",
+                    "**$\\phi\\left(n\\right)$**": "**42**",
+                    "**$d\\left(n\\right)$**": "**3**",
+                    "**$\\sigma\\left(n\\right)$**": "**57**"
+                  },
+                  {
+                    "**$n$**": "**50**",
+                    "**$\\phi\\left(n\\right)$**": "**20**",
+                    "**$d\\left(n\\right)$**": "**6**",
+                    "**$\\sigma\\left(n\\right)$**": "**93**"
+                  },
+                  {
+                    "**$n$**": "**51**",
+                    "**$\\phi\\left(n\\right)$**": "**32**",
+                    "**$d\\left(n\\right)$**": "**4**",
+                    "**$\\sigma\\left(n\\right)$**": "**72**"
+                  },
+                  {
+                    "**$n$**": "**52**",
+                    "**$\\phi\\left(n\\right)$**": "**24**",
+                    "**$d\\left(n\\right)$**": "**6**",
+                    "**$\\sigma\\left(n\\right)$**": "**98**"
+                  }
+                ]
+              }
+            ],
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1908",
+                "archivo_destino": "bib/E.html#bib759",
+                "titulo_referencia": "The Thirteen Books of Euclid’s Elements"
+              },
+              {
+                "texto": "27.21",
+                "archivo_destino": "27.21.md",
+                "titulo_referencia": "§27.21 Tables ‣ Computation ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "1863",
+                "archivo_destino": "bib/G.html#bib868",
+                "titulo_referencia": "Werke. Band II"
+              },
+              {
+                "texto": "1808",
+                "archivo_destino": "bib/L.html#bib1401",
+                "titulo_referencia": "Essai sur la Théorie des Nombres"
+              },
+              {
+                "texto": "1896",
+                "archivo_destino": "bib/H.html#bib1013",
+                "titulo_referencia": "Sur la distribution des zéros de la fonction ⁢ ζ ( s ) et ses conséquences arithmétiques"
+              },
+              {
+                "texto": "1896a",
+                "archivo_destino": "bib/D.html#bib642",
+                "titulo_referencia": "Recherches analytiques sur la théorie des nombres premiers. Première partie. La fonction ⁢ ζ ( s ) de Riemann et les nombres premiers en général, suivi d’un Appendice sur des réflexions applicables à une formule donnée par Riemann"
+              },
+              {
+                "texto": "b",
+                "archivo_destino": "bib/D.html#bib643",
+                "titulo_referencia": "Recherches analytiques sur la théorie des nombres premiers. Deuxième partie. Les fonctions de Dirichlet et les nombres premiers de la forme linéaire + ⁢ M x N"
+              },
+              {
+                "texto": "27.12",
+                "archivo_destino": "27.12.md",
+                "titulo_referencia": "§27.12 Asymptotic Formulas: Primes ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.3",
+          "titulo_original": "Multiplicative Properties",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.3.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.3.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.3 Multiplicative Properties",
+            "prosa_teorica": "Except for $\\nu\\left(n\\right)$ , $\\Lambda\\left(n\\right)$ , $p_{n}$ , and $\\pi\\left(x\\right)$ , the functions in § [27.2](./27.2.md \"§27.2 Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory\") are *multiplicative* , which means $f(1)=1$ and\nIf $f$ is multiplicative, then the values $f(n)$ for $n>1$ are determined by the values at the prime powers. Specifically, if $n$ is factored as in ( 27.2.1 ), then\nIn particular,\nRelated multiplicative properties are\nA function $f$ is *completely multiplicative* if $f(1)=1$ and\nExamples are $\\left\\lfloor 1/n\\right\\rfloor$ and $\\lambda\\left(n\\right)$ , and the Dirichlet characters, defined in § [27.8](./27.8.md \"§27.8 Dirichlet Characters ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory\") .\nIf $f$ is completely multiplicative, then ( 27.3.2 ) becomes",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.3.1",
+                "latex": "f(mn)=f(m)f(n), \\tag{27.3.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.3.2",
+                "latex": "f(n)=\\prod_{r=1}^{\\nu\\left(n\\right)}f(p^{a_{r}}_{r}). \\tag{27.3.2}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "27.3.3",
+                "latex": "\\displaystyle\\phi\\left(n\\right) \\displaystyle=n\\prod_{p\\mathbin{|}n}(1-p^{-1}), \\tag{27.3.3}"
+              },
+              {
+                "id": "",
+                "tag": "27.3.4",
+                "latex": "\\displaystyle J_{k}\\left(n\\right) \\displaystyle=n^{k}\\prod_{p\\mathbin{|}n}(1-p^{-k}), \\tag{27.3.4}"
+              },
+              {
+                "id": "",
+                "tag": "27.3.5",
+                "latex": "\\displaystyle d\\left(n\\right) \\displaystyle=\\prod_{r=1}^{\\nu\\left(n\\right)}(1+a_{r}), \\tag{27.3.5}"
+              },
+              {
+                "id": "",
+                "tag": "27.3.6",
+                "latex": "\\displaystyle\\sigma_{\\alpha}\\left(n\\right) \\displaystyle=\\prod_{r=1}^{\\nu\\left(n\\right)}\\frac{p^{\\alpha(1+a_{r})}_{r}-1}{p^{\\alpha}_{r}-1}, \\tag{27.3.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "27.3.7",
+                "latex": "\\sigma_{\\alpha}\\left(m\\right)\\sigma_{\\alpha}\\left(n\\right)=\\sum_{d\\mathbin{|}\\left(m,n\\right)}d^{\\alpha}\\sigma_{\\alpha}\\left(\\frac{mn}{d^{2}}\\right), \\tag{27.3.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "27.3.8",
+                "latex": "\\phi\\left(m\\right)\\phi\\left(n\\right)=\\phi\\left(mn\\right)\\phi\\left(\\left(m,n\\right)\\right)/\\left(m,n\\right). \\tag{27.3.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "27.3.9",
+                "latex": "f(mn)=f(m)f(n), \\tag{27.3.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "27.3.10",
+                "latex": "f(n)=\\prod_{r=1}^{\\nu\\left(n\\right)}\\left(f(p_{r})\\right)^{a_{r}}. \\tag{27.3.10}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "f(mn)=f(m)f(n), \\tag{27.3.1}",
+              "f(n)=\\prod_{r=1}^{\\nu\\left(n\\right)}f(p^{a_{r}}_{r}). \\tag{27.3.2}",
+              "\\displaystyle\\phi\\left(n\\right) \\displaystyle=n\\prod_{p\\mathbin{|}n}(1-p^{-1}), \\tag{27.3.3}",
+              "\\displaystyle J_{k}\\left(n\\right) \\displaystyle=n^{k}\\prod_{p\\mathbin{|}n}(1-p^{-k}), \\tag{27.3.4}",
+              "\\displaystyle d\\left(n\\right) \\displaystyle=\\prod_{r=1}^{\\nu\\left(n\\right)}(1+a_{r}), \\tag{27.3.5}",
+              "\\displaystyle\\sigma_{\\alpha}\\left(n\\right) \\displaystyle=\\prod_{r=1}^{\\nu\\left(n\\right)}\\frac{p^{\\alpha(1+a_{r})}_{r}-1}{p^{\\alpha}_{r}-1}, \\tag{27.3.6}",
+              "\\sigma_{\\alpha}\\left(m\\right)\\sigma_{\\alpha}\\left(n\\right)=\\sum_{d\\mathbin{|}\\left(m,n\\right)}d^{\\alpha}\\sigma_{\\alpha}\\left(\\frac{mn}{d^{2}}\\right), \\tag{27.3.7}",
+              "\\phi\\left(m\\right)\\phi\\left(n\\right)=\\phi\\left(mn\\right)\\phi\\left(\\left(m,n\\right)\\right)/\\left(m,n\\right). \\tag{27.3.8}",
+              "f(mn)=f(m)f(n), \\tag{27.3.9}",
+              "f(n)=\\prod_{r=1}^{\\nu\\left(n\\right)}\\left(f(p_{r})\\right)^{a_{r}}. \\tag{27.3.10}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "completely multiplicative",
+                "completely multiplicative functions",
+                "multiplicative",
+                "multiplicative functions",
+                "multiplicative number theory",
+                "number-theoretic functions"
+              ],
+              "simbolos": [
+                "$\\phi\\left(n\\right)$: Euler’s totient , $n$: positive integer and $p,p_{1},\\ldots$: prime numbers",
+                "$J_{k}\\left(n\\right)$: Jordan’s function , $k$: positive integer , $n$: positive integer and $p,p_{1},\\ldots$: prime numbers",
+                "$d_{k}\\left(n\\right)$: divisor function , $\\nu\\left(n\\right)$: number of distinct primes dividing a number , $n$: positive integer and $a_{r}$: positive exponent",
+                "$\\sigma_{\\alpha}\\left(n\\right)$: sum of powers of divisors of a number , $\\nu\\left(n\\right)$: number of distinct primes dividing a number , $n$: positive integer , $p,p_{1},\\ldots$: prime numbers and $a_{r}$: positive exponent"
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), pp. 27–50)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "24.3.2 I.C",
+                "24.3.3 I.C"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.3 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "27.2",
+                "archivo_destino": "27.2.md",
+                "titulo_referencia": "§27.2 Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "27.8",
+                "archivo_destino": "27.8.md",
+                "titulo_referencia": "§27.8 Dirichlet Characters ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.4",
+          "titulo_original": "Euler Products and Dirichlet Series",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.4.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.4.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.4 Euler Products and Dirichlet Series",
+            "prosa_teorica": "The fundamental theorem of arithmetic is linked to analysis through the concept of the Euler product. Every multiplicative $f$ satisfies the identity\nif the series on the left is absolutely convergent. In this case the infinite product on the right (extended over all primes $p$ ) is also absolutely convergent and is called the *Euler product* of the series. If $f(n)$ is completely multiplicative, then each factor in the product is a geometric series and the Euler product becomes\nEuler products are used to find series that generate many functions of multiplicative number theory. The completely multiplicative function $f(n)=n^{-s}$ gives the Euler product representation of the *Riemann zeta function* $\\zeta\\left(s\\right)$ (§ 25.2(i) ):\nThe Riemann zeta function is the prototype of series of the form\ncalled *Dirichlet series* with coefficients $f(n)$ . The function $F(s)$ is a *generating function* , or more precisely, a *Dirichlet generating function* , for the coefficients. The following examples have generating functions related to the zeta function:\nIn ( 27.4.12 ) and ( 27.4.13 ) $\\zeta'\\left(s\\right)$ is the derivative of $\\zeta\\left(s\\right)$ .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.4.1",
+                "latex": "\\sum_{n=1}^{\\infty}f(n)=\\prod_{p}\\left(1+\\sum_{r=1}^{\\infty}f(p^{r})\\right), \\tag{27.4.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.4.2",
+                "latex": "\\sum_{n=1}^{\\infty}f(n)=\\prod_{p}(1-f(p))^{-1}. \\tag{27.4.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "27.4.3",
+                "latex": "\\zeta\\left(s\\right)=\\sum_{n=1}^{\\infty}n^{-s}=\\prod_{p}(1-p^{-s})^{-1}, \\tag{27.4.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "27.4.4",
+                "latex": "F(s)=\\sum_{n=1}^{\\infty}f(n)n^{-s}, \\tag{27.4.4}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "27.4.5",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}\\mu\\left(n\\right)n^{-s} \\displaystyle=\\frac{1}{\\zeta\\left(s\\right)}, \\tag{27.4.5}"
+              },
+              {
+                "id": "",
+                "tag": "27.4.6",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}\\phi\\left(n\\right)n^{-s} \\displaystyle=\\frac{\\zeta\\left(s-1\\right)}{\\zeta\\left(s\\right)}, \\tag{27.4.6}"
+              },
+              {
+                "id": "",
+                "tag": "27.4.7",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}\\lambda\\left(n\\right)n^{-s} \\displaystyle=\\frac{\\zeta\\left(2s\\right)}{\\zeta\\left(s\\right)}, \\tag{27.4.7}"
+              },
+              {
+                "id": "",
+                "tag": "27.4.8",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}|\\mu\\left(n\\right)|n^{-s} \\displaystyle=\\frac{\\zeta\\left(s\\right)}{\\zeta\\left(2s\\right)}, \\tag{27.4.8}"
+              },
+              {
+                "id": "",
+                "tag": "27.4.9",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}2^{\\nu\\left(n\\right)}n^{-s} \\displaystyle=\\frac{(\\zeta\\left(s\\right))^{2}}{\\zeta\\left(2s\\right)}, \\tag{27.4.9}"
+              },
+              {
+                "id": "",
+                "tag": "27.4.10",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}d_{k}\\left(n\\right)n^{-s} \\displaystyle=(\\zeta\\left(s\\right))^{k}, \\tag{27.4.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "27.4.11",
+                "latex": "\\sum_{n=1}^{\\infty}\\sigma_{\\alpha}\\left(n\\right)n^{-s}=\\zeta\\left(s\\right)\\zeta\\left(s-\\alpha\\right), \\tag{27.4.11}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "27.4.12",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}\\Lambda\\left(n\\right)n^{-s} \\displaystyle=-\\frac{\\zeta'\\left(s\\right)}{\\zeta\\left(s\\right)}, \\tag{27.4.12}"
+              },
+              {
+                "id": "",
+                "tag": "27.4.13",
+                "latex": "\\displaystyle\\sum_{n=2}^{\\infty}(\\ln n)n^{-s} \\displaystyle=-\\zeta'\\left(s\\right), \\tag{27.4.13}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\sum_{n=1}^{\\infty}f(n)=\\prod_{p}\\left(1+\\sum_{r=1}^{\\infty}f(p^{r})\\right), \\tag{27.4.1}",
+              "\\sum_{n=1}^{\\infty}f(n)=\\prod_{p}(1-f(p))^{-1}. \\tag{27.4.2}",
+              "\\zeta\\left(s\\right)=\\sum_{n=1}^{\\infty}n^{-s}=\\prod_{p}(1-p^{-s})^{-1}, \\tag{27.4.3}",
+              "F(s)=\\sum_{n=1}^{\\infty}f(n)n^{-s}, \\tag{27.4.4}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}\\mu\\left(n\\right)n^{-s} \\displaystyle=\\frac{1}{\\zeta\\left(s\\right)}, \\tag{27.4.5}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}\\phi\\left(n\\right)n^{-s} \\displaystyle=\\frac{\\zeta\\left(s-1\\right)}{\\zeta\\left(s\\right)}, \\tag{27.4.6}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}\\lambda\\left(n\\right)n^{-s} \\displaystyle=\\frac{\\zeta\\left(2s\\right)}{\\zeta\\left(s\\right)}, \\tag{27.4.7}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}|\\mu\\left(n\\right)|n^{-s} \\displaystyle=\\frac{\\zeta\\left(s\\right)}{\\zeta\\left(2s\\right)}, \\tag{27.4.8}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}2^{\\nu\\left(n\\right)}n^{-s} \\displaystyle=\\frac{(\\zeta\\left(s\\right))^{2}}{\\zeta\\left(2s\\right)}, \\tag{27.4.9}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}d_{k}\\left(n\\right)n^{-s} \\displaystyle=(\\zeta\\left(s\\right))^{k}, \\tag{27.4.10}",
+              "\\sum_{n=1}^{\\infty}\\sigma_{\\alpha}\\left(n\\right)n^{-s}=\\zeta\\left(s\\right)\\zeta\\left(s-\\alpha\\right), \\tag{27.4.11}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}\\Lambda\\left(n\\right)n^{-s} \\displaystyle=-\\frac{\\zeta'\\left(s\\right)}{\\zeta\\left(s\\right)}, \\tag{27.4.12}",
+              "\\displaystyle\\sum_{n=2}^{\\infty}(\\ln n)n^{-s} \\displaystyle=-\\zeta'\\left(s\\right), \\tag{27.4.13}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Dirichlet series",
+                "Euler product",
+                "Euler-product representation",
+                "Riemann zeta function",
+                "generating function",
+                "multiplicative number theory",
+                "number theory"
+              ],
+              "simbolos": [
+                "$\\mu\\left(n\\right)$: Möbius function , $\\zeta\\left(s\\right)$: Riemann zeta function , $\\Re$: real part and $n$: positive integer",
+                "$\\phi\\left(n\\right)$: Euler’s totient , $\\zeta\\left(s\\right)$: Riemann zeta function , $\\Re$: real part and $n$: positive integer",
+                "$\\lambda\\left(n\\right)$: Liouville’s function , $\\zeta\\left(s\\right)$: Riemann zeta function , $\\Re$: real part and $n$: positive integer",
+                "$\\zeta\\left(s\\right)$: Riemann zeta function , $\\nu\\left(n\\right)$: number of distinct primes dividing a number , $\\Re$: real part and $n$: positive integer",
+                "$\\zeta\\left(s\\right)$: Riemann zeta function , $d_{k}\\left(n\\right)$: divisor function , $\\Re$: real part , $k$: positive integer and $n$: positive integer",
+                "$\\Lambda\\left(n\\right)$: Mangoldt’s function , $\\zeta\\left(s\\right)$: Riemann zeta function , $\\Re$: real part and $n$: positive integer",
+                "$\\zeta\\left(s\\right)$: Riemann zeta function , $\\lnz$: principal branch of logarithm function , $\\Re$: real part and $n$: positive integer"
+              ],
+              "referenciado_por": [
+                "§25.2(ii)",
+                "§27.4",
+                "§27.4  **Change of Notation (effective with 1.0.10):**  The notation for logarithm has been changed to $\\ln$ from $\\mathrm{log}$ ."
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), Chapter 11). For ( 27.4.10 ) see Titchmarsh ([1986b](./bib/T.html#bib2255 \"The Theory of the Riemann Zeta-Function\"), p. 4)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "24.3.1 I.B",
+                "24.3.2 I.B"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.4 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1986b",
+                "archivo_destino": "bib/T.html#bib2255",
+                "titulo_referencia": "The Theory of the Riemann Zeta-Function"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.5",
+          "titulo_original": "Inversion Formulas",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.5.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.5.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.5 Inversion Formulas",
+            "prosa_teorica": "If a Dirichlet series $F(s)$ generates $f(n)$ , and $G(s)$ generates $g(n)$ , then the product $F(s)G(s)$ generates\ncalled the *Dirichlet product* (or *convolution* ) of $f$ and $g$ . The set of all number-theoretic functions $f$ with $f(1)\\neq 0$ forms an abelian group under Dirichlet multiplication, with the function $\\left\\lfloor 1/n\\right\\rfloor$ in ( 27.2.5 ) as identity element; see Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), p. 129). The multiplicative functions are a subgroup of this group. Generating functions yield many relations connecting number-theoretic functions. For example, the equation $\\zeta\\left(s\\right)\\cdot(\\frac{1}{\\zeta\\left(s\\right)})=1$ is equivalent to the identity\nwhich, in turn, is the basis for the *Möbius inversion formula* relating sums over divisors:\nSpecial cases of Möbius inversion pairs are:\nOther types of Möbius inversion formulas include:\nFor a general theory of Möbius inversion with applications to combinatorial theory see Rota ([1964](./bib/R.html#bib1975 \"On the foundations of combinatorial theory. I. Theory of Möbius functions\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.5.1",
+                "latex": "h(n)=\\sum_{d\\mathbin{|}n}f(d)g\\left(\\frac{n}{d}\\right), \\tag{27.5.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.5.2",
+                "latex": "\\sum_{d\\mathbin{|}n}\\mu\\left(d\\right)=\\left\\lfloor\\frac{1}{n}\\right\\rfloor, \\tag{27.5.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "27.5.3",
+                "latex": "g(n)=\\sum_{d\\mathbin{|}n}f(d)\\Longleftrightarrow f(n)=\\sum_{d\\mathbin{|}n}g(d)\\mu\\left(\\frac{n}{d}\\right). \\tag{27.5.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "27.5.4",
+                "latex": "n=\\sum_{d\\mathbin{|}n}\\phi\\left(d\\right)\\Longleftrightarrow\\phi\\left(n\\right)=\\sum_{d\\mathbin{|}n}d\\mu\\left(\\frac{n}{d}\\right), \\tag{27.5.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "27.5.5",
+                "latex": "\\ln n=\\sum_{d\\mathbin{|}n}\\Lambda\\left(d\\right)\\Longleftrightarrow\\Lambda\\left(n\\right)=\\sum_{d\\mathbin{|}n}(\\ln d)\\mu\\left(\\frac{n}{d}\\right). \\tag{27.5.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "27.5.6",
+                "latex": "G(x)=\\sum_{n\\leq x}F\\left(\\frac{x}{n}\\right)\\Longleftrightarrow F(x)=\\sum_{n\\leq x}\\mu\\left(n\\right)G\\left(\\frac{x}{n}\\right), \\tag{27.5.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "27.5.7",
+                "latex": "G(x)=\\sum_{m=1}^{\\infty}\\frac{F(mx)}{m^{s}}\\Longleftrightarrow F(x)=\\sum_{m=1}^{\\infty}\\mu\\left(m\\right)\\frac{G(mx)}{m^{s}}, \\tag{27.5.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "27.5.8",
+                "latex": "g(n)=\\prod_{d\\mathbin{|}n}f(d)\\Longleftrightarrow f(n)=\\prod_{d\\mathbin{|}n}\\left(g\\left(\\frac{n}{d}\\right)\\right)^{\\mu\\left(d\\right)}. \\tag{27.5.8}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "h(n)=\\sum_{d\\mathbin{|}n}f(d)g\\left(\\frac{n}{d}\\right), \\tag{27.5.1}",
+              "\\sum_{d\\mathbin{|}n}\\mu\\left(d\\right)=\\left\\lfloor\\frac{1}{n}\\right\\rfloor, \\tag{27.5.2}",
+              "g(n)=\\sum_{d\\mathbin{|}n}f(d)\\Longleftrightarrow f(n)=\\sum_{d\\mathbin{|}n}g(d)\\mu\\left(\\frac{n}{d}\\right). \\tag{27.5.3}",
+              "n=\\sum_{d\\mathbin{|}n}\\phi\\left(d\\right)\\Longleftrightarrow\\phi\\left(n\\right)=\\sum_{d\\mathbin{|}n}d\\mu\\left(\\frac{n}{d}\\right), \\tag{27.5.4}",
+              "\\ln n=\\sum_{d\\mathbin{|}n}\\Lambda\\left(d\\right)\\Longleftrightarrow\\Lambda\\left(n\\right)=\\sum_{d\\mathbin{|}n}(\\ln d)\\mu\\left(\\frac{n}{d}\\right). \\tag{27.5.5}",
+              "G(x)=\\sum_{n\\leq x}F\\left(\\frac{x}{n}\\right)\\Longleftrightarrow F(x)=\\sum_{n\\leq x}\\mu\\left(n\\right)G\\left(\\frac{x}{n}\\right), \\tag{27.5.6}",
+              "G(x)=\\sum_{m=1}^{\\infty}\\frac{F(mx)}{m^{s}}\\Longleftrightarrow F(x)=\\sum_{m=1}^{\\infty}\\mu\\left(m\\right)\\frac{G(mx)}{m^{s}}, \\tag{27.5.7}",
+              "g(n)=\\prod_{d\\mathbin{|}n}f(d)\\Longleftrightarrow f(n)=\\prod_{d\\mathbin{|}n}\\left(g\\left(\\frac{n}{d}\\right)\\right)^{\\mu\\left(d\\right)}. \\tag{27.5.8}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Dirichlet product (or convolution)",
+                "Möbius inversion",
+                "Möbius inversion formulas",
+                "inversion formulas",
+                "number theory",
+                "number-theoretic functions",
+                "pairs"
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), Chapter 2 and p. 228). For ( 27.5.7 ) use ( 27.5.2 ) and formal substitution."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/R.html#bib1975",
+                "titulo_referencia": "On the foundations of combinatorial theory. I. Theory of Möbius functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.6",
+          "titulo_original": "Divisor Sums",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.6.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.6.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.6 Divisor Sums",
+            "prosa_teorica": "Sums of number-theoretic functions extended over divisors are of special interest. For example,\nIf $f$ is multiplicative, then\nGenerating functions, Euler products, and Möbius inversion are used to evaluate many sums extended over divisors. Examples include:",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.6.1",
+                "latex": "\\sum_{d\\mathbin{|}n}\\lambda\\left(d\\right)=\\begin{cases}1,&n\\mbox{ is a square},\\\\\n0,&\\mbox{otherwise}.\\end{cases} \\tag{27.6.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.6.2",
+                "latex": "\\sum_{d\\mathbin{|}n}\\mu\\left(d\\right)f(d)=\\prod_{p\\mathbin{|}n}(1-f(p)), \\tag{27.6.2}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "27.6.3",
+                "latex": "\\displaystyle\\sum_{d\\mathbin{|}n}|\\mu\\left(d\\right)| \\displaystyle=2^{\\nu\\left(n\\right)}, \\tag{27.6.3}"
+              },
+              {
+                "id": "",
+                "tag": "27.6.4",
+                "latex": "\\displaystyle\\sum_{d^{2}\\mathbin{|}n}\\mu\\left(d\\right) \\displaystyle=|\\mu\\left(n\\right)|, \\tag{27.6.4}"
+              },
+              {
+                "id": "",
+                "tag": "27.6.5",
+                "latex": "\\displaystyle\\sum_{d\\mathbin{|}n}\\frac{|\\mu\\left(d\\right)|}{\\phi\\left(d\\right)} \\displaystyle=\\frac{n}{\\phi\\left(n\\right)}, \\tag{27.6.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "27.6.6",
+                "latex": "\\sum_{d\\mathbin{|}n}\\phi_{k}\\left(d\\right)\\left(\\frac{n}{d}\\right)^{k}=1^{k}+2^{k}+\\dots+n^{k}, \\tag{27.6.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "27.6.7",
+                "latex": "\\sum_{d\\mathbin{|}n}\\mu\\left(d\\right)\\left(\\frac{n}{d}\\right)^{k}=J_{k}\\left(n\\right), \\tag{27.6.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "27.6.8",
+                "latex": "\\sum_{d\\mathbin{|}n}J_{k}\\left(d\\right)=n^{k}. \\tag{27.6.8}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\sum_{d\\mathbin{|}n}\\lambda\\left(d\\right)=\\begin{cases}1,&n\\mbox{ is a square},\\\\\n0,&\\mbox{otherwise}.\\end{cases} \\tag{27.6.1}",
+              "\\sum_{d\\mathbin{|}n}\\mu\\left(d\\right)f(d)=\\prod_{p\\mathbin{|}n}(1-f(p)), \\tag{27.6.2}",
+              "\\displaystyle\\sum_{d\\mathbin{|}n}|\\mu\\left(d\\right)| \\displaystyle=2^{\\nu\\left(n\\right)}, \\tag{27.6.3}",
+              "\\displaystyle\\sum_{d^{2}\\mathbin{|}n}\\mu\\left(d\\right) \\displaystyle=|\\mu\\left(n\\right)|, \\tag{27.6.4}",
+              "\\displaystyle\\sum_{d\\mathbin{|}n}\\frac{|\\mu\\left(d\\right)|}{\\phi\\left(d\\right)} \\displaystyle=\\frac{n}{\\phi\\left(n\\right)}, \\tag{27.6.5}",
+              "\\sum_{d\\mathbin{|}n}\\phi_{k}\\left(d\\right)\\left(\\frac{n}{d}\\right)^{k}=1^{k}+2^{k}+\\dots+n^{k}, \\tag{27.6.6}",
+              "\\sum_{d\\mathbin{|}n}\\mu\\left(d\\right)\\left(\\frac{n}{d}\\right)^{k}=J_{k}\\left(n\\right), \\tag{27.6.7}",
+              "\\sum_{d\\mathbin{|}n}J_{k}\\left(d\\right)=n^{k}. \\tag{27.6.8}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "divisor sums",
+                "number-theoretic functions"
+              ],
+              "simbolos": [
+                "$\\mu\\left(n\\right)$: Möbius function , $\\nu\\left(n\\right)$: number of distinct primes dividing a number , $d$: positive integer and $n$: positive integer",
+                "$\\mu\\left(n\\right)$: Möbius function , $d$: positive integer and $n$: positive integer",
+                "$\\phi\\left(n\\right)$: Euler’s totient , $\\mu\\left(n\\right)$: Möbius function , $d$: positive integer and $n$: positive integer"
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), Chapter 2)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.6 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.7",
+          "titulo_original": "Lambert Series as Generating Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.7.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.7.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.7 Lambert Series as Generating Functions",
+            "prosa_teorica": "*Lambert series* have the form\nIf $|x|<1$ , then the quotient $x^{n}/(1-x^{n})$ is the sum of a geometric series, and when the series ( 27.7.1 ) converges absolutely it can be rearranged as a power series:\nAgain with $|x|<1$ , special cases of ( 27.7.2 ) include:",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.7.1",
+                "latex": "\\sum_{n=1}^{\\infty}f(n)\\frac{x^{n}}{1-x^{n}}. \\tag{27.7.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.7.2",
+                "latex": "\\sum_{n=1}^{\\infty}f(n)\\frac{x^{n}}{1-x^{n}}=\\sum_{n=1}^{\\infty}\\sum_{d\\mathbin{|}n}f(d)x^{n}. \\tag{27.7.2}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "27.7.3",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}\\mu\\left(n\\right)\\frac{x^{n}}{1-x^{n}} \\displaystyle=x, \\tag{27.7.3}"
+              },
+              {
+                "id": "",
+                "tag": "27.7.4",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}\\phi\\left(n\\right)\\frac{x^{n}}{1-x^{n}} \\displaystyle=\\frac{x}{(1-x)^{2}}, \\tag{27.7.4}"
+              },
+              {
+                "id": "",
+                "tag": "27.7.5",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}n^{\\alpha}\\frac{x^{n}}{1-x^{n}} \\displaystyle=\\sum_{n=1}^{\\infty}\\sigma_{\\alpha}\\left(n\\right)x^{n}, \\tag{27.7.5}"
+              },
+              {
+                "id": "",
+                "tag": "27.7.6",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}\\lambda\\left(n\\right)\\frac{x^{n}}{1-x^{n}} \\displaystyle=\\sum_{n=1}^{\\infty}x^{n^{2}}. \\tag{27.7.6}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\sum_{n=1}^{\\infty}f(n)\\frac{x^{n}}{1-x^{n}}. \\tag{27.7.1}",
+              "\\sum_{n=1}^{\\infty}f(n)\\frac{x^{n}}{1-x^{n}}=\\sum_{n=1}^{\\infty}\\sum_{d\\mathbin{|}n}f(d)x^{n}. \\tag{27.7.2}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}\\mu\\left(n\\right)\\frac{x^{n}}{1-x^{n}} \\displaystyle=x, \\tag{27.7.3}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}\\phi\\left(n\\right)\\frac{x^{n}}{1-x^{n}} \\displaystyle=\\frac{x}{(1-x)^{2}}, \\tag{27.7.4}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}n^{\\alpha}\\frac{x^{n}}{1-x^{n}} \\displaystyle=\\sum_{n=1}^{\\infty}\\sigma_{\\alpha}\\left(n\\right)x^{n}, \\tag{27.7.5}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}\\lambda\\left(n\\right)\\frac{x^{n}}{1-x^{n}} \\displaystyle=\\sum_{n=1}^{\\infty}x^{n^{2}}. \\tag{27.7.6}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Lambert series",
+                "number theory",
+                "number-theoretic functions"
+              ],
+              "simbolos": [
+                "$\\mu\\left(n\\right)$: Möbius function , $n$: positive integer and $x$: real number",
+                "$\\phi\\left(n\\right)$: Euler’s totient , $n$: positive integer and $x$: real number",
+                "$\\sigma_{\\alpha}\\left(n\\right)$: sum of powers of divisors of a number , $n$: positive integer and $x$: real number",
+                "$\\lambda\\left(n\\right)$: Liouville’s function , $n$: positive integer and $x$: real number"
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1990](./bib/index.html#bib119 \"Modular Functions and Dirichlet Series in Number Theory\"), pp. 24–25)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "24.3.1 I.B",
+                "24.3.2 I.B",
+                "24.3.3 I.B"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.7 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/index.html#bib119",
+                "titulo_referencia": "Modular Functions and Dirichlet Series in Number Theory"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.8",
+          "titulo_original": "Dirichlet Characters",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.8.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.8.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.8 Dirichlet Characters",
+            "prosa_teorica": "If $k$ $(>1)$ is a given integer, then a function $\\chi\\left(n\\right)$ is called a *Dirichlet character* (mod $k$ ) if it is completely multiplicative, periodic with period $k$ , and vanishes when $\\left(n,k\\right)>1$ . In other words, Dirichlet characters (mod $k$ ) satisfy the four conditions:\nAn example is the *principal character* (mod $k$ ):\nFor any character $\\chi\\pmod{k}$ , $\\chi\\left(n\\right)\\neq 0$ if and only if $\\left(n,k\\right)=1$ , in which case the Euler–Fermat theorem ( 27.2.8 ) implies $\\left(\\chi\\left(n\\right)\\right)^{\\phi\\left(k\\right)}=1$ . There are exactly $\\phi\\left(k\\right)$ different characters (mod $k$ ), which can be labeled as $\\chi_{1},\\dots,\\chi_{\\phi\\left(k\\right)}$ . If $\\chi$ is a character (mod $k$ ), so is its complex conjugate $\\overline{\\chi}$ . If $\\left(n,k\\right)=1$ , then the characters satisfy the *orthogonality relation*\nA Dirichlet character $\\chi\\pmod{k}$ is called *primitive* (mod $k$ ) if for every proper divisor $d$ of $k$ (that is, a divisor $d<k$ ), there exists an integer $a\\equiv 1\\pmod{d}$ , with $\\left(a,k\\right)=1$ and $\\chi\\left(a\\right)\\neq 1$ . If $k$ is prime, then every nonprincipal character $\\chi\\pmod{k}$ is primitive. A divisor $d$ of $k$ is called an *induced modulus* for $\\chi$ if\nEvery Dirichlet character $\\chi$ (mod $k$ ) is a product\nwhere $\\chi_{0}$ is a character (mod $d$ ) for some induced modulus $d$ for $\\chi$ , and $\\chi_{1}$ is the principal character (mod $k$ ). A character is *real* if all its values are real. If $k$ is odd, then the real characters (mod $k$ ) are the principal character and the quadratic characters described in the next section.",
+            "formulas_clave": [
+              {
+                "id": "EGx1",
+                "tag": "27.8.1",
+                "latex": "\\displaystyle\\chi\\left(1\\right) \\displaystyle=1, \\tag{27.8.1}"
+              },
+              {
+                "id": "",
+                "tag": "27.8.2",
+                "latex": "\\displaystyle\\chi\\left(mn\\right) \\displaystyle=\\chi\\left(m\\right)\\chi\\left(n\\right), \\tag{27.8.2}"
+              },
+              {
+                "id": "",
+                "tag": "27.8.3",
+                "latex": "\\displaystyle\\chi\\left(n+k\\right) \\displaystyle=\\chi\\left(n\\right), \\tag{27.8.3}"
+              },
+              {
+                "id": "",
+                "tag": "27.8.4",
+                "latex": "\\displaystyle\\chi\\left(n\\right) \\displaystyle=0, \\tag{27.8.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "27.8.5",
+                "latex": "\\chi_{1}\\left(n\\right)=\\begin{cases}1,&\\left(n,k\\right)=1,\\\\\n0,&\\left(n,k\\right)>1.\\end{cases} \\tag{27.8.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "27.8.6",
+                "latex": "\\sum_{r=1}^{\\phi\\left(k\\right)}\\chi_{r}\\left(m\\right)\\overline{\\chi}_{r}(n)=\\begin{cases}\\phi\\left(k\\right),&m\\equiv n\\pmod{k},\\\\\n0,&\\mbox{otherwise}.\\end{cases} \\tag{27.8.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "27.8.7",
+                "latex": "\\chi\\left(a\\right)=1\\text{ for all a\\equiv 1 (mod d)}, \\tag{27.8.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "27.8.8",
+                "latex": "\\chi\\left(n\\right)=\\chi_{0}\\left(n\\right)\\chi_{1}\\left(n\\right), \\tag{27.8.8}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle\\chi\\left(1\\right) \\displaystyle=1, \\tag{27.8.1}",
+              "\\displaystyle\\chi\\left(mn\\right) \\displaystyle=\\chi\\left(m\\right)\\chi\\left(n\\right), \\tag{27.8.2}",
+              "\\displaystyle\\chi\\left(n+k\\right) \\displaystyle=\\chi\\left(n\\right), \\tag{27.8.3}",
+              "\\displaystyle\\chi\\left(n\\right) \\displaystyle=0, \\tag{27.8.4}",
+              "\\chi_{1}\\left(n\\right)=\\begin{cases}1,&\\left(n,k\\right)=1,\\\\\n0,&\\left(n,k\\right)>1.\\end{cases} \\tag{27.8.5}",
+              "\\sum_{r=1}^{\\phi\\left(k\\right)}\\chi_{r}\\left(m\\right)\\overline{\\chi}_{r}(n)=\\begin{cases}\\phi\\left(k\\right),&m\\equiv n\\pmod{k},\\\\\n0,&\\mbox{otherwise}.\\end{cases} \\tag{27.8.6}",
+              "\\chi\\left(a\\right)=1\\text{ for all a\\equiv 1 (mod d)}, \\tag{27.8.7}",
+              "\\chi\\left(n\\right)=\\chi_{0}\\left(n\\right)\\chi_{1}\\left(n\\right), \\tag{27.8.8}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Dirichlet",
+                "Dirichlet character",
+                "Dirichlet characters",
+                "characters",
+                "induced modulus",
+                "number theory",
+                "number-theoretic functions",
+                "orthogonality",
+                "orthogonality relation",
+                "primitive",
+                "principal",
+                "real"
+              ],
+              "definiciones": [
+                "$\\chi\\left(n\\right)$ : Dirichlet character"
+              ],
+              "simbolos": [
+                "$\\chi\\left(n\\right)$: Dirichlet character and $k$: positive integer",
+                "$\\chi\\left(n\\right)$: Dirichlet character , $k$: positive integer , $m$: positive integer and $n$: positive integer",
+                "$\\chi\\left(n\\right)$: Dirichlet character , $k$: positive integer and $n$: positive integer",
+                "$\\chi\\left(n\\right)$: Dirichlet character , $\\left(m,n\\right)$: greatest common divisor (gcd) , $k$: positive integer and $n$: positive integer"
+              ],
+              "referenciado_por": [
+                "§24.16(ii)",
+                "§25.11(x)",
+                "§25.15(i)",
+                "§27.3",
+                "Erratum (V1.0.19) for Notation"
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), pp. 137–142, 167–172)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.8 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.9",
+          "titulo_original": "Quadratic Characters",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.9.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.9.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.9 Quadratic Characters",
+            "prosa_teorica": "For an odd prime $p$ , the *Legendre symbol* $(n|p)$ is defined as follows. If $p$ divides $n$ , then the value of $(n|p)$ is $0$ . If $p$ does not divide $n$ , then $(n|p)$ has the value $1$ when the quadratic congruence $x^{2}\\equiv n\\pmod{p}$ has a solution, and the value $-1$ when this congruence has no solution. The Legendre symbol $(n|p)$ , as a function of $n$ , is a Dirichlet character (mod $p$ ). It is sometimes written as $(\\frac{n}{p})$ . Special values include:\nIf $p,q$ are distinct odd primes, then the *quadratic reciprocity law* states that\nIf an odd integer $P$ has prime factorization $P=\\prod_{r=1}^{\\nu\\left(n\\right)}p^{a_{r}}_{r}$ , then the *Jacobi symbol* $(n|P)$ is defined by $(n|P)=\\prod_{r=1}^{\\nu\\left(n\\right)}{(n|p_{r})}^{a_{r}}$ , with $(n|1)=1$ . The Jacobi symbol $(n|P)$ is a Dirichlet character (mod $P$ ). Both ( 27.9.1 ) and ( 27.9.2 ) are valid with $p$ replaced by $P$ ; the reciprocity law ( 27.9.3 ) holds if $p,q$ are replaced by any two relatively prime odd integers $P,Q$ .",
+            "formulas_clave": [
+              {
+                "id": "EGx1",
+                "tag": "27.9.1",
+                "latex": "\\displaystyle(-1|p) \\displaystyle=(-1)^{(p-1)/2}, \\tag{27.9.1}"
+              },
+              {
+                "id": "",
+                "tag": "27.9.2",
+                "latex": "\\displaystyle(2|p) \\displaystyle=(-1)^{(p^{2}-1)/8}. \\tag{27.9.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "27.9.3",
+                "latex": "(p|q)(q|p)=(-1)^{(p-1)(q-1)/4}. \\tag{27.9.3}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle(-1|p) \\displaystyle=(-1)^{(p-1)/2}, \\tag{27.9.1}",
+              "\\displaystyle(2|p) \\displaystyle=(-1)^{(p^{2}-1)/8}. \\tag{27.9.2}",
+              "(p|q)(q|p)=(-1)^{(p-1)(q-1)/4}. \\tag{27.9.3}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Dirichlet character",
+                "Jacobi symbol",
+                "Legendre symbol",
+                "characters",
+                "number theory",
+                "number-theoretic functions",
+                "prime numbers",
+                "quadratic Jacobi symbol",
+                "quadratic Legendre symbol",
+                "quadratic characters",
+                "quadratic reciprocity law"
+              ],
+              "definiciones": [
+                "$(n|P)$ : Jacobi symbol and $(n|p)$ : Legendre symbol"
+              ],
+              "simbolos": [
+                "[$(n|p)$: Legendre symbol](./27.9.md \"§27.9 Quadratic Characters ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory\") and $p$: odd prime"
+              ],
+              "referenciado_por": [
+                "§27.1",
+                "Erratum (V1.0.19) for Notation",
+                "§27.9"
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), Chapter 9)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.9 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "$(n|p)$: Legendre symbol",
+                "archivo_destino": "27.9.md",
+                "titulo_referencia": "§27.9 Quadratic Characters ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "$(n|p)$: Legendre symbol",
+                "archivo_destino": "27.9.md",
+                "titulo_referencia": "§27.9 Quadratic Characters ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.10",
+          "titulo_original": "Periodic Number-Theoretic Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.10.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.10.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.10 Periodic Number-Theoretic Functions",
+            "prosa_teorica": "If $k$ is a fixed positive integer, then a number-theoretic function $f$ is *periodic* (mod $k$ ) if\nExamples are the Dirichlet characters (mod $k$ ) and the greatest common divisor $\\left(n,k\\right)$ regarded as a function of $n$ .\nEvery function periodic (mod $k$ ) can be expressed as a *finite Fourier series* of the form\nwhere $g(m)$ is also periodic (mod $k$ ), and is given by\nAn example is *Ramanujan’s sum* :\nwhere $\\chi_{1}$ is the principal character (mod $k$ ). This is the sum of the $n$ th powers of the primitive $k$ th roots of unity. It can also be expressed in terms of the Möbius function as a divisor sum:\nMore generally, if $f$ and $g$ are arbitrary, then the sum\nis a periodic function of $n\\pmod{k}$ and has the finite Fourier-series expansion\nwhere\nAnother generalization of Ramanujan’s sum is the *Gauss sum* $G\\left(n,\\chi\\right)$ associated with a Dirichlet character $\\chi\\pmod{k}$ . It is defined by the relation\nIn particular, $G\\left(n,\\chi_{1}\\right)=c_{k}\\left(n\\right)$ .\n$G\\left(n,\\chi\\right)$ is *separable* for some $n$ if\nFor any Dirichlet character $\\chi\\pmod{k}$ , $G\\left(n,\\chi\\right)$ is separable for $n$ if $\\left(n,k\\right)=1$ , and is separable for every $n$ if and only if $G\\left(n,\\chi\\right)=0$ whenever $\\left(n,k\\right)>1$ . For a primitive character $\\chi\\pmod{k}$ , $G\\left(n,\\chi\\right)$ is separable for every $n$ , and\nConversely, if $G\\left(n,\\chi\\right)$ is separable for every $n$ , then $\\chi$ is primitive (mod $k$ ).\nThe finite Fourier expansion of a primitive Dirichlet character $\\chi\\pmod{k}$ has the form",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.10.1",
+                "latex": "f(n+k)=f(n), \\tag{27.10.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.10.2",
+                "latex": "f(n)=\\sum_{m=1}^{k}g(m)e^{2\\pi\\mathrm{i}mn/k}, \\tag{27.10.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "27.10.3",
+                "latex": "g(m)=\\dfrac{1}{k}\\sum_{n=1}^{k}f(n)e^{-2\\pi\\mathrm{i}mn/k}. \\tag{27.10.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "27.10.4",
+                "latex": "c_{k}\\left(n\\right)=\\sum_{m=1}^{k}\\chi_{1}\\left(m\\right)e^{2\\pi\\mathrm{i}mn/k}, \\tag{27.10.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "27.10.5",
+                "latex": "c_{k}\\left(n\\right)=\\sum_{d\\mathbin{|}\\left(n,k\\right)}d\\mu\\left(\\frac{k}{d}\\right). \\tag{27.10.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "27.10.6",
+                "latex": "s_{k}(n)=\\sum_{d\\mathbin{|}\\left(n,k\\right)}f(d)g\\left(\\frac{k}{d}\\right) \\tag{27.10.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "27.10.7",
+                "latex": "s_{k}(n)=\\sum_{m=1}^{k}a_{k}(m)e^{2\\pi\\mathrm{i}mn/k}, \\tag{27.10.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "27.10.8",
+                "latex": "a_{k}(m)=\\sum_{d\\mathbin{|}\\left(m,k\\right)}g(d)f\\left(\\frac{k}{d}\\right)\\frac{d}{k}. \\tag{27.10.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "27.10.9",
+                "latex": "G\\left(n,\\chi\\right)=\\sum_{m=1}^{k}\\chi\\left(m\\right)e^{2\\pi\\mathrm{i}mn/k}. \\tag{27.10.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "27.10.10",
+                "latex": "G\\left(n,\\chi\\right)=\\overline{\\chi}(n)G\\left(1,\\chi\\right). \\tag{27.10.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "27.10.11",
+                "latex": "|G\\left(1,\\chi\\right)|^{2}=k. \\tag{27.10.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "27.10.12",
+                "latex": "\\chi\\left(n\\right)=\\frac{G\\left(1,\\chi\\right)}{k}\\sum_{m=1}^{k}\\overline{\\chi}(m)e^{-2\\pi\\mathrm{i}mn/k}. \\tag{27.10.12}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "f(n+k)=f(n), \\tag{27.10.1}",
+              "f(n)=\\sum_{m=1}^{k}g(m)e^{2\\pi\\mathrm{i}mn/k}, \\tag{27.10.2}",
+              "g(m)=\\dfrac{1}{k}\\sum_{n=1}^{k}f(n)e^{-2\\pi\\mathrm{i}mn/k}. \\tag{27.10.3}",
+              "c_{k}\\left(n\\right)=\\sum_{m=1}^{k}\\chi_{1}\\left(m\\right)e^{2\\pi\\mathrm{i}mn/k}, \\tag{27.10.4}",
+              "c_{k}\\left(n\\right)=\\sum_{d\\mathbin{|}\\left(n,k\\right)}d\\mu\\left(\\frac{k}{d}\\right). \\tag{27.10.5}",
+              "s_{k}(n)=\\sum_{d\\mathbin{|}\\left(n,k\\right)}f(d)g\\left(\\frac{k}{d}\\right) \\tag{27.10.6}",
+              "s_{k}(n)=\\sum_{m=1}^{k}a_{k}(m)e^{2\\pi\\mathrm{i}mn/k}, \\tag{27.10.7}",
+              "a_{k}(m)=\\sum_{d\\mathbin{|}\\left(m,k\\right)}g(d)f\\left(\\frac{k}{d}\\right)\\frac{d}{k}. \\tag{27.10.8}",
+              "G\\left(n,\\chi\\right)=\\sum_{m=1}^{k}\\chi\\left(m\\right)e^{2\\pi\\mathrm{i}mn/k}. \\tag{27.10.9}",
+              "G\\left(n,\\chi\\right)=\\overline{\\chi}(n)G\\left(1,\\chi\\right). \\tag{27.10.10}",
+              "|G\\left(1,\\chi\\right)|^{2}=k. \\tag{27.10.11}",
+              "\\chi\\left(n\\right)=\\frac{G\\left(1,\\chi\\right)}{k}\\sum_{m=1}^{k}\\overline{\\chi}(m)e^{-2\\pi\\mathrm{i}mn/k}. \\tag{27.10.12}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Dirichlet character",
+                "Dirichlet characters",
+                "Fourier series",
+                "Gauss sum",
+                "Gauss sums",
+                "Ramanujan’s sum",
+                "finite",
+                "finite Fourier series",
+                "number theory",
+                "number-theoretic functions",
+                "periodic",
+                "separable",
+                "separable Gauss sum"
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), Chapter 8)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.11",
+          "titulo_original": "Asymptotic Formulas: Partial Sums",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.11.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.11.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.11 Asymptotic Formulas: Partial Sums",
+            "prosa_teorica": "The behavior of a number-theoretic function $f(n)$ for large $n$ is often difficult to determine because the function values can fluctuate considerably as $n$ increases. It is more fruitful to study partial sums and seek asymptotic formulas of the form\nwhere $F(x)$ is a known function of $x$ , and $O\\left(g(x)\\right)$ represents the error, a function of smaller order than $F(x)$ for all $x$ in some prescribed range. For example, Dirichlet ([1849](./bib/D.html#bib672 \"Über die Bestimmung der mittleren Werthe in der Zahlentheorie\")) proves that for all $x\\geq 1$ ,\nwhere $\\gamma$ is Euler’s constant (§ 5.2(ii) ). *Dirichlet’s divisor problem* (unsolved as of 2022) is to determine the least number $\\theta_{0}$ such that the error term in ( 27.11.2 ) is $O\\left(x^{\\theta}\\right)$ for all $\\theta>\\theta_{0}$ . Huxley ([2003](./bib/H.html#bib2963 \"Exponential sums and lattice points. III\")) proves that $\\theta_{0}\\leq\\frac{131}{416}$ .\nEquations ( 27.11.3 )–( 27.11.11 ) list further asymptotic formulas related to some of the functions listed in § [27.2](./27.2.md \"§27.2 Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory\") . They are valid for all $x\\geq 2$ . The error terms given here are not necessarily the best known.\nwhere $\\gamma$ again is Euler’s constant.\nwhere $A$ is a constant.\nwhere $\\left(h,k\\right)=1$ , $k>0$ , and $B$ is a constant depending on $h$ and $k$ .\nwhere $\\left(h,k\\right)=1$ , $k>0$ .\nLetting $x\\to\\infty$ in ( 27.11.9 ) or in ( 27.11.11 ) we see that there are infinitely many primes $p\\equiv h\\pmod{k}$ if $h,k$ are coprime; this is *Dirichlet’s theorem on primes in arithmetic progressions* .\nfor some positive constant $C$ ,\nEach of ( 27.11.13 )–( 27.11.15 ) is equivalent to the prime number theorem ( 27.2.3 ). *The prime number theorem for arithmetic progressions* —an extension of ( 27.2.3 ) and first proved in de la Vallée Poussin ([1896a](./bib/D.html#bib642 \"Recherches analytiques sur la théorie des nombres premiers. Première partie. La fonction ⁢ ζ ( s ) de Riemann et les nombres premiers en général, suivi d’un Appendice sur des réflexions applicables à une formule donnée par Riemann\"), [b](./bib/D.html#bib643 \"Recherches analytiques sur la théorie des nombres premiers. Deuxième partie. Les fonctions de Dirichlet et les nombres premiers de la forme linéaire + ⁢ M x N\"))—states that if $\\left(h,k\\right)=1$ , then the number of primes $p\\leq x$ with $p\\equiv h\\pmod{k}$ is asymptotic to $x/(\\phi\\left(k\\right)\\ln x)$ as $x\\to\\infty$ .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.11.1",
+                "latex": "\\sum_{n\\leq x}f(n)=F(x)+O\\left(g(x)\\right), \\tag{27.11.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.11.2",
+                "latex": "\\sum_{n\\leq x}d\\left(n\\right)=x\\ln x+(2\\gamma-1)x+O\\left(\\sqrt{x}\\right), \\tag{27.11.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "27.11.3",
+                "latex": "\\sum_{n\\leq x}\\frac{d\\left(n\\right)}{n}=\\frac{1}{2}(\\ln x)^{2}+2\\gamma\\ln x+O\\left(1\\right), \\tag{27.11.3}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "27.11.4",
+                "latex": "\\displaystyle\\sum_{n\\leq x}\\sigma_{1}\\left(n\\right) \\displaystyle=\\frac{{\\pi}^{2}}{12}x^{2}+O\\left(x\\ln x\\right). \\tag{27.11.4}"
+              },
+              {
+                "id": "",
+                "tag": "27.11.5",
+                "latex": "\\displaystyle\\sum_{n\\leq x}\\sigma_{\\alpha}\\left(n\\right) \\displaystyle=\\frac{\\zeta\\left(\\alpha+1\\right)}{\\alpha+1}x^{\\alpha+1}+O\\left(x^{\\beta}\\right), \\tag{27.11.5}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "27.11.6",
+                "latex": "\\displaystyle\\sum_{n\\leq x}\\phi\\left(n\\right) \\displaystyle=\\frac{3}{{\\pi}^{2}}x^{2}+O\\left(x\\ln x\\right). \\tag{27.11.6}"
+              },
+              {
+                "id": "",
+                "tag": "27.11.7",
+                "latex": "\\displaystyle\\sum_{n\\leq x}\\frac{\\phi\\left(n\\right)}{n} \\displaystyle=\\frac{6}{{\\pi}^{2}}x+O\\left(\\ln x\\right). \\tag{27.11.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "27.11.8",
+                "latex": "\\sum_{p\\leq x}\\frac{1}{p}=\\ln\\ln x+A+O\\left(\\frac{1}{\\ln x}\\right), \\tag{27.11.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "27.11.9",
+                "latex": "\\sum_{\\begin{subarray}{c}p\\leq x\\\\\np\\equiv h\\!\\!\\!\\!\\!\\pmod{k}\\end{subarray}}\\frac{1}{p}=\\frac{1}{\\phi\\left(k\\right)}\\ln\\ln x+B+O\\left(\\frac{1}{\\ln x}\\right), \\tag{27.11.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "27.11.10",
+                "latex": "\\sum_{p\\leq x}\\frac{\\ln p}{p}=\\ln x+O\\left(1\\right). \\tag{27.11.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "27.11.11",
+                "latex": "\\sum_{\\begin{subarray}{c}p\\leq x\\\\\np\\equiv h\\!\\!\\!\\!\\!\\pmod{k}\\end{subarray}}\\frac{\\ln p}{p}=\\frac{1}{\\phi\\left(k\\right)}\\ln x+O\\left(1\\right), \\tag{27.11.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "27.11.12",
+                "latex": "\\sum_{n\\leq x}\\mu\\left(n\\right)=O\\left(xe^{-C\\sqrt{\\ln x}}\\right), \\tag{27.11.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "27.11.13",
+                "latex": "\\lim_{x\\to\\infty}\\frac{1}{x}\\sum_{n\\leq x}\\mu\\left(n\\right)=0, \\tag{27.11.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "27.11.14",
+                "latex": "\\lim_{x\\to\\infty}\\sum_{n\\leq x}\\frac{\\mu\\left(n\\right)}{n}=0, \\tag{27.11.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "27.11.15",
+                "latex": "\\lim_{x\\to\\infty}\\sum_{n\\leq x}\\frac{\\mu\\left(n\\right)\\ln n}{n}=-1. \\tag{27.11.15}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\sum_{n\\leq x}f(n)=F(x)+O\\left(g(x)\\right), \\tag{27.11.1}",
+              "\\sum_{n\\leq x}d\\left(n\\right)=x\\ln x+(2\\gamma-1)x+O\\left(\\sqrt{x}\\right), \\tag{27.11.2}",
+              "\\sum_{n\\leq x}\\frac{d\\left(n\\right)}{n}=\\frac{1}{2}(\\ln x)^{2}+2\\gamma\\ln x+O\\left(1\\right), \\tag{27.11.3}",
+              "\\displaystyle\\sum_{n\\leq x}\\sigma_{1}\\left(n\\right) \\displaystyle=\\frac{{\\pi}^{2}}{12}x^{2}+O\\left(x\\ln x\\right). \\tag{27.11.4}",
+              "\\displaystyle\\sum_{n\\leq x}\\sigma_{\\alpha}\\left(n\\right) \\displaystyle=\\frac{\\zeta\\left(\\alpha+1\\right)}{\\alpha+1}x^{\\alpha+1}+O\\left(x^{\\beta}\\right), \\tag{27.11.5}",
+              "\\displaystyle\\sum_{n\\leq x}\\phi\\left(n\\right) \\displaystyle=\\frac{3}{{\\pi}^{2}}x^{2}+O\\left(x\\ln x\\right). \\tag{27.11.6}",
+              "\\displaystyle\\sum_{n\\leq x}\\frac{\\phi\\left(n\\right)}{n} \\displaystyle=\\frac{6}{{\\pi}^{2}}x+O\\left(\\ln x\\right). \\tag{27.11.7}",
+              "\\sum_{p\\leq x}\\frac{1}{p}=\\ln\\ln x+A+O\\left(\\frac{1}{\\ln x}\\right), \\tag{27.11.8}",
+              "\\sum_{\\begin{subarray}{c}p\\leq x\\\\\np\\equiv h\\!\\!\\!\\!\\!\\pmod{k}\\end{subarray}}\\frac{1}{p}=\\frac{1}{\\phi\\left(k\\right)}\\ln\\ln x+B+O\\left(\\frac{1}{\\ln x}\\right), \\tag{27.11.9}",
+              "\\sum_{p\\leq x}\\frac{\\ln p}{p}=\\ln x+O\\left(1\\right). \\tag{27.11.10}",
+              "\\sum_{\\begin{subarray}{c}p\\leq x\\\\\np\\equiv h\\!\\!\\!\\!\\!\\pmod{k}\\end{subarray}}\\frac{\\ln p}{p}=\\frac{1}{\\phi\\left(k\\right)}\\ln x+O\\left(1\\right), \\tag{27.11.11}",
+              "\\sum_{n\\leq x}\\mu\\left(n\\right)=O\\left(xe^{-C\\sqrt{\\ln x}}\\right), \\tag{27.11.12}",
+              "\\lim_{x\\to\\infty}\\frac{1}{x}\\sum_{n\\leq x}\\mu\\left(n\\right)=0, \\tag{27.11.13}",
+              "\\lim_{x\\to\\infty}\\sum_{n\\leq x}\\frac{\\mu\\left(n\\right)}{n}=0, \\tag{27.11.14}",
+              "\\lim_{x\\to\\infty}\\sum_{n\\leq x}\\frac{\\mu\\left(n\\right)\\ln n}{n}=-1. \\tag{27.11.15}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Dirichlet divisor problem",
+                "Dirichlet’s divisor problem",
+                "Dirichlet’s theorem",
+                "in arithmetic progressions",
+                "number theory",
+                "number-theoretic functions",
+                "prime number theorem",
+                "prime numbers",
+                "prime numbers in arithmetic progression"
+              ],
+              "simbolos": [
+                "$O\\left(x\\right)$: order not exceeding , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\sigma_{\\alpha}\\left(n\\right)$: sum of powers of divisors of a number , $\\lnz$: principal branch of logarithm function , $n$: positive integer and $x$: real number",
+                "$O\\left(x\\right)$: order not exceeding , $\\zeta\\left(s\\right)$: Riemann zeta function , $\\sigma_{\\alpha}\\left(n\\right)$: sum of powers of divisors of a number , $n$: positive integer and $x$: real number",
+                "$O\\left(x\\right)$: order not exceeding , $\\phi\\left(n\\right)$: Euler’s totient , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\lnz$: principal branch of logarithm function , $n$: positive integer and $x$: real number",
+                "$O\\left(x\\right)$: order not exceeding , $\\phi\\left(n\\right)$: Euler’s totient , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\lnz$: principal branch of logarithm function , $n$: positive integer and $x$: real number  **Change of Notation (effective with 1.0.10):**  The notation for logarithm has been changed to $\\ln$ from $\\mathrm{log}$ ."
+              ],
+              "referenciado_por": [
+                "§25.15(ii)",
+                "Erratum (V1.0.19) for Notation",
+                "Erratum (V1.1.8) for Section 27.11  **Change of Notation (effective with 1.1.8):**  Immediately below ( 27.11.2 )",
+                "the bound $\\theta_{0}$ for Dirichlet’s divisor problem (currently still unsolved) has been changed from $\\frac{12}{37}$ Kolesnik ([1969](./bib/K.html#bib1318 \"An improvement of the remainder term in the divisor problem\")) to $\\frac{131}{416}$ Huxley ([2003](./bib/H.html#bib2963 \"Exponential sums and lattice points. III\"))."
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), Chapters 3, 4). For ( 27.11.12 ), ( 27.11.14 ), and ( 27.11.15 ) see Prachar ([1957](./bib/P.html#bib1898 \"Primzahlverteilung\"), pp. 71–74)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "24.3.3 III (in slightly different form)  **Change of Notation (effective with 1.0.10):**  The notation for logarithm has been changed to $\\ln$ from $\\mathrm{log}$ .",
+                "24.3.2 III (in slightly different form)  **Change of Notation (effective with 1.0.10):**  The notation for logarithm has been changed to $\\ln$ from $\\mathrm{log}$ ."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.11 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1957",
+                "archivo_destino": "bib/P.html#bib1898",
+                "titulo_referencia": "Primzahlverteilung"
+              },
+              {
+                "texto": "1969",
+                "archivo_destino": "bib/K.html#bib1318",
+                "titulo_referencia": "An improvement of the remainder term in the divisor problem"
+              },
+              {
+                "texto": "2003",
+                "archivo_destino": "bib/H.html#bib2963",
+                "titulo_referencia": "Exponential sums and lattice points. III"
+              },
+              {
+                "texto": "1849",
+                "archivo_destino": "bib/D.html#bib672",
+                "titulo_referencia": "Über die Bestimmung der mittleren Werthe in der Zahlentheorie"
+              },
+              {
+                "texto": "2003",
+                "archivo_destino": "bib/H.html#bib2963",
+                "titulo_referencia": "Exponential sums and lattice points. III"
+              },
+              {
+                "texto": "27.2",
+                "archivo_destino": "27.2.md",
+                "titulo_referencia": "§27.2 Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "1896a",
+                "archivo_destino": "bib/D.html#bib642",
+                "titulo_referencia": "Recherches analytiques sur la théorie des nombres premiers. Première partie. La fonction ⁢ ζ ( s ) de Riemann et les nombres premiers en général, suivi d’un Appendice sur des réflexions applicables à une formule donnée par Riemann"
+              },
+              {
+                "texto": "b",
+                "archivo_destino": "bib/D.html#bib643",
+                "titulo_referencia": "Recherches analytiques sur la théorie des nombres premiers. Deuxième partie. Les fonctions de Dirichlet et les nombres premiers de la forme linéaire + ⁢ M x N"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.12",
+          "titulo_original": "Asymptotic Formulas: Primes",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.12.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.12.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.12 Asymptotic Formulas: Primes",
+            "prosa_teorica": "$p_{n}$ is the $n$ th prime, beginning with $p_{1}=2$ . $\\pi\\left(x\\right)$ is the number of primes less than or equal to $x$ .\nwhere the series terminates when the product of the first $r$ primes exceeds $x$ .\nAs $x\\to\\infty$\nThere exists a positive constant $c$ such that\nFor the logarithmic integral $\\operatorname{li}\\left(x\\right)$ see ( 6.2.8 ). The best available asymptotic error estimate (2009) appears in Korobov ([1958](./bib/K.html#bib1337 \"Estimates of trigonometric sums and their applications\")) and Vinogradov ([1958](./bib/V.html#bib2336 \"A new estimate of the function ⁢ ζ ( + 1 ⁢ i t )\")): there exists a positive constant $d$ such that\n$\\pi\\left(x\\right)-\\operatorname{li}\\left(x\\right)$ changes sign infinitely often as $x\\to\\infty$ ; see Littlewood ([1914](./bib/L.html#bib1445 \"Sur la distribution des nombres premiers\")), Bays and Hudson ([2000](./bib/B.html#bib223 \"A new bound for the smallest x with > ⁢ π ( x ) ⁢ li ( x )\")).\nThe *Riemann hypothesis* (§ 25.10(i) ) is equivalent to the statement that for every $x\\geq 2657$ ,\nIf $a$ is relatively prime to the modulus $m$ , then there are infinitely many primes congruent to $a\\pmod{m}$ .\nThe number of such primes not exceeding $x$ is\nwhere $\\lambda(\\alpha)$ depends only on $\\alpha$ , and $\\phi\\left(m\\right)$ is the Euler totient function (§ [27.2](./27.2.md \"§27.2 Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory\") ).\nA *Mersenne prime* is a prime of the form $2^{p}-1$ . The largest known prime (2018) is the Mersenne prime $2^{82,589,933}-1$ . For current records see [The Great Internet Mersenne Prime Search](http://www.mersenne.org) .\nA *pseudoprime test* is a test that correctly identifies most composite numbers. For example, if $2^{n}\\not\\equiv 2\\pmod{n}$ , then $n$ is composite. Descriptions and comparisons of pseudoprime tests are given in Bressoud and Wagon ([2000](./bib/B.html#bib349 \"A Course in Computational Number Theory\"), §§2.4, 4.2, and 8.2) and Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), §§3.4–3.6).\nA *Carmichael number* is a composite number $n$ for which $b^{n}\\equiv b\\pmod{n}$ for all $b\\in\\mathbb{N}$ . There are infinitely many Carmichael numbers.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.12.1",
+                "latex": "\\lim_{n\\to\\infty}\\frac{p_{n}}{n\\ln n}=1, \\tag{27.12.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.12.2",
+                "latex": "p_{n}>n\\ln n, \\tag{27.12.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "27.12.3",
+                "latex": "\\pi\\left(x\\right)=\\left\\lfloor x\\right\\rfloor-1-\\sum_{p_{j}\\leq\\sqrt{x}}\\left\\lfloor\\frac{x}{p_{j}}\\right\\rfloor+\\sum_{r\\geq 2}(-1)^{r}\\,\\sum_{p_{j_{1}}<p_{j_{2}}<\\cdots<p_{j_{r}}\\leq\\sqrt{x}}\\left\\lfloor\\frac{x}{p_{j_{1}}p_{j_{2}}\\cdots p_{j_{r}}}\\right\\rfloor, \\tag{27.12.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "27.12.4",
+                "latex": "\\pi\\left(x\\right)\\sim\\sum_{k=1}^{\\infty}\\frac{(k-1)!\\,x}{(\\ln x)^{k}}. \\tag{27.12.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "27.12.5",
+                "latex": "\\left|\\pi\\left(x\\right)-\\operatorname{li}\\left(x\\right)\\right|=O\\left(x\\exp\\left(-c(\\ln x)^{1/2}\\right)\\right), \\tag{27.12.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "27.12.6",
+                "latex": "\\left|\\pi\\left(x\\right)-\\operatorname{li}\\left(x\\right)\\right|=O\\left(x\\exp\\left(-d(\\ln x)^{3/5}\\,(\\ln\\ln x)^{-1/5}\\right)\\right). \\tag{27.12.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "27.12.7",
+                "latex": "\\left|\\pi\\left(x\\right)-\\operatorname{li}\\left(x\\right)\\right|<\\frac{1}{8\\pi}\\sqrt{x}\\,\\ln x. \\tag{27.12.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "27.12.8",
+                "latex": "\\frac{\\operatorname{li}\\left(x\\right)}{\\phi\\left(m\\right)}+O\\left(x\\exp\\left(-\\lambda(\\alpha)(\\ln x)^{1/2}\\right)\\right), \\tag{27.12.8}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\lim_{n\\to\\infty}\\frac{p_{n}}{n\\ln n}=1, \\tag{27.12.1}",
+              "p_{n}>n\\ln n, \\tag{27.12.2}",
+              "\\pi\\left(x\\right)=\\left\\lfloor x\\right\\rfloor-1-\\sum_{p_{j}\\leq\\sqrt{x}}\\left\\lfloor\\frac{x}{p_{j}}\\right\\rfloor+\\sum_{r\\geq 2}(-1)^{r}\\,\\sum_{p_{j_{1}}<p_{j_{2}}<\\cdots<p_{j_{r}}\\leq\\sqrt{x}}\\left\\lfloor\\frac{x}{p_{j_{1}}p_{j_{2}}\\cdots p_{j_{r}}}\\right\\rfloor, \\tag{27.12.3}",
+              "\\pi\\left(x\\right)\\sim\\sum_{k=1}^{\\infty}\\frac{(k-1)!\\,x}{(\\ln x)^{k}}. \\tag{27.12.4}",
+              "\\left|\\pi\\left(x\\right)-\\operatorname{li}\\left(x\\right)\\right|=O\\left(x\\exp\\left(-c(\\ln x)^{1/2}\\right)\\right), \\tag{27.12.5}",
+              "\\left|\\pi\\left(x\\right)-\\operatorname{li}\\left(x\\right)\\right|=O\\left(x\\exp\\left(-d(\\ln x)^{3/5}\\,(\\ln\\ln x)^{-1/5}\\right)\\right). \\tag{27.12.6}",
+              "\\left|\\pi\\left(x\\right)-\\operatorname{li}\\left(x\\right)\\right|<\\frac{1}{8\\pi}\\sqrt{x}\\,\\ln x. \\tag{27.12.7}",
+              "\\frac{\\operatorname{li}\\left(x\\right)}{\\phi\\left(m\\right)}+O\\left(x\\exp\\left(-\\lambda(\\alpha)(\\ln x)^{1/2}\\right)\\right), \\tag{27.12.8}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "asymptotic formula",
+                "prime numbers",
+                "Carmichael numbers",
+                "Mersenne prime",
+                "Riemann hypothesis",
+                "equivalent statements",
+                "largest known",
+                "multiplicative number theory",
+                "number theory",
+                "prime number theorem",
+                "pseudoprime test"
+              ],
+              "referenciado_por": [
+                "§27.2(i)",
+                "Ch.27",
+                "§6.16(ii)",
+                "Erratum (V1.0.19) for Notation",
+                "Erratum (V1.0.26) for Paragraph Prime Number Theorem (in §27.12)",
+                "Erratum (V1.0.26) for Paragraph Prime Number Theorem (in §27.12)  **Update (effective with 1.0.26):**  The largest known prime",
+                "which is a Mersenne prime",
+                "was updated from $2^{43",
+                "112",
+                "609}-1$ (2009) to $2^{82",
+                "589",
+                "933}-1$ (2018). *Suggested 2019-12-28 by Bill McEachen*"
+              ],
+              "notas_bibliograficas": [
+                "See Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), pp. 131–152), Davenport ([2000](./bib/D.html#bib612 \"Multiplicative Number Theory\")), Narkiewicz ([2000](./bib/N.html#bib1691 \"The Development of Prime Number Theory: From Euclid to Hardy and Littlewood\")), Rosser ([1939](./bib/R.html#bib1974 \"The n -th prime is greater than ⁢ n log n\")). ( 27.12.7 ) is based on results of Schoenfeld ([1976](./bib/S.html#bib2016 \"Sharper bounds for the Chebyshev functions ⁢ θ ( x ) and ⁢ ψ ( x ) . II\")) and von Koch ([1901](./bib/V.html#bib2901 \"Über die Riemann’sche Primzahlfunction\")); see Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), pp. 37, 60). The proof that there are infinitely many Carmichael numbers is given in Alford et al. ([1994](./bib/index.html#bib58 \"There are infinitely many Carmichael numbers\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.12 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/D.html#bib612",
+                "titulo_referencia": "Multiplicative Number Theory"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/N.html#bib1691",
+                "titulo_referencia": "The Development of Prime Number Theory: From Euclid to Hardy and Littlewood"
+              },
+              {
+                "texto": "1939",
+                "archivo_destino": "bib/R.html#bib1974",
+                "titulo_referencia": "The n -th prime is greater than ⁢ n log n"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/S.html#bib2016",
+                "titulo_referencia": "Sharper bounds for the Chebyshev functions ⁢ θ ( x ) and ⁢ ψ ( x ) . II"
+              },
+              {
+                "texto": "1901",
+                "archivo_destino": "bib/V.html#bib2901",
+                "titulo_referencia": "Über die Riemann’sche Primzahlfunction"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/index.html#bib58",
+                "titulo_referencia": "There are infinitely many Carmichael numbers"
+              },
+              {
+                "texto": "1958",
+                "archivo_destino": "bib/K.html#bib1337",
+                "titulo_referencia": "Estimates of trigonometric sums and their applications"
+              },
+              {
+                "texto": "1958",
+                "archivo_destino": "bib/V.html#bib2336",
+                "titulo_referencia": "A new estimate of the function ⁢ ζ ( + 1 ⁢ i t )"
+              },
+              {
+                "texto": "1914",
+                "archivo_destino": "bib/L.html#bib1445",
+                "titulo_referencia": "Sur la distribution des nombres premiers"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/B.html#bib223",
+                "titulo_referencia": "A new bound for the smallest x with > ⁢ π ( x ) ⁢ li ( x )"
+              },
+              {
+                "texto": "27.2",
+                "archivo_destino": "27.2.md",
+                "titulo_referencia": "§27.2 Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/B.html#bib349",
+                "titulo_referencia": "A Course in Computational Number Theory"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Additive Number Theory",
+      "secciones": [
+        {
+          "seccion_id": "27.13",
+          "titulo_original": "Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.13.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.13.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.13 Functions",
+            "prosa_teorica": "Whereas multiplicative number theory is concerned with functions arising from prime factorization, additive number theory treats functions related to addition of integers. The basic problem is that of expressing a given positive integer $n$ as a sum of integers from some prescribed set $S$ whose members are primes, squares, cubes, or other special integers. Each representation of $n$ as a sum of elements of $S$ is called a *partition* of $n$ , and the number $S(n)$ of such partitions is often of great interest. The subsections that follow describe problems from additive number theory. See also Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), Chapter 14) and Apostol and Niven ([1994](./bib/index.html#bib120 \"Number Theory\"), pp. 33–34).\n*Every even integer $n>4$ is the sum of two odd primes.* In this case, $S(n)$ is the number of solutions of the equation $n=p+q$ , where $p$ and $q$ are odd primes. Goldbach’s assertion is that $S(n)\\geq 1$ for all even $n>4$ . This conjecture dates back to 1742 and was undecided in 2009, although it has been confirmed numerically up to very large numbers. Vinogradov ([1937](./bib/V.html#bib2335 \"Representation of an odd number as a sum of three primes (Russian)\")) proves that every sufficiently large odd integer is the sum of three odd primes, and Chen ([1966](./bib/C.html#bib479 \"On the representation of a large even integer as the sum of a prime and the product of at most two primes\")) shows that every sufficiently large even integer is the sum of a prime and a number with no more than two prime factors.\nThe [current status](http://en.wikipedia.org/w/index.php?title=Goldbach%27s_conjecture&oldid=60319325) of Goldbach’s conjecture is described in the [Wikipedia](http://en.wikipedia.org/wiki/Main_Page) .\nThis problem is named after Edward Waring who, in 1770, stated without proof and with limited numerical evidence, that every positive integer $n$ is the sum of four squares, of nine cubes, of nineteen fourth powers, and so on. Waring’s problem is to find, for each positive integer $k$ , whether there is an integer $m$ (depending only on $k$ ) such that the equation\nhas nonnegative integer solutions for all $n\\geq 1$ . The smallest $m$ that exists for a given $k$ is denoted by $g\\left(k\\right)$ . Similarly, $G\\left(k\\right)$ denotes the smallest $m$ for which ( 27.13.1 ) has nonnegative integer solutions for all sufficiently large $n$ .\nLagrange ([1770](./bib/L.html#bib1368 \"Démonstration d’un Théoréme d’Arithmétique\")) proves that $g\\left(2\\right)=4$ , and during the next 139 years the existence of $g\\left(k\\right)$ was shown for $k=3,4,5,6,7,8,10$ . Hilbert ([1909](./bib/H.html#bib1076 \"Beweis für die Darstellbarkeit der ganzen Zahlen durch eine feste Anzahl n ter Potenzen (Waringsches Problem)\")) proves the existence of $g\\left(k\\right)$ for every $k$ but does not determine its corresponding numerical value. The exact value of $g\\left(k\\right)$ is now known for every $k\\leq 200,000$ . For example, $g\\left(3\\right)=9$ , $g\\left(4\\right)=19$ , $g\\left(5\\right)=37$ , $g\\left(6\\right)=73$ , $g\\left(7\\right)=143$ , and $g\\left(8\\right)=279$ . A general formula states that\nfor all $k\\geq 2$ , with equality if $4\\leq k\\leq 200,000$ . If $3^{k}=q2^{k}+r$ with $0<r<2^{k}$ , then equality holds in ( 27.13.2 ) provided $r+q\\leq 2^{k}$ , a condition that is satisfied with at most a finite number of exceptions.\nThe existence of $G\\left(k\\right)$ follows from that of $g\\left(k\\right)$ because $G\\left(k\\right)\\leq g\\left(k\\right)$ , but only the values $G\\left(2\\right)=4$ and $G\\left(4\\right)=16$ are known exactly. Some upper bounds smaller than $g\\left(k\\right)$ are known. For example, $G\\left(3\\right)\\leq 7$ , $G\\left(5\\right)\\leq 23$ , $G\\left(6\\right)\\leq 36$ , $G\\left(7\\right)\\leq 53$ , and $G\\left(8\\right)\\leq 73$ . Hardy and Littlewood ([1925](./bib/H.html#bib1044 \"Some problems of “Partitio Numerorum” (VI): Further researches in Waring’s Problem\")) conjectures that $G\\left(k\\right)<2k+1$ when $k$ is not a power of 2, and that $G\\left(k\\right)\\leq 4k$ when $k$ is a power of 2, but the most that is known (in 2009) is $G\\left(k\\right)<ck\\ln k$ for some constant $c$ . A survey is given in Ellison ([1971](./bib/E.html#bib741 \"Waring’s problem\")).\nFor a given integer $k\\geq 2$ the function $r_{k}\\left(n\\right)$ is defined as the number of solutions of the equation\nwhere the $x_{j}$ are integers, positive, negative, or zero, and the order of the summands is taken into account.\nJacobi ([1829](./bib/J.html#bib1153 \"Fundamenta Nova Theoriae Functionum Ellipticarum\")) notes that $r_{2}\\left(n\\right)$ is the coefficient of $x^{n}$ in the square of the theta function $\\vartheta\\left(x\\right)$ :\n(In § 20.2(i) , $\\vartheta\\left(x\\right)$ is denoted by $\\theta_{3}\\left(0,x\\right)$ .) Thus,\nOne of Jacobi’s identities implies that\nwhere $\\delta_{1}(n)$ and $\\delta_{3}(n)$ are the number of divisors of $n$ congruent respectively to 1 and 3 (mod 4), and by equating coefficients in ( 27.13.5 ) and ( 27.13.6 ) Jacobi deduced that\nHence $r_{2}\\left(5\\right)=8$ because both divisors, $1$ and $5$ , are congruent to $1\\pmod{4}$ . In fact, there are four representations, given by $5=2^{2}+1^{2}=2^{2}+(-1)^{2}=(-2)^{2}+1^{2}=(-2)^{2}+(-1)^{2}$ , and four more with the order of summands reversed.\nBy similar methods Jacobi proved that $r_{4}\\left(n\\right)=8\\sigma_{1}\\left(n\\right)$ if $n$ is odd, whereas, if $n$ is even, $r_{4}\\left(n\\right)=24$ times the sum of the odd divisors of $n$ . Mordell ([1917](./bib/M.html#bib1653 \"On the representation of numbers as a sum of ⁢ 2 r squares\")) notes that $r_{k}\\left(n\\right)$ is the coefficient of $x^{n}$ in the power-series expansion of the $k$ th power of the series for $\\vartheta\\left(x\\right)$ . Explicit formulas for $r_{k}\\left(n\\right)$ have been obtained by similar methods for $k=6,8,10$ , and $12$ , but they are more complicated. Exact formulas for $r_{k}\\left(n\\right)$ have also been found for $k=3,5$ , and $7$ , and for all even $k\\leq 24$ . For values of $k>24$ the analysis of $r_{k}\\left(n\\right)$ is considerably more complicated (see Hardy ([1940](./bib/H.html#bib1040 \"Ramanujan. Twelve Lectures on Subjects Suggested by His Life and Work\"))). Also, Milne ([1996](./bib/M.html#bib1633 \"New infinite families of exact sums of squares formulas, Jacobi elliptic functions, and Ramanujan’s tau function\"), [2002](./bib/M.html#bib1635 \"Infinite families of exact sums of squares formulas, Jacobi elliptic functions, continued fractions, and Schur functions\")) announce new infinite families of explicit formulas extending Jacobi’s identities. For more than 8 squares, Milne’s identities are not the same as those obtained earlier by Mordell and others.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.13.1",
+                "latex": "n=x_{1}^{k}+x_{2}^{k}+\\dots+x_{m}^{k} \\tag{27.13.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.13.2",
+                "latex": "g\\left(k\\right)\\geq 2^{k}+\\left\\lfloor\\frac{3^{k}}{2^{k}}\\right\\rfloor-2, \\tag{27.13.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "27.13.3",
+                "latex": "n=x_{1}^{2}+x_{2}^{2}+\\dots+x_{k}^{2}, \\tag{27.13.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "27.13.4",
+                "latex": "\\vartheta\\left(x\\right)=1+2\\sum_{m=1}^{\\infty}x^{m^{2}}, \\tag{27.13.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "27.13.5",
+                "latex": "(\\vartheta\\left(x\\right))^{2}=1+\\sum_{n=1}^{\\infty}r_{2}\\left(n\\right)x^{n}. \\tag{27.13.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "27.13.6",
+                "latex": "(\\vartheta\\left(x\\right))^{2}=1+4\\sum_{n=1}^{\\infty}\\left(\\delta_{1}(n)-\\delta_{3}(n)\\right)x^{n}, \\tag{27.13.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "27.13.7",
+                "latex": "r_{2}\\left(n\\right)=4\\left(\\delta_{1}(n)-\\delta_{3}(n)\\right). \\tag{27.13.7}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "n=x_{1}^{k}+x_{2}^{k}+\\dots+x_{m}^{k} \\tag{27.13.1}",
+              "g\\left(k\\right)\\geq 2^{k}+\\left\\lfloor\\frac{3^{k}}{2^{k}}\\right\\rfloor-2, \\tag{27.13.2}",
+              "n=x_{1}^{2}+x_{2}^{2}+\\dots+x_{k}^{2}, \\tag{27.13.3}",
+              "\\vartheta\\left(x\\right)=1+2\\sum_{m=1}^{\\infty}x^{m^{2}}, \\tag{27.13.4}",
+              "(\\vartheta\\left(x\\right))^{2}=1+\\sum_{n=1}^{\\infty}r_{2}\\left(n\\right)x^{n}. \\tag{27.13.5}",
+              "(\\vartheta\\left(x\\right))^{2}=1+4\\sum_{n=1}^{\\infty}\\left(\\delta_{1}(n)-\\delta_{3}(n)\\right)x^{n}, \\tag{27.13.6}",
+              "r_{2}\\left(n\\right)=4\\left(\\delta_{1}(n)-\\delta_{3}(n)\\right). \\tag{27.13.7}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "additive number theory",
+                "partition function",
+                "Goldbach conjecture",
+                "number theory",
+                "Waring’s problem",
+                "Jacobi’s identities",
+                "representation by squares"
+              ],
+              "definiciones": [
+                "$G\\left(k\\right)$ : Waring’s function and $g\\left(k\\right)$ : Waring’s function",
+                "$r_{k}\\left(n\\right)$ : number of squares"
+              ],
+              "referenciado_por": [
+                "§20.12(i)"
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), p. 306) and Ellison ([1971](./bib/E.html#bib741 \"Waring’s problem\"), p. 23).",
+                "See Grosswald ([1985](./bib/G.html#bib999 \"Representations of Integers as Sums of Squares\"), pp. 8, 32). For solutions of ( 27.13.3 ) see Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), p. 305). For ( 27.13.4 ) see ( 20.2.3 )."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.13 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/index.html#bib120",
+                "titulo_referencia": "Number Theory"
+              },
+              {
+                "texto": "1937",
+                "archivo_destino": "bib/V.html#bib2335",
+                "titulo_referencia": "Representation of an odd number as a sum of three primes (Russian)"
+              },
+              {
+                "texto": "1966",
+                "archivo_destino": "bib/C.html#bib479",
+                "titulo_referencia": "On the representation of a large even integer as the sum of a prime and the product of at most two primes"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/E.html#bib741",
+                "titulo_referencia": "Waring’s problem"
+              },
+              {
+                "texto": "1770",
+                "archivo_destino": "bib/L.html#bib1368",
+                "titulo_referencia": "Démonstration d’un Théoréme d’Arithmétique"
+              },
+              {
+                "texto": "1909",
+                "archivo_destino": "bib/H.html#bib1076",
+                "titulo_referencia": "Beweis für die Darstellbarkeit der ganzen Zahlen durch eine feste Anzahl n ter Potenzen (Waringsches Problem)"
+              },
+              {
+                "texto": "1925",
+                "archivo_destino": "bib/H.html#bib1044",
+                "titulo_referencia": "Some problems of “Partitio Numerorum” (VI): Further researches in Waring’s Problem"
+              },
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/E.html#bib741",
+                "titulo_referencia": "Waring’s problem"
+              },
+              {
+                "texto": "1985",
+                "archivo_destino": "bib/G.html#bib999",
+                "titulo_referencia": "Representations of Integers as Sums of Squares"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1829",
+                "archivo_destino": "bib/J.html#bib1153",
+                "titulo_referencia": "Fundamenta Nova Theoriae Functionum Ellipticarum"
+              },
+              {
+                "texto": "1917",
+                "archivo_destino": "bib/M.html#bib1653",
+                "titulo_referencia": "On the representation of numbers as a sum of ⁢ 2 r squares"
+              },
+              {
+                "texto": "1940",
+                "archivo_destino": "bib/H.html#bib1040",
+                "titulo_referencia": "Ramanujan. Twelve Lectures on Subjects Suggested by His Life and Work"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/M.html#bib1633",
+                "titulo_referencia": "New infinite families of exact sums of squares formulas, Jacobi elliptic functions, and Ramanujan’s tau function"
+              },
+              {
+                "texto": "2002",
+                "archivo_destino": "bib/M.html#bib1635",
+                "titulo_referencia": "Infinite families of exact sums of squares formulas, Jacobi elliptic functions, continued fractions, and Schur functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.14",
+          "titulo_original": "Unrestricted Partitions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.14.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.14.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.14 Unrestricted Partitions",
+            "prosa_teorica": "A fundamental problem studies the number of ways $n$ can be written as a sum of positive integers $\\leq n$ , that is, the number of solutions of\nThe number of summands is unrestricted, repetition is allowed, and the order of the summands is not taken into account. The corresponding *unrestricted partition function* is denoted by $p\\left(n\\right)$ , and the summands are called *parts* ; see § 26.9(i) . For example, $p\\left(5\\right)=7$ because there are exactly seven partitions of $5$ : $5=4+1=3+2=3+1+1=2+2+1=2+1+1+1=1+1+1+1+1$ .\nThe number of partitions of $n$ into at most $k$ parts is denoted by $p_{k}\\left(n\\right)$ ; again see § 26.9(i) .\nEuler introduced the reciprocal of the infinite product\nas a generating function for the function $p\\left(n\\right)$ defined in § 27.14(i) :\nwith $p\\left(0\\right)=1$ . Euler’s *pentagonal number theorem* states that\nwhere the exponents $1$ , $2$ , $5$ , $7$ , $12$ , $15$ , $\\dots$ are the *pentagonal numbers* , defined by\nMultiplying the power series for $\\mathit{f}\\left(x\\right)$ with that for $1/\\mathit{f}\\left(x\\right)$ and equating coefficients, we obtain the recursion formula\nwhere $p\\left(k\\right)$ is defined to be $0$ if $k<0$ . Logarithmic differentiation of the generating function $1/\\mathit{f}\\left(x\\right)$ leads to another recursion:\nwhere $\\sigma_{1}\\left(k\\right)$ is defined by ( 27.2.10 ) with $\\alpha=1$ .\nThese recursions can be used to calculate $p\\left(n\\right)$ , which grows very rapidly. For example, $p\\left(10\\right)=42,p\\left(100\\right)$ = $1905\\;69292$ , and $p\\left(200\\right)=397\\;29990\\;29388$ . For large $n$\nwhere $K=\\pi\\sqrt{2/3}$ (Hardy and Ramanujan ([1918](./bib/H.html#bib1046 \"Asymptotic formulae in combinatory analysis\"))). Rademacher ([1938](./bib/R.html#bib1916 \"On the partition function p(n)\")) derives a convergent series that also provides an asymptotic expansion for $p\\left(n\\right)$ :\nwhere\nand $s(h,k)$ is a *Dedekind sum* given by\nDedekind sums occur in the transformation theory of the *Dedekind modular function* $\\eta\\left(\\tau\\right)$ , defined by\nThis is related to the function $\\mathit{f}\\left(x\\right)$ in ( 27.14.2 ) by\n$\\eta\\left(\\tau\\right)$ satisfies the following functional equation: if $a,b,c,d$ are integers with $ad-bc=1$ and $c>0$ , then\nwhere $\\varepsilon=\\exp\\left(\\pi\\mathrm{i}(((a+d)/(12c))-s(d,c))\\right)$ and $s(d,c)$ is given by ( 27.14.11 ).\nFor further properties of the function $\\eta\\left(\\tau\\right)$ see §§ [23.15](./23.15.md \"§23.15 Definitions ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions\") – [23.19](./23.19.md \"§23.19 Interrelations ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions\") .\nRamanujan ([1921](./bib/R.html#bib1924 \"Congruence properties of partitions\")) gives identities that imply divisibility properties of the partition function. For example, the Ramanujan identity\nimplies $p\\left(5n+4\\right)\\equiv 0\\pmod{5}$ . Ramanujan also found that $p\\left(7n+5\\right)\\equiv 0\\pmod{7}$ and $p\\left(11n+6\\right)\\equiv 0\\pmod{11}$ for all $n$ . After decades of nearly fruitless searching for further congruences of this type, it was believed that no others existed, until it was shown in Ono ([2000](./bib/O.html#bib1815 \"Distribution of the partition function modulo m\")) that there are infinitely many. Ono proved that for every prime $q>3$ there are integers $a$ and $b$ such that $p\\left(an+b\\right)\\equiv 0\\pmod{q}$ for all $n$ . For example, $p\\left(1575\\;25693n+1\\;11247\\right)\\equiv 0\\pmod{13}$ .\nThe *discriminant function* $\\Delta\\left(\\tau\\right)$ is defined by\nand satisfies the functional equation\nif $a,b,c,d$ are integers with $ad-bc=1$ and $c>0$ .\nThe 24th power of $\\eta\\left(\\tau\\right)$ in ( 27.14.12 ) with $e^{2\\pi\\mathrm{i}\\tau}=x$ is an infinite product that generates a power series in $x$ with integer coefficients called *Ramanujan’s tau function* $\\tau\\left(n\\right)$ :\nThe tau function is multiplicative and satisfies the more general relation:\nLehmer ([1947](./bib/L.html#bib1409 \"The vanishing of Ramanujan’s function ⁢ τ ( n )\")) conjectures that $\\tau\\left(n\\right)$ is never 0 and verifies this for all $n<21\\;49286\\;39999$ by studying various congruences satisfied by $\\tau\\left(n\\right)$ , for example:\nFor further information on partitions and generating functions see Andrews ([1976](./bib/index.html#bib92 \"The Theory of Partitions\")); also §§ [17.2](./17.2.md \"§17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions\") – [17.14](./17.14.md \"§17.14 Constant Term Identities ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions\") , and §§ [26.9](./26.9.md \"§26.9 Integer Partitions: Restricted Number and Part Size ‣ Properties ‣ Chapter 26 Combinatorial Analysis\") – [26.10](./26.10.md \"§26.10 Integer Partitions: Other Restrictions ‣ Properties ‣ Chapter 26 Combinatorial Analysis\") .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "27.14.1",
+                "latex": "n=a_{1}+a_{2}+\\cdots, \\tag{27.14.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "27.14.2",
+                "latex": "\\mathit{f}\\left(x\\right)=\\prod_{m=1}^{\\infty}(1-x^{m})=\\left(x;x\\right)_{\\infty}, \\tag{27.14.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "27.14.3",
+                "latex": "\\frac{1}{\\mathit{f}\\left(x\\right)}=\\sum_{n=0}^{\\infty}p\\left(n\\right)x^{n}, \\tag{27.14.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "27.14.4",
+                "latex": "\\mathit{f}\\left(x\\right)=1-x-x^{2}+x^{5}+x^{7}-x^{12}-x^{15}+\\dots=1+\\sum_{k=1}^{\\infty}(-1)^{k}\\left(x^{\\omega(k)}+x^{\\omega(-k)}\\right), \\tag{27.14.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "27.14.5",
+                "latex": "\\omega(\\pm k)=(3k^{2}\\mp k)/2, \\tag{27.14.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "27.14.6",
+                "latex": "p\\left(n\\right)=\\sum_{k=1}^{\\infty}(-1)^{k+1}\\left(p\\left(n-\\omega(k)\\right)+p\\left(n-\\omega(-k)\\right)\\right)=p\\left(n-1\\right)+p\\left(n-2\\right)-p\\left(n-5\\right)-p\\left(n-7\\right)+\\cdots, \\tag{27.14.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "27.14.7",
+                "latex": "np\\left(n\\right)=\\sum_{k=1}^{n}\\sigma_{1}\\left(k\\right)p\\left(n-k\\right), \\tag{27.14.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "27.14.8",
+                "latex": "p\\left(n\\right)\\sim\\frac{{\\mathrm{e}}^{K\\sqrt{n}}}{4n\\sqrt{3}}, \\tag{27.14.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "27.14.9",
+                "latex": "p\\left(n\\right)=\\frac{1}{\\pi\\sqrt{2}}\\sum_{k=1}^{\\infty}\\sqrt{k}A_{k}(n)\\,\\left[\\frac{\\mathrm{d}}{\\mathrm{d}t}\\frac{\\sinh\\left(\\frac{K\\sqrt{t}}{k}\\right)}{\\sqrt{t}}\\right]_{t=n-(1/24)}, \\tag{27.14.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "27.14.10",
+                "latex": "A_{k}(n)=\\sum_{\\begin{subarray}{c}h=1\\\\\n\\left(h,k\\right)=1\\end{subarray}}^{k}\\exp\\left(\\pi\\mathrm{i}s(h,k)-2\\pi\\mathrm{i}n\\frac{h}{k}\\right), \\tag{27.14.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "27.14.11",
+                "latex": "s(h,k)=\\sum_{r=1}^{k-1}\\frac{r}{k}\\left(\\frac{hr}{k}-\\left\\lfloor\\frac{hr}{k}\\right\\rfloor-\\frac{1}{2}\\right). \\tag{27.14.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "27.14.12",
+                "latex": "\\eta\\left(\\tau\\right)=e^{\\pi\\mathrm{i}\\tau/12}\\prod_{n=1}^{\\infty}(1-e^{2\\pi\\mathrm{i}n\\tau}), \\tag{27.14.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "27.14.13",
+                "latex": "\\eta\\left(\\tau\\right)=e^{\\pi\\mathrm{i}\\tau/12}\\mathit{f}\\left(e^{2\\pi\\mathrm{i}\\tau}\\right). \\tag{27.14.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "27.14.14",
+                "latex": "\\eta\\left(\\frac{a\\tau+b}{c\\tau+d}\\right)=\\varepsilon(-\\mathrm{i}(c\\tau+d))^{\\frac{1}{2}}\\eta\\left(\\tau\\right), \\tag{27.14.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "27.14.15",
+                "latex": "5\\frac{(\\mathit{f}\\left(x^{5}\\right))^{5}}{(\\mathit{f}\\left(x\\right))^{6}}=\\sum_{n=0}^{\\infty}p\\left(5n+4\\right)x^{n} \\tag{27.14.15}"
+              },
+              {
+                "id": "E16",
+                "tag": "27.14.16",
+                "latex": "\\Delta\\left(\\tau\\right)=(2\\pi)^{12}(\\eta\\left(\\tau\\right))^{24}, \\tag{27.14.16}"
+              },
+              {
+                "id": "E17",
+                "tag": "27.14.17",
+                "latex": "\\Delta\\left(\\frac{a\\tau+b}{c\\tau+d}\\right)=(c\\tau+d)^{12}\\Delta\\left(\\tau\\right), \\tag{27.14.17}"
+              },
+              {
+                "id": "E18",
+                "tag": "27.14.18",
+                "latex": "x\\prod_{n=1}^{\\infty}(1-x^{n})^{24}=\\sum_{n=1}^{\\infty}\\tau\\left(n\\right)x^{n}, \\tag{27.14.18}"
+              },
+              {
+                "id": "E19",
+                "tag": "27.14.19",
+                "latex": "\\tau\\left(m\\right)\\tau\\left(n\\right)=\\sum_{d\\mathbin{|}\\left(m,n\\right)}d^{11}\\tau\\left(\\frac{mn}{d^{2}}\\right), \\tag{27.14.19}"
+              },
+              {
+                "id": "E20",
+                "tag": "27.14.20",
+                "latex": "\\tau\\left(n\\right)\\equiv\\sigma_{11}\\left(n\\right)\\pmod{691}. \\tag{27.14.20}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "n=a_{1}+a_{2}+\\cdots, \\tag{27.14.1}",
+              "\\mathit{f}\\left(x\\right)=\\prod_{m=1}^{\\infty}(1-x^{m})=\\left(x;x\\right)_{\\infty}, \\tag{27.14.2}",
+              "\\frac{1}{\\mathit{f}\\left(x\\right)}=\\sum_{n=0}^{\\infty}p\\left(n\\right)x^{n}, \\tag{27.14.3}",
+              "\\mathit{f}\\left(x\\right)=1-x-x^{2}+x^{5}+x^{7}-x^{12}-x^{15}+\\dots=1+\\sum_{k=1}^{\\infty}(-1)^{k}\\left(x^{\\omega(k)}+x^{\\omega(-k)}\\right), \\tag{27.14.4}",
+              "\\omega(\\pm k)=(3k^{2}\\mp k)/2, \\tag{27.14.5}",
+              "p\\left(n\\right)=\\sum_{k=1}^{\\infty}(-1)^{k+1}\\left(p\\left(n-\\omega(k)\\right)+p\\left(n-\\omega(-k)\\right)\\right)=p\\left(n-1\\right)+p\\left(n-2\\right)-p\\left(n-5\\right)-p\\left(n-7\\right)+\\cdots, \\tag{27.14.6}",
+              "np\\left(n\\right)=\\sum_{k=1}^{n}\\sigma_{1}\\left(k\\right)p\\left(n-k\\right), \\tag{27.14.7}",
+              "p\\left(n\\right)\\sim\\frac{{\\mathrm{e}}^{K\\sqrt{n}}}{4n\\sqrt{3}}, \\tag{27.14.8}",
+              "p\\left(n\\right)=\\frac{1}{\\pi\\sqrt{2}}\\sum_{k=1}^{\\infty}\\sqrt{k}A_{k}(n)\\,\\left[\\frac{\\mathrm{d}}{\\mathrm{d}t}\\frac{\\sinh\\left(\\frac{K\\sqrt{t}}{k}\\right)}{\\sqrt{t}}\\right]_{t=n-(1/24)}, \\tag{27.14.9}",
+              "A_{k}(n)=\\sum_{\\begin{subarray}{c}h=1\\\\\n\\left(h,k\\right)=1\\end{subarray}}^{k}\\exp\\left(\\pi\\mathrm{i}s(h,k)-2\\pi\\mathrm{i}n\\frac{h}{k}\\right), \\tag{27.14.10}",
+              "s(h,k)=\\sum_{r=1}^{k-1}\\frac{r}{k}\\left(\\frac{hr}{k}-\\left\\lfloor\\frac{hr}{k}\\right\\rfloor-\\frac{1}{2}\\right). \\tag{27.14.11}",
+              "\\eta\\left(\\tau\\right)=e^{\\pi\\mathrm{i}\\tau/12}\\prod_{n=1}^{\\infty}(1-e^{2\\pi\\mathrm{i}n\\tau}), \\tag{27.14.12}",
+              "\\eta\\left(\\tau\\right)=e^{\\pi\\mathrm{i}\\tau/12}\\mathit{f}\\left(e^{2\\pi\\mathrm{i}\\tau}\\right). \\tag{27.14.13}",
+              "\\eta\\left(\\frac{a\\tau+b}{c\\tau+d}\\right)=\\varepsilon(-\\mathrm{i}(c\\tau+d))^{\\frac{1}{2}}\\eta\\left(\\tau\\right), \\tag{27.14.14}",
+              "5\\frac{(\\mathit{f}\\left(x^{5}\\right))^{5}}{(\\mathit{f}\\left(x\\right))^{6}}=\\sum_{n=0}^{\\infty}p\\left(5n+4\\right)x^{n} \\tag{27.14.15}",
+              "\\Delta\\left(\\tau\\right)=(2\\pi)^{12}(\\eta\\left(\\tau\\right))^{24}, \\tag{27.14.16}",
+              "\\Delta\\left(\\frac{a\\tau+b}{c\\tau+d}\\right)=(c\\tau+d)^{12}\\Delta\\left(\\tau\\right), \\tag{27.14.17}",
+              "x\\prod_{n=1}^{\\infty}(1-x^{n})^{24}=\\sum_{n=1}^{\\infty}\\tau\\left(n\\right)x^{n}, \\tag{27.14.18}",
+              "\\tau\\left(m\\right)\\tau\\left(n\\right)=\\sum_{d\\mathbin{|}\\left(m,n\\right)}d^{11}\\tau\\left(\\frac{mn}{d^{2}}\\right), \\tag{27.14.19}",
+              "\\tau\\left(n\\right)\\equiv\\sigma_{11}\\left(n\\right)\\pmod{691}. \\tag{27.14.20}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "additive number theory",
+                "partition function",
+                "parts",
+                "unrestricted",
+                "Euler’s pentagonal number theorem",
+                "generating function",
+                "number theory",
+                "pentagonal numbers",
+                "Dedekind sum",
+                "Dedekind sums",
+                "asymptotic expansion",
+                "calculation",
+                "Dedekind modular function",
+                "functional equation",
+                "Ramanujan congruences",
+                "Ramanujan’s identity",
+                "Ramanujan’s partition identity",
+                "divisibility",
+                "Ramanujan’s tau function",
+                "discriminant function"
+              ],
+              "referenciado_por": [
+                "§17.2(i)",
+                "§26.9(i)",
+                "§17.16",
+                "§27.14(ii)",
+                "Erratum (V1.0.28) for Subsection 17.2(i)",
+                "§23.18",
+                "§23.20(v)",
+                "Erratum (V1.0.19) for Notation"
+              ],
+              "notas_bibliograficas": [
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), p. 307).",
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), Chapter 14).",
+                "See Apostol ([1990](./bib/index.html#bib119 \"Modular Functions and Dirichlet Series in Number Theory\"), Chapters 3–5).",
+                "See Apostol ([1990](./bib/index.html#bib119 \"Modular Functions and Dirichlet Series in Number Theory\"), Chapters 3–5).",
+                "See Apostol ([1976](./bib/index.html#bib115 \"Introduction to Analytic Number Theory\"), Chapter 14).",
+                "See Apostol ([1990](./bib/index.html#bib119 \"Modular Functions and Dirichlet Series in Number Theory\"), Chapters 3–5)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27",
+                "Annotations for §27.14 and Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/index.html#bib119",
+                "titulo_referencia": "Modular Functions and Dirichlet Series in Number Theory"
+              },
+              {
+                "texto": "1918",
+                "archivo_destino": "bib/H.html#bib1046",
+                "titulo_referencia": "Asymptotic formulae in combinatory analysis"
+              },
+              {
+                "texto": "1938",
+                "archivo_destino": "bib/R.html#bib1916",
+                "titulo_referencia": "On the partition function p(n)"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/index.html#bib119",
+                "titulo_referencia": "Modular Functions and Dirichlet Series in Number Theory"
+              },
+              {
+                "texto": "23.15",
+                "archivo_destino": "23.15.md",
+                "titulo_referencia": "§23.15 Definitions ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"
+              },
+              {
+                "texto": "23.19",
+                "archivo_destino": "23.19.md",
+                "titulo_referencia": "§23.19 Interrelations ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib115",
+                "titulo_referencia": "Introduction to Analytic Number Theory"
+              },
+              {
+                "texto": "1921",
+                "archivo_destino": "bib/R.html#bib1924",
+                "titulo_referencia": "Congruence properties of partitions"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/O.html#bib1815",
+                "titulo_referencia": "Distribution of the partition function modulo m"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/index.html#bib119",
+                "titulo_referencia": "Modular Functions and Dirichlet Series in Number Theory"
+              },
+              {
+                "texto": "1947",
+                "archivo_destino": "bib/L.html#bib1409",
+                "titulo_referencia": "The vanishing of Ramanujan’s function ⁢ τ ( n )"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/index.html#bib92",
+                "titulo_referencia": "The Theory of Partitions"
+              },
+              {
+                "texto": "17.2",
+                "archivo_destino": "17.2.md",
+                "titulo_referencia": "§17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"
+              },
+              {
+                "texto": "17.14",
+                "archivo_destino": "17.14.md",
+                "titulo_referencia": "§17.14 Constant Term Identities ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"
+              },
+              {
+                "texto": "26.9",
+                "archivo_destino": "26.9.md",
+                "titulo_referencia": "§26.9 Integer Partitions: Restricted Number and Part Size ‣ Properties ‣ Chapter 26 Combinatorial Analysis"
+              },
+              {
+                "texto": "26.10",
+                "archivo_destino": "26.10.md",
+                "titulo_referencia": "§26.10 Integer Partitions: Other Restrictions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Applications",
+      "secciones": [
+        {
+          "seccion_id": "27.15",
+          "titulo_original": "Chinese Remainder Theorem",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.15.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.15.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.15 Chinese Remainder Theorem",
+            "prosa_teorica": "The Chinese remainder theorem states that a system of congruences $x\\equiv a_{1}\\pmod{m_{1}},\\dots,x\\equiv a_{k}\\pmod{m_{k}}$ , always has a solution if the moduli are relatively prime in pairs; the solution is unique (mod $m$ ), where $m$ is the product of the moduli.\nThis theorem is employed to increase efficiency in calculating with large numbers by making use of smaller numbers in most of the calculation. For example, suppose a lengthy calculation involves many 10-digit integers. Most of the calculation can be done with five-digit integers as follows. Choose four relatively prime moduli $m_{1},m_{2},m_{3}$ , and $m_{4}$ of five digits each, for example $2^{16}-3$ , $2^{16}-1$ , $2^{16}+1$ , and $2^{16}+3$ . Their product $m$ has 20 digits, twice the number of digits in the data. By the Chinese remainder theorem each integer in the data can be uniquely represented by its residues (mod $m_{1}$ ), (mod $m_{2}$ ), (mod $m_{3}$ ), and (mod $m_{4}$ ), respectively. Because each residue has no more than five digits, the arithmetic can be performed efficiently on these residues with respect to each of the moduli, yielding answers $a_{1}\\pmod{m_{1}}$ , $a_{2}\\pmod{m_{2}}$ , $a_{3}\\pmod{m_{3}}$ , and $a_{4}\\pmod{m_{4}}$ , where each $a_{j}$ has no more than five digits. These numbers, in turn, are combined by the Chinese remainder theorem to obtain the final result $\\pmod{m}$ , which is correct to 20 digits.\nEven though the lengthy calculation is repeated four times, once for each modulus, most of it only uses five-digit integers and is accomplished quickly without overwhelming the machine’s memory. Details of a machine program describing the method together with typical numerical results can be found in Newman ([1967](./bib/N.html#bib1715 \"Solving equations exactly\")). See also Apostol and Niven ([1994](./bib/index.html#bib120 \"Number Theory\"), pp. 18–19).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Chinese remainder theorem",
+                "number theory"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.0.19) for Notation"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/N.html#bib1715",
+                "titulo_referencia": "Solving equations exactly"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/index.html#bib120",
+                "titulo_referencia": "Number Theory"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.16",
+          "titulo_original": "Cryptography",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.16.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.16.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.16 Cryptography",
+            "prosa_teorica": "Applications to cryptography rely on the disparity in computer time required to find large primes and to factor large integers.\nFor example, a code maker chooses two large primes $p$ and $q$ of about 400 decimal digits each. Procedures for finding such primes require very little computer time. The primes are kept secret but their product $n=pq$ , an 800-digit number, is made public. For this reason, these are often called public key codes. Messages are coded by a method (described below) that requires only the knowledge of $n$ . But to decode, both factors $p$ and $q$ must be known. With the most efficient computer techniques devised to date (2010), factoring an 800-digit number may require billions of years on a single computer. For this reason, the codes are considered unbreakable, at least with the current state of knowledge on factoring large numbers.\nTo code a message by this method, we replace each letter by two digits, say $A=01$ , $B=02$ , $\\dots$ , $Z=26$ , and divide the message into pieces of convenient length smaller than the public value $n=pq$ . Choose a prime $r$ that does not divide either $p-1$ or $q-1$ . Like $n$ , the prime $r$ is made public. To code a piece $x$ , raise $x$ to the power $r$ and reduce $x^{r}$ modulo $n$ to obtain an integer $y$ (the coded form of $x$ ) between $1$ and $n$ . Thus, $y\\equiv x^{r}\\pmod{n}$ and $1\\leq y<n$ .\nTo decode, we must recover $x$ from $y$ . To do this, let $s$ denote the reciprocal of $r$ modulo $\\phi\\left(n\\right)$ , so that $rs=1+t\\phi\\left(n\\right)$ for some integer $t$ . (Here $\\phi\\left(n\\right)$ is Euler’s totient (§ [27.2](./27.2.md \"§27.2 Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory\") ).) By the Euler–Fermat theorem ( 27.2.8 ), $x^{\\phi\\left(n\\right)}\\equiv 1\\pmod{n}$ ; hence $x^{t\\phi\\left(n\\right)}\\equiv 1\\pmod{n}$ . But $y^{s}\\equiv x^{rs}\\equiv x^{1+t\\phi\\left(n\\right)}\\equiv x\\pmod{n}$ , so $y^{s}$ is the same as $x$ modulo $n$ . In other words, to recover $x$ from $y$ we simply raise $y$ to the power $s$ and reduce modulo $n$ . If $p$ and $q$ are known, $s$ and $y^{s}$ can be determined (mod $n$ ) by straightforward calculations that require only a few minutes of machine time. But if $p$ and $q$ are not known, the problem of recovering $x$ from $y$ seems insurmountable.\nFor further information see Apostol and Niven ([1994](./bib/index.html#bib120 \"Number Theory\"), p. 24), and for other applications to cryptography see Menezes et al. ([1997](./bib/M.html#bib1600 \"Handbook of Applied Cryptography\")) and Schroeder ([2006](./bib/S.html#bib2020 \"Number Theory in Science and Communication: With Applications in Cryptography, Physics, Digital Information, Computing, and Self-Similarity\")).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Euler–Fermat theorem",
+                "applications",
+                "cryptography",
+                "number theory",
+                "prime numbers",
+                "public key codes"
+              ],
+              "referenciado_por": [
+                "§23.20(iii)",
+                "Erratum (V1.0.1) for Clarifications",
+                "Erratum (V1.0.19) for Notation  **Update (effective with 1.0.1):**  The data in the second paragraph of this section was updated to 2010. *Suggested 2011-01-07 by Francois Grieu*"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "27.2",
+                "archivo_destino": "27.2.md",
+                "titulo_referencia": "§27.2 Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/index.html#bib120",
+                "titulo_referencia": "Number Theory"
+              },
+              {
+                "texto": "1997",
+                "archivo_destino": "bib/M.html#bib1600",
+                "titulo_referencia": "Handbook of Applied Cryptography"
+              },
+              {
+                "texto": "2006",
+                "archivo_destino": "bib/S.html#bib2020",
+                "titulo_referencia": "Number Theory in Science and Communication: With Applications in Cryptography, Physics, Digital Information, Computing, and Self-Similarity"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.17",
+          "titulo_original": "Other Applications",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.17.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.17.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.17 Other Applications",
+            "prosa_teorica": "Reed et al. ([1990](./bib/R.html#bib1933 \"Fourier analysis and signal processing by use of the Möbius inversion formula\"), pp. 458–470) describes a number-theoretic approach to Fourier analysis (called the *arithmetic Fourier transform* ) that uses the Möbius inversion ( 27.5.7 ) to increase efficiency in computing coefficients of Fourier series.\nCongruences are used in constructing perpetual calendars, splicing telephone cables, scheduling round-robin tournaments, devising systematic methods for storing computer files, and generating pseudorandom numbers. Rosen ([2004](./bib/R.html#bib1969 \"Elementary Number Theory and its Applications\"), Chapters 5 and 10) describes many of these applications. Apostol and Zuckerman ([1951](./bib/index.html#bib124 \"On magic squares constructed by the uniform step method\")) uses congruences to construct magic squares.\nThere are also applications of number theory in many diverse areas, including physics, biology, chemistry, communications, and art. Schroeder ([2006](./bib/S.html#bib2020 \"Number Theory in Science and Communication: With Applications in Cryptography, Physics, Digital Information, Computing, and Self-Similarity\")) describes many of these applications, including the design of concert hall ceilings to scatter sound into broad lateral patterns for improved acoustic quality, precise measurements of delays of radar echoes from Venus and Mercury to confirm one of the relativistic effects predicted by Einstein’s theory of general relativity, and the use of primes in creating artistic graphical designs.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Möbius inversion",
+                "arithmetic Fourier transform",
+                "magic squares",
+                "number theory",
+                "number-theoretic functions",
+                "round-robin tournaments"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/R.html#bib1933",
+                "titulo_referencia": "Fourier analysis and signal processing by use of the Möbius inversion formula"
+              },
+              {
+                "texto": "2004",
+                "archivo_destino": "bib/R.html#bib1969",
+                "titulo_referencia": "Elementary Number Theory and its Applications"
+              },
+              {
+                "texto": "1951",
+                "archivo_destino": "bib/index.html#bib124",
+                "titulo_referencia": "On magic squares constructed by the uniform step method"
+              },
+              {
+                "texto": "2006",
+                "archivo_destino": "bib/S.html#bib2020",
+                "titulo_referencia": "Number Theory in Science and Communication: With Applications in Cryptography, Physics, Digital Information, Computing, and Self-Similarity"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Computation",
+      "secciones": [
+        {
+          "seccion_id": "27.18",
+          "titulo_original": "Methods of Computation: Primes",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.18.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.18.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.18 Methods of Computation: Primes",
+            "prosa_teorica": "An overview of methods for precise counting of the number of primes not exceeding an arbitrary integer $x$ is given in Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), §3.7). T. Oliveira e Silva has calculated $\\pi\\left(x\\right)$ for $x=10^{23}$ , using the combinatorial methods of Lagarias et al. ([1985](./bib/L.html#bib1367 \"Computing ⁢ π ( x ) : The Meissel-Lehmer method\")) and Deléglise and Rivat ([1996](./bib/D.html#bib644 \"Computing ⁢ π ( x ) : The Meissel, Lehmer, Lagarias, Miller, Odlyzko method\")); see Oliveira e Silva ([2006](./bib/O.html#bib2733 \"Computing ⁢ π ( x ) : The combinatorial method\")). An analytic approach using a contour integral of the Riemann zeta function (§ 25.2(i) ) is discussed in Borwein et al. ([2000](./bib/B.html#bib317 \"Computational strategies for the Riemann zeta function\")).\nThe *Sieve of Eratosthenes* (Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), §3.2)) generates a list of all primes below a given bound. An alternative procedure is the *binary quadratic sieve* of Atkin and Bernstein (Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), p. 170)).\nFor small values of $n$ , primality is proven by showing that $n$ is not divisible by any prime not exceeding $\\sqrt{n}$ .\nTwo simple algorithms for proving primality require a knowledge of all or part of the factorization of $n-1,n+1$ , or both; see Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), §§4.1–4.2). These algorithms are used for testing primality of *Mersenne numbers* , $2^{n}-1$ , and *Fermat numbers* , $2^{2^{n}}+1$ .\nThe *APR (Adleman–Pomerance–Rumely)* algorithm for primality testing is based on Jacobi sums. It runs in time $O\\left((\\ln n)^{c\\ln\\ln\\ln n}\\right)$ . Explanations are given in Cohen ([1993](./bib/C.html#bib555 \"A Course in Computational Algebraic Number Theory\"), §9.1) and Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), §4.4). A practical version is described in Bosma and van der Hulst ([1990](./bib/B.html#bib321 \"Faster Primality Testing\")).\nThe *AKS (Agrawal–Kayal–Saxena)* algorithm is the first deterministic, polynomial-time, primality test. That is to say, it runs in time $O\\left((\\ln n)^{c}\\right)$ for some constant $c$ . An explanation is given in Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), §4.5).\nThe *ECPP (Elliptic Curve Primality Proving)* algorithm handles primes with over 20,000 digits. Explanations are given in Cohen ([1993](./bib/C.html#bib555 \"A Course in Computational Algebraic Number Theory\"), §9.2) and Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), §7.6).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Fermat numbers",
+                "Mersenne numbers",
+                "Mersenne prime",
+                "binary quadratic sieve",
+                "counting",
+                "number theory",
+                "prime numbers",
+                "sieve of Eratosthenes"
+              ],
+              "referenciado_por": [
+                "Ch.27"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "1985",
+                "archivo_destino": "bib/L.html#bib1367",
+                "titulo_referencia": "Computing ⁢ π ( x ) : The Meissel-Lehmer method"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/D.html#bib644",
+                "titulo_referencia": "Computing ⁢ π ( x ) : The Meissel, Lehmer, Lagarias, Miller, Odlyzko method"
+              },
+              {
+                "texto": "2006",
+                "archivo_destino": "bib/O.html#bib2733",
+                "titulo_referencia": "Computing ⁢ π ( x ) : The combinatorial method"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/B.html#bib317",
+                "titulo_referencia": "Computational strategies for the Riemann zeta function"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/C.html#bib555",
+                "titulo_referencia": "A Course in Computational Algebraic Number Theory"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/B.html#bib321",
+                "titulo_referencia": "Faster Primality Testing"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/C.html#bib555",
+                "titulo_referencia": "A Course in Computational Algebraic Number Theory"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.19",
+          "titulo_original": "Methods of Computation: Factorization",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.19.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.19.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.19 Methods of Computation: Factorization",
+            "prosa_teorica": "Techniques for factorization of integers fall into three general classes: *Deterministic algorithms* , *Type I probabilistic algorithms* whose expected running time depends on the size of the smallest prime factor, and *Type II probabilistic algorithms* whose expected running time depends on the size of the number to be factored.\nDeterministic algorithms are slow but are guaranteed to find the factorization within a known period of time. Trial division is one example. Fermat’s algorithm is another; see Bressoud ([1989](./bib/B.html#bib347 \"Factorization and Primality Testing\"), §5.1).\nType I probabilistic algorithms include the *Brent–Pollard rho algorithm* (also called *Monte Carlo method* ), the *Pollard $p-1$ algorithm* , and the *Elliptic Curve Method* ( ecm ). Descriptions of these algorithms are given in Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), §§5.2, 5.4, and 7.4). As of January 2009 the largest prime factors found by these methods are a 19-digit prime for Brent–Pollard rho, a 58-digit prime for Pollard $p-1$ , and a 67-digit prime for ecm .\nType II probabilistic algorithms for factoring $n$ rely on finding a pseudo-random pair of integers $(x,y)$ that satisfy $x^{2}\\equiv y^{2}\\pmod{n}$ . These algorithms include the *Continued Fraction Algorithm* ( cfrac ), the *Multiple Polynomial Quadratic Sieve* ( mpqs ), the *General Number Field Sieve* ( gnfs ), and the *Special Number Field Sieve* ( snfs ). A description of cfrac is given in Bressoud and Wagon ([2000](./bib/B.html#bib349 \"A Course in Computational Number Theory\")). Descriptions of mpqs , gnfs , and snfs are given in Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\"), §§6.1 and 6.2). As of January 2009 the snfs holds the record for the largest integer that has been factored by a Type II probabilistic algorithm, a 307-digit composite integer. The snfs can be applied only to numbers that are very close to a power of a very small base. The largest composite numbers that have been factored by other Type II probabilistic algorithms are a 63-digit integer by cfrac , a 135-digit integer by mpqs , and a 182-digit integer by gnfs .\nFor further information see Crandall and Pomerance ([2005](./bib/C.html#bib596 \"Prime Numbers: A Computational Perspective\")) and § [26.22](./26.22.md \"§26.22 Software ‣ Computation ‣ Chapter 26 Combinatorial Analysis\") .\nFor current records see [Cunningham Project](./http://homes.cerias.purdue.edu/homes/ssw/cun/index.md) .",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "factorization",
+                "of integers",
+                "pseudorandom numbers"
+              ],
+              "referenciado_por": [
+                "1st item",
+                "2nd item",
+                "Ch.27",
+                "Erratum (V1.0.19) for Notation"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/B.html#bib347",
+                "titulo_referencia": "Factorization and Primality Testing"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/B.html#bib349",
+                "titulo_referencia": "A Course in Computational Number Theory"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/C.html#bib596",
+                "titulo_referencia": "Prime Numbers: A Computational Perspective"
+              },
+              {
+                "texto": "26.22",
+                "archivo_destino": "26.22.md",
+                "titulo_referencia": "§26.22 Software ‣ Computation ‣ Chapter 26 Combinatorial Analysis"
+              },
+              {
+                "texto": "Cunningham Project",
+                "archivo_destino": "http://homes.cerias.purdue.edu/homes/ssw/cun/index.md",
+                "titulo_referencia": ""
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.20",
+          "titulo_original": "Methods of Computation: Other Number-Theoretic Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.20.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.20.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.20 Methods of Computation: Other Number-Theoretic Functions",
+            "prosa_teorica": "To calculate a multiplicative function it suffices to determine its values at the prime powers and then use ( 27.3.2 ). For a completely multiplicative function we use the values at the primes together with ( 27.3.10 ).\nThe recursion formulas ( 27.14.6 ) and ( 27.14.7 ) can be used to calculate the partition function $p\\left(n\\right)$ for $n<N$ . See Calkin et al. ([2007](./bib/C.html#bib2876 \"Computing the integer partition function\")), and Lehmer ([1941](./bib/L.html#bib1407 \"Guide to Tables in the Theory of Numbers\"), pp. 5–83). To compute a particular value $p\\left(n\\right)$ it is better to use the Hardy–Ramanujan–Rademacher series ( 27.14.9 ). See Johansson ([2012](./bib/J.html#bib2877 \"Efficient implementation of the Hardy-Ramanujan-Rademacher formula\")).\nA recursion formula obtained by differentiating ( 27.14.18 ) can be used to calculate Ramanujan’s function $\\tau\\left(n\\right)$ , and the values can be checked by the congruence ( 27.14.20 ). See Lehmer ([1943](./bib/L.html#bib1408 \"Ramanujan’s function ⁢ τ ( n )\"), pp. 483–492).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "computation",
+                "number-theoretic functions"
+              ],
+              "referenciado_por": [
+                "§27.20",
+                "Erratum (V1.0.11) for Section 27.20  **Replacement (effective with 1.0.11):**  [27.20](./27.20.md \"§27.20 Methods of Computation: Other Number-Theoretic Functions ‣ Computation ‣ Chapter 27 Functions of Number Theory\") which read",
+                "To calculate a multiplicative function it suffices to determine its values at the prime powers and then use ( 27.3.2 ). For a completely multiplicative function we use the values at the primes together with ( 27.3.10 ). The recursion formulas ( 27.14.6 ) and ( 27.14.7 ) can be used to calculate the partition function $p\\left(n\\right)$ . A similar recursion formula obtained by differentiating ( 27.14.18 ) can be used to calculate Ramanujan’s function $\\tau\\left(n\\right)$",
+                "and the values can be checked by the congruence ( 27.14.20 ). For further information see Lehmer ([1941](./bib/L.html#bib1407 \"Guide to Tables in the Theory of Numbers\")",
+                "pp. 5–83) and Lehmer ([1943](./bib/L.html#bib1408 \"Ramanujan’s function ⁢ τ ( n )\")",
+                "pp. 483–492). was replaced."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "27.20",
+                "archivo_destino": "27.20.md",
+                "titulo_referencia": "§27.20 Methods of Computation: Other Number-Theoretic Functions ‣ Computation ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "1941",
+                "archivo_destino": "bib/L.html#bib1407",
+                "titulo_referencia": "Guide to Tables in the Theory of Numbers"
+              },
+              {
+                "texto": "1943",
+                "archivo_destino": "bib/L.html#bib1408",
+                "titulo_referencia": "Ramanujan’s function ⁢ τ ( n )"
+              },
+              {
+                "texto": "2007",
+                "archivo_destino": "bib/C.html#bib2876",
+                "titulo_referencia": "Computing the integer partition function"
+              },
+              {
+                "texto": "1941",
+                "archivo_destino": "bib/L.html#bib1407",
+                "titulo_referencia": "Guide to Tables in the Theory of Numbers"
+              },
+              {
+                "texto": "2012",
+                "archivo_destino": "bib/J.html#bib2877",
+                "titulo_referencia": "Efficient implementation of the Hardy-Ramanujan-Rademacher formula"
+              },
+              {
+                "texto": "1943",
+                "archivo_destino": "bib/L.html#bib1408",
+                "titulo_referencia": "Ramanujan’s function ⁢ τ ( n )"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.21",
+          "titulo_original": "Tables",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.21.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.21.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.21 Tables",
+            "prosa_teorica": "Lehmer ([1914](./bib/L.html#bib1405 \"List of Prime Numbers from 1 to 10,006,721\")) lists all primes up to 100 06721. Bressoud and Wagon ([2000](./bib/B.html#bib349 \"A Course in Computational Number Theory\"), pp. 103–104) supplies tables and graphs that compare $\\pi\\left(x\\right),\\frac{x}{\\ln x}$ , and $\\operatorname{li}\\left(x\\right)$ . Glaisher ([1940](./bib/G.html#bib942 \"Number-Divisor Tables\")) contains four tables: Table I tabulates, for all $n\\leq 10^{4}$ : (a) the canonical factorization of $n$ into powers of primes; (b) the Euler totient $\\phi\\left(n\\right)$ ; (c) the divisor function $d\\left(n\\right)$ ; (d) the sum $\\sigma(n)$ of these divisors. Table II lists all solutions $n$ of the equation $\\mathit{f}\\left(n\\right)=m$ for all $m\\leq 2500$ , where $\\mathit{f}\\left(n\\right)$ is defined by ( 27.14.2 ). Table III lists all solutions $n\\leq 10^{4}$ of the equation $d\\left(n\\right)=m$ , and Table IV lists all solutions $n$ of the equation $\\sigma(n)=m$ for all $m\\leq 10^{4}$ . Table 24.7 of Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\")) also lists the factorizations in Glaisher’s Table I(a); Table 24.6 lists $\\phi\\left(n\\right),d\\left(n\\right)$ , and $\\sigma(n)$ for $n\\leq 1000$ ; Table 24.8 gives examples of primitive roots of all primes $\\leq 9973$ ; Table 24.9 lists all primes that are less than 1 00000.\nThe partition function $p\\left(n\\right)$ is tabulated in Gupta ([1935](./bib/G.html#bib1004 \"A table of partitions\"), [1937](./bib/G.html#bib1005 \"A table of partitions (II)\")), Watson ([1937](./bib/W.html#bib2379 \"Two tables of partitions\")), and Gupta et al. ([1958](./bib/G.html#bib1006 \"Tables of Partitions\")). Tables of the Ramanujan function $\\tau\\left(n\\right)$ are published in Lehmer ([1943](./bib/L.html#bib1408 \"Ramanujan’s function ⁢ τ ( n )\")) and Watson ([1949](./bib/W.html#bib2381 \"A table of Ramanujan’s function ⁢ τ ( n )\")). Lehmer ([1941](./bib/L.html#bib1407 \"Guide to Tables in the Theory of Numbers\")) gives a comprehensive account of tables in the theory of numbers, including virtually every table published from 1918 to 1941. Those published prior to 1918 are mentioned in Dickson ([1919](./bib/D.html#bib654 \"History of the Theory of Numbers (3 volumes)\")). The bibliography in Lehmer ([1941](./bib/L.html#bib1407 \"Guide to Tables in the Theory of Numbers\")) gives references to the places in Dickson’s History where the older tables are cited. Lehmer ([1941](./bib/L.html#bib1407 \"Guide to Tables in the Theory of Numbers\")) also has a section that supplies errata and corrections to all tables cited.\nNo sequel to Lehmer ([1941](./bib/L.html#bib1407 \"Guide to Tables in the Theory of Numbers\")) exists to date, but many tables of functions of number theory are included in Unpublished Mathematical Tables ([1944](./bib/U.html#bib127 \"Mathematics of Computation Unpublished Mathematical Tables Collection\")).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "computation",
+                "number-theoretic functions",
+                "prime numbers",
+                "tables"
+              ],
+              "referenciado_por": [
+                "§27.2(i)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1914",
+                "archivo_destino": "bib/L.html#bib1405",
+                "titulo_referencia": "List of Prime Numbers from 1 to 10,006,721"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/B.html#bib349",
+                "titulo_referencia": "A Course in Computational Number Theory"
+              },
+              {
+                "texto": "1940",
+                "archivo_destino": "bib/G.html#bib942",
+                "titulo_referencia": "Number-Divisor Tables"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              },
+              {
+                "texto": "1935",
+                "archivo_destino": "bib/G.html#bib1004",
+                "titulo_referencia": "A table of partitions"
+              },
+              {
+                "texto": "1937",
+                "archivo_destino": "bib/G.html#bib1005",
+                "titulo_referencia": "A table of partitions (II)"
+              },
+              {
+                "texto": "1937",
+                "archivo_destino": "bib/W.html#bib2379",
+                "titulo_referencia": "Two tables of partitions"
+              },
+              {
+                "texto": "1958",
+                "archivo_destino": "bib/G.html#bib1006",
+                "titulo_referencia": "Tables of Partitions"
+              },
+              {
+                "texto": "1943",
+                "archivo_destino": "bib/L.html#bib1408",
+                "titulo_referencia": "Ramanujan’s function ⁢ τ ( n )"
+              },
+              {
+                "texto": "1949",
+                "archivo_destino": "bib/W.html#bib2381",
+                "titulo_referencia": "A table of Ramanujan’s function ⁢ τ ( n )"
+              },
+              {
+                "texto": "1941",
+                "archivo_destino": "bib/L.html#bib1407",
+                "titulo_referencia": "Guide to Tables in the Theory of Numbers"
+              },
+              {
+                "texto": "1919",
+                "archivo_destino": "bib/D.html#bib654",
+                "titulo_referencia": "History of the Theory of Numbers (3 volumes)"
+              },
+              {
+                "texto": "1941",
+                "archivo_destino": "bib/L.html#bib1407",
+                "titulo_referencia": "Guide to Tables in the Theory of Numbers"
+              },
+              {
+                "texto": "1941",
+                "archivo_destino": "bib/L.html#bib1407",
+                "titulo_referencia": "Guide to Tables in the Theory of Numbers"
+              },
+              {
+                "texto": "1941",
+                "archivo_destino": "bib/L.html#bib1407",
+                "titulo_referencia": "Guide to Tables in the Theory of Numbers"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/U.html#bib127",
+                "titulo_referencia": "Mathematics of Computation Unpublished Mathematical Tables Collection"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "27.22",
+          "titulo_original": "Software",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/27/27.22.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.22.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§27.22 Software",
+            "prosa_teorica": "In this section we provide links to the known sources of software for factorization and primality testing, as well as additional Web-based resources for information on these topics.\n* [Maple](./bib/M.html#bib2530 \"\"). isprime combines a strong pseudoprime test and a Lucas pseudoprime test. ifactor uses cfrac (§ [27.19](./27.19.md \"§27.19 Methods of Computation: Factorization ‣ Computation ‣ Chapter 27 Functions of Number Theory\") ) after exhausting trial division. Brent–Pollard rho, Square Forms Factorization, and ecm are available also; see § [27.19](./27.19.md \"§27.19 Methods of Computation: Factorization ‣ Computation ‣ Chapter 27 Functions of Number Theory\") .\n* [Mathematica](./bib/M.html#bib2531 \"\"). PrimeQ combines strong pseudoprime tests for the bases 2 and 3 and a Lucas pseudoprime test. No known composite numbers pass these three tests, and Bleichenbacher ([1996](./bib/B.html#bib296 \"Efficiency and Security of Cryptosystems Based on Number Theory\")) has shown that this combination of tests proves primality for integers below $10^{16}$ . Provable PrimeQ uses the Atkin–Goldwasser–Kilian–Morain Elliptic Curve Method to prove primality. FactorInteger tries Brent–Pollard rho, Pollard $p-1$ , and then cfrac after trial division. See § [27.19](./27.19.md \"§27.19 Methods of Computation: Factorization ‣ Computation ‣ Chapter 27 Functions of Number Theory\") . ecm is available also, and the Multiple Polynomial Quadratic sieve is expected in a future release.\n* [Cunningham Project](./bib/C.html#bib2514 \"\"). This includes updates of factorization records.\n* [ECMNET Project](./bib/E.html#bib2516 \"\"). Links to software for elliptic curve methods of factorization and primality testing.\n* [GIMPS](./bib/G.html#bib2522 \"\"). This includes updates of the largest known Mersenne prime.\n* [Number Theory Web](./bib/N.html#bib2541 \"\"). References and links to software for factorization and primality testing.\n* [Prime Pages](./bib/P.html#bib2545 \"\"). Information on primes, primality testing, and factorization including links to programs and lists of primes.\n* [Wolfram’s Mathworld](./bib/W.html#bib2552 \"\"). Descriptions, references, and Mathematica algorithms for factorization and primality testing.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "referenciado_por": [
+                "Ch.27",
+                "§ ‣ Software Cross Index"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.27"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "27.19",
+                "archivo_destino": "27.19.md",
+                "titulo_referencia": "§27.19 Methods of Computation: Factorization ‣ Computation ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "27.19",
+                "archivo_destino": "27.19.md",
+                "titulo_referencia": "§27.19 Methods of Computation: Factorization ‣ Computation ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/B.html#bib296",
+                "titulo_referencia": "Efficiency and Security of Cryptosystems Based on Number Theory"
+              },
+              {
+                "texto": "27.19",
+                "archivo_destino": "27.19.md",
+                "titulo_referencia": "§27.19 Methods of Computation: Factorization ‣ Computation ‣ Chapter 27 Functions of Number Theory"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "agradecimientos_capitulo": "The author thanks Basil Gordon for comments on an earlier draft, and David Bressoud for providing §§ [27.12](./27.12.md \"§27.12 Asymptotic Formulas: Primes ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory\") , [27.18](./27.18.md \"§27.18 Methods of Computation: Primes ‣ Computation ‣ Chapter 27 Functions of Number Theory\") , [27.19](./27.19.md \"§27.19 Methods of Computation: Factorization ‣ Computation ‣ Chapter 27 Functions of Number Theory\") , and [27.22](./27.22.md \"§27.22 Software ‣ Computation ‣ Chapter 27 Functions of Number Theory\") .",
+  "referencias_capitulo": [
+    "*Profile* Frank Garvan",
+    "*Profile* Tom M. Apostol",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Associate Editors",
+    "Erratum (V1.0.10) for Chapter 27",
+    "Erratum (V1.0.10) for Chapter 27",
+    "Organization and Objective",
+    "§ ‣ Software Cross Index\n\n**Change of Notation (effective with 1.0.10):**\n\nFor consistency of notation across all chapters",
+    "the notation for logarithm has been changed to $\\ln$ from $\\mathrm{log}$ throughout this chapter."
+  ],
+  "estado_extraccion": "completado",
+  "total_formulas_extraidas": 132,
+  "estado_metadatos": "verificado_y_refinado"
+}

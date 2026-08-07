@@ -3,13 +3,14 @@
     // Este archivo describe la jerarquía y propósito de cada componente para agentes de IA.
 
     "src": {
-        // Núcleo de conocimiento matemático (Teoría en .qmd + Ilustraciones locales).
-        "01_fundamentos_logica": "Axiomática, conjuntos y lógica proposicional.",
-        "02_estructuras_algebraicas": "Álgebra lineal y estructuras abstractas (Grupos/Categorías).",
-        "03_analisis_continuidad": "Cálculo, EDOs y Análisis Funcional.",
-        "04_espacio_forma": "Geometría Euclidiana, Analítica y Diferencial.",
-        "05_discrecion_computacion": "Combinatoria, Grafos y Métodos Numéricos.",
-        "06_estocastica_incertidumbre": "Probabilidad y Estadística de Datos."
+        // Núcleo de conocimiento matemático (Fase 1 completada al 100%).
+        "README.md": "Documentación de la estructura teórica basada en los 6 Pilares de Bourbaki.",
+        "01_fundamentos_logica": "Axiomática, conjuntos, lógica y demostraciones.",
+        "02_estructuras_algebraicas": "Álgebra lineal, matrices, anillos y categorías.",
+        "03_analisis_continuidad": "Límites, cálculo, EDs, análisis funcional e integración.",
+        "04_espacio_forma": "Geometría euclidiana, analítica 3D, diferencial y topología.",
+        "05_discrecion_computacion": "Combinatoria, grafos, métodos numéricos y complejidad.",
+        "06_estocastica_incertidumbre": "Probabilidad, distribuciones, regresión e inferencia."
     },
 
     "scripts": {
@@ -17,7 +18,13 @@
         "build.py": "Orquestador principal (Wrapper): Prepara metadatos y lanza Quarto/Render.",
         "generate_assets.py": "Orquestador de gráficos (Uso Manual Estricto): Ejecuta bajo demanda los scripts SVG históricos.",
         "automate_image_linking.py": "Script para vinculación automática de imágenes SVG en los archivos Quarto.",
+        "fix_orphaned_images.py": "Detecta y repara referencias a imágenes SVG huérfanas o desvinculadas.",
         "update_taxonomy_pillars.py": "Actualiza dinámicamente la taxonomía base MSC cruzando datos con los pilares estructurales.",
+        "sanitizar_dlmf.py": "Sanitizador de macros LaTeX no estándares y entidades HTML en la DLMF.",
+        "traducir_dlmf.py": "Motor de traducción modular que preserva el 100% de fórmulas LaTeX.",
+        "generar_indices_dlmf.py": "Generador automatizado de índices JSON estructurados para DLMF.",
+        "extraer_contenido_dlmf.py": "Procesador de extracción masiva de subsecciones, palabras clave y tablas hacia metadata/DLMF_data/.",
+        "refinar_metadata_dlmf.py": "Refinador y limpiador conceptual de metadatos DLMF.",
         "config.py": "Define configuraciones globales y estructuras de rutas estáticas del proyecto.",
         "core": {
             // Lógica de negocio y validadores avanzados.
@@ -43,19 +50,25 @@
     "metadata": {
         // Capa de gobernanza y taxonomía oficial (IA-Ready).
         "schemas": "Esquemas formales JSON Schema para validación de contenido, lógica y taxonomía.",
-        "MSC_index.json": "Índice de la Mathematics Subject Classification 2020."
+        "DLMF_data": "Extracción estructurada en JSON de los 36 capítulos de la Digital Library of Mathematical Functions (NIST).",
+        "MSC_index.json": "Índice de la Mathematics Subject Classification 2020.",
+        "MSC_index_pillars_overlay.json": "Capa de superposición entre MSC2020 y los 6 Pilares de Bourbaki.",
+        "msc_taxonomy.all.json": "Taxonomía consolidada completa en formato JSON.",
+        "GENERATED_ASSETS.md": "Registro oficial de activos gráficos vectoriales (Regla de la Trinidad).",
+        "README.md": "Documentación del sistema de clasificación y metadatos."
     },
 
     "utils": "Módulos auxiliares reutilizables (Logging, Pathing, Markdown Render).",
 
     "tests": "Suite de pruebas unitarias e integración (Integridad Estructural y Validación).",
 
-    "site_src": "Fuentes del frontend (Vanilla CSS, JS, HTML5) con soporte MathJax 3 y Modo Oscuro.",
-
     "docs": {
         // Documentación técnica y registros históricos.
-        "ARQUITECTURE.md": "Especificación técnica de alto nivel (C4 Model).",
+        "README.md": "Índice descriptivo de la carpeta docs y sus funciones dentro del repositorio.",
+        "ARQUITECTURE.md": "Especificación técnica de alto nivel (C4 Model y Arquitectura de Datos).",
+        "DLMF-markdown-main": "Fuente original en Markdown de la Digital Library of Mathematical Functions (NIST).",
         "GENERATED_ASSETS.md": "Registro histórico y auditoría de cobertura gráfica.",
+        "correcciones.md": "Registro de planes de sanitización matemática y sintaxis KaTeX/MathJax.",
         "plan_quarto_typst.md": "Plan de implementación y transición para Quarto y Typst.",
         "typst_graficos.md": "Guía de librerías y generación de gráficos vectoriales mediante Typst.",
         "quarto_live.md": "Guía técnica para el uso y configuración de la extensión interactiva Quarto Live.",
@@ -69,6 +82,5 @@
     "llms.txt": "Archivo de descubrimiento para indexación por IA (Estándar 2026).",
     "README.md": "Presentación ejecutiva para humanos.",
     "pyproject.toml": "Configuración central de herramientas de calidad (Ruff/Mypy).",
-    "_quarto.yml": "Archivo central de configuración de Quarto (Orquestador de renderizado Web/PDF).",
-    "transicion_quarto.md": "Plan maestro de migración y auditoría de la etapa de adopción de Quarto/Typst."
+    "_quarto.yml": "Archivo central de configuración de Quarto (Orquestador de renderizado Web/PDF)."
 }

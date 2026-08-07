@@ -1,0 +1,22 @@
+{
+    "title": "Polinomios, Raíces y Teorema Fundamental del Álgebra",
+    "date": "2026-07-22",
+    "categories": [
+        "algebra",
+        "polinomios",
+        "raices",
+        "factorizacion"
+    ],
+    "id": "msc12_polinomios_factorizacion",
+    "pilar": "02_estructuras_algebraicas",
+    "msc_code": "12D-10",
+    "tags": [
+        "algebra",
+        "polinomios",
+        "raices",
+        "factorizacion"
+    ],
+    "nivel": "intro",
+    "updated": "2026-07-22",
+    "status": "stable"
+}

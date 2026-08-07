@@ -1,0 +1,71 @@
+---
+title: "Funciones Exponenciales, Logarítmicas y Trigonométricas"
+subtitle: "Análisis y Propiedades de Funciones Transcendentes"
+date: "2026-07-22"
+categories: ["análisis", "funciones transcendentes", "exponencial", "logaritmo", "trigonometría"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Funciones Exponenciales, Logarítmicas y Trigonométricas
+
+## Introducción
+
+Las funciones transcendentes son aquellas que no pueden ser expresadas como raíces de una ecuación polinómica con coeficientes racionales.
+Entre las funciones transcendentes más importantes en el análisis matemático se encuentran las funciones exponenciales, logarítmicas y trigonométricas.
+Estas funciones son fundamentales para modelar fenómenos de crecimiento, decaimiento y oscilación en diversas ramas de la ciencia y la ingeniería.
+Su estudio riguroso requiere de los conceptos de límite, continuidad y derivabilidad.
+
+## Función Exponencial y Logarítmica
+
+La función exponencial natural $f(x) = e^x$ se define como la única función que es su propia derivada y cuyo valor en cero es uno.
+Esta propiedad la convierte en la solución de la ecuación diferencial más sencilla, modelando el crecimiento continuo.
+Su función inversa es el logaritmo natural, denotado por $\ln(x)$, definido para todos los reales positivos.
+La relación fundamental entre ambas es $e^{\ln(x)} = x$ para $x > 0$ y $\ln(e^x) = x$ para todo $x$.
+
+### Propiedades Analíticas
+
+La función exponencial es estrictamente creciente y continua en todo su dominio.
+El logaritmo natural transforma multiplicaciones en sumas, lo que simplifica cálculos complejos y el análisis de productos.
+$$
+\ln(xy) = \ln(x) + \ln(y) \quad \text{para } x, y > 0
+$$
+Ambas funciones tienen representaciones en series de Taylor que convergen en sus respectivos dominios.
+
+## Funciones Trigonométricas
+
+Las funciones trigonométricas (seno, coseno y tangente) se definen geométricamente en el círculo unitario, pero su análisis formal se basa en series de potencias o ecuaciones diferenciales.
+Son funciones periódicas, lo que significa que repiten sus valores en intervalos regulares, modelando fenómenos cíclicos u ondulatorios.
+La función seno y coseno son continuas e infinitamente derivables en todo $\mathbb{R}$.
+
+### Identidades Fundamentales
+
+La identidad pitagórica es la relación más fundamental entre el seno y el coseno.
+$$
+\sin^2(x) + \cos^2(x) = 1
+$$
+La fórmula de Euler establece una conexión profunda entre las funciones trigonométricas y la función exponencial compleja.
+$$
+e^{ix} = \cos(x) + i\sin(x)
+$$
+Esta identidad unifica el análisis real y complejo, facilitando la resolución de ecuaciones diferenciales lineales.
+
+## Representación Visual
+
+El siguiente gráfico ilustra las funciones transcendentes básicas: la exponencial y el logaritmo natural, mostrando su simetría respecto a la recta $y=x$.
+
+![Gráficas de la Función Exponencial y Logarítmica](funciones_transcendentes.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $x$ | Variable independiente real | variable |
+| $e$ | Número de Euler ($e \approx 2.71828$) | constante |
+| $\ln(x)$ | Logaritmo natural de $x$ | función |
+| $\sin(x)$ | Función seno del ángulo $x$ | función |
+| $\cos(x)$ | Función coseno del ángulo $x$ | función |
+| $i$ | Unidad imaginaria ($i^2 = -1$) | constante |

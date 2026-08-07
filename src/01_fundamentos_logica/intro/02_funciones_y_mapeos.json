@@ -1,0 +1,24 @@
+{
+    "title": "Funciones e Inyectividad, Sobreyectividad y Biyectividad",
+    "date": "2026-07-22",
+    "categories": [
+        "funciones",
+        "mapeos",
+        "conjuntos",
+        "inyectividad",
+        "biyectividad"
+    ],
+    "id": "msc03_funciones_mapeos",
+    "pilar": "01_fundamentos_logica",
+    "msc_code": "03E-05",
+    "tags": [
+        "funciones",
+        "mapeos",
+        "conjuntos",
+        "inyectividad",
+        "biyectividad"
+    ],
+    "nivel": "intro",
+    "updated": "2026-07-22",
+    "status": "stable"
+}

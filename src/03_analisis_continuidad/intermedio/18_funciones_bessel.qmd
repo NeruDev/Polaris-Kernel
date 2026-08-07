@@ -1,0 +1,101 @@
+---
+id: "33C10"
+title: "Funciones Bessel"
+pilar: "03_analisis_continuidad"
+msc_code: "33C10"
+difficulty: "intermedio"
+tags:
+  - 33C10
+---
+
+# Funciones Bessel
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 10 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+J_{0}\left(z\right)=\frac{1}{\pi}\int_{0}^{\pi}\cos\left(z\sin\theta\right)\,\mathrm{d}\theta=\frac{1}{\pi}\int_{0}^{\pi}\cos\left(z\cos\theta\right)\,\mathrm{d}\theta, \tag{10.9.1}
+$$
+
+$$
+\displaystyle J_{0}\left(x\right) \displaystyle=\frac{2}{\pi}\int_{0}^{\infty}\sin\left(x\cosh t\right)\,\mathrm{d}t, \tag{10.9.9}
+$$
+
+$$
+J_{\nu}\left(ze^{m\pi i}\right)=e^{m\nu\pi i}J_{\nu}\left(z\right), \tag{10.11.1}
+$$
+
+$$
+\displaystyle J_{\nu}\left(\overline{z}\right) \displaystyle=\overline{J_{\nu}\left(z\right)}, \displaystyle Y_{\nu}\left(\overline{z}\right) \displaystyle=\overline{Y_{\nu}\left(z\right)}, \tag{10.11.9}
+$$
+
+$$
+\displaystyle{H^{(1)}_{\nu}}\left(\overline{z}\right) \displaystyle=\overline{{H^{(2)}_{\nu}}\left(z\right)}, \displaystyle{H^{(2)}_{\nu}}\left(\overline{z}\right) \displaystyle=\overline{{H^{(1)}_{\nu}}\left(z\right)}.
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+z^{2}\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}+z\frac{\mathrm{d}w}{\mathrm{d}z}+(z^{2}-\nu^{2})w=0. \tag{10.2.1}
+$$
+
+$$
+J_{\nu}\left(z\right)=(\tfrac{1}{2}z)^{\nu}\sum_{k=0}^{\infty}(-1)^{k}\frac{(\tfrac{1}{4}z^{2})^{k}}{k!\Gamma\left(\nu+k+1\right)}. \tag{10.2.2}
+$$
+
+$$
+Y_{\nu}\left(z\right)=\frac{J_{\nu}\left(z\right)\cos\left(\nu\pi\right)-J_{-\nu}\left(z\right)}{\sin\left(\nu\pi\right)}. \tag{10.2.3}
+$$
+
+$$
+Y_{n}\left(z\right)=\frac{1}{\pi}\left.\frac{\partial J_{\nu}\left(z\right)}{\partial\nu}\right|_{\nu=n}+\left.\frac{(-1)^{n}}{\pi}\frac{\partial J_{\nu}\left(z\right)}{\partial\nu}\right|_{\nu=-n}, \tag{10.2.4}
+$$
+
+$$
+\displaystyle J_{-n}\left(z\right) \displaystyle=(-1)^{n}J_{n}\left(z\right), \tag{10.4.1}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+{H^{(1)}_{\nu}}\left(z\right)\sim\sqrt{2/(\pi z)}e^{i(z-\frac{1}{2}\nu\pi-\frac{1}{4}\pi)} \tag{10.2.5}
+$$
+
+$$
+{H^{(2)}_{\nu}}\left(z\right)\sim\sqrt{2/(\pi z)}e^{-i\left(z-\frac{1}{2}\nu\pi-\frac{1}{4}\pi\right)} \tag{10.2.6}
+$$
+
+$$
+\displaystyle J_{0}\left(z\right) \displaystyle\to 1, \tag{10.7.1}
+$$
+
+$$
+\displaystyle Y_{0}\left(z\right) \displaystyle\sim(2/\pi)\ln z,
+$$
+
+$$
+{H^{(1)}_{0}}\left(z\right)\sim-{H^{(2)}_{0}}\left(z\right)\sim(2i/\pi)\ln z, \tag{10.7.2}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

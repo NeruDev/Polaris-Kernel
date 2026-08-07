@@ -1,0 +1,44 @@
+---
+title: "Lógica Binaria y Operaciones a Nivel de Bits"
+date: "2026-07-22"
+categories: ["discrecion", "computacion", "logica", "binario", "bits"]
+id: "msc68_logica_binaria"
+---
+
+## El Fundamento Discreto de la Computación
+
+La matemática discreta encuentra su materialización más pura en la arquitectura de las computadoras modernas a través de la lógica binaria.
+En este paradigma, la continuidad de los números reales es descartada a favor de un dominio que admite estrictamente dos estados categóricos absolutos: verdadero o falso.
+Físicamente, estos estados se representan mediante diferencias de voltaje en transistores microscópicos, pero matemáticamente se simbolizan universalmente como los dígitos $1$ (Verdadero) y $0$ (Falso).
+La unidad mínima de información que porta uno de estos dos valores se denomina *bit* (binary digit).
+Toda la complejidad computacional, desde el renderizado de gráficos 3D hasta el entrenamiento de inteligencia artificial, se reduce en su nivel más fundamental a billones de operaciones algebraicas sobre cadenas de bits.
+
+## Operadores Lógicos Básicos
+
+Las transformaciones que procesan y combinan bits individuales se rigen por el Álgebra de Boole, mediante compuertas u operadores lógicos.
+El operador **AND** (Conjunción) actúa como un multiplicador binario estricto: la salida será $1$ única y exclusivamente si todos los bits de entrada son $1$.
+El operador **OR** (Disyunción) es más permisivo: genera un $1$ en la salida si al menos uno de los bits de entrada es verdadero, sin importar los demás.
+El operador **NOT** (Negación) es un inversor unario que simplemente voltea el estado de un único bit, transformando un $0$ en $1$ y viceversa.
+Finalmente, el operador **XOR** (Disyunción Exclusiva) actúa como un detector de diferencias: produce un $1$ solo cuando los dos bits de entrada tienen estados diferentes.
+
+$$
+A \text{ AND } B \iff (A = 1) \land (B = 1)
+$$
+
+![](logica_binaria_bits.svg)
+
+## Operaciones a Nivel de Bits (Bitwise)
+
+Cuando los procesadores ejecutan operaciones sobre números enteros, no iteran sobre su valor decimal, sino que aplican la lógica booleana a cada bit paralelo simultáneamente.
+A esta acción concurrente se le conoce como operación a nivel de bits o *bitwise operation*.
+Por ejemplo, realizar un AND entre dos secuencias binarias $1100$ y $1010$ resultará en $1000$, procesando cada columna de bits de manera independiente.
+Dominar estas operaciones discretas es esencial para la criptografía, la compresión de datos y la optimización de algoritmos de bajo nivel.
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| :--- | :--- | :--- |
+| $A, B$ | Variables booleanas individuales que representan un bit. | Dígito Binario (0 o 1) |
+| $1$ | Estado lógico Verdadero (True) o encendido. | Constante Binaria |
+| $0$ | Estado lógico Falso (False) o apagado. | Constante Binaria |
+| $\land$ | Símbolo matemático universal para el operador lógico AND. | Operador binario |

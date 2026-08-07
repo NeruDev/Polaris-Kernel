@@ -1,0 +1,41 @@
+---
+title: "Medidas de Tendencia Central y Dispersión"
+date: "2026-07-22"
+categories: ["estadistica", "tendencia_central", "media", "mediana", "dispersion"]
+id: "msc62_medidas_tendencia"
+---
+
+## El Resumen Matemático de la Información
+
+Cuando nos enfrentamos a un volumen masivo de datos crudos, la mente humana es incapaz de procesar la lista completa de números individuales.
+Para resolver este cuello de botella cognitivo, la estadística inventó herramientas de reducción de dimensionalidad que comprimen miles de puntos de datos en unos pocos números representativos.
+Las medidas de tendencia central son el primer paso en esta compresión, buscando encontrar el "centro de gravedad" geométrico y probabilístico de la información.
+Su objetivo es identificar un valor típico o representativo alrededor del cual gravitan todas las observaciones de la muestra.
+
+## Media, Mediana y Moda
+
+La **Media Aritmética** ($\bar{x}$) es la medida más famosa, calculada sumando todos los valores y dividiendo el resultado entre la cantidad total de datos ($n$).
+Aunque matemáticamente es el verdadero centro de masa del conjunto, tiene una debilidad fatal: es extremadamente susceptible a ser arrastrada por valores atípicos (outliers).
+Para mitigar esta sensibilidad, se utiliza la **Mediana** ($\tilde{x}$), que es simplemente el valor numérico que ocupa la posición central exacta cuando los datos se ordenan de menor a mayor.
+La Mediana es inherentemente robusta; el cincuenta por ciento de los datos siempre será menor que ella y el otro cincuenta por ciento será mayor, sin importar qué tan extremos sean los valores de las colas.
+Finalmente, la **Moda** es la métrica más primitiva de las tres, representando simplemente el valor o categoría que se repite con mayor frecuencia empírica dentro del conjunto.
+
+![](medidas_tendencia.svg)
+
+## La Necesidad de Medir la Dispersión
+
+Sin embargo, conocer el centro de un conjunto de datos es apenas la mitad del mapa, ya que la tendencia central no nos dice nada sobre la variabilidad o el "ancho" de la campana.
+Dos poblaciones completamente diferentes pueden tener exactamente la misma media aritmética, a pesar de que una sea homogénea y la otra extremadamente caótica.
+Para cuantificar este nivel de caos, se emplean las medidas de dispersión como el rango, la varianza ($\sigma^2$) y la desviación estándar ($\sigma$).
+La varianza mide qué tan lejos, en promedio al cuadrado, se encuentra cada punto individual respecto al centro gravitacional de la media.
+Combinando tendencia central y dispersión, la estadística es capaz de reconstruir una silueta fidedigna de cualquier fenómeno estocástico sin necesidad de observar cada dato.
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| :--- | :--- | :--- |
+| $\bar{x}$ | Media aritmética de los datos de una muestra (centro de masa). | Variable aleatoria continua |
+| $\tilde{x}$ | Mediana muestral (el percentil 50 de los datos ordenados). | Variable aleatoria continua |
+| $n$ | Tamaño de la muestra o cantidad total de observaciones. | Número natural entero |
+| $\sigma^2$ | Varianza poblacional que mide la dispersión cuadrática promedio. | Escalar no negativo |
+| $\sigma$ | Desviación estándar poblacional (raíz cuadrada de la varianza). | Escalar no negativo |

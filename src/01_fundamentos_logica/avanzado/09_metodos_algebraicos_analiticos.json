@@ -1,0 +1,9 @@
+{
+  "id": "00A05",
+  "title": "Metodos Algebraicos Analiticos",
+  "pilar": "01_fundamentos_logica",
+  "msc_code": "00A05, 12Dxx, 26Axx",
+  "difficulty": "avanzado",
+  "source_dlmf_chapter": 1,
+  "status": "volcado_estructural_completado"
+}

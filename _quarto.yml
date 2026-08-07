@@ -38,6 +38,8 @@ website:
       - src/01_fundamentos_logica/03_teoria_conjuntos.qmd
       - src/01_fundamentos_logica/04_metodos_demostracion.qmd
       - src/01_fundamentos_logica/05_relaciones_equivalencia.qmd
+      - src/01_fundamentos_logica/06_funciones_y_mapeos.qmd
+      - src/01_fundamentos_logica/07_logica_predicados_inferencia.qmd
       
     # Pilar 02: Estructuras algebraicas y algebra lineal.
     - section: 02 Estructuras Algebraicas
@@ -46,7 +48,10 @@ website:
       - src/02_estructuras_algebraicas/02_algebra_lineal.qmd
       - src/02_estructuras_algebraicas/03_algebra_abstracta.qmd
       - src/02_estructuras_algebraicas/04_teoria_de_categorias.qmd
-      - src/02_estructuras_algebraicas/05_teoria_anillos_cuerpos.qmd
+      - src/02_estructuras_algebraicas/05_teoria_de_matrices.qmd
+      - src/02_estructuras_algebraicas/06_ecuaciones_y_desigualdades.qmd
+      - src/02_estructuras_algebraicas/07_polinomios_y_factorizacion.qmd
+      - src/02_estructuras_algebraicas/08_espacios_vectoriales_bases.qmd
       
     # Pilar 03: Calculo infinitesimal, analisis real y funcional.
     - section: 03 Analisis Continuidad

@@ -1,0 +1,97 @@
+---
+id: "33E05"
+title: "Funciones Elipticas Jacobi"
+pilar: "03_analisis_continuidad"
+msc_code: "33E05"
+difficulty: "intermedio"
+tags:
+  - 33E05
+---
+
+# Funciones Elipticas Jacobi
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 22 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\displaystyle k \displaystyle=\frac{{\theta_{2}}^{2}\left(0,q\right)}{{\theta_{3}}^{2}\left(0,q\right)}, \tag{22.2.2}
+$$
+
+$$
+\displaystyle k^{\prime} \displaystyle=\frac{{\theta_{4}}^{2}\left(0,q\right)}{{\theta_{3}}^{2}\left(0,q\right)},
+$$
+
+$$
+\displaystyle K\left(k\right) \displaystyle=\frac{\pi}{2}{\theta_{3}}^{2}\left(0,q\right),
+$$
+
+$$
+\zeta=\frac{\pi z}{2K\left(k\right)}, \tag{22.2.3}
+$$
+
+$$
+\operatorname{sn}\left(z,k\right)=\frac{\theta_{3}\left(0,q\right)}{\theta_{2}\left(0,q\right)}\frac{\theta_{1}\left(\zeta,q\right)}{\theta_{4}\left(\zeta,q\right)}=\frac{1}{\operatorname{ns}\left(z,k\right)}, \tag{22.2.4}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+q=\exp\left(-\pi{K^{\prime}}\left(k\right)/K\left(k\right)\right), \tag{22.2.1}
+$$
+
+$$
+{\operatorname{sn}}^{2}\left(z,k\right)+{\operatorname{cn}}^{2}\left(z,k\right)=k^{2}{\operatorname{sn}}^{2}\left(z,k\right)+{\operatorname{dn}}^{2}\left(z,k\right)=1, \tag{22.6.1}
+$$
+
+$$
+1+{\operatorname{cs}}^{2}\left(z,k\right)=k^{2}+{\operatorname{ds}}^{2}\left(z,k\right)={\operatorname{ns}}^{2}\left(z,k\right), \tag{22.6.2}
+$$
+
+$$
+{k^{\prime}}^{2}{\operatorname{sc}}^{2}\left(z,k\right)+1={\operatorname{dc}}^{2}\left(z,k\right)={k^{\prime}}^{2}{\operatorname{nc}}^{2}\left(z,k\right)+k^{2}, \tag{22.6.3}
+$$
+
+$$
+-k^{2}{k^{\prime}}^{2}{\operatorname{sd}}^{2}\left(z,k\right)=k^{2}({\operatorname{cd}}^{2}\left(z,k\right)-1)={k^{\prime}}^{2}(1-{\operatorname{nd}}^{2}\left(z,k\right)). \tag{22.6.4}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+2iK\operatorname{dn}\left(2Kt,k\right)=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\frac{\pi}{\tan\left(\pi(t-(n+\frac{1}{2})\tau)\right)}=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\left(\lim_{M\to\infty}\sum_{m=-M}^{M}\frac{1}{t-m-(n+\frac{1}{2})\tau}\right). \tag{22.12.4}
+$$
+
+$$
+\displaystyle 2iKk^{\prime}\operatorname{nd}\left(2Kt,k\right) \displaystyle=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\frac{\pi}{\tan\left(\pi(t+\frac{1}{2}-(n+\frac{1}{2})\tau)\right)}=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\lim_{M\to\infty}\left(\sum_{m=-M}^{M}\frac{1}{t+\frac{1}{2}-m-(n+\frac{1}{2})\tau}\right), \tag{22.12.7}
+$$
+
+$$
+\displaystyle-2Kk^{\prime}\operatorname{sc}\left(2Kt,k\right) \displaystyle=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\frac{\pi}{\tan\left(\pi(t+\frac{1}{2}-n\tau)\right)}=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\left(\lim_{M\to\infty}\sum_{m=-M}^{M}\frac{1}{t+\frac{1}{2}-m-n\tau}\right), \tag{22.12.10}
+$$
+
+$$
+\displaystyle 2K\operatorname{cs}\left(2Kt,k\right) \displaystyle=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\frac{\pi}{\tan\left(\pi(t-n\tau)\right)}=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\left(\lim_{M\to\infty}\sum_{m=-M}^{M}\frac{1}{t-m-n\tau}\right). \tag{22.12.13}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

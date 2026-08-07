@@ -14,7 +14,7 @@ Para maximizar la efectividad del sistema RAG (IA):
 
 ## 3. Flujo de Trabajo
 1.  **Crea el contenido** en la carpeta de pilar correspondiente dentro de `src/` usando Markdown/Quarto.
-2.  **Genera los activos** necesarios: Adopta el nuevo paradigma usando scripts de **Typst** (`scripts/grafics/typst_src/`) para nuevos gráficos y esquemas vectoriales SVG.
+2.  **Genera los activos** necesarios: Adopta el nuevo paradigma usando scripts de **Typst** (`scripts/grafics/typst_src/`) para nuevos gráficos y esquemas vectoriales SVG. **Los nombres de las imágenes deben ser únicos y sin números** (ej. no heredar el `01_` del archivo .qmd).
 3.  **Ejecuta el Build Local:** (Esto llamará a Quarto de forma automatizada)
     ```powershell
     python scripts/build.py --verbose

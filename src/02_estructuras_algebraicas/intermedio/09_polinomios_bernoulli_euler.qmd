@@ -1,0 +1,103 @@
+---
+id: "11B68"
+title: "Polinomios Bernoulli Euler"
+pilar: "02_estructuras_algebraicas"
+msc_code: "11B68, 33E20"
+difficulty: "intermedio"
+tags:
+  - 11B68
+  - 33E20
+---
+
+# Polinomios Bernoulli Euler
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 24 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\displaystyle B_{1} \displaystyle=\tfrac{1}{6}
+$$
+
+$$
+\displaystyle B_{2} \displaystyle=\tfrac{1}{30}
+$$
+
+$$
+\displaystyle B_{3} \displaystyle=\tfrac{1}{42}
+$$
+
+$$
+\displaystyle B_{4} \displaystyle=\tfrac{1}{30},\ldots
+$$
+
+$$
+\displaystyle(-1)^{n+1}B_{2n} \displaystyle>0
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\displaystyle\frac{t}{e^{t}-1} \displaystyle=\sum_{n=0}^{\infty}B_{n}\frac{t^{n}}{n!}, \tag{24.2.1}
+$$
+
+$$
+\displaystyle B_{2n+1} \displaystyle=0 \tag{24.2.2}
+$$
+
+$$
+\displaystyle\frac{te^{xt}}{e^{t}-1} \displaystyle=\sum_{n=0}^{\infty}B_{n}\left(x\right)\frac{t^{n}}{n!}, \tag{24.2.3}
+$$
+
+$$
+\displaystyle B_{n}\left(x\right) \displaystyle=\sum_{k=0}^{n}{n\choose k}B_{k}x^{n-k}. \tag{24.2.5}
+$$
+
+$$
+\displaystyle\frac{2e^{t}}{e^{2t}+1} \displaystyle=\sum_{n=0}^{\infty}E_{n}\frac{t^{n}}{n!}, \tag{24.2.6}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\displaystyle(-1)^{n+1}B_{2n} \displaystyle\sim\frac{2(2n)!}{(2\pi)^{2n}}, \tag{24.11.1}
+$$
+
+$$
+\displaystyle(-1)^{n+1}B_{2n} \displaystyle\sim 4\sqrt{\pi n}\left(\frac{n}{\pi e}\right)^{2n}, \tag{24.11.2}
+$$
+
+$$
+\displaystyle(-1)^{n}E_{2n} \displaystyle\sim\frac{2^{2n+2}(2n)!}{\pi^{2n+1}}, \tag{24.11.3}
+$$
+
+$$
+\displaystyle(-1)^{n}E_{2n} \displaystyle\sim 8\sqrt{\frac{n}{\pi}}\left(\frac{4n}{\pi e}\right)^{2n}. \tag{24.11.4}
+$$
+
+$$
+\displaystyle(-1)^{\left\lfloor n/2\right\rfloor-1}\frac{(2\pi)^{n}}{2(n!)}B_{n}\left(x\right) \displaystyle\to\begin{cases}\cos\left(2\pi x\right),&n\text{ even},\\
+\sin\left(2\pi x\right),&n\text{ odd},\end{cases} \tag{24.11.5}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

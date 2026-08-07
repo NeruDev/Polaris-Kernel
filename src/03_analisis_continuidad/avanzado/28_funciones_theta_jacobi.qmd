@@ -1,0 +1,99 @@
+---
+id: "14K25"
+title: "Funciones Theta Jacobi"
+pilar: "03_analisis_continuidad"
+msc_code: "14K25, 33E05"
+difficulty: "avanzado"
+tags:
+  - 14K25
+  - 33E05
+---
+
+# Funciones Theta Jacobi
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 20 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\theta_{1}\left(0,q\right)=\theta_{2}'\left(0,q\right)=\theta_{3}'\left(0,q\right)=\theta_{4}'\left(0,q\right)=0, \tag{20.4.1}
+$$
+
+$$
+\theta_{1}'\left(0,q\right)=\theta_{2}\left(0,q\right)\theta_{3}\left(0,q\right)\theta_{4}\left(0,q\right). \tag{20.4.6}
+$$
+
+$$
+\theta_{1}''\left(0,q\right)=\theta_{2}'''\left(0,q\right)=\theta_{3}'''\left(0,q\right)=\theta_{4}'''\left(0,q\right)=0. \tag{20.4.7}
+$$
+
+$$
+\left|\pi z\right|<\min\left|z_{m,n}\right|, \tag{20.6.1}
+$$
+
+$$
+\theta_{1}\left(2z,q\right)=2\frac{\theta_{1}\left(z,q\right)\theta_{2}\left(z,q\right)\theta_{3}\left(z,q\right)\theta_{4}\left(z,q\right)}{\theta_{2}\left(0,q\right)\theta_{3}\left(0,q\right)\theta_{4}\left(0,q\right)}. \tag{20.7.10}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\displaystyle\theta_{1}\left(z\middle|\tau\right) \displaystyle=\theta_{1}\left(z,q\right)=2\sum_{n=0}^{\infty}(-1)^{n}q^{(n+\frac{1}{2})^{2}}\sin\left((2n+1)z\right), \tag{20.2.1}
+$$
+
+$$
+\displaystyle\theta_{2}\left(z\middle|\tau\right) \displaystyle=\theta_{2}\left(z,q\right)=2\sum_{n=0}^{\infty}q^{(n+\frac{1}{2})^{2}}\cos\left((2n+1)z\right), \tag{20.2.2}
+$$
+
+$$
+\displaystyle\theta_{3}\left(z\middle|\tau\right) \displaystyle=\theta_{3}\left(z,q\right)=1+2\sum_{n=1}^{\infty}q^{n^{2}}\cos\left(2nz\right), \tag{20.2.3}
+$$
+
+$$
+\displaystyle\theta_{4}\left(z\middle|\tau\right) \displaystyle=\theta_{4}\left(z,q\right)=1+2\sum_{n=1}^{\infty}(-1)^{n}q^{n^{2}}\cos\left(2nz\right). \tag{20.2.4}
+$$
+
+$$
+z_{m,n}=(m+n\tau)\pi, \tag{20.2.5}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\displaystyle\theta_{1}\left(z\middle|\tau\right) \displaystyle=z\theta_{1}'\left(0\middle|\tau\right)\,\lim_{N\to\infty}\prod_{n=-N}^{N}\lim_{M\to\infty}\prod_{\begin{subarray}{c}m=-M\\
+\left|m\right|+\left|n\right|\neq 0\end{subarray}}^{M}\left(1+\frac{z}{(m+n\tau)\pi}\right), \tag{20.5.14}
+$$
+
+$$
+\displaystyle\theta_{2}\left(z\middle|\tau\right) \displaystyle=\theta_{2}\left(0\middle|\tau\right)\,\lim_{N\to\infty}\prod_{n=-N}^{N}\lim_{M\to\infty}\prod_{m=1-M}^{M}\left(1+\frac{z}{(m-\tfrac{1}{2}+n\tau)\pi}\right), \tag{20.5.15}
+$$
+
+$$
+\displaystyle\theta_{3}\left(z\middle|\tau\right) \displaystyle=\theta_{3}\left(0\middle|\tau\right)\,\lim_{N\to\infty}\prod_{n=1-N}^{N}\lim_{M\to\infty}\prod_{m=1-M}^{M}\left(1+\frac{z}{(m-\tfrac{1}{2}+(n-\tfrac{1}{2})\tau)\pi}\right), \tag{20.5.16}
+$$
+
+$$
+\displaystyle\theta_{4}\left(z\middle|\tau\right) \displaystyle=\theta_{4}\left(0\middle|\tau\right)\,\lim_{N\to\infty}\prod_{n=1-N}^{N}\lim_{M\to\infty}\prod_{m=-M}^{M}\left(1+\frac{z}{(m+(n-\tfrac{1}{2})\tau)\pi}\right). \tag{20.5.17}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

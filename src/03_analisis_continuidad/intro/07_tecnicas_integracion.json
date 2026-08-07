@@ -1,0 +1,18 @@
+{
+    "title": "Técnicas de Integración Práctica",
+    "subtitle": "Métodos Avanzados para el Cálculo de Antiderivadas",
+    "date": "2026-07-22",
+    "categories": [
+        "análisis",
+        "integración",
+        "cálculo",
+        "antiderivadas"
+    ],
+    "format": {
+        "html": {
+            "toc": true,
+            "toc-depth": 3,
+            "math": true
+        }
+    }
+}

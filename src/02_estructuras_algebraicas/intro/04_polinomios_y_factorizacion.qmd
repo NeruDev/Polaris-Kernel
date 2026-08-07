@@ -1,0 +1,55 @@
+---
+# --- Metadatos Estándar de Quarto ---
+title: "Polinomios, Raíces y Teorema Fundamental del Álgebra"
+date: "2026-07-22"
+categories: [algebra, polinomios, raices, factorizacion]
+
+# --- Metadatos Estructurales (Polaris Kernel) ---
+id: msc12_polinomios_factorizacion
+pilar: "02_estructuras_algebraicas"
+msc_code: "12D-10"
+tags: [algebra, polinomios, raices, factorizacion]
+nivel: intro
+updated: "2026-07-22"
+status: "stable"
+---
+
+# Teoría de Polinomios
+
+Un polinomio es una expresión matemática construida a partir de variables y constantes mediante operaciones exclusivas de suma, resta y multiplicación.
+Los exponentes de las variables en un polinomio deben ser siempre números enteros no negativos.
+La forma general de un polinomio de grado $n$ en una variable $x$ sobre el cuerpo de los números reales o complejos es:
+$$
+P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
+$$
+El grado del polinomio está determinado por el exponente más alto $n$ cuyo coeficiente principal $a_n$ sea distinto de cero.
+
+## Teorema del Resto y del Factor
+
+El Teorema del Resto proporciona una forma extraordinariamente eficiente de evaluar polinomios y verificar divisibilidad.
+Establece que si dividimos un polinomio $P(x)$ entre un binomio lineal de la forma $(x - c)$, el residuo numérico de esa división es exactamente igual a la evaluación $P(c)$.
+Como corolario directo surge el Teorema del Factor, una herramienta clave para la factorización algebraica.
+El Teorema del Factor dicta que el número $c$ es una raíz del polinomio (es decir, $P(c) = 0$) si y solo si el binomio $(x - c)$ es un factor exacto de $P(x)$.
+Estos teoremas permiten descomponer iterativamente polinomios complejos en productos de binomios lineales mucho más simples, utilizando técnicas como la división sintética o la regla de Ruffini.
+
+## El Teorema Fundamental del Álgebra
+
+Formulado de manera rigurosa por Carl Friedrich Gauss, este teorema es uno de los pilares más profundos de las matemáticas modernas.
+Afirma que todo polinomio de grado $n \ge 1$ con coeficientes complejos tiene al menos una raíz en el conjunto de los números complejos $\mathbb{C}$.
+Por extensión lógica, al aplicar inductivamente el Teorema del Factor, se deduce que un polinomio de grado $n$ siempre tiene exactamente $n$ raíces complejas, contando sus multiplicidades algebraicas.
+Es importante destacar que, aunque los coeficientes del polinomio sean exclusivamente reales, sus raíces pueden ser números complejos que siempre aparecerán en pares conjugados.
+Este teorema garantiza que el cuerpo de los números complejos es algebraicamente cerrado, lo que significa que no se requieren nuevos sistemas numéricos para resolver cualquier ecuación polinomial.
+
+## Gráfica y Raíces Polinómicas
+
+![Comportamiento gráfico de raíces polinómicas y multiplicidad](polinomios_y_factorizacion.svg)
+
+## Glosario de variables
+
+| Símbolo | Nombre | Tipo |
+| --- | --- | --- |
+| $P(x)$ | Función polinómica en variable $x$ | función escalar |
+| $n$ | Grado máximo del polinomio | entero no negativo |
+| $a_k$ | Coeficiente del término de grado $k$ | constante escalar |
+| $c$ | Posible raíz o valor a evaluar | escalar |
+| $\mathbb{C}$ | Conjunto de números complejos | conjunto |

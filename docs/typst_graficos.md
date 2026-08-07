@@ -35,7 +35,7 @@ Los gráficos se diseñan especificando los tamaños de página dinámicos y, po
 
 Para realizar la compilación de Typst a SVG, el sistema cuenta con los siguientes scripts:
 *   `scripts/grafics/compile_typst.py`:
-    Escanea la carpeta `typst_src/` buscando archivos `.typ` con el patrón `folder_name___svg_stem.typ`.
+    Escanea la carpeta `typst_src/` buscando archivos `.typ` con el patrón `<pilar>___<dificultad>___<nombre_sin_numeros>.typ`. Es crítico que el nombre de la imagen no contenga números (ej. no heredar `01_` del archivo .qmd).
     Compila automáticamente cada archivo al pilar de destino correspondiente en `src/` y lo registra en `metadata/GENERATED_ASSETS.md`.
 *   `scripts/grafics/gen_jerarquia_numeros.py`:
     Script de compilación específico y manual para el gráfico de la jerarquía de los números.

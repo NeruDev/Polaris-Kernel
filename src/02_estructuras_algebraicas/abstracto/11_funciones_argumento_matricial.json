@@ -1,0 +1,9 @@
+{
+  "id": "15A15",
+  "title": "Funciones Argumento Matricial",
+  "pilar": "02_estructuras_algebraicas",
+  "msc_code": "15A15, 33C99",
+  "difficulty": "abstracto",
+  "source_dlmf_chapter": 35,
+  "status": "volcado_estructural_completado"
+}

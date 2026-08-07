@@ -1,0 +1,2696 @@
+{
+  "capitulo": 30,
+  "titulo_original": "Spheroidal Wave Functions",
+  "archivo_metadata": "metadata/DLMF_data/30_Spheroidal_Wave_Functions.json",
+  "rutas_docs": {
+    "docs_original": "docs/DLMF-markdown-main/markdown/30/30.md",
+    "docs_directorio_original": "docs/DLMF-markdown-main/markdown/30/",
+    "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.md"
+  },
+  "total_categorias": 4,
+  "total_secciones": 18,
+  "categorias": [
+    {
+      "categoria": "Notation",
+      "secciones": [
+        {
+          "seccion_id": "30.1",
+          "titulo_original": "Special Notation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.1.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.1.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.1 Special Notation",
+            "prosa_teorica": "(For other notation see Notation for the Special Functions .)\nThe main functions treated in this chapter are the eigenvalues $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ and the spheroidal wave functions $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ , $\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ , $\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right)$ , $\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right)$ , and $S^{m(j)}_{n}\\left(z,\\gamma\\right)$ , $j=1,2,3,4$ . These notations are similar to those used in Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\")) and Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\")). Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\")) use $\\mathrm{ps}$ , $\\mathrm{qs}$ , $\\mathrm{Ps}$ , $\\mathrm{Qs}$ for $\\mathsf{Ps}$ , $\\mathsf{Qs}$ , $\\mathit{Ps}$ , $\\mathit{Qs}$ , respectively.\nFlammer ([1957](./bib/F.html#bib807 \"Spheroidal Wave Functions\")) and Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\")) use $\\lambda_{mn}(\\gamma)$ for $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)+\\gamma^{2}$ , $R_{mn}^{(j)}(\\gamma,z)$ for $S^{m(j)}_{n}\\left(z,\\gamma\\right)$ , and\n<a id=\"E1\"></a>\nwhere $d_{mn}(\\gamma)$ is a normalization constant determined by\n<a id=\"E2\"></a>\nFor older notations see Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), §21.11) and Flammer ([1957](./bib/F.html#bib807 \"Spheroidal Wave Functions\"), pp. 14,15).",
+            "formulas_clave": [
+              {
+                "id": "Ex1",
+                "tag": "30.1.1",
+                "latex": "\\displaystyle S^{(1)}_{mn}(\\gamma,x) \\displaystyle=d_{mn}(\\gamma)\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right), \\tag{30.1.1}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle S^{(2)}_{mn}(\\gamma,x) \\displaystyle=d_{mn}(\\gamma)\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right),"
+              },
+              {
+                "id": "Ex3",
+                "tag": "30.1.2",
+                "latex": "\\displaystyle S^{(1)}_{mn}(\\gamma,0) \\displaystyle=(-1)^{m}\\mathsf{P}^{m}_{n}\\left(0\\right), \\tag{30.1.2}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle\\left.\\frac{\\mathrm{d}}{\\mathrm{d}x}S^{(1)}_{mn}(\\gamma,x)\\right|_{x=0} \\displaystyle=(-1)^{m}\\left.\\frac{\\mathrm{d}}{\\mathrm{d}x}\\mathsf{P}^{m}_{n}\\left(x\\right)\\right|_{x=0},"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle S^{(1)}_{mn}(\\gamma,x) \\displaystyle=d_{mn}(\\gamma)\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right), \\tag{30.1.1}",
+              "\\displaystyle S^{(2)}_{mn}(\\gamma,x) \\displaystyle=d_{mn}(\\gamma)\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right),",
+              "\\displaystyle S^{(1)}_{mn}(\\gamma,0) \\displaystyle=(-1)^{m}\\mathsf{P}^{m}_{n}\\left(0\\right), \\tag{30.1.2}",
+              "\\displaystyle\\left.\\frac{\\mathrm{d}}{\\mathrm{d}x}S^{(1)}_{mn}(\\gamma,x)\\right|_{x=0} \\displaystyle=(-1)^{m}\\left.\\frac{\\mathrm{d}}{\\mathrm{d}x}\\mathsf{P}^{m}_{n}\\left(x\\right)\\right|_{x=0},"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "notation",
+                "spheroidal wave functions",
+                "other notations",
+                "spheroidal coordinates"
+              ],
+              "simbolos": [
+                "$\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the first kind , [$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind](./30.5.md \"§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions\") , $x$: real variable , $m$: nonnegative integer , $n\\geq m$: integer degree , $d_{mn}(\\gamma)$: normalization constant and $\\gamma^{2}$: real parameter",
+                "$\\mathsf{P}^{\\mu}_{\\nu}\\left(x\\right)$: Ferrers function of the first kind , $\\frac{\\mathrm{d}f}{\\mathrm{d}x}$: derivative of $f$ with respect to $x$ , $x$: real variable , $m$: nonnegative integer , $n\\geq m$: integer degree and $\\gamma^{2}$: real parameter"
+              ],
+              "referencias_abramowitz_stegun": [
+                "21.7.13 21.7.14"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.1 and Ch.30",
+                "Annotations for §30.1 , §30.1 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "tablas": [
+              {
+                "encabezados": [
+                  "$x$",
+                  "real variable. Except in §§ 30.7(iv) , 30.11(ii) , [30.13](./30.13.md \"§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , and [30.14](./30.14.md \"§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , $-1<x<1$ ."
+                ],
+                "filas": [
+                  {
+                    "$x$": "$\\gamma^{2}$",
+                    "real variable. Except in §§ 30.7(iv) , 30.11(ii) , [30.13](./30.13.md \"§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , and [30.14](./30.14.md \"§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , $-1<x<1$ .": "real parameter (positive, zero, or negative)."
+                  },
+                  {
+                    "$x$": "$m$",
+                    "real variable. Except in §§ 30.7(iv) , 30.11(ii) , [30.13](./30.13.md \"§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , and [30.14](./30.14.md \"§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , $-1<x<1$ .": "order, a nonnegative integer."
+                  },
+                  {
+                    "$x$": "$n$",
+                    "real variable. Except in §§ 30.7(iv) , 30.11(ii) , [30.13](./30.13.md \"§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , and [30.14](./30.14.md \"§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , $-1<x<1$ .": "degree, an integer $n=m,m+1,m+2,\\dots$ ."
+                  },
+                  {
+                    "$x$": "$k$",
+                    "real variable. Except in §§ 30.7(iv) , 30.11(ii) , [30.13](./30.13.md \"§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , and [30.14](./30.14.md \"§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , $-1<x<1$ .": "integer."
+                  },
+                  {
+                    "$x$": "$\\delta$",
+                    "real variable. Except in §§ 30.7(iv) , 30.11(ii) , [30.13](./30.13.md \"§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , and [30.14](./30.14.md \"§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , $-1<x<1$ .": "arbitrary small positive constant."
+                  }
+                ]
+              }
+            ],
+            "referencias_cruzadas": [
+              {
+                "texto": "30.13",
+                "archivo_destino": "30.13.md",
+                "titulo_referencia": "§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "30.14",
+                "archivo_destino": "30.14.md",
+                "titulo_referencia": "§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1957",
+                "archivo_destino": "bib/F.html#bib807",
+                "titulo_referencia": "Spheroidal Wave Functions"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              },
+              {
+                "texto": "$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind",
+                "archivo_destino": "30.5.md",
+                "titulo_referencia": "§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              },
+              {
+                "texto": "1957",
+                "archivo_destino": "bib/F.html#bib807",
+                "titulo_referencia": "Spheroidal Wave Functions"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Properties",
+      "secciones": [
+        {
+          "seccion_id": "30.2",
+          "titulo_original": "Differential Equations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.2.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.2.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.2 Differential Equations",
+            "prosa_teorica": "This equation has regular singularities at $z=\\pm 1$ with exponents $\\pm\\frac{1}{2}\\mu$ and an irregular singularity of rank 1 at $z=\\infty$ (if $\\gamma\\neq 0$ ). The equation contains three real parameters $\\lambda$ , $\\gamma^{2}$ , and $\\mu$ . In applications involving prolate spheroidal coordinates $\\gamma^{2}$ is positive, in applications involving oblate spheroidal coordinates $\\gamma^{2}$ is negative; see §§ [30.13](./30.13.md \"§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") , [30.14](./30.14.md \"§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions\") .\nThe *Liouville normal form* of equation ( 30.2.1 ) is\n<a id=\"E3\"></a>\nWith $\\zeta=\\gamma z$ Equation ( 30.2.1 ) changes to\nIf $\\gamma=0$ , Equation ( 30.2.1 ) is the associated Legendre differential equation; see ( 14.2.2 ). If $\\mu^{2}=\\frac{1}{4}$ , Equation ( 30.2.2 ) reduces to the Mathieu equation; see ( 28.2.1 ). If $\\gamma=0$ , Equation ( 30.2.4 ) is satisfied by spherical Bessel functions; see ( 10.47.1 ).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "30.2.1",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left((1-z^{2})\\frac{\\mathrm{d}w}{\\mathrm{d}z}\\right)+\\left(\\lambda+\\gamma^{2}(1-z^{2})-\\frac{\\mu^{2}}{1-z^{2}}\\right)w=0. \\tag{30.2.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "30.2.2",
+                "latex": "\\frac{{\\mathrm{d}}^{2}g}{{\\mathrm{d}t}^{2}}+\\left(\\lambda+\\frac{1}{4}+\\gamma^{2}{\\sin}^{2}t-\\frac{\\mu^{2}-\\frac{1}{4}}{{\\sin}^{2}t}\\right)g=0, \\tag{30.2.2}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "30.2.3",
+                "latex": "\\displaystyle z \\displaystyle=\\cos t, \\tag{30.2.3}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle w(z) \\displaystyle=(1-z^{2})^{-\\frac{1}{4}}g(t)."
+              },
+              {
+                "id": "E4",
+                "tag": "30.2.4",
+                "latex": "(\\zeta^{2}-\\gamma^{2})\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}\\zeta}^{2}}+2\\zeta\\frac{\\mathrm{d}w}{\\mathrm{d}\\zeta}+\\left(\\zeta^{2}-\\lambda-\\gamma^{2}-\\frac{\\gamma^{2}\\mu^{2}}{\\zeta^{2}-\\gamma^{2}}\\right)w=0. \\tag{30.2.4}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left((1-z^{2})\\frac{\\mathrm{d}w}{\\mathrm{d}z}\\right)+\\left(\\lambda+\\gamma^{2}(1-z^{2})-\\frac{\\mu^{2}}{1-z^{2}}\\right)w=0. \\tag{30.2.1}",
+              "\\frac{{\\mathrm{d}}^{2}g}{{\\mathrm{d}t}^{2}}+\\left(\\lambda+\\frac{1}{4}+\\gamma^{2}{\\sin}^{2}t-\\frac{\\mu^{2}-\\frac{1}{4}}{{\\sin}^{2}t}\\right)g=0, \\tag{30.2.2}",
+              "\\displaystyle z \\displaystyle=\\cos t, \\tag{30.2.3}",
+              "\\displaystyle w(z) \\displaystyle=(1-z^{2})^{-\\frac{1}{4}}g(t).",
+              "(\\zeta^{2}-\\gamma^{2})\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}\\zeta}^{2}}+2\\zeta\\frac{\\mathrm{d}w}{\\mathrm{d}\\zeta}+\\left(\\zeta^{2}-\\lambda-\\gamma^{2}-\\frac{\\gamma^{2}\\mu^{2}}{\\zeta^{2}-\\gamma^{2}}\\right)w=0. \\tag{30.2.4}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "differential equation",
+                "singularities",
+                "spheroidal differential equation",
+                "spheroidal wave functions",
+                "Liouville normal form",
+                "special cases"
+              ],
+              "simbolos": [
+                "$\\cosz$: cosine function , $z$: complex variable and $w$: solution to DE"
+              ],
+              "notas_bibliograficas": [
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.1).",
+                "See Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\"), §8.1) and Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.14)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.2 and Ch.30",
+                "Annotations for §30.2(ii) , §30.2 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "30.13",
+                "archivo_destino": "30.13.md",
+                "titulo_referencia": "§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "30.14",
+                "archivo_destino": "30.14.md",
+                "titulo_referencia": "§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.3",
+          "titulo_original": "Eigenvalues",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.3.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.3.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.3 Eigenvalues",
+            "prosa_teorica": "With $\\mu=m=0,1,2,\\dots$ , the spheroidal wave functions $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ are solutions of Equation ( 30.2.1 ) which are bounded on $(-1,1)$ , or equivalently, which are of the form $(1-x^{2})^{\\frac{1}{2}m}g(x)$ where $g(z)$ is an entire function of $z$ . These solutions exist only for eigenvalues $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ , $n=m,m+1,m+2,\\dots$ , of the parameter $\\lambda$ .\nThe eigenvalues $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ are analytic functions of the real variable $\\gamma^{2}$ and satisfy\nIf $p$ is an even nonnegative integer, then the continued-fraction equation\nwhere $\\alpha_{k}$ , $\\beta_{k}$ , $\\gamma_{k}$ are defined by\n<a id=\"E6\"></a>\nhas the solutions $\\lambda=\\lambda^{m}_{m+2j}\\left(\\gamma^{2}\\right)$ , $j=0,1,2,\\dots$ . If $p$ is an odd positive integer, then Equation ( 30.3.5 ) has the solutions $\\lambda=\\lambda^{m}_{m+2j+1}\\left(\\gamma^{2}\\right)$ , $j=0,1,2,\\dots$ . If $p=0$ or $p=1$ , the finite continued-fraction on the left-hand side of ( 30.3.5 ) equals 0; if $p>1$ its last denominator is $\\beta_{0}-\\lambda$ or $\\beta_{1}-\\lambda$ .\nIn equation ( 30.3.5 ) we can also use\n<a id=\"E7\"></a>\nFor values of $r_{n}^{m}$ see Meixner et al. ([1980](./bib/M.html#bib1599 \"Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies\"), p. 109).\n<a id=\"E9\"></a>\n<a id=\"E12\"></a>\nFurther coefficients can be found with the Maple program SWF9; see § 30.18(i) .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "30.3.1",
+                "latex": "\\lambda^{m}_{m}\\left(\\gamma^{2}\\right)<\\lambda^{m}_{m+1}\\left(\\gamma^{2}\\right)<\\lambda^{m}_{m+2}\\left(\\gamma^{2}\\right)<\\cdots, \\tag{30.3.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "30.3.2",
+                "latex": "\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)=n(n+1)-\\tfrac{1}{2}\\gamma^{2}+O\\left(n^{-2}\\right), \\tag{30.3.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "30.3.3",
+                "latex": "\\lambda^{m}_{n}\\left(0\\right)=n(n+1), \\tag{30.3.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "30.3.4",
+                "latex": "-1<\\frac{\\mathrm{d}\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)}{\\mathrm{d}(\\gamma^{2})}<0. \\tag{30.3.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "30.3.5",
+                "latex": "\\beta_{p}-\\lambda-\\cfrac{\\alpha_{p-2}\\gamma_{p}}{\\beta_{p-2}-\\lambda-\\cfrac{\\alpha_{p-4}\\gamma_{p-2}}{\\beta_{p-4}-\\lambda-\\cdots}}=\\cfrac{\\alpha_{p}\\gamma_{p+2}}{\\beta_{p+2}-\\lambda-\\cfrac{\\alpha_{p+2}\\gamma_{p+4}}{\\beta_{p+4}-\\lambda-\\cdots}}, \\tag{30.3.5}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "30.3.6",
+                "latex": "\\displaystyle\\alpha_{k} \\displaystyle=-(k+1)(k+2), \\tag{30.3.6}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\beta_{k} \\displaystyle=(m+k)(m+k+1)-\\gamma^{2},"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle\\gamma_{k} \\displaystyle=\\gamma^{2},"
+              },
+              {
+                "id": "Ex4",
+                "tag": "30.3.7",
+                "latex": "\\displaystyle\\alpha_{k} \\displaystyle=\\gamma^{2}\\frac{(k+2m+1)(k+2m+2)}{(2k+2m+3)(2k+2m+5)}, \\tag{30.3.7}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle\\beta_{k} \\displaystyle=(k+m)(k+m+1)-2\\gamma^{2}\\frac{(k+m)(k+m+1)-1+m^{2}}{(2k+2m-1)(2k+2m+3)},"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle\\gamma_{k} \\displaystyle=\\gamma^{2}\\frac{(k-1)k}{(2k+2m-3)(2k+2m-1)}."
+              },
+              {
+                "id": "E8",
+                "tag": "30.3.8",
+                "latex": "\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)=\\sum_{k=0}^{\\infty}\\ell_{2k}\\gamma^{2k}, \\tag{30.3.8}"
+              },
+              {
+                "id": "Ex7",
+                "tag": "30.3.9",
+                "latex": "\\displaystyle\\ell_{0} \\displaystyle=n(n+1), \\tag{30.3.9}"
+              },
+              {
+                "id": "Ex8",
+                "tag": "",
+                "latex": "\\displaystyle 2\\ell_{2} \\displaystyle=-1-\\frac{(2m-1)(2m+1)}{(2n-1)(2n+3)},"
+              },
+              {
+                "id": "Ex9",
+                "tag": "",
+                "latex": "\\displaystyle 2\\ell_{4} \\displaystyle=\\frac{(n-m-1)(n-m)(n+m-1)(n+m)}{(2n-3)(2n-1)^{3}(2n+1)}-\\frac{(n-m+1)(n-m+2)(n+m+1)(n+m+2)}{(2n+1)(2n+3)^{3}(2n+5)}."
+              },
+              {
+                "id": "E10",
+                "tag": "30.3.10",
+                "latex": "\\ell_{6}=(4m^{2}-1)\\left(\\frac{(n-m+1)(n-m+2)(n+m+1)(n+m+2)}{(2n-1)(2n+1)(2n+3)^{5}(2n+5)(2n+7)}-\\frac{(n-m-1)(n-m)(n+m-1)(n+m)}{(2n-5)(2n-3)(2n-1)^{5}(2n+1)(2n+3)}\\right), \\tag{30.3.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "30.3.11",
+                "latex": "\\ell_{8}=2(4m^{2}-1)^{2}A+\\frac{1}{16}B+\\frac{1}{8}C+\\frac{1}{2}D, \\tag{30.3.11}"
+              },
+              {
+                "id": "Ex10",
+                "tag": "30.3.12",
+                "latex": "\\displaystyle A \\displaystyle=\\frac{(n-m-1)(n-m)(n+m-1)(n+m)}{(2n-5)^{2}(2n-3)(2n-1)^{7}(2n+1)(2n+3)^{2}}-\\frac{(n-m+1)(n-m+2)(n+m+1)(n+m+2)}{(2n-1)^{2}(2n+1)(2n+3)^{7}(2n+5)(2n+7)^{2}}, \\tag{30.3.12}"
+              },
+              {
+                "id": "Ex11",
+                "tag": "",
+                "latex": "\\displaystyle B \\displaystyle=\\frac{(n-m-3)(n-m-2)(n-m-1)(n-m)(n+m-3)(n+m-2)(n+m-1)(n+m)}{(2n-7)(2n-5)^{2}(2n-3)^{3}(2n-1)^{4}(2n+1)}-\\frac{(n-m+1)(n-m+2)(n-m+3)(n-m+4)(n+m+1)(n+m+2)(n+m+3)(n+m+4)}{(2n+1)(2n+3)^{4}(2n+5)^{3}(2n+7)^{2}(2n+9)},"
+              },
+              {
+                "id": "Ex12",
+                "tag": "",
+                "latex": "\\displaystyle C \\displaystyle=\\frac{(n-m+1)^{2}(n-m+2)^{2}(n+m+1)^{2}(n+m+2)^{2}}{(2n+1)^{2}(2n+3)^{7}(2n+5)^{2}}-\\frac{(n-m-1)^{2}(n-m)^{2}(n+m-1)^{2}(n+m)^{2}}{(2n-3)^{2}(2n-1)^{7}(2n+1)^{2}},"
+              },
+              {
+                "id": "Ex13",
+                "tag": "",
+                "latex": "\\displaystyle D \\displaystyle=\\frac{(n-m-1)(n-m)(n-m+1)(n-m+2)(n+m-1)(n+m)(n+m+1)(n+m+2)}{(2n-3)(2n-1)^{4}(2n+1)^{2}(2n+3)^{4}(2n+5)}."
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\lambda^{m}_{m}\\left(\\gamma^{2}\\right)<\\lambda^{m}_{m+1}\\left(\\gamma^{2}\\right)<\\lambda^{m}_{m+2}\\left(\\gamma^{2}\\right)<\\cdots, \\tag{30.3.1}",
+              "\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)=n(n+1)-\\tfrac{1}{2}\\gamma^{2}+O\\left(n^{-2}\\right), \\tag{30.3.2}",
+              "\\lambda^{m}_{n}\\left(0\\right)=n(n+1), \\tag{30.3.3}",
+              "-1<\\frac{\\mathrm{d}\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)}{\\mathrm{d}(\\gamma^{2})}<0. \\tag{30.3.4}",
+              "\\beta_{p}-\\lambda-\\cfrac{\\alpha_{p-2}\\gamma_{p}}{\\beta_{p-2}-\\lambda-\\cfrac{\\alpha_{p-4}\\gamma_{p-2}}{\\beta_{p-4}-\\lambda-\\cdots}}=\\cfrac{\\alpha_{p}\\gamma_{p+2}}{\\beta_{p+2}-\\lambda-\\cfrac{\\alpha_{p+2}\\gamma_{p+4}}{\\beta_{p+4}-\\lambda-\\cdots}}, \\tag{30.3.5}",
+              "\\displaystyle\\alpha_{k} \\displaystyle=-(k+1)(k+2), \\tag{30.3.6}",
+              "\\displaystyle\\beta_{k} \\displaystyle=(m+k)(m+k+1)-\\gamma^{2},",
+              "\\displaystyle\\gamma_{k} \\displaystyle=\\gamma^{2},",
+              "\\displaystyle\\alpha_{k} \\displaystyle=\\gamma^{2}\\frac{(k+2m+1)(k+2m+2)}{(2k+2m+3)(2k+2m+5)}, \\tag{30.3.7}",
+              "\\displaystyle\\beta_{k} \\displaystyle=(k+m)(k+m+1)-2\\gamma^{2}\\frac{(k+m)(k+m+1)-1+m^{2}}{(2k+2m-1)(2k+2m+3)},",
+              "\\displaystyle\\gamma_{k} \\displaystyle=\\gamma^{2}\\frac{(k-1)k}{(2k+2m-3)(2k+2m-1)}.",
+              "\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)=\\sum_{k=0}^{\\infty}\\ell_{2k}\\gamma^{2k}, \\tag{30.3.8}",
+              "\\displaystyle\\ell_{0} \\displaystyle=n(n+1), \\tag{30.3.9}",
+              "\\displaystyle 2\\ell_{2} \\displaystyle=-1-\\frac{(2m-1)(2m+1)}{(2n-1)(2n+3)},",
+              "\\displaystyle 2\\ell_{4} \\displaystyle=\\frac{(n-m-1)(n-m)(n+m-1)(n+m)}{(2n-3)(2n-1)^{3}(2n+1)}-\\frac{(n-m+1)(n-m+2)(n+m+1)(n+m+2)}{(2n+1)(2n+3)^{3}(2n+5)}.",
+              "\\ell_{6}=(4m^{2}-1)\\left(\\frac{(n-m+1)(n-m+2)(n+m+1)(n+m+2)}{(2n-1)(2n+1)(2n+3)^{5}(2n+5)(2n+7)}-\\frac{(n-m-1)(n-m)(n+m-1)(n+m)}{(2n-5)(2n-3)(2n-1)^{5}(2n+1)(2n+3)}\\right), \\tag{30.3.10}",
+              "\\ell_{8}=2(4m^{2}-1)^{2}A+\\frac{1}{16}B+\\frac{1}{8}C+\\frac{1}{2}D, \\tag{30.3.11}",
+              "\\displaystyle A \\displaystyle=\\frac{(n-m-1)(n-m)(n+m-1)(n+m)}{(2n-5)^{2}(2n-3)(2n-1)^{7}(2n+1)(2n+3)^{2}}-\\frac{(n-m+1)(n-m+2)(n+m+1)(n+m+2)}{(2n-1)^{2}(2n+1)(2n+3)^{7}(2n+5)(2n+7)^{2}}, \\tag{30.3.12}",
+              "\\displaystyle B \\displaystyle=\\frac{(n-m-3)(n-m-2)(n-m-1)(n-m)(n+m-3)(n+m-2)(n+m-1)(n+m)}{(2n-7)(2n-5)^{2}(2n-3)^{3}(2n-1)^{4}(2n+1)}-\\frac{(n-m+1)(n-m+2)(n-m+3)(n-m+4)(n+m+1)(n+m+2)(n+m+3)(n+m+4)}{(2n+1)(2n+3)^{4}(2n+5)^{3}(2n+7)^{2}(2n+9)},",
+              "\\displaystyle C \\displaystyle=\\frac{(n-m+1)^{2}(n-m+2)^{2}(n+m+1)^{2}(n+m+2)^{2}}{(2n+1)^{2}(2n+3)^{7}(2n+5)^{2}}-\\frac{(n-m-1)^{2}(n-m)^{2}(n+m-1)^{2}(n+m)^{2}}{(2n-3)^{2}(2n-1)^{7}(2n+1)^{2}},",
+              "\\displaystyle D \\displaystyle=\\frac{(n-m-1)(n-m)(n-m+1)(n-m+2)(n+m-1)(n+m)(n+m+1)(n+m+2)}{(2n-3)(2n-1)^{4}(2n+1)^{2}(2n+3)^{4}(2n+5)}."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "eigenvalues",
+                "spheroidal differential equation",
+                "spheroidal wave functions",
+                "continued-fraction equation",
+                "power-series expansion",
+                "power-series expansions"
+              ],
+              "definiciones": [
+                "$\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ : eigenvalues of the spheroidal differential equation",
+                "$\\alpha_{k}$ : coefficent (locally) , $\\beta_{k}$ : coefficent (locally) and $\\gamma_{k}$ : coefficent (locally)",
+                "$A$ (locally) , $B$ (locally) , $C$ (locally) and $D$ (locally)"
+              ],
+              "simbolos": [
+                "$m$: nonnegative integer and $\\gamma^{2}$: real parameter",
+                "$m$: nonnegative integer , $\\gamma^{2}$: real parameter , $\\alpha_{k}$: coefficent , $\\beta_{k}$: coefficent and $\\gamma_{k}$: coefficent",
+                "$m$: nonnegative integer , $n\\geq m$: integer degree and $\\ell_{j}$: coefficients",
+                "$m$: nonnegative integer and $n\\geq m$: integer degree"
+              ],
+              "referenciado_por": [
+                "§30.16(i)",
+                "§30.4(iii)"
+              ],
+              "notas_bibliograficas": [
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.23).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.2).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.24).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.531)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "21.7.4",
+                "21.7.5"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.3 and Ch.30",
+                "Annotations for §30.3(iii) , §30.3 and Ch.30",
+                "Annotations for §30.3(iv) , §30.3 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1980",
+                "archivo_destino": "bib/M.html#bib1599",
+                "titulo_referencia": "Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.4",
+          "titulo_original": "Functions of the First Kind",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.4.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.4.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.4 Functions of the First Kind",
+            "prosa_teorica": "The eigenfunctions of ( 30.2.1 ) that correspond to the eigenvalues $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ are denoted by $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ , $n=m,m+1,m+2,\\dots$ . They are normalized by the condition\nthe sign of $\\mathsf{Ps}^{m}_{n}\\left(0,\\gamma^{2}\\right)$ being $(-1)^{(n+m)/2}$ when $n-m$ is even, and the sign of $\\frac{\\mathrm{d}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)}{\\mathrm{d}x}|_{x=0}$ being $(-1)^{(n+m-1)/2}$ when $n-m$ is odd.\nWhen $\\gamma^{2}>0$ $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ is the *prolate angular spheroidal wave function* , and when $\\gamma^{2}<0$ $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ is the *oblate angular spheroidal wave function* . If $\\gamma=0$ , $\\mathsf{Ps}^{m}_{n}\\left(x,0\\right)$ reduces to the Ferrers function $\\mathsf{P}^{m}_{n}\\left(x\\right)$ :\ncompare § 14.3(i) .\n$\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ has exactly $n-m$ zeros in the interval $-1<x<1$ .\nwhere\nwith $\\alpha_{k}$ , $\\beta_{k}$ , $\\gamma_{k}$ from ( 30.3.6 ), and $g_{-1}=g_{-2}=0$ , $g_{k}=0$ for even $k$ if $n-m$ is odd and $g_{k}=0$ for odd $k$ if $n-m$ is even. Normalization of the coefficients $g_{k}$ is effected by application of ( 30.4.1 ).\nIf $f(x)$ is mean-square integrable on $[-1,1]$ , then formally\nwhere\nThe expansion ( 30.4.7 ) converges in the norm of $L^{2}(-1,1)$ , that is,\nIt is also equiconvergent with its expansion in Ferrers functions (as in ( 30.4.2 )), that is, the difference of corresponding partial sums converges to 0 uniformly for $-1\\leq x\\leq 1$ .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "30.4.1",
+                "latex": "\\int_{-1}^{1}\\left(\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\right)^{2}\\,\\mathrm{d}x=\\frac{2}{2n+1}\\frac{(n+m)!}{(n-m)!}, \\tag{30.4.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "30.4.2",
+                "latex": "\\mathsf{Ps}^{m}_{n}\\left(x,0\\right)=\\mathsf{P}^{m}_{n}\\left(x\\right); \\tag{30.4.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "30.4.3",
+                "latex": "\\mathsf{Ps}^{m}_{n}\\left(-x,\\gamma^{2}\\right)=(-1)^{n-m}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right). \\tag{30.4.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "30.4.4",
+                "latex": "\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)=(1-x^{2})^{\\frac{1}{2}m}\\sum_{k=0}^{\\infty}g_{k}x^{k}, \\tag{30.4.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "30.4.5",
+                "latex": "\\alpha_{k}g_{k+2}+(\\beta_{k}-\\lambda^{m}_{n}\\left(\\gamma^{2}\\right))g_{k}+\\gamma_{k}g_{k-2}=0 \\tag{30.4.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "30.4.6",
+                "latex": "\\int_{-1}^{1}\\mathsf{Ps}^{m}_{k}\\left(x,\\gamma^{2}\\right)\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\,\\mathrm{d}x=\\frac{2}{2n+1}\\frac{(n+m)!}{(n-m)!}\\delta_{k,n}. \\tag{30.4.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "30.4.7",
+                "latex": "f(x)=\\sum_{n=m}^{\\infty}c_{n}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right), \\tag{30.4.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "30.4.8",
+                "latex": "c_{n}=(n+\\tfrac{1}{2})\\frac{(n-m)!}{(n+m)!}\\int_{-1}^{1}f(t)\\mathsf{Ps}^{m}_{n}\\left(t,\\gamma^{2}\\right)\\,\\mathrm{d}t. \\tag{30.4.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "30.4.9",
+                "latex": "\\lim_{N\\to\\infty}\\int_{-1}^{1}{\\left|f(x)-\\sum_{n=m}^{N}c_{n}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\right|}^{2}\\,\\mathrm{d}x=0. \\tag{30.4.9}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\int_{-1}^{1}\\left(\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\right)^{2}\\,\\mathrm{d}x=\\frac{2}{2n+1}\\frac{(n+m)!}{(n-m)!}, \\tag{30.4.1}",
+              "\\mathsf{Ps}^{m}_{n}\\left(x,0\\right)=\\mathsf{P}^{m}_{n}\\left(x\\right); \\tag{30.4.2}",
+              "\\mathsf{Ps}^{m}_{n}\\left(-x,\\gamma^{2}\\right)=(-1)^{n-m}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right). \\tag{30.4.3}",
+              "\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)=(1-x^{2})^{\\frac{1}{2}m}\\sum_{k=0}^{\\infty}g_{k}x^{k}, \\tag{30.4.4}",
+              "\\alpha_{k}g_{k+2}+(\\beta_{k}-\\lambda^{m}_{n}\\left(\\gamma^{2}\\right))g_{k}+\\gamma_{k}g_{k-2}=0 \\tag{30.4.5}",
+              "\\int_{-1}^{1}\\mathsf{Ps}^{m}_{k}\\left(x,\\gamma^{2}\\right)\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\,\\mathrm{d}x=\\frac{2}{2n+1}\\frac{(n+m)!}{(n-m)!}\\delta_{k,n}. \\tag{30.4.6}",
+              "f(x)=\\sum_{n=m}^{\\infty}c_{n}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right), \\tag{30.4.7}",
+              "c_{n}=(n+\\tfrac{1}{2})\\frac{(n-m)!}{(n+m)!}\\int_{-1}^{1}f(t)\\mathsf{Ps}^{m}_{n}\\left(t,\\gamma^{2}\\right)\\,\\mathrm{d}t. \\tag{30.4.8}",
+              "\\lim_{N\\to\\infty}\\int_{-1}^{1}{\\left|f(x)-\\sum_{n=m}^{N}c_{n}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\right|}^{2}\\,\\mathrm{d}x=0. \\tag{30.4.9}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "of the first kind",
+                "spheroidal wave functions",
+                "definitions",
+                "oblate angular",
+                "prolate angular",
+                "elementary properties",
+                "zeros",
+                "equiconvergent",
+                "orthogonality"
+              ],
+              "definiciones": [
+                "$\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ : spheroidal wave function of the first kind"
+              ],
+              "notas_bibliograficas": [
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.23).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.2).",
+                "See Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\"), §8.2).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.23)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.4 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.5",
+          "titulo_original": "Functions of the Second Kind",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.5.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.5.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.5 Functions of the Second Kind",
+            "prosa_teorica": "Other solutions of ( 30.2.1 ) with $\\mu=m$ , $\\lambda=\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ , and $z=x$ are\nThey satisfy\nand\ncompare § 14.3(i) . Also,\nwith $A_{n}^{\\pm m}(\\gamma^{2})$ as in ( 30.11.4 ).\nFor further properties see Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\")) and § 30.8(ii) .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "30.5.1",
+                "latex": "\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right), \\tag{30.5.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "30.5.2",
+                "latex": "\\mathsf{Qs}^{m}_{n}\\left(-x,\\gamma^{2}\\right)=(-1)^{n-m+1}\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right), \\tag{30.5.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "30.5.3",
+                "latex": "\\mathsf{Qs}^{m}_{n}\\left(x,0\\right)=\\mathsf{Q}^{m}_{n}\\left(x\\right); \\tag{30.5.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "30.5.4",
+                "latex": "\\mathscr{W}\\left\\{\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right),\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\right\\}=\\frac{(n+m)!}{(1-x^{2})(n-m)!}A_{n}^{m}(\\gamma^{2})A_{n}^{-m}(\\gamma^{2})\\quad(\\neq 0), \\tag{30.5.4}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right), \\tag{30.5.1}",
+              "\\mathsf{Qs}^{m}_{n}\\left(-x,\\gamma^{2}\\right)=(-1)^{n-m+1}\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right), \\tag{30.5.2}",
+              "\\mathsf{Qs}^{m}_{n}\\left(x,0\\right)=\\mathsf{Q}^{m}_{n}\\left(x\\right); \\tag{30.5.3}",
+              "\\mathscr{W}\\left\\{\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right),\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\right\\}=\\frac{(n+m)!}{(1-x^{2})(n-m)!}A_{n}^{m}(\\gamma^{2})A_{n}^{-m}(\\gamma^{2})\\quad(\\neq 0), \\tag{30.5.4}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "definitions",
+                "of the second kind",
+                "spheroidal wave functions"
+              ],
+              "definiciones": [
+                "$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ : spheroidal wave function of the second kind"
+              ],
+              "notas_bibliograficas": [
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.6)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.6",
+          "titulo_original": "Functions of Complex Argument",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.6.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.6.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.6 Functions of Complex Argument",
+            "prosa_teorica": "The solutions\n<a id=\"E1\"></a>\nof ( 30.2.1 ) with $\\mu=m$ and $\\lambda=\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ are real when $z\\in(1,\\infty)$ , and their principal values (§ 4.2(i) ) are obtained by analytic continuation to $\\mathbb{C}\\setminus(-\\infty,1]$ .\n<a id=\"E2\"></a>\ncompare § 14.3(ii) .\nwith $A_{n}^{\\pm m}(\\gamma^{2})$ as in ( 30.11.4 ).\nFor further properties see Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\")).\nFor results for Equation ( 30.2.1 ) with complex parameters see Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\")).",
+            "formulas_clave": [
+              {
+                "id": "Ex1",
+                "tag": "30.6.1",
+                "latex": "\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right), \\tag{30.6.1}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right),"
+              },
+              {
+                "id": "Ex3",
+                "tag": "30.6.2",
+                "latex": "\\displaystyle\\mathit{Ps}^{m}_{n}\\left(z,0\\right) \\displaystyle=P^{m}_{n}\\left(z\\right), \\tag{30.6.2}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle\\mathit{Qs}^{m}_{n}\\left(z,0\\right) \\displaystyle=Q^{m}_{n}\\left(z\\right);"
+              },
+              {
+                "id": "E3",
+                "tag": "30.6.3",
+                "latex": "\\mathscr{W}\\left\\{\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right),\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right)\\right\\}=\\frac{(-1)^{m}(n+m)!}{(1-z^{2})(n-m)!}A_{n}^{m}(\\gamma^{2})A_{n}^{-m}(\\gamma^{2}), \\tag{30.6.3}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "30.6.4",
+                "latex": "\\displaystyle\\mathit{Ps}^{m}_{n}\\left(x\\pm\\mathrm{i}0,\\gamma^{2}\\right) \\displaystyle=(\\mp\\mathrm{i})^{m}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right), \\tag{30.6.4}"
+              },
+              {
+                "id": "",
+                "tag": "30.6.5",
+                "latex": "\\displaystyle\\mathit{Qs}^{m}_{n}\\left(x\\pm\\mathrm{i}0,\\gamma^{2}\\right) \\displaystyle={(\\mp\\mathrm{i})^{m}\\left(\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\mp\\tfrac{1}{2}\\mathrm{i}\\pi\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\right)}. \\tag{30.6.5}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right), \\tag{30.6.1}",
+              "\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right),",
+              "\\displaystyle\\mathit{Ps}^{m}_{n}\\left(z,0\\right) \\displaystyle=P^{m}_{n}\\left(z\\right), \\tag{30.6.2}",
+              "\\displaystyle\\mathit{Qs}^{m}_{n}\\left(z,0\\right) \\displaystyle=Q^{m}_{n}\\left(z\\right);",
+              "\\mathscr{W}\\left\\{\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right),\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right)\\right\\}=\\frac{(-1)^{m}(n+m)!}{(1-z^{2})(n-m)!}A_{n}^{m}(\\gamma^{2})A_{n}^{-m}(\\gamma^{2}), \\tag{30.6.3}",
+              "\\displaystyle\\mathit{Ps}^{m}_{n}\\left(x\\pm\\mathrm{i}0,\\gamma^{2}\\right) \\displaystyle=(\\mp\\mathrm{i})^{m}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right), \\tag{30.6.4}",
+              "\\displaystyle\\mathit{Qs}^{m}_{n}\\left(x\\pm\\mathrm{i}0,\\gamma^{2}\\right) \\displaystyle={(\\mp\\mathrm{i})^{m}\\left(\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\mp\\tfrac{1}{2}\\mathrm{i}\\pi\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\right)}. \\tag{30.6.5}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "of complex argument",
+                "spheroidal wave functions",
+                "spheroidal differential equation",
+                "with complex parameter",
+                "with complex parameters"
+              ],
+              "definiciones": [
+                "$\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right)$ : spheroidal wave function of complex argument and $\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right)$ : spheroidal wave function of complex argument"
+              ],
+              "simbolos": [
+                "$\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right)$: spheroidal wave function of complex argument , $\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right)$: spheroidal wave function of complex argument , $z$: complex variable , $m$: nonnegative integer , $n\\geq m$: integer degree and $\\gamma^{2}$: real parameter",
+                "$P^{\\mu}_{\\nu}\\left(z\\right)$: associated Legendre function of the first kind , $Q^{\\mu}_{\\nu}\\left(z\\right)$: associated Legendre function of the second kind , $\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right)$: spheroidal wave function of complex argument , $\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right)$: spheroidal wave function of complex argument , $z$: complex variable , $m$: nonnegative integer and $n\\geq m$: integer degree",
+                "$\\mathrm{i}$: imaginary unit , $\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right)$: spheroidal wave function of complex argument , $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the first kind , $x$: real variable , $m$: nonnegative integer , $n\\geq m$: integer degree and $\\gamma^{2}$: real parameter",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathrm{i}$: imaginary unit , $\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right)$: spheroidal wave function of complex argument , $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the first kind , [$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind](./30.5.md \"§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions\") , $x$: real variable , $m$: nonnegative integer , $n\\geq m$: integer degree and $\\gamma^{2}$: real parameter"
+              ],
+              "notas_bibliograficas": [
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §§3.6, 3.63)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.6 and Ch.30",
+                "Annotations for §30.6 , §30.6 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind",
+                "archivo_destino": "30.5.md",
+                "titulo_referencia": "§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.7",
+          "titulo_original": "Graphics",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.7.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.7.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.7 Graphics",
+            "prosa_teorica": "<a id=\"F1\"></a>\n![Figure 30.7.1: Eigenvalues $\\lambda^{0}_{n}\\left(\\gamma^{2}\\right)$ , $n=0,1,2,3$ , $-10\\leq\\gamma^{2}\\leq 10$ .](../html/30/7/F1.png)\n<a id=\"F2\"></a>\n![Figure 30.7.2: Eigenvalues $\\lambda^{1}_{n}\\left(\\gamma^{2}\\right)$ $n=1,2,3,4$ , $-10\\leq\\gamma^{2}\\leq 10$ .](../html/30/7/F2.png)\n<a id=\"F3\"></a>\n![Figure 30.7.3: Eigenvalues $\\lambda^{5}_{n}\\left(\\gamma^{2}\\right)$ , $n=5,6,7,8$ , $-40\\leq\\gamma^{2}\\leq 40$ .](../html/30/7/F3.png)\n<a id=\"F4\"></a>\n![Figure 30.7.4: Eigenvalues $\\lambda^{10}_{n}\\left(\\gamma^{2}\\right)$ , $n=10,11,12,13$ , $-50\\leq\\gamma^{2}\\leq 150$ .](../html/30/7/F4.png)\n<a id=\"F5\"></a>\n![Figure 30.7.5: $\\mathsf{Ps}^{0}_{n}\\left(x,4\\right)$ , $n=0,1,2,3$ , $-1\\leq x\\leq 1$ .](../html/30/7/F5.png)\n<a id=\"F6\"></a>\n![Figure 30.7.6: $\\mathsf{Ps}^{0}_{n}\\left(x,-4\\right)$ , $n=0,1,2,3$ , $-1\\leq x\\leq 1$ .](../html/30/7/F6.png)\n<a id=\"F7\"></a>\n![Figure 30.7.7: $\\mathsf{Ps}^{1}_{n}\\left(x,30\\right)$ , $n=1,2,3,4$ , $-1\\leq x\\leq 1$ .](../html/30/7/F7.png)\n<a id=\"F8\"></a>\n![Figure 30.7.8: $\\mathsf{Ps}^{1}_{n}\\left(x,-30\\right)$ , $n=1,2,3,4$ , $-1\\leq x\\leq 1$ .](../html/30/7/F8.png)\n<a id=\"F9\"></a>\n![Figure 30.7.9: $\\mathsf{Ps}^{0}_{2}\\left(x,\\gamma^{2}\\right)$ , $-1\\leq x\\leq 1$ , $-50\\leq\\gamma^{2}\\leq 50$ . 3D Help](../html/30/7/F9.png)\n<a id=\"F10\"></a>\n![Figure 30.7.10: $\\mathsf{Ps}^{1}_{3}\\left(x,\\gamma^{2}\\right)$ , $-1\\leq x\\leq 1$ , $-50\\leq\\gamma^{2}\\leq 50$ . 3D Help](../html/30/7/F10.png)\n<a id=\"F11\"></a>\n![Figure 30.7.11: $\\mathsf{Qs}^{0}_{n}\\left(x,4\\right)$ , $n=0,1,2,3$ , $-1<x<1$ .](../html/30/7/F11.png)\n<a id=\"F12\"></a>\n![Figure 30.7.12: $\\mathsf{Qs}^{0}_{n}\\left(x,-4\\right)$ , $n=0,1,2,3$ , $-1<x<1$ .](../html/30/7/F12.png)\n<a id=\"F13\"></a>\n![Figure 30.7.13: $\\mathsf{Qs}^{1}_{n}\\left(x,4\\right)$ , for $n=1,2,3,4$ , $-1<x<1$ .](../html/30/7/F13.png)\n<a id=\"F14\"></a>\n![Figure 30.7.14: $\\mathsf{Qs}^{1}_{n}\\left(x,-4\\right)$ , $n=1,2,3,4$ , $-1<x<1$ .](../html/30/7/F14.png)\n<a id=\"F15\"></a>\n![Figure 30.7.15: $\\mathsf{Qs}^{0}_{1}\\left(x,\\gamma^{2}\\right),-1<x<1,-10\\leq\\gamma^{2}\\leq 10$ . 3D Help](../html/30/7/F15.png)\n<a id=\"F16\"></a>\n![Figure 30.7.16: $|\\mathit{Ps}^{0}_{0}\\left(x+\\mathrm{i}y,4\\right)|$ , $-2\\leq x\\leq 2$ , $-2\\leq y\\leq 2$ . 3D Help](../html/30/7/F16.png)\n<a id=\"F17\"></a>\n![Figure 30.7.17: $|\\mathit{Ps}^{0}_{0}\\left(x+\\mathrm{i}y,-4\\right)|$ , $-2\\leq x\\leq 2$ , $-2\\leq y\\leq 2$ . 3D Help](../html/30/7/F17.png)\n<a id=\"F18\"></a>\n![Figure 30.7.18: $|\\mathit{Ps}^{1}_{1}\\left(x+\\mathrm{i}y,4\\right)|$ , $-2\\leq x\\leq 2$ , $-2\\leq y\\leq 2$ . 3D Help](../html/30/7/F18.png)\n<a id=\"F19\"></a>\n![Figure 30.7.19: $|\\mathit{Ps}^{1}_{1}\\left(x+\\mathrm{i}y,-4\\right)|$ , $-2\\leq x\\leq 2$ , $-2\\leq y\\leq 2$ . 3D Help](../html/30/7/F19.png)\n<a id=\"F20\"></a>\n![Figure 30.7.20: $|\\mathit{Qs}^{0}_{0}\\left(x+\\mathrm{i}y,4\\right)|$ , $-2\\leq x\\leq 2$ , $-2\\leq y\\leq 2$ . 3D Help](../html/30/7/F20.png)\n<a id=\"F21\"></a>\n![Figure 30.7.21: $|\\mathit{Qs}^{0}_{0}\\left(x+\\mathrm{i}y,-4\\right)|$ , $-1.8\\leq x\\leq 1.8$ , $-2\\leq y\\leq 2$ . 3D Help](../html/30/7/F21.png)",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "eigenvalues",
+                "graphics",
+                "spheroidal differential equation",
+                "spheroidal wave functions"
+              ],
+              "simbolos": [
+                "$\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$: eigenvalues of the spheroidal differential equation , $n\\geq m$: integer degree and $\\gamma^{2}$: real parameter",
+                "$\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the first kind , $x$: real variable and $n\\geq m$: integer degree",
+                "$\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the first kind , $x$: real variable and $\\gamma^{2}$: real parameter",
+                "[$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind](./30.5.md \"§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions\") , $x$: real variable and $n\\geq m$: integer degree",
+                "[$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind](./30.5.md \"§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions\") , $x$: real variable and $\\gamma^{2}$: real parameter",
+                "$\\mathrm{i}$: imaginary unit , $\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right)$: spheroidal wave function of complex argument , $x$: real variable and $y$: real variable",
+                "$\\mathrm{i}$: imaginary unit , $\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right)$: spheroidal wave function of complex argument , $x$: real variable and $y$: real variable"
+              ],
+              "referenciado_por": [
+                "§30.7(i)",
+                "§30.7(ii)",
+                "§30.7(iii)",
+                "§30.1",
+                "§30.7(iv)"
+              ],
+              "notas_bibliograficas": [
+                "Figures 30.7.1 – 30.7.4 were produced at NIST with the aid of Maple procedures provided by the author.",
+                "Figures 30.7.5 – 30.7.10 were produced at NIST with the aid of Maple procedures provided by the author.",
+                "Figures 30.7.11 – 30.7.15 were produced at NIST with the aid of Maple procedures provided by the author.",
+                "Figures 30.7.16 – 30.7.21 were produced at NIST with the aid of Maple procedures provided by the author."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.7 and Ch.30",
+                "Annotations for §30.7(i) , §30.7 and Ch.30",
+                "Annotations for §30.7(ii) , §30.7 and Ch.30",
+                "Annotations for §30.7(iii) , §30.7 and Ch.30",
+                "Annotations for §30.7(iv) , §30.7 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind",
+                "archivo_destino": "30.5.md",
+                "titulo_referencia": "§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind",
+                "archivo_destino": "30.5.md",
+                "titulo_referencia": "§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind",
+                "archivo_destino": "30.5.md",
+                "titulo_referencia": "§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind",
+                "archivo_destino": "30.5.md",
+                "titulo_referencia": "§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "$\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$: spheroidal wave function of the second kind",
+                "archivo_destino": "30.5.md",
+                "titulo_referencia": "§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.8",
+          "titulo_original": "Expansions in Series of Ferrers Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.8.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.8.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.8 Expansions in Series of Ferrers Functions",
+            "prosa_teorica": "where $\\mathsf{P}^{m}_{n+2k}\\left(x\\right)$ is the Ferrers function of the first kind (§ 14.3(i) ), $R=\\left\\lfloor\\frac{1}{2}(n-m)\\right\\rfloor$ , and the coefficients $a^{m}_{n,k}(\\gamma^{2})$ are given by\nLet\n<a id=\"E3\"></a>\nThen the set of coefficients $a^{m}_{n,k}(\\gamma^{2})$ , $k=-R,-R+1,-R+2,\\dots$ is the solution of the difference equation\n(note that $A_{-R}=0$ ) that satisfies the normalizing condition\nwith\nAlso, as $k\\to\\infty$ ,\nand\nwhere $\\mathsf{P}^{m}_{n}$ and $\\mathsf{Q}^{m}_{n}$ are again the Ferrers functions and $N=\\left\\lfloor\\frac{1}{2}(n+m)\\right\\rfloor$ . The coefficients $a^{m}_{n,k}(\\gamma^{2})$ satisfy ( 30.8.4 ) for all $k$ when we set $a^{m}_{n,k}(\\gamma^{2})=0$ for $k<-N$ . For $k\\geq-R$ they agree with the coefficients defined in § 30.8(i) . For $k=-N,-N+1,\\dots,-R-1$ they are determined from ( 30.8.4 ) by forward recursion using $a^{m}_{n,-N-1}(\\gamma^{2})=0$ . The set of coefficients ${a^{\\prime}}^{m}_{n,k}(\\gamma^{2})$ , $k=-N-1,-N-2,\\dots$ , is the recessive solution of ( 30.8.4 ) as $k\\to-\\infty$ that is normalized by\nwith\nIt should be noted that if the forward recursion ( 30.8.4 ) beginning with $f_{-N-1}=0$ , $f_{-N}=1$ leads to $f_{-R}=0$ , then $a^{m}_{n,k}(\\gamma^{2})$ is undefined for $n<-R$ and $\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ does not exist.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "30.8.1",
+                "latex": "\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)=\\sum_{k=-R}^{\\infty}(-1)^{k}a^{m}_{n,k}(\\gamma^{2})\\mathsf{P}^{m}_{n+2k}\\left(x\\right), \\tag{30.8.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "30.8.2",
+                "latex": "a^{m}_{n,k}(\\gamma^{2})=(-1)^{k}\\left(n+2k+\\tfrac{1}{2}\\right)\\frac{(n-m+2k)!}{(n+m+2k)!}\\,\\int_{-1}^{1}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\mathsf{P}^{m}_{n+2k}\\left(x\\right)\\,\\mathrm{d}x. \\tag{30.8.2}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "30.8.3",
+                "latex": "\\displaystyle A_{k} \\displaystyle=-\\gamma^{2}\\frac{(n-m+2k-1)(n-m+2k)}{(2n+4k-3)(2n+4k-1)}, \\tag{30.8.3}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle B_{k} \\displaystyle=(n+2k)(n+2k+1)-2\\gamma^{2}\\frac{(n+2k)(n+2k+1)-1+m^{2}}{(2n+4k-1)(2n+4k+3)},"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle C_{k} \\displaystyle=-\\gamma^{2}\\frac{(n+m+2k+1)(n+m+2k+2)}{(2n+4k+3)(2n+4k+5)}."
+              },
+              {
+                "id": "E4",
+                "tag": "30.8.4",
+                "latex": "A_{k}f_{k-1}+\\left(B_{k}-\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)\\right)f_{k}+C_{k}f_{k+1}=0, \\tag{30.8.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "30.8.5",
+                "latex": "\\sum_{k=-R}^{\\infty}a_{n,k}^{m}(\\gamma^{2})a_{n,k}^{-m}(\\gamma^{2})\\frac{1}{2n+4k+1}=\\frac{1}{2n+1}, \\tag{30.8.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "30.8.6",
+                "latex": "a_{n,k}^{-m}(\\gamma^{2})=\\frac{(n-m)!(n+m+2k)!}{(n+m)!(n-m+2k)!}a_{n,k}^{m}(\\gamma^{2}). \\tag{30.8.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "30.8.7",
+                "latex": "\\frac{k^{2}a^{m}_{n,k}(\\gamma^{2})}{a^{m}_{n,k-1}(\\gamma^{2})}=\\frac{\\gamma^{2}}{16}+O\\left(\\frac{1}{k}\\right), \\tag{30.8.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "30.8.8",
+                "latex": "\\frac{\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)-B_{k}}{A_{k}}\\frac{a^{m}_{n,k}(\\gamma^{2})}{a^{m}_{n,k-1}(\\gamma^{2})}=1+O\\left(\\frac{1}{k^{4}}\\right). \\tag{30.8.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "30.8.9",
+                "latex": "\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)=\\sum_{k=-\\infty}^{-N-1}(-1)^{k}{a^{\\prime}}^{m}_{n,k}(\\gamma^{2})\\mathsf{P}^{m}_{n+2k}\\left(x\\right)+\\sum_{k=-N}^{\\infty}(-1)^{k}a^{m}_{n,k}(\\gamma^{2})\\mathsf{Q}^{m}_{n+2k}\\left(x\\right), \\tag{30.8.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "30.8.10",
+                "latex": "A_{-N-1}{a^{\\prime}}^{m}_{n,-N-2}(\\gamma^{2})+{\\left(B_{-N-1}-\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)\\right){a^{\\prime}}^{m}_{n,-N-1}(\\gamma^{2})}+C^{\\prime}a^{m}_{n,-N}(\\gamma^{2})=0, \\tag{30.8.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "30.8.11",
+                "latex": "C^{\\prime}=\\begin{cases}\\dfrac{\\gamma^{2}}{4m^{2}-1},&\\text{n-m even},\\\\\n-\\dfrac{\\gamma^{2}}{(2m-1)(2m-3)},&\\text{n-m odd}.\\end{cases} \\tag{30.8.11}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)=\\sum_{k=-R}^{\\infty}(-1)^{k}a^{m}_{n,k}(\\gamma^{2})\\mathsf{P}^{m}_{n+2k}\\left(x\\right), \\tag{30.8.1}",
+              "a^{m}_{n,k}(\\gamma^{2})=(-1)^{k}\\left(n+2k+\\tfrac{1}{2}\\right)\\frac{(n-m+2k)!}{(n+m+2k)!}\\,\\int_{-1}^{1}\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)\\mathsf{P}^{m}_{n+2k}\\left(x\\right)\\,\\mathrm{d}x. \\tag{30.8.2}",
+              "\\displaystyle A_{k} \\displaystyle=-\\gamma^{2}\\frac{(n-m+2k-1)(n-m+2k)}{(2n+4k-3)(2n+4k-1)}, \\tag{30.8.3}",
+              "\\displaystyle B_{k} \\displaystyle=(n+2k)(n+2k+1)-2\\gamma^{2}\\frac{(n+2k)(n+2k+1)-1+m^{2}}{(2n+4k-1)(2n+4k+3)},",
+              "\\displaystyle C_{k} \\displaystyle=-\\gamma^{2}\\frac{(n+m+2k+1)(n+m+2k+2)}{(2n+4k+3)(2n+4k+5)}.",
+              "A_{k}f_{k-1}+\\left(B_{k}-\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)\\right)f_{k}+C_{k}f_{k+1}=0, \\tag{30.8.4}",
+              "\\sum_{k=-R}^{\\infty}a_{n,k}^{m}(\\gamma^{2})a_{n,k}^{-m}(\\gamma^{2})\\frac{1}{2n+4k+1}=\\frac{1}{2n+1}, \\tag{30.8.5}",
+              "a_{n,k}^{-m}(\\gamma^{2})=\\frac{(n-m)!(n+m+2k)!}{(n+m)!(n-m+2k)!}a_{n,k}^{m}(\\gamma^{2}). \\tag{30.8.6}",
+              "\\frac{k^{2}a^{m}_{n,k}(\\gamma^{2})}{a^{m}_{n,k-1}(\\gamma^{2})}=\\frac{\\gamma^{2}}{16}+O\\left(\\frac{1}{k}\\right), \\tag{30.8.7}",
+              "\\frac{\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)-B_{k}}{A_{k}}\\frac{a^{m}_{n,k}(\\gamma^{2})}{a^{m}_{n,k-1}(\\gamma^{2})}=1+O\\left(\\frac{1}{k^{4}}\\right). \\tag{30.8.8}",
+              "\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)=\\sum_{k=-\\infty}^{-N-1}(-1)^{k}{a^{\\prime}}^{m}_{n,k}(\\gamma^{2})\\mathsf{P}^{m}_{n+2k}\\left(x\\right)+\\sum_{k=-N}^{\\infty}(-1)^{k}a^{m}_{n,k}(\\gamma^{2})\\mathsf{Q}^{m}_{n+2k}\\left(x\\right), \\tag{30.8.9}",
+              "A_{-N-1}{a^{\\prime}}^{m}_{n,-N-2}(\\gamma^{2})+{\\left(B_{-N-1}-\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)\\right){a^{\\prime}}^{m}_{n,-N-1}(\\gamma^{2})}+C^{\\prime}a^{m}_{n,-N}(\\gamma^{2})=0, \\tag{30.8.10}",
+              "C^{\\prime}=\\begin{cases}\\dfrac{\\gamma^{2}}{4m^{2}-1},&\\text{n-m even},\\\\\n-\\dfrac{\\gamma^{2}}{(2m-1)(2m-3)},&\\text{n-m odd}.\\end{cases} \\tag{30.8.11}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "expansions in series of Ferrers functions",
+                "spheroidal wave functions",
+                "asymptotic behavior of coefficients"
+              ],
+              "definiciones": [
+                "$A_{k}$ (locally) , $B_{k}$ (locally) and $C_{k}$ (locally)"
+              ],
+              "simbolos": [
+                "$m$: nonnegative integer , $n\\geq m$: integer degree and $\\gamma^{2}$: real parameter"
+              ],
+              "referenciado_por": [
+                "§30.16(i)",
+                "§30.8(ii)",
+                "§30.5"
+              ],
+              "notas_bibliograficas": [
+                "See Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\"), §8.2) and Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §§3.542, 3.62).",
+                "See Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\"), §8.5) and Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.62)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.8 and Ch.30",
+                "Annotations for §30.8(i) , §30.8 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.9",
+          "titulo_original": "Asymptotic Approximations and Expansions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.9.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.9.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.9 Asymptotic Approximations and Expansions",
+            "prosa_teorica": "As $\\gamma^{2}\\to+\\infty$ , with $q=2(n-m)+1$ ,\nwhere\n<a id=\"E2\"></a>\n<a id=\"E3\"></a>\nFurther coefficients can be found with the Maple program SWF7; see § 30.18(i) .\nFor the eigenfunctions see Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.251) and Müller ([1963](./bib/M.html#bib1675 \"Asymptotic expansions of prolate spheroidal wave functions and their characteristic numbers\")).\nFor uniform asymptotic expansions in terms of Airy or Bessel functions for real values of the parameters, complex values of the variable, and with explicit error bounds see Dunster ([1986](./bib/D.html#bib694 \"Uniform asymptotic expansions for prolate spheroidal functions with large parameters\")). See also Miles ([1975](./bib/M.html#bib1611 \"Asymptotic approximations for prolate spheroidal wave functions\")).\nAs $\\gamma^{2}\\to-\\infty$ , with $q=n+1$ if $n-m$ is even, or $q=n$ if $n-m$ is odd, we have\nwhere\n<a id=\"E5\"></a>\n<a id=\"E6\"></a>\nFurther coefficients can be found with the Maple program SWF8; see § 30.18(i) .\nFor the eigenfunctions see Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.252) and Müller ([1962](./bib/M.html#bib1674 \"Asymptotic expansions of oblate spheroidal wave functions and their characteristic numbers\")).\nFor uniform asymptotic expansions in terms of elementary, Airy, or Bessel functions for real values of the parameters, complex values of the variable, and with explicit error bounds see Dunster ([1992](./bib/D.html#bib699 \"Uniform asymptotic expansions for oblate spheroidal functions I: Positive separation parameter λ\"), [1995](./bib/D.html#bib702 \"Uniform asymptotic expansions for oblate spheroidal functions II: Negative separation parameter λ\")). See also Jorna and Springer ([1971](./bib/J.html#bib1190 \"Derivation of Green-type, transitional and uniform asymptotic expansions from differential equations. V. Angular oblate spheroidal wavefunctions ⁢ ¯ ⁢ p s r n ( η , h ) and ⁢ ¯ ⁢ q s r n ( η , h ) for large h\")).\nThe asymptotic behavior of $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ and $a^{m}_{n,k}(\\gamma^{2})$ as $n\\to\\infty$ in descending powers of $2n+1$ is derived in Meixner ([1944](./bib/M.html#bib1596 \"Die Laméschen Wellenfunktionen des Drehellipsoids\")). The cases of large $m$ , and of large $m$ and large $|\\gamma|$ , are studied in Abramowitz ([1949](./bib/index.html#bib21 \"Asymptotic expansions of spheroidal wave functions\")). The asymptotic behavior of $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ and $\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ as $x\\to\\pm 1$ is given in Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\"), p. 151). The behavior of $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ for complex $\\gamma^{2}$ and large $|\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)|$ is investigated in Hunter and Guerrieri ([1982](./bib/H.html#bib1117 \"The eigenvalues of the angular spheroidal wave equation\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "30.9.1",
+                "latex": "\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)\\sim-\\gamma^{2}+\\gamma q+\\beta_{0}+\\beta_{1}\\gamma^{-1}+\\beta_{2}\\gamma^{-2}+\\cdots, \\tag{30.9.1}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "30.9.2",
+                "latex": "\\displaystyle 8\\beta_{0} \\displaystyle=8m^{2}-q^{2}-5, \\tag{30.9.2}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle 2^{6}\\beta_{1} \\displaystyle=-q^{3}-11q+32m^{2}q,"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle 2^{10}\\beta_{2} \\displaystyle=-5(q^{4}+26q^{2}+21)+384m^{2}(q^{2}+1),"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle 2^{14}\\beta_{3} \\displaystyle=-33q^{5}-1594q^{3}-5621q+128m^{2}(37q^{3}+167q)-2048m^{4}q."
+              },
+              {
+                "id": "Ex5",
+                "tag": "30.9.3",
+                "latex": "\\displaystyle 2^{16}\\beta_{4} \\displaystyle=-63q^{6}-4940q^{4}-43327q^{2}-22470+128m^{2}(115q^{4}+1310q^{2}+735)-24576m^{4}(q^{2}+1), \\tag{30.9.3}"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle 2^{20}\\beta_{5} \\displaystyle=-527q^{7}-61529q^{5}-10\\;43961q^{3}-22\\;41599q+32m^{2}(5739q^{5}+1\\;27550q^{3}+2\\;98951q)-2048m^{4}(355q^{3}+1505q)+65536m^{6}q."
+              },
+              {
+                "id": "E4",
+                "tag": "30.9.4",
+                "latex": "\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)\\sim 2q|\\gamma|+c_{0}+c_{1}|\\gamma|^{-1}+c_{2}|\\gamma|^{-2}+\\cdots, \\tag{30.9.4}"
+              },
+              {
+                "id": "Ex7",
+                "tag": "30.9.5",
+                "latex": "\\displaystyle 2c_{0} \\displaystyle=-q^{2}-1+m^{2}, \\tag{30.9.5}"
+              },
+              {
+                "id": "Ex8",
+                "tag": "",
+                "latex": "\\displaystyle 8c_{1} \\displaystyle=-q^{3}-q+m^{2}q,"
+              },
+              {
+                "id": "Ex9",
+                "tag": "",
+                "latex": "\\displaystyle 2^{6}c_{2} \\displaystyle=-5q^{4}-10q^{2}-1+2m^{2}(3q^{2}+1)-m^{4},"
+              },
+              {
+                "id": "Ex10",
+                "tag": "",
+                "latex": "\\displaystyle 2^{9}c_{3} \\displaystyle=-33q^{5}-114q^{3}-37q+2m^{2}(23q^{3}+25q)-13m^{4}q."
+              },
+              {
+                "id": "Ex11",
+                "tag": "30.9.6",
+                "latex": "\\displaystyle 2^{10}c_{4} \\displaystyle=-63q^{6}-340q^{4}-239q^{2}-14+10m^{2}(10q^{4}+23q^{2}+3)-3m^{4}(13q^{2}+6)+2m^{6}, \\tag{30.9.6}"
+              },
+              {
+                "id": "Ex12",
+                "tag": "",
+                "latex": "\\displaystyle 2^{13}c_{5} \\displaystyle=-527q^{7}-4139q^{5}-5221q^{3}-1009q+m^{2}(939q^{5}+3750q^{3}+1591q)-m^{4}(465q^{3}+635q)+53m^{6}q."
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)\\sim-\\gamma^{2}+\\gamma q+\\beta_{0}+\\beta_{1}\\gamma^{-1}+\\beta_{2}\\gamma^{-2}+\\cdots, \\tag{30.9.1}",
+              "\\displaystyle 8\\beta_{0} \\displaystyle=8m^{2}-q^{2}-5, \\tag{30.9.2}",
+              "\\displaystyle 2^{6}\\beta_{1} \\displaystyle=-q^{3}-11q+32m^{2}q,",
+              "\\displaystyle 2^{10}\\beta_{2} \\displaystyle=-5(q^{4}+26q^{2}+21)+384m^{2}(q^{2}+1),",
+              "\\displaystyle 2^{14}\\beta_{3} \\displaystyle=-33q^{5}-1594q^{3}-5621q+128m^{2}(37q^{3}+167q)-2048m^{4}q.",
+              "\\displaystyle 2^{16}\\beta_{4} \\displaystyle=-63q^{6}-4940q^{4}-43327q^{2}-22470+128m^{2}(115q^{4}+1310q^{2}+735)-24576m^{4}(q^{2}+1), \\tag{30.9.3}",
+              "\\displaystyle 2^{20}\\beta_{5} \\displaystyle=-527q^{7}-61529q^{5}-10\\;43961q^{3}-22\\;41599q+32m^{2}(5739q^{5}+1\\;27550q^{3}+2\\;98951q)-2048m^{4}(355q^{3}+1505q)+65536m^{6}q.",
+              "\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)\\sim 2q|\\gamma|+c_{0}+c_{1}|\\gamma|^{-1}+c_{2}|\\gamma|^{-2}+\\cdots, \\tag{30.9.4}",
+              "\\displaystyle 2c_{0} \\displaystyle=-q^{2}-1+m^{2}, \\tag{30.9.5}",
+              "\\displaystyle 8c_{1} \\displaystyle=-q^{3}-q+m^{2}q,",
+              "\\displaystyle 2^{6}c_{2} \\displaystyle=-5q^{4}-10q^{2}-1+2m^{2}(3q^{2}+1)-m^{4},",
+              "\\displaystyle 2^{9}c_{3} \\displaystyle=-33q^{5}-114q^{3}-37q+2m^{2}(23q^{3}+25q)-13m^{4}q.",
+              "\\displaystyle 2^{10}c_{4} \\displaystyle=-63q^{6}-340q^{4}-239q^{2}-14+10m^{2}(10q^{4}+23q^{2}+3)-3m^{4}(13q^{2}+6)+2m^{6}, \\tag{30.9.6}",
+              "\\displaystyle 2^{13}c_{5} \\displaystyle=-527q^{7}-4139q^{5}-5221q^{3}-1009q+m^{2}(939q^{5}+3750q^{3}+1591q)-m^{4}(465q^{3}+635q)+53m^{6}q."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "asymptotic behavior",
+                "eigenvalues",
+                "spheroidal differential equation",
+                "for large $\\left|\\gamma^{2}\\right|$",
+                "spheroidal wave functions",
+                "approximations",
+                "as $x\\to\\pm 1$"
+              ],
+              "definiciones": [
+                "$\\beta_{n}$ : coeffients (locally)"
+              ],
+              "simbolos": [
+                "$m$: nonnegative integer , $n\\geq m$: integer degree and $q$",
+                "$m$: nonnegative integer , $q$ and $\\beta_{n}$: coeffients",
+                "$m$: nonnegative integer , $q$ and $c_{n}$: coeffients"
+              ],
+              "referenciado_por": [
+                "§30.16(i)",
+                "§30.16(ii)",
+                "§2.8(iii)",
+                "§2.8(vi)"
+              ],
+              "notas_bibliograficas": [
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.251) and Müller ([1963](./bib/M.html#bib1675 \"Asymptotic expansions of prolate spheroidal wave functions and their characteristic numbers\")).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.252) and Müller ([1962](./bib/M.html#bib1674 \"Asymptotic expansions of oblate spheroidal wave functions and their characteristic numbers\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.9 and Ch.30",
+                "Annotations for §30.9(i) , §30.9 and Ch.30",
+                "Annotations for §30.9(ii) , §30.9 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/M.html#bib1675",
+                "titulo_referencia": "Asymptotic expansions of prolate spheroidal wave functions and their characteristic numbers"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/M.html#bib1675",
+                "titulo_referencia": "Asymptotic expansions of prolate spheroidal wave functions and their characteristic numbers"
+              },
+              {
+                "texto": "1986",
+                "archivo_destino": "bib/D.html#bib694",
+                "titulo_referencia": "Uniform asymptotic expansions for prolate spheroidal functions with large parameters"
+              },
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/M.html#bib1611",
+                "titulo_referencia": "Asymptotic approximations for prolate spheroidal wave functions"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/M.html#bib1674",
+                "titulo_referencia": "Asymptotic expansions of oblate spheroidal wave functions and their characteristic numbers"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/M.html#bib1674",
+                "titulo_referencia": "Asymptotic expansions of oblate spheroidal wave functions and their characteristic numbers"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/D.html#bib699",
+                "titulo_referencia": "Uniform asymptotic expansions for oblate spheroidal functions I: Positive separation parameter λ"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/D.html#bib702",
+                "titulo_referencia": "Uniform asymptotic expansions for oblate spheroidal functions II: Negative separation parameter λ"
+              },
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/J.html#bib1190",
+                "titulo_referencia": "Derivation of Green-type, transitional and uniform asymptotic expansions from differential equations. V. Angular oblate spheroidal wavefunctions ⁢ ¯ ⁢ p s r n ( η , h ) and ⁢ ¯ ⁢ q s r n ( η , h ) for large h"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/M.html#bib1596",
+                "titulo_referencia": "Die Laméschen Wellenfunktionen des Drehellipsoids"
+              },
+              {
+                "texto": "1949",
+                "archivo_destino": "bib/index.html#bib21",
+                "titulo_referencia": "Asymptotic expansions of spheroidal wave functions"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/H.html#bib1117",
+                "titulo_referencia": "The eigenvalues of the angular spheroidal wave equation"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.10",
+          "titulo_original": "Series and Integrals",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.10.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.10.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.10 Series and Integrals",
+            "prosa_teorica": "Integrals and integral equations for $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ are given in Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\"), §8.6), Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\"), §16.13), Flammer ([1957](./bib/F.html#bib807 \"Spheroidal Wave Functions\"), Chapter 5), and Meixner ([1951](./bib/M.html#bib1597 \"Klassifikation, Bezeichnung und Eigenschaften der Sphäroidfunktionen\")). For product formulas and convolutions see Connett et al. ([1993](./bib/C.html#bib565 \"Product formulas and convolutions for angular and radial spheroidal wave functions\")). For an addition theorem, see Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), p. 300) and King and Van Buren ([1973](./bib/K.html#bib1273 \"A general addition theorem for spheroidal wave functions\")). For expansions in products of spherical Bessel functions, see Flammer ([1957](./bib/F.html#bib807 \"Spheroidal Wave Functions\"), Chapter 6).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "addition theorem",
+                "convolutions",
+                "expansions in series of spherical Bessel functions",
+                "integral equations",
+                "integrals",
+                "products",
+                "spheroidal wave functions"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1957",
+                "archivo_destino": "bib/F.html#bib807",
+                "titulo_referencia": "Spheroidal Wave Functions"
+              },
+              {
+                "texto": "1951",
+                "archivo_destino": "bib/M.html#bib1597",
+                "titulo_referencia": "Klassifikation, Bezeichnung und Eigenschaften der Sphäroidfunktionen"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/C.html#bib565",
+                "titulo_referencia": "Product formulas and convolutions for angular and radial spheroidal wave functions"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/K.html#bib1273",
+                "titulo_referencia": "A general addition theorem for spheroidal wave functions"
+              },
+              {
+                "texto": "1957",
+                "archivo_destino": "bib/F.html#bib807",
+                "titulo_referencia": "Spheroidal Wave Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.11",
+          "titulo_original": "Radial Spheroidal Wave Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.11.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.11.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.11 Radial Spheroidal Wave Functions",
+            "prosa_teorica": "Denote\nwhere\n<a id=\"E2\"></a>\nwith $J_{\\nu}$ , $Y_{\\nu}$ , ${H^{(1)}_{\\nu}}$ , and ${H^{(2)}_{\\nu}}$ as in § 10.2(ii) . Then solutions of ( 30.2.1 ) with $\\mu=m$ and $\\lambda=\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ are given by\nHere $a^{-m}_{n,k}(\\gamma^{2})$ is defined by ( 30.8.2 ) and ( 30.8.6 ), and\nIn ( 30.11.3 ) $z\\neq 0$ when $j=1$ , and $|z|>1$ when $j=2,3,4$ .\n<a id=\"E5\"></a>\n<a id=\"F1\"></a>\n![Figure 30.11.1: $S^{0(1)}_{n}\\left(x,2\\right)$ , $n=0,1$ , $1\\leq x\\leq 10$ .](../html/30/11/F1.png)\n<a id=\"F2\"></a>\n![Figure 30.11.2: $S^{0(1)}_{n}\\left(\\mathrm{i}y,2\\mathrm{i}\\right)$ , $n=0,1$ , $0\\leq y\\leq 10$ .](../html/30/11/F2.png)\n<a id=\"F3\"></a>\n![Figure 30.11.3: $S^{1(1)}_{n}\\left(x,2\\right)$ , $n=1,2$ , $1\\leq x\\leq 10$ .](../html/30/11/F3.png)\n<a id=\"F4\"></a>\n![Figure 30.11.4: $S^{1(1)}_{n}\\left(\\mathrm{i}y,2\\mathrm{i}\\right)$ , $n=1,2$ , $0\\leq y\\leq 10$ .](../html/30/11/F4.png)\nFor fixed $\\gamma$ , as $z\\to\\infty$ in the sector $|\\operatorname{ph}z|\\leq\\pi-\\delta$ ( $<\\pi$ ),\nFor asymptotic expansions in negative powers of $z$ see Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), p. 293).\nwhere\nor\nWhen $z\\in\\mathbb{C}\\setminus(-\\infty,1]$\nFor further relations see Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\"), §8.6), Connett et al. ([1993](./bib/C.html#bib565 \"Product formulas and convolutions for angular and radial spheroidal wave functions\")), Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\"), §16.13), Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\")), and Meixner et al. ([1980](./bib/M.html#bib1599 \"Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies\"), §3.1).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "30.11.1",
+                "latex": "\\psi_{k}^{(j)}(z)=\\left(\\frac{\\pi}{2z}\\right)^{\\frac{1}{2}}{\\cal C}_{k+\\frac{1}{2}}^{(j)}(z), \\tag{30.11.1}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "30.11.2",
+                "latex": "\\displaystyle{\\cal C}_{\\nu}^{(1)} \\displaystyle=J_{\\nu}, \\tag{30.11.2}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle{\\cal C}_{\\nu}^{(2)} \\displaystyle=Y_{\\nu},"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle{\\cal C}_{\\nu}^{(3)} \\displaystyle={H^{(1)}_{\\nu}},"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle{\\cal C}_{\\nu}^{(4)} \\displaystyle={H^{(2)}_{\\nu}},"
+              },
+              {
+                "id": "E3",
+                "tag": "30.11.3",
+                "latex": "S^{m(j)}_{n}\\left(z,\\gamma\\right)=\\frac{(1-z^{-2})^{\\frac{1}{2}m}}{A_{n}^{-m}(\\gamma^{2})}\\sum_{2k\\geq m-n}a^{-m}_{n,k}(\\gamma^{2})\\psi_{n+2k}^{(j)}(\\gamma z). \\tag{30.11.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "30.11.4",
+                "latex": "A_{n}^{\\pm m}(\\gamma^{2})=\\sum_{2k\\geq\\mp m-n}(-1)^{k}a^{\\pm m}_{n,k}(\\gamma^{2})\\quad(\\neq 0). \\tag{30.11.4}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "30.11.5",
+                "latex": "\\displaystyle S^{m(3)}_{n}\\left(z,\\gamma\\right) \\displaystyle=S^{m(1)}_{n}\\left(z,\\gamma\\right)+\\mathrm{i}S^{m(2)}_{n}\\left(z,\\gamma\\right), \\tag{30.11.5}"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle S^{m(4)}_{n}\\left(z,\\gamma\\right) \\displaystyle=S^{m(1)}_{n}\\left(z,\\gamma\\right)-\\mathrm{i}S^{m(2)}_{n}\\left(z,\\gamma\\right)."
+              },
+              {
+                "id": "E6",
+                "tag": "30.11.6",
+                "latex": "S^{m(j)}_{n}\\left(z,\\gamma\\right)=\\begin{cases}\\psi_{n}^{(j)}(\\gamma z)+O\\left(z^{-2}e^{|\\Im z|}\\right),&j=1,2,\\\\\n\\psi_{n}^{(j)}(\\gamma z)\\left(1+O\\left(z^{-1}\\right)\\right),&j=3,4.\\end{cases} \\tag{30.11.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "30.11.7",
+                "latex": "\\mathscr{W}\\left\\{S^{m(1)}_{n}\\left(z,\\gamma\\right),S^{m(2)}_{n}\\left(z,\\gamma\\right)\\right\\}=\\frac{1}{\\gamma(z^{2}-1)}. \\tag{30.11.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "30.11.8",
+                "latex": "S^{m(1)}_{n}\\left(z,\\gamma\\right)=K_{n}^{m}(\\gamma)\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right), \\tag{30.11.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "30.11.9",
+                "latex": "S^{m(2)}_{n}\\left(z,\\gamma\\right)=\\frac{(n-m)!}{(n+m)!}\\frac{(-1)^{m+1}\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right)}{\\gamma K_{n}^{m}(\\gamma)A_{n}^{m}(\\gamma^{2})A_{n}^{-m}(\\gamma^{2})}, \\tag{30.11.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "30.11.10",
+                "latex": "K_{n}^{m}(\\gamma)=\\frac{\\sqrt{\\pi}}{2}\\left(\\frac{\\gamma}{2}\\right)^{m}\\frac{(-1)^{m}a_{n,\\frac{1}{2}(m-n)}^{-m}(\\gamma^{2})}{\\Gamma\\left(\\frac{3}{2}+m\\right)A_{n}^{-m}(\\gamma^{2})\\mathsf{Ps}^{m}_{n}\\left(0,\\gamma^{2}\\right)}, \\tag{30.11.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "30.11.11",
+                "latex": "K_{n}^{m}(\\gamma)=\\frac{\\sqrt{\\pi}}{2}\\left(\\frac{\\gamma}{2}\\right)^{m+1}\\,\\frac{(-1)^{m}a_{n,\\frac{1}{2}(m-n+1)}^{-m}(\\gamma^{2})}{\\Gamma\\left(\\frac{5}{2}+m\\right)A_{n}^{-m}(\\gamma^{2})(\\left.\\frac{\\mathrm{d}\\mathsf{Ps}^{m}_{n}(z,\\gamma^{2})}{\\mathrm{d}z}\\right|_{z=0})}, \\tag{30.11.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "30.11.12",
+                "latex": "A_{n}^{-m}(\\gamma^{2})S^{m(1)}_{n}\\left(z,\\gamma\\right)=\\frac{1}{2}{\\mathrm{i}}^{m+n}\\gamma^{m}\\frac{(n-m)!}{(n+m)!}z^{m}(1-z^{-2})^{\\frac{1}{2}m}\\,\\int_{-1}^{1}e^{-\\mathrm{i}\\gamma zt}(1-t^{2})^{\\frac{1}{2}m}\\mathsf{Ps}^{m}_{n}\\left(t,\\gamma^{2}\\right)\\,\\mathrm{d}t. \\tag{30.11.12}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\psi_{k}^{(j)}(z)=\\left(\\frac{\\pi}{2z}\\right)^{\\frac{1}{2}}{\\cal C}_{k+\\frac{1}{2}}^{(j)}(z), \\tag{30.11.1}",
+              "\\displaystyle{\\cal C}_{\\nu}^{(1)} \\displaystyle=J_{\\nu}, \\tag{30.11.2}",
+              "\\displaystyle{\\cal C}_{\\nu}^{(2)} \\displaystyle=Y_{\\nu},",
+              "\\displaystyle{\\cal C}_{\\nu}^{(3)} \\displaystyle={H^{(1)}_{\\nu}},",
+              "\\displaystyle{\\cal C}_{\\nu}^{(4)} \\displaystyle={H^{(2)}_{\\nu}},",
+              "S^{m(j)}_{n}\\left(z,\\gamma\\right)=\\frac{(1-z^{-2})^{\\frac{1}{2}m}}{A_{n}^{-m}(\\gamma^{2})}\\sum_{2k\\geq m-n}a^{-m}_{n,k}(\\gamma^{2})\\psi_{n+2k}^{(j)}(\\gamma z). \\tag{30.11.3}",
+              "A_{n}^{\\pm m}(\\gamma^{2})=\\sum_{2k\\geq\\mp m-n}(-1)^{k}a^{\\pm m}_{n,k}(\\gamma^{2})\\quad(\\neq 0). \\tag{30.11.4}",
+              "\\displaystyle S^{m(3)}_{n}\\left(z,\\gamma\\right) \\displaystyle=S^{m(1)}_{n}\\left(z,\\gamma\\right)+\\mathrm{i}S^{m(2)}_{n}\\left(z,\\gamma\\right), \\tag{30.11.5}",
+              "\\displaystyle S^{m(4)}_{n}\\left(z,\\gamma\\right) \\displaystyle=S^{m(1)}_{n}\\left(z,\\gamma\\right)-\\mathrm{i}S^{m(2)}_{n}\\left(z,\\gamma\\right).",
+              "S^{m(j)}_{n}\\left(z,\\gamma\\right)=\\begin{cases}\\psi_{n}^{(j)}(\\gamma z)+O\\left(z^{-2}e^{|\\Im z|}\\right),&j=1,2,\\\\\n\\psi_{n}^{(j)}(\\gamma z)\\left(1+O\\left(z^{-1}\\right)\\right),&j=3,4.\\end{cases} \\tag{30.11.6}",
+              "\\mathscr{W}\\left\\{S^{m(1)}_{n}\\left(z,\\gamma\\right),S^{m(2)}_{n}\\left(z,\\gamma\\right)\\right\\}=\\frac{1}{\\gamma(z^{2}-1)}. \\tag{30.11.7}",
+              "S^{m(1)}_{n}\\left(z,\\gamma\\right)=K_{n}^{m}(\\gamma)\\mathit{Ps}^{m}_{n}\\left(z,\\gamma^{2}\\right), \\tag{30.11.8}",
+              "S^{m(2)}_{n}\\left(z,\\gamma\\right)=\\frac{(n-m)!}{(n+m)!}\\frac{(-1)^{m+1}\\mathit{Qs}^{m}_{n}\\left(z,\\gamma^{2}\\right)}{\\gamma K_{n}^{m}(\\gamma)A_{n}^{m}(\\gamma^{2})A_{n}^{-m}(\\gamma^{2})}, \\tag{30.11.9}",
+              "K_{n}^{m}(\\gamma)=\\frac{\\sqrt{\\pi}}{2}\\left(\\frac{\\gamma}{2}\\right)^{m}\\frac{(-1)^{m}a_{n,\\frac{1}{2}(m-n)}^{-m}(\\gamma^{2})}{\\Gamma\\left(\\frac{3}{2}+m\\right)A_{n}^{-m}(\\gamma^{2})\\mathsf{Ps}^{m}_{n}\\left(0,\\gamma^{2}\\right)}, \\tag{30.11.10}",
+              "K_{n}^{m}(\\gamma)=\\frac{\\sqrt{\\pi}}{2}\\left(\\frac{\\gamma}{2}\\right)^{m+1}\\,\\frac{(-1)^{m}a_{n,\\frac{1}{2}(m-n+1)}^{-m}(\\gamma^{2})}{\\Gamma\\left(\\frac{5}{2}+m\\right)A_{n}^{-m}(\\gamma^{2})(\\left.\\frac{\\mathrm{d}\\mathsf{Ps}^{m}_{n}(z,\\gamma^{2})}{\\mathrm{d}z}\\right|_{z=0})}, \\tag{30.11.11}",
+              "A_{n}^{-m}(\\gamma^{2})S^{m(1)}_{n}\\left(z,\\gamma\\right)=\\frac{1}{2}{\\mathrm{i}}^{m+n}\\gamma^{m}\\frac{(n-m)!}{(n+m)!}z^{m}(1-z^{-2})^{\\frac{1}{2}m}\\,\\int_{-1}^{1}e^{-\\mathrm{i}\\gamma zt}(1-t^{2})^{\\frac{1}{2}m}\\mathsf{Ps}^{m}_{n}\\left(t,\\gamma^{2}\\right)\\,\\mathrm{d}t. \\tag{30.11.12}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "radial",
+                "radial spheroidal wave functions",
+                "spheroidal wave functions",
+                "definitions",
+                "connection formulas",
+                "graphics",
+                "asymptotic behavior for large variable",
+                "Wronskian",
+                "connection with spheroidal wave functions",
+                "integral representation"
+              ],
+              "definiciones": [
+                "${\\cal C}_{\\nu}^{(j)}$ : a Bessel function (locally)"
+              ],
+              "simbolos": [
+                "$J_{\\nu}\\left(z\\right)$: Bessel function of the first kind , $Y_{\\nu}\\left(z\\right)$: Bessel function of the second kind , ${H^{(1)}_{\\nu}}\\left(z\\right)$: Bessel function of the third kind (or Hankel function) and ${H^{(2)}_{\\nu}}\\left(z\\right)$: Bessel function of the third kind (or Hankel function)",
+                "$\\mathrm{i}$: imaginary unit , $S^{m(j)}_{n}\\left(z,\\gamma\\right)$: radial spheroidal wave function , $z$: complex variable , $m$: nonnegative integer , $n\\geq m$: integer degree and $\\gamma^{2}$: real parameter",
+                "$S^{m(j)}_{n}\\left(z,\\gamma\\right)$: radial spheroidal wave function , $x$: real variable and $n\\geq m$: integer degree",
+                "$\\mathrm{i}$: imaginary unit , $S^{m(j)}_{n}\\left(z,\\gamma\\right)$: radial spheroidal wave function , $y$: real variable and $n\\geq m$: integer degree"
+              ],
+              "referenciado_por": [
+                "§30.1",
+                "§30.11(ii)",
+                "§30.15(i)",
+                "item"
+              ],
+              "notas_bibliograficas": [
+                "See Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\"), §8.5).",
+                "Figures 30.11.1 – 30.11.4 were produced at NIST with the aid of Maple procedures provided by the author.",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.64).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.65).",
+                "See Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\"), §16.11) and Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.66).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.84)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.11 and Ch.30",
+                "Annotations for §30.11(i) , §30.11 and Ch.30",
+                "Annotations for §30.11(i) , §30.11(i) , §30.11 and Ch.30",
+                "Annotations for §30.11(ii) , §30.11 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/C.html#bib565",
+                "titulo_referencia": "Product formulas and convolutions for angular and radial spheroidal wave functions"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1980",
+                "archivo_destino": "bib/M.html#bib1599",
+                "titulo_referencia": "Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.12",
+          "titulo_original": "Generalized and Coulomb Spheroidal Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.12.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.12.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.12 Generalized and Coulomb Spheroidal Functions",
+            "prosa_teorica": "Generalized spheroidal wave functions and Coulomb spheroidal functions are solutions of the differential equation\nwhich reduces to ( 30.2.1 ) if $\\alpha=0$ . Equation ( 30.12.1 ) appears in astrophysics and molecular physics. For the theory and computation of solutions of ( 30.12.1 ) see Falloon ([2001](./bib/F.html#bib773 \"Theory and Computation of Spheroidal Harmonics with General Arguments\")), Judd ([1975](./bib/J.html#bib1196 \"Angular Momentum Theory for Diatomic Molecules\")), Leaver ([1986](./bib/L.html#bib1391 \"Solutions to a generalized spheroidal wave equation: Teukolsky’s equations in general relativity, and the two-center problem in molecular quantum mechanics\")), and Komarov et al. ([1976](./bib/K.html#bib1319 \"Sferoidalnye i kulonovskie sferoidalnye funktsii\")).\nAnother generalization is provided by the differential equation\nwhich also reduces to ( 30.2.1 ) when $\\alpha=0$ . See Leitner and Meixner ([1960](./bib/L.html#bib1411 \"Eine Verallgemeinerung der Sphäroidfunktionen\")), Slepian ([1964](./bib/S.html#bib2112 \"Prolate spheroidal wave functions, Fourier analysis and uncertainity. IV. Extensions to many dimensions; generalized prolate spheroidal functions\")) with $\\mu=0$ , and Meixner et al. ([1980](./bib/M.html#bib1599 \"Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "30.12.1",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left((1-z^{2})\\frac{\\mathrm{d}w}{\\mathrm{d}z}\\right)+{\\left(\\lambda+\\alpha z+\\gamma^{2}(1-z^{2})-\\frac{\\mu^{2}}{1-z^{2}}\\right)w}=0, \\tag{30.12.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "30.12.2",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left((1-z^{2})\\frac{\\mathrm{d}w}{\\mathrm{d}z}\\right)+\\left(\\lambda+\\gamma^{2}(1-z^{2})-\\frac{\\alpha(\\alpha+1)}{z^{2}}-\\frac{\\mu^{2}}{1-z^{2}}\\right)w=0, \\tag{30.12.2}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left((1-z^{2})\\frac{\\mathrm{d}w}{\\mathrm{d}z}\\right)+{\\left(\\lambda+\\alpha z+\\gamma^{2}(1-z^{2})-\\frac{\\mu^{2}}{1-z^{2}}\\right)w}=0, \\tag{30.12.1}",
+              "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left((1-z^{2})\\frac{\\mathrm{d}w}{\\mathrm{d}z}\\right)+\\left(\\lambda+\\gamma^{2}(1-z^{2})-\\frac{\\alpha(\\alpha+1)}{z^{2}}-\\frac{\\mu^{2}}{1-z^{2}}\\right)w=0, \\tag{30.12.2}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Coulomb",
+                "Coulomb spheroidal functions",
+                "generalized",
+                "spheroidal wave functions"
+              ],
+              "referenciado_por": [
+                "§31.12"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "2001",
+                "archivo_destino": "bib/F.html#bib773",
+                "titulo_referencia": "Theory and Computation of Spheroidal Harmonics with General Arguments"
+              },
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/J.html#bib1196",
+                "titulo_referencia": "Angular Momentum Theory for Diatomic Molecules"
+              },
+              {
+                "texto": "1986",
+                "archivo_destino": "bib/L.html#bib1391",
+                "titulo_referencia": "Solutions to a generalized spheroidal wave equation: Teukolsky’s equations in general relativity, and the two-center problem in molecular quantum mechanics"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/K.html#bib1319",
+                "titulo_referencia": "Sferoidalnye i kulonovskie sferoidalnye funktsii"
+              },
+              {
+                "texto": "1960",
+                "archivo_destino": "bib/L.html#bib1411",
+                "titulo_referencia": "Eine Verallgemeinerung der Sphäroidfunktionen"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/S.html#bib2112",
+                "titulo_referencia": "Prolate spheroidal wave functions, Fourier analysis and uncertainity. IV. Extensions to many dimensions; generalized prolate spheroidal functions"
+              },
+              {
+                "texto": "1980",
+                "archivo_destino": "bib/M.html#bib1599",
+                "titulo_referencia": "Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Applications",
+      "secciones": [
+        {
+          "seccion_id": "30.13",
+          "titulo_original": "Wave Equation in Prolate Spheroidal Coordinates",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.13.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.13.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.13 Wave Equation in Prolate Spheroidal Coordinates",
+            "prosa_teorica": "Prolate spheroidal coordinates $\\xi,\\eta,\\phi$ are related to Cartesian coordinates $x,y,z$ by\n<a id=\"E1\"></a>\nwhere $c$ is a positive constant. (On the use of the symbol $\\theta$ in place of $\\phi$ see § 1.5(ii) .) The $(x,y,z)$ -space without the $z$ -axis corresponds to\n<a id=\"E2\"></a>\nThe coordinate surfaces $\\xi=\\mbox{const}.$ are prolate ellipsoids of revolution with foci at $x=y=0$ , $z=\\pm c$ . The coordinate surfaces $\\eta=\\mbox{const}.$ are sheets of two-sheeted hyperboloids of revolution with the same foci. The focal line is given by $\\xi=1$ , $-1\\leq\\eta\\leq 1$ , and the rays $\\pm z\\geq c$ , $x=y=0$ are given by $\\eta=\\pm 1$ , $\\xi\\geq 1$ .\nThe wave equation\ntransformed to prolate spheroidal coordinates $(\\xi,\\eta,\\phi)$ , admits solutions\nwhere $w_{1}$ , $w_{2}$ , $w_{3}$ satisfy the differential equations\nwith $\\gamma^{2}=\\kappa^{2}c^{2}\\geq 0$ and separation constants $\\lambda$ and $\\mu^{2}$ . Equations ( 30.13.9 ) and ( 30.13.10 ) agree with ( 30.2.1 ).\nIn most applications the solution $w$ has to be a single-valued function of $(x,y,z)$ , which requires $\\mu=m$ (a nonnegative integer) and\nMoreover, $w$ has to be bounded along the $z$ -axis away from the focal line: this requires $w_{2}(\\eta)$ to be bounded when $-1<\\eta<1$ . Then $\\lambda=\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ for some $n=m,m+1,m+2,\\dots$ , and the general solution of ( 30.13.10 ) is\nThe solution of ( 30.13.9 ) with $\\mu=m$ is\nIf $b_{1}=b_{2}=0$ , then the function ( 30.13.8 ) is a twice-continuously differentiable solution of ( 30.13.7 ) in the entire $(x,y,z)$ -space. If $b_{2}=0$ , then this property holds outside the focal line.\nEquation ( 30.13.7 ) for $\\xi\\leq\\xi_{0}$ , and subject to the boundary condition $w=0$ on the ellipsoid given by $\\xi=\\xi_{0}$ , poses an eigenvalue problem with $\\kappa^{2}$ as spectral parameter. The eigenvalues are given by $c^{2}\\kappa^{2}=\\gamma^{2}$ , where $\\gamma$ is determined from the condition\nThe corresponding eigenfunctions are given by ( 30.13.8 ), ( 30.13.14 ), ( 30.13.13 ), ( 30.13.12 ), with $b_{1}=b_{2}=0$ . For the Dirichlet boundary-value problem of the region $\\xi_{1}\\leq\\xi\\leq\\xi_{2}$ between two ellipsoids, the eigenvalues are determined from\nwith $w_{1}$ as in ( 30.13.14 ). The corresponding eigenfunctions are given as before with $b_{2}=0$ .\nFor further applications see Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\")), Meixner et al. ([1980](./bib/M.html#bib1599 \"Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies\")) and the references cited therein; also Ong ([1986](./bib/O.html#bib1814 \"A closed form solution of the s -wave Bethe-Goldstone equation with an infinite repulsive core\")), Müller et al. ([1994](./bib/M.html#bib1673 \"Spheroidal eigenfunctions of the tidal equation\")), and Xiao et al. ([2001](./bib/X.html#bib2463 \"Prolate spheroidal wavefunctions, quadrature and interpolation\")).",
+            "formulas_clave": [
+              {
+                "id": "Ex1",
+                "tag": "30.13.1",
+                "latex": "\\displaystyle x \\displaystyle=c\\sqrt{(\\xi^{2}-1)(1-\\eta^{2})}\\cos\\phi, \\tag{30.13.1}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle y \\displaystyle=c\\sqrt{(\\xi^{2}-1)(1-\\eta^{2})}\\sin\\phi,"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle z \\displaystyle=c\\xi\\eta,"
+              },
+              {
+                "id": "Ex4",
+                "tag": "30.13.2",
+                "latex": "\\displaystyle 1 \\displaystyle<\\xi<\\infty, \\tag{30.13.2}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle-1 \\displaystyle<\\eta<1,"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle 0 \\displaystyle\\leq\\phi<2\\pi."
+              },
+              {
+                "id": "EGx1",
+                "tag": "30.13.3",
+                "latex": "\\displaystyle h_{\\xi}^{2} \\displaystyle=\\left(\\frac{\\partial x}{\\partial\\xi}\\right)^{2}+\\left(\\frac{\\partial y}{\\partial\\xi}\\right)^{2}+\\left(\\frac{\\partial z}{\\partial\\xi}\\right)^{2}=\\frac{c^{2}(\\xi^{2}-\\eta^{2})}{\\xi^{2}-1}, \\tag{30.13.3}"
+              },
+              {
+                "id": "",
+                "tag": "30.13.4",
+                "latex": "\\displaystyle h_{\\eta}^{2} \\displaystyle=\\left(\\frac{\\partial x}{\\partial\\eta}\\right)^{2}+\\left(\\frac{\\partial y}{\\partial\\eta}\\right)^{2}+\\left(\\frac{\\partial z}{\\partial\\eta}\\right)^{2}=\\frac{c^{2}(\\xi^{2}-\\eta^{2})}{1-\\eta^{2}}, \\tag{30.13.4}"
+              },
+              {
+                "id": "",
+                "tag": "30.13.5",
+                "latex": "\\displaystyle h_{\\phi}^{2} \\displaystyle=\\left(\\frac{\\partial x}{\\partial\\phi}\\right)^{2}+\\left(\\frac{\\partial y}{\\partial\\phi}\\right)^{2}+\\left(\\frac{\\partial z}{\\partial\\phi}\\right)^{2}=c^{2}(\\xi^{2}-1)(1-\\eta^{2}). \\tag{30.13.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "30.13.6",
+                "latex": "\\nabla^{2}=\\frac{1}{h_{\\xi}h_{\\eta}h_{\\phi}}\\left(\\frac{\\partial}{\\partial\\xi}\\left(\\frac{h_{\\eta}h_{\\phi}}{h_{\\xi}}\\frac{\\partial}{\\partial\\xi}\\right)+\\frac{\\partial}{\\partial\\eta}\\left(\\frac{h_{\\xi}h_{\\phi}}{h_{\\eta}}\\frac{\\partial}{\\partial\\eta}\\right)+\\frac{\\partial}{\\partial\\phi}\\left(\\frac{h_{\\xi}h_{\\eta}}{h_{\\phi}}\\frac{\\partial}{\\partial\\phi}\\right)\\right)=\\frac{1}{c^{2}(\\xi^{2}-\\eta^{2})}\\left(\\frac{\\partial}{\\partial\\xi}\\left((\\xi^{2}-1)\\frac{\\partial}{\\partial\\xi}\\right)+\\frac{\\partial}{\\partial\\eta}\\left((1-\\eta^{2})\\frac{\\partial}{\\partial\\eta}\\right)+\\frac{\\xi^{2}-\\eta^{2}}{(\\xi^{2}-1)(1-\\eta^{2})}\\frac{{\\partial}^{2}}{{\\partial\\phi}^{2}}\\right). \\tag{30.13.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "30.13.7",
+                "latex": "\\nabla^{2}w+\\kappa^{2}w=0, \\tag{30.13.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "30.13.8",
+                "latex": "w(\\xi,\\eta,\\phi)=w_{1}(\\xi)w_{2}(\\eta)w_{3}(\\phi), \\tag{30.13.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "30.13.9",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}\\xi}\\left((1-\\xi^{2})\\frac{\\mathrm{d}w_{1}}{\\mathrm{d}\\xi}\\right)+\\left(\\lambda+\\gamma^{2}(1-\\xi^{2})-\\frac{\\mu^{2}}{1-\\xi^{2}}\\right)w_{1}=0, \\tag{30.13.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "30.13.10",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}\\eta}\\left((1-\\eta^{2})\\frac{\\mathrm{d}w_{2}}{\\mathrm{d}\\eta}\\right)+\\left(\\lambda+\\gamma^{2}(1-\\eta^{2})-\\frac{\\mu^{2}}{1-\\eta^{2}}\\right)w_{2}=0, \\tag{30.13.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "30.13.11",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w_{3}}{{\\mathrm{d}\\phi}^{2}}+\\mu^{2}w_{3}=0, \\tag{30.13.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "30.13.12",
+                "latex": "w_{3}(\\phi)=a_{3}\\cos\\left(m\\phi\\right)+b_{3}\\sin\\left(m\\phi\\right). \\tag{30.13.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "30.13.13",
+                "latex": "w_{2}(\\eta)=a_{2}\\mathsf{Ps}^{m}_{n}\\left(\\eta,\\gamma^{2}\\right)+b_{2}\\mathsf{Qs}^{m}_{n}\\left(\\eta,\\gamma^{2}\\right). \\tag{30.13.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "30.13.14",
+                "latex": "w_{1}(\\xi)=a_{1}S^{m(1)}_{n}\\left(\\xi,\\gamma\\right)+b_{1}S^{m(2)}_{n}\\left(\\xi,\\gamma\\right). \\tag{30.13.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "30.13.15",
+                "latex": "S^{m(1)}_{n}\\left(\\xi_{0},\\gamma\\right)=0. \\tag{30.13.15}"
+              },
+              {
+                "id": "E16",
+                "tag": "30.13.16",
+                "latex": "w_{1}(\\xi_{1})=w_{1}(\\xi_{2})=0, \\tag{30.13.16}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle x \\displaystyle=c\\sqrt{(\\xi^{2}-1)(1-\\eta^{2})}\\cos\\phi, \\tag{30.13.1}",
+              "\\displaystyle y \\displaystyle=c\\sqrt{(\\xi^{2}-1)(1-\\eta^{2})}\\sin\\phi,",
+              "\\displaystyle z \\displaystyle=c\\xi\\eta,",
+              "\\displaystyle 1 \\displaystyle<\\xi<\\infty, \\tag{30.13.2}",
+              "\\displaystyle-1 \\displaystyle<\\eta<1,",
+              "\\displaystyle 0 \\displaystyle\\leq\\phi<2\\pi.",
+              "\\displaystyle h_{\\xi}^{2} \\displaystyle=\\left(\\frac{\\partial x}{\\partial\\xi}\\right)^{2}+\\left(\\frac{\\partial y}{\\partial\\xi}\\right)^{2}+\\left(\\frac{\\partial z}{\\partial\\xi}\\right)^{2}=\\frac{c^{2}(\\xi^{2}-\\eta^{2})}{\\xi^{2}-1}, \\tag{30.13.3}",
+              "\\displaystyle h_{\\eta}^{2} \\displaystyle=\\left(\\frac{\\partial x}{\\partial\\eta}\\right)^{2}+\\left(\\frac{\\partial y}{\\partial\\eta}\\right)^{2}+\\left(\\frac{\\partial z}{\\partial\\eta}\\right)^{2}=\\frac{c^{2}(\\xi^{2}-\\eta^{2})}{1-\\eta^{2}}, \\tag{30.13.4}",
+              "\\displaystyle h_{\\phi}^{2} \\displaystyle=\\left(\\frac{\\partial x}{\\partial\\phi}\\right)^{2}+\\left(\\frac{\\partial y}{\\partial\\phi}\\right)^{2}+\\left(\\frac{\\partial z}{\\partial\\phi}\\right)^{2}=c^{2}(\\xi^{2}-1)(1-\\eta^{2}). \\tag{30.13.5}",
+              "\\nabla^{2}=\\frac{1}{h_{\\xi}h_{\\eta}h_{\\phi}}\\left(\\frac{\\partial}{\\partial\\xi}\\left(\\frac{h_{\\eta}h_{\\phi}}{h_{\\xi}}\\frac{\\partial}{\\partial\\xi}\\right)+\\frac{\\partial}{\\partial\\eta}\\left(\\frac{h_{\\xi}h_{\\phi}}{h_{\\eta}}\\frac{\\partial}{\\partial\\eta}\\right)+\\frac{\\partial}{\\partial\\phi}\\left(\\frac{h_{\\xi}h_{\\eta}}{h_{\\phi}}\\frac{\\partial}{\\partial\\phi}\\right)\\right)=\\frac{1}{c^{2}(\\xi^{2}-\\eta^{2})}\\left(\\frac{\\partial}{\\partial\\xi}\\left((\\xi^{2}-1)\\frac{\\partial}{\\partial\\xi}\\right)+\\frac{\\partial}{\\partial\\eta}\\left((1-\\eta^{2})\\frac{\\partial}{\\partial\\eta}\\right)+\\frac{\\xi^{2}-\\eta^{2}}{(\\xi^{2}-1)(1-\\eta^{2})}\\frac{{\\partial}^{2}}{{\\partial\\phi}^{2}}\\right). \\tag{30.13.6}",
+              "\\nabla^{2}w+\\kappa^{2}w=0, \\tag{30.13.7}",
+              "w(\\xi,\\eta,\\phi)=w_{1}(\\xi)w_{2}(\\eta)w_{3}(\\phi), \\tag{30.13.8}",
+              "\\frac{\\mathrm{d}}{\\mathrm{d}\\xi}\\left((1-\\xi^{2})\\frac{\\mathrm{d}w_{1}}{\\mathrm{d}\\xi}\\right)+\\left(\\lambda+\\gamma^{2}(1-\\xi^{2})-\\frac{\\mu^{2}}{1-\\xi^{2}}\\right)w_{1}=0, \\tag{30.13.9}",
+              "\\frac{\\mathrm{d}}{\\mathrm{d}\\eta}\\left((1-\\eta^{2})\\frac{\\mathrm{d}w_{2}}{\\mathrm{d}\\eta}\\right)+\\left(\\lambda+\\gamma^{2}(1-\\eta^{2})-\\frac{\\mu^{2}}{1-\\eta^{2}}\\right)w_{2}=0, \\tag{30.13.10}",
+              "\\frac{{\\mathrm{d}}^{2}w_{3}}{{\\mathrm{d}\\phi}^{2}}+\\mu^{2}w_{3}=0, \\tag{30.13.11}",
+              "w_{3}(\\phi)=a_{3}\\cos\\left(m\\phi\\right)+b_{3}\\sin\\left(m\\phi\\right). \\tag{30.13.12}",
+              "w_{2}(\\eta)=a_{2}\\mathsf{Ps}^{m}_{n}\\left(\\eta,\\gamma^{2}\\right)+b_{2}\\mathsf{Qs}^{m}_{n}\\left(\\eta,\\gamma^{2}\\right). \\tag{30.13.13}",
+              "w_{1}(\\xi)=a_{1}S^{m(1)}_{n}\\left(\\xi,\\gamma\\right)+b_{1}S^{m(2)}_{n}\\left(\\xi,\\gamma\\right). \\tag{30.13.14}",
+              "S^{m(1)}_{n}\\left(\\xi_{0},\\gamma\\right)=0. \\tag{30.13.15}",
+              "w_{1}(\\xi_{1})=w_{1}(\\xi_{2})=0, \\tag{30.13.16}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "applications",
+                "prolate spheroidal coordinates",
+                "spheroidal wave functions",
+                "wave equation",
+                "coordinate systems",
+                "prolate spheroidal",
+                "for prolate spheroidal coordinates",
+                "metric coefficients",
+                "Laplacian",
+                "for prolate spheroids",
+                "interior Dirichlet problem"
+              ],
+              "definiciones": [
+                "$\\xi$ : prolate spheroidal coordinate (locally) , $\\eta$ : prolate spheroidal coordinate (locally) and $\\phi$ : prolate spheroidal coordinate (locally)"
+              ],
+              "simbolos": [
+                "$\\cosz$: cosine function , $\\sinz$: sine function , $z$: complex variable , $x$: real variable , $y$: real variable and $c$: positive constant",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\xi$: prolate spheroidal coordinate , $\\eta$: prolate spheroidal coordinate and $\\phi$: prolate spheroidal coordinate",
+                "$\\frac{\\partialf}{\\partialx}$: partial derivative of $f$ with respect to $x$ , $\\,\\partialx$: partial differential of $x$ , $z$: complex variable , $x$: real variable , $y$: real variable , $\\xi$: prolate spheroidal coordinate , $\\eta$: prolate spheroidal coordinate , $c$: positive constant and $h_{\\xi},h_{\\eta},h_{\\phi}$: metric coefficients",
+                "$\\frac{\\partialf}{\\partialx}$: partial derivative of $f$ with respect to $x$ , $\\,\\partialx$: partial differential of $x$ , $z$: complex variable , $x$: real variable , $y$: real variable , $\\xi$: prolate spheroidal coordinate , $\\eta$: prolate spheroidal coordinate , $\\phi$: prolate spheroidal coordinate , $c$: positive constant and $h_{\\xi},h_{\\eta},h_{\\phi}$: metric coefficients"
+              ],
+              "referenciado_por": [
+                "§1.5(ii)",
+                "§30.1",
+                "§30.2(i)",
+                "Erratum (V1.0.5) for Clarifications",
+                "§30.13(i)"
+              ],
+              "notas_bibliograficas": [
+                "See Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\"), §16.1.2) and Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §1.123).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §1.123).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §1.123).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §1.133).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), Chapter 4)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "21.2.2 (in different form)",
+                "21.4.2"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.13 and Ch.30",
+                "Annotations for §30.13(i) , §30.13 and Ch.30",
+                "Annotations for §30.13(ii) , §30.13 and Ch.30"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Clarification (effective with 1.0.5)",
+                  "descripcion": "The parenthetical explanation has been added after ( 30.13.1 )."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1980",
+                "archivo_destino": "bib/M.html#bib1599",
+                "titulo_referencia": "Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies"
+              },
+              {
+                "texto": "1986",
+                "archivo_destino": "bib/O.html#bib1814",
+                "titulo_referencia": "A closed form solution of the s -wave Bethe-Goldstone equation with an infinite repulsive core"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/M.html#bib1673",
+                "titulo_referencia": "Spheroidal eigenfunctions of the tidal equation"
+              },
+              {
+                "texto": "2001",
+                "archivo_destino": "bib/X.html#bib2463",
+                "titulo_referencia": "Prolate spheroidal wavefunctions, quadrature and interpolation"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.14",
+          "titulo_original": "Wave Equation in Oblate Spheroidal Coordinates",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.14.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.14.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.14 Wave Equation in Oblate Spheroidal Coordinates",
+            "prosa_teorica": "Oblate spheroidal coordinates $\\xi,\\eta,\\phi$ are related to Cartesian coordinates $x,y,z$ by\n<a id=\"E1\"></a>\nwhere $c$ is a positive constant. (On the use of the symbol $\\theta$ in place of $\\phi$ see § 1.5(ii) .) The $(x,y,z)$ -space without the $z$ -axis and the disk $z=0$ , $x^{2}+y^{2}\\leq c^{2}$ corresponds to\n<a id=\"E2\"></a>\nThe coordinate surfaces $\\xi=\\mbox{const}.$ are oblate ellipsoids of revolution with focal circle $z=0$ , $x^{2}+y^{2}=c^{2}$ . The coordinate surfaces $\\eta=\\mbox{const}.$ are halves of one-sheeted hyperboloids of revolution with the same focal circle. The disk $z=0$ , $x^{2}+y^{2}\\leq c^{2}$ is given by $\\xi=0$ , $-1\\leq\\eta\\leq 1$ , and the rays $\\pm z\\geq 0$ , $x=y=0$ are given by $\\eta=\\pm 1$ , $\\xi\\geq 0$ .\nThe wave equation ( 30.13.7 ), transformed to oblate spheroidal coordinates $(\\xi,\\eta,\\phi)$ , admits solutions of the form ( 30.13.8 ), where $w_{1}$ satisfies the differential equation\nand $w_{2}$ , $w_{3}$ satisfy ( 30.13.10 ) and ( 30.13.11 ), respectively, with $\\gamma^{2}=-\\kappa^{2}c^{2}\\leq 0$ and separation constants $\\lambda$ and $\\mu^{2}$ . Equation ( 30.14.7 ) can be transformed to equation ( 30.2.1 ) by the substitution $z=\\pm i\\xi$ .\nIn most applications the solution $w$ has to be a single-valued function of $(x,y,z)$ , which requires $\\mu=m$ (a nonnegative integer). Moreover, the solution $w$ has to be bounded along the $z$ -axis: this requires $w_{2}(\\eta)$ to be bounded when $-1<\\eta<1$ . Then $\\lambda=\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ for some $n=m,m+1,m+2,\\dots$ , and the solution of ( 30.13.10 ) is given by ( 30.13.13 ). The solution of ( 30.14.7 ) is given by\nIf $b_{1}=b_{2}=0$ , then the function ( 30.13.8 ) is a twice-continuously differentiable solution of ( 30.13.7 ) in the entire $(x,y,z)$ -space. If $b_{2}=0$ , then this property holds outside the focal disk.\nEquation ( 30.13.7 ) for $\\xi\\leq\\xi_{0}$ together with the boundary condition $w=0$ on the ellipsoid given by $\\xi=\\xi_{0}$ , poses an eigenvalue problem with $\\kappa^{2}$ as spectral parameter. The eigenvalues are given by $c^{2}\\kappa^{2}=-\\gamma^{2}$ , where $\\gamma^{2}$ is determined from the condition\nThe corresponding eigenfunctions are then given by ( 30.13.8 ), ( 30.14.8 ), ( 30.13.13 ), ( 30.13.12 ), with $b_{1}=b_{2}=0$ .\nFor further applications see Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\")), Meixner et al. ([1980](./bib/M.html#bib1599 \"Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies\")) and the references cited therein; also Kokkorakis and Roumeliotis ([1998](./bib/K.html#bib1308 \"Electromagnetic eigenfrequencies in a spheroidal cavity (calculation by spheroidal eigenvectors)\")) and Li et al. ([1998b](./bib/L.html#bib1434 \"Microwave specific attenuation by oblate spheroidal raindrops: An exact analysis of TCS’s in terms of spheroidal wave functions\")).",
+            "formulas_clave": [
+              {
+                "id": "Ex1",
+                "tag": "30.14.1",
+                "latex": "\\displaystyle x \\displaystyle=c\\sqrt{(\\xi^{2}+1)(1-\\eta^{2})}\\cos\\phi, \\tag{30.14.1}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle y \\displaystyle=c\\sqrt{(\\xi^{2}+1)(1-\\eta^{2})}\\sin\\phi,"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle z \\displaystyle=c\\xi\\eta,"
+              },
+              {
+                "id": "Ex4",
+                "tag": "30.14.2",
+                "latex": "\\displaystyle 0 \\displaystyle<\\xi<\\infty, \\tag{30.14.2}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle-1 \\displaystyle<\\eta<1,"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle 0 \\displaystyle\\leq\\phi<2\\pi."
+              },
+              {
+                "id": "EGx1",
+                "tag": "30.14.3",
+                "latex": "\\displaystyle h_{\\xi}^{2} \\displaystyle=\\frac{c^{2}(\\xi^{2}+\\eta^{2})}{1+\\xi^{2}}, \\tag{30.14.3}"
+              },
+              {
+                "id": "",
+                "tag": "30.14.4",
+                "latex": "\\displaystyle h_{\\eta}^{2} \\displaystyle=\\frac{c^{2}(\\xi^{2}+\\eta^{2})}{1-\\eta^{2}}, \\tag{30.14.4}"
+              },
+              {
+                "id": "",
+                "tag": "30.14.5",
+                "latex": "\\displaystyle h_{\\phi}^{2} \\displaystyle=c^{2}(\\xi^{2}+1)(1-\\eta^{2}). \\tag{30.14.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "30.14.6",
+                "latex": "\\nabla^{2}=\\frac{1}{c^{2}(\\xi^{2}+\\eta^{2})}\\left(\\frac{\\partial}{\\partial\\xi}\\left((\\xi^{2}+1)\\frac{\\partial}{\\partial\\xi}\\right)+\\frac{\\partial}{\\partial\\eta}\\left((1-\\eta^{2})\\frac{\\partial}{\\partial\\eta}\\right)+\\frac{\\xi^{2}+\\eta^{2}}{(\\xi^{2}+1)(1-\\eta^{2})}\\frac{{\\partial}^{2}}{{\\partial\\phi}^{2}}\\right). \\tag{30.14.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "30.14.7",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}\\xi}\\left((1+\\xi^{2})\\frac{\\mathrm{d}w_{1}}{\\mathrm{d}\\xi}\\right)-\\left(\\lambda+\\gamma^{2}(1+\\xi^{2})-\\frac{\\mu^{2}}{1+\\xi^{2}}\\right)w_{1}=0, \\tag{30.14.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "30.14.8",
+                "latex": "w_{1}(\\xi)=a_{1}S^{m(1)}_{n}\\left(i\\xi,\\gamma\\right)+b_{1}S^{m(2)}_{n}\\left(i\\xi,\\gamma\\right). \\tag{30.14.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "30.14.9",
+                "latex": "S^{m(1)}_{n}\\left(\\mathrm{i}\\xi_{0},\\gamma\\right)=0. \\tag{30.14.9}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle x \\displaystyle=c\\sqrt{(\\xi^{2}+1)(1-\\eta^{2})}\\cos\\phi, \\tag{30.14.1}",
+              "\\displaystyle y \\displaystyle=c\\sqrt{(\\xi^{2}+1)(1-\\eta^{2})}\\sin\\phi,",
+              "\\displaystyle z \\displaystyle=c\\xi\\eta,",
+              "\\displaystyle 0 \\displaystyle<\\xi<\\infty, \\tag{30.14.2}",
+              "\\displaystyle-1 \\displaystyle<\\eta<1,",
+              "\\displaystyle 0 \\displaystyle\\leq\\phi<2\\pi.",
+              "\\displaystyle h_{\\xi}^{2} \\displaystyle=\\frac{c^{2}(\\xi^{2}+\\eta^{2})}{1+\\xi^{2}}, \\tag{30.14.3}",
+              "\\displaystyle h_{\\eta}^{2} \\displaystyle=\\frac{c^{2}(\\xi^{2}+\\eta^{2})}{1-\\eta^{2}}, \\tag{30.14.4}",
+              "\\displaystyle h_{\\phi}^{2} \\displaystyle=c^{2}(\\xi^{2}+1)(1-\\eta^{2}). \\tag{30.14.5}",
+              "\\nabla^{2}=\\frac{1}{c^{2}(\\xi^{2}+\\eta^{2})}\\left(\\frac{\\partial}{\\partial\\xi}\\left((\\xi^{2}+1)\\frac{\\partial}{\\partial\\xi}\\right)+\\frac{\\partial}{\\partial\\eta}\\left((1-\\eta^{2})\\frac{\\partial}{\\partial\\eta}\\right)+\\frac{\\xi^{2}+\\eta^{2}}{(\\xi^{2}+1)(1-\\eta^{2})}\\frac{{\\partial}^{2}}{{\\partial\\phi}^{2}}\\right). \\tag{30.14.6}",
+              "\\frac{\\mathrm{d}}{\\mathrm{d}\\xi}\\left((1+\\xi^{2})\\frac{\\mathrm{d}w_{1}}{\\mathrm{d}\\xi}\\right)-\\left(\\lambda+\\gamma^{2}(1+\\xi^{2})-\\frac{\\mu^{2}}{1+\\xi^{2}}\\right)w_{1}=0, \\tag{30.14.7}",
+              "w_{1}(\\xi)=a_{1}S^{m(1)}_{n}\\left(i\\xi,\\gamma\\right)+b_{1}S^{m(2)}_{n}\\left(i\\xi,\\gamma\\right). \\tag{30.14.8}",
+              "S^{m(1)}_{n}\\left(\\mathrm{i}\\xi_{0},\\gamma\\right)=0. \\tag{30.14.9}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "coordinate systems",
+                "oblate spheroidal",
+                "oblate spheroidal coordinates",
+                "wave equation",
+                "for oblate spheroidal coordinates",
+                "metric coefficients",
+                "Laplacian",
+                "applications",
+                "for oblate spheroids",
+                "interior Dirichlet problem",
+                "radial spheroidal wave functions",
+                "spheroidal wave functions"
+              ],
+              "definiciones": [
+                "$\\xi$ : oblate spheroidal coordinate (locally) , $\\eta$ : oblate spheroidal coordinate (locally) and $\\phi$ : oblate spheroidal coordinate (locally)"
+              ],
+              "simbolos": [
+                "$\\cosz$: cosine function , $\\sinz$: sine function , $z$: complex variable , $x$: real variable , $y$: real variable and $c$: positive constant",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\xi$: oblate spheroidal coordinate , $\\eta$: oblate spheroidal coordinate and $\\phi$: oblate spheroidal coordinate",
+                "$h_{\\xi},h_{\\eta},h_{\\phi}$: metric coefficients , $\\xi$: oblate spheroidal coordinate , $\\eta$: oblate spheroidal coordinate and $c$: positive constant",
+                "$h_{\\xi},h_{\\eta},h_{\\phi}$: metric coefficients , $\\xi$: oblate spheroidal coordinate , $\\eta$: oblate spheroidal coordinate , $\\phi$: oblate spheroidal coordinate and $c$: positive constant"
+              ],
+              "referenciado_por": [
+                "§1.5(ii)",
+                "§30.1",
+                "§30.2(i)",
+                "Erratum (V1.0.5) for Clarifications",
+                "§30.14(i)"
+              ],
+              "notas_bibliograficas": [
+                "See Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\"), §16.1.3) and Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §1.124).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §1.124).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §1.124).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §1.134).",
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), Chapter 4)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "21.3.2 (in different form)",
+                "21.4.3 (in different form)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.14 and Ch.30",
+                "Annotations for §30.14(i) , §30.14 and Ch.30",
+                "Annotations for §30.14(ii) , §30.14 and Ch.30"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Clarification (effective with 1.0.5)",
+                  "descripcion": "The parenthetical explanation has been added after ( 30.14.1 )."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1980",
+                "archivo_destino": "bib/M.html#bib1599",
+                "titulo_referencia": "Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/K.html#bib1308",
+                "titulo_referencia": "Electromagnetic eigenfrequencies in a spheroidal cavity (calculation by spheroidal eigenvectors)"
+              },
+              {
+                "texto": "1998b",
+                "archivo_destino": "bib/L.html#bib1434",
+                "titulo_referencia": "Microwave specific attenuation by oblate spheroidal raindrops: An exact analysis of TCS’s in terms of spheroidal wave functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.15",
+          "titulo_original": "Signal Analysis",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.15.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.15.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.15 Signal Analysis",
+            "prosa_teorica": "Let $\\tau$ $(>0)$ and $\\sigma$ $(>0)$ be given. Set $\\gamma=\\tau\\sigma$ and define\nsee § 30.11(v) .\nwhere\nEquations ( 30.15.4 ) and ( 30.15.6 ) show that the functions $\\phi_{n}$ are $\\sigma$ - *bandlimited* , that is, their Fourier transform vanishes outside the interval $[-\\sigma,\\sigma]$ .\nThe sequence $\\phi_{n}$ , $n=0,1,2,\\dots$ forms an orthonormal basis in the space of $\\sigma$ -bandlimited functions, and, after normalization, an orthonormal basis in $L^{2}(-\\tau,\\tau)$ .\nThe maximum (or least upper bound) $\\mathrm{B}$ of all numbers\ntaken over all $f\\in L^{2}(-\\infty,\\infty)$ subject to\n<a id=\"E10\"></a>\nfor (fixed) $\\Lambda_{0}<\\alpha\\leq 1$ , is given by\nor equivalently,\nThe corresponding function $f$ is given by\n<a id=\"E13\"></a>\nIf $0<\\alpha\\leq\\Lambda_{0}$ , then $\\mathrm{B}=1$ .\nFor further information see Frieden ([1971](./bib/F.html#bib841 \"Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions\")), Lyman and Edmonson ([2001](./bib/L.html#bib1507 \"Linear prediction of bandlimited processes with flat spectral densities\")), Papoulis ([1977](./bib/P.html#bib1830 \"Signal Analysis\"), Chapter 6), Slepian ([1983](./bib/S.html#bib2113 \"Some comments on Fourier analysis, uncertainty and modeling\")), and Slepian and Pollak ([1961](./bib/S.html#bib2114 \"Prolate spheroidal wave functions, Fourier analysis and uncertainty. I\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "30.15.1",
+                "latex": "\\phi_{n}(t)=\\sqrt{\\frac{2n+1}{2\\tau}}\\sqrt{\\Lambda_{n}}\\mathsf{Ps}^{0}_{n}\\left(\\frac{t}{\\tau},\\gamma^{2}\\right), \\tag{30.15.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "30.15.2",
+                "latex": "\\Lambda_{n}=\\frac{2\\gamma}{\\pi}\\left(K_{n}^{0}(\\gamma)A_{n}^{0}(\\gamma^{2})\\right)^{2}; \\tag{30.15.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "30.15.3",
+                "latex": "\\int_{-\\tau}^{\\tau}\\frac{\\sin\\sigma(t-s)}{\\pi(t-s)}\\phi_{n}(s)\\,\\mathrm{d}s=\\Lambda_{n}\\phi_{n}(t). \\tag{30.15.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "30.15.4",
+                "latex": "\\int_{-\\infty}^{\\infty}e^{-\\mathrm{i}t\\omega}\\phi_{n}(t)\\,\\mathrm{d}t=(-\\mathrm{i})^{n}\\sqrt{\\frac{2\\pi\\tau}{\\sigma\\Lambda_{n}}}\\phi_{n}\\left(\\frac{\\tau}{\\sigma}\\omega\\right)\\chi_{\\sigma}(\\omega), \\tag{30.15.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "30.15.5",
+                "latex": "\\int_{-\\tau}^{\\tau}e^{-\\mathrm{i}t\\omega}\\phi_{n}(t)\\,\\mathrm{d}t=(-\\mathrm{i})^{n}\\sqrt{\\frac{2\\pi\\tau\\Lambda_{n}}{\\sigma}}\\phi_{n}\\left(\\frac{\\tau}{\\sigma}\\omega\\right), \\tag{30.15.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "30.15.6",
+                "latex": "\\chi_{\\sigma}(\\omega)=\\begin{cases}1,&\\text{|\\omega|\\leq\\sigma},\\\\\n0,&\\text{|\\omega|>\\sigma}.\\end{cases} \\tag{30.15.6}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "30.15.7",
+                "latex": "\\displaystyle\\int_{-\\tau}^{\\tau}\\phi_{k}(t)\\phi_{n}(t)\\,\\mathrm{d}t \\displaystyle=\\Lambda_{n}\\delta_{k,n}, \\tag{30.15.7}"
+              },
+              {
+                "id": "",
+                "tag": "30.15.8",
+                "latex": "\\displaystyle\\int_{-\\infty}^{\\infty}\\phi_{k}(t)\\phi_{n}(t)\\,\\mathrm{d}t \\displaystyle=\\delta_{k,n}. \\tag{30.15.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "30.15.9",
+                "latex": "\\beta=\\frac{1}{2\\pi}\\int_{-\\sigma}^{\\sigma}\\left|\\int_{-\\infty}^{\\infty}e^{-\\mathrm{i}t\\omega}f(t)\\,\\mathrm{d}t\\right|^{2}\\,\\mathrm{d}\\omega \\tag{30.15.9}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "30.15.10",
+                "latex": "\\displaystyle\\int_{-\\infty}^{\\infty}|f(t)|^{2}\\,\\mathrm{d}t \\displaystyle=1, \\tag{30.15.10}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\int_{-\\tau}^{\\tau}|f(t)|^{2}\\,\\mathrm{d}t \\displaystyle=\\alpha,"
+              },
+              {
+                "id": "E11",
+                "tag": "30.15.11",
+                "latex": "\\operatorname{arccos}\\sqrt{\\mathrm{B}}+\\operatorname{arccos}\\sqrt{\\alpha}=\\operatorname{arccos}\\sqrt{\\Lambda_{0}}, \\tag{30.15.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "30.15.12",
+                "latex": "\\mathrm{B}=\\left(\\sqrt{\\Lambda_{0}\\alpha}+\\sqrt{1-\\Lambda_{0}}\\sqrt{1-\\alpha}\\right)^{2}. \\tag{30.15.12}"
+              },
+              {
+                "id": "Ex3",
+                "tag": "30.15.13",
+                "latex": "\\displaystyle f(t) \\displaystyle=a\\phi_{0}(t)\\chi_{\\tau}(t)+b\\phi_{0}(t)(1-\\chi_{\\tau}(t)), \\tag{30.15.13}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle a \\displaystyle=\\sqrt{\\frac{\\alpha}{\\Lambda_{0}}},"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle b \\displaystyle=\\sqrt{\\frac{1-\\alpha}{1-\\Lambda_{0}}}."
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\phi_{n}(t)=\\sqrt{\\frac{2n+1}{2\\tau}}\\sqrt{\\Lambda_{n}}\\mathsf{Ps}^{0}_{n}\\left(\\frac{t}{\\tau},\\gamma^{2}\\right), \\tag{30.15.1}",
+              "\\Lambda_{n}=\\frac{2\\gamma}{\\pi}\\left(K_{n}^{0}(\\gamma)A_{n}^{0}(\\gamma^{2})\\right)^{2}; \\tag{30.15.2}",
+              "\\int_{-\\tau}^{\\tau}\\frac{\\sin\\sigma(t-s)}{\\pi(t-s)}\\phi_{n}(s)\\,\\mathrm{d}s=\\Lambda_{n}\\phi_{n}(t). \\tag{30.15.3}",
+              "\\int_{-\\infty}^{\\infty}e^{-\\mathrm{i}t\\omega}\\phi_{n}(t)\\,\\mathrm{d}t=(-\\mathrm{i})^{n}\\sqrt{\\frac{2\\pi\\tau}{\\sigma\\Lambda_{n}}}\\phi_{n}\\left(\\frac{\\tau}{\\sigma}\\omega\\right)\\chi_{\\sigma}(\\omega), \\tag{30.15.4}",
+              "\\int_{-\\tau}^{\\tau}e^{-\\mathrm{i}t\\omega}\\phi_{n}(t)\\,\\mathrm{d}t=(-\\mathrm{i})^{n}\\sqrt{\\frac{2\\pi\\tau\\Lambda_{n}}{\\sigma}}\\phi_{n}\\left(\\frac{\\tau}{\\sigma}\\omega\\right), \\tag{30.15.5}",
+              "\\chi_{\\sigma}(\\omega)=\\begin{cases}1,&\\text{|\\omega|\\leq\\sigma},\\\\\n0,&\\text{|\\omega|>\\sigma}.\\end{cases} \\tag{30.15.6}",
+              "\\displaystyle\\int_{-\\tau}^{\\tau}\\phi_{k}(t)\\phi_{n}(t)\\,\\mathrm{d}t \\displaystyle=\\Lambda_{n}\\delta_{k,n}, \\tag{30.15.7}",
+              "\\displaystyle\\int_{-\\infty}^{\\infty}\\phi_{k}(t)\\phi_{n}(t)\\,\\mathrm{d}t \\displaystyle=\\delta_{k,n}. \\tag{30.15.8}",
+              "\\beta=\\frac{1}{2\\pi}\\int_{-\\sigma}^{\\sigma}\\left|\\int_{-\\infty}^{\\infty}e^{-\\mathrm{i}t\\omega}f(t)\\,\\mathrm{d}t\\right|^{2}\\,\\mathrm{d}\\omega \\tag{30.15.9}",
+              "\\displaystyle\\int_{-\\infty}^{\\infty}|f(t)|^{2}\\,\\mathrm{d}t \\displaystyle=1, \\tag{30.15.10}",
+              "\\displaystyle\\int_{-\\tau}^{\\tau}|f(t)|^{2}\\,\\mathrm{d}t \\displaystyle=\\alpha,",
+              "\\operatorname{arccos}\\sqrt{\\mathrm{B}}+\\operatorname{arccos}\\sqrt{\\alpha}=\\operatorname{arccos}\\sqrt{\\Lambda_{0}}, \\tag{30.15.11}",
+              "\\mathrm{B}=\\left(\\sqrt{\\Lambda_{0}\\alpha}+\\sqrt{1-\\Lambda_{0}}\\sqrt{1-\\alpha}\\right)^{2}. \\tag{30.15.12}",
+              "\\displaystyle f(t) \\displaystyle=a\\phi_{0}(t)\\chi_{\\tau}(t)+b\\phi_{0}(t)(1-\\chi_{\\tau}(t)), \\tag{30.15.13}",
+              "\\displaystyle a \\displaystyle=\\sqrt{\\frac{\\alpha}{\\Lambda_{0}}},",
+              "\\displaystyle b \\displaystyle=\\sqrt{\\frac{1-\\alpha}{1-\\Lambda_{0}}}."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "applications",
+                "scaled spheroidal wave functions",
+                "signal analysis",
+                "spheroidal wave functions",
+                "scaled",
+                "integral equation",
+                "integral equations",
+                "Fourier transform",
+                "bandlimited",
+                "bandlimited functions",
+                "orthogonality",
+                "extremal properties"
+              ],
+              "simbolos": [
+                "$\\delta_{j,k}$: Kronecker delta , $\\,\\mathrm{d}x$: differential of $x$ , $\\int$: integral , $n\\geq m$: integer degree , $\\tau>0$: parameter , $\\phi_{n}(t)$: function and $\\Lambda$",
+                "$\\delta_{j,k}$: Kronecker delta , $\\,\\mathrm{d}x$: differential of $x$ , $\\int$: integral , $n\\geq m$: integer degree and $\\phi_{n}(t)$: function",
+                "$\\,\\mathrm{d}x$: differential of $x$ , $\\int$: integral , $\\tau>0$: parameter and $f$: function",
+                "$\\tau>0$: parameter , $\\phi_{n}(t)$: function , $\\Lambda$ and $f$: function"
+              ],
+              "referenciado_por": [
+                "item"
+              ],
+              "notas_bibliograficas": [
+                "See Frieden ([1971](./bib/F.html#bib841 \"Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions\"), p. 321) and Meixner et al. ([1980](./bib/M.html#bib1599 \"Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies\"), p. 114).",
+                "See Frieden ([1971](./bib/F.html#bib841 \"Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions\"), p. 324), Papoulis ([1977](./bib/P.html#bib1830 \"Signal Analysis\"), p. 205), Slepian ([1983](./bib/S.html#bib2113 \"Some comments on Fourier analysis, uncertainty and modeling\")).",
+                "See Frieden ([1971](./bib/F.html#bib841 \"Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions\"), pp. 321, 322), Papoulis ([1977](./bib/P.html#bib1830 \"Signal Analysis\"), p. 208), Slepian ([1983](./bib/S.html#bib2113 \"Some comments on Fourier analysis, uncertainty and modeling\")).",
+                "See Frieden ([1971](./bib/F.html#bib841 \"Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions\"), p. 321, 324), Papoulis ([1977](./bib/P.html#bib1830 \"Signal Analysis\"), p. 207), Slepian ([1983](./bib/S.html#bib2113 \"Some comments on Fourier analysis, uncertainty and modeling\")).",
+                "See Frieden ([1971](./bib/F.html#bib841 \"Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions\"), §2.10), Papoulis ([1977](./bib/P.html#bib1830 \"Signal Analysis\"), p. 210), Slepian ([1983](./bib/S.html#bib2113 \"Some comments on Fourier analysis, uncertainty and modeling\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.15 and Ch.30",
+                "Annotations for §30.15(iv) , §30.15 and Ch.30",
+                "Annotations for §30.15(v) , §30.15 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/F.html#bib841",
+                "titulo_referencia": "Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions"
+              },
+              {
+                "texto": "1980",
+                "archivo_destino": "bib/M.html#bib1599",
+                "titulo_referencia": "Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies"
+              },
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/F.html#bib841",
+                "titulo_referencia": "Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions"
+              },
+              {
+                "texto": "1977",
+                "archivo_destino": "bib/P.html#bib1830",
+                "titulo_referencia": "Signal Analysis"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/S.html#bib2113",
+                "titulo_referencia": "Some comments on Fourier analysis, uncertainty and modeling"
+              },
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/F.html#bib841",
+                "titulo_referencia": "Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions"
+              },
+              {
+                "texto": "1977",
+                "archivo_destino": "bib/P.html#bib1830",
+                "titulo_referencia": "Signal Analysis"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/S.html#bib2113",
+                "titulo_referencia": "Some comments on Fourier analysis, uncertainty and modeling"
+              },
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/F.html#bib841",
+                "titulo_referencia": "Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions"
+              },
+              {
+                "texto": "1977",
+                "archivo_destino": "bib/P.html#bib1830",
+                "titulo_referencia": "Signal Analysis"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/S.html#bib2113",
+                "titulo_referencia": "Some comments on Fourier analysis, uncertainty and modeling"
+              },
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/F.html#bib841",
+                "titulo_referencia": "Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions"
+              },
+              {
+                "texto": "1977",
+                "archivo_destino": "bib/P.html#bib1830",
+                "titulo_referencia": "Signal Analysis"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/S.html#bib2113",
+                "titulo_referencia": "Some comments on Fourier analysis, uncertainty and modeling"
+              },
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/F.html#bib841",
+                "titulo_referencia": "Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions"
+              },
+              {
+                "texto": "2001",
+                "archivo_destino": "bib/L.html#bib1507",
+                "titulo_referencia": "Linear prediction of bandlimited processes with flat spectral densities"
+              },
+              {
+                "texto": "1977",
+                "archivo_destino": "bib/P.html#bib1830",
+                "titulo_referencia": "Signal Analysis"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/S.html#bib2113",
+                "titulo_referencia": "Some comments on Fourier analysis, uncertainty and modeling"
+              },
+              {
+                "texto": "1961",
+                "archivo_destino": "bib/S.html#bib2114",
+                "titulo_referencia": "Prolate spheroidal wave functions, Fourier analysis and uncertainty. I"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Computation",
+      "secciones": [
+        {
+          "seccion_id": "30.16",
+          "titulo_original": "Methods of Computation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.16.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.16.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.16 Methods of Computation",
+            "prosa_teorica": "For small $|\\gamma^{2}|$ we can use the power-series expansion ( 30.3.8 ). Schäfke and Groh ([1962](./bib/S.html#bib2005 \"Zur Berechnung der Eigenwerte der Sphäroiddifferentialgleichung\")) gives corresponding error bounds. If $|\\gamma^{2}|$ is large we can use the asymptotic expansions in § [30.9](./30.9.md \"§30.9 Asymptotic Approximations and Expansions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions\") . Approximations to eigenvalues can be improved by using the continued-fraction equations from § 30.3(iii) and § [30.8](./30.8.md \"§30.8 Expansions in Series of Ferrers Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions\") ; see Bouwkamp ([1947](./bib/B.html#bib323 \"On spheroidal wave functions of order zero\")) and Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.93).\nAnother method is as follows. Let $n-m$ be even. For $d$ sufficiently large, construct the $d\\times d$ tridiagonal matrix $\\mathbf{A}=[A_{j,k}]$ with nonzero elements\n<a id=\"E1\"></a>\nand real eigenvalues $\\alpha_{1,d}$ , $\\alpha_{2,d}$ , $\\dots$ , $\\alpha_{d,d}$ , arranged in ascending order of magnitude. Then\nand\nThe eigenvalues of $\\mathbf{A}$ can be computed by methods indicated in §§ 3.2(vi) , 3.2(vii) . The error satisfies\nFor $m=2$ , $n=4$ , $\\gamma^{2}=10$ ,\n<a id=\"E5\"></a>\nwhich yields $\\lambda^{2}_{4}\\left(10\\right)=13.97907\\;345$ . If $n-m$ is odd, then ( 30.16.1 ) is replaced by\n<a id=\"E6\"></a>\nIf $|\\gamma^{2}|$ is large, then we can use the asymptotic expansions referred to in § [30.9](./30.9.md \"§30.9 Asymptotic Approximations and Expansions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions\") to approximate $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ .\nIf $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ is known, then we can compute $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ (not normalized) by solving the differential equation ( 30.2.1 ) numerically with initial conditions $w(0)=1$ , $w^{\\prime}(0)=0$ if $n-m$ is even, or $w(0)=0$ , $w^{\\prime}(0)=1$ if $n-m$ is odd.\nIf $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ is known, then $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ can be found by summing ( 30.8.1 ). The coefficients $a^{m}_{n,r}(\\gamma^{2})$ are computed as the recessive solution of ( 30.8.4 ) (§ [3.6](./3.6.md \"§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods\") ), and normalized via ( 30.8.5 ).\nA fourth method, based on the expansion ( 30.8.1 ), is as follows. Let $\\mathbf{A}$ be the $d\\times d$ matrix given by ( 30.16.1 ) if $n-m$ is even, or by ( 30.16.6 ) if $n-m$ is odd. Form the eigenvector $[e_{1,d},e_{2,d},\\dots,e_{d,d}]^{\\mathrm{T}}$ of $\\mathbf{A}$ associated with the eigenvalue $\\alpha_{p,d}$ , $p=\\left\\lfloor\\frac{1}{2}(n-m)\\right\\rfloor+1$ , normalized according to\nThen\nFor error estimates see Volkmer ([2004a](./bib/V.html#bib2343 \"Error estimates for Rayleigh-Ritz approximations of eigenvalues and eigenfunctions of the Mathieu and spheroidal wave equation\")).\nThe coefficients $a_{n,k}^{m}(\\gamma^{2})$ calculated in § 30.16(ii) can be used to compute $S^{m(j)}_{n}\\left(z,\\gamma\\right)$ , $j=1,2,3,4$ from ( 30.11.3 ) as well as the connection coefficients $K_{n}^{m}(\\gamma)$ from ( 30.11.10 ) and ( 30.11.11 ).\nFor other methods see Van Buren and Boisvert ([2002](./bib/V.html#bib2307 \"Accurate calculation of prolate spheroidal radial functions of the first kind and their first derivatives\"), [2004](./bib/V.html#bib2737 \"Improved calculation of prolate spheroidal radial functions of the second kind and their first derivatives\")).",
+            "formulas_clave": [
+              {
+                "id": "Ex1",
+                "tag": "30.16.1",
+                "latex": "\\displaystyle A_{j,j} \\displaystyle=(m+2j-2)(m+2j-1)-2\\gamma^{2}\\frac{(m+2j-2)(m+2j-1)-1+m^{2}}{(2m+4j-5)(2m+4j-1)}, \\tag{30.16.1}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle A_{j,j+1} \\displaystyle=-\\gamma^{2}\\frac{(2m+2j-1)(2m+2j)}{(2m+4j-1)(2m+4j+1)},"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle A_{j,j-1} \\displaystyle=-\\gamma^{2}\\frac{(2j-3)(2j-2)}{(2m+4j-7)(2m+4j-5)},"
+              },
+              {
+                "id": "E2",
+                "tag": "30.16.2",
+                "latex": "\\alpha_{j,d+1}\\leq\\alpha_{j,d}, \\tag{30.16.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "30.16.3",
+                "latex": "\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)=\\lim_{d\\to\\infty}\\alpha_{p,d}, \\tag{30.16.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "30.16.4",
+                "latex": "\\alpha_{p,d}-\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)=O\\left(\\frac{\\gamma^{4d}}{4^{2d+1}((m+2d-1)!(m+2d+1)!)^{2}}\\right), \\tag{30.16.4}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "30.16.5",
+                "latex": "\\displaystyle\\alpha_{2,2} \\displaystyle=14.18833\\;246, \\tag{30.16.5}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle\\alpha_{2,3} \\displaystyle=13.98002\\;013,"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle\\alpha_{2,4} \\displaystyle=13.97907\\;459,"
+              },
+              {
+                "id": "Ex7",
+                "tag": "",
+                "latex": "\\displaystyle\\alpha_{2,5} \\displaystyle=13.97907\\;345,"
+              },
+              {
+                "id": "Ex8",
+                "tag": "",
+                "latex": "\\displaystyle\\alpha_{2,6} \\displaystyle=13.97907\\;345,"
+              },
+              {
+                "id": "Ex9",
+                "tag": "30.16.6",
+                "latex": "\\displaystyle A_{j,j} \\displaystyle=(m+2j-1)(m+2j)-2\\gamma^{2}\\,\\frac{(m+2j-1)(m+2j)-1+m^{2}}{(2m+4j-3)(2m+4j+1)}, \\tag{30.16.6}"
+              },
+              {
+                "id": "Ex10",
+                "tag": "",
+                "latex": "\\displaystyle A_{j,j+1} \\displaystyle=-\\gamma^{2}\\frac{(2m+2j)(2m+2j+1)}{(2m+4j+1)(2m+4j+3)},"
+              },
+              {
+                "id": "Ex11",
+                "tag": "",
+                "latex": "\\displaystyle A_{j,j-1} \\displaystyle=-\\gamma^{2}\\frac{(2j-2)(2j-1)}{(2m+4j-5)(2m+4j-3)}."
+              },
+              {
+                "id": "E7",
+                "tag": "30.16.7",
+                "latex": "\\sum_{j=1}^{d}e_{j,d}^{2}\\frac{(n+m+2j-2p)!}{(n-m+2j-2p)!}\\frac{1}{2n+4j-4p+1}=\\frac{(n+m)!}{(n-m)!}\\frac{1}{2n+1}. \\tag{30.16.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "30.16.8",
+                "latex": "a_{n,k}^{m}(\\gamma^{2})=\\lim_{d\\to\\infty}e_{k+p,d}, \\tag{30.16.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "30.16.9",
+                "latex": "\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)=\\lim_{d\\to\\infty}\\sum_{j=1}^{d}(-1)^{j-p}e_{j,d}\\mathsf{P}^{m}_{n+2(j-p)}\\left(x\\right). \\tag{30.16.9}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle A_{j,j} \\displaystyle=(m+2j-2)(m+2j-1)-2\\gamma^{2}\\frac{(m+2j-2)(m+2j-1)-1+m^{2}}{(2m+4j-5)(2m+4j-1)}, \\tag{30.16.1}",
+              "\\displaystyle A_{j,j+1} \\displaystyle=-\\gamma^{2}\\frac{(2m+2j-1)(2m+2j)}{(2m+4j-1)(2m+4j+1)},",
+              "\\displaystyle A_{j,j-1} \\displaystyle=-\\gamma^{2}\\frac{(2j-3)(2j-2)}{(2m+4j-7)(2m+4j-5)},",
+              "\\alpha_{j,d+1}\\leq\\alpha_{j,d}, \\tag{30.16.2}",
+              "\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)=\\lim_{d\\to\\infty}\\alpha_{p,d}, \\tag{30.16.3}",
+              "\\alpha_{p,d}-\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)=O\\left(\\frac{\\gamma^{4d}}{4^{2d+1}((m+2d-1)!(m+2d+1)!)^{2}}\\right), \\tag{30.16.4}",
+              "\\displaystyle\\alpha_{2,2} \\displaystyle=14.18833\\;246, \\tag{30.16.5}",
+              "\\displaystyle\\alpha_{2,3} \\displaystyle=13.98002\\;013,",
+              "\\displaystyle\\alpha_{2,4} \\displaystyle=13.97907\\;459,",
+              "\\displaystyle\\alpha_{2,5} \\displaystyle=13.97907\\;345,",
+              "\\displaystyle\\alpha_{2,6} \\displaystyle=13.97907\\;345,",
+              "\\displaystyle A_{j,j} \\displaystyle=(m+2j-1)(m+2j)-2\\gamma^{2}\\,\\frac{(m+2j-1)(m+2j)-1+m^{2}}{(2m+4j-3)(2m+4j+1)}, \\tag{30.16.6}",
+              "\\displaystyle A_{j,j+1} \\displaystyle=-\\gamma^{2}\\frac{(2m+2j)(2m+2j+1)}{(2m+4j+1)(2m+4j+3)},",
+              "\\displaystyle A_{j,j-1} \\displaystyle=-\\gamma^{2}\\frac{(2j-2)(2j-1)}{(2m+4j-5)(2m+4j-3)}.",
+              "\\sum_{j=1}^{d}e_{j,d}^{2}\\frac{(n+m+2j-2p)!}{(n-m+2j-2p)!}\\frac{1}{2n+4j-4p+1}=\\frac{(n+m)!}{(n-m)!}\\frac{1}{2n+1}. \\tag{30.16.7}",
+              "a_{n,k}^{m}(\\gamma^{2})=\\lim_{d\\to\\infty}e_{k+p,d}, \\tag{30.16.8}",
+              "\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)=\\lim_{d\\to\\infty}\\sum_{j=1}^{d}(-1)^{j-p}e_{j,d}\\mathsf{P}^{m}_{n+2(j-p)}\\left(x\\right). \\tag{30.16.9}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "computation",
+                "eigenvalues",
+                "spheroidal differential equation",
+                "spheroidal wave functions",
+                "radial spheroidal wave functions"
+              ],
+              "simbolos": [
+                "$m$: nonnegative integer , $A_{j,k}$: tridiagonal matrix elements and $\\gamma^{2}$: real parameter",
+                "$\\alpha_{j,k}$: real eigenvalues"
+              ],
+              "referenciado_por": [
+                "§3.10(iii)",
+                "§30.16(i)",
+                "§30.16(ii)",
+                "§30.16(iii)",
+                "Erratum (V1.0.1) for References"
+              ],
+              "notas_bibliograficas": [
+                "See Meixner and Schäfke ([1954](./bib/M.html#bib1598 \"Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme\"), §3.93), Volkmer ([2004a](./bib/V.html#bib2343 \"Error estimates for Rayleigh-Ritz approximations of eigenvalues and eigenfunctions of the Mathieu and spheroidal wave equation\")).",
+                "See Van Buren et al. ([1972](./bib/V.html#bib2305 \"Calculation of spheroidal wave functions\")) and Volkmer ([2004a](./bib/V.html#bib2343 \"Error estimates for Rayleigh-Ritz approximations of eigenvalues and eigenfunctions of the Mathieu and spheroidal wave equation\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.16 and Ch.30",
+                "Annotations for §30.16(i) , §30.16 and Ch.30",
+                "Annotations for §30.16(i) , §30.16(i) , §30.16 and Ch.30"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Amendment (effective with 1.0.1)",
+                  "descripcion": "The citation to Van Buren and Boisvert ([2004](./bib/V.html#bib2737 \"Improved calculation of prolate spheroidal radial functions of the second kind and their first derivatives\")) was added. *Suggested 2010-05-31 by Lee Van Buren*"
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "2004a",
+                "archivo_destino": "bib/V.html#bib2343",
+                "titulo_referencia": "Error estimates for Rayleigh-Ritz approximations of eigenvalues and eigenfunctions of the Mathieu and spheroidal wave equation"
+              },
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/S.html#bib2005",
+                "titulo_referencia": "Zur Berechnung der Eigenwerte der Sphäroiddifferentialgleichung"
+              },
+              {
+                "texto": "30.9",
+                "archivo_destino": "30.9.md",
+                "titulo_referencia": "§30.9 Asymptotic Approximations and Expansions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "30.8",
+                "archivo_destino": "30.8.md",
+                "titulo_referencia": "§30.8 Expansions in Series of Ferrers Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "1947",
+                "archivo_destino": "bib/B.html#bib323",
+                "titulo_referencia": "On spheroidal wave functions of order zero"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/M.html#bib1598",
+                "titulo_referencia": "Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/V.html#bib2305",
+                "titulo_referencia": "Calculation of spheroidal wave functions"
+              },
+              {
+                "texto": "2004a",
+                "archivo_destino": "bib/V.html#bib2343",
+                "titulo_referencia": "Error estimates for Rayleigh-Ritz approximations of eigenvalues and eigenfunctions of the Mathieu and spheroidal wave equation"
+              },
+              {
+                "texto": "30.9",
+                "archivo_destino": "30.9.md",
+                "titulo_referencia": "§30.9 Asymptotic Approximations and Expansions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "3.6",
+                "archivo_destino": "3.6.md",
+                "titulo_referencia": "§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"
+              },
+              {
+                "texto": "2004a",
+                "archivo_destino": "bib/V.html#bib2343",
+                "titulo_referencia": "Error estimates for Rayleigh-Ritz approximations of eigenvalues and eigenfunctions of the Mathieu and spheroidal wave equation"
+              },
+              {
+                "texto": "2004",
+                "archivo_destino": "bib/V.html#bib2737",
+                "titulo_referencia": "Improved calculation of prolate spheroidal radial functions of the second kind and their first derivatives"
+              },
+              {
+                "texto": "2002",
+                "archivo_destino": "bib/V.html#bib2307",
+                "titulo_referencia": "Accurate calculation of prolate spheroidal radial functions of the first kind and their first derivatives"
+              },
+              {
+                "texto": "2004",
+                "archivo_destino": "bib/V.html#bib2737",
+                "titulo_referencia": "Improved calculation of prolate spheroidal radial functions of the second kind and their first derivatives"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.17",
+          "titulo_original": "Tables",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.17.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.17.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.17 Tables",
+            "prosa_teorica": "* Stratton et al. ([1956](./bib/S.html#bib2176 \"Spheroidal Wave Functions: Including Tables of Separation Constants and Coefficients\")) tabulates quantities closely related to $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ and $a^{m}_{n,k}(\\gamma^{2})$ for $0\\leq m\\leq 8$ , $m\\leq n\\leq 8$ , $-64\\leq\\gamma^{2}\\leq 64$ . Precision is 7S.\n* Flammer ([1957](./bib/F.html#bib807 \"Spheroidal Wave Functions\")) includes 18 tables of eigenvalues, expansion coefficients, spheroidal wave functions, and other related quantities. Precision varies between 4S and 10S.\n* Hanish et al. ([1970](./bib/H.html#bib1034 \"Tables of Radial Spheroidal Wave Functions, Vols. 1-3, Prolate, = m 0 , 1 , 2 ; Vols. 4-6, Oblate, = m 0 , 1 , 2\")) gives $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ and $S^{m(j)}_{n}\\left(z,\\gamma\\right)$ , $j=1,2$ , and their first derivatives, for $0\\leq m\\leq 2$ , $m\\leq n\\leq m+49$ , $-1600\\leq\\gamma^{2}\\leq 1600$ . The range of $z$ is given by $1\\leq z\\leq 10$ if $\\gamma^{2}>0$ , or $z=-\\mathrm{i}\\xi$ , $0\\leq\\xi\\leq 2$ if $\\gamma^{2}<0$ . Precision is 18S.\n* EraŠevskaja et al. ([1973](./bib/E.html#bib742 \"Tablicy sferoidal’nyh volnovyh funkcii i ih pervyh proizvodnyh. Tom I\"), [1976](./bib/E.html#bib743 \"Tablicy sferoidal’nyh volnovyh funkcii iih pervyh proizvodnyh. Tom II\")) gives $S^{m(j)}\\left(iy,-ic\\right)$ , $S^{m(j)}\\left(z,\\gamma\\right)$ and their first derivatives for $j=1,2$ , $0.5\\leq c\\leq 8$ , $y=0,0.5,1,1.5$ , $0.5\\leq\\gamma\\leq 8$ , $z=1.01,1.1,1.4,1.8$ . Precision is 15S.\n* Van Buren et al. ([1975](./bib/V.html#bib2306 \"Tables of Angular Spheroidal Wave Functions, Vol. 1, Prolate, = m 0 ; Vol. 2, Oblate, m=0\")) gives $\\lambda^{0}_{n}\\left(\\gamma^{2}\\right)$ , $\\mathsf{Ps}^{0}_{n}\\left(x,\\gamma^{2}\\right)$ for $0\\leq n\\leq 49$ , $-1600\\leq\\gamma^{2}\\leq 1600$ , $-1\\leq x\\leq 1$ . Precision is 8S.\n* Zhang and Jin ([1996](./bib/Z.html#bib2493 \"Computation of Special Functions\")) includes 24 tables of eigenvalues, spheroidal wave functions and their derivatives. Precision varies between 6S and 8S.\nFletcher et al. ([1962](./bib/F.html#bib810 \"An Index of Mathematical Tables. Vols. I, II\"), §22.28) provides additional information on tables prior to 1961.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "eigenvalues",
+                "expansions in series of Ferrers functions",
+                "radial spheroidal wave functions",
+                "spheroidal differential equation",
+                "spheroidal wave functions",
+                "tables",
+                "tables of coefficients"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1956",
+                "archivo_destino": "bib/S.html#bib2176",
+                "titulo_referencia": "Spheroidal Wave Functions: Including Tables of Separation Constants and Coefficients"
+              },
+              {
+                "texto": "1957",
+                "archivo_destino": "bib/F.html#bib807",
+                "titulo_referencia": "Spheroidal Wave Functions"
+              },
+              {
+                "texto": "1970",
+                "archivo_destino": "bib/H.html#bib1034",
+                "titulo_referencia": "Tables of Radial Spheroidal Wave Functions, Vols. 1-3, Prolate, = m 0 , 1 , 2 ; Vols. 4-6, Oblate, = m 0 , 1 , 2"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/E.html#bib742",
+                "titulo_referencia": "Tablicy sferoidal’nyh volnovyh funkcii i ih pervyh proizvodnyh. Tom I"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/E.html#bib743",
+                "titulo_referencia": "Tablicy sferoidal’nyh volnovyh funkcii iih pervyh proizvodnyh. Tom II"
+              },
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/V.html#bib2306",
+                "titulo_referencia": "Tables of Angular Spheroidal Wave Functions, Vol. 1, Prolate, = m 0 ; Vol. 2, Oblate, m=0"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/Z.html#bib2493",
+                "titulo_referencia": "Computation of Special Functions"
+              },
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/F.html#bib810",
+                "titulo_referencia": "An Index of Mathematical Tables. Vols. I, II"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "30.18",
+          "titulo_original": "Software",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/30/30.18.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.18.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§30.18 Software",
+            "prosa_teorica": "In §§ 30.18(ii) and 30.18(iii) we provide links to the research literature describing the implementation of algorithms in software for the evaluation of functions described in this chapter. Citations in bulleted lists refer to papers for which research software has been made available and can be downloaded via the Web. References to research software that is available in other ways is listed separately.\nA more complete list of available software for computing these functions is found in the [Software Index](./software/index.md) . Also, the following Maple programs were provided by the author.\nSWF1 : $\\lambda^{m}_{n}\\left(\\gamma^{2}\\right)$ .\nSWF2 : $\\mathsf{Ps}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ .\nSWF3 : $\\mathsf{Qs}^{m}_{n}\\left(x,\\gamma^{2}\\right)$ .\nSWF4 : $S^{m(j)}_{n}\\left(z,\\gamma\\right)$ , $j=1,2$ .\nSWF5 : $K_{n}^{m}(\\gamma)$ in § 30.11(v) .\nSWF6 : $\\phi_{n}(t)$ and $\\Lambda_{n}$ in § 30.15(i) .\nSWF7 : Coefficients $\\beta_{p}$ in ( 30.9.1 ).\nSWF8 : Coefficients $c_{p}$ in ( 30.9.4 ).\nSWF9 : Coefficients $\\ell_{p}$ in ( 30.3.8 ).\nPrecision in SWF1-6 is adjustable. Programs SWF7-9 use symbolic algebra.\n* Falloon ([2001](./bib/F.html#bib773 \"Theory and Computation of Spheroidal Harmonics with General Arguments\")). Mathematica.\n* Li et al. ([1998a](./bib/L.html#bib1433 \"Computations of spheroidal harmonics with complex arguments: A review with an algorithm\")). Mathematica.\n* Beu and Câmpeanu ([1983a](./bib/B.html#bib271 \"Prolate angular spheroidal wave functions\"), [b](./bib/B.html#bib272 \"Prolate radial spheroidal wave functions\")). Fortran.\n* Falloon ([2001](./bib/F.html#bib773 \"Theory and Computation of Spheroidal Harmonics with General Arguments\")). Mathematica.\n* Li et al. ([1998a](./bib/L.html#bib1433 \"Computations of spheroidal harmonics with complex arguments: A review with an algorithm\")). Mathematica.\nSee also King et al. ([1970](./bib/K.html#bib1271 \"A Fortran computer program for calculating the prolate spheroidal radial functions of the first and second kind and their first derivatives\")), King and Van Buren ([1970](./bib/K.html#bib1272 \"A Fortran computer program for calculating the prolate and oblate angle functions of the first kind and their first and second derivatives\")), Van Buren et al. ([1970](./bib/V.html#bib2304 \"A Fortran computer program for calculating the oblate spheroidal radial functions of the first and second kind and their first derivatives\")), and Van Buren et al. ([1972](./bib/V.html#bib2305 \"Calculation of spheroidal wave functions\")).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "referenciado_por": [
+                "§30.3(iv)",
+                "§30.9(i)",
+                "§30.9(ii)",
+                "§30.18(i)",
+                "§ ‣ Software Cross Index"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.30",
+                "Annotations for §30.18 and Ch.30"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              },
+              {
+                "texto": "2001",
+                "archivo_destino": "bib/F.html#bib773",
+                "titulo_referencia": "Theory and Computation of Spheroidal Harmonics with General Arguments"
+              },
+              {
+                "texto": "1998a",
+                "archivo_destino": "bib/L.html#bib1433",
+                "titulo_referencia": "Computations of spheroidal harmonics with complex arguments: A review with an algorithm"
+              },
+              {
+                "texto": "1983a",
+                "archivo_destino": "bib/B.html#bib271",
+                "titulo_referencia": "Prolate angular spheroidal wave functions"
+              },
+              {
+                "texto": "b",
+                "archivo_destino": "bib/B.html#bib272",
+                "titulo_referencia": "Prolate radial spheroidal wave functions"
+              },
+              {
+                "texto": "2001",
+                "archivo_destino": "bib/F.html#bib773",
+                "titulo_referencia": "Theory and Computation of Spheroidal Harmonics with General Arguments"
+              },
+              {
+                "texto": "1998a",
+                "archivo_destino": "bib/L.html#bib1433",
+                "titulo_referencia": "Computations of spheroidal harmonics with complex arguments: A review with an algorithm"
+              },
+              {
+                "texto": "1970",
+                "archivo_destino": "bib/K.html#bib1271",
+                "titulo_referencia": "A Fortran computer program for calculating the prolate spheroidal radial functions of the first and second kind and their first derivatives"
+              },
+              {
+                "texto": "1970",
+                "archivo_destino": "bib/K.html#bib1272",
+                "titulo_referencia": "A Fortran computer program for calculating the prolate and oblate angle functions of the first kind and their first and second derivatives"
+              },
+              {
+                "texto": "1970",
+                "archivo_destino": "bib/V.html#bib2304",
+                "titulo_referencia": "A Fortran computer program for calculating the oblate spheroidal radial functions of the first and second kind and their first derivatives"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/V.html#bib2305",
+                "titulo_referencia": "Calculation of spheroidal wave functions"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "agradecimientos_capitulo": "This chapter is based in part on Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Chapter 21) by A. N. Lowan.",
+  "referencias_capitulo": [
+    "§31.12",
+    "§31.18",
+    "New Associate Editors for the DLMF",
+    "*Profile* Hans Volkmer",
+    "*Profile* Hans Volkmer",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Associate Editors",
+    "§ ‣ Software Cross Index"
+  ],
+  "estado_extraccion": "completado",
+  "total_formulas_extraidas": 161,
+  "estado_metadatos": "verificado_y_refinado"
+}

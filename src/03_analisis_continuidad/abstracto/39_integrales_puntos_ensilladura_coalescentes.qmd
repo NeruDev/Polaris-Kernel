@@ -1,0 +1,97 @@
+---
+id: "41A60"
+title: "Integrales Puntos Ensilladura Coalescentes"
+pilar: "03_analisis_continuidad"
+msc_code: "41A60, 58K05"
+difficulty: "abstracto"
+tags:
+  - 41A60
+  - 58K05
+---
+
+# Integrales Puntos Ensilladura Coalescentes
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 36 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\Psi_{0}=\sqrt{\pi}\exp\left(i\frac{\pi}{4}\right). \tag{36.2.12}
+$$
+
+$$
+\Psi_{1}\left(x\right)=\frac{2\pi}{3^{1/3}}\operatorname{Ai}\left(\frac{x}{3^{1/3}}\right). \tag{36.2.13}
+$$
+
+$$
+\displaystyle\Psi_{1}\left(\boldsymbol{{0}}\right) \displaystyle=1.54669, \tag{36.2.16}
+$$
+
+$$
+\displaystyle\Psi_{3}\left(\boldsymbol{{0}}\right) \displaystyle=1.74646,
+$$
+
+$$
+\displaystyle\Psi^{(\mathrm{E})}\left(\boldsymbol{{0}}\right) \displaystyle=\tfrac{1}{3}\sqrt{\pi}\Gamma\left(\tfrac{1}{6}\right)=3.28868, \tag{36.2.18}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\Phi_{K}\left(t;\mathbf{x}\right)=t^{K+2}+\sum_{m=1}^{K}x_{m}t^{m}. \tag{36.2.1}
+$$
+
+$$
+\displaystyle\Phi^{(\mathrm{E})}\left(s,t;\mathbf{x}\right) \displaystyle=s^{3}-3st^{2}+z(s^{2}+t^{2})+yt+xs, \tag{36.2.2}
+$$
+
+$$
+\displaystyle\Phi^{(\mathrm{H})}\left(s,t;\mathbf{x}\right) \displaystyle=s^{3}+t^{3}+zst+yt+xs, \tag{36.2.3}
+$$
+
+$$
+\Psi_{K}\left(\mathbf{x}\right)=\int_{-\infty}^{\infty}\exp\left(i\Phi_{K}\left(t;\mathbf{x}\right)\right)\,\mathrm{d}t. \tag{36.2.4}
+$$
+
+$$
+\Psi^{(\mathrm{U})}\left(\mathbf{x}\right)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\exp\left(i\Phi^{(\mathrm{U})}\left(s,t;\mathbf{x}\right)\right)\,\mathrm{d}s\,\mathrm{d}t, \tag{36.2.5}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\Psi_{2}\left(0,y\right)=\begin{cases}\sqrt{\frac{\pi}{y}}\left(\exp\left(\tfrac{1}{4}i\pi\right)+o\left(1\right)\right),&y\to+\infty,\\
+\sqrt{\frac{\pi}{|y|}}\exp\left(-\tfrac{1}{4}i\pi\right)\left(1+i\sqrt{2}\exp\left(-\frac{1}{4}iy^{2}\right)+o\left(1\right)\right),&y\to-\infty.\end{cases} \tag{36.11.3}
+$$
+
+$$
+\displaystyle\Psi_{3}\left(x,0,0\right) \displaystyle=\frac{\sqrt{2\pi}}{(5|x|^{3})^{1/8}}\begin{cases}\exp\left(-2\sqrt{2}(\frac{x}{5})^{5/4}\right)\left(\cos\left(2\sqrt{2}(\frac{x}{5})^{5/4}-\tfrac{1}{8}\pi\right)+o\left(1\right)\right),&x\to+\infty,\\
+\cos\left(4(\frac{|x|}{5})^{5/4}-\tfrac{1}{4}\pi\right)+o\left(1\right),&x\to-\infty.\end{cases} \tag{36.11.4}
+$$
+
+$$
+\displaystyle\Psi_{3}\left(0,0,z\right) \displaystyle=\frac{\Gamma\left(\tfrac{1}{3}\right)}{|z|^{1/3}\sqrt{3}}+\begin{cases}o\left(1\right),&z\to+\infty,\\
+\dfrac{2\sqrt{\pi}5^{1/4}}{(3|z|)^{3/4}}\left(\cos\left(\dfrac{2}{3}\left(\dfrac{3|z|}{5}\right)^{5/2}-\dfrac{1}{4}\pi\right)+o\left(1\right)\right),&z\to-\infty.\end{cases} \tag{36.11.6}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

@@ -1,0 +1,81 @@
+---
+id: "33E30"
+title: "Funciones Heun"
+pilar: "03_analisis_continuidad"
+msc_code: "33E30, 34M35"
+difficulty: "abstracto"
+tags:
+  - 33E30
+  - 34M35
+---
+
+# Funciones Heun
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 31 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+z={\sin}^{2}\theta, \tag{31.2.5}
+$$
+
+$$
+\displaystyle z \displaystyle={\operatorname{sn}}^{2}\left(\zeta,k\right).
+$$
+
+$$
+\displaystyle e_{1} \displaystyle=\wp\left(\omega_{1}\right),
+$$
+
+$$
+\displaystyle e_{2} \displaystyle=\wp\left(\omega_{2}\right),
+$$
+
+$$
+\displaystyle e_{3} \displaystyle=\wp\left(\omega_{3}\right),
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}+\left(\frac{\gamma}{z}+\frac{\delta}{z-1}+\frac{\epsilon}{z-a}\right)\frac{\mathrm{d}w}{\mathrm{d}z}+\frac{\alpha\beta z-q}{z(z-1)(z-a)}w=0, \tag{31.2.1}
+$$
+
+$$
+w(z)=z^{-\gamma/2}(z-1)^{-\delta/2}(z-a)^{-\epsilon/2}W(z), \tag{31.2.2}
+$$
+
+$$
+\frac{{\mathrm{d}}^{2}W}{{\mathrm{d}z}^{2}}=\left(\frac{A}{z}+\frac{B}{z-1}+\frac{C}{z-a}+\frac{D}{z^{2}}+\frac{E}{(z-1)^{2}}+\frac{F}{(z-a)^{2}}\right)W, \tag{31.2.3}
+$$
+
+$$
+\displaystyle A \displaystyle=-\frac{\gamma\delta}{2}-\frac{\gamma\epsilon}{2a}+\frac{q}{a}, \tag{31.2.4}
+$$
+
+$$
+\displaystyle B \displaystyle=\frac{\gamma\delta}{2}-\frac{\delta\epsilon}{2(a-1)}-\frac{q-\alpha\beta}{a-1},
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+El comportamiento límite se rige por las propiedades analíticas en la esfera de Riemann.
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

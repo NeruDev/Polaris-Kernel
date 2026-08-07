@@ -1,0 +1,1643 @@
+{
+  "capitulo": 34,
+  "titulo_original": "3⁢j,6⁢j,9⁢j Symbols",
+  "archivo_metadata": "metadata/DLMF_data/34_3j_6j_9j_Symbols.json",
+  "rutas_docs": {
+    "docs_original": "docs/DLMF-markdown-main/markdown/34/34.md",
+    "docs_directorio_original": "docs/DLMF-markdown-main/markdown/34/",
+    "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.md"
+  },
+  "total_categorias": 4,
+  "total_secciones": 15,
+  "categorias": [
+    {
+      "categoria": "Notation",
+      "secciones": [
+        {
+          "seccion_id": "34.1",
+          "titulo_original": "Special Notation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.1.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.1.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.1 Special Notation",
+            "prosa_teorica": "(For other notation see Notation for the Special Functions .)\nThe main functions treated in this chapter are the Wigner $\\mathit{3j},\\mathit{6j},\\mathit{9j}$ symbols, respectively,\nAn often used alternative to the $\\mathit{3j}$ symbol is the Clebsch–Gordan coefficient\nsee Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), p. 46, Eq. (3.7.3)) and Rotenberg et al. ([1959](./bib/R.html#bib1976 \"The 3 - j and 6 - j Symbols\"), p. 1, Eq. (1.1a)). For other notations for $\\mathit{3j}$ , $\\mathit{6j}$ , $\\mathit{9j}$ symbols, see Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 52, 97, 104–105) and Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §§8.11, 9.10, 10.10).",
+            "formulas_clave": [
+              {
+                "id": "EGx1",
+                "tag": "",
+                "latex": "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix},"
+              },
+              {
+                "id": "",
+                "tag": "",
+                "latex": "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix},"
+              },
+              {
+                "id": "",
+                "tag": "",
+                "latex": "\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{21}&j_{22}&j_{23}\\\\\nj_{31}&j_{32}&j_{33}\\end{Bmatrix}."
+              },
+              {
+                "id": "E1",
+                "tag": "34.1.1",
+                "latex": "\\left(j_{1}\\;m_{1}\\;j_{2}\\;m_{2}|j_{1}\\;j_{2}\\;j_{3}\\,\\,m_{3}\\right)=(-1)^{j_{1}-j_{2}+m_{3}}(2j_{3}+1)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&-m_{3}\\end{pmatrix}; \\tag{34.1.1}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix},",
+              "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix},",
+              "\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{21}&j_{22}&j_{23}\\\\\nj_{31}&j_{32}&j_{33}\\end{Bmatrix}.",
+              "\\left(j_{1}\\;m_{1}\\;j_{2}\\;m_{2}|j_{1}\\;j_{2}\\;j_{3}\\,\\,m_{3}\\right)=(-1)^{j_{1}-j_{2}+m_{3}}(2j_{3}+1)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&-m_{3}\\end{pmatrix}; \\tag{34.1.1}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Clebsch–Gordan coefficients",
+                "Wigner $\\mathit{3j},\\mathit{6j},\\mathit{9j}$ symbols",
+                "angular momentum coupling coefficients",
+                "$\\mathit{9j}$ symbols",
+                "notation",
+                "$\\mathit{6j}$ symbols",
+                "$\\mathit{3j}$ symbols"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.0.14) for Section 34.1",
+                "Erratum (V1.0.15) for Section 34.1"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Clarification (effective with 1.0.14)",
+                  "descripcion": "The reference for Clebsch–Gordan coefficients, Condon and Shortley ([1935](./bib/C.html#bib564 \"The Theory of Atomic Spectra\")), was replaced by Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\")) and Rotenberg et al. ([1959](./bib/R.html#bib1976 \"The 3 - j and 6 - j Symbols\")). The references for $\\mathit{3j}$ , $\\mathit{6j}$ , $\\mathit{9j}$ symbols were made more precise."
+                }
+              ]
+            },
+            "estado": "completado",
+            "tablas": [
+              {
+                "encabezados": [
+                  "$2j_{1},2j_{2},2j_{3},2l_{1},2l_{2},2l_{3}$",
+                  "nonnegative integers."
+                ],
+                "filas": [
+                  {
+                    "$2j_{1},2j_{2},2j_{3},2l_{1},2l_{2},2l_{3}$": "$r,s,t$",
+                    "nonnegative integers.": "nonnegative integers."
+                  }
+                ]
+              }
+            ],
+            "referencias_cruzadas": [
+              {
+                "texto": "1935",
+                "archivo_destino": "bib/C.html#bib564",
+                "titulo_referencia": "The Theory of Atomic Spectra"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1959",
+                "archivo_destino": "bib/R.html#bib1976",
+                "titulo_referencia": "The 3 - j and 6 - j Symbols"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1959",
+                "archivo_destino": "bib/R.html#bib1976",
+                "titulo_referencia": "The 3 - j and 6 - j Symbols"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Properties",
+      "secciones": [
+        {
+          "seccion_id": "34.2",
+          "titulo_original": "Definition: $\\mathit{3j}$ Symbol",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.2.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.2.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.2 Definition: 3⁢j Symbol",
+            "prosa_teorica": "The quantities $j_{1},j_{2},j_{3}$ in the $\\mathit{3j}$ symbol are called *angular momenta* . Either all of them are nonnegative integers, or one is a nonnegative integer and the other two are half-odd positive integers. They must form the sides of a triangle (possibly degenerate). They therefore satisfy the *triangle conditions*\nwhere $r,s,t$ is any permutation of $1,2,3$ . The corresponding *projective quantum numbers* $m_{1},m_{2},m_{3}$ are given by\nand satisfy\nSee Figure 34.2.1 for a schematic representation.\n<a id=\"F1\"></a>\n![Figure 34.2.1: Angular momenta $j_{r}$ and projective quantum numbers $m_{r}$ , $r=1,2,3$ .](../html/34/2/F1.png)\nIf either of the conditions ( 34.2.1 ) or ( 34.2.3 ) is not satisfied, then the $\\mathit{3j}$ symbol is zero. When both conditions are satisfied the $\\mathit{3j}$ symbol can be expressed as the finite sum\nwhere\nand the summation is over all nonnegative integers $s$ such that the arguments in the factorials are nonnegative.\nEquivalently,\nwhere ${{}_{3}F_{2}}$ is defined as in § [16.2](./16.2.md \"§16.2 Definition and Analytic Properties ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function\") .\nFor alternative expressions for the $\\mathit{3j}$ symbol, written either as a finite sum or as other terminating generalized hypergeometric series ${{}_{3}F_{2}}$ of unit argument, see Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §§8.21, 8.24–8.26).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "34.2.1",
+                "latex": "|j_{r}-j_{s}|\\leq j_{t}\\leq j_{r}+j_{s}, \\tag{34.2.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "34.2.2",
+                "latex": "m_{r}=-j_{r},-j_{r}+1,\\dots,j_{r}-1,j_{r}, \\tag{34.2.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "34.2.3",
+                "latex": "m_{1}+m_{2}+m_{3}=0. \\tag{34.2.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "34.2.4",
+                "latex": "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}={(-1)^{j_{1}-j_{2}-m_{3}}}\\Delta(j_{1}j_{2}j_{3})\\left((j_{1}+m_{1})!(j_{1}-m_{1})!(j_{2}+m_{2})!(j_{2}-m_{2})!(j_{3}+m_{3})!(j_{3}-m_{3})!\\right)^{\\frac{1}{2}}\\,\\sum_{s}\\frac{(-1)^{s}}{s!(j_{1}+j_{2}-j_{3}-s)!(j_{1}-m_{1}-s)!(j_{2}+m_{2}-s)!(j_{3}-j_{2}+m_{1}+s)!(j_{3}-j_{1}-m_{2}+s)!}, \\tag{34.2.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "34.2.5",
+                "latex": "\\Delta(j_{1}j_{2}j_{3})=\\left(\\frac{(j_{1}+j_{2}-j_{3})!(j_{1}-j_{2}+j_{3})!(-j_{1}+j_{2}+j_{3})!}{(j_{1}+j_{2}+j_{3}+1)!}\\right)^{\\frac{1}{2}}, \\tag{34.2.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "34.2.6",
+                "latex": "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}={(-1)^{j_{2}-m_{1}+m_{3}}}\\frac{(j_{1}+j_{2}+m_{3})!(j_{2}+j_{3}-m_{1})!}{\\Delta(j_{1}j_{2}j_{3})(j_{1}+j_{2}+j_{3}+1)!}\\left(\\frac{(j_{1}+m_{1})!(j_{3}-m_{3})!}{(j_{1}-m_{1})!(j_{2}+m_{2})!(j_{2}-m_{2})!(j_{3}+m_{3})!}\\right)^{\\frac{1}{2}}\\,{{{}_{3}F_{2}}\\left(-j_{1}-j_{2}-j_{3}-1,-j_{1}+m_{1},-j_{3}-m_{3};-j_{1}-j_{2}-m_{3},-j_{2}-j_{3}+m_{1};1\\right)}, \\tag{34.2.6}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "|j_{r}-j_{s}|\\leq j_{t}\\leq j_{r}+j_{s}, \\tag{34.2.1}",
+              "m_{r}=-j_{r},-j_{r}+1,\\dots,j_{r}-1,j_{r}, \\tag{34.2.2}",
+              "m_{1}+m_{2}+m_{3}=0. \\tag{34.2.3}",
+              "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}={(-1)^{j_{1}-j_{2}-m_{3}}}\\Delta(j_{1}j_{2}j_{3})\\left((j_{1}+m_{1})!(j_{1}-m_{1})!(j_{2}+m_{2})!(j_{2}-m_{2})!(j_{3}+m_{3})!(j_{3}-m_{3})!\\right)^{\\frac{1}{2}}\\,\\sum_{s}\\frac{(-1)^{s}}{s!(j_{1}+j_{2}-j_{3}-s)!(j_{1}-m_{1}-s)!(j_{2}+m_{2}-s)!(j_{3}-j_{2}+m_{1}+s)!(j_{3}-j_{1}-m_{2}+s)!}, \\tag{34.2.4}",
+              "\\Delta(j_{1}j_{2}j_{3})=\\left(\\frac{(j_{1}+j_{2}-j_{3})!(j_{1}-j_{2}+j_{3})!(-j_{1}+j_{2}+j_{3})!}{(j_{1}+j_{2}+j_{3}+1)!}\\right)^{\\frac{1}{2}}, \\tag{34.2.5}",
+              "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}={(-1)^{j_{2}-m_{1}+m_{3}}}\\frac{(j_{1}+j_{2}+m_{3})!(j_{2}+j_{3}-m_{1})!}{\\Delta(j_{1}j_{2}j_{3})(j_{1}+j_{2}+j_{3}+1)!}\\left(\\frac{(j_{1}+m_{1})!(j_{3}-m_{3})!}{(j_{1}-m_{1})!(j_{2}+m_{2})!(j_{2}-m_{2})!(j_{3}+m_{3})!}\\right)^{\\frac{1}{2}}\\,{{{}_{3}F_{2}}\\left(-j_{1}-j_{2}-j_{3}-1,-j_{1}+m_{1},-j_{3}-m_{3};-j_{1}-j_{2}-m_{3},-j_{2}-j_{3}+m_{1};1\\right)}, \\tag{34.2.6}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "$\\mathit{3j}$ symbols",
+                "angular momenta",
+                "definition",
+                "finite sum of algebraic quantities",
+                "generalized hypergeometric functions",
+                "projective quantum numbers",
+                "representation as",
+                "triangle conditions"
+              ],
+              "simbolos": [
+                "$j,j_{r}$: non-negative integers or non-negative integers plus one half. and $r\\in 1,2,3$"
+              ],
+              "referenciado_por": [
+                "§34.2"
+              ],
+              "notas_bibliograficas": [
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 44–45)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34",
+                "Annotations for §34.2 and Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "16.2",
+                "archivo_destino": "16.2.md",
+                "titulo_referencia": "§16.2 Definition and Analytic Properties ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.3",
+          "titulo_original": "Basic Properties: $\\mathit{3j}$ Symbol",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.3.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.3.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.3 Basic Properties: 3⁢j Symbol",
+            "prosa_teorica": "When any one of $j_{1},j_{2},j_{3}$ is equal to $0,\\tfrac{1}{2}$ , or $1$ , the $\\mathit{3j}$ symbol has a simple algebraic form. Examples are provided by\nFor these and other results, and also cases in which any one of $j_{1},j_{2},j_{3}$ is $\\frac{3}{2}$ or $2$ , see Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 125–127).\nNext define\nThen assuming the triangle conditions are satisfied\nLastly,\nAgain it is assumed that in ( 34.3.7 ) the triangle conditions are satisfied.\nEven permutations of columns of a $\\mathit{3j}$ symbol leave it unchanged; odd permutations of columns produce a phase factor $(-1)^{j_{1}+j_{2}+j_{3}}$ , for example,\nNext,\nEquations ( 34.3.11 ) and ( 34.3.12 ) are called *Regge symmetries* . Additional symmetries are obtained by applying ( 34.3.8 )–( 34.3.10 ) to ( 34.3.11 )) and ( 34.3.12 ). See Srinivasa Rao and Rajeswari ([1993](./bib/S.html#bib2148 \"Quantum Theory of Angular Momentum: Selected Topics\"), pp. 44–47) and references given there.\nIn the following three equations it is assumed that the triangle conditions are satisfied by each $\\mathit{3j}$ symbol.\nFor these and other recursion relations see Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §8.6). See also Micu ([1968](./bib/M.html#bib1608 \"Recursion relations for the 3 - j symbols\")), Louck ([1958](./bib/L.html#bib1470 \"New recursion relation for the Clebsch-Gordan coefficients\")), Schulten and Gordon ([1975a](./bib/S.html#bib2024 \"Exact recursive evaluation of ⁢ 3 j - and ⁢ 6 j -coefficients for quantum-mechanical coupling of angular momenta\")), Srinivasa Rao and Rajeswari ([1993](./bib/S.html#bib2148 \"Quantum Theory of Angular Momentum: Selected Topics\"), pp. 220–225), and Luscombe and Luban ([1998](./bib/L.html#bib1505 \"Simplified recursive algorithm for Wigner ⁢ 3 j and ⁢ 6 j symbols\")).\nIn the summations ( 34.3.16 )–( 34.3.18 ) the summation variables range over all values that satisfy the conditions given in ( 34.2.1 )–( 34.2.3 ). *Similar conventions apply to all subsequent summations in this chapter.*\nFor generating functions for the $\\mathit{3j}$ symbol see Biedenharn and van Dam ([1965](./bib/B.html#bib279 \"Quantum Theory of Angular Momentum. A Collection of Reprints and Original Papers\"), p. 245, Eq. (3.42) and p. 247, Eq. (3.55)).\nFor sums of products of $\\mathit{3j}$ symbols, see Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), pp. 259–262).\nFor the polynomials $P_{l}$ see § [18.3](./18.3.md \"§18.3 Definitions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials\") , and for the function $Y_{{l},{m}}$ see § [14.30](./14.30.md \"§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions\") .\nEquations ( 34.3.19 )–( 34.3.22 ) are particular cases of more general results that relate rotation matrices to $\\mathit{3j}$ symbols, for which see Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), Chapter 4). The left- and right-hand sides of ( 34.3.22 ) are known, respectively, as *Gaunt’s integral* and the *Gaunt coefficient* (Gaunt ([1929](./bib/G.html#bib2625 \"The triplets of helium\"))).",
+            "formulas_clave": [
+              {
+                "id": "EGx1",
+                "tag": "34.3.1",
+                "latex": "\\displaystyle\\begin{pmatrix}j&j&0\\\\\nm&-m&0\\end{pmatrix} \\displaystyle=\\frac{(-1)^{j-m}}{(2j+1)^{\\frac{1}{2}}}, \\tag{34.3.1}"
+              },
+              {
+                "id": "",
+                "tag": "34.3.2",
+                "latex": "\\displaystyle\\begin{pmatrix}j&j&1\\\\\nm&-m&0\\end{pmatrix} \\displaystyle=(-1)^{j-m}\\frac{2m}{\\left(2j(2j+1)(2j+2)\\right)^{\\frac{1}{2}}}, \\tag{34.3.2}"
+              },
+              {
+                "id": "",
+                "tag": "34.3.3",
+                "latex": "\\displaystyle\\begin{pmatrix}j&j&1\\\\\nm&-m-1&1\\end{pmatrix} \\displaystyle=(-1)^{j-m}\\left(\\frac{2(j-m)(j+m+1)}{2j(2j+1)(2j+2)}\\right)^{\\frac{1}{2}}, \\tag{34.3.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "34.3.4",
+                "latex": "J=j_{1}+j_{2}+j_{3}. \\tag{34.3.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "34.3.5",
+                "latex": "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\n0&0&0\\end{pmatrix}=\\begin{cases}0,&\\text{J odd},\\\\\n(-1)^{\\frac{1}{2}J}\\left(\\dfrac{(J-2j_{1})!(J-2j_{2})!(J-2j_{3})!}{(J+1)!}\\right)^{\\frac{1}{2}}\\dfrac{\\left(\\frac{1}{2}J\\right)!}{\\left(\\frac{1}{2}J-j_{1}\\right)!\\left(\\frac{1}{2}J-j_{2}\\right)!\\left(\\frac{1}{2}J-j_{3}\\right)!},&\\text{J even}.\\end{cases} \\tag{34.3.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "34.3.6",
+                "latex": "\\begin{pmatrix}j_{1}&j_{2}&j_{1}+j_{2}\\\\\nm_{1}&m_{2}&-m_{1}-m_{2}\\end{pmatrix}=(-1)^{j_{1}-j_{2}+m_{1}+m_{2}}\\left(\\frac{(2j_{1})!(2j_{2})!(j_{1}+j_{2}+m_{1}+m_{2})!(j_{1}+j_{2}-m_{1}-m_{2})!}{(2j_{1}+2j_{2}+1)!(j_{1}+m_{1})!(j_{1}-m_{1})!(j_{2}+m_{2})!(j_{2}-m_{2})!}\\right)^{\\frac{1}{2}}, \\tag{34.3.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "34.3.7",
+                "latex": "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nj_{1}&-j_{1}-m_{3}&m_{3}\\end{pmatrix}=(-1)^{j_{1}-j_{2}-m_{3}}\\left(\\frac{(2j_{1})!(-j_{1}+j_{2}+j_{3})!(j_{1}+j_{2}+m_{3})!(j_{3}-m_{3})!}{(j_{1}+j_{2}+j_{3}+1)!(j_{1}-j_{2}+j_{3})!(j_{1}+j_{2}-j_{3})!(-j_{1}+j_{2}-m_{3})!(j_{3}+m_{3})!}\\right)^{\\frac{1}{2}}. \\tag{34.3.7}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "34.3.8",
+                "latex": "\\displaystyle\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=\\begin{pmatrix}j_{2}&j_{3}&j_{1}\\\\\nm_{2}&m_{3}&m_{1}\\end{pmatrix}=\\begin{pmatrix}j_{3}&j_{1}&j_{2}\\\\\nm_{3}&m_{1}&m_{2}\\end{pmatrix}, \\tag{34.3.8}"
+              },
+              {
+                "id": "",
+                "tag": "34.3.9",
+                "latex": "\\displaystyle\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=(-1)^{j_{1}+j_{2}+j_{3}}\\begin{pmatrix}j_{2}&j_{1}&j_{3}\\\\\nm_{2}&m_{1}&m_{3}\\end{pmatrix}. \\tag{34.3.9}"
+              },
+              {
+                "id": "EGx3",
+                "tag": "34.3.10",
+                "latex": "\\displaystyle\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=(-1)^{j_{1}+j_{2}+j_{3}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\n-m_{1}&-m_{2}&-m_{3}\\end{pmatrix}, \\tag{34.3.10}"
+              },
+              {
+                "id": "",
+                "tag": "34.3.11",
+                "latex": "\\displaystyle\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=\\begin{pmatrix}j_{1}&\\frac{1}{2}(j_{2}+j_{3}+m_{1})&\\frac{1}{2}(j_{2}+j_{3}-m_{1})\\\\\nj_{2}-j_{3}&\\frac{1}{2}(j_{3}-j_{2}+m_{1})+m_{2}&\\frac{1}{2}(j_{3}-j_{2}+m_{1})+m_{3}\\end{pmatrix}, \\tag{34.3.11}"
+              },
+              {
+                "id": "",
+                "tag": "34.3.12",
+                "latex": "\\displaystyle\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=\\begin{pmatrix}\\frac{1}{2}(j_{1}+j_{2}-m_{3})&\\frac{1}{2}(j_{2}+j_{3}-m_{1})&\\frac{1}{2}(j_{1}+j_{3}-m_{2})\\\\\nj_{3}-\\frac{1}{2}(j_{1}+j_{2}+m_{3})&j_{1}-\\frac{1}{2}(j_{2}+j_{3}+m_{1})&j_{2}-\\frac{1}{2}(j_{1}+j_{3}+m_{2})\\end{pmatrix}. \\tag{34.3.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "34.3.13",
+                "latex": "\\left((j_{1}+j_{2}+j_{3}+1)(-j_{1}+j_{2}+j_{3})\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}=\\left((j_{2}+m_{2})(j_{3}-m_{3})\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}-\\frac{1}{2}&j_{3}-\\frac{1}{2}\\\\\nm_{1}&m_{2}-\\frac{1}{2}&m_{3}+\\frac{1}{2}\\end{pmatrix}-\\left((j_{2}-m_{2})(j_{3}+m_{3})\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}-\\frac{1}{2}&j_{3}-\\frac{1}{2}\\\\\nm_{1}&m_{2}+\\frac{1}{2}&m_{3}-\\frac{1}{2}\\end{pmatrix}, \\tag{34.3.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "34.3.14",
+                "latex": "\\left(j_{1}(j_{1}+1)-j_{2}(j_{2}+1)-j_{3}(j_{3}+1)-2m_{2}m_{3}\\right)\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}=\\left((j_{2}-m_{2})(j_{2}+m_{2}+1)(j_{3}-m_{3}+1)(j_{3}+m_{3})\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}+1&m_{3}-1\\end{pmatrix}+\\left((j_{2}-m_{2}+1)(j_{2}+m_{2})(j_{3}-m_{3})(j_{3}+m_{3}+1)\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}-1&m_{3}+1\\end{pmatrix}, \\tag{34.3.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "34.3.15",
+                "latex": "(2j_{1}+1)\\left((j_{2}(j_{2}+1)-j_{3}(j_{3}+1))m_{1}-j_{1}(j_{1}+1)(m_{3}-m_{2})\\right)\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}=(j_{1}+1)\\left(j_{1}^{2}-(j_{2}-j_{3})^{2}\\right)^{\\frac{1}{2}}\\left((j_{2}+j_{3}+1)^{2}-j_{1}^{2}\\right)^{\\frac{1}{2}}\\left(j_{1}^{2}-m_{1}^{2}\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}-1&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}+j_{1}\\left((j_{1}+1)^{2}-(j_{2}-j_{3})^{2}\\right)^{\\frac{1}{2}}\\left((j_{2}+j_{3}+1)^{2}-(j_{1}+1)^{2}\\right)^{\\frac{1}{2}}\\left((j_{1}+1)^{2}-m_{1}^{2}\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}+1&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}. \\tag{34.3.15}"
+              },
+              {
+                "id": "EGx4",
+                "tag": "34.3.16",
+                "latex": "\\displaystyle\\sum_{m_{1}m_{2}}(2j_{3}+1)\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}\\begin{pmatrix}j_{1}&j_{2}&j^{\\prime}_{3}\\\\\nm_{1}&m_{2}&m^{\\prime}_{3}\\end{pmatrix} \\displaystyle=\\delta_{j_{3},j^{\\prime}_{3}}\\delta_{m_{3},m^{\\prime}_{3}}, \\tag{34.3.16}"
+              },
+              {
+                "id": "",
+                "tag": "34.3.17",
+                "latex": "\\displaystyle\\sum_{j_{3}m_{3}}(2j_{3}+1)\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm^{\\prime}_{1}&m^{\\prime}_{2}&m_{3}\\end{pmatrix} \\displaystyle=\\delta_{m_{1},m^{\\prime}_{1}}\\delta_{m_{2},m^{\\prime}_{2}}, \\tag{34.3.17}"
+              },
+              {
+                "id": "",
+                "tag": "34.3.18",
+                "latex": "\\displaystyle\\sum_{m_{1}m_{2}m_{3}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=1. \\tag{34.3.18}"
+              },
+              {
+                "id": "E19",
+                "tag": "34.3.19",
+                "latex": "P_{l_{1}}\\left(\\cos\\theta\\right)P_{l_{2}}\\left(\\cos\\theta\\right)=\\sum_{l}(2l+1)\\begin{pmatrix}l_{1}&l_{2}&l\\\\\n0&0&0\\end{pmatrix}^{2}P_{l}\\left(\\cos\\theta\\right), \\tag{34.3.19}"
+              },
+              {
+                "id": "E20",
+                "tag": "34.3.20",
+                "latex": "Y_{{l_{1}},{m_{1}}}\\left(\\theta,\\phi\\right)Y_{{l_{2}},{m_{2}}}\\left(\\theta,\\phi\\right)=\\sum_{l,m}\\left(\\frac{(2l_{1}+1)(2l_{2}+1)(2l+1)}{4\\pi}\\right)^{\\frac{1}{2}}\\begin{pmatrix}l_{1}&l_{2}&l\\\\\nm_{1}&m_{2}&m\\end{pmatrix}\\overline{Y_{{l},{m}}\\left(\\theta,\\phi\\right)}\\begin{pmatrix}l_{1}&l_{2}&l\\\\\n0&0&0\\end{pmatrix}, \\tag{34.3.20}"
+              },
+              {
+                "id": "E21",
+                "tag": "34.3.21",
+                "latex": "\\int_{0}^{\\pi}P_{l_{1}}\\left(\\cos\\theta\\right)P_{l_{2}}\\left(\\cos\\theta\\right)P_{l_{3}}\\left(\\cos\\theta\\right)\\sin\\theta\\,\\mathrm{d}\\theta=2\\begin{pmatrix}l_{1}&l_{2}&l_{3}\\\\\n0&0&0\\end{pmatrix}^{2}, \\tag{34.3.21}"
+              },
+              {
+                "id": "E22",
+                "tag": "34.3.22",
+                "latex": "\\int_{0}^{2\\pi}\\!\\int_{0}^{\\pi}Y_{{l_{1}},{m_{1}}}\\left(\\theta,\\phi\\right)Y_{{l_{2}},{m_{2}}}\\left(\\theta,\\phi\\right)Y_{{l_{3}},{m_{3}}}\\left(\\theta,\\phi\\right)\\sin\\theta\\,\\mathrm{d}\\theta\\,\\mathrm{d}\\phi=\\left(\\frac{(2l_{1}+1)(2l_{2}+1)(2l_{3}+1)}{4\\pi}\\right)^{\\frac{1}{2}}\\begin{pmatrix}l_{1}&l_{2}&l_{3}\\\\\n0&0&0\\end{pmatrix}\\begin{pmatrix}l_{1}&l_{2}&l_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}. \\tag{34.3.22}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle\\begin{pmatrix}j&j&0\\\\\nm&-m&0\\end{pmatrix} \\displaystyle=\\frac{(-1)^{j-m}}{(2j+1)^{\\frac{1}{2}}}, \\tag{34.3.1}",
+              "\\displaystyle\\begin{pmatrix}j&j&1\\\\\nm&-m&0\\end{pmatrix} \\displaystyle=(-1)^{j-m}\\frac{2m}{\\left(2j(2j+1)(2j+2)\\right)^{\\frac{1}{2}}}, \\tag{34.3.2}",
+              "\\displaystyle\\begin{pmatrix}j&j&1\\\\\nm&-m-1&1\\end{pmatrix} \\displaystyle=(-1)^{j-m}\\left(\\frac{2(j-m)(j+m+1)}{2j(2j+1)(2j+2)}\\right)^{\\frac{1}{2}}, \\tag{34.3.3}",
+              "J=j_{1}+j_{2}+j_{3}. \\tag{34.3.4}",
+              "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\n0&0&0\\end{pmatrix}=\\begin{cases}0,&\\text{J odd},\\\\\n(-1)^{\\frac{1}{2}J}\\left(\\dfrac{(J-2j_{1})!(J-2j_{2})!(J-2j_{3})!}{(J+1)!}\\right)^{\\frac{1}{2}}\\dfrac{\\left(\\frac{1}{2}J\\right)!}{\\left(\\frac{1}{2}J-j_{1}\\right)!\\left(\\frac{1}{2}J-j_{2}\\right)!\\left(\\frac{1}{2}J-j_{3}\\right)!},&\\text{J even}.\\end{cases} \\tag{34.3.5}",
+              "\\begin{pmatrix}j_{1}&j_{2}&j_{1}+j_{2}\\\\\nm_{1}&m_{2}&-m_{1}-m_{2}\\end{pmatrix}=(-1)^{j_{1}-j_{2}+m_{1}+m_{2}}\\left(\\frac{(2j_{1})!(2j_{2})!(j_{1}+j_{2}+m_{1}+m_{2})!(j_{1}+j_{2}-m_{1}-m_{2})!}{(2j_{1}+2j_{2}+1)!(j_{1}+m_{1})!(j_{1}-m_{1})!(j_{2}+m_{2})!(j_{2}-m_{2})!}\\right)^{\\frac{1}{2}}, \\tag{34.3.6}",
+              "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nj_{1}&-j_{1}-m_{3}&m_{3}\\end{pmatrix}=(-1)^{j_{1}-j_{2}-m_{3}}\\left(\\frac{(2j_{1})!(-j_{1}+j_{2}+j_{3})!(j_{1}+j_{2}+m_{3})!(j_{3}-m_{3})!}{(j_{1}+j_{2}+j_{3}+1)!(j_{1}-j_{2}+j_{3})!(j_{1}+j_{2}-j_{3})!(-j_{1}+j_{2}-m_{3})!(j_{3}+m_{3})!}\\right)^{\\frac{1}{2}}. \\tag{34.3.7}",
+              "\\displaystyle\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=\\begin{pmatrix}j_{2}&j_{3}&j_{1}\\\\\nm_{2}&m_{3}&m_{1}\\end{pmatrix}=\\begin{pmatrix}j_{3}&j_{1}&j_{2}\\\\\nm_{3}&m_{1}&m_{2}\\end{pmatrix}, \\tag{34.3.8}",
+              "\\displaystyle\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=(-1)^{j_{1}+j_{2}+j_{3}}\\begin{pmatrix}j_{2}&j_{1}&j_{3}\\\\\nm_{2}&m_{1}&m_{3}\\end{pmatrix}. \\tag{34.3.9}",
+              "\\displaystyle\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=(-1)^{j_{1}+j_{2}+j_{3}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\n-m_{1}&-m_{2}&-m_{3}\\end{pmatrix}, \\tag{34.3.10}",
+              "\\displaystyle\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=\\begin{pmatrix}j_{1}&\\frac{1}{2}(j_{2}+j_{3}+m_{1})&\\frac{1}{2}(j_{2}+j_{3}-m_{1})\\\\\nj_{2}-j_{3}&\\frac{1}{2}(j_{3}-j_{2}+m_{1})+m_{2}&\\frac{1}{2}(j_{3}-j_{2}+m_{1})+m_{3}\\end{pmatrix}, \\tag{34.3.11}",
+              "\\displaystyle\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=\\begin{pmatrix}\\frac{1}{2}(j_{1}+j_{2}-m_{3})&\\frac{1}{2}(j_{2}+j_{3}-m_{1})&\\frac{1}{2}(j_{1}+j_{3}-m_{2})\\\\\nj_{3}-\\frac{1}{2}(j_{1}+j_{2}+m_{3})&j_{1}-\\frac{1}{2}(j_{2}+j_{3}+m_{1})&j_{2}-\\frac{1}{2}(j_{1}+j_{3}+m_{2})\\end{pmatrix}. \\tag{34.3.12}",
+              "\\left((j_{1}+j_{2}+j_{3}+1)(-j_{1}+j_{2}+j_{3})\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}=\\left((j_{2}+m_{2})(j_{3}-m_{3})\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}-\\frac{1}{2}&j_{3}-\\frac{1}{2}\\\\\nm_{1}&m_{2}-\\frac{1}{2}&m_{3}+\\frac{1}{2}\\end{pmatrix}-\\left((j_{2}-m_{2})(j_{3}+m_{3})\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}-\\frac{1}{2}&j_{3}-\\frac{1}{2}\\\\\nm_{1}&m_{2}+\\frac{1}{2}&m_{3}-\\frac{1}{2}\\end{pmatrix}, \\tag{34.3.13}",
+              "\\left(j_{1}(j_{1}+1)-j_{2}(j_{2}+1)-j_{3}(j_{3}+1)-2m_{2}m_{3}\\right)\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}=\\left((j_{2}-m_{2})(j_{2}+m_{2}+1)(j_{3}-m_{3}+1)(j_{3}+m_{3})\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}+1&m_{3}-1\\end{pmatrix}+\\left((j_{2}-m_{2}+1)(j_{2}+m_{2})(j_{3}-m_{3})(j_{3}+m_{3}+1)\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}-1&m_{3}+1\\end{pmatrix}, \\tag{34.3.14}",
+              "(2j_{1}+1)\\left((j_{2}(j_{2}+1)-j_{3}(j_{3}+1))m_{1}-j_{1}(j_{1}+1)(m_{3}-m_{2})\\right)\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}=(j_{1}+1)\\left(j_{1}^{2}-(j_{2}-j_{3})^{2}\\right)^{\\frac{1}{2}}\\left((j_{2}+j_{3}+1)^{2}-j_{1}^{2}\\right)^{\\frac{1}{2}}\\left(j_{1}^{2}-m_{1}^{2}\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}-1&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}+j_{1}\\left((j_{1}+1)^{2}-(j_{2}-j_{3})^{2}\\right)^{\\frac{1}{2}}\\left((j_{2}+j_{3}+1)^{2}-(j_{1}+1)^{2}\\right)^{\\frac{1}{2}}\\left((j_{1}+1)^{2}-m_{1}^{2}\\right)^{\\frac{1}{2}}\\begin{pmatrix}j_{1}+1&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}. \\tag{34.3.15}",
+              "\\displaystyle\\sum_{m_{1}m_{2}}(2j_{3}+1)\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}\\begin{pmatrix}j_{1}&j_{2}&j^{\\prime}_{3}\\\\\nm_{1}&m_{2}&m^{\\prime}_{3}\\end{pmatrix} \\displaystyle=\\delta_{j_{3},j^{\\prime}_{3}}\\delta_{m_{3},m^{\\prime}_{3}}, \\tag{34.3.16}",
+              "\\displaystyle\\sum_{j_{3}m_{3}}(2j_{3}+1)\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm^{\\prime}_{1}&m^{\\prime}_{2}&m_{3}\\end{pmatrix} \\displaystyle=\\delta_{m_{1},m^{\\prime}_{1}}\\delta_{m_{2},m^{\\prime}_{2}}, \\tag{34.3.17}",
+              "\\displaystyle\\sum_{m_{1}m_{2}m_{3}}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix} \\displaystyle=1. \\tag{34.3.18}",
+              "P_{l_{1}}\\left(\\cos\\theta\\right)P_{l_{2}}\\left(\\cos\\theta\\right)=\\sum_{l}(2l+1)\\begin{pmatrix}l_{1}&l_{2}&l\\\\\n0&0&0\\end{pmatrix}^{2}P_{l}\\left(\\cos\\theta\\right), \\tag{34.3.19}",
+              "Y_{{l_{1}},{m_{1}}}\\left(\\theta,\\phi\\right)Y_{{l_{2}},{m_{2}}}\\left(\\theta,\\phi\\right)=\\sum_{l,m}\\left(\\frac{(2l_{1}+1)(2l_{2}+1)(2l+1)}{4\\pi}\\right)^{\\frac{1}{2}}\\begin{pmatrix}l_{1}&l_{2}&l\\\\\nm_{1}&m_{2}&m\\end{pmatrix}\\overline{Y_{{l},{m}}\\left(\\theta,\\phi\\right)}\\begin{pmatrix}l_{1}&l_{2}&l\\\\\n0&0&0\\end{pmatrix}, \\tag{34.3.20}",
+              "\\int_{0}^{\\pi}P_{l_{1}}\\left(\\cos\\theta\\right)P_{l_{2}}\\left(\\cos\\theta\\right)P_{l_{3}}\\left(\\cos\\theta\\right)\\sin\\theta\\,\\mathrm{d}\\theta=2\\begin{pmatrix}l_{1}&l_{2}&l_{3}\\\\\n0&0&0\\end{pmatrix}^{2}, \\tag{34.3.21}",
+              "\\int_{0}^{2\\pi}\\!\\int_{0}^{\\pi}Y_{{l_{1}},{m_{1}}}\\left(\\theta,\\phi\\right)Y_{{l_{2}},{m_{2}}}\\left(\\theta,\\phi\\right)Y_{{l_{3}},{m_{3}}}\\left(\\theta,\\phi\\right)\\sin\\theta\\,\\mathrm{d}\\theta\\,\\mathrm{d}\\phi=\\left(\\frac{(2l_{1}+1)(2l_{2}+1)(2l_{3}+1)}{4\\pi}\\right)^{\\frac{1}{2}}\\begin{pmatrix}l_{1}&l_{2}&l_{3}\\\\\n0&0&0\\end{pmatrix}\\begin{pmatrix}l_{1}&l_{2}&l_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}. \\tag{34.3.22}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "special cases",
+                "$\\mathit{3j}$ symbols",
+                "Regge symmetries",
+                "symmetry",
+                "recursion relations",
+                "$\\mathit{9j}$ symbols",
+                "orthogonality",
+                "$\\mathit{6j}$ symbols",
+                "summation convention",
+                "generating functions",
+                "sums",
+                "$\\mathit{3j}$ symbol",
+                "Gaunt coefficient",
+                "Gaunt’s integral",
+                "Legendre functions",
+                "Legendre polynomials",
+                "relation to $\\mathit{3j}$ symbols",
+                "relations to other functions",
+                "rotation matrices",
+                "spherical harmonics"
+              ],
+              "simbolos": [
+                "$\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\ m_{1}&m_{2}&m_{3}\\end{pmatrix}$: $\\mathit{3j}$ symbol and $j,j_{r}$: non-negative integers or non-negative integers plus one half.",
+                "$\\delta_{j,k}$: Kronecker delta , $\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\ m_{1}&m_{2}&m_{3}\\end{pmatrix}$: $\\mathit{3j}$ symbol and $j,j_{r}$: non-negative integers or non-negative integers plus one half."
+              ],
+              "referenciado_por": [
+                "Erratum (V1.1.6) for Chapters 10 Bessel Functions",
+                "18 Orthogonal Polynomials",
+                "34 3*j*",
+                "6*j*",
+                "9*j* Symbols",
+                "§34.3(ii)",
+                "§18.38(iii)",
+                "§34.3(iv)",
+                "§34.9",
+                "Erratum (V1.0.19) for Notation"
+              ],
+              "notas_bibliograficas": [
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 48–50) and de-Shalit and Talmi ([1963](./bib/D.html#bib651 \"Nuclear Shell Theory\"), p. 519).",
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 46–47).",
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), p. 48).",
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), p. 47), de-Shalit and Talmi ([1963](./bib/D.html#bib651 \"Nuclear Shell Theory\"), p. 515).",
+                "See Thompson ([1994](./bib/T.html#bib2247 \"Angular Momentum: An Illustrated Guide to Rotational Symmetries for Physical Systems\"), p. 288), Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), p. 63)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34",
+                "Annotations for §34.3 and Ch.34",
+                "Annotations for §34.3(i) , §34.3 and Ch.34",
+                "Annotations for §34.3(ii) , §34.3 and Ch.34",
+                "Annotations for §34.3(iv) , §34.3 and Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/D.html#bib651",
+                "titulo_referencia": "Nuclear Shell Theory"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/S.html#bib2148",
+                "titulo_referencia": "Quantum Theory of Angular Momentum: Selected Topics"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1968",
+                "archivo_destino": "bib/M.html#bib1608",
+                "titulo_referencia": "Recursion relations for the 3 - j symbols"
+              },
+              {
+                "texto": "1958",
+                "archivo_destino": "bib/L.html#bib1470",
+                "titulo_referencia": "New recursion relation for the Clebsch-Gordan coefficients"
+              },
+              {
+                "texto": "1975a",
+                "archivo_destino": "bib/S.html#bib2024",
+                "titulo_referencia": "Exact recursive evaluation of ⁢ 3 j - and ⁢ 6 j -coefficients for quantum-mechanical coupling of angular momenta"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/S.html#bib2148",
+                "titulo_referencia": "Quantum Theory of Angular Momentum: Selected Topics"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/L.html#bib1505",
+                "titulo_referencia": "Simplified recursive algorithm for Wigner ⁢ 3 j and ⁢ 6 j symbols"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/D.html#bib651",
+                "titulo_referencia": "Nuclear Shell Theory"
+              },
+              {
+                "texto": "1965",
+                "archivo_destino": "bib/B.html#bib279",
+                "titulo_referencia": "Quantum Theory of Angular Momentum. A Collection of Reprints and Original Papers"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/T.html#bib2247",
+                "titulo_referencia": "Angular Momentum: An Illustrated Guide to Rotational Symmetries for Physical Systems"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "18.3",
+                "archivo_destino": "18.3.md",
+                "titulo_referencia": "§18.3 Definitions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"
+              },
+              {
+                "texto": "14.30",
+                "archivo_destino": "14.30.md",
+                "titulo_referencia": "§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1929",
+                "archivo_destino": "bib/G.html#bib2625",
+                "titulo_referencia": "The triplets of helium"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.4",
+          "titulo_original": "Definition: $\\mathit{6j}$ Symbol",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.4.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.4.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.4 Definition: 6⁢j Symbol",
+            "prosa_teorica": "The $\\mathit{6j}$ symbol is defined by the following double sum of products of $\\mathit{3j}$ symbols:\nwhere the summation is taken over all admissible values of the $m$ ’s and $m^{\\prime}$ ’s for each of the four $\\mathit{3j}$ symbols; compare ( 34.2.2 ) and ( 34.2.3 ).\nExcept in degenerate cases the combination of the triangle inequalities for the four $\\mathit{3j}$ symbols in ( 34.4.1 ) is equivalent to the existence of a tetrahedron (possibly degenerate) with edges of lengths $j_{1},j_{2},j_{3},l_{1},l_{2},l_{3}$ ; see Figure 34.4.1 .\n<a id=\"F1\"></a>\n![Figure 34.4.1: Tetrahedron corresponding to $\\mathit{6j}$ symbol.](../html/34/4/F1.png)\nThe $\\mathit{6j}$ symbol can be expressed as the finite sum\nwhere the summation is over all nonnegative integers $s$ such that the arguments in the factorials are nonnegative.\nEquivalently,\nwhere ${{}_{4}F_{3}}$ is defined as in § [16.2](./16.2.md \"§16.2 Definition and Analytic Properties ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function\") .\nFor alternative expressions for the $\\mathit{6j}$ symbol, written either as a finite sum or as other terminating generalized hypergeometric series ${{}_{4}F_{3}}$ of unit argument, see Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §§9.2.1, 9.2.3).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "34.4.1",
+                "latex": "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}=\\sum_{m_{r}m^{\\prime}_{s}}(-1)^{l_{1}+m^{\\prime}_{1}+l_{2}+m^{\\prime}_{2}+l_{3}+m^{\\prime}_{3}}\\,\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}\\begin{pmatrix}j_{1}&l_{2}&l_{3}\\\\\nm_{1}&m^{\\prime}_{2}&-m^{\\prime}_{3}\\end{pmatrix}\\begin{pmatrix}l_{1}&j_{2}&l_{3}\\\\\n-m^{\\prime}_{1}&m_{2}&m^{\\prime}_{3}\\end{pmatrix}\\begin{pmatrix}l_{1}&l_{2}&j_{3}\\\\\nm^{\\prime}_{1}&-m^{\\prime}_{2}&m_{3}\\end{pmatrix}, \\tag{34.4.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "34.4.2",
+                "latex": "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}=\\Delta(j_{1}j_{2}j_{3})\\Delta(j_{1}l_{2}l_{3})\\Delta(l_{1}j_{2}l_{3})\\Delta(l_{1}l_{2}j_{3})\\,\\sum_{s}\\frac{(-1)^{s}(s+1)!}{(s-j_{1}-j_{2}-j_{3})!(s-j_{1}-l_{2}-l_{3})!(s-l_{1}-j_{2}-l_{3})!(s-l_{1}-l_{2}-j_{3})!}\\,\\frac{1}{(j_{1}+j_{2}+l_{1}+l_{2}-s)!(j_{2}+j_{3}+l_{2}+l_{3}-s)!(j_{3}+j_{1}+l_{3}+l_{1}-s)!}, \\tag{34.4.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "34.4.3",
+                "latex": "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}={(-1)^{j_{1}+j_{3}+l_{1}+l_{3}}}\\frac{\\Delta(j_{1}j_{2}j_{3})\\Delta(j_{2}l_{1}l_{3})(j_{1}-j_{2}+l_{1}+l_{2})!(-j_{2}+j_{3}+l_{2}+l_{3})!(j_{1}+j_{3}+l_{1}+l_{3}+1)!}{\\Delta(j_{1}l_{2}l_{3})\\Delta(j_{3}l_{1}l_{2})(j_{1}-j_{2}+j_{3})!(-j_{2}+l_{1}+l_{3})!(j_{1}+l_{2}+l_{3}+1)!(j_{3}+l_{1}+l_{2}+1)!}\\,{{}_{4}F_{3}}\\left({-j_{1}+j_{2}-j_{3},j_{2}-l_{1}-l_{3},-j_{1}-l_{2}-l_{3}-1,-j_{3}-l_{1}-l_{2}-1\\atop-j_{1}+j_{2}-l_{1}-l_{2},j_{2}-j_{3}-l_{2}-l_{3},-j_{1}-j_{3}-l_{1}-l_{3}-1};1\\right), \\tag{34.4.3}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}=\\sum_{m_{r}m^{\\prime}_{s}}(-1)^{l_{1}+m^{\\prime}_{1}+l_{2}+m^{\\prime}_{2}+l_{3}+m^{\\prime}_{3}}\\,\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}\\begin{pmatrix}j_{1}&l_{2}&l_{3}\\\\\nm_{1}&m^{\\prime}_{2}&-m^{\\prime}_{3}\\end{pmatrix}\\begin{pmatrix}l_{1}&j_{2}&l_{3}\\\\\n-m^{\\prime}_{1}&m_{2}&m^{\\prime}_{3}\\end{pmatrix}\\begin{pmatrix}l_{1}&l_{2}&j_{3}\\\\\nm^{\\prime}_{1}&-m^{\\prime}_{2}&m_{3}\\end{pmatrix}, \\tag{34.4.1}",
+              "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}=\\Delta(j_{1}j_{2}j_{3})\\Delta(j_{1}l_{2}l_{3})\\Delta(l_{1}j_{2}l_{3})\\Delta(l_{1}l_{2}j_{3})\\,\\sum_{s}\\frac{(-1)^{s}(s+1)!}{(s-j_{1}-j_{2}-j_{3})!(s-j_{1}-l_{2}-l_{3})!(s-l_{1}-j_{2}-l_{3})!(s-l_{1}-l_{2}-j_{3})!}\\,\\frac{1}{(j_{1}+j_{2}+l_{1}+l_{2}-s)!(j_{2}+j_{3}+l_{2}+l_{3}-s)!(j_{3}+j_{1}+l_{3}+l_{1}-s)!}, \\tag{34.4.2}",
+              "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}={(-1)^{j_{1}+j_{3}+l_{1}+l_{3}}}\\frac{\\Delta(j_{1}j_{2}j_{3})\\Delta(j_{2}l_{1}l_{3})(j_{1}-j_{2}+l_{1}+l_{2})!(-j_{2}+j_{3}+l_{2}+l_{3})!(j_{1}+j_{3}+l_{1}+l_{3}+1)!}{\\Delta(j_{1}l_{2}l_{3})\\Delta(j_{3}l_{1}l_{2})(j_{1}-j_{2}+j_{3})!(-j_{2}+l_{1}+l_{3})!(j_{1}+l_{2}+l_{3}+1)!(j_{3}+l_{1}+l_{2}+1)!}\\,{{}_{4}F_{3}}\\left({-j_{1}+j_{2}-j_{3},j_{2}-l_{1}-l_{3},-j_{1}-l_{2}-l_{3}-1,-j_{3}-l_{1}-l_{2}-1\\atop-j_{1}+j_{2}-l_{1}-l_{2},j_{2}-j_{3}-l_{2}-l_{3},-j_{1}-j_{3}-l_{1}-l_{3}-1};1\\right), \\tag{34.4.3}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "definition",
+                "finite sum of $\\mathit{3j}$ symbols",
+                "generalized hypergeometric functions",
+                "representation as",
+                "$\\mathit{6j}$ symbols"
+              ],
+              "simbolos": [
+                "$\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\ l_{1}&l_{2}&l_{3}\\end{Bmatrix}$: $\\mathit{6j}$ symbol"
+              ],
+              "referenciado_por": [
+                "§16.4(iii)",
+                "§34.4"
+              ],
+              "notas_bibliograficas": [
+                "See Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §9.2.4), de-Shalit and Talmi ([1963](./bib/D.html#bib651 \"Nuclear Shell Theory\"), p. 131, Eq. (15.12)), Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), p. 99)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34",
+                "Annotations for §34.4 and Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/D.html#bib651",
+                "titulo_referencia": "Nuclear Shell Theory"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "16.2",
+                "archivo_destino": "16.2.md",
+                "titulo_referencia": "§16.2 Definition and Analytic Properties ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.5",
+          "titulo_original": "Basic Properties: $\\mathit{6j}$ Symbol",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.5.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.5.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.5 Basic Properties: 6⁢j Symbol",
+            "prosa_teorica": "In the following equations it is assumed that the triangle inequalities are satisfied and that $J$ is again defined by ( 34.3.4 ).\nIf any lower argument in a $\\mathit{6j}$ symbol is $0$ , $\\tfrac{1}{2}$ , or $1$ , then the $\\mathit{6j}$ symbol has a simple algebraic form. Examples are provided by:\nThe $\\mathit{6j}$ symbol is invariant under interchange of any two columns and also under interchange of the upper and lower arguments in each of any two columns, for example,\nNext,\nEquations ( 34.5.9 ) and ( 34.5.10 ) are called *Regge symmetries* . Additional symmetries are obtained by applying ( 34.5.8 ) to ( 34.5.9 ) and ( 34.5.10 ). See Srinivasa Rao and Rajeswari ([1993](./bib/S.html#bib2148 \"Quantum Theory of Angular Momentum: Selected Topics\"), pp. 102–103) and references given there.\nIn the following equation it is assumed that the triangle conditions are satisfied.\nwhere\n<a id=\"E12\"></a>\nFor further recursion relations see Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §9.6) and Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 98–99).\nFor generating functions for the $\\mathit{6j}$ symbol see Biedenharn and van Dam ([1965](./bib/B.html#bib279 \"Quantum Theory of Angular Momentum. A Collection of Reprints and Original Papers\"), p. 255, eq. (4.18)).\nEquations ( 34.5.15 ) and ( 34.5.16 ) are the *sum rules* . They constitute addition theorems for the $\\mathit{6j}$ symbol.\nEquation ( 34.5.23 ) can be regarded as an alternative definition of the $\\mathit{6j}$ symbol.\nFor other sums see Ginocchio ([1991](./bib/G.html#bib938 \"A new identity for some six- j symbols\")).",
+            "formulas_clave": [
+              {
+                "id": "EGx1",
+                "tag": "34.5.1",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n0&j_{3}&j_{2}\\end{Bmatrix} \\displaystyle=\\frac{(-1)^{J}}{\\left((2j_{2}+1)(2j_{3}+1)\\right)^{\\frac{1}{2}}}, \\tag{34.5.1}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.2",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n\\frac{1}{2}&j_{3}-\\frac{1}{2}&j_{2}+\\frac{1}{2}\\end{Bmatrix} \\displaystyle=(-1)^{J}\\left(\\frac{(j_{1}+j_{3}-j_{2})(j_{1}+j_{2}-j_{3}+1)}{(2j_{2}+1)(2j_{2}+2)2j_{3}(2j_{3}+1)}\\right)^{\\frac{1}{2}}, \\tag{34.5.2}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.3",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n\\frac{1}{2}&j_{3}-\\frac{1}{2}&j_{2}-\\frac{1}{2}\\end{Bmatrix} \\displaystyle=(-1)^{J}\\left(\\frac{(j_{2}+j_{3}-j_{1})(j_{1}+j_{2}+j_{3}+1)}{2j_{2}(2j_{2}+1)2j_{3}(2j_{3}+1)}\\right)^{\\frac{1}{2}}, \\tag{34.5.3}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.4",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n1&j_{3}-1&j_{2}-1\\end{Bmatrix} \\displaystyle=(-1)^{J}\\left(\\frac{J(J+1)(J-2j_{1})(J-2j_{1}-1)}{(2j_{2}-1)2j_{2}(2j_{2}+1)(2j_{3}-1)2j_{3}(2j_{3}+1)}\\right)^{\\frac{1}{2}}, \\tag{34.5.4}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.5",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n1&j_{3}-1&j_{2}\\end{Bmatrix} \\displaystyle=(-1)^{J}\\left(\\frac{2(J+1)(J-2j_{1})(J-2j_{2})(J-2j_{3}+1)}{2j_{2}(2j_{2}+1)(2j_{2}+2)(2j_{3}-1)2j_{3}(2j_{3}+1)}\\right)^{\\frac{1}{2}}, \\tag{34.5.5}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.6",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n1&j_{3}-1&j_{2}+1\\end{Bmatrix} \\displaystyle=(-1)^{J}\\left(\\frac{(J-2j_{2}-1)(J-2j_{2})(J-2j_{3}+1)(J-2j_{3}+2)}{(2j_{2}+1)(2j_{2}+2)(2j_{2}+3)(2j_{3}-1)2j_{3}(2j_{3}+1)}\\right)^{\\frac{1}{2}}, \\tag{34.5.6}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.7",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n1&j_{3}&j_{2}\\end{Bmatrix} \\displaystyle=(-1)^{J+1}\\frac{2(j_{2}(j_{2}+1)+j_{3}(j_{3}+1)-j_{1}(j_{1}+1))}{\\left(2j_{2}(2j_{2}+1)(2j_{2}+2)2j_{3}(2j_{3}+1)(2j_{3}+2)\\right)^{\\frac{1}{2}}}. \\tag{34.5.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "34.5.8",
+                "latex": "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}=\\begin{Bmatrix}j_{2}&j_{1}&j_{3}\\\\\nl_{2}&l_{1}&l_{3}\\end{Bmatrix}=\\begin{Bmatrix}j_{1}&l_{2}&l_{3}\\\\\nl_{1}&j_{2}&j_{3}\\end{Bmatrix}. \\tag{34.5.8}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "34.5.9",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix} \\displaystyle=\\begin{Bmatrix}j_{1}&\\frac{1}{2}(j_{2}+l_{2}+j_{3}-l_{3})&\\frac{1}{2}(j_{2}-l_{2}+j_{3}+l_{3})\\\\\nl_{1}&\\frac{1}{2}(j_{2}+l_{2}-j_{3}+l_{3})&\\frac{1}{2}(-j_{2}+l_{2}+j_{3}+l_{3})\\end{Bmatrix}, \\tag{34.5.9}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.10",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix} \\displaystyle=\\begin{Bmatrix}\\frac{1}{2}(j_{2}+l_{2}+j_{3}-l_{3})&\\frac{1}{2}(j_{1}-l_{1}+j_{3}+l_{3})&\\frac{1}{2}(j_{1}+l_{1}+j_{2}-l_{2})\\\\\n\\frac{1}{2}(j_{2}+l_{2}-j_{3}+l_{3})&\\frac{1}{2}(-j_{1}+l_{1}+j_{3}+l_{3})&\\frac{1}{2}(j_{1}+l_{1}-j_{2}+l_{2})\\end{Bmatrix}. \\tag{34.5.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "34.5.11",
+                "latex": "{(2j_{1}+1)\\left((J_{3}+J_{2}-J_{1})(L_{3}+L_{2}-J_{1})-2(J_{3}L_{3}+J_{2}L_{2}-J_{1}L_{1})\\right)\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}}\\\\\n=j_{1}E(j_{1}+1)\\begin{Bmatrix}j_{1}+1&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}+(j_{1}+1)E(j_{1})\\begin{Bmatrix}j_{1}-1&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}, \\tag{34.5.11}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "34.5.12",
+                "latex": "\\displaystyle J_{r} \\displaystyle=j_{r}(j_{r}+1), \\tag{34.5.12}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle L_{r} \\displaystyle=l_{r}(l_{r}+1),"
+              },
+              {
+                "id": "E13",
+                "tag": "34.5.13",
+                "latex": "E(j)=\\left((j^{2}-(j_{2}-j_{3})^{2})((j_{2}+j_{3}+1)^{2}-j^{2})(j^{2}-(l_{2}-l_{3})^{2})((l_{2}+l_{3}+1)^{2}-j^{2})\\right)^{\\frac{1}{2}}. \\tag{34.5.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "34.5.14",
+                "latex": "\\sum_{j_{3}}(2j_{3}+1)(2l_{3}+1)\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l^{\\prime}_{3}\\end{Bmatrix}=\\delta_{l_{3},l^{\\prime}_{3}}. \\tag{34.5.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "34.5.15",
+                "latex": "\\sum_{j}(-1)^{j+j^{\\prime}+j^{\\prime\\prime}}(2j+1)\\begin{Bmatrix}j_{1}&j_{2}&j\\\\\nj_{3}&j_{4}&j^{\\prime}\\end{Bmatrix}\\begin{Bmatrix}j_{1}&j_{2}&j\\\\\nj_{4}&j_{3}&j^{\\prime\\prime}\\end{Bmatrix}=\\begin{Bmatrix}j_{1}&j_{4}&j^{\\prime}\\\\\nj_{2}&j_{3}&j^{\\prime\\prime}\\end{Bmatrix}, \\tag{34.5.15}"
+              },
+              {
+                "id": "E16",
+                "tag": "34.5.16",
+                "latex": "(-1)^{j_{1}+j_{2}+j_{3}+j_{1}^{\\prime}+j_{2}^{\\prime}+l_{1}+l_{2}}\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}\\begin{Bmatrix}j_{1}^{\\prime}&j_{2}^{\\prime}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}^{\\prime}\\end{Bmatrix}=\\sum_{j}(-1)^{l_{3}+l_{3}^{\\prime}+j}(2j+1)\\begin{Bmatrix}j_{1}&j_{1}^{\\prime}&j\\\\\nj_{2}^{\\prime}&j_{2}&j_{3}\\end{Bmatrix}\\begin{Bmatrix}l_{3}&l_{3}^{\\prime}&j\\\\\nj_{1}^{\\prime}&j_{1}&l_{2}\\end{Bmatrix}\\begin{Bmatrix}l_{3}&l_{3}^{\\prime}&j\\\\\nj_{2}^{\\prime}&j_{2}&l_{1}\\end{Bmatrix}. \\tag{34.5.16}"
+              },
+              {
+                "id": "EGx3",
+                "tag": "34.5.17",
+                "latex": "\\displaystyle\\sum_{j}(2j+1)\\begin{Bmatrix}j_{1}&j_{2}&j\\\\\nj_{1}&j_{2}&j^{\\prime}\\end{Bmatrix} \\displaystyle=(-1)^{2(j_{1}+j_{2})}, \\tag{34.5.17}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.18",
+                "latex": "\\displaystyle\\sum_{j}(-1)^{j_{1}+j_{2}+j}(2j+1)\\begin{Bmatrix}j_{1}&j_{2}&j\\\\\nj_{2}&j_{1}&j^{\\prime}\\end{Bmatrix} \\displaystyle=\\sqrt{(2j_{1}+1)(2j_{2}+1)}\\,\\delta_{j^{\\prime},0}, \\tag{34.5.18}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.19",
+                "latex": "\\displaystyle\\sum_{l}\\begin{Bmatrix}j_{1}&j_{2}&l\\\\\nj_{2}&j_{1}&j\\end{Bmatrix} \\displaystyle=0, \\tag{34.5.19}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.20",
+                "latex": "\\displaystyle\\sum_{l}(-1)^{l+j}\\begin{Bmatrix}j_{1}&j_{2}&l\\\\\nj_{1}&j_{2}&j\\end{Bmatrix} \\displaystyle=\\frac{(-1)^{2\\mu}}{2j+1}, \\tag{34.5.20}"
+              },
+              {
+                "id": "EGx4",
+                "tag": "34.5.21",
+                "latex": "\\displaystyle\\sum_{l}(-1)^{l+j+j_{1}+j_{2}}\\begin{Bmatrix}j_{1}&j_{2}&l\\\\\nj_{2}&j_{1}&j\\end{Bmatrix} \\displaystyle=\\frac{1}{2j+1}\\left(\\frac{(2j_{1}-j)!(2j_{2}+j+1)!}{(2j_{2}-j)!(2j_{1}+j+1)!}\\right)^{\\frac{1}{2}}, \\tag{34.5.21}"
+              },
+              {
+                "id": "",
+                "tag": "34.5.22",
+                "latex": "\\displaystyle\\sum_{l}(-1)^{l+j+j_{1}+j_{2}}\\frac{1}{l(l+1)}\\begin{Bmatrix}j_{1}&j_{2}&l\\\\\nj_{2}&j_{1}&j\\end{Bmatrix} \\displaystyle=\\frac{1}{j_{1}(j_{1}+1)-j_{2}(j_{2}+1)}\\left(\\frac{(2j_{1}-j)!(2j_{2}+j+1)!}{(2j_{2}-j)!(2j_{1}+j+1)!}\\right)^{\\frac{1}{2}}, \\tag{34.5.22}"
+              },
+              {
+                "id": "E23",
+                "tag": "34.5.23",
+                "latex": "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}=\\sum_{m^{\\prime}_{1}m^{\\prime}_{2}m^{\\prime}_{3}}(-1)^{l_{1}+l_{2}+l_{3}+m^{\\prime}_{1}+m^{\\prime}_{2}+m^{\\prime}_{3}}\\begin{pmatrix}j_{1}&l_{2}&l_{3}\\\\\nm_{1}&m^{\\prime}_{2}&-m^{\\prime}_{3}\\end{pmatrix}\\begin{pmatrix}l_{1}&j_{2}&l_{3}\\\\\n-m^{\\prime}_{1}&m_{2}&m^{\\prime}_{3}\\end{pmatrix}\\begin{pmatrix}l_{1}&l_{2}&j_{3}\\\\\nm^{\\prime}_{1}&-m^{\\prime}_{2}&m_{3}\\end{pmatrix}. \\tag{34.5.23}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n0&j_{3}&j_{2}\\end{Bmatrix} \\displaystyle=\\frac{(-1)^{J}}{\\left((2j_{2}+1)(2j_{3}+1)\\right)^{\\frac{1}{2}}}, \\tag{34.5.1}",
+              "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n\\frac{1}{2}&j_{3}-\\frac{1}{2}&j_{2}+\\frac{1}{2}\\end{Bmatrix} \\displaystyle=(-1)^{J}\\left(\\frac{(j_{1}+j_{3}-j_{2})(j_{1}+j_{2}-j_{3}+1)}{(2j_{2}+1)(2j_{2}+2)2j_{3}(2j_{3}+1)}\\right)^{\\frac{1}{2}}, \\tag{34.5.2}",
+              "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n\\frac{1}{2}&j_{3}-\\frac{1}{2}&j_{2}-\\frac{1}{2}\\end{Bmatrix} \\displaystyle=(-1)^{J}\\left(\\frac{(j_{2}+j_{3}-j_{1})(j_{1}+j_{2}+j_{3}+1)}{2j_{2}(2j_{2}+1)2j_{3}(2j_{3}+1)}\\right)^{\\frac{1}{2}}, \\tag{34.5.3}",
+              "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n1&j_{3}-1&j_{2}-1\\end{Bmatrix} \\displaystyle=(-1)^{J}\\left(\\frac{J(J+1)(J-2j_{1})(J-2j_{1}-1)}{(2j_{2}-1)2j_{2}(2j_{2}+1)(2j_{3}-1)2j_{3}(2j_{3}+1)}\\right)^{\\frac{1}{2}}, \\tag{34.5.4}",
+              "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n1&j_{3}-1&j_{2}\\end{Bmatrix} \\displaystyle=(-1)^{J}\\left(\\frac{2(J+1)(J-2j_{1})(J-2j_{2})(J-2j_{3}+1)}{2j_{2}(2j_{2}+1)(2j_{2}+2)(2j_{3}-1)2j_{3}(2j_{3}+1)}\\right)^{\\frac{1}{2}}, \\tag{34.5.5}",
+              "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n1&j_{3}-1&j_{2}+1\\end{Bmatrix} \\displaystyle=(-1)^{J}\\left(\\frac{(J-2j_{2}-1)(J-2j_{2})(J-2j_{3}+1)(J-2j_{3}+2)}{(2j_{2}+1)(2j_{2}+2)(2j_{2}+3)(2j_{3}-1)2j_{3}(2j_{3}+1)}\\right)^{\\frac{1}{2}}, \\tag{34.5.6}",
+              "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\n1&j_{3}&j_{2}\\end{Bmatrix} \\displaystyle=(-1)^{J+1}\\frac{2(j_{2}(j_{2}+1)+j_{3}(j_{3}+1)-j_{1}(j_{1}+1))}{\\left(2j_{2}(2j_{2}+1)(2j_{2}+2)2j_{3}(2j_{3}+1)(2j_{3}+2)\\right)^{\\frac{1}{2}}}. \\tag{34.5.7}",
+              "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}=\\begin{Bmatrix}j_{2}&j_{1}&j_{3}\\\\\nl_{2}&l_{1}&l_{3}\\end{Bmatrix}=\\begin{Bmatrix}j_{1}&l_{2}&l_{3}\\\\\nl_{1}&j_{2}&j_{3}\\end{Bmatrix}. \\tag{34.5.8}",
+              "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix} \\displaystyle=\\begin{Bmatrix}j_{1}&\\frac{1}{2}(j_{2}+l_{2}+j_{3}-l_{3})&\\frac{1}{2}(j_{2}-l_{2}+j_{3}+l_{3})\\\\\nl_{1}&\\frac{1}{2}(j_{2}+l_{2}-j_{3}+l_{3})&\\frac{1}{2}(-j_{2}+l_{2}+j_{3}+l_{3})\\end{Bmatrix}, \\tag{34.5.9}",
+              "\\displaystyle\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix} \\displaystyle=\\begin{Bmatrix}\\frac{1}{2}(j_{2}+l_{2}+j_{3}-l_{3})&\\frac{1}{2}(j_{1}-l_{1}+j_{3}+l_{3})&\\frac{1}{2}(j_{1}+l_{1}+j_{2}-l_{2})\\\\\n\\frac{1}{2}(j_{2}+l_{2}-j_{3}+l_{3})&\\frac{1}{2}(-j_{1}+l_{1}+j_{3}+l_{3})&\\frac{1}{2}(j_{1}+l_{1}-j_{2}+l_{2})\\end{Bmatrix}. \\tag{34.5.10}",
+              "{(2j_{1}+1)\\left((J_{3}+J_{2}-J_{1})(L_{3}+L_{2}-J_{1})-2(J_{3}L_{3}+J_{2}L_{2}-J_{1}L_{1})\\right)\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}}\\\\\n=j_{1}E(j_{1}+1)\\begin{Bmatrix}j_{1}+1&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}+(j_{1}+1)E(j_{1})\\begin{Bmatrix}j_{1}-1&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}, \\tag{34.5.11}",
+              "\\displaystyle J_{r} \\displaystyle=j_{r}(j_{r}+1), \\tag{34.5.12}",
+              "\\displaystyle L_{r} \\displaystyle=l_{r}(l_{r}+1),",
+              "E(j)=\\left((j^{2}-(j_{2}-j_{3})^{2})((j_{2}+j_{3}+1)^{2}-j^{2})(j^{2}-(l_{2}-l_{3})^{2})((l_{2}+l_{3}+1)^{2}-j^{2})\\right)^{\\frac{1}{2}}. \\tag{34.5.13}",
+              "\\sum_{j_{3}}(2j_{3}+1)(2l_{3}+1)\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l^{\\prime}_{3}\\end{Bmatrix}=\\delta_{l_{3},l^{\\prime}_{3}}. \\tag{34.5.14}",
+              "\\sum_{j}(-1)^{j+j^{\\prime}+j^{\\prime\\prime}}(2j+1)\\begin{Bmatrix}j_{1}&j_{2}&j\\\\\nj_{3}&j_{4}&j^{\\prime}\\end{Bmatrix}\\begin{Bmatrix}j_{1}&j_{2}&j\\\\\nj_{4}&j_{3}&j^{\\prime\\prime}\\end{Bmatrix}=\\begin{Bmatrix}j_{1}&j_{4}&j^{\\prime}\\\\\nj_{2}&j_{3}&j^{\\prime\\prime}\\end{Bmatrix}, \\tag{34.5.15}",
+              "(-1)^{j_{1}+j_{2}+j_{3}+j_{1}^{\\prime}+j_{2}^{\\prime}+l_{1}+l_{2}}\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}\\begin{Bmatrix}j_{1}^{\\prime}&j_{2}^{\\prime}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}^{\\prime}\\end{Bmatrix}=\\sum_{j}(-1)^{l_{3}+l_{3}^{\\prime}+j}(2j+1)\\begin{Bmatrix}j_{1}&j_{1}^{\\prime}&j\\\\\nj_{2}^{\\prime}&j_{2}&j_{3}\\end{Bmatrix}\\begin{Bmatrix}l_{3}&l_{3}^{\\prime}&j\\\\\nj_{1}^{\\prime}&j_{1}&l_{2}\\end{Bmatrix}\\begin{Bmatrix}l_{3}&l_{3}^{\\prime}&j\\\\\nj_{2}^{\\prime}&j_{2}&l_{1}\\end{Bmatrix}. \\tag{34.5.16}",
+              "\\displaystyle\\sum_{j}(2j+1)\\begin{Bmatrix}j_{1}&j_{2}&j\\\\\nj_{1}&j_{2}&j^{\\prime}\\end{Bmatrix} \\displaystyle=(-1)^{2(j_{1}+j_{2})}, \\tag{34.5.17}",
+              "\\displaystyle\\sum_{j}(-1)^{j_{1}+j_{2}+j}(2j+1)\\begin{Bmatrix}j_{1}&j_{2}&j\\\\\nj_{2}&j_{1}&j^{\\prime}\\end{Bmatrix} \\displaystyle=\\sqrt{(2j_{1}+1)(2j_{2}+1)}\\,\\delta_{j^{\\prime},0}, \\tag{34.5.18}",
+              "\\displaystyle\\sum_{l}\\begin{Bmatrix}j_{1}&j_{2}&l\\\\\nj_{2}&j_{1}&j\\end{Bmatrix} \\displaystyle=0, \\tag{34.5.19}",
+              "\\displaystyle\\sum_{l}(-1)^{l+j}\\begin{Bmatrix}j_{1}&j_{2}&l\\\\\nj_{1}&j_{2}&j\\end{Bmatrix} \\displaystyle=\\frac{(-1)^{2\\mu}}{2j+1}, \\tag{34.5.20}",
+              "\\displaystyle\\sum_{l}(-1)^{l+j+j_{1}+j_{2}}\\begin{Bmatrix}j_{1}&j_{2}&l\\\\\nj_{2}&j_{1}&j\\end{Bmatrix} \\displaystyle=\\frac{1}{2j+1}\\left(\\frac{(2j_{1}-j)!(2j_{2}+j+1)!}{(2j_{2}-j)!(2j_{1}+j+1)!}\\right)^{\\frac{1}{2}}, \\tag{34.5.21}",
+              "\\displaystyle\\sum_{l}(-1)^{l+j+j_{1}+j_{2}}\\frac{1}{l(l+1)}\\begin{Bmatrix}j_{1}&j_{2}&l\\\\\nj_{2}&j_{1}&j\\end{Bmatrix} \\displaystyle=\\frac{1}{j_{1}(j_{1}+1)-j_{2}(j_{2}+1)}\\left(\\frac{(2j_{1}-j)!(2j_{2}+j+1)!}{(2j_{2}-j)!(2j_{1}+j+1)!}\\right)^{\\frac{1}{2}}, \\tag{34.5.22}",
+              "\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\\nm_{1}&m_{2}&m_{3}\\end{pmatrix}\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nl_{1}&l_{2}&l_{3}\\end{Bmatrix}=\\sum_{m^{\\prime}_{1}m^{\\prime}_{2}m^{\\prime}_{3}}(-1)^{l_{1}+l_{2}+l_{3}+m^{\\prime}_{1}+m^{\\prime}_{2}+m^{\\prime}_{3}}\\begin{pmatrix}j_{1}&l_{2}&l_{3}\\\\\nm_{1}&m^{\\prime}_{2}&-m^{\\prime}_{3}\\end{pmatrix}\\begin{pmatrix}l_{1}&j_{2}&l_{3}\\\\\n-m^{\\prime}_{1}&m_{2}&m^{\\prime}_{3}\\end{pmatrix}\\begin{pmatrix}l_{1}&l_{2}&j_{3}\\\\\nm^{\\prime}_{1}&-m^{\\prime}_{2}&m_{3}\\end{pmatrix}. \\tag{34.5.23}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "finite sum of algebraic quantities",
+                "representation as",
+                "$\\mathit{6j}$ symbols",
+                "special cases",
+                "Regge symmetries",
+                "symmetry",
+                "recursion relations",
+                "orthogonality",
+                "generating functions",
+                "addition theorem",
+                "alternative",
+                "definition",
+                "sum rules",
+                "sums"
+              ],
+              "definiciones": [
+                "$J_{r}$ (locally) and $L_{r}$ (locally)"
+              ],
+              "simbolos": [
+                "$\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\ l_{1}&l_{2}&l_{3}\\end{Bmatrix}$: $\\mathit{6j}$ symbol , $j,j_{r}$: non-negative integers or non-negative integers plus one half. and $J$: sum",
+                "$\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\ l_{1}&l_{2}&l_{3}\\end{Bmatrix}$: $\\mathit{6j}$ symbol , $j,j_{r}$: non-negative integers or non-negative integers plus one half. and $l,l_{r}$: non-negative integers or non-negative integers plus one half.",
+                "$j,j_{r}$: non-negative integers or non-negative integers plus one half. , $l,l_{r}$: non-negative integers or non-negative integers plus one half. and $r$: nonnegative integer",
+                "$\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\ l_{1}&l_{2}&l_{3}\\end{Bmatrix}$: $\\mathit{6j}$ symbol and $j,j_{r}$: non-negative integers or non-negative integers plus one half.",
+                "$\\delta_{j,k}$: Kronecker delta , $\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\ l_{1}&l_{2}&l_{3}\\end{Bmatrix}$: $\\mathit{6j}$ symbol and $j,j_{r}$: non-negative integers or non-negative integers plus one half.",
+                "$!$: factorial (as in $n!$) , $\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\ l_{1}&l_{2}&l_{3}\\end{Bmatrix}$: $\\mathit{6j}$ symbol , $j,j_{r}$: non-negative integers or non-negative integers plus one half. and $l,l_{r}$: non-negative integers or non-negative integers plus one half."
+              ],
+              "referenciado_por": [
+                "§34.5(ii)"
+              ],
+              "notas_bibliograficas": [
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 98, 130–132), de-Shalit and Talmi ([1963](./bib/D.html#bib651 \"Nuclear Shell Theory\"), p. 520).",
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 94, 95).",
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), p. 96).",
+                "See de-Shalit and Talmi ([1963](./bib/D.html#bib651 \"Nuclear Shell Theory\"), pp. 517–518), Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §9.8), Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 95–97), Dunlap and Judd ([1975](./bib/D.html#bib692 \"Novel identities for simple n - j symbols\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34",
+                "Annotations for §34.5 and Ch.34",
+                "Annotations for §34.5(i) , §34.5 and Ch.34",
+                "Annotations for §34.5(ii) , §34.5 and Ch.34",
+                "Annotations for §34.5(iii) , §34.5 and Ch.34",
+                "Annotations for §34.5(vi) , §34.5 and Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/D.html#bib651",
+                "titulo_referencia": "Nuclear Shell Theory"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/S.html#bib2148",
+                "titulo_referencia": "Quantum Theory of Angular Momentum: Selected Topics"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1965",
+                "archivo_destino": "bib/B.html#bib279",
+                "titulo_referencia": "Quantum Theory of Angular Momentum. A Collection of Reprints and Original Papers"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/D.html#bib651",
+                "titulo_referencia": "Nuclear Shell Theory"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/D.html#bib692",
+                "titulo_referencia": "Novel identities for simple n - j symbols"
+              },
+              {
+                "texto": "1991",
+                "archivo_destino": "bib/G.html#bib938",
+                "titulo_referencia": "A new identity for some six- j symbols"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.6",
+          "titulo_original": "Definition: $\\mathit{9j}$ Symbol",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.6.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.6.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.6 Definition: 9⁢j Symbol",
+            "prosa_teorica": "The $\\mathit{9j}$ symbol may be defined either in terms of $\\mathit{3j}$ symbols or equivalently in terms of $\\mathit{6j}$ symbols:\nThe $\\mathit{9j}$ symbol may also be written as a finite triple sum equivalent to a terminating generalized hypergeometric series of three variables with unit arguments. See Srinivasa Rao and Rajeswari ([1993](./bib/S.html#bib2148 \"Quantum Theory of Angular Momentum: Selected Topics\"), pp. 7 and 125–132) and Rosengren ([1999](./bib/R.html#bib1972 \"Another proof of the triple sum formula for Wigner ⁢ 9 j -symbols\")).",
+            "formulas_clave": [
+              {
+                "id": "EGx1",
+                "tag": "34.6.1",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{21}&j_{22}&j_{23}\\\\\nj_{31}&j_{32}&j_{33}\\end{Bmatrix} \\displaystyle=\\sum_{\\mbox{\\scriptsize all }m_{rs}}\\begin{pmatrix}j_{11}&j_{12}&j_{13}\\\\\nm_{11}&m_{12}&m_{13}\\end{pmatrix}\\begin{pmatrix}j_{21}&j_{22}&j_{23}\\\\\nm_{21}&m_{22}&m_{23}\\end{pmatrix}\\begin{pmatrix}j_{31}&j_{32}&j_{33}\\\\\nm_{31}&m_{32}&m_{33}\\end{pmatrix}\\,\\begin{pmatrix}j_{11}&j_{21}&j_{31}\\\\\nm_{11}&m_{21}&m_{31}\\end{pmatrix}\\begin{pmatrix}j_{12}&j_{22}&j_{32}\\\\\nm_{12}&m_{22}&m_{32}\\end{pmatrix}\\begin{pmatrix}j_{13}&j_{23}&j_{33}\\\\\nm_{13}&m_{23}&m_{33}\\end{pmatrix}, \\tag{34.6.1}"
+              },
+              {
+                "id": "",
+                "tag": "34.6.2",
+                "latex": "\\displaystyle\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{21}&j_{22}&j_{23}\\\\\nj_{31}&j_{32}&j_{33}\\end{Bmatrix} \\displaystyle=\\sum_{j}(-1)^{2j}(2j+1)\\begin{Bmatrix}j_{11}&j_{21}&j_{31}\\\\\nj_{32}&j_{33}&j\\end{Bmatrix}\\begin{Bmatrix}j_{12}&j_{22}&j_{32}\\\\\nj_{21}&j&j_{23}\\end{Bmatrix}\\begin{Bmatrix}j_{13}&j_{23}&j_{33}\\\\\nj&j_{11}&j_{12}\\end{Bmatrix}. \\tag{34.6.2}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{21}&j_{22}&j_{23}\\\\\nj_{31}&j_{32}&j_{33}\\end{Bmatrix} \\displaystyle=\\sum_{\\mbox{\\scriptsize all }m_{rs}}\\begin{pmatrix}j_{11}&j_{12}&j_{13}\\\\\nm_{11}&m_{12}&m_{13}\\end{pmatrix}\\begin{pmatrix}j_{21}&j_{22}&j_{23}\\\\\nm_{21}&m_{22}&m_{23}\\end{pmatrix}\\begin{pmatrix}j_{31}&j_{32}&j_{33}\\\\\nm_{31}&m_{32}&m_{33}\\end{pmatrix}\\,\\begin{pmatrix}j_{11}&j_{21}&j_{31}\\\\\nm_{11}&m_{21}&m_{31}\\end{pmatrix}\\begin{pmatrix}j_{12}&j_{22}&j_{32}\\\\\nm_{12}&m_{22}&m_{32}\\end{pmatrix}\\begin{pmatrix}j_{13}&j_{23}&j_{33}\\\\\nm_{13}&m_{23}&m_{33}\\end{pmatrix}, \\tag{34.6.1}",
+              "\\displaystyle\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{21}&j_{22}&j_{23}\\\\\nj_{31}&j_{32}&j_{33}\\end{Bmatrix} \\displaystyle=\\sum_{j}(-1)^{2j}(2j+1)\\begin{Bmatrix}j_{11}&j_{21}&j_{31}\\\\\nj_{32}&j_{33}&j\\end{Bmatrix}\\begin{Bmatrix}j_{12}&j_{22}&j_{32}\\\\\nj_{21}&j&j_{23}\\end{Bmatrix}\\begin{Bmatrix}j_{13}&j_{23}&j_{33}\\\\\nj&j_{11}&j_{12}\\end{Bmatrix}. \\tag{34.6.2}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "definition",
+                "finite sum of $\\mathit{3j}$ symbols",
+                "finite sum of $\\mathit{6j}$ symbols",
+                "generalized hypergeometric functions",
+                "$\\mathit{9j}$ symbols",
+                "representation as"
+              ],
+              "definiciones": [
+                "$\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\ j_{21}&j_{22}&j_{23}\\\\ j_{31}&j_{32}&j_{33}\\end{Bmatrix}$ : $\\mathit{9j}$ symbol"
+              ],
+              "simbolos": [
+                "$\\begin{pmatrix}j_{1}&j_{2}&j_{3}\\\\ m_{1}&m_{2}&m_{3}\\end{pmatrix}$: $\\mathit{3j}$ symbol , $j,j_{r}$: non-negative integers or non-negative integers plus one half. , $r$: nonnegative integer and $s$: integer",
+                "$\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\ j_{21}&j_{22}&j_{23}\\\\ j_{31}&j_{32}&j_{33}\\end{Bmatrix}$: $\\mathit{9j}$ symbol , $\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\ l_{1}&l_{2}&l_{3}\\end{Bmatrix}$: $\\mathit{6j}$ symbol and $j,j_{r}$: non-negative integers or non-negative integers plus one half."
+              ],
+              "referenciado_por": [
+                "§34.13"
+              ],
+              "notas_bibliograficas": [
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), p. 101), de-Shalit and Talmi ([1963](./bib/D.html#bib651 \"Nuclear Shell Theory\"), p. 516)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34",
+                "Annotations for §34.6 and Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/D.html#bib651",
+                "titulo_referencia": "Nuclear Shell Theory"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/S.html#bib2148",
+                "titulo_referencia": "Quantum Theory of Angular Momentum: Selected Topics"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/R.html#bib1972",
+                "titulo_referencia": "Another proof of the triple sum formula for Wigner ⁢ 9 j -symbols"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.7",
+          "titulo_original": "Basic Properties: $\\mathit{9j}$ Symbol",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.7.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.7.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.7 Basic Properties: 9⁢j Symbol",
+            "prosa_teorica": "The $\\mathit{9j}$ symbol has symmetry properties with respect to permutation of columns, permutation of rows, and transposition of rows and columns; these relate 72 independent $\\mathit{9j}$ symbols. Even (cyclic) permutations of either columns or rows, as well as transpositions, leave the $\\mathit{9j}$ symbol unchanged. Odd permutations of columns or rows introduce a phase factor $(-1)^{R}$ , where $R$ is the sum of all arguments of the $\\mathit{9j}$ symbol.\nFor further symmetry properties of the $\\mathit{9j}$ symbol see Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 102–103) and Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §10.4.1).\nFor recursion relations see Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §10.5).\nFor generating functions for the $\\mathit{9j}$ symbol see Biedenharn and van Dam ([1965](./bib/B.html#bib279 \"Quantum Theory of Angular Momentum. A Collection of Reprints and Original Papers\"), p. 258, eq. (4.37)).\nThis equation is the *sum rule* . It constitutes an addition theorem for the $\\mathit{9j}$ symbol.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "34.7.1",
+                "latex": "\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{21}&j_{22}&j_{13}\\\\\nj_{31}&j_{31}&0\\end{Bmatrix}=\\frac{(-1)^{j_{12}+j_{21}+j_{13}+j_{31}}}{((2j_{13}+1)(2j_{31}+1))^{\\frac{1}{2}}}\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{22}&j_{21}&j_{31}\\end{Bmatrix}. \\tag{34.7.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "34.7.2",
+                "latex": "\\sum_{j_{12}\\,j_{34}}(2j_{12}+1)(2j_{34}+1)(2j_{13}+1)(2j_{24}+1)\\begin{Bmatrix}j_{1}&j_{2}&j_{12}\\\\\nj_{3}&j_{4}&j_{34}\\\\\nj_{13}&j_{24}&j\\end{Bmatrix}\\begin{Bmatrix}j_{1}&j_{2}&j_{12}\\\\\nj_{3}&j_{4}&j_{34}\\\\\nj^{\\prime}_{13}&j^{\\prime}_{24}&j\\end{Bmatrix}=\\delta_{j_{13},j^{\\prime}_{13}}\\delta_{j_{24},j^{\\prime}_{24}}. \\tag{34.7.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "34.7.3",
+                "latex": "\\sum_{j_{13}\\,j_{24}}(-1)^{2j_{2}+j_{24}+j_{23}-j_{34}}(2j_{13}+1)(2j_{24}+1)\\begin{Bmatrix}j_{1}&j_{2}&j_{12}\\\\\nj_{3}&j_{4}&j_{34}\\\\\nj_{13}&j_{24}&j\\end{Bmatrix}\\begin{Bmatrix}j_{1}&j_{3}&j_{13}\\\\\nj_{4}&j_{2}&j_{24}\\\\\nj_{14}&j_{23}&j\\end{Bmatrix}=\\begin{Bmatrix}j_{1}&j_{2}&j_{12}\\\\\nj_{4}&j_{3}&j_{34}\\\\\nj_{14}&j_{23}&j\\end{Bmatrix}. \\tag{34.7.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "34.7.4",
+                "latex": "\\begin{pmatrix}j_{13}&j_{23}&j_{33}\\\\\nm_{13}&m_{23}&m_{33}\\end{pmatrix}\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{21}&j_{22}&j_{23}\\\\\nj_{31}&j_{32}&j_{33}\\end{Bmatrix}=\\sum_{m_{r1},m_{r2},r=1,2,3}\\begin{pmatrix}j_{11}&j_{12}&j_{13}\\\\\nm_{11}&m_{12}&m_{13}\\end{pmatrix}\\begin{pmatrix}j_{21}&j_{22}&j_{23}\\\\\nm_{21}&m_{22}&m_{23}\\end{pmatrix}\\,\\begin{pmatrix}j_{31}&j_{32}&j_{33}\\\\\nm_{31}&m_{32}&m_{33}\\end{pmatrix}\\begin{pmatrix}j_{11}&j_{21}&j_{31}\\\\\nm_{11}&m_{21}&m_{31}\\end{pmatrix}\\begin{pmatrix}j_{12}&j_{22}&j_{32}\\\\\nm_{12}&m_{22}&m_{32}\\end{pmatrix}. \\tag{34.7.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "34.7.5",
+                "latex": "\\sum_{j^{\\prime}}(2j^{\\prime}+1)\\begin{Bmatrix}j_{11}&j_{12}&j^{\\prime}\\\\\nj_{21}&j_{22}&j_{23}\\\\\nj_{31}&j_{32}&j_{33}\\end{Bmatrix}\\begin{Bmatrix}j_{11}&j_{12}&j^{\\prime}\\\\\nj_{23}&j_{33}&j\\end{Bmatrix}={(-1)^{2j}}\\begin{Bmatrix}j_{21}&j_{22}&j_{23}\\\\\nj_{12}&j&j_{32}\\end{Bmatrix}\\begin{Bmatrix}j_{31}&j_{32}&j_{33}\\\\\nj&j_{11}&j_{21}\\end{Bmatrix}. \\tag{34.7.5}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{21}&j_{22}&j_{13}\\\\\nj_{31}&j_{31}&0\\end{Bmatrix}=\\frac{(-1)^{j_{12}+j_{21}+j_{13}+j_{31}}}{((2j_{13}+1)(2j_{31}+1))^{\\frac{1}{2}}}\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{22}&j_{21}&j_{31}\\end{Bmatrix}. \\tag{34.7.1}",
+              "\\sum_{j_{12}\\,j_{34}}(2j_{12}+1)(2j_{34}+1)(2j_{13}+1)(2j_{24}+1)\\begin{Bmatrix}j_{1}&j_{2}&j_{12}\\\\\nj_{3}&j_{4}&j_{34}\\\\\nj_{13}&j_{24}&j\\end{Bmatrix}\\begin{Bmatrix}j_{1}&j_{2}&j_{12}\\\\\nj_{3}&j_{4}&j_{34}\\\\\nj^{\\prime}_{13}&j^{\\prime}_{24}&j\\end{Bmatrix}=\\delta_{j_{13},j^{\\prime}_{13}}\\delta_{j_{24},j^{\\prime}_{24}}. \\tag{34.7.2}",
+              "\\sum_{j_{13}\\,j_{24}}(-1)^{2j_{2}+j_{24}+j_{23}-j_{34}}(2j_{13}+1)(2j_{24}+1)\\begin{Bmatrix}j_{1}&j_{2}&j_{12}\\\\\nj_{3}&j_{4}&j_{34}\\\\\nj_{13}&j_{24}&j\\end{Bmatrix}\\begin{Bmatrix}j_{1}&j_{3}&j_{13}\\\\\nj_{4}&j_{2}&j_{24}\\\\\nj_{14}&j_{23}&j\\end{Bmatrix}=\\begin{Bmatrix}j_{1}&j_{2}&j_{12}\\\\\nj_{4}&j_{3}&j_{34}\\\\\nj_{14}&j_{23}&j\\end{Bmatrix}. \\tag{34.7.3}",
+              "\\begin{pmatrix}j_{13}&j_{23}&j_{33}\\\\\nm_{13}&m_{23}&m_{33}\\end{pmatrix}\\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\\\\nj_{21}&j_{22}&j_{23}\\\\\nj_{31}&j_{32}&j_{33}\\end{Bmatrix}=\\sum_{m_{r1},m_{r2},r=1,2,3}\\begin{pmatrix}j_{11}&j_{12}&j_{13}\\\\\nm_{11}&m_{12}&m_{13}\\end{pmatrix}\\begin{pmatrix}j_{21}&j_{22}&j_{23}\\\\\nm_{21}&m_{22}&m_{23}\\end{pmatrix}\\,\\begin{pmatrix}j_{31}&j_{32}&j_{33}\\\\\nm_{31}&m_{32}&m_{33}\\end{pmatrix}\\begin{pmatrix}j_{11}&j_{21}&j_{31}\\\\\nm_{11}&m_{21}&m_{31}\\end{pmatrix}\\begin{pmatrix}j_{12}&j_{22}&j_{32}\\\\\nm_{12}&m_{22}&m_{32}\\end{pmatrix}. \\tag{34.7.4}",
+              "\\sum_{j^{\\prime}}(2j^{\\prime}+1)\\begin{Bmatrix}j_{11}&j_{12}&j^{\\prime}\\\\\nj_{21}&j_{22}&j_{23}\\\\\nj_{31}&j_{32}&j_{33}\\end{Bmatrix}\\begin{Bmatrix}j_{11}&j_{12}&j^{\\prime}\\\\\nj_{23}&j_{33}&j\\end{Bmatrix}={(-1)^{2j}}\\begin{Bmatrix}j_{21}&j_{22}&j_{23}\\\\\nj_{12}&j&j_{32}\\end{Bmatrix}\\begin{Bmatrix}j_{31}&j_{32}&j_{33}\\\\\nj&j_{11}&j_{21}\\end{Bmatrix}. \\tag{34.7.5}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "$\\mathit{9j}$ symbols",
+                "special case",
+                "symmetry",
+                "recursion relations",
+                "orthogonality",
+                "generating functions",
+                "addition theorem",
+                "sum rule",
+                "sums"
+              ],
+              "notas_bibliograficas": [
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 105–106), de-Shalit and Talmi ([1963](./bib/D.html#bib651 \"Nuclear Shell Theory\"), p. 517).",
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), p. 103).",
+                "See Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 103–104), de-Shalit and Talmi ([1963](./bib/D.html#bib651 \"Nuclear Shell Theory\"), pp. 127, 518)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34",
+                "Annotations for §34.7 and Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/D.html#bib651",
+                "titulo_referencia": "Nuclear Shell Theory"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1965",
+                "archivo_destino": "bib/B.html#bib279",
+                "titulo_referencia": "Quantum Theory of Angular Momentum. A Collection of Reprints and Original Papers"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/D.html#bib651",
+                "titulo_referencia": "Nuclear Shell Theory"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.8",
+          "titulo_original": "Approximations for Large Parameters",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.8.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.8.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.8 Approximations for Large Parameters",
+            "prosa_teorica": "For large values of the parameters in the $\\mathit{3j}$ , $\\mathit{6j}$ , and $\\mathit{9j}$ symbols, different asymptotic forms are obtained depending on which parameters are large. For example,\nwhere\nand the symbol $o\\left(1\\right)$ denotes a quantity that tends to zero as the parameters tend to infinity, as in § 2.1(i) .\nSemiclassical (WKBJ) approximations in terms of trigonometric or exponential functions are given in Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §§8.9, 9.9, 10.7). Uniform approximations in terms of Airy functions for the $\\mathit{3j}$ and $\\mathit{6j}$ symbols are given in Schulten and Gordon ([1975b](./bib/S.html#bib2025 \"Semiclassical approximations to ⁢ 3 j - and ⁢ 6 j -coefficients for quantum-mechanical coupling of angular momenta\")). For approximations for the $\\mathit{3j}$ , $\\mathit{6j}$ , and $\\mathit{9j}$ symbols with error bounds see Flude ([1998](./bib/F.html#bib812 \"The Edmonds asymptotic formulas for the ⁢ 3 j and ⁢ 6 j symbols\")), Chen et al. ([1999](./bib/C.html#bib478 \"Asymptotics of Racah coefficients and polynomials\")), and Watson ([1999](./bib/W.html#bib2382 \"Asymptotic approximations for certain 6 - j and 9 - j symbols\")): these references also cite earlier work.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "34.8.1",
+                "latex": "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nj_{2}&j_{1}&l_{3}\\end{Bmatrix}=(-1)^{j_{1}+j_{2}+j_{3}+l_{3}}\\,\\left(\\frac{4}{\\pi(2j_{1}+1)(2j_{2}+1)(2l_{3}+1)\\sin\\theta}\\right)^{\\frac{1}{2}}\\,\\left(\\cos\\left((l_{3}+\\tfrac{1}{2})\\theta-\\tfrac{1}{4}\\pi\\right)+o\\left(1\\right)\\right), \\tag{34.8.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "34.8.2",
+                "latex": "\\cos\\theta=\\frac{j_{1}(j_{1}+1)+j_{2}(j_{2}+1)-j_{3}(j_{3}+1)}{2\\sqrt{j_{1}(j_{1}+1)j_{2}(j_{2}+1)}}, \\tag{34.8.2}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\\\\nj_{2}&j_{1}&l_{3}\\end{Bmatrix}=(-1)^{j_{1}+j_{2}+j_{3}+l_{3}}\\,\\left(\\frac{4}{\\pi(2j_{1}+1)(2j_{2}+1)(2l_{3}+1)\\sin\\theta}\\right)^{\\frac{1}{2}}\\,\\left(\\cos\\left((l_{3}+\\tfrac{1}{2})\\theta-\\tfrac{1}{4}\\pi\\right)+o\\left(1\\right)\\right), \\tag{34.8.1}",
+              "\\cos\\theta=\\frac{j_{1}(j_{1}+1)+j_{2}(j_{2}+1)-j_{3}(j_{3}+1)}{2\\sqrt{j_{1}(j_{1}+1)j_{2}(j_{2}+1)}}, \\tag{34.8.2}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "approximations for large parameters",
+                "$\\mathit{9j}$ symbols",
+                "$\\mathit{6j}$ symbols",
+                "$\\mathit{3j}$ symbols"
+              ],
+              "notas_bibliograficas": [
+                "See Watson ([1999](./bib/W.html#bib2382 \"Asymptotic approximations for certain 6 - j and 9 - j symbols\")), Chen et al. ([1999](./bib/C.html#bib478 \"Asymptotics of Racah coefficients and polynomials\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/W.html#bib2382",
+                "titulo_referencia": "Asymptotic approximations for certain 6 - j and 9 - j symbols"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/C.html#bib478",
+                "titulo_referencia": "Asymptotics of Racah coefficients and polynomials"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1975b",
+                "archivo_destino": "bib/S.html#bib2025",
+                "titulo_referencia": "Semiclassical approximations to ⁢ 3 j - and ⁢ 6 j -coefficients for quantum-mechanical coupling of angular momenta"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/F.html#bib812",
+                "titulo_referencia": "The Edmonds asymptotic formulas for the ⁢ 3 j and ⁢ 6 j symbols"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/C.html#bib478",
+                "titulo_referencia": "Asymptotics of Racah coefficients and polynomials"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/W.html#bib2382",
+                "titulo_referencia": "Asymptotic approximations for certain 6 - j and 9 - j symbols"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.9",
+          "titulo_original": "Graphical Method",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.9.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.9.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.9 Graphical Method",
+            "prosa_teorica": "The graphical method establishes a one-to-one correspondence between an analytic expression and a diagram by assigning a graphical symbol to each function and operation of the analytic expression. Thus, any analytic expression in the theory, for example equations ( 34.3.16 ), ( 34.4.1 ), ( 34.5.15 ), and ( 34.7.3 ), may be represented by a diagram; conversely, any diagram represents an analytic equation. For an account of this method see Brink and Satchler ([1993](./bib/B.html#bib355 \"Angular Momentum\"), Chapter VII). For specific examples of the graphical method of representing sums involving the $\\mathit{3j},\\mathit{6j}$ , and $\\mathit{9j}$ symbols, see Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), Chapters 11, 12) and Lehman and O’Connell ([1973](./bib/L.html#bib1403 \"Graphical Recoupling of Angular Momenta\"), §3.3).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "graphical method",
+                "$\\mathit{9j}$ symbols",
+                "$\\mathit{6j}$ symbols",
+                "$\\mathit{3j}$ symbols"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/B.html#bib355",
+                "titulo_referencia": "Angular Momentum"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/L.html#bib1403",
+                "titulo_referencia": "Graphical Recoupling of Angular Momenta"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.10",
+          "titulo_original": "Zeros",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.10.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.10.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.10 Zeros",
+            "prosa_teorica": "In a $\\mathit{3j}$ symbol, if the three angular momenta $j_{1},j_{2},j_{3}$ do not satisfy the triangle conditions ( 34.2.1 ), or if the projective quantum numbers do not satisfy ( 34.2.3 ), then the $\\mathit{3j}$ symbol is zero. Similarly the $\\mathit{6j}$ symbol ( 34.4.1 ) vanishes when the triangle conditions are not satisfied by any of the four $\\mathit{3j}$ symbols in the summation. Such zeros are called *trivial zeros* . However, the $\\mathit{3j}$ and $\\mathit{6j}$ symbols may vanish for certain combinations of the angular momenta and projective quantum numbers even when the triangle conditions are fulfilled. Such zeros are called *nontrivial zeros* .\nFor further information, including examples of nontrivial zeros and extensions to $\\mathit{9j}$ symbols, see Srinivasa Rao and Rajeswari ([1993](./bib/S.html#bib2148 \"Quantum Theory of Angular Momentum: Selected Topics\"), pp. 133–215, 294–295, 299–310).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "$\\mathit{9j}$ symbols",
+                "$\\mathit{6j}$ symbols",
+                "$\\mathit{3j}$ symbols",
+                "zeros"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/S.html#bib2148",
+                "titulo_referencia": "Quantum Theory of Angular Momentum: Selected Topics"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.11",
+          "titulo_original": "Higher-Order $3nj$ Symbols",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.11.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.11.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.11 Higher-Order 3⁢n⁢j Symbols",
+            "prosa_teorica": "For information on $12j,15j$ ,…, symbols, see Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §10.12) and Yutsis et al. ([1962](./bib/Y.html#bib2476 \"Mathematical Apparatus of the Theory of Angular Momentum\"), pp. 62–65 and 122–153).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "higher-order $3nj$ symbols"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/Y.html#bib2476",
+                "titulo_referencia": "Mathematical Apparatus of the Theory of Angular Momentum"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Applications",
+      "secciones": [
+        {
+          "seccion_id": "34.12",
+          "titulo_original": "Physical Applications",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.12.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.12.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.12 Physical Applications",
+            "prosa_teorica": "The angular momentum coupling coefficients ( $\\mathit{3j}$ , $\\mathit{6j}$ , and $\\mathit{9j}$ symbols) are essential in the fields of nuclear, atomic, and molecular physics. For applications in nuclear structure, see de-Shalit and Talmi ([1963](./bib/D.html#bib651 \"Nuclear Shell Theory\")); in atomic spectroscopy, see Biedenharn and van Dam ([1965](./bib/B.html#bib279 \"Quantum Theory of Angular Momentum. A Collection of Reprints and Original Papers\"), pp. 134–200), Judd ([1998](./bib/J.html#bib1197 \"Operator Techniques in Atomic Spectroscopy\")), Sobelman ([1992](./bib/S.html#bib2133 \"Atomic Spectra and Radiative Transitions\"), Chapter 4), Shore and Menzel ([1968](./bib/S.html#bib2073 \"Principles of Atomic Spectra\"), pp. 268–303), and Wigner ([1959](./bib/W.html#bib2409 \"Group Theory and its Application to the Quantum Mechanics of Atomic Spectra\")); in molecular spectroscopy and chemical reactions, see Burshtein and Temkin ([1994](./bib/B.html#bib387 \"Spectroscopy of Molecular Rotation in Gases and Liquids\"), Chapter 5), and Judd ([1975](./bib/J.html#bib1196 \"Angular Momentum Theory for Diatomic Molecules\")). $\\mathit{3j},\\mathit{6j}$ , and $\\mathit{9j}$ symbols are also found in multipole expansions of solutions of the Laplace and Helmholtz equations; see Carlson and Rushbrooke ([1950](./bib/C.html#bib2623 \"On the expansion of a Coulomb potential in spherical harmonics\")) and Judd ([1976](./bib/J.html#bib2624 \"Modifications of Coulombic interactions by polarizable atoms\")).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "$\\mathit{3j},\\mathit{6j},\\mathit{9j}$ symbols",
+                "Helmholtz equation",
+                "Laplace equation",
+                "applications",
+                "atomic spectroscopy",
+                "chemical reactions",
+                "molecular spectroscopy",
+                "$\\mathit{9j}$ symbols",
+                "nuclear structure",
+                "$\\mathit{6j}$ symbols",
+                "$\\mathit{3j}$ symbols"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/D.html#bib651",
+                "titulo_referencia": "Nuclear Shell Theory"
+              },
+              {
+                "texto": "1965",
+                "archivo_destino": "bib/B.html#bib279",
+                "titulo_referencia": "Quantum Theory of Angular Momentum. A Collection of Reprints and Original Papers"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/J.html#bib1197",
+                "titulo_referencia": "Operator Techniques in Atomic Spectroscopy"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/S.html#bib2133",
+                "titulo_referencia": "Atomic Spectra and Radiative Transitions"
+              },
+              {
+                "texto": "1968",
+                "archivo_destino": "bib/S.html#bib2073",
+                "titulo_referencia": "Principles of Atomic Spectra"
+              },
+              {
+                "texto": "1959",
+                "archivo_destino": "bib/W.html#bib2409",
+                "titulo_referencia": "Group Theory and its Application to the Quantum Mechanics of Atomic Spectra"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/B.html#bib387",
+                "titulo_referencia": "Spectroscopy of Molecular Rotation in Gases and Liquids"
+              },
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/J.html#bib1196",
+                "titulo_referencia": "Angular Momentum Theory for Diatomic Molecules"
+              },
+              {
+                "texto": "1950",
+                "archivo_destino": "bib/C.html#bib2623",
+                "titulo_referencia": "On the expansion of a Coulomb potential in spherical harmonics"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/J.html#bib2624",
+                "titulo_referencia": "Modifications of Coulombic interactions by polarizable atoms"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Computation",
+      "secciones": [
+        {
+          "seccion_id": "34.13",
+          "titulo_original": "Methods of Computation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.13.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.13.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.13 Methods of Computation",
+            "prosa_teorica": "Methods of computation for $\\mathit{3j}$ and $\\mathit{6j}$ symbols include recursion relations, see Schulten and Gordon ([1975a](./bib/S.html#bib2024 \"Exact recursive evaluation of ⁢ 3 j - and ⁢ 6 j -coefficients for quantum-mechanical coupling of angular momenta\")), Luscombe and Luban ([1998](./bib/L.html#bib1505 \"Simplified recursive algorithm for Wigner ⁢ 3 j and ⁢ 6 j symbols\")), and Edmonds ([1974](./bib/E.html#bib727 \"Angular Momentum in Quantum Mechanics\"), pp. 42–45, 48–51, 97–99); summation of single-sum expressions for these symbols, see Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §§8.2.6, 9.2.1) and Fang and Shriner ([1992](./bib/F.html#bib774 \"A computer program for the calculation of angular-momentum coupling coefficients\")); evaluation of the generalized hypergeometric functions of unit argument that represent these symbols, see Srinivasa Rao and Venkatesh ([1978](./bib/S.html#bib2150 \"New Fortran programs for angular momentum coefficients\")) and Srinivasa Rao ([1981](./bib/S.html#bib2147 \"Computation of angular momentum coefficients using sets of generalized hypergeometric functions\")).\nFor $\\mathit{9j}$ symbols, methods include evaluation of the single-sum series ( 34.6.2 ), see Fang and Shriner ([1992](./bib/F.html#bib774 \"A computer program for the calculation of angular-momentum coupling coefficients\")); evaluation of triple-sum series, see Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\"), §10.2.1) and Srinivasa Rao et al. ([1989](./bib/S.html#bib2149 \"A new Fortran program for the 9 - j angular momentum coefficient\")). A review of methods of computation is given in Srinivasa Rao and Rajeswari ([1993](./bib/S.html#bib2148 \"Quantum Theory of Angular Momentum: Selected Topics\"), Chapter VII, pp. 235–265). See also Roothaan and Lai ([1997](./bib/R.html#bib1966 \"Calculation of ⁢ 3 n - j symbols by Labarthe’s method\")) and references given there.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "computation",
+                "$\\mathit{9j}$ symbols",
+                "$\\mathit{6j}$ symbols",
+                "$\\mathit{3j}$ symbols"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1975a",
+                "archivo_destino": "bib/S.html#bib2024",
+                "titulo_referencia": "Exact recursive evaluation of ⁢ 3 j - and ⁢ 6 j -coefficients for quantum-mechanical coupling of angular momenta"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/L.html#bib1505",
+                "titulo_referencia": "Simplified recursive algorithm for Wigner ⁢ 3 j and ⁢ 6 j symbols"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/E.html#bib727",
+                "titulo_referencia": "Angular Momentum in Quantum Mechanics"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/F.html#bib774",
+                "titulo_referencia": "A computer program for the calculation of angular-momentum coupling coefficients"
+              },
+              {
+                "texto": "1978",
+                "archivo_destino": "bib/S.html#bib2150",
+                "titulo_referencia": "New Fortran programs for angular momentum coefficients"
+              },
+              {
+                "texto": "1981",
+                "archivo_destino": "bib/S.html#bib2147",
+                "titulo_referencia": "Computation of angular momentum coefficients using sets of generalized hypergeometric functions"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/F.html#bib774",
+                "titulo_referencia": "A computer program for the calculation of angular-momentum coupling coefficients"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/S.html#bib2149",
+                "titulo_referencia": "A new Fortran program for the 9 - j angular momentum coefficient"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/S.html#bib2148",
+                "titulo_referencia": "Quantum Theory of Angular Momentum: Selected Topics"
+              },
+              {
+                "texto": "1997",
+                "archivo_destino": "bib/R.html#bib1966",
+                "titulo_referencia": "Calculation of ⁢ 3 n - j symbols by Labarthe’s method"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.14",
+          "titulo_original": "Tables",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.14.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.14.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.14 Tables",
+            "prosa_teorica": "Tables of exact values of the squares of the $\\mathit{3j}$ and $\\mathit{6j}$ symbols in which all parameters are $\\leq 8$ are given in Rotenberg et al. ([1959](./bib/R.html#bib1976 \"The 3 - j and 6 - j Symbols\")), together with a bibliography of earlier tables of $\\mathit{3j},\\mathit{6j}$ , and $\\mathit{9j}$ symbols on pp. 33–36.\nTables of $\\mathit{3j}$ and $\\mathit{6j}$ symbols in which all parameters are $\\leq 17/2$ are given in Appel ([1968](./bib/index.html#bib126 \"Numerical Tables for Angular Correlation Computations in α -, β - and γ -Spectroscopy: ⁢ 3 j -, ⁢ 6 j -, ⁢ 9 j -Symbols, F- and Γ -Coefficients\")) to 6D. Some selected $\\mathit{9j}$ symbols are also given. Other tabulations for $\\mathit{3j}$ symbols are listed on pp. 11-12; for $\\mathit{6j}$ symbols on pp. 16-17; for $\\mathit{9j}$ symbols on p. 21.\nBiedenharn and Louck ([1981](./bib/B.html#bib281 \"Angular Momentum in Quantum Physics: Theory and Application\")) give tables of algebraic expressions for Clebsch–Gordan coefficients and $\\mathit{6j}$ symbols, together with a bibliography of tables produced prior to 1975. In Varshalovich et al. ([1988](./bib/V.html#bib2323 \"Quantum Theory of Angular Momentum\")) algebraic expressions for the Clebsch–Gordan coefficients with all parameters $\\leq 5$ and numerical values for all parameters $\\leq 3$ are given on pp. 270–289; similar tables for the $\\mathit{6j}$ symbols are given on pp. 310–332, and for the $\\mathit{9j}$ symbols on pp. 359, 360, 372–411. Earlier tables are listed on p. 513.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "$\\mathit{9j}$ symbols",
+                "$\\mathit{6j}$ symbols",
+                "tables",
+                "$\\mathit{3j}$ symbols"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1959",
+                "archivo_destino": "bib/R.html#bib1976",
+                "titulo_referencia": "The 3 - j and 6 - j Symbols"
+              },
+              {
+                "texto": "1968",
+                "archivo_destino": "bib/index.html#bib126",
+                "titulo_referencia": "Numerical Tables for Angular Correlation Computations in α -, β - and γ -Spectroscopy: ⁢ 3 j -, ⁢ 6 j -, ⁢ 9 j -Symbols, F- and Γ -Coefficients"
+              },
+              {
+                "texto": "1981",
+                "archivo_destino": "bib/B.html#bib281",
+                "titulo_referencia": "Angular Momentum in Quantum Physics: Theory and Application"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/V.html#bib2323",
+                "titulo_referencia": "Quantum Theory of Angular Momentum"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "34.15",
+          "titulo_original": "Software",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/34/34.15.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.15.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§34.15 Software",
+            "prosa_teorica": "In this section we provide links to the research literature describing the implementation of algorithms in software for the evaluation of functions described in this chapter. Citations in bulleted lists refer to papers for which research software has been made available and can be downloaded via the Web. References to research software that is available in other ways is listed separately.\nA more complete list of available software for computing these functions is found in the [Software Index](./software/index.md) .\n* Bar-Shalom and Klapisch ([1988](./bib/B.html#bib207 \"NJGRAF: An efficient program for calculation of general recoupling coefficients by graphical analysis, compatible with NJSYM\")). Fortran.\n* Berrington et al. ([1974](./bib/B.html#bib247 \"A general program to calculate atomic continuum processes using the R-matrix method\")). Fortran.\n* Burke ([1970](./bib/B.html#bib384 \"A program to calculate a general recoupling coefficient\")). Fortran.\n* Dodds and Wiechers ([1972](./bib/D.html#bib675 \"Vector coupling coefficients as products of prime factors\")). Fortran.\n* Fang and Shriner ([1992](./bib/F.html#bib774 \"A computer program for the calculation of angular-momentum coupling coefficients\")). Fortran.\n* Kaeding ([1995](./bib/K.html#bib1239 \"Pascal program for generating tables of ⁢ SU ( 3 ) Clebsch-Gordan coefficients\")). Pascal.\n* Lai and Chiu ([1992](./bib/L.html#bib1370 \"Exact computation of the 9 - j symbols\")). Fortran.\n* Schulten and Gordon ([1976](./bib/S.html#bib2026 \"Recursive evaluation of ⁢ 3 j - and ⁢ 6 j - coefficients\")). Fortran.\n* Shapiro ([1970](./bib/S.html#bib2056 \"Arbitrary - ⁢ 3 n j symbols for ⁢ SU ( 2 )\")). Fortran.\n* Stone and Wood ([1980](./bib/S.html#bib2174 \"Root-rational-fraction package for exact calculation of vector-coupling coefficients\")). Fortran.\n* Tamura ([1970](./bib/T.html#bib2202 \"Angular momentum coupling coefficients\")). Fortran.\nSee also Lai and Chiu ([1990](./bib/L.html#bib1369 \"Exact computation of the 3 - j and 6 - j symbols\")) and Srinivasa Rao and Rajeswari ([1993](./bib/S.html#bib2148 \"Quantum Theory of Angular Momentum: Selected Topics\"), Appendix C, pp. 266–292).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "referenciado_por": [
+                "§ ‣ Software Cross Index"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.34"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/B.html#bib207",
+                "titulo_referencia": "NJGRAF: An efficient program for calculation of general recoupling coefficients by graphical analysis, compatible with NJSYM"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/B.html#bib247",
+                "titulo_referencia": "A general program to calculate atomic continuum processes using the R-matrix method"
+              },
+              {
+                "texto": "1970",
+                "archivo_destino": "bib/B.html#bib384",
+                "titulo_referencia": "A program to calculate a general recoupling coefficient"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/D.html#bib675",
+                "titulo_referencia": "Vector coupling coefficients as products of prime factors"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/F.html#bib774",
+                "titulo_referencia": "A computer program for the calculation of angular-momentum coupling coefficients"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/K.html#bib1239",
+                "titulo_referencia": "Pascal program for generating tables of ⁢ SU ( 3 ) Clebsch-Gordan coefficients"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/L.html#bib1370",
+                "titulo_referencia": "Exact computation of the 9 - j symbols"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/S.html#bib2026",
+                "titulo_referencia": "Recursive evaluation of ⁢ 3 j - and ⁢ 6 j - coefficients"
+              },
+              {
+                "texto": "1970",
+                "archivo_destino": "bib/S.html#bib2056",
+                "titulo_referencia": "Arbitrary - ⁢ 3 n j symbols for ⁢ SU ( 2 )"
+              },
+              {
+                "texto": "1980",
+                "archivo_destino": "bib/S.html#bib2174",
+                "titulo_referencia": "Root-rational-fraction package for exact calculation of vector-coupling coefficients"
+              },
+              {
+                "texto": "1970",
+                "archivo_destino": "bib/T.html#bib2202",
+                "titulo_referencia": "Angular momentum coupling coefficients"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/L.html#bib1369",
+                "titulo_referencia": "Exact computation of the 3 - j and 6 - j symbols"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/S.html#bib2148",
+                "titulo_referencia": "Quantum Theory of Angular Momentum: Selected Topics"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "agradecimientos_capitulo": "",
+  "referencias_capitulo": [
+    "§16.24(iii)",
+    "§16.4(iii)",
+    "§16.7",
+    "New Associate Editors for the DLMF",
+    "*Profile* Joris Van der Jeugt",
+    "*Profile* Leonard C. Maximon",
+    "*Profile* Leonard C. Maximon",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Associate Editors",
+    "§ ‣ Associate Editors",
+    "Erratum (V1.1.6) for Chapters 10 Bessel Functions",
+    "18 Orthogonal Polynomials",
+    "34 3*j*",
+    "6*j*",
+    "9*j* Symbols",
+    "Organization and Objective",
+    "§ ‣ Software Cross Index"
+  ],
+  "estado_extraccion": "completado",
+  "total_formulas_extraidas": 68,
+  "estado_metadatos": "verificado_y_refinado"
+}

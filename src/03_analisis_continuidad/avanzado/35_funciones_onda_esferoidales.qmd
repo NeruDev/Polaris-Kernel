@@ -1,0 +1,102 @@
+---
+id: "33E10"
+title: "Funciones Onda Esferoidales"
+pilar: "03_analisis_continuidad"
+msc_code: "33E10, 35Q60"
+difficulty: "avanzado"
+tags:
+  - 33E10
+  - 35Q60
+---
+
+# Funciones Onda Esferoidales
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 30 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\displaystyle S^{(1)}_{mn}(\gamma,x) \displaystyle=d_{mn}(\gamma)\mathsf{Ps}^{m}_{n}\left(x,\gamma^{2}\right), \tag{30.1.1}
+$$
+
+$$
+\displaystyle S^{(2)}_{mn}(\gamma,x) \displaystyle=d_{mn}(\gamma)\mathsf{Qs}^{m}_{n}\left(x,\gamma^{2}\right),
+$$
+
+$$
+\displaystyle z \displaystyle=\cos t, \tag{30.2.3}
+$$
+
+$$
+\lambda^{m}_{m}\left(\gamma^{2}\right)<\lambda^{m}_{m+1}\left(\gamma^{2}\right)<\lambda^{m}_{m+2}\left(\gamma^{2}\right)<\cdots, \tag{30.3.1}
+$$
+
+$$
+-1<\frac{\mathrm{d}\lambda^{m}_{n}\left(\gamma^{2}\right)}{\mathrm{d}(\gamma^{2})}<0. \tag{30.3.4}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\displaystyle S^{(1)}_{mn}(\gamma,0) \displaystyle=(-1)^{m}\mathsf{P}^{m}_{n}\left(0\right), \tag{30.1.2}
+$$
+
+$$
+\displaystyle\left.\frac{\mathrm{d}}{\mathrm{d}x}S^{(1)}_{mn}(\gamma,x)\right|_{x=0} \displaystyle=(-1)^{m}\left.\frac{\mathrm{d}}{\mathrm{d}x}\mathsf{P}^{m}_{n}\left(x\right)\right|_{x=0},
+$$
+
+$$
+\frac{\mathrm{d}}{\mathrm{d}z}\left((1-z^{2})\frac{\mathrm{d}w}{\mathrm{d}z}\right)+\left(\lambda+\gamma^{2}(1-z^{2})-\frac{\mu^{2}}{1-z^{2}}\right)w=0. \tag{30.2.1}
+$$
+
+$$
+\frac{{\mathrm{d}}^{2}g}{{\mathrm{d}t}^{2}}+\left(\lambda+\frac{1}{4}+\gamma^{2}{\sin}^{2}t-\frac{\mu^{2}-\frac{1}{4}}{{\sin}^{2}t}\right)g=0, \tag{30.2.2}
+$$
+
+$$
+\displaystyle w(z) \displaystyle=(1-z^{2})^{-\frac{1}{4}}g(t).
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\lim_{N\to\infty}\int_{-1}^{1}{\left|f(x)-\sum_{n=m}^{N}c_{n}\mathsf{Ps}^{m}_{n}\left(x,\gamma^{2}\right)\right|}^{2}\,\mathrm{d}x=0. \tag{30.4.9}
+$$
+
+$$
+\lambda^{m}_{n}\left(\gamma^{2}\right)\sim-\gamma^{2}+\gamma q+\beta_{0}+\beta_{1}\gamma^{-1}+\beta_{2}\gamma^{-2}+\cdots, \tag{30.9.1}
+$$
+
+$$
+\lambda^{m}_{n}\left(\gamma^{2}\right)\sim 2q|\gamma|+c_{0}+c_{1}|\gamma|^{-1}+c_{2}|\gamma|^{-2}+\cdots, \tag{30.9.4}
+$$
+
+$$
+\lambda^{m}_{n}\left(\gamma^{2}\right)=\lim_{d\to\infty}\alpha_{p,d}, \tag{30.16.3}
+$$
+
+$$
+a_{n,k}^{m}(\gamma^{2})=\lim_{d\to\infty}e_{k+p,d}, \tag{30.16.8}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

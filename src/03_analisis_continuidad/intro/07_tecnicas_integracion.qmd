@@ -1,0 +1,67 @@
+---
+title: "Técnicas de Integración Práctica"
+subtitle: "Métodos Avanzados para el Cálculo de Antiderivadas"
+date: "2026-07-22"
+categories: ["análisis", "integración", "cálculo", "antiderivadas"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Técnicas de Integración Práctica
+
+## Introducción
+
+El cálculo de integrales indefinidas o antiderivadas es una habilidad fundamental en el análisis matemático y sus aplicaciones.
+A diferencia de la derivación, que sigue reglas algorítmicas directas, la integración requiere reconocimiento de patrones y la aplicación estratégica de diversas técnicas.
+Este documento aborda las técnicas más comunes y poderosas para evaluar integrales complejas.
+El dominio de estas técnicas es crucial para resolver ecuaciones diferenciales y calcular áreas o volúmenes.
+
+## Integración por Sustitución
+
+El método de sustitución o cambio de variable es la regla de la cadena aplicada a la inversa.
+Se basa en identificar una parte del integrando cuya derivada también está presente, salvo por una constante.
+$$
+\int f(g(x))g'(x) dx = \int f(u) du \quad \text{donde } u = g(x)
+$$
+Esta técnica simplifica la integral transformándola en una forma estándar reconocible.
+
+## Integración por Partes
+
+La integración por partes se deriva de la regla del producto para la diferenciación.
+Es particularmente útil cuando el integrando es un producto de funciones de distinta naturaleza, como polinomios y exponenciales.
+$$
+\int u dv = uv - \int v du
+$$
+La elección adecuada de $u$ y $dv$ es vital; se suele seguir la regla mnemotécnica ILATE (Inversas trigonométricas, Logarítmicas, Algebraicas, Trigonométricas, Exponenciales) para elegir $u$.
+
+## Fracciones Parciales
+
+El método de fracciones parciales se utiliza para integrar funciones racionales, es decir, cocientes de polinomios.
+El objetivo es descomponer la fracción racional compleja en una suma de fracciones más simples que son fácilmente integrables.
+Dependiendo de las raíces del polinomio denominador (reales simples, repetidas o complejas conjugadas), la descomposición toma diferentes formas.
+Una vez descompuesta, cada término se integra usando logaritmos o funciones arcotangente.
+
+## Sustitución Trigonométrica
+
+La sustitución trigonométrica se emplea para evaluar integrales que contienen expresiones radicales de la forma $\sqrt{a^2 - x^2}$, $\sqrt{a^2 + x^2}$ o $\sqrt{x^2 - a^2}$.
+Se aprovechan las identidades pitagóricas para eliminar la raíz cuadrada.
+Por ejemplo, si el integrando contiene $\sqrt{a^2 - x^2}$, se utiliza la sustitución $x = a \sin(\theta)$, lo que transforma el radical en $a \cos(\theta)$.
+
+## Representación Visual
+
+El siguiente gráfico representa el área bajo una curva, cuyo cálculo a menudo requiere técnicas de integración para determinar el valor exacto del área sombreada.
+
+![Área bajo la curva y técnicas de integración](tecnicas_integracion.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $f(x), g(x)$ | Funciones continuas de variable real | función |
+| $u, v$ | Funciones auxiliares para integración por partes | función |
+| $dx, du, dv$ | Diferenciales correspondientes a las variables | diferencial |
+| $a$ | Constante real positiva | constante |
+| $\theta$ | Variable angular para sustituciones trigonométricas | variable |

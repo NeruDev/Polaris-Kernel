@@ -1,0 +1,18 @@
+{
+    "title": "Aritmética Modular Aplicada y Algoritmo de Euclides Extendido",
+    "subtitle": "Fundamentos Algebraicos de la Criptografía Moderna (RSA)",
+    "date": "2026-07-22",
+    "categories": [
+        "teoría de números",
+        "computación",
+        "criptografía",
+        "RSA"
+    ],
+    "format": {
+        "html": {
+            "toc": true,
+            "toc-depth": 3,
+            "math": true
+        }
+    }
+}

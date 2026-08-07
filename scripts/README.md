@@ -1,63 +1,61 @@
 # Documentación de Scripts (`scripts/`)
 
-Este directorio contiene los scripts y orquestadores principales para la construcción, generación de gráficos y manejo de la configuración del proyecto Polaris Kernel.
+Este directorio contiene los scripts y orquestadores principales para la construcción, generación de gráficos, procesamiento de metadatos y traducción técnica de Polaris Kernel.
 
-## Archivos y Funciones Principales
-
-### `automate_image_linking.py`
-Script para vinculación automática de imágenes en los archivos de teoría (Markdown/Quarto). Busca coincidencias y actualiza el contenido con los gráficos generados.
-* `parse_assets_record(record_path)`: Analiza el archivo `GENERATED_ASSETS.md` para obtener la lista de activos registrados.
-* `get_md_files(src_dir)`: Obtiene metadatos e IDs de todos los archivos MD/QMD en la carpeta de teoría.
-* `link_assets()`: Compara y vincula automáticamente las imágenes correspondientes en los archivos de teoría basándose en sus IDs o tags.
+## Orquestación y Compilación Principal
 
 ### `build.py`
-Orquestador unificado de construcción y validación. Delega la compilación a Quarto y es el punto de entrada para el CI/CD (`pages.yml`).
-* `parse_args()`: Procesa los argumentos de la línea de comandos para el build.
-* `validate_project(...)`: Valida la integridad de archivos, codificaciones y esquemas JSON.
-* `run_assets(...)`: Llama a `generate_assets.py` si se activa la generación gráfica manual.
-* `run_site(...)`: Invoca a `quarto render` para construir el sitio web.
-* `run_build()`: Función principal que coordina el flujo de sincronización, validación y renderizado.
+Orquestador unificado de construcción y validación del proyecto. Delega la compilación a Quarto y constituye el punto de entrada para la integración continua (CI/CD mediante GitHub Actions).
+* `parse_args()`: Procesa los argumentos de línea de comandos.
+* `validate_project(...)`: Valida la integridad de archivos, codificaciones UTF-8 y esquemas JSON.
+* `run_assets(...)`: Invoca la generación masiva de gráficos.
+* `run_site(...)`: Ejecuta `quarto render` para construir el sitio web final.
 
 ### `config.py`
-Define configuraciones y estructuras de rutas estáticas.
-* `Paths (clase)`: Centraliza todas las rutas críticas del proyecto y define el método `from_project_root()`.
-* `BuildConfig (clase)`: Almacena parámetros de compilación como banderas de advertencias y verbosidad.
+Define configuraciones y rutas estáticas centralizadas.
+* `Paths (clase)`: Administra las rutas críticas del proyecto relativas a la raíz.
+* `BuildConfig (clase)`: Configura parámetros de compilación, banderas de advertencia y verbosidad.
+
+## Gráficos Vectoriales (`grafics/` y `generate_assets.py`)
 
 ### `generate_assets.py`
-Orquestador de generación de gráficos.
-Mantiene retrocompatibilidad con Python/Matplotlib y coordina la ejecución de generadores `.py`.
-* `run_graphic_script(script_path)`: Ejecuta de manera segura un único script generador.
-* `orchestrate_assets()`: Escanea el directorio de scripts gráficos y los ejecuta en lote, proporcionando un reporte final.
+Orquestador de generación gráfica que escanea y ejecuta scripts en lote.
 
-### `grafics/` (Subdirectorio Gráfico)
-Contiene scripts especializados en la generación de activos gráficos en el nuevo paradigma basado en Typst.
+### `grafics/` (Subdirectorio de Gráficos Typst)
+Especializado en la compilación de diagramas vectoriales bajo el nuevo paradigma basado en Typst:
 * `compile_typst.py`: Compilador automatizado de archivos Typst a SVG en lote que actualiza el registro en `metadata/GENERATED_ASSETS.md`.
-* `gen_jerarquia_numeros.py`: Script para compilar el gráfico `jerarquia_numeros.typ` usando Typst.
-* `typst_src/`: Directorio donde se almacenan las plantillas y archivos fuente `.typ`.
+* `typst_src/`: Directorio que alberga los archivos fuente `.typ` de los diagramas.
+
+### `automate_image_linking.py` y `fix_orphaned_images.py`
+* `automate_image_linking.py`: Vincula automáticamente las imágenes SVG generadas en los archivos de teoría (`src/`) basándose en IDs o etiquetas.
+* `fix_orphaned_images.py`: Detecta y soluciona enlaces a imágenes SVG desasociadas o huérfanas.
+
+## Procesamiento y Traducción de la DLMF (`docs/DLMF-markdown-main/`)
+
+### Sanitización y Verificación Matemática
+* `sanitizar_dlmf.py`: Corrige macros LaTeX no estándares (`\ifrac`, `\NVar`, `\cfracstyle`, entidades HTML) para garantizar compatibilidad con KaTeX/MathJax.
+* `verificar_dlmf.py`: Audita masivamente las expresiones matemáticas en busca de inconsistencias o errores de sintaxis.
+
+### Motores de Traducción Modular
+* `inicializar_traduccion_dlmf.py`: Genera las tablas de contenido traducidas (`toc_es.md` y `toc_full_es.md`).
+* `glosario_matematico.py`: Contiene el glosario terminológico estandarizado en español técnico.
+* `traducir_dlmf.py`, `traducir_prosa_completa.py`, `traducir_oraciones_dlmf.py`, `traducir_seccion_profunda.py`: Automatizan la traducción modular de la prosa explicativa manteniendo intactas el 100% de las expresiones LaTeX.
+* `verificar_traduccion_dlmf.py` y `auditar_prosa_ingles.py`: Verifican la calidad del texto traducido y confirman la preservación de fórmulas.
+
+### Extracción y Refinamiento de Metadatos DLMF
+* `generar_indices_dlmf.py`: Genera `DLMF_indice_simplificado.json`, `DLMF_indice_completo.json` y la estructura inicial de los 36 capítulos en `metadata/DLMF_data/`.
+* `extraer_contenido_dlmf.py`: Parsea los 872 archivos Markdown extraendo formulas LaTeX, palabras clave y tablas hacia los archivos JSON.
+* `auditar_extraccion_dlmf.py`: Realiza auditoría de tipos de datos e integridad estructural.
+* `refinar_metadata_dlmf.py`: Depura arreglos vacíos y limpia palabras clave conceptuales puras.
+
+## Gestión de Taxonomía MSC2020
 
 ### `update_taxonomy_pillars.py`
-Actualiza dinámicamente la taxonomía base MSC cruzando datos con los pilares estructurales.
-* `update_taxonomy()`: Carga el overlay, mapea los códigos MSC hacia pilares principales y secundarios, y sobrescribe `msc_taxonomy.all.json`.
+Actualiza la taxonomía base MSC2020 cruzando datos con el overlay de los 6 Pilares de Bourbaki en `msc_taxonomy.all.json`.
 
-## Flujo de Trabajo y Orquestación
+## Flujo de Trabajo y Conexiones
 
-El flujo principal está dirigido por `build.py`, el cual coordina las validaciones y el proceso de renderizado:
-1. **Sincronización de Metadatos:** Se invoca `MetadataAgent` (en `scripts/io/metadata_agent.py`) para leer el frontmatter YAML de los archivos `.qmd`/`.md` y actualizar/generar los archivos `.json` adyacentes (ADR-002).
-2. **Validación:** Se ejecutan verificaciones de sintaxis matemática, codificación UTF-8, y estructura semántica (Semantic Line Breaks) en todo el repositorio. Las alertas se recopilan mediante la clase `ErrorCollector`.
-3. **Vinculación de Activos (Opcional):** `automate_image_linking.py` puede usarse para inyectar enlaces a imágenes SVG generadas en el texto de los archivos fuente, respetando los bloques de frontmatter YAML.
-4. **Generación de Activos (Opcional):** Si se habilita, `generate_assets.py` orquesta la compilación masiva de gráficos vectoriales (principalmente Typst hacia SVG).
-5. **Renderizado Quarto:** `build.py` invoca el comando `quarto render` para construir el sitio estático final bajo el directorio `site/`.
-6. **Auditoría de Enlaces:** Finalmente, se revisan los enlaces internos rotos en el directorio `site/` utilizando las utilidades.
-
-## Conexión entre Directorios
-
-* **Hacia `utils/`:** Los scripts de orquestación dependen fundamentalmente del directorio de utilidades. Extraen constantes de rutas higiénicas (`utils/pathing.py`), utilizan funciones compartidas de renderizado/auditoría (`utils/links.py`, `utils/markdown.py`), y centralizan los mensajes de consola (`utils/logging.py`).
-* **Hacia `src/` y `metadata/`:** `scripts/` actúa sobre el pilar teórico (`src/`). Extrae su información, parsea el frontmatter YAML, compila scripts de gráficos hacia activos en `src/`, y actualiza el registro en `metadata/`.
-* **Hacia `tests/`:** Las reglas de integridad y el comportamiento esperado del pipeline en `scripts/` se verifican mediante las pruebas unitarias y de integración contenidas en el directorio de pruebas.
-
-## Manejo de Datos (Data Handling)
-
-* **Formatos Principales:** El sistema opera principalmente con archivos Markdown (`.md`) y Quarto Markdown (`.qmd`) como fuente de verdad teórica.
-* **Metadatos (ADR-002):** Existe una sincronización obligatoria entre el YAML frontmatter de los documentos y archivos JSON adyacentes ("Adyacencia Semántica"). Esto es facilitado por el `MetadataAgent`.
-* **Generación Vectorial:** Los scripts fuente de Typst se compilan a SVG, que luego son vinculados y presentados a través del sitio estático sin comprometer binarios pesados en el repositorio de código.
-* **Reportes de Error:** Durante el proceso de construcción, las advertencias y errores no interrumpen de inmediato (salvo errores críticos) sino que se acumulan en un objeto central, evaluando al final contra el umbral configurado (`config.strict`).
+* **Hacia `utils/`:** Depende de utilidades de rutas (`utils/pathing.py`), enlaces (`utils/links.py`), parseo (`utils/markdown.py`) y registro (`utils/logging.py`).
+* **Hacia `src/`:** Procesa, valida, traduce e inyecta gráficos en las notas teóricas de `src/`.
+* **Hacia `metadata/`:** Lee y actualiza los índices JSON, la taxonomía MSC y el manifiesto de activos.
+* **Hacia `tests/`:** El comportamiento y robustez de estos scripts son validados por la suite de pruebas unitarias.

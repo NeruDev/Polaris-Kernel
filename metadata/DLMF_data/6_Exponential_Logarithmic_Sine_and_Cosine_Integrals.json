@@ -1,0 +1,2116 @@
+{
+  "capitulo": 6,
+  "titulo_original": "Exponential, Logarithmic, Sine, and Cosine Integrals",
+  "archivo_metadata": "metadata/DLMF_data/6_Exponential_Logarithmic_Sine_and_Cosine_Integrals.json",
+  "rutas_docs": {
+    "docs_original": "docs/DLMF-markdown-main/markdown/6/6.md",
+    "docs_directorio_original": "docs/DLMF-markdown-main/markdown/6/",
+    "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.md"
+  },
+  "total_categorias": 4,
+  "total_secciones": 21,
+  "categorias": [
+    {
+      "categoria": "Notation",
+      "secciones": [
+        {
+          "seccion_id": "6.1",
+          "titulo_original": "Special Notation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.1.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.1.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.1 Special Notation",
+            "prosa_teorica": "(For other notation see Notation for the Special Functions .)\nUnless otherwise noted, primes indicate derivatives with respect to the argument.\nThe main functions treated in this chapter are the exponential integrals $\\operatorname{Ei}\\left(x\\right)$ , $E_{1}\\left(z\\right)$ , and $\\operatorname{Ein}\\left(z\\right)$ ; the logarithmic integral $\\operatorname{li}\\left(x\\right)$ ; the sine integrals $\\operatorname{Si}\\left(z\\right)$ and $\\operatorname{si}\\left(z\\right)$ ; the cosine integrals $\\operatorname{Ci}\\left(z\\right)$ and $\\operatorname{Cin}\\left(z\\right)$ .",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "auxiliary functions",
+                "cosine integrals",
+                "exponential integrals",
+                "logarithmic integral",
+                "notation",
+                "sine integrals"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "tablas": [
+              {
+                "encabezados": [
+                  "$x$",
+                  "real variable."
+                ],
+                "filas": [
+                  {
+                    "$x$": "$z$",
+                    "real variable.": "complex variable."
+                  },
+                  {
+                    "$x$": "$n$",
+                    "real variable.": "nonnegative integer."
+                  },
+                  {
+                    "$x$": "$\\delta$",
+                    "real variable.": "arbitrary small positive constant."
+                  },
+                  {
+                    "$x$": "$\\gamma$",
+                    "real variable.": "Euler’s constant (§ 5.2(ii) )."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Properties",
+      "secciones": [
+        {
+          "seccion_id": "6.2",
+          "titulo_original": "Definitions and Interrelations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.2.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.2.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.2 Definitions and Interrelations",
+            "prosa_teorica": "The *principal value* of the exponential integral $E_{1}\\left(z\\right)$ is defined by\nwhere the path does not cross the negative real axis or pass through the origin. As in the case of the logarithm (§ 4.2(i) ) there is a cut along the interval $(-\\infty,0]$ and the principal value is two-valued on $(-\\infty,0)$ .\n*Unless indicated otherwise* , it is assumed throughout the DLMF that $E_{1}\\left(z\\right)$ assumes its principal value. This is also true of the functions $\\operatorname{Ci}\\left(z\\right)$ and $\\operatorname{Chi}\\left(z\\right)$ defined in § 6.2(ii) .\n$\\operatorname{Ein}\\left(z\\right)$ is sometimes called the *complementary exponential integral* . It is entire.\nIn the next three equations $x>0$ .\n( $\\operatorname{Ei}\\left(x\\right)$ is undefined when $x=0$ , or when $x$ is not real.)\nThe *logarithmic integral* is defined by\nThe generalized exponential integral $E_{p}\\left(z\\right)$ , $p\\in\\mathbb{C}$ , is treated in Chapter [8](./8.md \"Chapter 8 Incomplete Gamma and Related Functions\") .\n$\\operatorname{Si}\\left(z\\right)$ is an odd entire function.\nwhere the path does not cross the negative real axis or pass through the origin. This is the *principal value* ; compare ( 6.2.1 ).\n$\\operatorname{Cin}\\left(z\\right)$ is an even entire function.\n<a id=\"E14\"></a>\n<a id=\"E21\"></a>",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.2.1",
+                "latex": "E_{1}\\left(z\\right)=\\int_{z}^{\\infty}\\frac{e^{-t}}{t}\\,\\mathrm{d}t, \\tag{6.2.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.2.2",
+                "latex": "E_{1}\\left(z\\right)=e^{-z}\\int_{0}^{\\infty}\\frac{e^{-t}}{t+z}\\,\\mathrm{d}t, \\tag{6.2.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "6.2.3",
+                "latex": "\\operatorname{Ein}\\left(z\\right)=\\int_{0}^{z}\\frac{1-e^{-t}}{t}\\,\\mathrm{d}t. \\tag{6.2.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "6.2.4",
+                "latex": "E_{1}\\left(z\\right)=\\operatorname{Ein}\\left(z\\right)-\\ln z-\\gamma. \\tag{6.2.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "6.2.5",
+                "latex": "\\operatorname{Ei}\\left(x\\right)=-\\,\\fint_{-x}^{\\infty}\\frac{e^{-t}}{t}\\,\\mathrm{d}t=\\fint_{-\\infty}^{x}\\frac{e^{t}}{t}\\,\\mathrm{d}t, \\tag{6.2.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "6.2.6",
+                "latex": "\\operatorname{Ei}\\left(-x\\right)=-\\int_{x}^{\\infty}\\frac{e^{-t}}{t}\\,\\mathrm{d}t=-E_{1}\\left(x\\right), \\tag{6.2.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "6.2.7",
+                "latex": "\\operatorname{Ei}\\left(\\pm x\\right)=-\\operatorname{Ein}\\left(\\mp x\\right)+\\ln x+\\gamma. \\tag{6.2.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "6.2.8",
+                "latex": "\\operatorname{li}\\left(x\\right)=\\fint_{0}^{x}\\frac{\\,\\mathrm{d}t}{\\ln t}=\\operatorname{Ei}\\left(\\ln x\\right), \\tag{6.2.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "6.2.9",
+                "latex": "\\operatorname{Si}\\left(z\\right)=\\int_{0}^{z}\\frac{\\sin t}{t}\\,\\mathrm{d}t. \\tag{6.2.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "6.2.10",
+                "latex": "\\operatorname{si}\\left(z\\right)=-\\int_{z}^{\\infty}\\frac{\\sin t}{t}\\,\\mathrm{d}t=\\operatorname{Si}\\left(z\\right)-\\tfrac{1}{2}\\pi. \\tag{6.2.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "6.2.11",
+                "latex": "\\operatorname{Ci}(z)=-\\int_{z}^{\\infty}\\frac{\\cos t}{t}\\,\\mathrm{d}t, \\tag{6.2.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "6.2.12",
+                "latex": "\\operatorname{Cin}\\left(z\\right)=\\int_{0}^{z}\\frac{1-\\cos t}{t}\\,\\mathrm{d}t. \\tag{6.2.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "6.2.13",
+                "latex": "\\operatorname{Ci}\\left(z\\right)=-\\operatorname{Cin}\\left(z\\right)+\\ln z+\\gamma. \\tag{6.2.13}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "6.2.14",
+                "latex": "\\displaystyle\\lim_{x\\to\\infty}\\operatorname{Si}\\left(x\\right) \\displaystyle=\\tfrac{1}{2}\\pi, \\tag{6.2.14}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\lim_{x\\to\\infty}\\operatorname{Ci}\\left(x\\right) \\displaystyle=0."
+              },
+              {
+                "id": "EGx1",
+                "tag": "6.2.15",
+                "latex": "\\displaystyle\\operatorname{Shi}\\left(z\\right) \\displaystyle=\\int_{0}^{z}\\frac{\\sinh t}{t}\\,\\mathrm{d}t, \\tag{6.2.15}"
+              },
+              {
+                "id": "",
+                "tag": "6.2.16",
+                "latex": "\\displaystyle\\operatorname{Chi}\\left(z\\right) \\displaystyle=\\gamma+\\ln z+\\int_{0}^{z}\\frac{\\cosh t-1}{t}\\,\\mathrm{d}t. \\tag{6.2.16}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "6.2.17",
+                "latex": "\\displaystyle\\mathrm{f}\\left(z\\right) \\displaystyle=\\phantom{+}\\operatorname{Ci}\\left(z\\right)\\sin z-\\operatorname{si}\\left(z\\right)\\cos z, \\tag{6.2.17}"
+              },
+              {
+                "id": "",
+                "tag": "6.2.18",
+                "latex": "\\displaystyle\\mathrm{g}\\left(z\\right) \\displaystyle=-\\operatorname{Ci}\\left(z\\right)\\cos z-\\operatorname{si}\\left(z\\right)\\sin z. \\tag{6.2.18}"
+              },
+              {
+                "id": "",
+                "tag": "6.2.19",
+                "latex": "\\displaystyle\\operatorname{Si}\\left(z\\right) \\displaystyle=\\tfrac{1}{2}\\pi-\\mathrm{f}\\left(z\\right)\\cos z-\\mathrm{g}\\left(z\\right)\\sin z, \\tag{6.2.19}"
+              },
+              {
+                "id": "",
+                "tag": "6.2.20",
+                "latex": "\\displaystyle\\operatorname{Ci}\\left(z\\right) \\displaystyle=\\mathrm{f}\\left(z\\right)\\sin z-\\mathrm{g}\\left(z\\right)\\cos z. \\tag{6.2.20}"
+              },
+              {
+                "id": "Ex3",
+                "tag": "6.2.21",
+                "latex": "\\displaystyle\\frac{\\mathrm{d}\\mathrm{f}\\left(z\\right)}{\\mathrm{d}z} \\displaystyle=-\\mathrm{g}\\left(z\\right), \\tag{6.2.21}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle\\frac{\\mathrm{d}\\mathrm{g}\\left(z\\right)}{\\mathrm{d}z} \\displaystyle=\\mathrm{f}\\left(z\\right)-\\frac{1}{z}."
+              }
+            ],
+            "ecuaciones_latex": [
+              "E_{1}\\left(z\\right)=\\int_{z}^{\\infty}\\frac{e^{-t}}{t}\\,\\mathrm{d}t, \\tag{6.2.1}",
+              "E_{1}\\left(z\\right)=e^{-z}\\int_{0}^{\\infty}\\frac{e^{-t}}{t+z}\\,\\mathrm{d}t, \\tag{6.2.2}",
+              "\\operatorname{Ein}\\left(z\\right)=\\int_{0}^{z}\\frac{1-e^{-t}}{t}\\,\\mathrm{d}t. \\tag{6.2.3}",
+              "E_{1}\\left(z\\right)=\\operatorname{Ein}\\left(z\\right)-\\ln z-\\gamma. \\tag{6.2.4}",
+              "\\operatorname{Ei}\\left(x\\right)=-\\,\\fint_{-x}^{\\infty}\\frac{e^{-t}}{t}\\,\\mathrm{d}t=\\fint_{-\\infty}^{x}\\frac{e^{t}}{t}\\,\\mathrm{d}t, \\tag{6.2.5}",
+              "\\operatorname{Ei}\\left(-x\\right)=-\\int_{x}^{\\infty}\\frac{e^{-t}}{t}\\,\\mathrm{d}t=-E_{1}\\left(x\\right), \\tag{6.2.6}",
+              "\\operatorname{Ei}\\left(\\pm x\\right)=-\\operatorname{Ein}\\left(\\mp x\\right)+\\ln x+\\gamma. \\tag{6.2.7}",
+              "\\operatorname{li}\\left(x\\right)=\\fint_{0}^{x}\\frac{\\,\\mathrm{d}t}{\\ln t}=\\operatorname{Ei}\\left(\\ln x\\right), \\tag{6.2.8}",
+              "\\operatorname{Si}\\left(z\\right)=\\int_{0}^{z}\\frac{\\sin t}{t}\\,\\mathrm{d}t. \\tag{6.2.9}",
+              "\\operatorname{si}\\left(z\\right)=-\\int_{z}^{\\infty}\\frac{\\sin t}{t}\\,\\mathrm{d}t=\\operatorname{Si}\\left(z\\right)-\\tfrac{1}{2}\\pi. \\tag{6.2.10}",
+              "\\operatorname{Ci}(z)=-\\int_{z}^{\\infty}\\frac{\\cos t}{t}\\,\\mathrm{d}t, \\tag{6.2.11}",
+              "\\operatorname{Cin}\\left(z\\right)=\\int_{0}^{z}\\frac{1-\\cos t}{t}\\,\\mathrm{d}t. \\tag{6.2.12}",
+              "\\operatorname{Ci}\\left(z\\right)=-\\operatorname{Cin}\\left(z\\right)+\\ln z+\\gamma. \\tag{6.2.13}",
+              "\\displaystyle\\lim_{x\\to\\infty}\\operatorname{Si}\\left(x\\right) \\displaystyle=\\tfrac{1}{2}\\pi, \\tag{6.2.14}",
+              "\\displaystyle\\lim_{x\\to\\infty}\\operatorname{Ci}\\left(x\\right) \\displaystyle=0.",
+              "\\displaystyle\\operatorname{Shi}\\left(z\\right) \\displaystyle=\\int_{0}^{z}\\frac{\\sinh t}{t}\\,\\mathrm{d}t, \\tag{6.2.15}",
+              "\\displaystyle\\operatorname{Chi}\\left(z\\right) \\displaystyle=\\gamma+\\ln z+\\int_{0}^{z}\\frac{\\cosh t-1}{t}\\,\\mathrm{d}t. \\tag{6.2.16}",
+              "\\displaystyle\\mathrm{f}\\left(z\\right) \\displaystyle=\\phantom{+}\\operatorname{Ci}\\left(z\\right)\\sin z-\\operatorname{si}\\left(z\\right)\\cos z, \\tag{6.2.17}",
+              "\\displaystyle\\mathrm{g}\\left(z\\right) \\displaystyle=-\\operatorname{Ci}\\left(z\\right)\\cos z-\\operatorname{si}\\left(z\\right)\\sin z. \\tag{6.2.18}",
+              "\\displaystyle\\operatorname{Si}\\left(z\\right) \\displaystyle=\\tfrac{1}{2}\\pi-\\mathrm{f}\\left(z\\right)\\cos z-\\mathrm{g}\\left(z\\right)\\sin z, \\tag{6.2.19}",
+              "\\displaystyle\\operatorname{Ci}\\left(z\\right) \\displaystyle=\\mathrm{f}\\left(z\\right)\\sin z-\\mathrm{g}\\left(z\\right)\\cos z. \\tag{6.2.20}",
+              "\\displaystyle\\frac{\\mathrm{d}\\mathrm{f}\\left(z\\right)}{\\mathrm{d}z} \\displaystyle=-\\mathrm{g}\\left(z\\right), \\tag{6.2.21}",
+              "\\displaystyle\\frac{\\mathrm{d}\\mathrm{g}\\left(z\\right)}{\\mathrm{d}z} \\displaystyle=\\mathrm{f}\\left(z\\right)-\\frac{1}{z}."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "complementary exponential integral",
+                "definition",
+                "exponential integrals",
+                "interrelations",
+                "logarithmic integral",
+                "principal value",
+                "relation to exponential integrals",
+                "relations to other functions",
+                "cosine integrals",
+                "sine integrals",
+                "value at infinity",
+                "hyperbolic analog",
+                "auxiliary functions for sine and cosine integrals"
+              ],
+              "definiciones": [
+                "$\\operatorname{Ei}\\left(x\\right)$ : exponential integral",
+                "$\\operatorname{Shi}\\left(z\\right)$ : hyperbolic sine integral",
+                "$\\operatorname{Chi}\\left(z\\right)$ : hyperbolic cosine integral",
+                "$\\mathrm{f}\\left(z\\right)$ : auxiliary function for sine and cosine integrals",
+                "$\\mathrm{g}\\left(z\\right)$ : auxiliary function for sine and cosine integrals"
+              ],
+              "simbolos": [
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\operatorname{Ci}\\left(z\\right)$: cosine integral , $\\operatorname{Si}\\left(z\\right)$: sine integral and $x$: real variable",
+                "$\\,\\mathrm{d}x$: differential of $x$ , $\\sinhz$: hyperbolic sine function , $\\int$: integral and $z$: complex variable",
+                "$\\gamma$: Euler’s constant , $\\,\\mathrm{d}x$: differential of $x$ , $\\coshz$: hyperbolic cosine function , $\\int$: integral , $\\lnz$: principal branch of logarithm function and $z$: complex variable",
+                "$\\cosz$: cosine function , $\\operatorname{Ci}\\left(z\\right)$: cosine integral , $\\operatorname{si}\\left(z\\right)$: sine integral , $\\sinz$: sine function and $z$: complex variable",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\cosz$: cosine function , $\\sinz$: sine function , $\\mathrm{f}\\left(z\\right)$: auxiliary function for sine and cosine integrals , $\\mathrm{g}\\left(z\\right)$: auxiliary function for sine and cosine integrals , $\\operatorname{Si}\\left(z\\right)$: sine integral and $z$: complex variable",
+                "$\\cosz$: cosine function , $\\operatorname{Ci}\\left(z\\right)$: cosine integral , $\\sinz$: sine function , $\\mathrm{f}\\left(z\\right)$: auxiliary function for sine and cosine integrals , $\\mathrm{g}\\left(z\\right)$: auxiliary function for sine and cosine integrals and $z$: complex variable",
+                "$\\frac{\\mathrm{d}f}{\\mathrm{d}x}$: derivative of $f$ with respect to $x$ , $\\mathrm{f}\\left(z\\right)$: auxiliary function for sine and cosine integrals , $\\mathrm{g}\\left(z\\right)$: auxiliary function for sine and cosine integrals and $z$: complex variable"
+              ],
+              "referenciado_por": [
+                "§10.38",
+                "§13.18(ii)",
+                "§13.6(ii)",
+                "§4.10(i)",
+                "§6.7(i)",
+                "§7.5",
+                "§10.15",
+                "§10.60(iii)",
+                "§6.2(i)",
+                "§8.21(v)",
+                "§6.16(i)",
+                "§6.4",
+                "§6.5",
+                "§6.12(ii)"
+              ],
+              "notas_bibliograficas": [
+                "See Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), pp. 40–41).",
+                "See Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), pp. 41–42)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "5.2.25 (extended form of)",
+                "5.2.3",
+                "5.2.4",
+                "5.2.6",
+                "5.2.7",
+                "5.2.8",
+                "5.2.9"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.2 and Ch.6",
+                "Annotations for §6.2(ii) , §6.2 and Ch.6",
+                "Annotations for §6.2(ii) , §6.2(ii) , §6.2 and Ch.6",
+                "Annotations for §6.2(iii) , §6.2 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              },
+              {
+                "texto": "8",
+                "archivo_destino": "8.md",
+                "titulo_referencia": "Chapter 8 Incomplete Gamma and Related Functions"
+              },
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.3",
+          "titulo_original": "Graphics",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.3.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.3.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.3 Graphics",
+            "prosa_teorica": "<a id=\"F1\"></a>\n![Figure 6.3.1: The exponential integrals $E_{1}\\left(x\\right)$ and $\\operatorname{Ei}\\left(x\\right)$ , $0<x\\leq 2$ .](../html/6/3/F1.png)\n<a id=\"F2\"></a>\n![Figure 6.3.2: The sine and cosine integrals $\\operatorname{Si}\\left(x\\right),\\operatorname{Ci}\\left(x\\right)$ , $0\\leq x\\leq 15$ .](../html/6/3/F2.png)\nFor a graph of $\\operatorname{li}\\left(x\\right)$ see Figure 6.16.2 .\n<a id=\"F3\"></a>\n![Figure 6.3.3: $|E_{1}\\left(x+iy\\right)|$ , $-4\\leq x\\leq 4$ , $-4\\leq y\\leq 4$ . Principal value. There is a cut along the negative real axis. Also, $|E_{1}\\left(z\\right)|\\to\\infty$ logarithmically as $z\\to 0$ . 3D Help](../html/6/3/F3.png)",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "exponential integrals",
+                "graphics",
+                "cosine integrals",
+                "sine integrals"
+              ],
+              "simbolos": [
+                "$E_{1}\\left(z\\right)$: exponential integral , $\\operatorname{Ei}\\left(x\\right)$: exponential integral and $x$: real variable",
+                "$\\operatorname{Ci}\\left(z\\right)$: cosine integral , $\\operatorname{Si}\\left(z\\right)$: sine integral and $x$: real variable",
+                "$E_{1}\\left(z\\right)$: exponential integral , $\\mathrm{i}$: imaginary unit , $x$: real variable and $z$: complex variable"
+              ],
+              "referenciado_por": [
+                "§6.16(i)"
+              ],
+              "notas_bibliograficas": [
+                "These graphs were produced at NIST.",
+                "This surface was produced at NIST."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.3 and Ch.6",
+                "Annotations for §6.3(i) , §6.3 and Ch.6",
+                "Annotations for §6.3(ii) , §6.3 and Ch.6"
+              ]
+            },
+            "estado": "completado"
+          }
+        },
+        {
+          "seccion_id": "6.4",
+          "titulo_original": "Analytic Continuation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.4.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.4.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.4 Analytic Continuation",
+            "prosa_teorica": "Analytic continuation of the principal value of $E_{1}\\left(z\\right)$ yields a multi-valued function with branch points at $z=0$ and $z=\\infty$ . The general value of $E_{1}\\left(z\\right)$ is given by\ncompare ( 6.2.4 ) and ( 4.2.6 ). Thus\nand\nThe general values of the other functions are defined in a similar manner, and\n*Unless indicated otherwise* , in the rest of this chapter and elsewhere in the DLMF the functions $E_{1}\\left(z\\right)$ , $\\operatorname{Ci}\\left(z\\right)$ , $\\operatorname{Chi}\\left(z\\right)$ , $\\mathrm{f}\\left(z\\right)$ , and $\\mathrm{g}\\left(z\\right)$ assume their principal values, that is, the branches that are real on the positive real axis and two-valued on the negative real axis.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.4.1",
+                "latex": "E_{1}\\left(z\\right)=\\operatorname{Ein}\\left(z\\right)-\\operatorname{Ln}z-\\gamma; \\tag{6.4.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.4.2",
+                "latex": "E_{1}\\left(ze^{2m\\pi i}\\right)=E_{1}\\left(z\\right)-2m\\pi i, \\tag{6.4.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "6.4.3",
+                "latex": "E_{1}\\left(ze^{\\pm\\pi i}\\right)=\\operatorname{Ein}\\left(-z\\right)-\\ln z-\\gamma\\mp\\pi i, \\tag{6.4.3}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "6.4.4",
+                "latex": "\\displaystyle\\operatorname{Ci}\\left(ze^{\\pm\\pi i}\\right) \\displaystyle=\\pm\\pi i+\\operatorname{Ci}\\left(z\\right), \\tag{6.4.4}"
+              },
+              {
+                "id": "",
+                "tag": "6.4.5",
+                "latex": "\\displaystyle\\operatorname{Chi}\\left(ze^{\\pm\\pi i}\\right) \\displaystyle=\\pm\\pi i+\\operatorname{Chi}\\left(z\\right), \\tag{6.4.5}"
+              },
+              {
+                "id": "",
+                "tag": "6.4.6",
+                "latex": "\\displaystyle\\mathrm{f}\\left(ze^{\\pm\\pi i}\\right) \\displaystyle=\\pi e^{\\mp iz}-\\mathrm{f}\\left(z\\right), \\tag{6.4.6}"
+              },
+              {
+                "id": "",
+                "tag": "6.4.7",
+                "latex": "\\displaystyle\\mathrm{g}\\left(ze^{\\pm\\pi i}\\right) \\displaystyle=\\mp\\pi ie^{\\mp iz}+\\mathrm{g}\\left(z\\right). \\tag{6.4.7}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "E_{1}\\left(z\\right)=\\operatorname{Ein}\\left(z\\right)-\\operatorname{Ln}z-\\gamma; \\tag{6.4.1}",
+              "E_{1}\\left(ze^{2m\\pi i}\\right)=E_{1}\\left(z\\right)-2m\\pi i, \\tag{6.4.2}",
+              "E_{1}\\left(ze^{\\pm\\pi i}\\right)=\\operatorname{Ein}\\left(-z\\right)-\\ln z-\\gamma\\mp\\pi i, \\tag{6.4.3}",
+              "\\displaystyle\\operatorname{Ci}\\left(ze^{\\pm\\pi i}\\right) \\displaystyle=\\pm\\pi i+\\operatorname{Ci}\\left(z\\right), \\tag{6.4.4}",
+              "\\displaystyle\\operatorname{Chi}\\left(ze^{\\pm\\pi i}\\right) \\displaystyle=\\pm\\pi i+\\operatorname{Chi}\\left(z\\right), \\tag{6.4.5}",
+              "\\displaystyle\\mathrm{f}\\left(ze^{\\pm\\pi i}\\right) \\displaystyle=\\pi e^{\\mp iz}-\\mathrm{f}\\left(z\\right), \\tag{6.4.6}",
+              "\\displaystyle\\mathrm{g}\\left(ze^{\\pm\\pi i}\\right) \\displaystyle=\\mp\\pi ie^{\\mp iz}+\\mathrm{g}\\left(z\\right). \\tag{6.4.7}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "analytic continuation",
+                "auxiliary functions",
+                "auxiliary functions for sine and cosine integrals",
+                "cosine integrals",
+                "exponential integrals",
+                "hyperbolic analog",
+                "principal values"
+              ],
+              "simbolos": [
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\operatorname{Ci}\\left(z\\right)$: cosine integral , $\\mathrm{e}$: base of natural logarithm , $\\mathrm{i}$: imaginary unit and $z$: complex variable",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathrm{e}$: base of natural logarithm , $\\operatorname{Chi}\\left(z\\right)$: hyperbolic cosine integral , $\\mathrm{i}$: imaginary unit and $z$: complex variable",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathrm{e}$: base of natural logarithm , $\\mathrm{i}$: imaginary unit , $\\mathrm{f}\\left(z\\right)$: auxiliary function for sine and cosine integrals and $z$: complex variable",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathrm{e}$: base of natural logarithm , $\\mathrm{i}$: imaginary unit , $\\mathrm{g}\\left(z\\right)$: auxiliary function for sine and cosine integrals and $z$: complex variable"
+              ],
+              "referenciado_por": [
+                "§6.18(i)",
+                "§6.4",
+                "§6.12(ii)"
+              ],
+              "notas_bibliograficas": [
+                "For ( 6.4.1 ) see Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), p. 40). ( 6.4.3 ) follows from ( 6.6.2 ) and ( 6.6.4 ). ( 6.4.4 ) and ( 6.4.5 ) follow from ( 6.2.13 ) and ( 6.2.16 ). ( 6.4.6 ) and ( 6.4.7 ) follow from ( 6.2.17 ), ( 6.2.18 ), and ( 6.4.4 )."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.4 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.5",
+          "titulo_original": "Further Interrelations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.5.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.5.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.5 Further Interrelations",
+            "prosa_teorica": "When $x>0$ ,\nWhen $|\\operatorname{ph}z|<\\frac{1}{2}\\pi$ ,",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.5.1",
+                "latex": "E_{1}\\left(-x\\pm i0\\right)=-\\operatorname{Ei}\\left(x\\right)\\mp i\\pi, \\tag{6.5.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.5.2",
+                "latex": "\\operatorname{Ei}\\left(x\\right)=-\\tfrac{1}{2}(E_{1}\\left(-x+i0\\right)+E_{1}\\left(-x-i0\\right)), \\tag{6.5.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "6.5.3",
+                "latex": "\\tfrac{1}{2}(\\operatorname{Ei}\\left(x\\right)+E_{1}\\left(x\\right))=\\operatorname{Shi}\\left(x\\right)=-i\\operatorname{Si}\\left(ix\\right), \\tag{6.5.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "6.5.4",
+                "latex": "\\tfrac{1}{2}(\\operatorname{Ei}\\left(x\\right)-E_{1}\\left(x\\right))=\\operatorname{Chi}\\left(x\\right)=\\operatorname{Ci}\\left(ix\\right)-\\tfrac{1}{2}\\pi i. \\tag{6.5.4}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "6.5.5",
+                "latex": "\\displaystyle\\operatorname{Si}\\left(z\\right) \\displaystyle=\\tfrac{1}{2}i(E_{1}\\left(-iz\\right)-E_{1}\\left(iz\\right))+\\tfrac{1}{2}\\pi, \\tag{6.5.5}"
+              },
+              {
+                "id": "",
+                "tag": "6.5.6",
+                "latex": "\\displaystyle\\operatorname{Ci}\\left(z\\right) \\displaystyle=-\\tfrac{1}{2}(E_{1}\\left(iz\\right)+E_{1}\\left(-iz\\right)), \\tag{6.5.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "6.5.7",
+                "latex": "\\mathrm{g}\\left(z\\right)\\pm i\\mathrm{f}\\left(z\\right)=E_{1}\\left(\\mp iz\\right)e^{\\mp iz}. \\tag{6.5.7}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "E_{1}\\left(-x\\pm i0\\right)=-\\operatorname{Ei}\\left(x\\right)\\mp i\\pi, \\tag{6.5.1}",
+              "\\operatorname{Ei}\\left(x\\right)=-\\tfrac{1}{2}(E_{1}\\left(-x+i0\\right)+E_{1}\\left(-x-i0\\right)), \\tag{6.5.2}",
+              "\\tfrac{1}{2}(\\operatorname{Ei}\\left(x\\right)+E_{1}\\left(x\\right))=\\operatorname{Shi}\\left(x\\right)=-i\\operatorname{Si}\\left(ix\\right), \\tag{6.5.3}",
+              "\\tfrac{1}{2}(\\operatorname{Ei}\\left(x\\right)-E_{1}\\left(x\\right))=\\operatorname{Chi}\\left(x\\right)=\\operatorname{Ci}\\left(ix\\right)-\\tfrac{1}{2}\\pi i. \\tag{6.5.4}",
+              "\\displaystyle\\operatorname{Si}\\left(z\\right) \\displaystyle=\\tfrac{1}{2}i(E_{1}\\left(-iz\\right)-E_{1}\\left(iz\\right))+\\tfrac{1}{2}\\pi, \\tag{6.5.5}",
+              "\\displaystyle\\operatorname{Ci}\\left(z\\right) \\displaystyle=-\\tfrac{1}{2}(E_{1}\\left(iz\\right)+E_{1}\\left(-iz\\right)), \\tag{6.5.6}",
+              "\\mathrm{g}\\left(z\\right)\\pm i\\mathrm{f}\\left(z\\right)=E_{1}\\left(\\mp iz\\right)e^{\\mp iz}. \\tag{6.5.7}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "cosine integrals",
+                "exponential integrals",
+                "interrelations",
+                "relations to exponential integrals",
+                "relations to other functions",
+                "sine and cosine integrals",
+                "sine integrals"
+              ],
+              "simbolos": [
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $E_{1}\\left(z\\right)$: exponential integral , $\\mathrm{i}$: imaginary unit , $\\operatorname{Si}\\left(z\\right)$: sine integral and $z$: complex variable",
+                "$\\operatorname{Ci}\\left(z\\right)$: cosine integral , $E_{1}\\left(z\\right)$: exponential integral , $\\mathrm{i}$: imaginary unit and $z$: complex variable"
+              ],
+              "referenciado_por": [
+                "§6.12(ii)",
+                "§6.5"
+              ],
+              "notas_bibliograficas": [
+                "For ( 6.5.1 ) and ( 6.5.2 ) see Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), p. 41). ( 6.5.3 ) and ( 6.5.4 ) follow from ( 6.6.1 ), ( 6.6.2 ), ( 6.6.5 ), and ( 6.6.6 ). For ( 6.5.5 ) and ( 6.5.6 ) see Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), p. 42). ( 6.5.7 ) follows from ( 6.2.10 ), ( 6.2.17 ), ( 6.2.18 ), ( 6.5.5 ), and ( 6.5.6 )."
+              ],
+              "referencias_abramowitz_stegun": [
+                "5.2.21",
+                "5.2.23"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.5 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              },
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.6",
+          "titulo_original": "Power Series",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.6.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.6.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.6 Power Series",
+            "prosa_teorica": "where $\\psi$ denotes the logarithmic derivative of the gamma function (§ 5.2(i) ).\nThe series in this section converge for all finite values of $x$ and $|z|$ .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.6.1",
+                "latex": "\\operatorname{Ei}\\left(x\\right)=\\gamma+\\ln x+\\sum_{n=1}^{\\infty}\\frac{x^{n}}{n!\\thinspace n}, \\tag{6.6.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.6.2",
+                "latex": "E_{1}\\left(z\\right)=-\\gamma-\\ln z-\\sum_{n=1}^{\\infty}\\frac{(-1)^{n}z^{n}}{n!\\thinspace n}. \\tag{6.6.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "6.6.3",
+                "latex": "E_{1}\\left(z\\right)=-\\ln z+e^{-z}\\sum_{n=0}^{\\infty}\\frac{z^{n}}{n!}\\psi\\left(n+1\\right), \\tag{6.6.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "6.6.4",
+                "latex": "\\operatorname{Ein}\\left(z\\right)=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}z^{n}}{n!\\thinspace n}, \\tag{6.6.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "6.6.5",
+                "latex": "\\operatorname{Si}\\left(z\\right)=\\sum_{n=0}^{\\infty}\\frac{(-1)^{n}z^{2n+1}}{(2n+1)!(2n+1)}, \\tag{6.6.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "6.6.6",
+                "latex": "\\operatorname{Ci}\\left(z\\right)=\\gamma+\\ln z+\\sum_{n=1}^{\\infty}\\frac{(-1)^{n}z^{2n}}{(2n)!(2n)}. \\tag{6.6.6}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\operatorname{Ei}\\left(x\\right)=\\gamma+\\ln x+\\sum_{n=1}^{\\infty}\\frac{x^{n}}{n!\\thinspace n}, \\tag{6.6.1}",
+              "E_{1}\\left(z\\right)=-\\gamma-\\ln z-\\sum_{n=1}^{\\infty}\\frac{(-1)^{n}z^{n}}{n!\\thinspace n}. \\tag{6.6.2}",
+              "E_{1}\\left(z\\right)=-\\ln z+e^{-z}\\sum_{n=0}^{\\infty}\\frac{z^{n}}{n!}\\psi\\left(n+1\\right), \\tag{6.6.3}",
+              "\\operatorname{Ein}\\left(z\\right)=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}z^{n}}{n!\\thinspace n}, \\tag{6.6.4}",
+              "\\operatorname{Si}\\left(z\\right)=\\sum_{n=0}^{\\infty}\\frac{(-1)^{n}z^{2n+1}}{(2n+1)!(2n+1)}, \\tag{6.6.5}",
+              "\\operatorname{Ci}\\left(z\\right)=\\gamma+\\ln z+\\sum_{n=1}^{\\infty}\\frac{(-1)^{n}z^{2n}}{(2n)!(2n)}. \\tag{6.6.6}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "cosine integrals",
+                "exponential integrals",
+                "power series",
+                "sine integrals"
+              ],
+              "referenciado_por": [
+                "§6.18(i)"
+              ],
+              "notas_bibliograficas": [
+                "See Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), pp. 40–43). ( 6.6.3 ) follows from ( 6.11.2 ) and ( 13.2.9 )."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.7",
+          "titulo_original": "Integral Representations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.7.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.7.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.7 Integral Representations",
+            "prosa_teorica": "Many integrals with exponentials and rational functions, for example, integrals of the type $\\int e^{z}R(z)\\,\\mathrm{d}z$ , where $R(z)$ is an arbitrary rational function, can be represented in finite form in terms of the function $E_{1}\\left(z\\right)$ and elementary functions; see Lebedev ([1965](./bib/L.html#bib1394 \"Special Functions and Their Applications\"), p. 42).\nWhen $z\\in\\mathbb{C}$\nThe path of integration does not cross the negative real axis or pass through the origin.\nThe first integrals on the right-hand sides apply when $|\\operatorname{ph}z|<\\pi$ ; the second ones when $\\Re z\\geq 0$ and (in the case of ( 6.7.14 )) $z\\neq 0$ .\nWhen $|\\operatorname{ph}z|<\\pi$\nFor $K_{0}$ see § 10.25(ii) .\nFor collections of integral representations see Bierens de Haan ([1939](./bib/B.html#bib283 \"Nouvelles Tables d’Intégrales Définies\"), pp. 56–59, 72–73, 82–84, 121, 133–136, 155, 179–181, 223, 225–227, 230, 259–260, 374, 377, 397–398, 408, 416, 424, 431, 438–439, 442–444, 488, 496–500, 567–571, 585, 602, 638, 675–677), Corrington ([1961](./bib/C.html#bib590 \"Applications of the complex exponential integral\")), Erdélyi et al. ([1954a](./bib/E.html#bib753 \"Tables of Integral Transforms. Vol. I\"), vol. 1, pp. 267–270), Geller and Ng ([1969](./bib/G.html#bib902 \"A table of integrals of the exponential integral\")), Nielsen ([1906b](./bib/N.html#bib1717 \"Theorie des Integrallogarithmus und verwandter Transzendenten\")), Oberhettinger ([1974](./bib/O.html#bib1744 \"Tables of Mellin Transforms\"), pp. 244–246), Oberhettinger and Badii ([1973](./bib/O.html#bib1746 \"Tables of Laplace Transforms\"), pp. 364–371), and Watrasiewicz ([1967](./bib/W.html#bib2375 \"Some useful integrals of ⁢ Si ( x ) , ⁢ Ci ( x ) and related integrals\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.7.1",
+                "latex": "\\int_{0}^{\\infty}\\frac{e^{-at}}{t+b}\\,\\mathrm{d}t=\\int_{0}^{\\infty}\\frac{e^{iat}}{t+ib}\\,\\mathrm{d}t=e^{ab}E_{1}\\left(ab\\right), \\tag{6.7.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.7.2",
+                "latex": "e^{x}\\int_{0}^{\\alpha}\\frac{e^{-xt}}{1-t}\\,\\mathrm{d}t=\\operatorname{Ei}\\left(x\\right)-\\operatorname{Ei}\\left((1-\\alpha)x\\right), \\tag{6.7.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "6.7.3",
+                "latex": "\\int_{x}^{\\infty}\\frac{e^{it}}{a^{2}+t^{2}}\\,\\mathrm{d}t=\\frac{i}{2a}\\left(e^{a}E_{1}\\left(a-ix\\right)-e^{-a}E_{1}\\left(-a-ix\\right)\\right), \\tag{6.7.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "6.7.4",
+                "latex": "\\int_{x}^{\\infty}\\frac{te^{it}}{a^{2}+t^{2}}\\,\\mathrm{d}t=\\tfrac{1}{2}\\left(e^{a}E_{1}\\left(a-ix\\right)+e^{-a}E_{1}\\left(-a-ix\\right)\\right), \\tag{6.7.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "6.7.5",
+                "latex": "\\int_{x}^{\\infty}\\frac{e^{-t}}{a^{2}+t^{2}}\\,\\mathrm{d}t=-\\frac{1}{2ai}\\left(e^{ia}E_{1}\\left(x+ia\\right)-e^{-ia}E_{1}\\left(x-ia\\right)\\right), \\tag{6.7.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "6.7.6",
+                "latex": "\\int_{x}^{\\infty}\\frac{te^{-t}}{a^{2}+t^{2}}\\,\\mathrm{d}t=\\tfrac{1}{2}\\left(e^{ia}E_{1}\\left(x+ia\\right)+e^{-ia}E_{1}\\left(x-ia\\right)\\right), \\tag{6.7.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "6.7.7",
+                "latex": "\\int_{0}^{1}\\frac{e^{-at}\\sin\\left(bt\\right)}{t}\\,\\mathrm{d}t=\\Im\\operatorname{Ein}\\left(a+ib\\right), \\tag{6.7.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "6.7.8",
+                "latex": "\\int_{0}^{1}\\frac{e^{-at}(1-\\cos\\left(bt\\right))}{t}\\,\\mathrm{d}t=\\Re\\operatorname{Ein}\\left(a+ib\\right)-\\operatorname{Ein}\\left(a\\right), \\tag{6.7.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "6.7.9",
+                "latex": "\\operatorname{si}\\left(z\\right)=-\\int_{0}^{\\pi/2}e^{-z\\cos t}\\cos\\left(z\\sin t\\right)\\,\\mathrm{d}t, \\tag{6.7.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "6.7.10",
+                "latex": "\\operatorname{Ein}\\left(z\\right)-\\operatorname{Cin}\\left(z\\right)=\\int_{0}^{\\pi/2}e^{-z\\cos t}\\sin\\left(z\\sin t\\right)\\,\\mathrm{d}t, \\tag{6.7.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "6.7.11",
+                "latex": "\\int_{0}^{1}\\frac{(1-e^{-at})\\cos\\left(bt\\right)}{t}\\,\\mathrm{d}t=\\Re\\operatorname{Ein}\\left(a+ib\\right)-\\operatorname{Cin}\\left(b\\right), \\tag{6.7.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "6.7.12",
+                "latex": "\\mathrm{g}\\left(z\\right)+i\\mathrm{f}\\left(z\\right)=e^{-iz}\\int_{z}^{\\infty}\\frac{e^{it}}{t}\\,\\mathrm{d}t, \\tag{6.7.12}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "6.7.13",
+                "latex": "\\displaystyle\\mathrm{f}\\left(z\\right) \\displaystyle=\\int_{0}^{\\infty}\\frac{\\sin t}{t+z}\\,\\mathrm{d}t=\\int_{0}^{\\infty}\\frac{e^{-zt}}{t^{2}+1}\\,\\mathrm{d}t, \\tag{6.7.13}"
+              },
+              {
+                "id": "",
+                "tag": "6.7.14",
+                "latex": "\\displaystyle\\mathrm{g}\\left(z\\right) \\displaystyle=\\int_{0}^{\\infty}\\frac{\\cos t}{t+z}\\,\\mathrm{d}t=\\int_{0}^{\\infty}\\frac{te^{-zt}}{t^{2}+1}\\,\\mathrm{d}t. \\tag{6.7.14}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "6.7.15",
+                "latex": "\\displaystyle\\mathrm{f}\\left(z\\right) \\displaystyle=2\\int_{0}^{\\infty}K_{0}\\left(2\\sqrt{zt}\\right)\\cos t\\,\\mathrm{d}t, \\tag{6.7.15}"
+              },
+              {
+                "id": "",
+                "tag": "6.7.16",
+                "latex": "\\displaystyle\\mathrm{g}\\left(z\\right) \\displaystyle=2\\int_{0}^{\\infty}K_{0}\\left(2\\sqrt{zt}\\right)\\sin t\\,\\mathrm{d}t. \\tag{6.7.16}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\int_{0}^{\\infty}\\frac{e^{-at}}{t+b}\\,\\mathrm{d}t=\\int_{0}^{\\infty}\\frac{e^{iat}}{t+ib}\\,\\mathrm{d}t=e^{ab}E_{1}\\left(ab\\right), \\tag{6.7.1}",
+              "e^{x}\\int_{0}^{\\alpha}\\frac{e^{-xt}}{1-t}\\,\\mathrm{d}t=\\operatorname{Ei}\\left(x\\right)-\\operatorname{Ei}\\left((1-\\alpha)x\\right), \\tag{6.7.2}",
+              "\\int_{x}^{\\infty}\\frac{e^{it}}{a^{2}+t^{2}}\\,\\mathrm{d}t=\\frac{i}{2a}\\left(e^{a}E_{1}\\left(a-ix\\right)-e^{-a}E_{1}\\left(-a-ix\\right)\\right), \\tag{6.7.3}",
+              "\\int_{x}^{\\infty}\\frac{te^{it}}{a^{2}+t^{2}}\\,\\mathrm{d}t=\\tfrac{1}{2}\\left(e^{a}E_{1}\\left(a-ix\\right)+e^{-a}E_{1}\\left(-a-ix\\right)\\right), \\tag{6.7.4}",
+              "\\int_{x}^{\\infty}\\frac{e^{-t}}{a^{2}+t^{2}}\\,\\mathrm{d}t=-\\frac{1}{2ai}\\left(e^{ia}E_{1}\\left(x+ia\\right)-e^{-ia}E_{1}\\left(x-ia\\right)\\right), \\tag{6.7.5}",
+              "\\int_{x}^{\\infty}\\frac{te^{-t}}{a^{2}+t^{2}}\\,\\mathrm{d}t=\\tfrac{1}{2}\\left(e^{ia}E_{1}\\left(x+ia\\right)+e^{-ia}E_{1}\\left(x-ia\\right)\\right), \\tag{6.7.6}",
+              "\\int_{0}^{1}\\frac{e^{-at}\\sin\\left(bt\\right)}{t}\\,\\mathrm{d}t=\\Im\\operatorname{Ein}\\left(a+ib\\right), \\tag{6.7.7}",
+              "\\int_{0}^{1}\\frac{e^{-at}(1-\\cos\\left(bt\\right))}{t}\\,\\mathrm{d}t=\\Re\\operatorname{Ein}\\left(a+ib\\right)-\\operatorname{Ein}\\left(a\\right), \\tag{6.7.8}",
+              "\\operatorname{si}\\left(z\\right)=-\\int_{0}^{\\pi/2}e^{-z\\cos t}\\cos\\left(z\\sin t\\right)\\,\\mathrm{d}t, \\tag{6.7.9}",
+              "\\operatorname{Ein}\\left(z\\right)-\\operatorname{Cin}\\left(z\\right)=\\int_{0}^{\\pi/2}e^{-z\\cos t}\\sin\\left(z\\sin t\\right)\\,\\mathrm{d}t, \\tag{6.7.10}",
+              "\\int_{0}^{1}\\frac{(1-e^{-at})\\cos\\left(bt\\right)}{t}\\,\\mathrm{d}t=\\Re\\operatorname{Ein}\\left(a+ib\\right)-\\operatorname{Cin}\\left(b\\right), \\tag{6.7.11}",
+              "\\mathrm{g}\\left(z\\right)+i\\mathrm{f}\\left(z\\right)=e^{-iz}\\int_{z}^{\\infty}\\frac{e^{it}}{t}\\,\\mathrm{d}t, \\tag{6.7.12}",
+              "\\displaystyle\\mathrm{f}\\left(z\\right) \\displaystyle=\\int_{0}^{\\infty}\\frac{\\sin t}{t+z}\\,\\mathrm{d}t=\\int_{0}^{\\infty}\\frac{e^{-zt}}{t^{2}+1}\\,\\mathrm{d}t, \\tag{6.7.13}",
+              "\\displaystyle\\mathrm{g}\\left(z\\right) \\displaystyle=\\int_{0}^{\\infty}\\frac{\\cos t}{t+z}\\,\\mathrm{d}t=\\int_{0}^{\\infty}\\frac{te^{-zt}}{t^{2}+1}\\,\\mathrm{d}t. \\tag{6.7.14}",
+              "\\displaystyle\\mathrm{f}\\left(z\\right) \\displaystyle=2\\int_{0}^{\\infty}K_{0}\\left(2\\sqrt{zt}\\right)\\cos t\\,\\mathrm{d}t, \\tag{6.7.15}",
+              "\\displaystyle\\mathrm{g}\\left(z\\right) \\displaystyle=2\\int_{0}^{\\infty}K_{0}\\left(2\\sqrt{zt}\\right)\\sin t\\,\\mathrm{d}t. \\tag{6.7.16}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "exponential integrals",
+                "integral representations",
+                "cosine integrals",
+                "sine integrals",
+                "auxiliary functions for sine and cosine integrals"
+              ],
+              "simbolos": [
+                "$\\,\\mathrm{d}x$: differential of $x$ , $\\mathrm{e}$: base of natural logarithm , $\\int$: integral , $\\sinz$: sine function , $\\mathrm{f}\\left(z\\right)$: auxiliary function for sine and cosine integrals and $z$: complex variable",
+                "$\\cosz$: cosine function , $\\,\\mathrm{d}x$: differential of $x$ , $\\mathrm{e}$: base of natural logarithm , $\\int$: integral , $\\mathrm{g}\\left(z\\right)$: auxiliary function for sine and cosine integrals and $z$: complex variable",
+                "$\\cosz$: cosine function , $\\,\\mathrm{d}x$: differential of $x$ , $\\int$: integral , $K_{\\nu}\\left(z\\right)$: modified Bessel function of the second kind , $\\mathrm{f}\\left(z\\right)$: auxiliary function for sine and cosine integrals and $z$: complex variable",
+                "$\\,\\mathrm{d}x$: differential of $x$ , $\\int$: integral , $K_{\\nu}\\left(z\\right)$: modified Bessel function of the second kind , $\\sinz$: sine function , $\\mathrm{g}\\left(z\\right)$: auxiliary function for sine and cosine integrals and $z$: complex variable"
+              ],
+              "referenciado_por": [
+                "§6.12(ii)",
+                "§6.7(iii)"
+              ],
+              "notas_bibliograficas": [
+                "( 6.7.1 ) and ( 6.7.2 ) follow from the definitions (§ 6.2(i) ). ( 6.7.3 )–( 6.7.6 ) follow from differentiation with respect to $x$ . ( 6.7.7 ) and ( 6.7.8 ) follow from replacing the trigonometric functions by exponentials.",
+                "See Nielsen ([1906b](./bib/N.html#bib1717 \"Theorie des Integrallogarithmus und verwandter Transzendenten\"), p. 13: there are sign errors in Eq. (27)).",
+                "( 6.7.12 )–( 6.7.14 ) follow from ( 6.5.7 ), ( 6.2.1 ), and ( 6.2.2 ); for the second equations in ( 6.7.13 ) and ( 6.7.14 ) see Temme ([1996b](./bib/T.html#bib2230 \"Special Functions: An Introduction to the Classical Functions of Mathematical Physics\"), pp. 187–188). For ( 6.7.15 ) and ( 6.7.16 ) use ( 10.32.10 )."
+              ],
+              "referencias_abramowitz_stegun": [
+                "5.2.13"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.7 and Ch.6",
+                "Annotations for §6.7(iii) , §6.7 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1965",
+                "archivo_destino": "bib/L.html#bib1394",
+                "titulo_referencia": "Special Functions and Their Applications"
+              },
+              {
+                "texto": "1906b",
+                "archivo_destino": "bib/N.html#bib1717",
+                "titulo_referencia": "Theorie des Integrallogarithmus und verwandter Transzendenten"
+              },
+              {
+                "texto": "1996b",
+                "archivo_destino": "bib/T.html#bib2230",
+                "titulo_referencia": "Special Functions: An Introduction to the Classical Functions of Mathematical Physics"
+              },
+              {
+                "texto": "1939",
+                "archivo_destino": "bib/B.html#bib283",
+                "titulo_referencia": "Nouvelles Tables d’Intégrales Définies"
+              },
+              {
+                "texto": "1961",
+                "archivo_destino": "bib/C.html#bib590",
+                "titulo_referencia": "Applications of the complex exponential integral"
+              },
+              {
+                "texto": "1954a",
+                "archivo_destino": "bib/E.html#bib753",
+                "titulo_referencia": "Tables of Integral Transforms. Vol. I"
+              },
+              {
+                "texto": "1969",
+                "archivo_destino": "bib/G.html#bib902",
+                "titulo_referencia": "A table of integrals of the exponential integral"
+              },
+              {
+                "texto": "1906b",
+                "archivo_destino": "bib/N.html#bib1717",
+                "titulo_referencia": "Theorie des Integrallogarithmus und verwandter Transzendenten"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/O.html#bib1744",
+                "titulo_referencia": "Tables of Mellin Transforms"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/O.html#bib1746",
+                "titulo_referencia": "Tables of Laplace Transforms"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/W.html#bib2375",
+                "titulo_referencia": "Some useful integrals of ⁢ Si ( x ) , ⁢ Ci ( x ) and related integrals"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.8",
+          "titulo_original": "Inequalities",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.8.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.8.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.8 Inequalities",
+            "prosa_teorica": "In this section $x>0$ .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.8.1",
+                "latex": "\\frac{1}{2}\\ln\\left(1+\\frac{2}{x}\\right)<e^{x}E_{1}\\left(x\\right)<\\ln\\left(1+\\frac{1}{x}\\right), \\tag{6.8.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.8.2",
+                "latex": "\\frac{x}{x+1}<xe^{x}E_{1}\\left(x\\right)<\\frac{x+1}{x+2}, \\tag{6.8.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "6.8.3",
+                "latex": "\\frac{x(x+3)}{x^{2}+4x+2}<xe^{x}E_{1}\\left(x\\right)<\\frac{x^{2}+5x+2}{x^{2}+6x+6}. \\tag{6.8.3}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\frac{1}{2}\\ln\\left(1+\\frac{2}{x}\\right)<e^{x}E_{1}\\left(x\\right)<\\ln\\left(1+\\frac{1}{x}\\right), \\tag{6.8.1}",
+              "\\frac{x}{x+1}<xe^{x}E_{1}\\left(x\\right)<\\frac{x+1}{x+2}, \\tag{6.8.2}",
+              "\\frac{x(x+3)}{x^{2}+4x+2}<xe^{x}E_{1}\\left(x\\right)<\\frac{x^{2}+5x+2}{x^{2}+6x+6}. \\tag{6.8.3}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "exponential integrals",
+                "inequalities"
+              ],
+              "notas_bibliograficas": [
+                "See Gautschi ([1959b](./bib/G.html#bib870 \"Some elementary inequalities relating to the gamma and incomplete gamma function\")) for ( 6.8.1 ), and Luke ([1969b](./bib/L.html#bib1496 \"The Special Functions and their Approximations. Vol. 2\"), p. 201) for ( 6.8.2 ) and ( 6.8.3 )."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1959b",
+                "archivo_destino": "bib/G.html#bib870",
+                "titulo_referencia": "Some elementary inequalities relating to the gamma and incomplete gamma function"
+              },
+              {
+                "texto": "1969b",
+                "archivo_destino": "bib/L.html#bib1496",
+                "titulo_referencia": "The Special Functions and their Approximations. Vol. 2"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.9",
+          "titulo_original": "Continued Fraction",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.9.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.9.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.9 Continued Fraction",
+            "prosa_teorica": "See also Cuyt et al. ([2008](./bib/C.html#bib608 \"Handbook of Continued Fractions for Special Functions\"), pp. 287–290).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.9.1",
+                "latex": "E_{1}\\left(z\\right)=\\cfrac{e^{-z}}{z+\\cfrac{1}{1+\\cfrac{1}{z+\\cfrac{2}{1+\\cfrac{2}{z+\\cfrac{3}{1+\\cfrac{3}{z+}}}}}}}\\cdots, \\tag{6.9.1}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "E_{1}\\left(z\\right)=\\cfrac{e^{-z}}{z+\\cfrac{1}{1+\\cfrac{1}{z+\\cfrac{2}{1+\\cfrac{2}{z+\\cfrac{3}{1+\\cfrac{3}{z+}}}}}}}\\cdots, \\tag{6.9.1}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "continued fraction",
+                "exponential integrals"
+              ],
+              "notas_bibliograficas": [
+                "See Nielsen ([1906b](./bib/N.html#bib1717 \"Theorie des Integrallogarithmus und verwandter Transzendenten\"), pp. 42–44), or Lorentzen and Waadeland ([1992](./bib/L.html#bib1468 \"Continued Fractions with Applications\"), p. 577)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1906b",
+                "archivo_destino": "bib/N.html#bib1717",
+                "titulo_referencia": "Theorie des Integrallogarithmus und verwandter Transzendenten"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/L.html#bib1468",
+                "titulo_referencia": "Continued Fractions with Applications"
+              },
+              {
+                "texto": "2008",
+                "archivo_destino": "bib/C.html#bib608",
+                "titulo_referencia": "Handbook of Continued Fractions for Special Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.10",
+          "titulo_original": "Other Series Expansions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.10.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.10.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.10 Other Series Expansions",
+            "prosa_teorica": "where\n<a id=\"E2\"></a>\nand\nFor a more general result (incomplete gamma function), and also for a result for the logarithmic integral, see Nielsen ([1906a](./bib/N.html#bib1718 \"Handbuch der Theorie der Gammafunktion\"), p. 283: Formula (3) is incorrect).\nFor the notation see § 10.47(ii) .\nwhere\nand $\\psi$ denotes the logarithmic derivative of the gamma function (§ 5.2(i) ).\nFor ( 6.10.4 )–( 6.10.8 ) and further results see Harris ([2000](./bib/H.html#bib1050 \"Spherical Bessel expansions of sine, cosine, and exponential integrals\")) and Luke ([1969b](./bib/L.html#bib1496 \"The Special Functions and their Approximations. Vol. 2\"), pp. 56–57). An expansion for $E_{1}\\left(z\\right)$ can be obtained by combining ( 6.2.4 ) and ( 6.10.8 ).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.10.1",
+                "latex": "E_{1}\\left(z\\right)=e^{-z}\\left(\\frac{c_{0}}{z}+\\frac{c_{1}}{z(z+1)}+\\frac{2!c_{2}}{z(z+1)(z+2)}+\\frac{3!c_{3}}{z(z+1)(z+2)(z+3)}+\\cdots\\right), \\tag{6.10.1}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "6.10.2",
+                "latex": "\\displaystyle c_{0} \\displaystyle=1, \\tag{6.10.2}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle c_{1} \\displaystyle=-1,"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle c_{2} \\displaystyle=\\tfrac{1}{2},"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle c_{3} \\displaystyle=-\\tfrac{1}{3},"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle c_{4} \\displaystyle=\\tfrac{1}{6},"
+              },
+              {
+                "id": "E3",
+                "tag": "6.10.3",
+                "latex": "c_{k}=-\\sum_{j=0}^{k-1}\\frac{c_{j}}{k-j}, \\tag{6.10.3}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "6.10.4",
+                "latex": "\\displaystyle\\operatorname{Si}\\left(z\\right) \\displaystyle=z\\sum_{n=0}^{\\infty}\\left(\\mathsf{j}_{n}\\left(\\tfrac{1}{2}z\\right)\\right)^{2}, \\tag{6.10.4}"
+              },
+              {
+                "id": "",
+                "tag": "6.10.5",
+                "latex": "\\displaystyle\\operatorname{Cin}\\left(z\\right) \\displaystyle=\\sum_{n=1}^{\\infty}a_{n}\\left(\\mathsf{j}_{n}\\left(\\tfrac{1}{2}z\\right)\\right)^{2}, \\tag{6.10.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "6.10.6",
+                "latex": "\\operatorname{Ei}\\left(x\\right)=\\gamma+\\ln\\left|x\\right|+\\sum_{n=0}^{\\infty}(-1)^{n}(x-a_{n})\\left({\\mathsf{i}^{(1)}_{n}}\\left(\\tfrac{1}{2}x\\right)\\right)^{2}, \\tag{6.10.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "6.10.7",
+                "latex": "a_{n}=(2n+1)\\left(1-(-1)^{n}+\\psi\\left(n+1\\right)-\\psi\\left(1\\right)\\right), \\tag{6.10.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "6.10.8",
+                "latex": "\\operatorname{Ein}\\left(z\\right)=ze^{-z/2}\\left({\\mathsf{i}^{(1)}_{0}}\\left(\\tfrac{1}{2}z\\right)+\\sum_{n=1}^{\\infty}\\dfrac{2n+1}{n(n+1)}{\\mathsf{i}^{(1)}_{n}}\\left(\\tfrac{1}{2}z\\right)\\right). \\tag{6.10.8}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "E_{1}\\left(z\\right)=e^{-z}\\left(\\frac{c_{0}}{z}+\\frac{c_{1}}{z(z+1)}+\\frac{2!c_{2}}{z(z+1)(z+2)}+\\frac{3!c_{3}}{z(z+1)(z+2)(z+3)}+\\cdots\\right), \\tag{6.10.1}",
+              "\\displaystyle c_{0} \\displaystyle=1, \\tag{6.10.2}",
+              "\\displaystyle c_{1} \\displaystyle=-1,",
+              "\\displaystyle c_{2} \\displaystyle=\\tfrac{1}{2},",
+              "\\displaystyle c_{3} \\displaystyle=-\\tfrac{1}{3},",
+              "\\displaystyle c_{4} \\displaystyle=\\tfrac{1}{6},",
+              "c_{k}=-\\sum_{j=0}^{k-1}\\frac{c_{j}}{k-j}, \\tag{6.10.3}",
+              "\\displaystyle\\operatorname{Si}\\left(z\\right) \\displaystyle=z\\sum_{n=0}^{\\infty}\\left(\\mathsf{j}_{n}\\left(\\tfrac{1}{2}z\\right)\\right)^{2}, \\tag{6.10.4}",
+              "\\displaystyle\\operatorname{Cin}\\left(z\\right) \\displaystyle=\\sum_{n=1}^{\\infty}a_{n}\\left(\\mathsf{j}_{n}\\left(\\tfrac{1}{2}z\\right)\\right)^{2}, \\tag{6.10.5}",
+              "\\operatorname{Ei}\\left(x\\right)=\\gamma+\\ln\\left|x\\right|+\\sum_{n=0}^{\\infty}(-1)^{n}(x-a_{n})\\left({\\mathsf{i}^{(1)}_{n}}\\left(\\tfrac{1}{2}x\\right)\\right)^{2}, \\tag{6.10.6}",
+              "a_{n}=(2n+1)\\left(1-(-1)^{n}+\\psi\\left(n+1\\right)-\\psi\\left(1\\right)\\right), \\tag{6.10.7}",
+              "\\operatorname{Ein}\\left(z\\right)=ze^{-z/2}\\left({\\mathsf{i}^{(1)}_{0}}\\left(\\tfrac{1}{2}z\\right)+\\sum_{n=1}^{\\infty}\\dfrac{2n+1}{n(n+1)}{\\mathsf{i}^{(1)}_{n}}\\left(\\tfrac{1}{2}z\\right)\\right). \\tag{6.10.8}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "expansion in inverse factorials",
+                "exponential integrals",
+                "cosine integrals",
+                "expansion in spherical Bessel functions",
+                "expansions in modified spherical Bessel functions",
+                "sine integrals"
+              ],
+              "simbolos": [
+                "$\\operatorname{Si}\\left(z\\right)$: sine integral , $\\mathsf{j}_{n}\\left(z\\right)$: spherical Bessel function of the first kind , $z$: complex variable and $n$: nonnegative integer",
+                "$\\operatorname{Cin}\\left(z\\right)$: cosine integral , $\\mathsf{j}_{n}\\left(z\\right)$: spherical Bessel function of the first kind , $z$: complex variable , $n$: nonnegative integer and $a_{n}$: coefficients"
+              ],
+              "referenciado_por": [
+                "§6.18(i)",
+                "§10.60(iii)",
+                "§6.10(ii)"
+              ],
+              "notas_bibliograficas": [
+                "See Nielsen ([1906a](./bib/N.html#bib1718 \"Handbuch der Theorie der Gammafunktion\"), p. 283). ( 6.10.3 ) follows from $1/(1-\\ln\\left(1-t\\right))=\\sum_{k=0}^{\\infty}c_{k}t^{k}$ ."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.10 and Ch.6",
+                "Annotations for §6.10(i) , §6.10 and Ch.6",
+                "Annotations for §6.10(ii) , §6.10 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1906a",
+                "archivo_destino": "bib/N.html#bib1718",
+                "titulo_referencia": "Handbuch der Theorie der Gammafunktion"
+              },
+              {
+                "texto": "1906a",
+                "archivo_destino": "bib/N.html#bib1718",
+                "titulo_referencia": "Handbuch der Theorie der Gammafunktion"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/H.html#bib1050",
+                "titulo_referencia": "Spherical Bessel expansions of sine, cosine, and exponential integrals"
+              },
+              {
+                "texto": "1969b",
+                "archivo_destino": "bib/L.html#bib1496",
+                "titulo_referencia": "The Special Functions and their Approximations. Vol. 2"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.11",
+          "titulo_original": "Relations to Other Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.11.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.11.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.11 Relations to Other Functions",
+            "prosa_teorica": "For the notation see §§ 8.2(i) and 13.2(i) .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.11.1",
+                "latex": "E_{1}\\left(z\\right)=\\Gamma\\left(0,z\\right). \\tag{6.11.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.11.2",
+                "latex": "E_{1}\\left(z\\right)=e^{-z}U\\left(1,1,z\\right), \\tag{6.11.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "6.11.3",
+                "latex": "\\mathrm{g}\\left(z\\right)+i\\mathrm{f}\\left(z\\right)=U\\left(1,1,-iz\\right). \\tag{6.11.3}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "E_{1}\\left(z\\right)=\\Gamma\\left(0,z\\right). \\tag{6.11.1}",
+              "E_{1}\\left(z\\right)=e^{-z}U\\left(1,1,z\\right), \\tag{6.11.2}",
+              "\\mathrm{g}\\left(z\\right)+i\\mathrm{f}\\left(z\\right)=U\\left(1,1,-iz\\right). \\tag{6.11.3}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "exponential integrals",
+                "incomplete gamma function",
+                "incomplete gamma functions",
+                "relations to other functions",
+                "auxiliary functions for sine and cosine integrals",
+                "confluent hypergeometric functions",
+                "relation to confluent hypergeometric functions",
+                "sine and cosine integrals"
+              ],
+              "notas_bibliograficas": [
+                "For ( 6.11.1 ) and ( 6.11.2 ) see Temme ([1996b](./bib/T.html#bib2230 \"Special Functions: An Introduction to the Classical Functions of Mathematical Physics\"), pp. 180 and 187). For ( 6.11.3 ) use ( 6.5.7 )."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.11 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1996b",
+                "archivo_destino": "bib/T.html#bib2230",
+                "titulo_referencia": "Special Functions: An Introduction to the Classical Functions of Mathematical Physics"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.12",
+          "titulo_original": "Asymptotic Expansions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.12.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.12.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.12 Asymptotic Expansions",
+            "prosa_teorica": "When $|\\operatorname{ph}z|\\leq\\frac{1}{2}\\pi$ the remainder is bounded in magnitude by the first neglected term, and has the same sign when $\\operatorname{ph}z=0$ . When $\\frac{1}{2}\\pi\\leq|\\operatorname{ph}z|<\\pi$ the remainder term is bounded in magnitude by $\\csc\\left(|\\operatorname{ph}z|\\right)$ times the first neglected term. For these and other error bounds see Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), pp. 109–112) with $\\alpha=0$ .\nFor re-expansions of the remainder term leading to larger sectors of validity, exponential improvement, and a smooth interpretation of the Stokes phenomenon, see §§ 2.11(ii) – 2.11(iv) , with $p=1$ .\nIf the expansion is terminated at the $n$ th term, then the remainder term is bounded by $1+\\chi(n+1)$ times the next term. For the function $\\chi$ see § 9.7(i) .\nThe asymptotic expansion of $\\operatorname{li}\\left(x\\right)$ as $x\\to\\infty$ is obtainable from ( 6.2.8 ) and ( 6.12.2 ).\nThe asymptotic expansions of $\\operatorname{Si}\\left(z\\right)$ and $\\operatorname{Ci}\\left(z\\right)$ are given by ( 6.2.19 ), ( 6.2.20 ), together with\nas $z\\to\\infty$ in $|\\operatorname{ph}z|\\leq\\pi-\\delta\\thinspace(<\\pi)$ .\nThe remainder terms are given by\nwhere, for $n=0,1,2,\\dots$ ,\nWhen $|\\operatorname{ph}z|\\leq\\tfrac{1}{4}\\pi$ , these remainders are bounded in magnitude by the first neglected terms in ( 6.12.3 ) and ( 6.12.4 ), respectively, and have the same signs as these terms when $\\operatorname{ph}z=0$ . When $\\frac{1}{4}\\pi\\leq|\\operatorname{ph}z|<\\frac{1}{2}\\pi$ the remainders are bounded in magnitude by $\\csc\\left(2|\\operatorname{ph}z|\\right)$ times the first neglected terms.\nFor other phase ranges use ( 6.4.6 ) and ( 6.4.7 ). For exponentially-improved asymptotic expansions, use ( 6.5.5 ), ( 6.5.6 ), and § 6.12(i) .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.12.1",
+                "latex": "E_{1}\\left(z\\right)\\sim\\frac{e^{-z}}{z}\\left(1-\\frac{1!}{z}+\\frac{2!}{z^{2}}-\\frac{3!}{z^{3}}+\\cdots\\right), \\tag{6.12.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.12.2",
+                "latex": "\\operatorname{Ei}\\left(x\\right)\\sim\\frac{e^{x}}{x}\\left(1+\\frac{1!}{x}+\\frac{2!}{x^{2}}+\\frac{3!}{x^{3}}+\\cdots\\right), \\tag{6.12.2}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "6.12.3",
+                "latex": "\\displaystyle\\mathrm{f}\\left(z\\right) \\displaystyle\\sim\\frac{1}{z}\\left(1-\\frac{2!}{z^{2}}+\\frac{4!}{z^{4}}-\\frac{6!}{z^{6}}+\\cdots\\right), \\tag{6.12.3}"
+              },
+              {
+                "id": "",
+                "tag": "6.12.4",
+                "latex": "\\displaystyle\\mathrm{g}\\left(z\\right) \\displaystyle\\sim\\frac{1}{z^{2}}\\left(1-\\frac{3!}{z^{2}}+\\frac{5!}{z^{4}}-\\frac{7!}{z^{6}}+\\cdots\\right), \\tag{6.12.4}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "6.12.5",
+                "latex": "\\displaystyle\\mathrm{f}\\left(z\\right) \\displaystyle=\\frac{1}{z}\\sum_{m=0}^{n-1}(-1)^{m}\\frac{(2m)!}{z^{2m}}+R_{n}^{(\\mathrm{f})}(z), \\tag{6.12.5}"
+              },
+              {
+                "id": "",
+                "tag": "6.12.6",
+                "latex": "\\displaystyle\\mathrm{g}\\left(z\\right) \\displaystyle=\\frac{1}{z^{2}}\\sum_{m=0}^{n-1}(-1)^{m}\\frac{(2m+1)!}{z^{2m}}+R_{n}^{(\\mathrm{g})}(z), \\tag{6.12.6}"
+              },
+              {
+                "id": "EGx3",
+                "tag": "6.12.7",
+                "latex": "\\displaystyle R_{n}^{(\\mathrm{f})}(z) \\displaystyle=(-1)^{n}\\int_{0}^{\\infty}\\frac{e^{-zt}t^{2n}}{t^{2}+1}\\,\\mathrm{d}t, \\tag{6.12.7}"
+              },
+              {
+                "id": "",
+                "tag": "6.12.8",
+                "latex": "\\displaystyle R_{n}^{(\\mathrm{g})}(z) \\displaystyle=(-1)^{n}\\int_{0}^{\\infty}\\frac{e^{-zt}t^{2n+1}}{t^{2}+1}\\,\\mathrm{d}t. \\tag{6.12.8}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "E_{1}\\left(z\\right)\\sim\\frac{e^{-z}}{z}\\left(1-\\frac{1!}{z}+\\frac{2!}{z^{2}}-\\frac{3!}{z^{3}}+\\cdots\\right), \\tag{6.12.1}",
+              "\\operatorname{Ei}\\left(x\\right)\\sim\\frac{e^{x}}{x}\\left(1+\\frac{1!}{x}+\\frac{2!}{x^{2}}+\\frac{3!}{x^{3}}+\\cdots\\right), \\tag{6.12.2}",
+              "\\displaystyle\\mathrm{f}\\left(z\\right) \\displaystyle\\sim\\frac{1}{z}\\left(1-\\frac{2!}{z^{2}}+\\frac{4!}{z^{4}}-\\frac{6!}{z^{6}}+\\cdots\\right), \\tag{6.12.3}",
+              "\\displaystyle\\mathrm{g}\\left(z\\right) \\displaystyle\\sim\\frac{1}{z^{2}}\\left(1-\\frac{3!}{z^{2}}+\\frac{5!}{z^{4}}-\\frac{7!}{z^{6}}+\\cdots\\right), \\tag{6.12.4}",
+              "\\displaystyle\\mathrm{f}\\left(z\\right) \\displaystyle=\\frac{1}{z}\\sum_{m=0}^{n-1}(-1)^{m}\\frac{(2m)!}{z^{2m}}+R_{n}^{(\\mathrm{f})}(z), \\tag{6.12.5}",
+              "\\displaystyle\\mathrm{g}\\left(z\\right) \\displaystyle=\\frac{1}{z^{2}}\\sum_{m=0}^{n-1}(-1)^{m}\\frac{(2m+1)!}{z^{2m}}+R_{n}^{(\\mathrm{g})}(z), \\tag{6.12.6}",
+              "\\displaystyle R_{n}^{(\\mathrm{f})}(z) \\displaystyle=(-1)^{n}\\int_{0}^{\\infty}\\frac{e^{-zt}t^{2n}}{t^{2}+1}\\,\\mathrm{d}t, \\tag{6.12.7}",
+              "\\displaystyle R_{n}^{(\\mathrm{g})}(z) \\displaystyle=(-1)^{n}\\int_{0}^{\\infty}\\frac{e^{-zt}t^{2n+1}}{t^{2}+1}\\,\\mathrm{d}t. \\tag{6.12.8}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "asymptotic expansion",
+                "asymptotic expansions",
+                "exponential integrals",
+                "exponentially-improved",
+                "logarithmic integral",
+                "re-expansion of remainder term",
+                "sine integrals",
+                "auxiliary functions for sine and cosine integrals",
+                "cosine integrals"
+              ],
+              "definiciones": [
+                "$R_{n}^{(\\mathrm{f})}(z)$ : remainder term (locally)",
+                "$R_{n}^{(\\mathrm{g})}(z)$ : remainder term (locally)"
+              ],
+              "simbolos": [
+                "$\\sim$: Poincaré asymptotic expansion , $!$: factorial (as in $n!$) , $\\mathrm{f}\\left(z\\right)$: auxiliary function for sine and cosine integrals and $z$: complex variable",
+                "$\\sim$: Poincaré asymptotic expansion , $!$: factorial (as in $n!$) , $\\mathrm{g}\\left(z\\right)$: auxiliary function for sine and cosine integrals and $z$: complex variable",
+                "$!$: factorial (as in $n!$) , $\\mathrm{f}\\left(z\\right)$: auxiliary function for sine and cosine integrals , $z$: complex variable , $n$: nonnegative integer and $R_{n}^{(\\mathrm{f})}(z)$: remainder term",
+                "$!$: factorial (as in $n!$) , $\\mathrm{g}\\left(z\\right)$: auxiliary function for sine and cosine integrals , $z$: complex variable , $n$: nonnegative integer and $R_{n}^{(\\mathrm{g})}(z)$: remainder term",
+                "$\\,\\mathrm{d}x$: differential of $x$ , $\\mathrm{e}$: base of natural logarithm , $\\int$: integral , $z$: complex variable and $n$: nonnegative integer"
+              ],
+              "referenciado_por": [
+                "§6.18(i)",
+                "§2.11(vi)",
+                "§6.12(ii)"
+              ],
+              "notas_bibliograficas": [
+                "For ( 6.12.2 ) see Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), p. 227).",
+                "( 6.12.3 ) and ( 6.12.4 ) follow from ( 6.7.13 ) and ( 6.7.14 ) by applying Watson’s lemma (§ 2.4(i) ). ( 6.12.5 )–( 6.12.8 ) follow from ( 6.7.13 ), ( 6.7.14 ), and the identity $(t^{2}+1)^{-1}=\\sum_{m=0}^{n-1}(-1)^{m}t^{2m}+(-1)^{n}t^{2n}(t^{2}+1)^{-1}$ . The error bounds are obtained by setting $t=\\sqrt{\\tau}$ in ( 6.12.7 ) and ( 6.12.8 ), rotating the integration path in the $\\tau$ -plane through an angle $-2\\operatorname{ph}z$ , and then replacing $|\\tau+1|$ by its minimum value on the path."
+              ],
+              "referencias_abramowitz_stegun": [
+                "5.2.34",
+                "5.2.35"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.12 and Ch.6",
+                "Annotations for §6.12(ii) , §6.12 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              },
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.13",
+          "titulo_original": "Zeros",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.13.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.13.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.13 Zeros",
+            "prosa_teorica": "The function $\\operatorname{Ei}\\left(x\\right)$ has one real zero $x_{0}$ , given by\n$\\operatorname{Ci}\\left(x\\right)$ and $\\operatorname{si}\\left(x\\right)$ each have an infinite number of positive real zeros, which are denoted by $c_{k}$ , $s_{k}$ , respectively, arranged in ascending order of absolute value for $k=0,1,2,\\dots$ . Values of $c_{1}$ and $c_{2}$ to 30D are given by MacLeod ([1996b](./bib/M.html#bib1525 \"Rational approximations, software and test methods for sine and cosine integrals\")).\nAs $k\\to\\infty$ ,\nwhere $\\alpha=k\\pi$ for $c_{k}$ , and $\\alpha=(k+\\frac{1}{2})\\pi$ for $s_{k}$ . For these results, together with the next three terms in ( 6.13.2 ), see MacLeod ([2002a](./bib/M.html#bib1527 \"Asymptotic expansions for the zeros of certain special functions\")). See also Riekstynš ([1991](./bib/R.html#bib1949 \"Asymptotics and Bounds of the Roots of Equations (Russian)\"), pp. 176–177).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.13.1",
+                "latex": "x_{0}=0.37250\\;74107\\;81366\\;63446\\;19918\\;66580\\dots. \\tag{6.13.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.13.2",
+                "latex": "c_{k},s_{k}\\sim\\alpha+\\frac{1}{\\alpha}-\\frac{16}{3}\\frac{1}{\\alpha^{3}}+\\frac{1673}{15}\\frac{1}{\\alpha^{5}}-\\frac{5\\;07746}{105}\\frac{1}{\\alpha^{7}}+\\cdots, \\tag{6.13.2}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "x_{0}=0.37250\\;74107\\;81366\\;63446\\;19918\\;66580\\dots. \\tag{6.13.1}",
+              "c_{k},s_{k}\\sim\\alpha+\\frac{1}{\\alpha}-\\frac{16}{3}\\frac{1}{\\alpha^{3}}+\\frac{1673}{15}\\frac{1}{\\alpha^{5}}-\\frac{5\\;07746}{105}\\frac{1}{\\alpha^{7}}+\\cdots, \\tag{6.13.2}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "asymptotic expansion",
+                "cosine integrals",
+                "exponential integrals",
+                "sine integrals",
+                "zeros"
+              ],
+              "notas_bibliograficas": [
+                "See Cody and Thacher ([1969](./bib/C.html#bib554 \"Chebyshev approximations for the exponential integral ⁢ Ei ( x )\")) for $x_{0}$ in ( 6.13.1 )."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1969",
+                "archivo_destino": "bib/C.html#bib554",
+                "titulo_referencia": "Chebyshev approximations for the exponential integral ⁢ Ei ( x )"
+              },
+              {
+                "texto": "1996b",
+                "archivo_destino": "bib/M.html#bib1525",
+                "titulo_referencia": "Rational approximations, software and test methods for sine and cosine integrals"
+              },
+              {
+                "texto": "2002a",
+                "archivo_destino": "bib/M.html#bib1527",
+                "titulo_referencia": "Asymptotic expansions for the zeros of certain special functions"
+              },
+              {
+                "texto": "1991",
+                "archivo_destino": "bib/R.html#bib1949",
+                "titulo_referencia": "Asymptotics and Bounds of the Roots of Equations (Russian)"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.14",
+          "titulo_original": "Integrals",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.14.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.14.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.14 Integrals",
+            "prosa_teorica": "For collections of integrals, see Apelblat ([1983](./bib/index.html#bib111 \"Table of Definite and Infinite Integrals\"), pp. 110–123), Bierens de Haan ([1939](./bib/B.html#bib283 \"Nouvelles Tables d’Intégrales Définies\"), pp. 373–374, 409, 479, 571–572, 637, 664–673, 680–682, 685–697), Erdélyi et al. ([1954a](./bib/E.html#bib753 \"Tables of Integral Transforms. Vol. I\"), vol. 1, pp. 40–42, 96–98, 177–178, 325), Geller and Ng ([1969](./bib/G.html#bib902 \"A table of integrals of the exponential integral\")), Gradshteyn and Ryzhik ([2015](./bib/G.html#bib972 \"Table of integrals, series, and products\"), §§5.2–5.3 and 6.2–6.27), Marichev ([1983](./bib/M.html#bib1546 \"Handbook of Integral Transforms of Higher Transcendental Functions: Theory and Algorithmic Tables\"), pp. 182–184), Nielsen ([1906b](./bib/N.html#bib1717 \"Theorie des Integrallogarithmus und verwandter Transzendenten\")), Oberhettinger ([1974](./bib/O.html#bib1744 \"Tables of Mellin Transforms\"), pp. 139–141), Oberhettinger ([1990](./bib/O.html#bib1745 \"Tables of Fourier Transforms and Fourier Transforms of Distributions\"), pp. 53–55 and 158–160), Oberhettinger and Badii ([1973](./bib/O.html#bib1746 \"Tables of Laplace Transforms\"), pp. 172–179), Prudnikov et al. ([1986b](./bib/P.html#bib1903 \"Integrals and Series: Special Functions, Vol. 2\"), vol. 2, pp. 24–29 and 64–92), Prudnikov et al. ([1992a](./bib/P.html#bib1906 \"Integrals and Series: Direct Laplace Transforms, Vol. 4\"), §§3.4–3.6), Prudnikov et al. ([1992b](./bib/P.html#bib1907 \"Integrals and Series: Inverse Laplace Transforms, Vol. 5\"), §§3.4–3.6), and Watrasiewicz ([1967](./bib/W.html#bib2375 \"Some useful integrals of ⁢ Si ( x ) , ⁢ Ci ( x ) and related integrals\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.14.1",
+                "latex": "\\int_{0}^{\\infty}e^{-at}E_{1}\\left(t\\right)\\,\\mathrm{d}t=\\frac{1}{a}\\ln\\left(1+a\\right), \\tag{6.14.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.14.2",
+                "latex": "\\int_{0}^{\\infty}e^{-at}\\operatorname{Ci}\\left(t\\right)\\,\\mathrm{d}t=-\\frac{1}{2a}\\ln\\left(1+a^{2}\\right), \\tag{6.14.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "6.14.3",
+                "latex": "\\int_{0}^{\\infty}e^{-at}\\operatorname{si}\\left(t\\right)\\,\\mathrm{d}t=-\\frac{1}{a}\\operatorname{arctan}a, \\tag{6.14.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "6.14.4",
+                "latex": "\\int_{0}^{\\infty}{E_{1}}^{2}\\left(t\\right)\\,\\mathrm{d}t=2\\ln 2, \\tag{6.14.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "6.14.5",
+                "latex": "\\int_{0}^{\\infty}\\cos t\\operatorname{Ci}\\left(t\\right)\\,\\mathrm{d}t=\\int_{0}^{\\infty}\\sin t\\operatorname{si}\\left(t\\right)\\,\\mathrm{d}t=-\\tfrac{1}{4}\\pi, \\tag{6.14.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "6.14.6",
+                "latex": "\\int_{0}^{\\infty}{\\operatorname{Ci}}^{2}\\left(t\\right)\\,\\mathrm{d}t=\\int_{0}^{\\infty}{\\operatorname{si}}^{2}\\left(t\\right)\\,\\mathrm{d}t=\\tfrac{1}{2}\\pi, \\tag{6.14.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "6.14.7",
+                "latex": "\\int_{0}^{\\infty}\\operatorname{Ci}\\left(t\\right)\\operatorname{si}\\left(t\\right)\\,\\mathrm{d}t=\\ln 2. \\tag{6.14.7}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\int_{0}^{\\infty}e^{-at}E_{1}\\left(t\\right)\\,\\mathrm{d}t=\\frac{1}{a}\\ln\\left(1+a\\right), \\tag{6.14.1}",
+              "\\int_{0}^{\\infty}e^{-at}\\operatorname{Ci}\\left(t\\right)\\,\\mathrm{d}t=-\\frac{1}{2a}\\ln\\left(1+a^{2}\\right), \\tag{6.14.2}",
+              "\\int_{0}^{\\infty}e^{-at}\\operatorname{si}\\left(t\\right)\\,\\mathrm{d}t=-\\frac{1}{a}\\operatorname{arctan}a, \\tag{6.14.3}",
+              "\\int_{0}^{\\infty}{E_{1}}^{2}\\left(t\\right)\\,\\mathrm{d}t=2\\ln 2, \\tag{6.14.4}",
+              "\\int_{0}^{\\infty}\\cos t\\operatorname{Ci}\\left(t\\right)\\,\\mathrm{d}t=\\int_{0}^{\\infty}\\sin t\\operatorname{si}\\left(t\\right)\\,\\mathrm{d}t=-\\tfrac{1}{4}\\pi, \\tag{6.14.5}",
+              "\\int_{0}^{\\infty}{\\operatorname{Ci}}^{2}\\left(t\\right)\\,\\mathrm{d}t=\\int_{0}^{\\infty}{\\operatorname{si}}^{2}\\left(t\\right)\\,\\mathrm{d}t=\\tfrac{1}{2}\\pi, \\tag{6.14.6}",
+              "\\int_{0}^{\\infty}\\operatorname{Ci}\\left(t\\right)\\operatorname{si}\\left(t\\right)\\,\\mathrm{d}t=\\ln 2. \\tag{6.14.7}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Laplace transform",
+                "cosine integrals",
+                "exponential integrals",
+                "integrals",
+                "sine integrals"
+              ],
+              "notas_bibliograficas": [
+                "See Nielsen ([1906b](./bib/N.html#bib1717 \"Theorie des Integrallogarithmus und verwandter Transzendenten\"), pp. 48–49: there is a 12 missing in the formula that corresponds to ([6.14.2](./6.14.html#E2 \"(6.14.2) ‣ §6.14(i) Laplace Transforms ‣ §6.14 Integrals ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals\"))).",
+                "See Nielsen ([1906b](./bib/N.html#bib1717 \"Theorie des Integrallogarithmus und verwandter Transzendenten\"), pp. 50, 53, and 54: there is a sign error in the formula that corresponds to ([6.14.7](./6.14.html#E7 \"(6.14.7) ‣ §6.14(ii) Other Integrals ‣ §6.14 Integrals ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals\")))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.14 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1906b",
+                "archivo_destino": "bib/N.html#bib1717",
+                "titulo_referencia": "Theorie des Integrallogarithmus und verwandter Transzendenten"
+              },
+              {
+                "texto": "6.14.2",
+                "archivo_destino": "6.14.html#E2",
+                "titulo_referencia": "(6.14.2) ‣ §6.14(i) Laplace Transforms ‣ §6.14 Integrals ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"
+              },
+              {
+                "texto": "1906b",
+                "archivo_destino": "bib/N.html#bib1717",
+                "titulo_referencia": "Theorie des Integrallogarithmus und verwandter Transzendenten"
+              },
+              {
+                "texto": "6.14.7",
+                "archivo_destino": "6.14.html#E7",
+                "titulo_referencia": "(6.14.7) ‣ §6.14(ii) Other Integrals ‣ §6.14 Integrals ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/index.html#bib111",
+                "titulo_referencia": "Table of Definite and Infinite Integrals"
+              },
+              {
+                "texto": "1939",
+                "archivo_destino": "bib/B.html#bib283",
+                "titulo_referencia": "Nouvelles Tables d’Intégrales Définies"
+              },
+              {
+                "texto": "1954a",
+                "archivo_destino": "bib/E.html#bib753",
+                "titulo_referencia": "Tables of Integral Transforms. Vol. I"
+              },
+              {
+                "texto": "1969",
+                "archivo_destino": "bib/G.html#bib902",
+                "titulo_referencia": "A table of integrals of the exponential integral"
+              },
+              {
+                "texto": "2015",
+                "archivo_destino": "bib/G.html#bib972",
+                "titulo_referencia": "Table of integrals, series, and products"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/M.html#bib1546",
+                "titulo_referencia": "Handbook of Integral Transforms of Higher Transcendental Functions: Theory and Algorithmic Tables"
+              },
+              {
+                "texto": "1906b",
+                "archivo_destino": "bib/N.html#bib1717",
+                "titulo_referencia": "Theorie des Integrallogarithmus und verwandter Transzendenten"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/O.html#bib1744",
+                "titulo_referencia": "Tables of Mellin Transforms"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/O.html#bib1745",
+                "titulo_referencia": "Tables of Fourier Transforms and Fourier Transforms of Distributions"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/O.html#bib1746",
+                "titulo_referencia": "Tables of Laplace Transforms"
+              },
+              {
+                "texto": "1986b",
+                "archivo_destino": "bib/P.html#bib1903",
+                "titulo_referencia": "Integrals and Series: Special Functions, Vol. 2"
+              },
+              {
+                "texto": "1992a",
+                "archivo_destino": "bib/P.html#bib1906",
+                "titulo_referencia": "Integrals and Series: Direct Laplace Transforms, Vol. 4"
+              },
+              {
+                "texto": "1992b",
+                "archivo_destino": "bib/P.html#bib1907",
+                "titulo_referencia": "Integrals and Series: Inverse Laplace Transforms, Vol. 5"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/W.html#bib2375",
+                "titulo_referencia": "Some useful integrals of ⁢ Si ( x ) , ⁢ Ci ( x ) and related integrals"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.15",
+          "titulo_original": "Sums",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.15.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.15.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.15 Sums",
+            "prosa_teorica": "For further sums see Fempl ([1960](./bib/F.html#bib781 \"Sur certaines sommes des intégral-cosinus\")), Hansen ([1975](./bib/H.html#bib1035 \"A Table of Series and Products\"), pp. 423–424), Harris ([2000](./bib/H.html#bib1050 \"Spherical Bessel expansions of sine, cosine, and exponential integrals\")), Prudnikov et al. ([1986b](./bib/P.html#bib1903 \"Integrals and Series: Special Functions, Vol. 2\"), vol. 2, pp. 649–650), and Slavić ([1974](./bib/S.html#bib2100 \"Complements to asymptotic development of sine cosine integrals, and auxiliary functions\")).",
+            "formulas_clave": [
+              {
+                "id": "EGx1",
+                "tag": "6.15.1",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}\\operatorname{Ci}\\left(\\pi n\\right) \\displaystyle=\\tfrac{1}{2}(\\ln 2-\\gamma), \\tag{6.15.1}"
+              },
+              {
+                "id": "",
+                "tag": "6.15.2",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}\\frac{\\operatorname{si}\\left(\\pi n\\right)}{n} \\displaystyle=\\tfrac{1}{2}\\pi(\\ln\\pi-1), \\tag{6.15.2}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "6.15.3",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}(-1)^{n}\\operatorname{Ci}\\left(2\\pi n\\right) \\displaystyle=1-\\ln 2-\\tfrac{1}{2}\\gamma, \\tag{6.15.3}"
+              },
+              {
+                "id": "",
+                "tag": "6.15.4",
+                "latex": "\\displaystyle\\sum_{n=1}^{\\infty}(-1)^{n}\\frac{\\operatorname{si}\\left(2\\pi n\\right)}{n} \\displaystyle=\\pi(\\tfrac{3}{2}\\ln 2-1). \\tag{6.15.4}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle\\sum_{n=1}^{\\infty}\\operatorname{Ci}\\left(\\pi n\\right) \\displaystyle=\\tfrac{1}{2}(\\ln 2-\\gamma), \\tag{6.15.1}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}\\frac{\\operatorname{si}\\left(\\pi n\\right)}{n} \\displaystyle=\\tfrac{1}{2}\\pi(\\ln\\pi-1), \\tag{6.15.2}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}(-1)^{n}\\operatorname{Ci}\\left(2\\pi n\\right) \\displaystyle=1-\\ln 2-\\tfrac{1}{2}\\gamma, \\tag{6.15.3}",
+              "\\displaystyle\\sum_{n=1}^{\\infty}(-1)^{n}\\frac{\\operatorname{si}\\left(2\\pi n\\right)}{n} \\displaystyle=\\pi(\\tfrac{3}{2}\\ln 2-1). \\tag{6.15.4}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "cosine integrals",
+                "sine integrals",
+                "sums"
+              ],
+              "simbolos": [
+                "$\\gamma$: Euler’s constant , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\operatorname{Ci}\\left(z\\right)$: cosine integral , $\\lnz$: principal branch of logarithm function and $n$: nonnegative integer",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\lnz$: principal branch of logarithm function , $\\operatorname{si}\\left(z\\right)$: sine integral and $n$: nonnegative integer"
+              ],
+              "notas_bibliograficas": [
+                "See Slavić ([1974](./bib/S.html#bib2100 \"Complements to asymptotic development of sine cosine integrals, and auxiliary functions\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.15 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/S.html#bib2100",
+                "titulo_referencia": "Complements to asymptotic development of sine cosine integrals, and auxiliary functions"
+              },
+              {
+                "texto": "1960",
+                "archivo_destino": "bib/F.html#bib781",
+                "titulo_referencia": "Sur certaines sommes des intégral-cosinus"
+              },
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/H.html#bib1035",
+                "titulo_referencia": "A Table of Series and Products"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/H.html#bib1050",
+                "titulo_referencia": "Spherical Bessel expansions of sine, cosine, and exponential integrals"
+              },
+              {
+                "texto": "1986b",
+                "archivo_destino": "bib/P.html#bib1903",
+                "titulo_referencia": "Integrals and Series: Special Functions, Vol. 2"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/S.html#bib2100",
+                "titulo_referencia": "Complements to asymptotic development of sine cosine integrals, and auxiliary functions"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Applications",
+      "secciones": [
+        {
+          "seccion_id": "6.16",
+          "titulo_original": "Mathematical Applications",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.16.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.16.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.16 Mathematical Applications",
+            "prosa_teorica": "Consider the Fourier series\nThe $n$ th partial sum is given by\nwhere\nBy integration by parts\nuniformly for $x\\in[-\\pi,\\pi]$ . Hence, if $x$ is fixed and $n\\to\\infty$ , then $S_{n}(x)\\to\\frac{1}{4}\\pi$ , $0$ , or $-\\frac{1}{4}\\pi$ according as $0<x<\\pi$ , $x=0$ , or $-\\pi<x<0$ ; compare ( 6.2.14 ).\nThese limits are not approached uniformly, however. The first maximum of $\\frac{1}{2}\\operatorname{Si}\\left(x\\right)$ for positive $x$ occurs at $x=\\pi$ and equals $(1.1789\\dots)\\times\\frac{1}{4}\\pi$ ; compare Figure 6.3.2 . Hence if $x=\\pi/(2n)$ and $n\\to\\infty$ , then the limiting value of $S_{n}(x)$ overshoots $\\frac{1}{4}\\pi$ by approximately 18%. Similarly if $x=\\pi/n$ , then the limiting value of $S_{n}(x)$ undershoots $\\frac{1}{4}\\pi$ by approximately 10%, and so on. Compare Figure 6.16.1 .\nThis nonuniformity of convergence is an illustration of the *Gibbs phenomenon* . It occurs with Fourier-series expansions of all piecewise continuous functions. See Carslaw ([1930](./bib/C.html#bib456 \"Introduction to the Theory of Fourier’s Series and Integrals\")) for additional graphs and information.\n<a id=\"F1\"></a>\n![Figure 6.16.1: Graph of $S_{n}(x)$ , $n=250$ , $-0.1\\leq x\\leq 0.1$ , illustrating the Gibbs phenomenon.](../html/6/16/F1.png)\nIf we assume Riemann’s hypothesis that all nonreal zeros of $\\zeta\\left(s\\right)$ have real part of $\\tfrac{1}{2}$ (§ 25.10(i) ), then\nwhere $\\pi(x)$ is the number of primes less than or equal to $x$ . Compare § [27.12](./27.12.md \"§27.12 Asymptotic Formulas: Primes ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory\") and Figure 6.16.2 . See also Bays and Hudson ([2000](./bib/B.html#bib223 \"A new bound for the smallest x with > ⁢ π ( x ) ⁢ li ( x )\")).\n<a id=\"F2\"></a>\n![Figure 6.16.2: The logarithmic integral $\\operatorname{li}\\left(x\\right)$ , together with vertical bars indicating the value of $\\pi(x)$ for $x=10,20,\\dots,1000$ .](../html/6/16/F2.png)",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "6.16.1",
+                "latex": "\\sin x+\\tfrac{1}{3}\\sin\\left(3x\\right)+\\tfrac{1}{5}\\sin\\left(5x\\right)+\\dots=\\begin{cases}\\frac{1}{4}\\pi,&0<x<\\pi,\\\\\n0,&x=0,\\\\\n-\\frac{1}{4}\\pi,&-\\pi<x<0.\\end{cases} \\tag{6.16.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "6.16.2",
+                "latex": "S_{n}(x)=\\sum_{k=0}^{n-1}\\frac{\\sin\\left((2k+1)x\\right)}{2k+1}=\\frac{1}{2}\\int_{0}^{x}\\frac{\\sin\\left(2nt\\right)}{\\sin t}\\,\\mathrm{d}t=\\tfrac{1}{2}\\operatorname{Si}\\left(2nx\\right)+R_{n}(x), \\tag{6.16.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "6.16.3",
+                "latex": "R_{n}(x)=\\frac{1}{2}\\int_{0}^{x}\\left(\\frac{1}{\\sin t}-\\frac{1}{t}\\right)\\sin\\left(2nt\\right)\\,\\mathrm{d}t. \\tag{6.16.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "6.16.4",
+                "latex": "R_{n}(x)=O\\left(n^{-1}\\right), \\tag{6.16.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "6.16.5",
+                "latex": "\\operatorname{li}\\left(x\\right)-\\pi(x)=O\\left(\\sqrt{x}\\ln x\\right), \\tag{6.16.5}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\sin x+\\tfrac{1}{3}\\sin\\left(3x\\right)+\\tfrac{1}{5}\\sin\\left(5x\\right)+\\dots=\\begin{cases}\\frac{1}{4}\\pi,&0<x<\\pi,\\\\\n0,&x=0,\\\\\n-\\frac{1}{4}\\pi,&-\\pi<x<0.\\end{cases} \\tag{6.16.1}",
+              "S_{n}(x)=\\sum_{k=0}^{n-1}\\frac{\\sin\\left((2k+1)x\\right)}{2k+1}=\\frac{1}{2}\\int_{0}^{x}\\frac{\\sin\\left(2nt\\right)}{\\sin t}\\,\\mathrm{d}t=\\tfrac{1}{2}\\operatorname{Si}\\left(2nx\\right)+R_{n}(x), \\tag{6.16.2}",
+              "R_{n}(x)=\\frac{1}{2}\\int_{0}^{x}\\left(\\frac{1}{\\sin t}-\\frac{1}{t}\\right)\\sin\\left(2nt\\right)\\,\\mathrm{d}t. \\tag{6.16.3}",
+              "R_{n}(x)=O\\left(n^{-1}\\right), \\tag{6.16.4}",
+              "\\operatorname{li}\\left(x\\right)-\\pi(x)=O\\left(\\sqrt{x}\\ln x\\right), \\tag{6.16.5}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Fourier-series expansions",
+                "Gibbs phenomenon",
+                "applications",
+                "maxima and minima",
+                "nonuniformity of convergence",
+                "piecewise continuous functions",
+                "sine integral",
+                "sine integrals",
+                "logarithmic integral",
+                "number-theoretic significance",
+                "prime numbers",
+                "relation to logarithmic integral",
+                "graph"
+              ],
+              "simbolos": [
+                "$x$: real variable , $n$: nonnegative integer and $S_{n}(x)$: partial sum",
+                "$\\operatorname{li}\\left(x\\right)$: logarithmic integral , $x$: real variable and $\\pi(x)$: number of primes $\\leq x$"
+              ],
+              "referenciado_por": [
+                "§1.8(ii)",
+                "§6.16(i)",
+                "§6.16(ii)",
+                "§6.3(i)"
+              ],
+              "notas_bibliograficas": [
+                "See Temme ([1996b](./bib/T.html#bib2230 \"Special Functions: An Introduction to the Classical Functions of Mathematical Physics\"), pp. 181–182: the numerical value 1.089490⁢… on p. 182 should be replaced by 1.1789⁢…). Gibbs reported this phenomenon in a letter to Nature , 59 (1899, p. 606). Figure 6.16.1 was produced at NIST.",
+                "Figure 6.16.2 was produced at NIST."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.16 and Ch.6",
+                "Annotations for §6.16(i) , §6.16 and Ch.6",
+                "Annotations for §6.16(ii) , §6.16 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1996b",
+                "archivo_destino": "bib/T.html#bib2230",
+                "titulo_referencia": "Special Functions: An Introduction to the Classical Functions of Mathematical Physics"
+              },
+              {
+                "texto": "1930",
+                "archivo_destino": "bib/C.html#bib456",
+                "titulo_referencia": "Introduction to the Theory of Fourier’s Series and Integrals"
+              },
+              {
+                "texto": "27.12",
+                "archivo_destino": "27.12.md",
+                "titulo_referencia": "§27.12 Asymptotic Formulas: Primes ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/B.html#bib223",
+                "titulo_referencia": "A new bound for the smallest x with > ⁢ π ( x ) ⁢ li ( x )"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.17",
+          "titulo_original": "Physical Applications",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.17.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.17.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.17 Physical Applications",
+            "prosa_teorica": "Geller and Ng ([1969](./bib/G.html#bib902 \"A table of integrals of the exponential integral\")) cites work with applications from diffusion theory, transport problems, the study of the radiative equilibrium of stellar atmospheres, and the evaluation of exchange integrals occurring in quantum mechanics. For applications in astrophysics, see also van de Hulst ([1980](./bib/V.html#bib2309 \"Multiple Light Scattering\")). Lebedev ([1965](./bib/L.html#bib1394 \"Special Functions and Their Applications\")) gives an application to electromagnetic theory (radiation of a linear half-wave oscillator), in which sine and cosine integrals are used.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "applications",
+                "cosine integrals",
+                "electromagnetic theory",
+                "exponential integrals",
+                "physical",
+                "sine and cosine integrals",
+                "sine integrals"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1969",
+                "archivo_destino": "bib/G.html#bib902",
+                "titulo_referencia": "A table of integrals of the exponential integral"
+              },
+              {
+                "texto": "1980",
+                "archivo_destino": "bib/V.html#bib2309",
+                "titulo_referencia": "Multiple Light Scattering"
+              },
+              {
+                "texto": "1965",
+                "archivo_destino": "bib/L.html#bib1394",
+                "titulo_referencia": "Special Functions and Their Applications"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Computation",
+      "secciones": [
+        {
+          "seccion_id": "6.18",
+          "titulo_original": "Methods of Computation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.18.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.18.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.18 Methods of Computation",
+            "prosa_teorica": "For small or moderate values of $x$ and $|z|$ , the expansion in power series (§ [6.6](./6.6.md \"§6.6 Power Series ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals\") ) or in series of spherical Bessel functions (§ 6.10(ii) ) can be used. For large $x$ or $|z|$ these series suffer from slow convergence or cancellation (or both). However, this problem is less severe for the series of spherical Bessel functions because of their more rapid rate of convergence, and also (except in the case of ( 6.10.6 )) absence of cancellation when $z=x$ ( $>0$ ).\nFor large $x$ and $\\left|z\\right|$ , expansions in inverse factorial series (§ 6.10(i) ) or asymptotic expansions (§ [6.12](./6.12.md \"§6.12 Asymptotic Expansions ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals\") ) are available. The attainable accuracy of the asymptotic expansions can be increased considerably by exponential improvement. Also, other ranges of $\\operatorname{ph}z$ can be covered by use of the continuation formulas of § [6.4](./6.4.md \"§6.4 Analytic Continuation ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals\") .\nQuadrature of the integral representations is another effective method. For example, the Gauss–Laguerre formula (§ 3.5(v) ) can be applied to ( 6.2.2 ); see Todd ([1954](./bib/T.html#bib2256 \"Evaluation of the exponential integral for large complex arguments\")) and Tseng and Lee ([1998](./bib/T.html#bib2283 \"Numerical evaluation of exponential integral: Theis well function approximation\")). For an application of the Gauss–Legendre formula (§ 3.5(v) ) see Tooper and Mark ([1968](./bib/T.html#bib2263 \"Simplified calculation of ⁢ Ei ( x ) for positive arguments, and a short table of ⁢ Shi ( x )\")).\nLastly, the continued fraction ( 6.9.1 ) can be used if $|z|$ is bounded away from the origin. Convergence becomes slow when $z$ is near the negative real axis, however.\nPower series, asymptotic expansions, and quadrature can also be used to compute the functions $\\mathrm{f}\\left(z\\right)$ and $\\mathrm{g}\\left(z\\right)$ . In addition, Acton ([1974](./bib/index.html#bib27 \"Recurrence relations for the Fresnel integral ∫ 0 ∞ ⁢ exp ( - ⁢ c t ) d t ⁢ t ( + 1 t 2 ) and similar integrals\")) developed a recurrence procedure, as follows. For $n=0,1,2,\\dots$ , define\n<a id=\"E1\"></a>\nThen $\\mathrm{f}\\left(z\\right)=B_{0}$ , $\\mathrm{g}\\left(z\\right)=A_{0}$ , and\n<a id=\"E2\"></a>\n$A_{0}$ , $B_{0}$ , and $C_{0}$ can be computed by Miller’s algorithm (§ 3.6(iii) ), starting with initial values $(A_{N},B_{N},C_{N})=(1,0,0)$ , say, where $N$ is an arbitrary large integer, and normalizing via $C_{0}=1/z$ .\nZeros of $\\operatorname{Ci}\\left(x\\right)$ and $\\operatorname{si}\\left(x\\right)$ can be computed to high precision by Newton’s rule (§ 3.8(ii) ), using values supplied by the asymptotic expansion ( 6.13.2 ) as initial approximations.\nFor a comprehensive survey of computational methods for the functions treated in this chapter, see van der Laan and Temme ([1984](./bib/V.html#bib2310 \"Calculation of Special Functions: The Gamma Function, the Exponential Integrals and Error-Like Functions\"), Ch. IV).",
+            "formulas_clave": [
+              {
+                "id": "Ex1",
+                "tag": "6.18.1",
+                "latex": "\\displaystyle A_{n} \\displaystyle=\\int_{0}^{\\infty}\\frac{te^{-zt}}{1+t^{2}}\\left(\\frac{t^{2}}{1+t^{2}}\\right)^{n}\\,\\mathrm{d}t, \\tag{6.18.1}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle B_{n} \\displaystyle=\\int_{0}^{\\infty}\\frac{e^{-zt}}{1+t^{2}}\\left(\\frac{t^{2}}{1+t^{2}}\\right)^{n}\\,\\mathrm{d}t,"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle C_{n} \\displaystyle=\\int_{0}^{\\infty}e^{-zt}\\left(\\frac{t^{2}}{1+t^{2}}\\right)^{n}\\,\\mathrm{d}t."
+              },
+              {
+                "id": "Ex4",
+                "tag": "6.18.2",
+                "latex": "\\displaystyle A_{n-1} \\displaystyle=A_{n}+\\frac{z}{2n}C_{n}, \\tag{6.18.2}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle B_{n-1} \\displaystyle=\\frac{2nB_{n}+zA_{n-1}}{2n-1},"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle C_{n-1} \\displaystyle=C_{n}+B_{n-1}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle A_{n} \\displaystyle=\\int_{0}^{\\infty}\\frac{te^{-zt}}{1+t^{2}}\\left(\\frac{t^{2}}{1+t^{2}}\\right)^{n}\\,\\mathrm{d}t, \\tag{6.18.1}",
+              "\\displaystyle B_{n} \\displaystyle=\\int_{0}^{\\infty}\\frac{e^{-zt}}{1+t^{2}}\\left(\\frac{t^{2}}{1+t^{2}}\\right)^{n}\\,\\mathrm{d}t,",
+              "\\displaystyle C_{n} \\displaystyle=\\int_{0}^{\\infty}e^{-zt}\\left(\\frac{t^{2}}{1+t^{2}}\\right)^{n}\\,\\mathrm{d}t.",
+              "\\displaystyle A_{n-1} \\displaystyle=A_{n}+\\frac{z}{2n}C_{n}, \\tag{6.18.2}",
+              "\\displaystyle B_{n-1} \\displaystyle=\\frac{2nB_{n}+zA_{n-1}}{2n-1},",
+              "\\displaystyle C_{n-1} \\displaystyle=C_{n}+B_{n-1}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "computation",
+                "cosine integrals",
+                "exponential integrals",
+                "sine integrals",
+                "auxiliary functions for sine and cosine integrals",
+                "zeros"
+              ],
+              "simbolos": [
+                "$\\,\\mathrm{d}x$: differential of $x$ , $\\mathrm{e}$: base of natural logarithm , $\\int$: integral , $z$: complex variable and $n$: nonnegative integer",
+                "$z$: complex variable and $n$: nonnegative integer"
+              ],
+              "referenciado_por": [
+                "§3.10(iii)",
+                "§7.22(i)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.18 and Ch.6",
+                "Annotations for §6.18(ii) , §6.18 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "6.6",
+                "archivo_destino": "6.6.md",
+                "titulo_referencia": "§6.6 Power Series ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"
+              },
+              {
+                "texto": "6.12",
+                "archivo_destino": "6.12.md",
+                "titulo_referencia": "§6.12 Asymptotic Expansions ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"
+              },
+              {
+                "texto": "6.4",
+                "archivo_destino": "6.4.md",
+                "titulo_referencia": "§6.4 Analytic Continuation ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"
+              },
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/T.html#bib2256",
+                "titulo_referencia": "Evaluation of the exponential integral for large complex arguments"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/T.html#bib2283",
+                "titulo_referencia": "Numerical evaluation of exponential integral: Theis well function approximation"
+              },
+              {
+                "texto": "1968",
+                "archivo_destino": "bib/T.html#bib2263",
+                "titulo_referencia": "Simplified calculation of ⁢ Ei ( x ) for positive arguments, and a short table of ⁢ Shi ( x )"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/index.html#bib27",
+                "titulo_referencia": "Recurrence relations for the Fresnel integral ∫ 0 ∞ ⁢ exp ( - ⁢ c t ) d t ⁢ t ( + 1 t 2 ) and similar integrals"
+              },
+              {
+                "texto": "1984",
+                "archivo_destino": "bib/V.html#bib2310",
+                "titulo_referencia": "Calculation of Special Functions: The Gamma Function, the Exponential Integrals and Error-Like Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.19",
+          "titulo_original": "Tables",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.19.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.19.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.19 Tables",
+            "prosa_teorica": "Lebedev and Fedorova ([1960](./bib/L.html#bib1392 \"A Guide to Mathematical Tables\")) and Fletcher et al. ([1962](./bib/F.html#bib810 \"An Index of Mathematical Tables. Vols. I, II\")) give comprehensive indexes of mathematical tables. This section lists relevant tables that appeared later.\n* Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Chapter 5) includes $x^{-1}\\operatorname{Si}\\left(x\\right)$ , $-x^{-2}\\operatorname{Cin}\\left(x\\right)$ , $x^{-1}\\operatorname{Ein}\\left(x\\right)$ , $-x^{-1}\\operatorname{Ein}\\left(-x\\right)$ , $x=0(.01)0.5$ ; $\\operatorname{Si}\\left(x\\right)$ , $\\operatorname{Ci}\\left(x\\right)$ , $\\operatorname{Ei}\\left(x\\right)$ , $E_{1}\\left(x\\right)$ , $x=0.5(.01)2$ ; $\\operatorname{Si}\\left(x\\right)$ , $\\operatorname{Ci}\\left(x\\right)$ , $xe^{-x}\\operatorname{Ei}\\left(x\\right)$ , $xe^{x}E_{1}\\left(x\\right)$ , $x=2(.1)10$ ; $x\\mathrm{f}\\left(x\\right)$ , $x^{2}\\mathrm{g}\\left(x\\right)$ , $xe^{-x}\\operatorname{Ei}\\left(x\\right)$ , $xe^{x}E_{1}\\left(x\\right)$ , $x^{-1}=0(.005)0.1$ ; $\\operatorname{Si}\\left(\\pi x\\right)$ , $\\operatorname{Cin}\\left(\\pi x\\right)$ , $x=0(.1)10$ . Accuracy varies but is within the range 8S–11S.\n* Zhang and Jin ([1996](./bib/Z.html#bib2493 \"Computation of Special Functions\"), pp. 652, 689) includes $\\operatorname{Si}\\left(x\\right)$ , $\\operatorname{Ci}\\left(x\\right)$ , $x=0(.5)20(2)30$ , 8D; $\\operatorname{Ei}\\left(x\\right)$ , $E_{1}\\left(x\\right)$ , $x=[0,100]$ , 8S.\n* Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Chapter 5) includes the real and imaginary parts of $ze^{z}E_{1}\\left(z\\right)$ , $x=-19(1)20$ , $y=0(1)20$ , 6D; $e^{z}E_{1}\\left(z\\right)$ , $x=-4(.5)-2$ , $y=0(.2)1$ , 6D; $E_{1}\\left(z\\right)+\\ln z$ , $x=-2(.5)2.5$ , $y=0(.2)1$ , 6D.\n* Zhang and Jin ([1996](./bib/Z.html#bib2493 \"Computation of Special Functions\"), pp. 690–692) includes the real and imaginary parts of $E_{1}\\left(z\\right)$ , $\\pm x=0.5,1,3,5,10,15,20,50,100$ , $y=0(.5)1(1)5(5)30,50,100$ , 8S.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "auxiliary functions for sine and cosine integrals",
+                "cosine integrals",
+                "exponential integrals",
+                "sine integrals",
+                "tables"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.19 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1960",
+                "archivo_destino": "bib/L.html#bib1392",
+                "titulo_referencia": "A Guide to Mathematical Tables"
+              },
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/F.html#bib810",
+                "titulo_referencia": "An Index of Mathematical Tables. Vols. I, II"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/Z.html#bib2493",
+                "titulo_referencia": "Computation of Special Functions"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/Z.html#bib2493",
+                "titulo_referencia": "Computation of Special Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.20",
+          "titulo_original": "Approximations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.20.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.20.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.20 Approximations",
+            "prosa_teorica": "* Hastings ([1955](./bib/H.html#bib1056 \"Approximations for Digital Computers\")) gives several minimax polynomial and rational approximations for $E_{1}\\left(x\\right)+\\ln x$ , $xe^{x}E_{1}\\left(x\\right)$ , and the auxiliary functions $\\mathrm{f}\\left(x\\right)$ and $\\mathrm{g}\\left(x\\right)$ . These are included in Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Ch. 5).\n* Cody and Thacher ([1968](./bib/C.html#bib553 \"Rational Chebyshev approximations for the exponential integral ⁢ E 1 ( x )\")) provides minimax rational approximations for $E_{1}\\left(x\\right)$ , with accuracies up to 20S.\n* Cody and Thacher ([1969](./bib/C.html#bib554 \"Chebyshev approximations for the exponential integral ⁢ Ei ( x )\")) provides minimax rational approximations for $\\operatorname{Ei}\\left(x\\right)$ , with accuracies up to 20S.\n* MacLeod ([1996b](./bib/M.html#bib1525 \"Rational approximations, software and test methods for sine and cosine integrals\")) provides rational approximations for the sine and cosine integrals and for the auxiliary functions $\\mathrm{f}$ and $\\mathrm{g}$ , with accuracies up to 20S.\n* Clenshaw ([1962](./bib/C.html#bib525 \"Chebyshev Series for Mathematical Functions\")) gives Chebyshev coefficients for $-E_{1}\\left(x\\right)-\\ln|x|$ for $-4\\leq x\\leq 4$ and $e^{x}E_{1}\\left(x\\right)$ for $x\\geq 4$ (20D).\n* Luke and Wimp ([1963](./bib/L.html#bib1493 \"Jacobi polynomial expansions of a generalized hypergeometric function over a semi-infinite ray\")) covers $\\operatorname{Ei}\\left(x\\right)$ for $x\\leq-4$ (20D), and $\\operatorname{Si}\\left(x\\right)$ and $\\operatorname{Ci}\\left(x\\right)$ for $x\\geq 4$ (20D).\n* Luke ([1969b](./bib/L.html#bib1496 \"The Special Functions and their Approximations. Vol. 2\"), pp. 41–42) gives Chebyshev expansions of $\\operatorname{Ein}\\left(ax\\right)$ , $\\operatorname{Si}\\left(ax\\right)$ , and $\\operatorname{Cin}\\left(ax\\right)$ for $-1\\leq x\\leq 1$ , $a\\in\\mathbb{C}$ . The coefficients are given in terms of series of Bessel functions.\n* Luke ([1969b](./bib/L.html#bib1496 \"The Special Functions and their Approximations. Vol. 2\"), pp. 321–322) covers $\\operatorname{Ein}\\left(x\\right)$ and $-\\operatorname{Ein}\\left(-x\\right)$ for $0\\leq x\\leq 8$ (the Chebyshev coefficients are given to 20D); $E_{1}\\left(x\\right)$ for $x\\geq 5$ (20D), and $\\operatorname{Ei}\\left(x\\right)$ for $x\\geq 8$ (15D). Coefficients for the sine and cosine integrals are given on pp. 325–327.\n* Luke ([1969b](./bib/L.html#bib1496 \"The Special Functions and their Approximations. Vol. 2\"), p. 25) gives a Chebyshev expansion near infinity for the confluent hypergeometric $U$ -function (§ 13.2(i) ) from which Chebyshev expansions near infinity for $E_{1}\\left(z\\right)$ , $\\mathrm{f}\\left(z\\right)$ , and $\\mathrm{g}\\left(z\\right)$ follow by using ( 6.11.2 ) and ( 6.11.3 ). Luke also includes a recursion scheme for computing the coefficients in the expansions of the $U$ functions. If $|\\operatorname{ph}z|<\\pi$ the scheme can be used in backward direction.\n* Luke ([1969b](./bib/L.html#bib1496 \"The Special Functions and their Approximations. Vol. 2\"), pp. 402, 410, and 415–421) gives main diagonal Padé approximations for $\\operatorname{Ein}\\left(z\\right)$ , $\\operatorname{Si}\\left(z\\right)$ , $\\operatorname{Cin}\\left(z\\right)$ (valid near the origin), and $E_{1}\\left(z\\right)$ (valid for large $|z|$ ); approximate errors are given for a selection of $z$ -values.\n* Luke ([1969b](./bib/L.html#bib1496 \"The Special Functions and their Approximations. Vol. 2\"), pp. 411–414) gives rational approximations for $\\operatorname{Ein}\\left(z\\right)$ .",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "approximations",
+                "auxiliary functions for sine and cosine integrals",
+                "cosine integrals",
+                "exponential integrals",
+                "sine integrals",
+                "Chebyshev-series expansions"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.20 and Ch.6"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1056",
+                "titulo_referencia": "Approximations for Digital Computers"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              },
+              {
+                "texto": "1968",
+                "archivo_destino": "bib/C.html#bib553",
+                "titulo_referencia": "Rational Chebyshev approximations for the exponential integral ⁢ E 1 ( x )"
+              },
+              {
+                "texto": "1969",
+                "archivo_destino": "bib/C.html#bib554",
+                "titulo_referencia": "Chebyshev approximations for the exponential integral ⁢ Ei ( x )"
+              },
+              {
+                "texto": "1996b",
+                "archivo_destino": "bib/M.html#bib1525",
+                "titulo_referencia": "Rational approximations, software and test methods for sine and cosine integrals"
+              },
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/C.html#bib525",
+                "titulo_referencia": "Chebyshev Series for Mathematical Functions"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/L.html#bib1493",
+                "titulo_referencia": "Jacobi polynomial expansions of a generalized hypergeometric function over a semi-infinite ray"
+              },
+              {
+                "texto": "1969b",
+                "archivo_destino": "bib/L.html#bib1496",
+                "titulo_referencia": "The Special Functions and their Approximations. Vol. 2"
+              },
+              {
+                "texto": "1969b",
+                "archivo_destino": "bib/L.html#bib1496",
+                "titulo_referencia": "The Special Functions and their Approximations. Vol. 2"
+              },
+              {
+                "texto": "1969b",
+                "archivo_destino": "bib/L.html#bib1496",
+                "titulo_referencia": "The Special Functions and their Approximations. Vol. 2"
+              },
+              {
+                "texto": "1969b",
+                "archivo_destino": "bib/L.html#bib1496",
+                "titulo_referencia": "The Special Functions and their Approximations. Vol. 2"
+              },
+              {
+                "texto": "1969b",
+                "archivo_destino": "bib/L.html#bib1496",
+                "titulo_referencia": "The Special Functions and their Approximations. Vol. 2"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "6.21",
+          "titulo_original": "Software",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/6/6.21.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.21.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§6.21 Software",
+            "prosa_teorica": "In this section we provide links to the research literature describing the implementation of algorithms in software for the evaluation of functions described in this chapter. Citations in bulleted lists refer to papers for which research software has been made available and can be downloaded via the Web. References to research software that is available in other ways is listed separately.\nA more complete list of available software for computing these functions is found in the [Software Index](./software/index.md) . For another listing of Web-accessible software for the functions in this chapter, see [GAMS (class C5)](https://gams.nist.gov/serve.cgi/Class/C5/) .\n* Amos ([1980a](./bib/index.html#bib72 \"Algorithm 556: Exponential integrals\")). Fortran.\n* Cody ([1993b](./bib/C.html#bib547 \"Algorithm 715: SPECFUN – A portable FORTRAN package of special function routines and test drivers\")). Fortran.\n* Smith ([2011](./bib/S.html#bib2796 \"Algorithm 911: multiple-precision exponential integral and related functions\")). Fortran.\nSee also Gautschi ([1973](./bib/G.html#bib880 \"Algorithm 471: Exponential integrals\")), MacLeod ([1996b](./bib/M.html#bib1525 \"Rational approximations, software and test methods for sine and cosine integrals\")), Paciorek ([1970](./bib/P.html#bib1823 \"Algorithm 385: Exponential integral ⁢ Ei ( x )\")), and Stegun and Zucker ([1976](./bib/S.html#bib2162 \"Automatic computing methods for special functions. III. The sine, cosine, exponential integrals, and related functions\")).\n* Amos ([1990](./bib/index.html#bib80 \"Algorithm 683: A portable FORTRAN subroutine for exponential integrals of a complex argument\")). Fortran.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "referenciado_por": [
+                "Erratum (V1.0.9) for References",
+                "§ ‣ Software Cross Index"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.6",
+                "Annotations for §6.21 and Ch.6"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.0.9)",
+                  "descripcion": "The reference to Smith ([2011](./bib/S.html#bib2796 \"Algorithm 911: multiple-precision exponential integral and related functions\")) has been added in this subsection."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/S.html#bib2796",
+                "titulo_referencia": "Algorithm 911: multiple-precision exponential integral and related functions"
+              },
+              {
+                "texto": "1980a",
+                "archivo_destino": "bib/index.html#bib72",
+                "titulo_referencia": "Algorithm 556: Exponential integrals"
+              },
+              {
+                "texto": "1993b",
+                "archivo_destino": "bib/C.html#bib547",
+                "titulo_referencia": "Algorithm 715: SPECFUN – A portable FORTRAN package of special function routines and test drivers"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/S.html#bib2796",
+                "titulo_referencia": "Algorithm 911: multiple-precision exponential integral and related functions"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/G.html#bib880",
+                "titulo_referencia": "Algorithm 471: Exponential integrals"
+              },
+              {
+                "texto": "1996b",
+                "archivo_destino": "bib/M.html#bib1525",
+                "titulo_referencia": "Rational approximations, software and test methods for sine and cosine integrals"
+              },
+              {
+                "texto": "1970",
+                "archivo_destino": "bib/P.html#bib1823",
+                "titulo_referencia": "Algorithm 385: Exponential integral ⁢ Ei ( x )"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/S.html#bib2162",
+                "titulo_referencia": "Automatic computing methods for special functions. III. The sine, cosine, exponential integrals, and related functions"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/index.html#bib80",
+                "titulo_referencia": "Algorithm 683: A portable FORTRAN subroutine for exponential integrals of a complex argument"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "agradecimientos_capitulo": "This chapter is based in part on Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Chapter 5) by Walter Gautschi and William F. Cahill. Walter Gautschi provided the author with a list of references and comments collected since the original publication.",
+  "referencias_capitulo": [
+    "§8.19(i)",
+    "*Profile* Nico M. Temme",
+    "*Profile* Nico M. Temme",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Associate Editors",
+    "§ ‣ Software Cross Index"
+  ],
+  "estado_extraccion": "completado",
+  "total_formulas_extraidas": 110,
+  "estado_metadatos": "verificado_y_refinado"
+}

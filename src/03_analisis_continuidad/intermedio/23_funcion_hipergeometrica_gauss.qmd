@@ -1,0 +1,101 @@
+---
+id: "33C05"
+title: "Funcion Hipergeometrica Gauss"
+pilar: "03_analisis_continuidad"
+msc_code: "33C05"
+difficulty: "intermedio"
+tags:
+  - 33C05
+---
+
+# Funcion Hipergeometrica Gauss
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 15 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+{{}_{2}F_{1}}\left(a,b;c;z\right)=F\left(a,b;c;z\right)=F\left({a,b\atop c};z\right), \tag{15.1.1}
+$$
+
+$$
+\frac{F\left(a,b;c;z\right)}{\Gamma\left(c\right)}=\mathbf{F}\left(a,b;c;z\right)=\mathbf{F}\left({a,b\atop c};z\right)={{}_{2}{\mathbf{F}}_{1}}\left(a,b;c;z\right), \tag{15.1.2}
+$$
+
+$$
+\left(z\frac{\mathrm{d}}{\mathrm{d}z}z\right)^{n}=z^{n}\frac{{\mathrm{d}}^{n}}{{\mathrm{d}z}^{n}}z^{n}, \tag{15.5.10}
+$$
+
+$$
+K\left(k\right)=\frac{\pi}{2}F\left({\frac{1}{2},\frac{1}{2}\atop 1};k^{2}\right), \tag{15.9.24}
+$$
+
+$$
+D\left(k\right)=\frac{\pi}{4}F\left({\frac{1}{2},\frac{3}{2}\atop 2};k^{2}\right). \tag{15.9.26}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+F\left(a,b;c;z\right)=\sum_{s=0}^{\infty}\frac{{\left(a\right)_{s}}{\left(b\right)_{s}}}{{\left(c\right)_{s}}s!}z^{s}=1+\frac{ab}{c}z+\frac{a(a+1)b(b+1)}{c(c+1)2!}z^{2}+\cdots=\frac{\Gamma\left(c\right)}{\Gamma\left(a\right)\Gamma\left(b\right)}\sum_{s=0}^{\infty}\frac{\Gamma\left(a+s\right)\Gamma\left(b+s\right)}{\Gamma\left(c+s\right)s!}z^{s}, \tag{15.2.1}
+$$
+
+$$
+\mathbf{F}\left(a,b;c;z\right)=\sum_{s=0}^{\infty}\frac{{\left(a\right)_{s}}{\left(b\right)_{s}}}{\Gamma\left(c+s\right)s!}z^{s}, \tag{15.2.2}
+$$
+
+$$
+\mathbf{F}\left({a,b\atop c};x+\mathrm{i}0\right)-\mathbf{F}\left({a,b\atop c};x-\mathrm{i}0\right)=\frac{2\pi\mathrm{i}}{\Gamma\left(a\right)\Gamma\left(b\right)}(x-1)^{c-a-b}\mathbf{F}\left({c-a,c-b\atop c-a-b+1};1-x\right), \tag{15.2.3}
+$$
+
+$$
+F\left(-m,b;c;z\right)=\sum_{n=0}^{m}\frac{{\left(-m\right)_{n}}{\left(b\right)_{n}}}{{\left(c\right)_{n}}{n!}}z^{n}=\sum_{n=0}^{m}(-1)^{n}\genfrac{(}{)}{0.0pt}{}{m}{n}\frac{{\left(b\right)_{n}}}{{\left(c\right)_{n}}}z^{n}. \tag{15.2.4}
+$$
+
+$$
+\displaystyle F\left(1,1;2;z\right) \displaystyle=-z^{-1}\ln\left(1-z\right), \tag{15.4.1}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\lim_{c\to-n}\frac{F\left(a,b;c;z\right)}{\Gamma\left(c\right)}=\mathbf{F}\left(a,b;-n;z\right)=\frac{{\left(a\right)_{n+1}}{\left(b\right)_{n+1}}}{(n+1)!}z^{n+1}F\left(a+n+1,b+n+1;n+2;z\right), \tag{15.2.3_5}
+$$
+
+$$
+F\left({-m,b\atop-m-\ell};z\right)=\lim_{c\to-m-\ell}\left(\lim_{a\to-m}F\left({a,b\atop c};z\right)\right), \tag{15.2.5}
+$$
+
+$$
+F\left({-m,b\atop-m-\ell};z\right)=\lim_{a\to-m}F\left({a,b\atop a-\ell};z\right), \tag{15.2.6}
+$$
+
+$$
+\lim_{z\to 1-}\frac{F\left(a,b;a+b;z\right)}{-\ln\left(1-z\right)}=\frac{\Gamma\left(a+b\right)}{\Gamma\left(a\right)\Gamma\left(b\right)}. \tag{15.4.21}
+$$
+
+$$
+\lim_{z\to 1-}(1-z)^{a+b-c}\left(F\left(a,b;c;z\right)-\frac{\Gamma\left(c\right)\Gamma\left(c-a-b\right)}{\Gamma\left(c-a\right)\Gamma\left(c-b\right)}\right)=\frac{\Gamma\left(c\right)\Gamma\left(a+b-c\right)}{\Gamma\left(a\right)\Gamma\left(b\right)}. \tag{15.4.22}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

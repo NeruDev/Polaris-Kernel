@@ -1,0 +1,18 @@
+{
+    "title": "Regresión Lineal Simple y Correlación de Pearson",
+    "subtitle": "Modelado de Relaciones Lineales entre Variables",
+    "date": "2026-07-22",
+    "categories": [
+        "estadística",
+        "regresión",
+        "correlación",
+        "modelado"
+    ],
+    "format": {
+        "html": {
+            "toc": true,
+            "toc-depth": 3,
+            "math": true
+        }
+    }
+}

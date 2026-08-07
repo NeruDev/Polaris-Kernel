@@ -1,10 +1,10 @@
 # Arquitectura Técnica: Polaris Kernel (MathKernel)
 
 ***
-**Versión:** 2.1 (Migración Quarto/Typst)  
+**Versión:** 2.2 (Triada de Datos y Datasets Parquet/DuckDB)  
 **Estado:** `Implementada y Activa`  
 **Estándar de Nomenclatura:** MSC 2020  
-**Última Actualización:** 2026-06-05
+**Última Actualización:** 2026-08-06
 ***
 
 ## 1. Propósito Sistémico
@@ -40,6 +40,12 @@ Los fragmentos de información se limitan a **~300 palabras** por archivo. Esta 
 
 ### 3.3 Independencia Visual e Ilustración (Typst/SVG)
 Los activos gráficos modernos se generan y embeben utilizando la sintaxis nativa de **Typst** dentro de los archivos `.qmd` por su alta velocidad de compilación y limpieza semántica. Los gráficos SVG generados históricamente con Python (Matplotlib) residen junto a la teoría, manteniendo la portabilidad del grafo.
+
+### 3.4 Triada de Datos para Bases Complejas (Markdown + JSON + Parquet/DuckDB)
+Para conjuntos de datos densos en sintaxis matemática (como DLMF y MSC2020), la arquitectura adopta un esquema desacoplado en tres capas:
+- **Capa 1: Presentación y Prosa (`docs/`):** Archivos Markdown originales (`docs/DLMF-markdown-main/`) para maquetación, lectura humana y renderizado estático con Quarto.
+- **Capa 2: Inteligencia Estructurada (`metadata/`):** Archivos JSON adyacentes (`metadata/DLMF_data/`) para inspección semántica, esquemas y tipado de IA.
+- **Capa 3: Búsqueda y Recuperación RAG (`G:\DATASETS\`):** Datasets en Parquet e índices DuckDB (`dlmf.duckdb`, `MSC_2020.duckdb`) que proveen consultas Full-Text Search (BM25) en milisegundos sin sobrecargar el contexto de los modelos.
 
 ## 4. Estructura de Pilares (Bourbaki)
 
@@ -82,6 +88,7 @@ sequenceDiagram
 | **ADR-005** | **Quarto y Typst** | Orquestación interactiva y renderizado tipográfico de alta fidelidad superior a MathJax. |
 | **ADR-006** | **Typst como Motor Gráfico Principal** | Sustituye la auto-ejecución en CI/CD de los pesados scripts de Matplotlib, reservándolos para uso manual bajo demanda y usando Typst para todo lo nuevo. |
 | **ADR-007** | **Despliegue GitHub Pages (Artefactos)** | Mantenimiento del flujo de artefactos (`upload-pages-artifact`) sin adoptar ramas `gh-pages` huérfanas como sugieren los docs oficiales de Quarto, para proteger la integridad del CI/CD de Polaris. |
+| **ADR-008** | **Triada de Datos (Markdown + JSON + Parquet/DuckDB)** | Desacopla la presentación visual, la inspección de metadatos por IA y la búsqueda FTS a alta velocidad para bibliotecas complejas como DLMF y MSC2020. |
 
 ## 7. Directrices para Agentes de IA
 
@@ -118,3 +125,11 @@ Dividir el contenido inmediatamente cuando:
 1. Una sección `##` introduce un cambio de tema que puede ser consultado de forma independiente.
 2. La explicación requiere múltiples teoremas de gran envergadura.
 3. El archivo supera las **600 palabras**, lo cual introduce ruido en los embeddings de recuperación.
+
+### 10.5 Nomenclatura y Ordenamiento por Complejidad Relativa
+
+Para asegurar una progresión pedagógica lógica y que los sistemas RAG alimenten contextos desde lo fundamental hasta lo avanzado, los archivos fuente dentro de cada pilar (`src/`) se agrupan en subcarpetas estrictas de dificultad: `intro/`, `intermedio/`, `avanzado/` y `abstracto/`.
+- Dentro de cada subcarpeta, los archivos fuente `.qmd` son prefijados numéricamente (`01_`, `02_`, etc.) de manera independiente.
+- Las dependencias (imágenes `.svg` y scripts `.typ`) deben replicar el mismo nivel de agrupación, pero **sus nombres deben ser únicos y descriptivos sin números** (ej. no heredar el prefijo `01_` del archivo fuente). Esto permite identificarlas fácilmente dentro de su carpeta de dificultad y evita que se confundan con los metadatos o los archivos fuente `.qmd`.
+- Los scripts Typst codifican su ruta en su nombre de archivo respetando esta regla para la imagen final (ej. `01_pilar___intro___nombre_descriptivo_sin_numeros.typ`).
+- Cualquier alteración estructural requiere renombrar en lote la triada (Teoría, Metadato, Gráfico) a su carpeta de nivel correspondiente para evitar orfandad de referencias en los scripts.

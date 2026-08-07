@@ -22,7 +22,25 @@
 ## Task Behavior & Linking
 - **The Trinity Rule:** When generating or modifying assets, always preserve the link:
   `scripts/grafics/typst_src/` (Typst Generator) → `src/` (SVG Asset) → `metadata/GENERATED_ASSETS.md` (Registry).
+  **IMPORTANT:** Generated images and their typst scripts must have unique, descriptive names **WITHOUT numbers** (e.g. do not inherit the `01_` prefix from `.qmd` files) to avoid confusion with source files.
   *(Consulta `docs/typst_graficos.md` para las librerías oficiales de renderizado. Bajo el nuevo paradigma, prioriza Typst para todo esquema gráfico).*
 - **Metadata Integrity:** Ensure every `.md` o `.qmd` file has a valid YAML frontmatter including `id` (MSC standard), `title`, and `pilar`.
 - **Build First:** Before declaring a task finished, ensure `scripts/build.py` runs without critical errors (this delegates rendering to Quarto).
 - **CI/CD Awareness:** Remember deployment relies on `.github/workflows/pages.yml` with `upload-pages-artifact`, do not introduce `gh-pages` orphan branches.
+
+## Local Dataset Access (Método 2 - System Prompt / Terminal)
+Cuando requieras buscar información enciclopédica (Wikipedia) o ejemplos de código (Rosetta Code) para complementar tus respuestas, debes consultar los índices globales alojados en el disco `G:\`.
+Utiliza siempre PowerShell con rutas absolutas para ejecutar los scripts de búsqueda de la siguiente forma:
+
+1. **Para Wikipedia:**
+   `powershell.exe -Command "& 'G:\DATASETS\venv\Scripts\python.exe' 'G:\DATASETS\scripts\search_wiki.py' '<tu_busqueda>' '<es/en>'"`
+2. **Para Rosetta Code:**
+   `powershell.exe -Command "& 'G:\DATASETS\venv\Scripts\python.exe' 'G:\DATASETS\scripts\search_rosetta.py' '<tu_busqueda>'"`
+3. **Para DLMF (Digital Library of Mathematical Functions):**
+   `powershell.exe -Command "& 'G:\DATASETS\venv\Scripts\python.exe' 'G:\DATASETS\scripts\search_dlmf.py' '<tu_busqueda>'"`
+4. **Para MSC2020 (Mathematics Subject Classification):**
+   `powershell.exe -Command "& 'G:\DATASETS\venv\Scripts\python.exe' 'G:\DATASETS\scripts\search_msc.py' '<tu_busqueda>'"`
+
+El resultado siempre será devuelto en formato JSON.
+Lee este output e intégralo a tu razonamiento pedagógico.
+

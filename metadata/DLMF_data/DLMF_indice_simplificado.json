@@ -1,0 +1,368 @@
+{
+  "titulo": "Índice Simplificado de DLMF (Digital Library of Mathematical Functions)",
+  "fuente_original": "docs/DLMF-markdown-main/markdown/toc.md",
+  "descripcion": "Índice general por capítulos de la Digital Library of Mathematical Functions (DLMF), con referencias cruzadas a metadata y docs.",
+  "total_capitulos": 36,
+  "capitulos": [
+    {
+      "capitulo": 1,
+      "titulo": "Algebraic and Analytic Methods",
+      "archivo_metadata": "metadata/DLMF_data/1_Algebraic_and_Analytic_Methods.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/1/1.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/1/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/1/1.md"
+      }
+    },
+    {
+      "capitulo": 2,
+      "titulo": "Asymptotic Approximations",
+      "archivo_metadata": "metadata/DLMF_data/2_Asymptotic_Approximations.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/2/2.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/2/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/2/2.md"
+      }
+    },
+    {
+      "capitulo": 3,
+      "titulo": "Numerical Methods",
+      "archivo_metadata": "metadata/DLMF_data/3_Numerical_Methods.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/3/3.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/3/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/3/3.md"
+      }
+    },
+    {
+      "capitulo": 4,
+      "titulo": "Elementary Functions",
+      "archivo_metadata": "metadata/DLMF_data/4_Elementary_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/4/4.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/4/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/4/4.md"
+      }
+    },
+    {
+      "capitulo": 5,
+      "titulo": "Gamma Function",
+      "archivo_metadata": "metadata/DLMF_data/5_Gamma_Function.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/5/5.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/5/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/5/5.md"
+      }
+    },
+    {
+      "capitulo": 6,
+      "titulo": "Exponential, Logarithmic, Sine, and Cosine Integrals",
+      "archivo_metadata": "metadata/DLMF_data/6_Exponential_Logarithmic_Sine_and_Cosine_Integrals.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/6/6.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/6/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/6/6.md"
+      }
+    },
+    {
+      "capitulo": 7,
+      "titulo": "Error Functions, Dawson’s and Fresnel Integrals",
+      "archivo_metadata": "metadata/DLMF_data/7_Error_Functions_Dawsons_and_Fresnel_Integrals.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/7/7.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/7/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/7/7.md"
+      }
+    },
+    {
+      "capitulo": 8,
+      "titulo": "Incomplete Gamma and Related Functions",
+      "archivo_metadata": "metadata/DLMF_data/8_Incomplete_Gamma_and_Related_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/8/8.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/8/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/8/8.md"
+      }
+    },
+    {
+      "capitulo": 9,
+      "titulo": "Airy and Related Functions",
+      "archivo_metadata": "metadata/DLMF_data/9_Airy_and_Related_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/9/9.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/9/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/9/9.md"
+      }
+    },
+    {
+      "capitulo": 10,
+      "titulo": "Bessel Functions",
+      "archivo_metadata": "metadata/DLMF_data/10_Bessel_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/10/10.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/10/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/10/10.md"
+      }
+    },
+    {
+      "capitulo": 11,
+      "titulo": "Struve and Related Functions",
+      "archivo_metadata": "metadata/DLMF_data/11_Struve_and_Related_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/11/11.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/11/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.md"
+      }
+    },
+    {
+      "capitulo": 12,
+      "titulo": "Parabolic Cylinder Functions",
+      "archivo_metadata": "metadata/DLMF_data/12_Parabolic_Cylinder_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/12/12.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/12/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/12/12.md"
+      }
+    },
+    {
+      "capitulo": 13,
+      "titulo": "Confluent Hypergeometric Functions",
+      "archivo_metadata": "metadata/DLMF_data/13_Confluent_Hypergeometric_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/13/13.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/13/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/13/13.md"
+      }
+    },
+    {
+      "capitulo": 14,
+      "titulo": "Legendre and Related Functions",
+      "archivo_metadata": "metadata/DLMF_data/14_Legendre_and_Related_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/14/14.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/14/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/14/14.md"
+      }
+    },
+    {
+      "capitulo": 15,
+      "titulo": "Hypergeometric Function",
+      "archivo_metadata": "metadata/DLMF_data/15_Hypergeometric_Function.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/15/15.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/15/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/15/15.md"
+      }
+    },
+    {
+      "capitulo": 16,
+      "titulo": "Generalized Hypergeometric Functions and Meijer G-Function",
+      "archivo_metadata": "metadata/DLMF_data/16_Generalized_Hypergeometric_Functions_and_Meijer_G_Function.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/16/16.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/16/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/16/16.md"
+      }
+    },
+    {
+      "capitulo": 17,
+      "titulo": "q-Hypergeometric and Related Functions",
+      "archivo_metadata": "metadata/DLMF_data/17_q_Hypergeometric_and_Related_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/17/17.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/17/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/17/17.md"
+      }
+    },
+    {
+      "capitulo": 18,
+      "titulo": "Orthogonal Polynomials",
+      "archivo_metadata": "metadata/DLMF_data/18_Orthogonal_Polynomials.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/18/18.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/18/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/18/18.md"
+      }
+    },
+    {
+      "capitulo": 19,
+      "titulo": "Elliptic Integrals",
+      "archivo_metadata": "metadata/DLMF_data/19_Elliptic_Integrals.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/19/19.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/19/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/19/19.md"
+      }
+    },
+    {
+      "capitulo": 20,
+      "titulo": "Theta Functions",
+      "archivo_metadata": "metadata/DLMF_data/20_Theta_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/20/20.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/20/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.md"
+      }
+    },
+    {
+      "capitulo": 21,
+      "titulo": "Multidimensional Theta Functions",
+      "archivo_metadata": "metadata/DLMF_data/21_Multidimensional_Theta_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/21/21.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/21/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.md"
+      }
+    },
+    {
+      "capitulo": 22,
+      "titulo": "Jacobian Elliptic Functions",
+      "archivo_metadata": "metadata/DLMF_data/22_Jacobian_Elliptic_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/22/22.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/22/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/22/22.md"
+      }
+    },
+    {
+      "capitulo": 23,
+      "titulo": "Weierstrass Elliptic and Modular Functions",
+      "archivo_metadata": "metadata/DLMF_data/23_Weierstrass_Elliptic_and_Modular_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/23/23.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/23/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/23/23.md"
+      }
+    },
+    {
+      "capitulo": 24,
+      "titulo": "Bernoulli and Euler Polynomials",
+      "archivo_metadata": "metadata/DLMF_data/24_Bernoulli_and_Euler_Polynomials.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/24/24.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/24/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/24/24.md"
+      }
+    },
+    {
+      "capitulo": 25,
+      "titulo": "Zeta and Related Functions",
+      "archivo_metadata": "metadata/DLMF_data/25_Zeta_and_Related_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/25/25.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/25/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/25/25.md"
+      }
+    },
+    {
+      "capitulo": 26,
+      "titulo": "Combinatorial Analysis",
+      "archivo_metadata": "metadata/DLMF_data/26_Combinatorial_Analysis.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/26/26.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/26/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/26/26.md"
+      }
+    },
+    {
+      "capitulo": 27,
+      "titulo": "Functions of Number Theory",
+      "archivo_metadata": "metadata/DLMF_data/27_Functions_of_Number_Theory.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/27/27.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/27/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/27/27.md"
+      }
+    },
+    {
+      "capitulo": 28,
+      "titulo": "Mathieu Functions and Hill’s Equation",
+      "archivo_metadata": "metadata/DLMF_data/28_Mathieu_Functions_and_Hills_Equation.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/28/28.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/28/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/28/28.md"
+      }
+    },
+    {
+      "capitulo": 29,
+      "titulo": "Lamé Functions",
+      "archivo_metadata": "metadata/DLMF_data/29_Lame_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/29/29.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/29/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/29/29.md"
+      }
+    },
+    {
+      "capitulo": 30,
+      "titulo": "Spheroidal Wave Functions",
+      "archivo_metadata": "metadata/DLMF_data/30_Spheroidal_Wave_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/30/30.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/30/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/30/30.md"
+      }
+    },
+    {
+      "capitulo": 31,
+      "titulo": "Heun Functions",
+      "archivo_metadata": "metadata/DLMF_data/31_Heun_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/31/31.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/31/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.md"
+      }
+    },
+    {
+      "capitulo": 32,
+      "titulo": "Painlevé Transcendents",
+      "archivo_metadata": "metadata/DLMF_data/32_Painleve_Transcendents.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/32/32.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/32/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/32/32.md"
+      }
+    },
+    {
+      "capitulo": 33,
+      "titulo": "Coulomb Functions",
+      "archivo_metadata": "metadata/DLMF_data/33_Coulomb_Functions.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/33/33.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/33/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/33/33.md"
+      }
+    },
+    {
+      "capitulo": 34,
+      "titulo": "3⁢j,6⁢j,9⁢j Symbols",
+      "archivo_metadata": "metadata/DLMF_data/34_3j_6j_9j_Symbols.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/34/34.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/34/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/34/34.md"
+      }
+    },
+    {
+      "capitulo": 35,
+      "titulo": "Functions of Matrix Argument",
+      "archivo_metadata": "metadata/DLMF_data/35_Functions_of_Matrix_Argument.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/35/35.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/35/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.md"
+      }
+    },
+    {
+      "capitulo": 36,
+      "titulo": "Integrals with Coalescing Saddles",
+      "archivo_metadata": "metadata/DLMF_data/36_Integrals_with_Coalescing_Saddles.json",
+      "rutas_docs": {
+        "docs_original": "docs/DLMF-markdown-main/markdown/36/36.md",
+        "docs_directorio_original": "docs/DLMF-markdown-main/markdown/36/",
+        "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/36/36.md"
+      }
+    }
+  ]
+}

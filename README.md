@@ -9,10 +9,17 @@
 
 Polaris Kernel es una infraestructura de conocimiento matemático de alta fidelidad. Utiliza la arquitectura Bourbaki para organizar el conocimiento en pilares atómicos, semánticos e ilustrados, optimizados para el consumo autodidacta y la integración con agentes de IA autónomos.
 
+- [`src/`](src/README.md): El núcleo de conocimiento teórico escrito en `.qmd` / `.md`, estructurado en los **6 Pilares de Bourbaki**.
+- [`docs/`](docs/README.md): Documentación técnica, guías de arquitectura, diseño de gráficos en Typst y fuentes DLMF NIST.
+- [`metadata/`](metadata/README.md): Esquemas JSON, taxonomía MSC2020 (indexada en Parquet/DuckDB `MSC_2020`) y base de datos estructurada DLMF (`dlmf`).
+- [`scripts/`](scripts/README.md): Herramientas de orquestación (`build.py`), procesadores de gráficos Typst y utilidades de traducción DLMF.
+- [`tests/`](tests/README.md): Suite de pruebas automatizadas (`pytest`) para validación estructural y sintáctica.
+- [`utils/`](utils/README.md): Biblioteca auxiliar de resolución de rutas, auditoría de enlaces y logging.
+
 **Visualiza los resultados directamente en:**  
 👉 [https://nerudev.github.io/Polaris-Kernel/](https://nerudev.github.io/Polaris-Kernel/)
 
-El proyecto implementa una jerarquía modular estricta dividida en 6 pilares fundamentales, ahora renderizados mediante el **nuevo paradigma de Quarto y Typst**, y desplegados de forma automatizada y sin ramas huérfanas mediante **GitHub Actions (`pages.yml`)**:
+El proyecto implementa una jerarquía modular estricta dividida en 6 pilares fundamentales. Hemos finalizado exitosamente la **Fase 1 (Conceptos Básicos)** alcanzando el 100% de cobertura en todos los pilares. Estos módulos están ahora renderizados mediante el **nuevo paradigma de Quarto y Typst**, e incluyen gráficos vectoriales avanzados generados nativamente, desplegados de forma automatizada y sin ramas huérfanas mediante **GitHub Actions (`pages.yml`)**:
 
 ```mermaid
 graph TD

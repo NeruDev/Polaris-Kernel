@@ -1,0 +1,1239 @@
+{
+  "capitulo": 21,
+  "titulo_original": "Multidimensional Theta Functions",
+  "archivo_metadata": "metadata/DLMF_data/21_Multidimensional_Theta_Functions.json",
+  "rutas_docs": {
+    "docs_original": "docs/DLMF-markdown-main/markdown/21/21.md",
+    "docs_directorio_original": "docs/DLMF-markdown-main/markdown/21/",
+    "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.md"
+  },
+  "total_categorias": 4,
+  "total_secciones": 11,
+  "categorias": [
+    {
+      "categoria": "Notation",
+      "secciones": [
+        {
+          "seccion_id": "21.1",
+          "titulo_original": "Special Notation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.1.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.1.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.1 Special Notation",
+            "prosa_teorica": "(For other notation see Notation for the Special Functions .)\nLowercase boldface letters or numbers are $g$ -dimensional real or complex vectors, either row or column depending on the context. Uppercase boldface letters are $g\\times g$ real or complex matrices.\nThe main functions treated in this chapter are the Riemann theta functions $\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$ , and the Riemann theta functions with characteristics $\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$ .\nThe function $\\Theta(\\boldsymbol{{\\phi}}|\\mathbf{B})=\\theta\\left(\\boldsymbol{{\\phi}}/(2\\pi i)\\middle|\\mathbf{B}/(2\\pi i)\\right)$ is also commonly used; see, for example, Belokolos et al. ([1994](./bib/B.html#bib232 \"Algebro-geometric Approach to Nonlinear Integrable Problems\"), §2.5), Dubrovin ([1981](./bib/D.html#bib685 \"Theta functions and non-linear equations\")), and Fay ([1973](./bib/F.html#bib778 \"Theta Functions on Riemann Surfaces\"), Chapter 1).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Riemann",
+                "Riemann matrix",
+                "Riemann surface",
+                "Riemann theta functions",
+                "Riemann theta functions with characteristics",
+                "intersection indices",
+                "matrix",
+                "multidimensional theta functions",
+                "notation"
+              ],
+              "definiciones": [
+                "$/$ : $S_{1}/S_{2}$ : set of all elements of $S_{1}$ modulo elements of $S_{2}$"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21"
+              ]
+            },
+            "estado": "completado",
+            "tablas": [
+              {
+                "encabezados": [
+                  "$g,h$",
+                  "positive integers."
+                ],
+                "filas": [
+                  {
+                    "$g,h$": "${\\mathbb{Z}}^{g}$",
+                    "positive integers.": "$\\mathbb{Z}\\times\\mathbb{Z}\\times\\cdots\\times\\mathbb{Z}$ ( $g$ times)."
+                  },
+                  {
+                    "$g,h$": "${\\mathbb{R}}^{g}$",
+                    "positive integers.": "$\\mathbb{R}\\times\\mathbb{R}\\times\\cdots\\times\\mathbb{R}$ ( $g$ times)."
+                  },
+                  {
+                    "$g,h$": "${\\mathbb{Z}}^{g\\times h}$",
+                    "positive integers.": "set of all $g\\times h$ matrices with integer elements."
+                  },
+                  {
+                    "$g,h$": "$\\boldsymbol{{\\Omega}}$",
+                    "positive integers.": "$g\\times g$ complex, symmetric matrix with $\\Im\\boldsymbol{{\\Omega}}$ strictly positive definite, i.e., a Riemann matrix."
+                  },
+                  {
+                    "$g,h$": "$\\boldsymbol{{\\alpha}},\\boldsymbol{{\\beta}}$",
+                    "positive integers.": "$g$ -dimensional vectors, with all elements in $[0,1)$ , unless stated otherwise."
+                  },
+                  {
+                    "$g,h$": "$a_{j}$",
+                    "positive integers.": "$j$ th element of vector $\\mathbf{a}$ ."
+                  },
+                  {
+                    "$g,h$": "$A_{jk}$",
+                    "positive integers.": "$(j,k)$ th element of matrix $\\mathbf{A}$ ."
+                  },
+                  {
+                    "$g,h$": "$\\mathbf{a}\\cdot\\mathbf{b}$",
+                    "positive integers.": "scalar product of the vectors $\\mathbf{a}$ and $\\mathbf{b}$ ."
+                  },
+                  {
+                    "$g,h$": "$\\mathbf{a}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\mathbf{b}$",
+                    "positive integers.": "$[\\boldsymbol{{\\Omega}}\\mathbf{a}]\\cdot\\mathbf{b}=[\\boldsymbol{{\\Omega}}\\mathbf{b}]\\cdot\\mathbf{a}$ ."
+                  },
+                  {
+                    "$g,h$": "$\\operatorname{diag}\\mathbf{A}$",
+                    "positive integers.": "Transpose of $[A_{11},A_{22},\\dots,A_{gg}]$ ."
+                  },
+                  {
+                    "$g,h$": "$\\boldsymbol{{0}}_{g}$",
+                    "positive integers.": "$g\\times g$ zero matrix."
+                  },
+                  {
+                    "$g,h$": "$\\mathbf{I}_{g}$",
+                    "positive integers.": "$g\\times g$ identity matrix."
+                  },
+                  {
+                    "$g,h$": "$\\mathbf{J}_{2g}$",
+                    "positive integers.": "$\\begin{bmatrix}\\boldsymbol{{0}}_{g}&\\mathbf{I}_{g}\\\\ -\\mathbf{I}_{g}&\\boldsymbol{{0}}_{g}\\end{bmatrix}$ ."
+                  },
+                  {
+                    "$g,h$": "$S^{g}$",
+                    "positive integers.": "set of $g$ -dimensional vectors with elements in $S$ ."
+                  },
+                  {
+                    "$g,h$": "$S_{1}S_{2}$",
+                    "positive integers.": "set of all elements of the form “$\\text{element of }S_{1}\\times\\text{element of }S_{2}$”."
+                  },
+                  {
+                    "$g,h$": "$S_{1}/S_{2}$",
+                    "positive integers.": "set of all elements of $S_{1}$ , modulo elements of $S_{2}$ . Thus two elements of $S_{1}/S_{2}$ are equivalent if they are both in $S_{1}$ and their difference is in $S_{2}$ . (For an example see § 20.12(ii) .)"
+                  },
+                  {
+                    "$g,h$": "$a\\circ b$",
+                    "positive integers.": "intersection index of $a$ and $b$ , two cycles lying on a closed surface. $a\\circ b=0$ if $a$ and $b$ do not intersect. Otherwise $a\\circ b$ gets an additive contribution from every intersection point. This contribution is $1$ if the basis of the tangent vectors of the $a$ and $b$ cycles (§ 21.7(i) ) at the point of intersection is positively oriented; otherwise it is $-1$ ."
+                  },
+                  {
+                    "$g,h$": "$\\oint_{a}\\omega$",
+                    "positive integers.": "line integral of the differential $\\omega$ over the cycle $a$ ."
+                  }
+                ]
+              }
+            ],
+            "referencias_cruzadas": [
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/B.html#bib232",
+                "titulo_referencia": "Algebro-geometric Approach to Nonlinear Integrable Problems"
+              },
+              {
+                "texto": "1981",
+                "archivo_destino": "bib/D.html#bib685",
+                "titulo_referencia": "Theta functions and non-linear equations"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/F.html#bib778",
+                "titulo_referencia": "Theta Functions on Riemann Surfaces"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Properties",
+      "secciones": [
+        {
+          "seccion_id": "21.2",
+          "titulo_original": "Definitions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.2.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.2.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.2 Definitions",
+            "prosa_teorica": "This $g$ -tuple Fourier series converges absolutely and uniformly on compact sets of the $\\mathbf{z}$ and $\\boldsymbol{{\\Omega}}$ spaces; hence $\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$ is an analytic function of (each element of) $\\mathbf{z}$ and (each element of) $\\boldsymbol{{\\Omega}}$ . $\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$ is also referred to as a theta function with $g$ components, a $g$ -dimensional theta function or as a genus $g$ theta function.\nFor numerical purposes we use the *scaled Riemann theta function* $\\hat{\\theta}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$ , defined by (Deconinck et al. ([2004](./bib/D.html#bib632 \"Computing Riemann theta functions\"))),\n$\\hat{\\theta}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$ is a bounded nonanalytic function of $\\mathbf{z}$ . Many applications involve quotients of Riemann theta functions: the exponential factor then disappears. See also § 21.10(i) .\nWith $z_{1}=x_{1}+iy_{1}$ , $z_{2}=x_{2}+iy_{2}$ ,\nLet $\\boldsymbol{{\\alpha}},\\boldsymbol{{\\beta}}\\in{\\mathbb{R}}^{g}$ . Define\nThis function is referred to as a *Riemann theta function with characteristics* $\\begin{bmatrix}\\boldsymbol{{\\alpha}}\\\\ \\boldsymbol{{\\beta}}\\end{bmatrix}$ . It is a translation of the Riemann theta function ( 21.2.1 ), multiplied by an exponential factor:\nand\nCharacteristics whose elements are either $0$ or $\\tfrac{1}{2}$ are called *half-period characteristics* . For given $\\boldsymbol{{\\Omega}}$ , there are $2^{2g}$ $g$ -dimensional Riemann theta functions with half-period characteristics.\nFor $g=1$ , and with the notation of § 20.2(i) ,",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "21.2.1",
+                "latex": "\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\sum_{\\mathbf{n}\\in{\\mathbb{Z}}^{g}}e^{2\\pi i\\left(\\frac{1}{2}\\mathbf{n}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\mathbf{n}+\\mathbf{n}\\cdot\\mathbf{z}\\right)}. \\tag{21.2.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "21.2.2",
+                "latex": "\\hat{\\theta}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=e^{-\\pi[\\Im\\mathbf{z}]\\cdot[\\Im\\boldsymbol{{\\Omega}}]^{-1}\\cdot[\\Im\\mathbf{z}]}\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.2.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "21.2.3",
+                "latex": "\\theta\\left(z_{1},z_{2}\\middle|\\begin{bmatrix}i&-\\tfrac{1}{2}\\\\\n-\\tfrac{1}{2}&i\\end{bmatrix}\\right)=\\sum_{n_{1}=-\\infty}^{\\infty}\\sum_{n_{2}=-\\infty}^{\\infty}e^{-\\pi(n_{1}^{2}+n_{2}^{2})}e^{-i\\pi n_{1}n_{2}}e^{2\\pi i(n_{1}z_{1}+n_{2}z_{2})}. \\tag{21.2.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "21.2.4",
+                "latex": "\\hat{\\theta}\\left(x_{1}+iy_{1},x_{2}+iy_{2}\\middle|\\begin{bmatrix}i&-\\tfrac{1}{2}\\\\\n-\\tfrac{1}{2}&i\\end{bmatrix}\\right)=\\sum_{n_{1}=-\\infty}^{\\infty}\\sum_{n_{2}=-\\infty}^{\\infty}e^{-\\pi(n_{1}+y_{1})^{2}-\\pi(n_{2}+y_{2})^{2}}\\,e^{\\pi i(2n_{1}x_{1}+2n_{2}x_{2}-n_{1}n_{2})}. \\tag{21.2.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "21.2.5",
+                "latex": "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\sum_{\\mathbf{n}\\in{\\mathbb{Z}}^{g}}e^{2\\pi i\\left(\\frac{1}{2}[\\mathbf{n}+\\boldsymbol{{\\alpha}}]\\cdot\\boldsymbol{{\\Omega}}\\cdot[\\mathbf{n}+\\boldsymbol{{\\alpha}}]+[\\mathbf{n}+\\boldsymbol{{\\alpha}}]\\cdot[\\mathbf{z}+\\boldsymbol{{\\beta}}]\\right)}. \\tag{21.2.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "21.2.6",
+                "latex": "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=e^{2\\pi i\\left(\\frac{1}{2}\\boldsymbol{{\\alpha}}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\alpha}}\\cdot[\\mathbf{z}+\\boldsymbol{{\\beta}}]\\right)}\\theta\\left(\\mathbf{z}+\\boldsymbol{{\\Omega}}\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.2.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "21.2.7",
+                "latex": "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{0}}}{\\boldsymbol{{0}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.2.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "21.2.8",
+                "latex": "\\theta\\left(z\\middle|\\Omega\\right)=\\theta_{3}\\left(\\pi z\\middle|\\Omega\\right), \\tag{21.2.8}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "21.2.9",
+                "latex": "\\displaystyle\\theta_{1}\\left(\\pi z\\middle|\\Omega\\right) \\displaystyle=-\\theta\\genfrac{[}{]}{0.0pt}{}{\\frac{1}{2}}{\\frac{1}{2}}\\left(z\\middle|\\Omega\\right), \\tag{21.2.9}"
+              },
+              {
+                "id": "",
+                "tag": "21.2.10",
+                "latex": "\\displaystyle\\theta_{2}\\left(\\pi z\\middle|\\Omega\\right) \\displaystyle=\\theta\\genfrac{[}{]}{0.0pt}{}{\\tfrac{1}{2}}{0}\\left(z\\middle|\\Omega\\right), \\tag{21.2.10}"
+              },
+              {
+                "id": "",
+                "tag": "21.2.11",
+                "latex": "\\displaystyle\\theta_{3}\\left(\\pi z\\middle|\\Omega\\right) \\displaystyle=\\theta\\genfrac{[}{]}{0.0pt}{}{0}{0}\\left(z\\middle|\\Omega\\right), \\tag{21.2.11}"
+              },
+              {
+                "id": "",
+                "tag": "21.2.12",
+                "latex": "\\displaystyle\\theta_{4}\\left(\\pi z\\middle|\\Omega\\right) \\displaystyle=\\theta\\genfrac{[}{]}{0.0pt}{}{0}{\\tfrac{1}{2}}\\left(z\\middle|\\Omega\\right). \\tag{21.2.12}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\sum_{\\mathbf{n}\\in{\\mathbb{Z}}^{g}}e^{2\\pi i\\left(\\frac{1}{2}\\mathbf{n}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\mathbf{n}+\\mathbf{n}\\cdot\\mathbf{z}\\right)}. \\tag{21.2.1}",
+              "\\hat{\\theta}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=e^{-\\pi[\\Im\\mathbf{z}]\\cdot[\\Im\\boldsymbol{{\\Omega}}]^{-1}\\cdot[\\Im\\mathbf{z}]}\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.2.2}",
+              "\\theta\\left(z_{1},z_{2}\\middle|\\begin{bmatrix}i&-\\tfrac{1}{2}\\\\\n-\\tfrac{1}{2}&i\\end{bmatrix}\\right)=\\sum_{n_{1}=-\\infty}^{\\infty}\\sum_{n_{2}=-\\infty}^{\\infty}e^{-\\pi(n_{1}^{2}+n_{2}^{2})}e^{-i\\pi n_{1}n_{2}}e^{2\\pi i(n_{1}z_{1}+n_{2}z_{2})}. \\tag{21.2.3}",
+              "\\hat{\\theta}\\left(x_{1}+iy_{1},x_{2}+iy_{2}\\middle|\\begin{bmatrix}i&-\\tfrac{1}{2}\\\\\n-\\tfrac{1}{2}&i\\end{bmatrix}\\right)=\\sum_{n_{1}=-\\infty}^{\\infty}\\sum_{n_{2}=-\\infty}^{\\infty}e^{-\\pi(n_{1}+y_{1})^{2}-\\pi(n_{2}+y_{2})^{2}}\\,e^{\\pi i(2n_{1}x_{1}+2n_{2}x_{2}-n_{1}n_{2})}. \\tag{21.2.4}",
+              "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\sum_{\\mathbf{n}\\in{\\mathbb{Z}}^{g}}e^{2\\pi i\\left(\\frac{1}{2}[\\mathbf{n}+\\boldsymbol{{\\alpha}}]\\cdot\\boldsymbol{{\\Omega}}\\cdot[\\mathbf{n}+\\boldsymbol{{\\alpha}}]+[\\mathbf{n}+\\boldsymbol{{\\alpha}}]\\cdot[\\mathbf{z}+\\boldsymbol{{\\beta}}]\\right)}. \\tag{21.2.5}",
+              "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=e^{2\\pi i\\left(\\frac{1}{2}\\boldsymbol{{\\alpha}}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\alpha}}\\cdot[\\mathbf{z}+\\boldsymbol{{\\beta}}]\\right)}\\theta\\left(\\mathbf{z}+\\boldsymbol{{\\Omega}}\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.2.6}",
+              "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{0}}}{\\boldsymbol{{0}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.2.7}",
+              "\\theta\\left(z\\middle|\\Omega\\right)=\\theta_{3}\\left(\\pi z\\middle|\\Omega\\right), \\tag{21.2.8}",
+              "\\displaystyle\\theta_{1}\\left(\\pi z\\middle|\\Omega\\right) \\displaystyle=-\\theta\\genfrac{[}{]}{0.0pt}{}{\\frac{1}{2}}{\\frac{1}{2}}\\left(z\\middle|\\Omega\\right), \\tag{21.2.9}",
+              "\\displaystyle\\theta_{2}\\left(\\pi z\\middle|\\Omega\\right) \\displaystyle=\\theta\\genfrac{[}{]}{0.0pt}{}{\\tfrac{1}{2}}{0}\\left(z\\middle|\\Omega\\right), \\tag{21.2.10}",
+              "\\displaystyle\\theta_{3}\\left(\\pi z\\middle|\\Omega\\right) \\displaystyle=\\theta\\genfrac{[}{]}{0.0pt}{}{0}{0}\\left(z\\middle|\\Omega\\right), \\tag{21.2.11}",
+              "\\displaystyle\\theta_{4}\\left(\\pi z\\middle|\\Omega\\right) \\displaystyle=\\theta\\genfrac{[}{]}{0.0pt}{}{0}{\\tfrac{1}{2}}\\left(z\\middle|\\Omega\\right). \\tag{21.2.12}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Riemann",
+                "Riemann theta functions",
+                "analytic properties",
+                "components",
+                "definition",
+                "dimension",
+                "genus",
+                "scaled",
+                "scaled Riemann theta functions",
+                "theta functions",
+                "Riemann theta functions with characteristics",
+                "Riemann with characteristics",
+                "characteristics",
+                "half-period",
+                "relation to classical theta functions"
+              ],
+              "simbolos": [
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$: Riemann theta function with characteristics and $\\pi$: the ratio of the circumference of a circle to its diameter"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.0.5) for Subsection 21.2(i)",
+                "Erratum (V1.0.5) for Clarifications",
+                "§20.11(iv)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21",
+                "Annotations for §21.2 and Ch.21",
+                "Annotations for §21.2(i) , §21.2 and Ch.21",
+                "Annotations for §21.2(iii) , §21.2 and Ch.21"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.0.5)",
+                  "descripcion": "The cross-reference to 21.10(i) was added at the end of the second paragraph in this subsection."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "2004",
+                "archivo_destino": "bib/D.html#bib632",
+                "titulo_referencia": "Computing Riemann theta functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "21.3",
+          "titulo_original": "Symmetry and Quasi-Periodicity",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.3.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.3.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.3 Symmetry and Quasi-Periodicity",
+            "prosa_teorica": "when $\\mathbf{m}_{1}\\in{\\mathbb{Z}}^{g}.$ Thus $\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$ is periodic, with period $1$ , in each element of $\\mathbf{z}$ . More generally,\nwith $\\mathbf{m}_{1}$ , $\\mathbf{m}_{2}$ $\\in{\\mathbb{Z}}^{g}$ . This is the *quasi-periodicity* property of the Riemann theta function. It determines the Riemann theta function up to a constant factor. The set of points $\\mathbf{m}_{1}+\\boldsymbol{{\\Omega}}\\mathbf{m}_{2}$ form a $g$ -dimensional lattice, the *period lattice* of the Riemann theta function.\nAgain, with $\\mathbf{m}_{1}$ , $\\mathbf{m}_{2}$ $\\in{\\mathbb{Z}}^{g}$\nBecause of this property, the elements of $\\boldsymbol{{\\alpha}}$ and $\\boldsymbol{{\\beta}}$ are usually restricted to $[0,1)$ , without loss of generality.\nFor Riemann theta functions with half-period characteristics,\nSee also § 20.2(iii) for the case $g=1$ and classical theta functions.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "21.3.1",
+                "latex": "\\theta\\left(-\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.3.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "21.3.2",
+                "latex": "\\theta\\left(\\mathbf{z}+\\mathbf{m}_{1}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.3.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "21.3.3",
+                "latex": "\\theta\\left(\\mathbf{z}+\\mathbf{m}_{1}+\\boldsymbol{{\\Omega}}\\mathbf{m}_{2}\\middle|\\boldsymbol{{\\Omega}}\\right)=e^{-2\\pi i\\left(\\frac{1}{2}\\mathbf{m}_{2}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\mathbf{m}_{2}+\\mathbf{m}_{2}\\cdot\\mathbf{z}\\right)}\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.3.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "21.3.4",
+                "latex": "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}+\\mathbf{m}_{1}}{\\boldsymbol{{\\beta}}+\\mathbf{m}_{2}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=e^{2\\pi i\\boldsymbol{{\\alpha}}\\cdot\\mathbf{m}_{2}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.3.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "21.3.5",
+                "latex": "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}+\\mathbf{m}_{1}+\\boldsymbol{{\\Omega}}\\mathbf{m}_{2}\\middle|\\boldsymbol{{\\Omega}}\\right)=e^{2\\pi i\\left(\\boldsymbol{{\\alpha}}\\cdot\\mathbf{m}_{1}-\\boldsymbol{{\\beta}}\\cdot\\mathbf{m}_{2}-\\frac{1}{2}\\mathbf{m}_{2}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\mathbf{m}_{2}-\\mathbf{m}_{2}\\cdot\\mathbf{z}\\right)}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.3.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "21.3.6",
+                "latex": "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(-\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=(-1)^{4\\boldsymbol{{\\alpha}}\\cdot\\boldsymbol{{\\beta}}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.3.6}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\theta\\left(-\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.3.1}",
+              "\\theta\\left(\\mathbf{z}+\\mathbf{m}_{1}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.3.2}",
+              "\\theta\\left(\\mathbf{z}+\\mathbf{m}_{1}+\\boldsymbol{{\\Omega}}\\mathbf{m}_{2}\\middle|\\boldsymbol{{\\Omega}}\\right)=e^{-2\\pi i\\left(\\frac{1}{2}\\mathbf{m}_{2}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\mathbf{m}_{2}+\\mathbf{m}_{2}\\cdot\\mathbf{z}\\right)}\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.3.3}",
+              "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}+\\mathbf{m}_{1}}{\\boldsymbol{{\\beta}}+\\mathbf{m}_{2}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=e^{2\\pi i\\boldsymbol{{\\alpha}}\\cdot\\mathbf{m}_{2}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.3.4}",
+              "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}+\\mathbf{m}_{1}+\\boldsymbol{{\\Omega}}\\mathbf{m}_{2}\\middle|\\boldsymbol{{\\Omega}}\\right)=e^{2\\pi i\\left(\\boldsymbol{{\\alpha}}\\cdot\\mathbf{m}_{1}-\\boldsymbol{{\\beta}}\\cdot\\mathbf{m}_{2}-\\frac{1}{2}\\mathbf{m}_{2}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\mathbf{m}_{2}-\\mathbf{m}_{2}\\cdot\\mathbf{z}\\right)}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.3.5}",
+              "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(-\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)=(-1)^{4\\boldsymbol{{\\alpha}}\\cdot\\boldsymbol{{\\beta}}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.3.6}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Riemann theta functions",
+                "period lattice",
+                "quasi-periodicity",
+                "symmetry",
+                "Riemann theta functions with characteristics",
+                "characteristics"
+              ],
+              "referenciado_por": [
+                "§20.11(iv)"
+              ],
+              "notas_bibliograficas": [
+                "See Mumford ([1983](./bib/M.html#bib1681 \"Tata Lectures on Theta. I\"), pp. 120–122).",
+                "See Mumford ([1983](./bib/M.html#bib1681 \"Tata Lectures on Theta. I\"), pp. 120–122)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21",
+                "Annotations for §21.3 and Ch.21"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/M.html#bib1681",
+                "titulo_referencia": "Tata Lectures on Theta. I"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/M.html#bib1681",
+                "titulo_referencia": "Tata Lectures on Theta. I"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "21.4",
+          "titulo_original": "Graphics",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.4.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.4.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.4 Graphics",
+            "prosa_teorica": "Figure 21.4.1 provides surfaces of the scaled Riemann theta function $\\hat{\\theta}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$ , with\nThis Riemann matrix originates from the Riemann surface represented by the algebraic curve $\\mu^{3}-\\lambda^{7}+2\\lambda^{3}\\mu=0$ ; compare § 21.7(i) .\n<a id=\"F1\"></a>\n![Figure 21.4.1: $\\hat{\\theta}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$ parametrized by ( 21.4.1 ). The surface plots are of $\\hat{\\theta}\\left(x+iy,0\\middle|\\boldsymbol{{\\Omega}}\\right)$ , $0\\leq x\\leq 1$ , $0\\leq y\\leq 5$ (suffix 1); $\\hat{\\theta}\\left(x,y\\middle|\\boldsymbol{{\\Omega}}\\right)$ , $0\\leq x\\leq 1$ , $0\\leq y\\leq 1$ (suffix 2); $\\hat{\\theta}\\left(ix,iy\\middle|\\boldsymbol{{\\Omega}}\\right)$ , $0\\leq x\\leq 5$ , $0\\leq y\\leq 5$ (suffix 3). Shown are the real part (a), the imaginary part (b), and the modulus (c). 3D Help](../html/21/4/F1a.png)\nFor the scaled Riemann theta functions depicted in Figures 21.4.2 – 21.4.5\nand\n<a id=\"fig1\"></a>\n![Figure 21.4.2: $\\Re\\hat{\\theta}\\left(x+iy,0\\middle|\\boldsymbol{{\\Omega}}_{1}\\right)$ , $0\\leq x\\leq 1$ , $0\\leq y\\leq 5$ . (The imaginary part looks very similar.) 3D Help](../html/21/4/F2.png)\n<a id=\"fig2\"></a>\n![Figure 21.4.4: A real-valued scaled Riemann theta function: $\\hat{\\theta}\\left(ix,iy\\middle|\\boldsymbol{{\\Omega}}_{1}\\right)$ , $0\\leq x\\leq 4$ , $0\\leq y\\leq 4$ . In this case, the quasi-periods are commensurable, resulting in a doubly-periodic configuration. 3D Help](../html/21/4/F4.png)",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "21.4.1",
+                "latex": "\\boldsymbol{{\\Omega}}=\\begin{bmatrix}1.69098\\;3006+0.95105\\;6516\\,i&1.5+0.36327\\;1264\\,i\\\\\n1.5+0.36327\\;1264\\,i&1.30901\\;6994+0.95105\\;6516\\,i\\end{bmatrix}. \\tag{21.4.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "21.4.2",
+                "latex": "\\boldsymbol{{\\Omega}}_{1}=\\begin{bmatrix}i&-\\tfrac{1}{2}\\\\\n-\\tfrac{1}{2}&i\\end{bmatrix}, \\tag{21.4.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "21.4.3",
+                "latex": "\\boldsymbol{{\\Omega}}_{2}=\\begin{bmatrix}-\\tfrac{1}{2}+i&\\tfrac{1}{2}-\\tfrac{1}{2}i&-\\tfrac{1}{2}-\\tfrac{1}{2}i\\\\\n\\tfrac{1}{2}-\\tfrac{1}{2}i&i&0\\\\\n-\\tfrac{1}{2}-\\tfrac{1}{2}i&0&i\\end{bmatrix}. \\tag{21.4.3}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\boldsymbol{{\\Omega}}=\\begin{bmatrix}1.69098\\;3006+0.95105\\;6516\\,i&1.5+0.36327\\;1264\\,i\\\\\n1.5+0.36327\\;1264\\,i&1.30901\\;6994+0.95105\\;6516\\,i\\end{bmatrix}. \\tag{21.4.1}",
+              "\\boldsymbol{{\\Omega}}_{1}=\\begin{bmatrix}i&-\\tfrac{1}{2}\\\\\n-\\tfrac{1}{2}&i\\end{bmatrix}, \\tag{21.4.2}",
+              "\\boldsymbol{{\\Omega}}_{2}=\\begin{bmatrix}-\\tfrac{1}{2}+i&\\tfrac{1}{2}-\\tfrac{1}{2}i&-\\tfrac{1}{2}-\\tfrac{1}{2}i\\\\\n\\tfrac{1}{2}-\\tfrac{1}{2}i&i&0\\\\\n-\\tfrac{1}{2}-\\tfrac{1}{2}i&0&i\\end{bmatrix}. \\tag{21.4.3}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Riemann theta functions",
+                "graphics"
+              ],
+              "simbolos": [
+                "$\\hat{\\theta}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$: scaled Riemann theta function , $\\mathrm{i}$: imaginary unit and $\\boldsymbol{{\\Omega}}$: a Riemann matrix",
+                "$\\hat{\\theta}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$: scaled Riemann theta function , $\\mathrm{i}$: imaginary unit , $\\Re$: real part and $\\boldsymbol{{\\Omega}}$: a Riemann matrix"
+              ],
+              "referenciado_por": [
+                "§21.4"
+              ],
+              "notas_bibliograficas": [
+                "These graphics were computed by the author, using the algorithms described in Deconinck et al. ([2004](./bib/D.html#bib632 \"Computing Riemann theta functions\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21",
+                "Annotations for §21.4 and Ch.21"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "2004",
+                "archivo_destino": "bib/D.html#bib632",
+                "titulo_referencia": "Computing Riemann theta functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "21.5",
+          "titulo_original": "Modular Transformations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.5.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.5.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.5 Modular Transformations",
+            "prosa_teorica": "Let $\\mathbf{A}$ , $\\mathbf{B}$ , $\\mathbf{C}$ , and $\\mathbf{D}$ be $g\\times g$ matrices with integer elements such that\nis a *symplectic matrix* , that is,\nThen\nand\nHere $\\xi(\\boldsymbol{{\\Gamma}})$ is an eighth root of unity, that is, $(\\xi(\\boldsymbol{{\\Gamma}}))^{8}=1$ . For general $\\boldsymbol{{\\Gamma}}$ , it is difficult to decide which root needs to be used. The choice depends on $\\boldsymbol{{\\Gamma}}$ , but is independent of $\\mathbf{z}$ and $\\boldsymbol{{\\Omega}}$ . Equation ( 21.5.4 ) is the *modular transformation* property for Riemann theta functions.\nThe modular transformations form a group under the composition of such transformations, the *modular group* , which is generated by simpler transformations, for which $\\xi(\\boldsymbol{{\\Gamma}})$ is determinate:\n( $\\mathbf{A}$ invertible with integer elements.)\n( $\\mathbf{B}$ symmetric with integer elements and even diagonal elements.)\n( $\\mathbf{B}$ symmetric with integer elements.) See Heil ([1995](./bib/H.html#bib1061 \"Numerical Tools for the Study of Finite Gap Solutions of Integrable Systems\"), p. 24). For a $g\\times g$ matrix ${\\bf A}$ we define $\\operatorname{diag}\\mathbf{A}$ , as a column vector with the diagonal entries as elements.\n<a id=\"E8\"></a>\nwhere the square root assumes its principal value.\nwhere $\\kappa(\\boldsymbol{{\\alpha}},\\boldsymbol{{\\beta}},\\boldsymbol{{\\Gamma}})$ is a complex number that depends on $\\boldsymbol{{\\alpha}}$ , $\\boldsymbol{{\\beta}}$ , and $\\boldsymbol{{\\Gamma}}$ . However, $\\kappa(\\boldsymbol{{\\alpha}},\\boldsymbol{{\\beta}},\\boldsymbol{{\\Gamma}})$ is independent of $\\mathbf{z}$ and $\\boldsymbol{{\\Omega}}$ . For explicit results in the case $g=1$ , see § 20.7(viii) .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "21.5.1",
+                "latex": "\\boldsymbol{{\\Gamma}}=\\begin{bmatrix}\\mathbf{A}&\\mathbf{B}\\\\\n\\mathbf{C}&\\mathbf{D}\\end{bmatrix} \\tag{21.5.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "21.5.2",
+                "latex": "\\boldsymbol{{\\Gamma}}\\mathbf{J}_{2g}\\boldsymbol{{\\Gamma}}^{\\mathrm{T}}=\\mathbf{J}_{2g}. \\tag{21.5.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "21.5.3",
+                "latex": "\\det\\boldsymbol{{\\Gamma}}=1, \\tag{21.5.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "21.5.4",
+                "latex": "\\theta\\left(\\left[[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\right]^{\\mathrm{T}}\\mathbf{z}\\middle|[\\mathbf{A}\\boldsymbol{{\\Omega}}+\\mathbf{B}][\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\right)=\\xi(\\boldsymbol{{\\Gamma}})\\sqrt{\\det[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]}e^{\\pi i\\mathbf{z}\\cdot\\left[[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\mathbf{C}\\right]\\cdot\\mathbf{z}}\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.5.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "21.5.5",
+                "latex": "\\boldsymbol{{\\Gamma}}=\\begin{bmatrix}\\mathbf{A}&\\boldsymbol{{0}}_{g}\\\\\n\\boldsymbol{{0}}_{g}&[\\mathbf{A}^{-1}]^{\\mathrm{T}}\\end{bmatrix}\\Rightarrow\\theta\\left(\\mathbf{A}\\mathbf{z}\\middle|\\mathbf{A}\\boldsymbol{{\\Omega}}\\mathbf{A}^{\\mathrm{T}}\\right)=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.5.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "21.5.6",
+                "latex": "\\boldsymbol{{\\Gamma}}=\\begin{bmatrix}\\mathbf{I}_{g}&\\mathbf{B}\\\\\n\\boldsymbol{{0}}_{g}&\\mathbf{I}_{g}\\end{bmatrix}\\Rightarrow\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}+\\mathbf{B}\\right)=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.5.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "21.5.7",
+                "latex": "\\boldsymbol{{\\Gamma}}=\\begin{bmatrix}\\mathbf{I}_{g}&\\mathbf{B}\\\\\n\\boldsymbol{{0}}_{g}&\\mathbf{I}_{g}\\end{bmatrix}\\Rightarrow\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}+\\mathbf{B}\\right)=\\theta\\left(\\mathbf{z}+\\tfrac{1}{2}\\operatorname{diag}\\mathbf{B}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.5.7}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "21.5.8",
+                "latex": "\\displaystyle\\boldsymbol{{\\Gamma}} \\displaystyle=\\begin{bmatrix}\\boldsymbol{{0}}_{g}&-\\mathbf{I}_{g}\\\\\n\\mathbf{I}_{g}&\\boldsymbol{{0}}_{g}\\end{bmatrix} \\tag{21.5.8}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\theta\\left(\\boldsymbol{{\\Omega}}^{-1}\\mathbf{z}\\middle|-\\boldsymbol{{\\Omega}}^{-1}\\right) \\displaystyle=\\sqrt{\\det\\left[-i\\boldsymbol{{\\Omega}}\\right]}e^{\\pi i\\mathbf{z}\\cdot\\boldsymbol{{\\Omega}}^{-1}\\cdot\\mathbf{z}}\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right),"
+              },
+              {
+                "id": "E9",
+                "tag": "21.5.9",
+                "latex": "\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{D}\\boldsymbol{{\\alpha}}-\\mathbf{C}\\boldsymbol{{\\beta}}+\\tfrac{1}{2}\\operatorname{diag}[\\mathbf{C}\\mathbf{D}^{\\mathrm{T}}]}{-\\mathbf{B}\\boldsymbol{{\\alpha}}+\\mathbf{A}\\boldsymbol{{\\beta}}+\\tfrac{1}{2}\\operatorname{diag}[\\mathbf{A}\\mathbf{B}^{\\mathrm{T}}]}\\left(\\left[[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\right]^{\\mathrm{T}}\\mathbf{z}\\middle|[\\mathbf{A}\\boldsymbol{{\\Omega}}+\\mathbf{B}][\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\right)=\\kappa(\\boldsymbol{{\\alpha}},\\boldsymbol{{\\beta}},\\boldsymbol{{\\Gamma}})\\sqrt{\\det[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]}e^{\\pi i\\mathbf{z}\\cdot\\left[[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\mathbf{C}\\right]\\cdot\\mathbf{z}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.5.9}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\boldsymbol{{\\Gamma}}=\\begin{bmatrix}\\mathbf{A}&\\mathbf{B}\\\\\n\\mathbf{C}&\\mathbf{D}\\end{bmatrix} \\tag{21.5.1}",
+              "\\boldsymbol{{\\Gamma}}\\mathbf{J}_{2g}\\boldsymbol{{\\Gamma}}^{\\mathrm{T}}=\\mathbf{J}_{2g}. \\tag{21.5.2}",
+              "\\det\\boldsymbol{{\\Gamma}}=1, \\tag{21.5.3}",
+              "\\theta\\left(\\left[[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\right]^{\\mathrm{T}}\\mathbf{z}\\middle|[\\mathbf{A}\\boldsymbol{{\\Omega}}+\\mathbf{B}][\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\right)=\\xi(\\boldsymbol{{\\Gamma}})\\sqrt{\\det[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]}e^{\\pi i\\mathbf{z}\\cdot\\left[[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\mathbf{C}\\right]\\cdot\\mathbf{z}}\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.5.4}",
+              "\\boldsymbol{{\\Gamma}}=\\begin{bmatrix}\\mathbf{A}&\\boldsymbol{{0}}_{g}\\\\\n\\boldsymbol{{0}}_{g}&[\\mathbf{A}^{-1}]^{\\mathrm{T}}\\end{bmatrix}\\Rightarrow\\theta\\left(\\mathbf{A}\\mathbf{z}\\middle|\\mathbf{A}\\boldsymbol{{\\Omega}}\\mathbf{A}^{\\mathrm{T}}\\right)=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.5.5}",
+              "\\boldsymbol{{\\Gamma}}=\\begin{bmatrix}\\mathbf{I}_{g}&\\mathbf{B}\\\\\n\\boldsymbol{{0}}_{g}&\\mathbf{I}_{g}\\end{bmatrix}\\Rightarrow\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}+\\mathbf{B}\\right)=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.5.6}",
+              "\\boldsymbol{{\\Gamma}}=\\begin{bmatrix}\\mathbf{I}_{g}&\\mathbf{B}\\\\\n\\boldsymbol{{0}}_{g}&\\mathbf{I}_{g}\\end{bmatrix}\\Rightarrow\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}+\\mathbf{B}\\right)=\\theta\\left(\\mathbf{z}+\\tfrac{1}{2}\\operatorname{diag}\\mathbf{B}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.5.7}",
+              "\\displaystyle\\boldsymbol{{\\Gamma}} \\displaystyle=\\begin{bmatrix}\\boldsymbol{{0}}_{g}&-\\mathbf{I}_{g}\\\\\n\\mathbf{I}_{g}&\\boldsymbol{{0}}_{g}\\end{bmatrix} \\tag{21.5.8}",
+              "\\displaystyle\\theta\\left(\\boldsymbol{{\\Omega}}^{-1}\\mathbf{z}\\middle|-\\boldsymbol{{\\Omega}}^{-1}\\right) \\displaystyle=\\sqrt{\\det\\left[-i\\boldsymbol{{\\Omega}}\\right]}e^{\\pi i\\mathbf{z}\\cdot\\boldsymbol{{\\Omega}}^{-1}\\cdot\\mathbf{z}}\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right),",
+              "\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{D}\\boldsymbol{{\\alpha}}-\\mathbf{C}\\boldsymbol{{\\beta}}+\\tfrac{1}{2}\\operatorname{diag}[\\mathbf{C}\\mathbf{D}^{\\mathrm{T}}]}{-\\mathbf{B}\\boldsymbol{{\\alpha}}+\\mathbf{A}\\boldsymbol{{\\beta}}+\\tfrac{1}{2}\\operatorname{diag}[\\mathbf{A}\\mathbf{B}^{\\mathrm{T}}]}\\left(\\left[[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\right]^{\\mathrm{T}}\\mathbf{z}\\middle|[\\mathbf{A}\\boldsymbol{{\\Omega}}+\\mathbf{B}][\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\right)=\\kappa(\\boldsymbol{{\\alpha}},\\boldsymbol{{\\beta}},\\boldsymbol{{\\Gamma}})\\sqrt{\\det[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]}e^{\\pi i\\mathbf{z}\\cdot\\left[[\\mathbf{C}\\boldsymbol{{\\Omega}}+\\mathbf{D}]^{-1}\\mathbf{C}\\right]\\cdot\\mathbf{z}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.5.9}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Riemann theta functions",
+                "matrix",
+                "modular group",
+                "modular transformations",
+                "symplectic",
+                "Riemann theta functions with characteristics"
+              ],
+              "simbolos": [
+                "$\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)$: Riemann theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\det$: determinant , $\\mathrm{e}$: base of natural logarithm , $\\mathrm{i}$: imaginary unit , $g$: positive integer , $\\boldsymbol{{\\Omega}}$: a Riemann matrix and Matrix $\\boldsymbol{{\\Gamma}}$"
+              ],
+              "referenciado_por": [
+                "§20.11(iv)"
+              ],
+              "notas_bibliograficas": [
+                "See Arnol′d ([1997](./bib/index.html#bib2728 \"Mathematical Methods of Classical Mechanics\"), p. 222) and Mumford ([1983](./bib/M.html#bib1681 \"Tata Lectures on Theta. I\"), pp. 189–210).",
+                "See Igusa ([1972](./bib/I.html#bib1121 \"Theta Functions\"), pp. 78–85)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21",
+                "Annotations for §21.5 and Ch.21",
+                "Annotations for §21.5(i) , §21.5 and Ch.21"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.0.11)",
+                  "descripcion": "A sentence was added at the end of ( 21.5.7 ) to define a diagonal matrix. *Suggested 2015-10-27 by Howard Cohl and Adri Olde Daalhuis*"
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1997",
+                "archivo_destino": "bib/index.html#bib2728",
+                "titulo_referencia": "Mathematical Methods of Classical Mechanics"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/M.html#bib1681",
+                "titulo_referencia": "Tata Lectures on Theta. I"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/H.html#bib1061",
+                "titulo_referencia": "Numerical Tools for the Study of Finite Gap Solutions of Integrable Systems"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/I.html#bib1121",
+                "titulo_referencia": "Theta Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "21.6",
+          "titulo_original": "Products",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.6.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.6.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.6 Products",
+            "prosa_teorica": "Let $\\mathbf{T}=[T_{jk}]$ be an arbitrary $h\\times h$ orthogonal matrix (that is, $\\mathbf{T}\\mathbf{T}^{\\mathrm{T}}=\\mathbf{I}$ ) with rational elements. Also, let $\\mathbf{Z}$ be an arbitrary $g\\times h$ matrix. Define\nthat is, $\\mathcal{K}$ is the set of all $g\\times h$ matrices that are obtained by premultiplying $\\mathbf{T}$ by any $g\\times h$ matrix with integer elements; two such matrices in $\\mathcal{K}$ are considered *equivalent* if their difference is a matrix with integer elements. Also, let\nthat is, $\\mathcal{D}$ is the number of elements in the set containing all $h$ -dimensional vectors obtained by multiplying $\\mathbf{T}^{\\mathrm{T}}$ on the right by a vector with integer elements. Two such vectors are considered *equivalent* if their difference is a vector with integer elements. Then\nwhere $\\mathbf{z}_{j}$ , $\\mathbf{a}_{j}$ , $\\mathbf{b}_{j}$ denote respectively the $j$ th columns of $\\mathbf{Z}$ , $\\mathbf{A}$ , $\\mathbf{B}$ . This is the *Riemann identity* . On using theta functions with characteristics, it becomes\nwhere $\\mathbf{c}_{j}$ and $\\mathbf{d}_{j}$ are arbitrary $h$ -dimensional vectors. Many identities involving products of theta functions can be established using these formulas.\nLet $h=4$ and\nThen\nand\nLet $\\boldsymbol{{\\alpha}}$ , $\\boldsymbol{{\\beta}}$ , $\\boldsymbol{{\\gamma}}$ , $\\boldsymbol{{\\delta}}\\in{\\mathbb{R}}^{g}$ . Then\nThus $\\boldsymbol{{\\nu}}$ is a $g$ -dimensional vector whose entries are either $0$ or $1$ . For this result and a generalization see Koizumi ([1976](./bib/K.html#bib1307 \"Theta relations and projective normality of Abelian varieties\")) and Belokolos et al. ([1994](./bib/B.html#bib232 \"Algebro-geometric Approach to Nonlinear Integrable Problems\"), pp. 38–41). For addition formulas for classical theta functions see § 20.7(ii) .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "21.6.1",
+                "latex": "\\mathcal{K}={\\mathbb{Z}}^{g\\times h}\\mathbf{T}/({\\mathbb{Z}}^{g\\times h}\\mathbf{T}\\cap{\\mathbb{Z}}^{g\\times h}), \\tag{21.6.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "21.6.2",
+                "latex": "\\mathcal{D}=|\\mathbf{T}^{\\mathrm{T}}{\\mathbb{Z}}^{h}/(\\mathbf{T}^{\\mathrm{T}}{\\mathbb{Z}}^{h}\\cap{\\mathbb{Z}}^{h})|, \\tag{21.6.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "21.6.3",
+                "latex": "\\prod_{j=1}^{h}\\theta\\left(\\sum_{k=1}^{h}T_{jk}\\mathbf{z}_{k}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\frac{1}{\\mathcal{D}^{g}}\\sum_{\\mathbf{A}\\in\\mathcal{K}}\\sum_{\\mathbf{B}\\in\\mathcal{K}}e^{2\\pi i\\operatorname{tr}\\left[\\frac{1}{2}\\mathbf{A}^{\\mathrm{T}}\\boldsymbol{{\\Omega}}\\mathbf{A}+\\mathbf{A}^{\\mathrm{T}}[\\mathbf{Z}+\\mathbf{B}]\\right]}\\,\\prod_{j=1}^{h}\\theta\\left(\\mathbf{z}_{j}+\\boldsymbol{{\\Omega}}\\mathbf{a}_{j}+\\mathbf{b}_{j}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.6.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "21.6.4",
+                "latex": "\\prod_{j=1}^{h}\\theta\\genfrac{[}{]}{0.0pt}{}{\\sum_{k=1}^{h}T_{jk}\\mathbf{c}_{k}}{\\sum_{k=1}^{h}T_{jk}\\mathbf{d}_{k}}\\left(\\sum_{k=1}^{h}T_{jk}\\mathbf{z}_{k}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\frac{1}{\\mathcal{D}^{g}}\\sum_{\\mathbf{A}\\in\\mathcal{K}}\\sum_{\\mathbf{B}\\in\\mathcal{K}}e^{-2\\pi i\\sum_{j=1}^{h}\\mathbf{b}_{j}\\cdot\\mathbf{c}_{j}}\\prod_{j=1}^{h}\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{a}_{j}+\\mathbf{c}_{j}}{\\mathbf{b}_{j}+\\mathbf{d}_{j}}\\left(\\mathbf{z}_{j}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.6.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "21.6.5",
+                "latex": "\\mathbf{T}=\\frac{1}{2}\\begin{bmatrix}1&1&1&1\\\\\n1&1&-1&-1\\\\\n1&-1&1&-1\\\\\n1&-1&-1&1\\end{bmatrix}. \\tag{21.6.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "21.6.6",
+                "latex": "\\theta\\left(\\frac{\\mathbf{x}+\\mathbf{y}+\\mathbf{u}+\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\frac{\\mathbf{x}+\\mathbf{y}-\\mathbf{u}-\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\frac{\\mathbf{x}-\\mathbf{y}+\\mathbf{u}-\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\frac{\\mathbf{x}-\\mathbf{y}-\\mathbf{u}+\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\frac{1}{2^{g}}\\sum_{\\boldsymbol{{\\alpha}}\\in\\frac{1}{2}{\\mathbb{Z}}^{g}/{\\mathbb{Z}}^{g}}\\,\\sum_{\\boldsymbol{{\\beta}}\\in\\frac{1}{2}{\\mathbb{Z}}^{g}/{\\mathbb{Z}}^{g}}e^{2\\pi i\\left(2\\boldsymbol{{\\alpha}}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\alpha}}\\cdot[\\mathbf{x}+\\mathbf{y}+\\mathbf{u}+\\mathbf{v}]\\right)}\\,\\theta\\left(\\mathbf{x}+\\boldsymbol{{\\Omega}}\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{y}+\\boldsymbol{{\\Omega}}\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{u}+\\boldsymbol{{\\Omega}}\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{v}+\\boldsymbol{{\\Omega}}\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.6.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "21.6.7",
+                "latex": "\\theta\\genfrac{[}{]}{0.0pt}{}{\\tfrac{1}{2}[\\mathbf{c}_{1}+\\mathbf{c}_{2}+\\mathbf{c}_{3}+\\mathbf{c}_{4}]}{\\tfrac{1}{2}[\\mathbf{d}_{1}+\\mathbf{d}_{2}+\\mathbf{d}_{3}+\\mathbf{d}_{4}]}\\left(\\frac{\\mathbf{x}+\\mathbf{y}+\\mathbf{u}+\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\tfrac{1}{2}[\\mathbf{c}_{1}+\\mathbf{c}_{2}-\\mathbf{c}_{3}-\\mathbf{c}_{4}]}{\\tfrac{1}{2}[\\mathbf{d}_{1}+\\mathbf{d}_{2}-\\mathbf{d}_{3}-\\mathbf{d}_{4}]}\\left(\\frac{\\mathbf{x}+\\mathbf{y}-\\mathbf{u}-\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\,\\theta\\genfrac{[}{]}{0.0pt}{}{\\tfrac{1}{2}[\\mathbf{c}_{1}-\\mathbf{c}_{2}+\\mathbf{c}_{3}-\\mathbf{c}_{4}]}{\\tfrac{1}{2}[\\mathbf{d}_{1}-\\mathbf{d}_{2}+\\mathbf{d}_{3}-\\mathbf{d}_{4}]}\\left(\\frac{\\mathbf{x}-\\mathbf{y}+\\mathbf{u}-\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\tfrac{1}{2}[\\mathbf{c}_{1}-\\mathbf{c}_{2}-\\mathbf{c}_{3}+\\mathbf{c}_{4}]}{\\tfrac{1}{2}[\\mathbf{d}_{1}-\\mathbf{d}_{2}-\\mathbf{d}_{3}+\\mathbf{d}_{4}]}\\left(\\frac{\\mathbf{x}-\\mathbf{y}-\\mathbf{u}+\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\\\\n=\\frac{1}{2^{g}}\\sum_{\\boldsymbol{{\\alpha}}\\in\\frac{1}{2}{\\mathbb{Z}}^{g}/{\\mathbb{Z}}^{g}}\\,\\sum_{\\boldsymbol{{\\beta}}\\in\\frac{1}{2}{\\mathbb{Z}}^{g}/{\\mathbb{Z}}^{g}}e^{-2\\pi i\\boldsymbol{{\\beta}}\\cdot[\\mathbf{c}_{1}+\\mathbf{c}_{2}+\\mathbf{c}_{3}+\\mathbf{c}_{4}]}\\,\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{c}_{1}+\\boldsymbol{{\\alpha}}}{\\mathbf{d}_{1}+\\boldsymbol{{\\beta}}}\\left(\\mathbf{x}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{c}_{2}+\\boldsymbol{{\\alpha}}}{\\mathbf{d}_{2}+\\boldsymbol{{\\beta}}}\\left(\\mathbf{y}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{c}_{3}+\\boldsymbol{{\\alpha}}}{\\mathbf{d}_{3}+\\boldsymbol{{\\beta}}}\\left(\\mathbf{u}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{c}_{4}+\\boldsymbol{{\\alpha}}}{\\mathbf{d}_{4}+\\boldsymbol{{\\beta}}}\\left(\\mathbf{v}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.6.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "21.6.8",
+                "latex": "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\gamma}}}\\left(\\mathbf{z}_{1}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\beta}}}{\\boldsymbol{{\\delta}}}\\left(\\mathbf{z}_{2}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\sum_{\\boldsymbol{{\\nu}}\\in{\\mathbb{Z}}^{g}/\\left(2{\\mathbb{Z}}^{g}\\right)}\\theta\\genfrac{[}{]}{0.0pt}{}{\\frac{1}{2}[\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}+\\boldsymbol{{\\nu}}]}{\\boldsymbol{{\\gamma}}+\\boldsymbol{{\\delta}}}\\left(\\mathbf{z}_{1}+\\mathbf{z}_{2}\\middle|2\\boldsymbol{{\\Omega}}\\right)\\,\\theta\\genfrac{[}{]}{0.0pt}{}{\\frac{1}{2}[\\boldsymbol{{\\alpha}}-\\boldsymbol{{\\beta}}+\\boldsymbol{{\\nu}}]}{\\boldsymbol{{\\gamma}}-\\boldsymbol{{\\delta}}}\\left(\\mathbf{z}_{1}-\\mathbf{z}_{2}\\middle|2\\boldsymbol{{\\Omega}}\\right). \\tag{21.6.8}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\mathcal{K}={\\mathbb{Z}}^{g\\times h}\\mathbf{T}/({\\mathbb{Z}}^{g\\times h}\\mathbf{T}\\cap{\\mathbb{Z}}^{g\\times h}), \\tag{21.6.1}",
+              "\\mathcal{D}=|\\mathbf{T}^{\\mathrm{T}}{\\mathbb{Z}}^{h}/(\\mathbf{T}^{\\mathrm{T}}{\\mathbb{Z}}^{h}\\cap{\\mathbb{Z}}^{h})|, \\tag{21.6.2}",
+              "\\prod_{j=1}^{h}\\theta\\left(\\sum_{k=1}^{h}T_{jk}\\mathbf{z}_{k}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\frac{1}{\\mathcal{D}^{g}}\\sum_{\\mathbf{A}\\in\\mathcal{K}}\\sum_{\\mathbf{B}\\in\\mathcal{K}}e^{2\\pi i\\operatorname{tr}\\left[\\frac{1}{2}\\mathbf{A}^{\\mathrm{T}}\\boldsymbol{{\\Omega}}\\mathbf{A}+\\mathbf{A}^{\\mathrm{T}}[\\mathbf{Z}+\\mathbf{B}]\\right]}\\,\\prod_{j=1}^{h}\\theta\\left(\\mathbf{z}_{j}+\\boldsymbol{{\\Omega}}\\mathbf{a}_{j}+\\mathbf{b}_{j}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.6.3}",
+              "\\prod_{j=1}^{h}\\theta\\genfrac{[}{]}{0.0pt}{}{\\sum_{k=1}^{h}T_{jk}\\mathbf{c}_{k}}{\\sum_{k=1}^{h}T_{jk}\\mathbf{d}_{k}}\\left(\\sum_{k=1}^{h}T_{jk}\\mathbf{z}_{k}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\frac{1}{\\mathcal{D}^{g}}\\sum_{\\mathbf{A}\\in\\mathcal{K}}\\sum_{\\mathbf{B}\\in\\mathcal{K}}e^{-2\\pi i\\sum_{j=1}^{h}\\mathbf{b}_{j}\\cdot\\mathbf{c}_{j}}\\prod_{j=1}^{h}\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{a}_{j}+\\mathbf{c}_{j}}{\\mathbf{b}_{j}+\\mathbf{d}_{j}}\\left(\\mathbf{z}_{j}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.6.4}",
+              "\\mathbf{T}=\\frac{1}{2}\\begin{bmatrix}1&1&1&1\\\\\n1&1&-1&-1\\\\\n1&-1&1&-1\\\\\n1&-1&-1&1\\end{bmatrix}. \\tag{21.6.5}",
+              "\\theta\\left(\\frac{\\mathbf{x}+\\mathbf{y}+\\mathbf{u}+\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\frac{\\mathbf{x}+\\mathbf{y}-\\mathbf{u}-\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\frac{\\mathbf{x}-\\mathbf{y}+\\mathbf{u}-\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\frac{\\mathbf{x}-\\mathbf{y}-\\mathbf{u}+\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\frac{1}{2^{g}}\\sum_{\\boldsymbol{{\\alpha}}\\in\\frac{1}{2}{\\mathbb{Z}}^{g}/{\\mathbb{Z}}^{g}}\\,\\sum_{\\boldsymbol{{\\beta}}\\in\\frac{1}{2}{\\mathbb{Z}}^{g}/{\\mathbb{Z}}^{g}}e^{2\\pi i\\left(2\\boldsymbol{{\\alpha}}\\cdot\\boldsymbol{{\\Omega}}\\cdot\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\alpha}}\\cdot[\\mathbf{x}+\\mathbf{y}+\\mathbf{u}+\\mathbf{v}]\\right)}\\,\\theta\\left(\\mathbf{x}+\\boldsymbol{{\\Omega}}\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{y}+\\boldsymbol{{\\Omega}}\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{u}+\\boldsymbol{{\\Omega}}\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{v}+\\boldsymbol{{\\Omega}}\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}\\middle|\\boldsymbol{{\\Omega}}\\right), \\tag{21.6.6}",
+              "\\theta\\genfrac{[}{]}{0.0pt}{}{\\tfrac{1}{2}[\\mathbf{c}_{1}+\\mathbf{c}_{2}+\\mathbf{c}_{3}+\\mathbf{c}_{4}]}{\\tfrac{1}{2}[\\mathbf{d}_{1}+\\mathbf{d}_{2}+\\mathbf{d}_{3}+\\mathbf{d}_{4}]}\\left(\\frac{\\mathbf{x}+\\mathbf{y}+\\mathbf{u}+\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\tfrac{1}{2}[\\mathbf{c}_{1}+\\mathbf{c}_{2}-\\mathbf{c}_{3}-\\mathbf{c}_{4}]}{\\tfrac{1}{2}[\\mathbf{d}_{1}+\\mathbf{d}_{2}-\\mathbf{d}_{3}-\\mathbf{d}_{4}]}\\left(\\frac{\\mathbf{x}+\\mathbf{y}-\\mathbf{u}-\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\,\\theta\\genfrac{[}{]}{0.0pt}{}{\\tfrac{1}{2}[\\mathbf{c}_{1}-\\mathbf{c}_{2}+\\mathbf{c}_{3}-\\mathbf{c}_{4}]}{\\tfrac{1}{2}[\\mathbf{d}_{1}-\\mathbf{d}_{2}+\\mathbf{d}_{3}-\\mathbf{d}_{4}]}\\left(\\frac{\\mathbf{x}-\\mathbf{y}+\\mathbf{u}-\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\tfrac{1}{2}[\\mathbf{c}_{1}-\\mathbf{c}_{2}-\\mathbf{c}_{3}+\\mathbf{c}_{4}]}{\\tfrac{1}{2}[\\mathbf{d}_{1}-\\mathbf{d}_{2}-\\mathbf{d}_{3}+\\mathbf{d}_{4}]}\\left(\\frac{\\mathbf{x}-\\mathbf{y}-\\mathbf{u}+\\mathbf{v}}{2}\\middle|\\boldsymbol{{\\Omega}}\\right)\\\\\n=\\frac{1}{2^{g}}\\sum_{\\boldsymbol{{\\alpha}}\\in\\frac{1}{2}{\\mathbb{Z}}^{g}/{\\mathbb{Z}}^{g}}\\,\\sum_{\\boldsymbol{{\\beta}}\\in\\frac{1}{2}{\\mathbb{Z}}^{g}/{\\mathbb{Z}}^{g}}e^{-2\\pi i\\boldsymbol{{\\beta}}\\cdot[\\mathbf{c}_{1}+\\mathbf{c}_{2}+\\mathbf{c}_{3}+\\mathbf{c}_{4}]}\\,\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{c}_{1}+\\boldsymbol{{\\alpha}}}{\\mathbf{d}_{1}+\\boldsymbol{{\\beta}}}\\left(\\mathbf{x}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{c}_{2}+\\boldsymbol{{\\alpha}}}{\\mathbf{d}_{2}+\\boldsymbol{{\\beta}}}\\left(\\mathbf{y}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{c}_{3}+\\boldsymbol{{\\alpha}}}{\\mathbf{d}_{3}+\\boldsymbol{{\\beta}}}\\left(\\mathbf{u}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\mathbf{c}_{4}+\\boldsymbol{{\\alpha}}}{\\mathbf{d}_{4}+\\boldsymbol{{\\beta}}}\\left(\\mathbf{v}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.6.7}",
+              "\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\gamma}}}\\left(\\mathbf{z}_{1}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\beta}}}{\\boldsymbol{{\\delta}}}\\left(\\mathbf{z}_{2}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\sum_{\\boldsymbol{{\\nu}}\\in{\\mathbb{Z}}^{g}/\\left(2{\\mathbb{Z}}^{g}\\right)}\\theta\\genfrac{[}{]}{0.0pt}{}{\\frac{1}{2}[\\boldsymbol{{\\alpha}}+\\boldsymbol{{\\beta}}+\\boldsymbol{{\\nu}}]}{\\boldsymbol{{\\gamma}}+\\boldsymbol{{\\delta}}}\\left(\\mathbf{z}_{1}+\\mathbf{z}_{2}\\middle|2\\boldsymbol{{\\Omega}}\\right)\\,\\theta\\genfrac{[}{]}{0.0pt}{}{\\frac{1}{2}[\\boldsymbol{{\\alpha}}-\\boldsymbol{{\\beta}}+\\boldsymbol{{\\nu}}]}{\\boldsymbol{{\\gamma}}-\\boldsymbol{{\\delta}}}\\left(\\mathbf{z}_{1}-\\mathbf{z}_{2}\\middle|2\\boldsymbol{{\\Omega}}\\right). \\tag{21.6.8}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Riemann theta functions",
+                "products",
+                "Riemann identity",
+                "Riemann theta functions with characteristics",
+                "equivalent",
+                "matrix",
+                "vector",
+                "addition formulas"
+              ],
+              "referenciado_por": [
+                "§20.11(iv)"
+              ],
+              "notas_bibliograficas": [
+                "See Mumford ([1983](./bib/M.html#bib1681 \"Tata Lectures on Theta. I\"), pp. 211–216).",
+                "See Dubrovin ([1981](./bib/D.html#bib685 \"Theta functions and non-linear equations\"), pp. 22–23)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21",
+                "Annotations for §21.6 and Ch.21",
+                "Annotations for §21.6(i) , §21.6 and Ch.21"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/M.html#bib1681",
+                "titulo_referencia": "Tata Lectures on Theta. I"
+              },
+              {
+                "texto": "1981",
+                "archivo_destino": "bib/D.html#bib685",
+                "titulo_referencia": "Theta functions and non-linear equations"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/K.html#bib1307",
+                "titulo_referencia": "Theta relations and projective normality of Abelian varieties"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/B.html#bib232",
+                "titulo_referencia": "Algebro-geometric Approach to Nonlinear Integrable Problems"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Applications",
+      "secciones": [
+        {
+          "seccion_id": "21.7",
+          "titulo_original": "Riemann Surfaces",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.7.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.7.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.7 Riemann Surfaces",
+            "prosa_teorica": "In almost all applications, a Riemann theta function is associated with a compact Riemann surface. Although there are other ways to represent Riemann surfaces (see e.g. Belokolos et al. ([1994](./bib/B.html#bib232 \"Algebro-geometric Approach to Nonlinear Integrable Problems\"), §2.1)), they are obtainable from *plane algebraic curves* (Springer ([1957](./bib/S.html#bib2146 \"Introduction to Riemann Surfaces\")), or Riemann ([1851](./bib/R.html#bib1950 \"Grundlagen für eine allgemeine Theorie der Functionen einer veränderlichen complexen Grösse\"))). Consider the set of points in ${\\mathbb{C}}^{2}$ that satisfy the equation\nwhere $P(\\lambda,\\mu)$ is a polynomial in $\\lambda$ and $\\mu$ that does not factor over ${\\mathbb{C}}^{2}$ . Equation ( 21.7.1 ) determines a plane algebraic curve in ${\\mathbb{C}}^{2}$ , which is made compact by adding its points at infinity. To accomplish this we write ( 21.7.1 ) in terms of homogeneous coordinates:\nby setting $\\lambda=\\tilde{\\lambda}/\\tilde{\\eta}$ , $\\mu=\\tilde{\\mu}/\\tilde{\\eta}$ , and then clearing fractions. This compact curve may have singular points, that is, points at which the gradient of $\\tilde{P}$ vanishes. Removing the singularities of this curve gives rise to a two-dimensional connected manifold with a complex-analytic structure, that is, a *Riemann surface. All compact Riemann surfaces can be obtained this way.*\nSince a Riemann surface $\\Gamma$ is a two-dimensional manifold that is orientable (owing to its analytic structure), its only topological invariant is its *genus* $g$ (the number of *handles* in the surface). On this surface, we choose $2g$ *cycles* (that is, closed oriented curves, each with at most a finite number of singular points) $a_{j}$ , $b_{j}$ , $j=1,2,\\dots,g$ , such that their *intersection indices* satisfy\n<a id=\"E3\"></a>\nFor example, Figure 21.7.1 depicts a genus 2 surface.\n<a id=\"F1\"></a>\n![Figure 21.7.1: A basis of cycles for a genus 2 surface.](../html/21/7/F1.png)\nOn a Riemann surface of genus $g$ , there are $g$ linearly independent *holomorphic differentials* $\\omega_{j}$ , $j=1,2,\\dots,g$ . If a local coordinate $z$ is chosen on the Riemann surface, then the local coordinate representation of these holomorphic differentials is given by\nwhere $f_{j}(z)$ , $j=1,2,\\dots,g$ are analytic functions. Thus the differentials $\\omega_{j}$ , $j=1,2,\\dots,g$ have no singularities on $\\Gamma$ . Note that for the purposes of integrating these holomorphic differentials, all cycles on the surface are a linear combination of the cycles $a_{j}$ , $b_{j}$ , $j=1,2,\\dots,g$ . The $\\omega_{j}$ are normalized so that\nThen the matrix defined by\nis a Riemann matrix and it is used to define the corresponding Riemann theta function. *In this way, we associate a Riemann theta function with every compact Riemann surface $\\Gamma$.*\nRiemann theta functions originating from Riemann surfaces are special in the sense that a general $g$ -dimensional Riemann theta function depends on $g(g+1)/2$ complex parameters. In contrast, a $g$ -dimensional Riemann theta function arising from a compact Riemann surface of genus $g$ ( $>1$ ) depends on at most $3g-3$ complex parameters (one complex parameter for the case $g=1$ ). These special Riemann theta functions satisfy many special identities, two of which appear in the following subsections. For more information, see Dubrovin ([1981](./bib/D.html#bib685 \"Theta functions and non-linear equations\")), Brieskorn and Knörrer ([1986](./bib/B.html#bib353 \"Plane Algebraic Curves\"), §9.3), Belokolos et al. ([1994](./bib/B.html#bib232 \"Algebro-geometric Approach to Nonlinear Integrable Problems\"), Chapter 2), and Mumford ([1984](./bib/M.html#bib1682 \"Tata Lectures on Theta. II\"), §2.2–2.3).\nLet $\\boldsymbol{{\\alpha}}$ , $\\boldsymbol{{\\beta}}$ be such that\nDefine the holomorphic differential\nThen the *prime form* on the corresponding compact Riemann surface $\\Gamma$ is defined by\nwhere $P_{1}$ and $P_{2}$ are points on $\\Gamma$ , $\\boldsymbol{{\\omega}}=(\\omega_{1},\\omega_{2},\\dots,\\omega_{g})$ , and the path of integration on $\\Gamma$ from $P_{1}$ to $P_{2}$ is identical for all components. Here $\\sqrt{\\zeta(P)}$ is such that $\\sqrt{\\zeta(P)}^{2}=\\zeta(P)$ , $P\\in\\Gamma$ . Either branch of the square roots may be chosen, as long as the branch is consistent across $\\Gamma$ . For all $\\mathbf{z}\\in{\\mathbb{C}}^{g}$ , and all $P_{1}$ , $P_{2}$ , $P_{3}$ , $P_{4}$ on $\\Gamma$ , Fay’s identity is given by\nwhere again all integration paths are identical for all components. Generalizations of this identity are given in Fay ([1973](./bib/F.html#bib778 \"Theta Functions on Riemann Surfaces\"), Chapter 2). Fay derives ( 21.7.10 ) as a special case of a more general class of addition theorems for Riemann theta functions on Riemann surfaces.\nLet $\\Gamma$ be a *hyperelliptic Riemann surface* . These are Riemann surfaces that may be obtained from algebraic curves of the form\nwhere $Q(\\lambda)$ is a polynomial in $\\lambda$ of odd degree $2g+1$ $(\\geq 5)$ . The genus of this surface is $g$ . The zeros $\\lambda_{j}$ , $j=1,2,\\dots,2g+1$ of $Q(\\lambda)$ specify the finite branch points $P_{j}$ , that is, points at which $\\mu_{j}=0$ , on the Riemann surface. Denote the set of all branch points by $B=\\{P_{1},P_{2},\\dots,P_{2g+1},P_{\\infty}\\}$ . Consider a fixed subset $U$ of $B$ , such that the number of elements $|U|$ in the set $U$ is $g+1$ , and $P_{\\infty}\\notin U$ . Next, define an isomorphism $\\boldsymbol{{\\eta}}$ which maps every subset $T$ of $B$ with an even number of elements to a $2g$ -dimensional vector $\\boldsymbol{{\\eta}}(T)$ with elements either $0$ or $\\tfrac{1}{2}$ . Define the operation\nAlso, $T^{c}=B\\setminus T$ , $\\boldsymbol{{\\eta}}^{1}(T)=(\\eta_{1}(T),\\eta_{2}(T),\\dots,\\eta_{g}(T))$ , and $\\boldsymbol{{\\eta}}^{2}(T)=(\\eta_{g+1}(T),\\eta_{g+2}(T),\\dots,\\eta_{2g}(T))$ . Then the isomorphism is determined completely by:\nFurthermore, let $\\boldsymbol{{\\eta}}(P_{\\infty})=\\boldsymbol{{0}}$ and $\\boldsymbol{{\\eta}}(P_{j})=\\boldsymbol{{\\eta}}(\\{P_{j},P_{\\infty}\\})$ . Then for all $\\mathbf{z}_{j}\\in{\\mathbb{C}}^{g}$ , $j=1,2,3,4$ , such that $\\mathbf{z}_{1}+\\mathbf{z}_{2}+\\mathbf{z}_{3}+\\mathbf{z}_{4}=0$ , and for all $\\boldsymbol{{\\alpha}}_{j}$ , $\\boldsymbol{{\\beta}}_{j}$ $\\in{\\mathbb{R}}^{g}$ , such that $\\boldsymbol{{\\alpha}}_{1}+\\boldsymbol{{\\alpha}}_{2}+\\boldsymbol{{\\alpha}}_{3}+\\boldsymbol{{\\alpha}}_{4}=0$ and $\\boldsymbol{{\\beta}}_{1}+\\boldsymbol{{\\beta}}_{2}+\\boldsymbol{{\\beta}}_{3}+\\boldsymbol{{\\beta}}_{4}=0$ , we have *Frobenius’ identity* :",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "21.7.1",
+                "latex": "P(\\lambda,\\mu)=0, \\tag{21.7.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "21.7.2",
+                "latex": "\\tilde{P}(\\tilde{\\lambda},\\tilde{\\mu},\\tilde{\\eta})=0, \\tag{21.7.2}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "21.7.3",
+                "latex": "\\displaystyle a_{j}\\circ a_{k} \\displaystyle=0, \\tag{21.7.3}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle b_{j}\\circ b_{k} \\displaystyle=0,"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle a_{j}\\circ b_{k} \\displaystyle=\\delta_{j,k}."
+              },
+              {
+                "id": "E4",
+                "tag": "21.7.4",
+                "latex": "\\omega_{j}=f_{j}(z)\\,\\mathrm{d}z, \\tag{21.7.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "21.7.5",
+                "latex": "\\oint_{a_{k}}\\omega_{j}=\\delta_{j,k}, \\tag{21.7.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "21.7.6",
+                "latex": "\\Omega_{jk}=\\oint_{b_{k}}\\omega_{j}, \\tag{21.7.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "21.7.7",
+                "latex": "\\left(\\frac{\\partial}{\\partial z_{1}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)\\Big{|}_{\\mathbf{z}=\\boldsymbol{{0}}},\\dots,\\frac{\\partial}{\\partial z_{g}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)\\Big{|}_{\\mathbf{z}=\\boldsymbol{{0}}}\\right)\\neq\\boldsymbol{{0}}. \\tag{21.7.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "21.7.8",
+                "latex": "\\zeta=\\sum_{j=1}^{g}\\omega_{j}\\frac{\\partial}{\\partial z_{j}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)\\Big{|}_{\\mathbf{z}=\\boldsymbol{{0}}}. \\tag{21.7.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "21.7.9",
+                "latex": "E(P_{1},P_{2})=\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\int_{P_{1}}^{P_{2}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\Bigg{/}\\left(\\sqrt{\\zeta(P_{1})}\\sqrt{\\zeta(P_{2})}\\right), \\tag{21.7.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "21.7.10",
+                "latex": "\\theta\\left(\\mathbf{z}+\\int_{P_{1}}^{P_{3}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{z}+\\int_{P_{2}}^{P_{4}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)E(P_{3},P_{2})E(P_{1},P_{4})+\\theta\\left(\\mathbf{z}+\\int_{P_{2}}^{P_{3}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{z}+\\int_{P_{1}}^{P_{4}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)E(P_{3},P_{1})E(P_{4},P_{2})=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{z}+\\int_{P_{1}}^{P_{3}}\\boldsymbol{{\\omega}}+\\int_{P_{2}}^{P_{4}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)E(P_{1},P_{2})E(P_{3},P_{4}), \\tag{21.7.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "21.7.11",
+                "latex": "\\mu^{2}=Q(\\lambda), \\tag{21.7.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "21.7.12",
+                "latex": "T_{1}\\ominus T_{2}=(T_{1}\\cup T_{2})\\setminus(T_{1}\\cap T_{2}). \\tag{21.7.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "21.7.13",
+                "latex": "\\boldsymbol{{\\eta}}(T)=\\boldsymbol{{\\eta}}(T^{c}), \\tag{21.7.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "21.7.14",
+                "latex": "\\boldsymbol{{\\eta}}(T_{1}\\ominus T_{2})=\\boldsymbol{{\\eta}}(T_{1})+\\boldsymbol{{\\eta}}(T_{2}), \\tag{21.7.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "21.7.15",
+                "latex": "4\\boldsymbol{{\\eta}}^{1}(T)\\cdot\\boldsymbol{{\\eta}}^{2}(T)=\\tfrac{1}{2}\\left(|T\\ominus U|-g-1\\right)\\pmod{2}, \\tag{21.7.15}"
+              },
+              {
+                "id": "E16",
+                "tag": "21.7.16",
+                "latex": "4(\\boldsymbol{{\\eta}}^{1}(T_{1})\\cdot\\boldsymbol{{\\eta}}^{2}(T_{2})-\\boldsymbol{{\\eta}}^{2}(T_{1})\\cdot\\boldsymbol{{\\eta}}^{1}(T_{2}))=|T_{1}\\cap T_{2}|\\pmod{2}. \\tag{21.7.16}"
+              },
+              {
+                "id": "E17",
+                "tag": "21.7.17",
+                "latex": "\\sum_{P_{j}\\in U}\\prod_{k=1}^{4}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}_{k}+\\boldsymbol{{\\eta}}^{1}(P_{j})}{\\boldsymbol{{\\beta}}_{k}+\\boldsymbol{{\\eta}}^{2}(P_{j})}\\left(\\mathbf{z}_{k}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\sum_{P_{j}\\in U^{c}}\\prod_{k=1}^{4}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}_{k}+\\boldsymbol{{\\eta}}^{1}(P_{j})}{\\boldsymbol{{\\beta}}_{k}+\\boldsymbol{{\\eta}}^{2}(P_{j})}\\left(\\mathbf{z}_{k}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.7.17}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "P(\\lambda,\\mu)=0, \\tag{21.7.1}",
+              "\\tilde{P}(\\tilde{\\lambda},\\tilde{\\mu},\\tilde{\\eta})=0, \\tag{21.7.2}",
+              "\\displaystyle a_{j}\\circ a_{k} \\displaystyle=0, \\tag{21.7.3}",
+              "\\displaystyle b_{j}\\circ b_{k} \\displaystyle=0,",
+              "\\displaystyle a_{j}\\circ b_{k} \\displaystyle=\\delta_{j,k}.",
+              "\\omega_{j}=f_{j}(z)\\,\\mathrm{d}z, \\tag{21.7.4}",
+              "\\oint_{a_{k}}\\omega_{j}=\\delta_{j,k}, \\tag{21.7.5}",
+              "\\Omega_{jk}=\\oint_{b_{k}}\\omega_{j}, \\tag{21.7.6}",
+              "\\left(\\frac{\\partial}{\\partial z_{1}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)\\Big{|}_{\\mathbf{z}=\\boldsymbol{{0}}},\\dots,\\frac{\\partial}{\\partial z_{g}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)\\Big{|}_{\\mathbf{z}=\\boldsymbol{{0}}}\\right)\\neq\\boldsymbol{{0}}. \\tag{21.7.7}",
+              "\\zeta=\\sum_{j=1}^{g}\\omega_{j}\\frac{\\partial}{\\partial z_{j}}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)\\Big{|}_{\\mathbf{z}=\\boldsymbol{{0}}}. \\tag{21.7.8}",
+              "E(P_{1},P_{2})=\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}}{\\boldsymbol{{\\beta}}}\\left(\\int_{P_{1}}^{P_{2}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\Bigg{/}\\left(\\sqrt{\\zeta(P_{1})}\\sqrt{\\zeta(P_{2})}\\right), \\tag{21.7.9}",
+              "\\theta\\left(\\mathbf{z}+\\int_{P_{1}}^{P_{3}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{z}+\\int_{P_{2}}^{P_{4}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)E(P_{3},P_{2})E(P_{1},P_{4})+\\theta\\left(\\mathbf{z}+\\int_{P_{2}}^{P_{3}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{z}+\\int_{P_{1}}^{P_{4}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)E(P_{3},P_{1})E(P_{4},P_{2})=\\theta\\left(\\mathbf{z}\\middle|\\boldsymbol{{\\Omega}}\\right)\\theta\\left(\\mathbf{z}+\\int_{P_{1}}^{P_{3}}\\boldsymbol{{\\omega}}+\\int_{P_{2}}^{P_{4}}\\boldsymbol{{\\omega}}\\middle|\\boldsymbol{{\\Omega}}\\right)E(P_{1},P_{2})E(P_{3},P_{4}), \\tag{21.7.10}",
+              "\\mu^{2}=Q(\\lambda), \\tag{21.7.11}",
+              "T_{1}\\ominus T_{2}=(T_{1}\\cup T_{2})\\setminus(T_{1}\\cap T_{2}). \\tag{21.7.12}",
+              "\\boldsymbol{{\\eta}}(T)=\\boldsymbol{{\\eta}}(T^{c}), \\tag{21.7.13}",
+              "\\boldsymbol{{\\eta}}(T_{1}\\ominus T_{2})=\\boldsymbol{{\\eta}}(T_{1})+\\boldsymbol{{\\eta}}(T_{2}), \\tag{21.7.14}",
+              "4\\boldsymbol{{\\eta}}^{1}(T)\\cdot\\boldsymbol{{\\eta}}^{2}(T)=\\tfrac{1}{2}\\left(|T\\ominus U|-g-1\\right)\\pmod{2}, \\tag{21.7.15}",
+              "4(\\boldsymbol{{\\eta}}^{1}(T_{1})\\cdot\\boldsymbol{{\\eta}}^{2}(T_{2})-\\boldsymbol{{\\eta}}^{2}(T_{1})\\cdot\\boldsymbol{{\\eta}}^{1}(T_{2}))=|T_{1}\\cap T_{2}|\\pmod{2}. \\tag{21.7.16}",
+              "\\sum_{P_{j}\\in U}\\prod_{k=1}^{4}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}_{k}+\\boldsymbol{{\\eta}}^{1}(P_{j})}{\\boldsymbol{{\\beta}}_{k}+\\boldsymbol{{\\eta}}^{2}(P_{j})}\\left(\\mathbf{z}_{k}\\middle|\\boldsymbol{{\\Omega}}\\right)=\\sum_{P_{j}\\in U^{c}}\\prod_{k=1}^{4}\\theta\\genfrac{[}{]}{0.0pt}{}{\\boldsymbol{{\\alpha}}_{k}+\\boldsymbol{{\\eta}}^{1}(P_{j})}{\\boldsymbol{{\\beta}}_{k}+\\boldsymbol{{\\eta}}^{2}(P_{j})}\\left(\\mathbf{z}_{k}\\middle|\\boldsymbol{{\\Omega}}\\right). \\tag{21.7.17}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Riemann surface",
+                "algebraic curves",
+                "connection with Riemann theta functions",
+                "cycle",
+                "cycles",
+                "definition",
+                "genus",
+                "handle",
+                "holomorphic differentials",
+                "intersection indices",
+                "plane algebraic curves",
+                "Fay’s trisecant identity",
+                "Riemann theta functions with characteristics",
+                "generalizations",
+                "prime form",
+                "Frobenius’ identity",
+                "hyperelliptic"
+              ],
+              "simbolos": [
+                "$\\delta_{j,k}$: Kronecker delta , $a_{j}$: cycles and $b_{j}$: cycles"
+              ],
+              "referenciado_por": [
+                "§21.1",
+                "Figure 21.4.5",
+                "[Figure 21.4.5](./21.4.F5.mag.md \"In §21.4 Graphics ‣ Properties ‣ Chapter 21 Multidimensional Theta Functions\")",
+                "[Figure 21.4.5](./21.4.F5.viz.md \"In §21.4 Graphics ‣ Properties ‣ Chapter 21 Multidimensional Theta Functions\")",
+                "§21.4",
+                "§21.7(i)",
+                "§20.11(iv)"
+              ],
+              "notas_bibliograficas": [
+                "See Mumford ([1984](./bib/M.html#bib1682 \"Tata Lectures on Theta. II\"), pp. 207-260).",
+                "See Mumford ([1984](./bib/M.html#bib1682 \"Tata Lectures on Theta. II\"), pp. 106–120)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21",
+                "Annotations for §21.7 and Ch.21",
+                "Annotations for §21.7(i) , §21.7 and Ch.21"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "Figure 21.4.5",
+                "archivo_destino": "21.4.F5.mag.md",
+                "titulo_referencia": "In §21.4 Graphics ‣ Properties ‣ Chapter 21 Multidimensional Theta Functions"
+              },
+              {
+                "texto": "Figure 21.4.5",
+                "archivo_destino": "21.4.F5.viz.md",
+                "titulo_referencia": "In §21.4 Graphics ‣ Properties ‣ Chapter 21 Multidimensional Theta Functions"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/B.html#bib232",
+                "titulo_referencia": "Algebro-geometric Approach to Nonlinear Integrable Problems"
+              },
+              {
+                "texto": "1957",
+                "archivo_destino": "bib/S.html#bib2146",
+                "titulo_referencia": "Introduction to Riemann Surfaces"
+              },
+              {
+                "texto": "1851",
+                "archivo_destino": "bib/R.html#bib1950",
+                "titulo_referencia": "Grundlagen für eine allgemeine Theorie der Functionen einer veränderlichen complexen Grösse"
+              },
+              {
+                "texto": "1981",
+                "archivo_destino": "bib/D.html#bib685",
+                "titulo_referencia": "Theta functions and non-linear equations"
+              },
+              {
+                "texto": "1986",
+                "archivo_destino": "bib/B.html#bib353",
+                "titulo_referencia": "Plane Algebraic Curves"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/B.html#bib232",
+                "titulo_referencia": "Algebro-geometric Approach to Nonlinear Integrable Problems"
+              },
+              {
+                "texto": "1984",
+                "archivo_destino": "bib/M.html#bib1682",
+                "titulo_referencia": "Tata Lectures on Theta. II"
+              },
+              {
+                "texto": "1984",
+                "archivo_destino": "bib/M.html#bib1682",
+                "titulo_referencia": "Tata Lectures on Theta. II"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/F.html#bib778",
+                "titulo_referencia": "Theta Functions on Riemann Surfaces"
+              },
+              {
+                "texto": "1984",
+                "archivo_destino": "bib/M.html#bib1682",
+                "titulo_referencia": "Tata Lectures on Theta. II"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "21.8",
+          "titulo_original": "Abelian Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.8.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.8.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.8 Abelian Functions",
+            "prosa_teorica": "An Abelian function is a $2g$ -fold periodic, meromorphic function of $g$ complex variables. In consequence, Abelian functions are generalizations of elliptic functions (§ 23.2(iii) ) to more than one complex variable. For every Abelian function, there is a positive integer $n$ , such that the Abelian function can be expressed as a ratio of linear combinations of products with $n$ factors of Riemann theta functions with characteristics that share a common period lattice. For further information see Igusa ([1972](./bib/I.html#bib1121 \"Theta Functions\"), pp. 132–135) and Markushevich ([1992](./bib/M.html#bib1552 \"Introduction to the Classical Theory of Abelian Functions\")).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Abelian functions",
+                "Riemann theta functions with characteristics",
+                "applications"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/I.html#bib1121",
+                "titulo_referencia": "Theta Functions"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/M.html#bib1552",
+                "titulo_referencia": "Introduction to the Classical Theory of Abelian Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "21.9",
+          "titulo_original": "Integrable Equations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.9.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.9.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.9 Integrable Equations",
+            "prosa_teorica": "Riemann theta functions arise in the study of *integrable differential equations* that have applications in many areas, including fluid mechanics (Ablowitz and Segur ([1981](./bib/index.html#bib5 \"Solitons and the Inverse Scattering Transform\"), Chapter 4)), magnetic monopoles (Ercolani and Sinha ([1989](./bib/E.html#bib744 \"Monopoles and Baker functions\"))), and string theory (Deligne et al. ([1999](./bib/D.html#bib648 \"Quantum Fields and Strings: A Course for Mathematicians. Vol. 1, 2\"), Part 3)). Typical examples of such equations are the Korteweg–de Vries equation\nand the nonlinear Schrödinger equations\nHere, and in what follows, $x,y$ , and $t$ suffixes indicate partial derivatives.\nParticularly important for the use of Riemann theta functions is the Kadomtsev–Petviashvili (KP) equation, which describes the propagation of two-dimensional, long-wave length surface waves in shallow water (Ablowitz and Segur ([1981](./bib/index.html#bib5 \"Solitons and the Inverse Scattering Transform\"), Chapter 4)):\nHere $x$ and $y$ are spatial variables, $t$ is time, and $u(x,y,t)$ is the elevation of the surface wave. All quantities are made dimensionless by a suitable scaling transformation. The KP equation has a class of quasi-periodic solutions described by Riemann theta functions, given by\nwhere $c$ is a complex constant and $\\mathbf{k}$ , $\\mathbf{l}$ , $\\boldsymbol{{\\omega}}$ , and $\\boldsymbol{{\\phi}}$ are $g$ -dimensional complex vectors; see Krichever ([1976](./bib/K.html#bib1349 \"An algebraic-geometrical construction of the Zakharov-Shabat equations and their periodic solutions\")). These parameters, including $\\boldsymbol{{\\Omega}}$ , are not free: they are determined by a compact, connected Riemann surface (Krichever ([1976](./bib/K.html#bib1349 \"An algebraic-geometrical construction of the Zakharov-Shabat equations and their periodic solutions\"))), or alternatively by an appropriate initial condition $u(x,y,0)$ (Deconinck and Segur ([1998](./bib/D.html#bib633 \"The KP equation with quasiperiodic initial data\"))). These solutions have been compared successfully with physical experiments for $g=1,2$ (Wiegel ([1960](./bib/W.html#bib2408 \"A presentation of cnoidal wave theory for practical application\")), Hammack et al. ([1989](./bib/H.html#bib1031 \"Two-dimensional periodic waves in shallow water\")), and Hammack et al. ([1995](./bib/H.html#bib1030 \"Two-dimensional periodic waves in shallow water. II. Asymmetric waves\"))). See Figures 21.9.1 and 21.9.2 .\n<a id=\"F1\"></a>\n![Figure 21.9.1: Two-dimensional periodic waves in a shallow water wave tank, taken from Hammack et al. ( 1995 , p. 97) by permission of Cambridge University Press. The original caption reads “Mosaic of two overhead photographs, showing surface patterns of waves in shallow water.”](../html/21/9/F1.png)\n<a id=\"F2\"></a>\n![Figure 21.9.2: Contour plot of a two-phase solution of Equation ( 21.9.3 ). Such a solution is given in terms of a Riemann theta function with two phases; see Krichever ( 1976 ) , Dubrovin ( 1981 ) , and Hammack et al. ( 1995 ) .](../html/21/9/F2.png)\nFurthermore, the solutions of the KP equation solve the *Schottky problem* : this is the question concerning conditions that a Riemann matrix needs to satisfy in order to be associated with a Riemann surface (Schottky ([1903](./bib/S.html#bib2019 \"Über die Moduln der Thetafunctionen\"))). Following the work of Krichever ([1976](./bib/K.html#bib1349 \"An algebraic-geometrical construction of the Zakharov-Shabat equations and their periodic solutions\")), Novikov conjectured that the Riemann theta function in ( 21.9.4 ) gives rise to a solution of the KP equation ( 21.9.3 ) if, and only if, the theta function originates from a Riemann surface; see Dubrovin ([1981](./bib/D.html#bib685 \"Theta functions and non-linear equations\"), §IV.4). The first part of this conjecture was established in Krichever ([1976](./bib/K.html#bib1349 \"An algebraic-geometrical construction of the Zakharov-Shabat equations and their periodic solutions\")); the second part was proved in Shiota ([1986](./bib/S.html#bib2068 \"Characterization of Jacobian varieties in terms of soliton equations\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "21.9.1",
+                "latex": "4u_{t}=6uu_{x}+u_{xxx}, \\tag{21.9.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "21.9.2",
+                "latex": "iu_{t}=-\\tfrac{1}{2}u_{xx}\\pm|u|^{2}u. \\tag{21.9.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "21.9.3",
+                "latex": "(-4u_{t}+6uu_{x}+u_{xxx})_{x}+3u_{yy}=0. \\tag{21.9.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "21.9.4",
+                "latex": "u(x,y,t)=c+2\\frac{{\\partial}^{2}}{{\\partial x}^{2}}\\ln\\left(\\theta\\left(\\mathbf{k}x+\\mathbf{l}y+\\boldsymbol{{\\omega}}t+\\boldsymbol{{\\phi}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\right), \\tag{21.9.4}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "4u_{t}=6uu_{x}+u_{xxx}, \\tag{21.9.1}",
+              "iu_{t}=-\\tfrac{1}{2}u_{xx}\\pm|u|^{2}u. \\tag{21.9.2}",
+              "(-4u_{t}+6uu_{x}+u_{xxx})_{x}+3u_{yy}=0. \\tag{21.9.3}",
+              "u(x,y,t)=c+2\\frac{{\\partial}^{2}}{{\\partial x}^{2}}\\ln\\left(\\theta\\left(\\mathbf{k}x+\\mathbf{l}y+\\boldsymbol{{\\omega}}t+\\boldsymbol{{\\phi}}\\middle|\\boldsymbol{{\\Omega}}\\right)\\right), \\tag{21.9.4}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "KP equation",
+                "Kadomtsev–Petviashvili equation",
+                "Korteweg–de Vries equation",
+                "Novikov’s conjecture",
+                "Riemann surface",
+                "Riemann theta functions",
+                "Schottky problem",
+                "Schrödinger equation",
+                "applications",
+                "fluid dynamics",
+                "integrable differential equations",
+                "integrable equations",
+                "magnetic monopoles",
+                "nonlinear",
+                "string theory",
+                "water waves"
+              ],
+              "referenciado_por": [
+                "§21.9"
+              ],
+              "notas_bibliograficas": [
+                "See Dubrovin ([1981](./bib/D.html#bib685 \"Theta functions and non-linear equations\")) and Belokolos et al. ([1994](./bib/B.html#bib232 \"Algebro-geometric Approach to Nonlinear Integrable Problems\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21",
+                "Annotations for §21.9 and Ch.21"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1981",
+                "archivo_destino": "bib/D.html#bib685",
+                "titulo_referencia": "Theta functions and non-linear equations"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/B.html#bib232",
+                "titulo_referencia": "Algebro-geometric Approach to Nonlinear Integrable Problems"
+              },
+              {
+                "texto": "1981",
+                "archivo_destino": "bib/index.html#bib5",
+                "titulo_referencia": "Solitons and the Inverse Scattering Transform"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/E.html#bib744",
+                "titulo_referencia": "Monopoles and Baker functions"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/D.html#bib648",
+                "titulo_referencia": "Quantum Fields and Strings: A Course for Mathematicians. Vol. 1, 2"
+              },
+              {
+                "texto": "1981",
+                "archivo_destino": "bib/index.html#bib5",
+                "titulo_referencia": "Solitons and the Inverse Scattering Transform"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/K.html#bib1349",
+                "titulo_referencia": "An algebraic-geometrical construction of the Zakharov-Shabat equations and their periodic solutions"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/K.html#bib1349",
+                "titulo_referencia": "An algebraic-geometrical construction of the Zakharov-Shabat equations and their periodic solutions"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/D.html#bib633",
+                "titulo_referencia": "The KP equation with quasiperiodic initial data"
+              },
+              {
+                "texto": "1960",
+                "archivo_destino": "bib/W.html#bib2408",
+                "titulo_referencia": "A presentation of cnoidal wave theory for practical application"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/H.html#bib1031",
+                "titulo_referencia": "Two-dimensional periodic waves in shallow water"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/H.html#bib1030",
+                "titulo_referencia": "Two-dimensional periodic waves in shallow water. II. Asymmetric waves"
+              },
+              {
+                "texto": "1903",
+                "archivo_destino": "bib/S.html#bib2019",
+                "titulo_referencia": "Über die Moduln der Thetafunctionen"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/K.html#bib1349",
+                "titulo_referencia": "An algebraic-geometrical construction of the Zakharov-Shabat equations and their periodic solutions"
+              },
+              {
+                "texto": "1981",
+                "archivo_destino": "bib/D.html#bib685",
+                "titulo_referencia": "Theta functions and non-linear equations"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/K.html#bib1349",
+                "titulo_referencia": "An algebraic-geometrical construction of the Zakharov-Shabat equations and their periodic solutions"
+              },
+              {
+                "texto": "1986",
+                "archivo_destino": "bib/S.html#bib2068",
+                "titulo_referencia": "Characterization of Jacobian varieties in terms of soliton equations"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Computation",
+      "secciones": [
+        {
+          "seccion_id": "21.10",
+          "titulo_original": "Methods of Computation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.10.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.10.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.10 Methods of Computation",
+            "prosa_teorica": "See Deconinck et al. ([2004](./bib/D.html#bib632 \"Computing Riemann theta functions\")).\nIn addition to evaluating the Fourier series, the main problem here is to compute a Riemann matrix originating from a Riemann surface. Various approaches are considered in the following references:\n* Belokolos et al. ([1994](./bib/B.html#bib232 \"Algebro-geometric Approach to Nonlinear Integrable Problems\"), Chapter 5) and references therein. Here the Riemann surface is represented by the action of a Schottky group on a region of the complex plane. The same representation is used in Gianni et al. ([1998](./bib/G.html#bib912 \"Riemann surfaces, plane algebraic curves and their period matrices\")).\n* Tretkoff and Tretkoff ([1984](./bib/T.html#bib2272 \"Combinatorial Group Theory, Riemann Surfaces and Differential Equations\")). Here a Hurwitz system is chosen to represent the Riemann surface.\n* Deconinck and van Hoeij ([2001](./bib/D.html#bib635 \"Computing Riemann matrices of algebraic curves\")). Here a plane algebraic curve representation of the Riemann surface is used.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Hurwitz system",
+                "Riemann matrix",
+                "Riemann surface",
+                "Schottky group",
+                "algebraic curves",
+                "computation",
+                "connection with Riemann theta functions",
+                "representation via Hurwitz system",
+                "representation via Schottky group",
+                "representation via plane algebraic curve"
+              ],
+              "referenciado_por": [
+                "§21.2(i)",
+                "Erratum (V1.0.5) for Subsection 21.10(i)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21",
+                "Annotations for §21.10 and Ch.21"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Modification (effective with 1.0.5)",
+                  "descripcion": "The entire original content of this subsection has been replaced by a reference."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "2004",
+                "archivo_destino": "bib/D.html#bib632",
+                "titulo_referencia": "Computing Riemann theta functions"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/B.html#bib232",
+                "titulo_referencia": "Algebro-geometric Approach to Nonlinear Integrable Problems"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/G.html#bib912",
+                "titulo_referencia": "Riemann surfaces, plane algebraic curves and their period matrices"
+              },
+              {
+                "texto": "1984",
+                "archivo_destino": "bib/T.html#bib2272",
+                "titulo_referencia": "Combinatorial Group Theory, Riemann Surfaces and Differential Equations"
+              },
+              {
+                "texto": "2001",
+                "archivo_destino": "bib/D.html#bib635",
+                "titulo_referencia": "Computing Riemann matrices of algebraic curves"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "21.11",
+          "titulo_original": "Software",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/21/21.11.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/21/21.11.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§21.11 Software",
+            "prosa_teorica": "In this section we provide links to the research literature describing the implementation of algorithms in software for the evaluation of functions described in this chapter. Citations in the bulleted list refer to papers for which research software has been made available and can be downloaded via the Web.\nA more complete list of available software for computing these functions is found in the [Software Index](./software/index.md) .\n* Deconinck et al. ([2004](./bib/D.html#bib632 \"Computing Riemann theta functions\")). Maple.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "referenciado_por": [
+                "§ ‣ Software Cross Index"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.21"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              },
+              {
+                "texto": "2004",
+                "archivo_destino": "bib/D.html#bib632",
+                "titulo_referencia": "Computing Riemann theta functions"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "agradecimientos_capitulo": "",
+  "referencias_capitulo": [
+    "§20.1",
+    "*Profile* Bernard Deconinck",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Associate Editors",
+    "Index T",
+    "Organization and Objective",
+    "§ ‣ Software Cross Index"
+  ],
+  "estado_extraccion": "completado",
+  "total_formulas_extraidas": 62,
+  "estado_metadatos": "verificado_y_refinado"
+}

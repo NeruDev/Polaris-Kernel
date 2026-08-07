@@ -1,0 +1,1573 @@
+{
+  "capitulo": 35,
+  "titulo_original": "Functions of Matrix Argument",
+  "archivo_metadata": "metadata/DLMF_data/35_Functions_of_Matrix_Argument.json",
+  "rutas_docs": {
+    "docs_original": "docs/DLMF-markdown-main/markdown/35/35.md",
+    "docs_directorio_original": "docs/DLMF-markdown-main/markdown/35/",
+    "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.md"
+  },
+  "total_categorias": 4,
+  "total_secciones": 12,
+  "categorias": [
+    {
+      "categoria": "Notation",
+      "secciones": [
+        {
+          "seccion_id": "35.1",
+          "titulo_original": "Special Notation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.1.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.1.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.1 Special Notation",
+            "prosa_teorica": "(For other notation see Notation for the Special Functions .)\nAll matrices are of order $m\\times m$ , unless specified otherwise. All fractional or complex powers are principal values.\nThe main functions treated in this chapter are the multivariate gamma and beta functions, respectively $\\Gamma_{m}\\left(a\\right)$ and $\\mathrm{B}_{m}\\left(a,b\\right)$ , and the special functions of matrix argument: Bessel (of the first kind) $A_{\\nu}\\left(\\mathbf{T}\\right)$ and (of the second kind) $B_{\\nu}\\left(\\mathbf{T}\\right)$ ; confluent hypergeometric (of the first kind) ${{}_{1}F_{1}}\\left(a;b;\\mathbf{T}\\right)$ or $\\displaystyle{{}_{1}F_{1}}\\left({a\\atop b};\\mathbf{T}\\right)$ and (of the second kind) $\\Psi\\left(a;b;\\mathbf{T}\\right)$ ; Gaussian hypergeometric ${{}_{2}F_{1}}\\left(a_{1},a_{2};b;\\mathbf{T}\\right)$ or $\\displaystyle{{}_{2}F_{1}}\\left({a_{1},a_{2}\\atop b};\\mathbf{T}\\right)$ ; generalized hypergeometric ${{}_{p}F_{q}}\\left(a_{1},\\dots,a_{p};b_{1},\\dots,b_{q};\\mathbf{T}\\right)$ or $\\displaystyle{{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{T}\\right)$ .\nAn alternative notation for the multivariate gamma function is $\\Pi_{m}(a)=\\Gamma_{m}\\left(a+\\tfrac{1}{2}(m+1)\\right)$ (Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\"), p. 480)). Related notations for the Bessel functions are $\\mathcal{J}_{\\nu+\\frac{1}{2}(m+1)}(\\mathbf{T})=A_{\\nu}\\left(\\mathbf{T}\\right)/A_{\\nu}\\left(\\boldsymbol{{0}}\\right)$ (Faraut and Korányi ([1994](./bib/F.html#bib775 \"Analysis on Symmetric Cones\"), pp. 320–329)), $K_{m}(0,\\dots,0,\\nu\\mathpunct{|}\\mathbf{S},\\mathbf{T})=\\left|\\mathbf{T}\\right|^{\\nu}B_{\\nu}\\left(\\mathbf{S}\\mathbf{T}\\right)$ (Terras ([1988](./bib/T.html#bib2238 \"Harmonic Analysis on Symmetric Spaces and Applications. II\"), pp. 49–64)), and $\\mathcal{K}_{\\nu}(\\mathbf{T})=\\left|\\mathbf{T}\\right|^{\\nu}B_{\\nu}\\left(\\mathbf{S}\\mathbf{T}\\right)$ (Faraut and Korányi ([1994](./bib/F.html#bib775 \"Analysis on Symmetric Cones\"), pp. 357–358)).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Bessel functions",
+                "Gaussian hypergeometric function",
+                "beta function",
+                "confluent hypergeometric functions",
+                "first kind",
+                "functions",
+                "functions of matrix argument",
+                "gamma function",
+                "generalized hypergeometric functions",
+                "hypergeometric function",
+                "hypergeometric functions of matrix argument",
+                "multivariate",
+                "multivariate beta function",
+                "multivariate gamma function",
+                "notation",
+                "of matrix argument",
+                "of the first and second kinds",
+                "polynomials",
+                "second kind",
+                "zonal"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "tablas": [
+              {
+                "encabezados": [
+                  "$a,b$",
+                  "complex variables."
+                ],
+                "filas": [
+                  {
+                    "$a,b$": "$j,k,p,q$",
+                    "complex variables.": "nonnegative integers."
+                  },
+                  {
+                    "$a,b$": "$m$",
+                    "complex variables.": "positive integer."
+                  },
+                  {
+                    "$a,b$": "${\\left[a\\right]_{\\kappa}}$",
+                    "complex variables.": "partitional shifted factorial (§ 35.4(i) )."
+                  },
+                  {
+                    "$a,b$": "$\\boldsymbol{{0}}$",
+                    "complex variables.": "zero matrix."
+                  },
+                  {
+                    "$a,b$": "$\\mathbf{I}$",
+                    "complex variables.": "identity matrix."
+                  },
+                  {
+                    "$a,b$": "$\\boldsymbol{\\mathcal{S}}$",
+                    "complex variables.": "space of all real symmetric matrices."
+                  },
+                  {
+                    "$a,b$": "$\\mathbf{S},\\mathbf{T},\\mathbf{X}$",
+                    "complex variables.": "real symmetric matrices."
+                  },
+                  {
+                    "$a,b$": "$\\operatorname{tr}{\\mathbf{X}}$",
+                    "complex variables.": "trace of $\\mathbf{X}$ ."
+                  },
+                  {
+                    "$a,b$": "$\\operatorname{etr}\\left(\\mathbf{X}\\right)$",
+                    "complex variables.": "$\\exp\\left(\\operatorname{tr}{\\mathbf{X}}\\right)$ ."
+                  },
+                  {
+                    "$a,b$": "$x_{j,k}$",
+                    "complex variables.": "$(j,k)$ th element of $\\mathbf{X}$ ."
+                  },
+                  {
+                    "$a,b$": "$\\,\\mathrm{d}{\\mathbf{X}}$",
+                    "complex variables.": "$\\prod_{1\\leq j\\leq k\\leq m}\\,\\mathrm{d}x_{j,k}$ ."
+                  },
+                  {
+                    "$a,b$": "${\\boldsymbol{\\Omega}}$",
+                    "complex variables.": "space of positive-definite real symmetric matrices."
+                  },
+                  {
+                    "$a,b$": "$t_{1},\\dots,t_{m}$",
+                    "complex variables.": "eigenvalues of $\\mathbf{T}$ ."
+                  },
+                  {
+                    "$a,b$": "$\\mathbf{X}>\\mathbf{T}$",
+                    "complex variables.": "$\\mathbf{X}-\\mathbf{T}$ is positive definite. Similarly, $\\mathbf{T}<\\mathbf{X}$ is equivalent."
+                  },
+                  {
+                    "$a,b$": "$\\mathbf{Z}$",
+                    "complex variables.": "complex symmetric matrix."
+                  },
+                  {
+                    "$a,b$": "$f(\\mathbf{X})$",
+                    "complex variables.": "complex-valued function with $\\mathbf{X}\\in{\\boldsymbol{\\Omega}}$ ."
+                  },
+                  {
+                    "$a,b$": "$\\mathbf{O}(m)$",
+                    "complex variables.": "space of orthogonal matrices."
+                  },
+                  {
+                    "$a,b$": "$\\mathbf{H}$",
+                    "complex variables.": "orthogonal matrix."
+                  },
+                  {
+                    "$a,b$": "$\\mathrm{d}{\\mathbf{H}}$",
+                    "complex variables.": "normalized Haar measure on $\\mathbf{O}(m)$ ."
+                  },
+                  {
+                    "$a,b$": "$Z_{\\kappa}\\left(\\mathbf{T}\\right)$",
+                    "complex variables.": "zonal polynomials."
+                  }
+                ]
+              }
+            ],
+            "referencias_cruzadas": [
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/F.html#bib775",
+                "titulo_referencia": "Analysis on Symmetric Cones"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/T.html#bib2238",
+                "titulo_referencia": "Harmonic Analysis on Symmetric Spaces and Applications. II"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/F.html#bib775",
+                "titulo_referencia": "Analysis on Symmetric Cones"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Properties",
+      "secciones": [
+        {
+          "seccion_id": "35.2",
+          "titulo_original": "Laplace Transform",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.2.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.2.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.2 Laplace Transform",
+            "prosa_teorica": "For any complex symmetric matrix $\\mathbf{Z}$ ,\nwhere the integration variable $\\mathbf{X}$ ranges over the space ${\\boldsymbol{\\Omega}}$ .\nSuppose there exists a constant $\\mathbf{X}_{0}\\in{\\boldsymbol{\\Omega}}$ such that $|f(\\mathbf{X})|<\\operatorname{etr}\\left(-\\mathbf{X}_{0}\\mathbf{X}\\right)$ for all $\\mathbf{X}\\in{\\boldsymbol{\\Omega}}$ . Then ( 35.2.1 ) converges absolutely on the region $\\Re\\left(\\mathbf{Z}\\right)>\\mathbf{X}_{0}$ , and $g(\\mathbf{Z})$ is a complex analytic function of all elements $z_{j,k}$ of $\\mathbf{Z}$ .\nAssume that $\\int_{\\boldsymbol{\\mathcal{S}}}\\left|g(\\mathbf{U}+\\mathrm{i}\\mathbf{V})\\right|\\,\\mathrm{d}{\\mathbf{V}}$ converges, and also that its limit as $\\mathbf{U}\\to\\infty$ is $0$ . Then\nwhere the integral is taken over all $\\mathbf{Z}=\\mathbf{U}+\\mathrm{i}\\mathbf{V}$ such that $\\mathbf{U}>\\mathbf{X}_{0}$ and $\\mathbf{V}$ ranges over $\\boldsymbol{\\mathcal{S}}$ .\nIf $g_{j}$ is the Laplace transform of $f_{j}$ , $j=1,2$ , then $g_{1}g_{2}$ is the Laplace transform of the convolution $f_{1}*f_{2}$ , where",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "35.2.1",
+                "latex": "g(\\mathbf{Z})=\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{Z}\\mathbf{X}\\right)f(\\mathbf{X})\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.2.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "35.2.2",
+                "latex": "f(\\mathbf{X})=\\dfrac{1}{(2\\pi\\mathrm{i})^{m(m+1)/2}}\\int\\operatorname{etr}\\left(\\mathbf{Z}\\mathbf{X}\\right)g(\\mathbf{Z})\\,\\mathrm{d}{\\mathbf{Z}}, \\tag{35.2.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "35.2.3",
+                "latex": "f_{1}*f_{2}(\\mathbf{T})=\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{T}}f_{1}(\\mathbf{T}-\\mathbf{X})f_{2}(\\mathbf{X})\\,\\mathrm{d}{\\mathbf{X}}. \\tag{35.2.3}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "g(\\mathbf{Z})=\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{Z}\\mathbf{X}\\right)f(\\mathbf{X})\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.2.1}",
+              "f(\\mathbf{X})=\\dfrac{1}{(2\\pi\\mathrm{i})^{m(m+1)/2}}\\int\\operatorname{etr}\\left(\\mathbf{Z}\\mathbf{X}\\right)g(\\mathbf{Z})\\,\\mathrm{d}{\\mathbf{Z}}, \\tag{35.2.2}",
+              "f_{1}*f_{2}(\\mathbf{T})=\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{T}}f_{1}(\\mathbf{T}-\\mathbf{X})f_{2}(\\mathbf{X})\\,\\mathrm{d}{\\mathbf{X}}. \\tag{35.2.3}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Laplace transform",
+                "for functions of matrix argument",
+                "functions of matrix argument",
+                "analytic properties",
+                "definition",
+                "inversion formula",
+                "convolution theorem"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.0.27) for Paragraph Inversion Formula (in §35.2)"
+              ],
+              "notas_bibliograficas": [
+                "See Gårding ([1947](./bib/G.html#bib856 \"The solution of Cauchy’s problem for two totally hyperbolic linear differential equations by means of Riesz integrals\")), Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\"), p. 479), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), p. 252). See also Siegel ([1935](./bib/S.html#bib2077 \"Über die analytische Theorie der quadratischen Formen\")), Bochner and Martin ([1948](./bib/B.html#bib311 \"Several Complex Variables\"), pp. 90–92, 113–132)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35",
+                "Annotations for §35.2 and Ch.35"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Clarification (effective with 1.0.27)",
+                  "descripcion": "The wording of the first sentence was changed to make the integration variable more apparent."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1947",
+                "archivo_destino": "bib/G.html#bib856",
+                "titulo_referencia": "The solution of Cauchy’s problem for two totally hyperbolic linear differential equations by means of Riesz integrals"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1935",
+                "archivo_destino": "bib/S.html#bib2077",
+                "titulo_referencia": "Über die analytische Theorie der quadratischen Formen"
+              },
+              {
+                "texto": "1948",
+                "archivo_destino": "bib/B.html#bib311",
+                "titulo_referencia": "Several Complex Variables"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "35.3",
+          "titulo_original": "Multivariate Gamma and Beta Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.3.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.3.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.3 Multivariate Gamma and Beta Functions",
+            "prosa_teorica": "",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "35.3.1",
+                "latex": "\\Gamma_{m}\\left(a\\right)=\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.3.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "35.3.2",
+                "latex": "\\Gamma_{m}\\left(s_{1},\\dots,s_{m}\\right)=\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{s_{m}-\\frac{1}{2}(m+1)}\\prod_{j=1}^{m-1}|(\\mathbf{X})_{j}|^{s_{j}-s_{j+1}}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.3.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "35.3.3",
+                "latex": "\\mathrm{B}_{m}\\left(a,b\\right)=\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{I}}\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\left|\\mathbf{I}-\\mathbf{X}\\right|^{b-\\frac{1}{2}(m+1)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.3.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "35.3.4",
+                "latex": "\\Gamma_{m}\\left(a\\right)=\\pi^{m(m-1)/4}\\prod_{j=1}^{m}\\Gamma\\left(a-\\tfrac{1}{2}(j-1)\\right). \\tag{35.3.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "35.3.5",
+                "latex": "\\Gamma_{m}\\left(s_{1},\\dots,s_{m}\\right)=\\pi^{m(m-1)/4}\\prod_{j=1}^{m}\\Gamma\\left(s_{j}-\\tfrac{1}{2}(j-1)\\right). \\tag{35.3.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "35.3.6",
+                "latex": "\\Gamma_{m}\\left(a,\\dots,a\\right)=\\Gamma_{m}\\left(a\\right). \\tag{35.3.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "35.3.7",
+                "latex": "\\mathrm{B}_{m}\\left(a,b\\right)=\\frac{\\Gamma_{m}\\left(a\\right)\\Gamma_{m}\\left(b\\right)}{\\Gamma_{m}\\left(a+b\\right)}. \\tag{35.3.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "35.3.8",
+                "latex": "\\mathrm{B}_{m}\\left(a,b\\right)=\\int_{\\boldsymbol{\\Omega}}\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\left|\\mathbf{I}+\\mathbf{X}\\right|^{-(a+b)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.3.8}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\Gamma_{m}\\left(a\\right)=\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.3.1}",
+              "\\Gamma_{m}\\left(s_{1},\\dots,s_{m}\\right)=\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{s_{m}-\\frac{1}{2}(m+1)}\\prod_{j=1}^{m-1}|(\\mathbf{X})_{j}|^{s_{j}-s_{j+1}}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.3.2}",
+              "\\mathrm{B}_{m}\\left(a,b\\right)=\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{I}}\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\left|\\mathbf{I}-\\mathbf{X}\\right|^{b-\\frac{1}{2}(m+1)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.3.3}",
+              "\\Gamma_{m}\\left(a\\right)=\\pi^{m(m-1)/4}\\prod_{j=1}^{m}\\Gamma\\left(a-\\tfrac{1}{2}(j-1)\\right). \\tag{35.3.4}",
+              "\\Gamma_{m}\\left(s_{1},\\dots,s_{m}\\right)=\\pi^{m(m-1)/4}\\prod_{j=1}^{m}\\Gamma\\left(s_{j}-\\tfrac{1}{2}(j-1)\\right). \\tag{35.3.5}",
+              "\\Gamma_{m}\\left(a,\\dots,a\\right)=\\Gamma_{m}\\left(a\\right). \\tag{35.3.6}",
+              "\\mathrm{B}_{m}\\left(a,b\\right)=\\frac{\\Gamma_{m}\\left(a\\right)\\Gamma_{m}\\left(b\\right)}{\\Gamma_{m}\\left(a+b\\right)}. \\tag{35.3.7}",
+              "\\mathrm{B}_{m}\\left(a,b\\right)=\\int_{\\boldsymbol{\\Omega}}\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\left|\\mathbf{I}+\\mathbf{X}\\right|^{-(a+b)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.3.8}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "definition",
+                "multivariate gamma function",
+                "multivariate beta function",
+                "properties"
+              ],
+              "definiciones": [
+                "$\\Gamma_{m}\\left(a\\right)$ : multivariate gamma function"
+              ],
+              "notas_bibliograficas": [
+                "See Wishart ([1928](./bib/W.html#bib2424 \"The generalised product moment distribution in samples from a normal multivariate population\")), Ingham ([1933](./bib/I.html#bib1130 \"An integral which occurs in statistics\")), Gindikin ([1964](./bib/G.html#bib937 \"Analysis in homogeneous domains\")).",
+                "See Wishart ([1928](./bib/W.html#bib2424 \"The generalised product moment distribution in samples from a normal multivariate population\")), Ingham ([1933](./bib/I.html#bib1130 \"An integral which occurs in statistics\")), Gårding ([1947](./bib/G.html#bib856 \"The solution of Cauchy’s problem for two totally hyperbolic linear differential equations by means of Riesz integrals\")), Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), Olkin ([1959](./bib/O.html#bib1777 \"A class of integral identities with matrix argument\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35",
+                "Annotations for §35.3 and Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1928",
+                "archivo_destino": "bib/W.html#bib2424",
+                "titulo_referencia": "The generalised product moment distribution in samples from a normal multivariate population"
+              },
+              {
+                "texto": "1933",
+                "archivo_destino": "bib/I.html#bib1130",
+                "titulo_referencia": "An integral which occurs in statistics"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/G.html#bib937",
+                "titulo_referencia": "Analysis in homogeneous domains"
+              },
+              {
+                "texto": "1928",
+                "archivo_destino": "bib/W.html#bib2424",
+                "titulo_referencia": "The generalised product moment distribution in samples from a normal multivariate population"
+              },
+              {
+                "texto": "1933",
+                "archivo_destino": "bib/I.html#bib1130",
+                "titulo_referencia": "An integral which occurs in statistics"
+              },
+              {
+                "texto": "1947",
+                "archivo_destino": "bib/G.html#bib856",
+                "titulo_referencia": "The solution of Cauchy’s problem for two totally hyperbolic linear differential equations by means of Riesz integrals"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1959",
+                "archivo_destino": "bib/O.html#bib1777",
+                "titulo_referencia": "A class of integral identities with matrix argument"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "35.4",
+          "titulo_original": "Partitions and Zonal Polynomials",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.4.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.4.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.4 Partitions and Zonal Polynomials",
+            "prosa_teorica": "A *partition* $\\kappa=(k_{1},\\dots,k_{m})$ is a vector of nonnegative integers, listed in nonincreasing order. Also, $|\\kappa|$ denotes $k_{1}+\\dots+k_{m}$ , the *weight* of $\\kappa$ ; $\\ell(\\kappa)$ denotes the number of nonzero $k_{j}$ ; $a+\\kappa$ denotes the vector $(a+k_{1},\\dots,a+k_{m})$ .\nThe *partitional shifted factorial* is given by\nwhere ${\\left(a\\right)_{k}}=a(a+1)\\cdots(a+k-1)$ .\nFor any partition $\\kappa$ , the *zonal polynomial* $Z_{\\kappa}:\\boldsymbol{\\mathcal{S}}\\to\\mathbb{R}$ is defined by the properties\nand\nSee Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 68–72) for the definition and properties of the *Haar measure* $\\mathrm{d}{\\mathbf{H}}$ . See Hua ([1963](./bib/H.html#bib1107 \"Harmonic Analysis of Functions of Several Complex Variables in the Classical Domains\"), p. 30), Constantine ([1963](./bib/C.html#bib573 \"Some non-central distribution problems in multivariate analysis\")), James ([1964](./bib/J.html#bib1161 \"Distributions of matrix variates and latent roots derived from normal samples\")), and Macdonald ([1995](./bib/M.html#bib1518 \"Symmetric Functions and Hall Polynomials\"), pp. 425–431) for further information on ( 35.4.2 ) and ( 35.4.3 ). Alternative notations for the zonal polynomials are $C_{\\kappa}(\\mathbf{T})$ (Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 227–239)), $\\mathcal{Y}_{\\kappa}(\\mathbf{T})$ (Takemura ([1984](./bib/T.html#bib2200 \"Zonal Polynomials\"), p. 22)), and $\\Phi_{\\kappa}(\\mathbf{T})$ (Faraut and Korányi ([1994](./bib/F.html#bib775 \"Analysis on Symmetric Cones\"), pp. 228–236)).\nTherefore $Z_{\\kappa}\\left(\\mathbf{T}\\right)$ is a symmetric polynomial in the eigenvalues of $\\mathbf{T}$ .\nFor $k=0,1,2,\\dots$ ,\nFor $\\mathbf{T}\\in{\\boldsymbol{\\Omega}}$ and $\\Re\\left(a\\right),\\Re\\left(b\\right)>\\frac{1}{2}(m-1)$ ,",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "35.4.1",
+                "latex": "{\\left[a\\right]_{\\kappa}}=\\frac{\\Gamma_{m}\\left(a+\\kappa\\right)}{\\Gamma_{m}\\left(a\\right)}=\\prod_{j=1}^{m}{\\left(a-\\tfrac{1}{2}(j-1)\\right)_{k_{j}}}, \\tag{35.4.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "35.4.2",
+                "latex": "Z_{\\kappa}\\left(\\mathbf{I}\\right)=|\\kappa|!\\,2^{2|\\kappa|}\\,{\\left[m/2\\right]_{\\kappa}}\\frac{\\prod\\limits_{1\\leq j<l\\leq\\ell(\\kappa)}(2k_{j}-2k_{l}-j+l)}{\\prod\\limits_{j=1}^{\\ell(\\kappa)}(2k_{j}+\\ell(\\kappa)-j)!} \\tag{35.4.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "35.4.3",
+                "latex": "Z_{\\kappa}\\left(\\mathbf{T}\\right)=Z_{\\kappa}\\left(\\mathbf{I}\\right)\\,\\left|\\mathbf{T}\\right|^{k_{m}}\\,\\int\\limits_{\\mathbf{O}(m)}\\prod_{j=1}^{m-1}|(\\mathbf{H}\\mathbf{T}\\mathbf{H}^{-1})_{j}|^{k_{j}-k_{j+1}}\\mathrm{d}{\\mathbf{H}}, \\tag{35.4.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "35.4.4",
+                "latex": "Z_{\\kappa}\\left(\\boldsymbol{{0}}\\right)=\\begin{cases}1,&\\kappa=(0,\\dots,0),\\\\\n0,&\\kappa\\neq(0,\\dots,0).\\end{cases} \\tag{35.4.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "35.4.5",
+                "latex": "Z_{\\kappa}\\left(\\mathbf{H}\\mathbf{T}\\mathbf{H}^{-1}\\right)=Z_{\\kappa}\\left(\\mathbf{T}\\right), \\tag{35.4.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "35.4.6",
+                "latex": "\\sum_{|\\kappa|=k}Z_{\\kappa}\\left(\\mathbf{T}\\right)=(\\operatorname{tr}{\\mathbf{T}})^{k}. \\tag{35.4.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "35.4.7",
+                "latex": "\\int_{\\mathbf{O}(m)}Z_{\\kappa}\\left(\\mathbf{S}\\mathbf{H}\\mathbf{T}\\mathbf{H}^{-1}\\right)\\mathrm{d}{\\mathbf{H}}=\\frac{Z_{\\kappa}\\left(\\mathbf{S}\\right)Z_{\\kappa}\\left(\\mathbf{T}\\right)}{Z_{\\kappa}\\left(\\mathbf{I}\\right)}. \\tag{35.4.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "35.4.8",
+                "latex": "\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{T}\\mathbf{X}\\right)\\,\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}Z_{\\kappa}\\left(\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}=\\Gamma_{m}\\left(a+\\kappa\\right)\\,\\left|\\mathbf{T}\\right|^{-a}Z_{\\kappa}\\left(\\mathbf{T}^{-1}\\right), \\tag{35.4.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "35.4.9",
+                "latex": "\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{I}}\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\,\\left|\\mathbf{I}-\\mathbf{X}\\right|^{b-\\frac{1}{2}(m+1)}Z_{\\kappa}\\left(\\mathbf{T}\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}=\\frac{{\\left[a\\right]_{\\kappa}}}{{\\left[a+b\\right]_{\\kappa}}}\\mathrm{B}_{m}\\left(a,b\\right)Z_{\\kappa}\\left(\\mathbf{T}\\right). \\tag{35.4.9}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "{\\left[a\\right]_{\\kappa}}=\\frac{\\Gamma_{m}\\left(a+\\kappa\\right)}{\\Gamma_{m}\\left(a\\right)}=\\prod_{j=1}^{m}{\\left(a-\\tfrac{1}{2}(j-1)\\right)_{k_{j}}}, \\tag{35.4.1}",
+              "Z_{\\kappa}\\left(\\mathbf{I}\\right)=|\\kappa|!\\,2^{2|\\kappa|}\\,{\\left[m/2\\right]_{\\kappa}}\\frac{\\prod\\limits_{1\\leq j<l\\leq\\ell(\\kappa)}(2k_{j}-2k_{l}-j+l)}{\\prod\\limits_{j=1}^{\\ell(\\kappa)}(2k_{j}+\\ell(\\kappa)-j)!} \\tag{35.4.2}",
+              "Z_{\\kappa}\\left(\\mathbf{T}\\right)=Z_{\\kappa}\\left(\\mathbf{I}\\right)\\,\\left|\\mathbf{T}\\right|^{k_{m}}\\,\\int\\limits_{\\mathbf{O}(m)}\\prod_{j=1}^{m-1}|(\\mathbf{H}\\mathbf{T}\\mathbf{H}^{-1})_{j}|^{k_{j}-k_{j+1}}\\mathrm{d}{\\mathbf{H}}, \\tag{35.4.3}",
+              "Z_{\\kappa}\\left(\\boldsymbol{{0}}\\right)=\\begin{cases}1,&\\kappa=(0,\\dots,0),\\\\\n0,&\\kappa\\neq(0,\\dots,0).\\end{cases} \\tag{35.4.4}",
+              "Z_{\\kappa}\\left(\\mathbf{H}\\mathbf{T}\\mathbf{H}^{-1}\\right)=Z_{\\kappa}\\left(\\mathbf{T}\\right), \\tag{35.4.5}",
+              "\\sum_{|\\kappa|=k}Z_{\\kappa}\\left(\\mathbf{T}\\right)=(\\operatorname{tr}{\\mathbf{T}})^{k}. \\tag{35.4.6}",
+              "\\int_{\\mathbf{O}(m)}Z_{\\kappa}\\left(\\mathbf{S}\\mathbf{H}\\mathbf{T}\\mathbf{H}^{-1}\\right)\\mathrm{d}{\\mathbf{H}}=\\frac{Z_{\\kappa}\\left(\\mathbf{S}\\right)Z_{\\kappa}\\left(\\mathbf{T}\\right)}{Z_{\\kappa}\\left(\\mathbf{I}\\right)}. \\tag{35.4.7}",
+              "\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{T}\\mathbf{X}\\right)\\,\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}Z_{\\kappa}\\left(\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}=\\Gamma_{m}\\left(a+\\kappa\\right)\\,\\left|\\mathbf{T}\\right|^{-a}Z_{\\kappa}\\left(\\mathbf{T}^{-1}\\right), \\tag{35.4.8}",
+              "\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{I}}\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\,\\left|\\mathbf{I}-\\mathbf{X}\\right|^{b-\\frac{1}{2}(m+1)}Z_{\\kappa}\\left(\\mathbf{T}\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}=\\frac{{\\left[a\\right]_{\\kappa}}}{{\\left[a+b\\right]_{\\kappa}}}\\mathrm{B}_{m}\\left(a,b\\right)Z_{\\kappa}\\left(\\mathbf{T}\\right). \\tag{35.4.9}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "zonal polynomials",
+                "Haar measure",
+                "definition",
+                "notation",
+                "partitional shifted factorial",
+                "partitions",
+                "weight of",
+                "normalization",
+                "orthogonality",
+                "summation",
+                "mean-value",
+                "Laplace integral",
+                "beta integral"
+              ],
+              "definiciones": [
+                "$Z_{\\kappa}\\left(\\mathbf{T}\\right)$ : zonal polynomial"
+              ],
+              "referenciado_por": [
+                "§35.1"
+              ],
+              "notas_bibliograficas": [
+                "See James ([1964](./bib/J.html#bib1161 \"Distributions of matrix variates and latent roots derived from normal samples\")), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), Chapter 7), Macdonald ([1995](./bib/M.html#bib1518 \"Symmetric Functions and Hall Polynomials\"), p. 425). See also Constantine ([1963](./bib/C.html#bib573 \"Some non-central distribution problems in multivariate analysis\")), Maass ([1971](./bib/M.html#bib1511 \"Siegel’s modular forms and Dirichlet series\"), pp. 64–71), Macdonald ([1995](./bib/M.html#bib1518 \"Symmetric Functions and Hall Polynomials\"), pp. 388–439)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35",
+                "Annotations for §35.4 and Ch.35",
+                "Annotations for §35.4(ii) , §35.4 and Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/H.html#bib1107",
+                "titulo_referencia": "Harmonic Analysis of Functions of Several Complex Variables in the Classical Domains"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/C.html#bib573",
+                "titulo_referencia": "Some non-central distribution problems in multivariate analysis"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/J.html#bib1161",
+                "titulo_referencia": "Distributions of matrix variates and latent roots derived from normal samples"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/M.html#bib1518",
+                "titulo_referencia": "Symmetric Functions and Hall Polynomials"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1984",
+                "archivo_destino": "bib/T.html#bib2200",
+                "titulo_referencia": "Zonal Polynomials"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/F.html#bib775",
+                "titulo_referencia": "Analysis on Symmetric Cones"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/J.html#bib1161",
+                "titulo_referencia": "Distributions of matrix variates and latent roots derived from normal samples"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/M.html#bib1518",
+                "titulo_referencia": "Symmetric Functions and Hall Polynomials"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/C.html#bib573",
+                "titulo_referencia": "Some non-central distribution problems in multivariate analysis"
+              },
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/M.html#bib1511",
+                "titulo_referencia": "Siegel’s modular forms and Dirichlet series"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/M.html#bib1518",
+                "titulo_referencia": "Symmetric Functions and Hall Polynomials"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "35.5",
+          "titulo_original": "Bessel Functions of Matrix Argument",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.5.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.5.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.5 Bessel Functions of Matrix Argument",
+            "prosa_teorica": "For asymptotic approximations for Bessel functions of matrix argument, see Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")) and Butler and Wood ([2003](./bib/B.html#bib394 \"Laplace approximation for Bessel functions of matrix argument\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "35.5.1",
+                "latex": "A_{\\nu}\\left(\\boldsymbol{{0}}\\right)=\\frac{1}{\\Gamma_{m}\\left(\\nu+\\frac{1}{2}(m+1)\\right)}, \\tag{35.5.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "35.5.2",
+                "latex": "A_{\\nu}\\left(\\mathbf{T}\\right)=A_{\\nu}\\left(\\boldsymbol{{0}}\\right)\\sum_{k=0}^{\\infty}\\frac{(-1)^{k}}{k!}\\sum_{|\\kappa|=k}\\frac{1}{{\\left[\\nu+\\frac{1}{2}(m+1)\\right]_{\\kappa}}}Z_{\\kappa}\\left(\\mathbf{T}\\right), \\tag{35.5.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "35.5.3",
+                "latex": "B_{\\nu}\\left(\\mathbf{T}\\right)=\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-(\\mathbf{T}\\mathbf{X}+\\mathbf{X}^{-1})\\right)\\left|\\mathbf{X}\\right|^{\\nu-\\frac{1}{2}(m+1)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.5.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "35.5.4",
+                "latex": "\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{T}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{\\nu}A_{\\nu}\\left(\\mathbf{S}\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}=\\operatorname{etr}\\left(-\\mathbf{S}\\mathbf{T}^{-1}\\right)\\left|\\mathbf{T}\\right|^{-\\nu-\\frac{1}{2}(m+1)}, \\tag{35.5.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "35.5.5",
+                "latex": "\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{T}}A_{\\nu_{1}}\\left(\\mathbf{S}_{1}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{\\nu_{1}}\\,A_{\\nu_{2}}\\left(\\mathbf{S}_{2}(\\mathbf{T}-\\mathbf{X})\\right)\\left|\\mathbf{T}-\\mathbf{X}\\right|^{\\nu_{2}}\\,\\mathrm{d}{\\mathbf{X}}=\\left|\\mathbf{T}\\right|^{\\nu_{1}+\\nu_{2}+\\frac{1}{2}(m+1)}A_{\\nu_{1}+\\nu_{2}+\\frac{1}{2}(m+1)}\\left((\\mathbf{S}_{1}+\\mathbf{S}_{2})\\mathbf{T}\\right), \\tag{35.5.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "35.5.6",
+                "latex": "B_{\\nu}\\left(\\mathbf{T}\\right)=\\left|\\mathbf{T}\\right|^{-\\nu}B_{-\\nu}\\left(\\mathbf{T}\\right), \\tag{35.5.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "35.5.7",
+                "latex": "\\int_{\\boldsymbol{\\Omega}}A_{\\nu_{1}}\\left(\\mathbf{T}\\mathbf{X}\\right)B_{-\\nu_{2}}\\left(\\mathbf{S}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{\\nu_{1}}\\,\\mathrm{d}{\\mathbf{X}}=\\frac{1}{A_{\\nu_{1}+\\nu_{2}}\\left(\\boldsymbol{{0}}\\right)}\\left|\\mathbf{S}\\right|^{\\nu_{2}}\\left|\\mathbf{T}+\\mathbf{S}\\right|^{-(\\nu_{1}+\\nu_{2}+\\frac{1}{2}(m+1))}, \\tag{35.5.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "35.5.8",
+                "latex": "\\int_{\\mathbf{O}(m)}\\operatorname{etr}\\left(\\mathbf{S}\\mathbf{H}\\right)\\mathrm{d}{\\mathbf{H}}=\\frac{A_{-1/2}\\left(-\\frac{1}{4}\\mathbf{S}\\mathbf{S}^{\\mathrm{T}}\\right)}{A_{-1/2}\\left(\\boldsymbol{{0}}\\right)}, \\tag{35.5.8}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "A_{\\nu}\\left(\\boldsymbol{{0}}\\right)=\\frac{1}{\\Gamma_{m}\\left(\\nu+\\frac{1}{2}(m+1)\\right)}, \\tag{35.5.1}",
+              "A_{\\nu}\\left(\\mathbf{T}\\right)=A_{\\nu}\\left(\\boldsymbol{{0}}\\right)\\sum_{k=0}^{\\infty}\\frac{(-1)^{k}}{k!}\\sum_{|\\kappa|=k}\\frac{1}{{\\left[\\nu+\\frac{1}{2}(m+1)\\right]_{\\kappa}}}Z_{\\kappa}\\left(\\mathbf{T}\\right), \\tag{35.5.2}",
+              "B_{\\nu}\\left(\\mathbf{T}\\right)=\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-(\\mathbf{T}\\mathbf{X}+\\mathbf{X}^{-1})\\right)\\left|\\mathbf{X}\\right|^{\\nu-\\frac{1}{2}(m+1)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.5.3}",
+              "\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{T}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{\\nu}A_{\\nu}\\left(\\mathbf{S}\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}=\\operatorname{etr}\\left(-\\mathbf{S}\\mathbf{T}^{-1}\\right)\\left|\\mathbf{T}\\right|^{-\\nu-\\frac{1}{2}(m+1)}, \\tag{35.5.4}",
+              "\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{T}}A_{\\nu_{1}}\\left(\\mathbf{S}_{1}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{\\nu_{1}}\\,A_{\\nu_{2}}\\left(\\mathbf{S}_{2}(\\mathbf{T}-\\mathbf{X})\\right)\\left|\\mathbf{T}-\\mathbf{X}\\right|^{\\nu_{2}}\\,\\mathrm{d}{\\mathbf{X}}=\\left|\\mathbf{T}\\right|^{\\nu_{1}+\\nu_{2}+\\frac{1}{2}(m+1)}A_{\\nu_{1}+\\nu_{2}+\\frac{1}{2}(m+1)}\\left((\\mathbf{S}_{1}+\\mathbf{S}_{2})\\mathbf{T}\\right), \\tag{35.5.5}",
+              "B_{\\nu}\\left(\\mathbf{T}\\right)=\\left|\\mathbf{T}\\right|^{-\\nu}B_{-\\nu}\\left(\\mathbf{T}\\right), \\tag{35.5.6}",
+              "\\int_{\\boldsymbol{\\Omega}}A_{\\nu_{1}}\\left(\\mathbf{T}\\mathbf{X}\\right)B_{-\\nu_{2}}\\left(\\mathbf{S}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{\\nu_{1}}\\,\\mathrm{d}{\\mathbf{X}}=\\frac{1}{A_{\\nu_{1}+\\nu_{2}}\\left(\\boldsymbol{{0}}\\right)}\\left|\\mathbf{S}\\right|^{\\nu_{2}}\\left|\\mathbf{T}+\\mathbf{S}\\right|^{-(\\nu_{1}+\\nu_{2}+\\frac{1}{2}(m+1))}, \\tag{35.5.7}",
+              "\\int_{\\mathbf{O}(m)}\\operatorname{etr}\\left(\\mathbf{S}\\mathbf{H}\\right)\\mathrm{d}{\\mathbf{H}}=\\frac{A_{-1/2}\\left(-\\frac{1}{4}\\mathbf{S}\\mathbf{S}^{\\mathrm{T}}\\right)}{A_{-1/2}\\left(\\boldsymbol{{0}}\\right)}, \\tag{35.5.8}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Bessel functions",
+                "of matrix argument",
+                "definitions",
+                "properties",
+                "asymptotic approximations"
+              ],
+              "definiciones": [
+                "$A_{\\nu}\\left(\\mathbf{T}\\right)$ : Bessel function of matrix argument (first kind)"
+              ],
+              "notas_bibliograficas": [
+                "See Bochner ([1952](./bib/B.html#bib2651 \"Bessel functions and modular relations of higher type and hyperbolic differential equations\")), Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), Gross and Kunze ([1976](./bib/G.html#bib995 \"Bessel functions and representation theory. I\")).",
+                "See Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")). See also Terras ([1988](./bib/T.html#bib2238 \"Harmonic Analysis on Symmetric Spaces and Applications. II\"), pp. 49–63), Butler and Wood ([2003](./bib/B.html#bib394 \"Laplace approximation for Bessel functions of matrix argument\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35",
+                "Annotations for §35.5 and Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1952",
+                "archivo_destino": "bib/B.html#bib2651",
+                "titulo_referencia": "Bessel functions and modular relations of higher type and hyperbolic differential equations"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/G.html#bib995",
+                "titulo_referencia": "Bessel functions and representation theory. I"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/T.html#bib2238",
+                "titulo_referencia": "Harmonic Analysis on Symmetric Spaces and Applications. II"
+              },
+              {
+                "texto": "2003",
+                "archivo_destino": "bib/B.html#bib394",
+                "titulo_referencia": "Laplace approximation for Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "2003",
+                "archivo_destino": "bib/B.html#bib394",
+                "titulo_referencia": "Laplace approximation for Bessel functions of matrix argument"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "35.6",
+          "titulo_original": "Confluent Hypergeometric Functions of Matrix Argument",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.6.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.6.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.6 Confluent Hypergeometric Functions of Matrix Argument",
+            "prosa_teorica": "For asymptotic approximations for confluent hypergeometric functions of matrix argument, see Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")) and Butler and Wood ([2002](./bib/B.html#bib393 \"Laplace approximations for hypergeometric functions with matrix argument\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "35.6.1",
+                "latex": "{{}_{1}F_{1}}\\left({a\\atop b};\\mathbf{T}\\right)=\\sum_{k=0}^{\\infty}\\frac{1}{k!}\\sum_{|\\kappa|=k}\\frac{{\\left[a\\right]_{\\kappa}}}{{\\left[b\\right]_{\\kappa}}}Z_{\\kappa}\\left(\\mathbf{T}\\right). \\tag{35.6.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "35.6.2",
+                "latex": "\\Psi\\left(a;b;\\mathbf{T}\\right)=\\frac{1}{\\Gamma_{m}\\left(a\\right)}\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{T}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\,{\\left|\\mathbf{I}+\\mathbf{X}\\right|}^{b-a-\\frac{1}{2}(m+1)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.6.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "35.6.3",
+                "latex": "L^{(\\gamma)}_{\\nu}\\left(\\mathbf{T}\\right)=\\frac{\\Gamma_{m}\\left(\\gamma+\\nu+\\frac{1}{2}(m+1)\\right)}{\\Gamma_{m}\\left(\\gamma+\\frac{1}{2}(m+1)\\right)}\\,{{}_{1}F_{1}}\\left({-\\nu\\atop\\gamma+\\frac{1}{2}(m+1)};\\mathbf{T}\\right), \\tag{35.6.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "35.6.4",
+                "latex": "{{}_{1}F_{1}}\\left({a\\atop b};\\mathbf{T}\\right)=\\frac{1}{\\mathrm{B}_{m}\\left(a,b-a\\right)}\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{I}}\\operatorname{etr}\\left(\\mathbf{T}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\left|\\mathbf{I}-\\mathbf{X}\\right|^{b-a-\\frac{1}{2}(m+1)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.6.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "35.6.5",
+                "latex": "\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{T}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{b-\\frac{1}{2}(m+1)}{{}_{1}F_{1}}\\left({a\\atop b};\\mathbf{S}\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}=\\Gamma_{m}\\left(b\\right)\\left|\\mathbf{I}-\\mathbf{S}\\mathbf{T}^{-1}\\right|^{-a}\\left|\\mathbf{T}\\right|^{-b}, \\tag{35.6.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "35.6.6",
+                "latex": "\\mathrm{B}_{m}\\left(b_{1},b_{2}\\right)\\left|\\mathbf{T}\\right|^{b_{1}+b_{2}-\\frac{1}{2}(m+1)}{{}_{1}F_{1}}\\left({a_{1}+a_{2}\\atop b_{1}+b_{2}};\\mathbf{T}\\right)=\\int_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{T}}\\left|\\mathbf{X}\\right|^{b_{1}-\\frac{1}{2}(m+1)}{{}_{1}F_{1}}\\left({a_{1}\\atop b_{1}};\\mathbf{X}\\right){\\left|\\mathbf{T}-\\mathbf{X}\\right|}^{b_{2}-\\frac{1}{2}(m+1)}{{}_{1}F_{1}}\\left({a_{2}\\atop b_{2}};\\mathbf{T}-\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.6.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "35.6.7",
+                "latex": "{{}_{1}F_{1}}\\left({a\\atop b};\\mathbf{T}\\right)=\\operatorname{etr}\\left(\\mathbf{T}\\right){{}_{1}F_{1}}\\left({b-a\\atop b};-\\mathbf{T}\\right). \\tag{35.6.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "35.6.8",
+                "latex": "\\int_{\\boldsymbol{\\Omega}}\\left|\\mathbf{T}\\right|^{c-\\frac{1}{2}(m+1)}\\Psi\\left(a;b;\\mathbf{T}\\right)\\,\\mathrm{d}{\\mathbf{T}}=\\frac{\\Gamma_{m}\\left(c\\right)\\Gamma_{m}\\left(a-c\\right)\\Gamma_{m}\\left(c-b+\\frac{1}{2}(m+1)\\right)}{\\Gamma_{m}\\left(a\\right)\\Gamma_{m}\\left(a-b+\\frac{1}{2}(m+1)\\right)}, \\tag{35.6.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "35.6.9",
+                "latex": "\\lim_{a\\to\\infty}{{}_{1}F_{1}}\\left({a\\atop\\nu+\\frac{1}{2}(m+1)};-a^{-1}\\mathbf{T}\\right)=\\frac{A_{\\nu}\\left(\\mathbf{T}\\right)}{A_{\\nu}\\left(\\boldsymbol{{0}}\\right)}. \\tag{35.6.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "35.6.10",
+                "latex": "\\lim_{a\\to\\infty}\\Gamma_{m}\\left(a\\right)\\Psi\\left(a+\\nu;\\nu+\\tfrac{1}{2}(m+1);a^{-1}\\mathbf{T}\\right)=B_{\\nu}\\left(\\mathbf{T}\\right). \\tag{35.6.10}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "{{}_{1}F_{1}}\\left({a\\atop b};\\mathbf{T}\\right)=\\sum_{k=0}^{\\infty}\\frac{1}{k!}\\sum_{|\\kappa|=k}\\frac{{\\left[a\\right]_{\\kappa}}}{{\\left[b\\right]_{\\kappa}}}Z_{\\kappa}\\left(\\mathbf{T}\\right). \\tag{35.6.1}",
+              "\\Psi\\left(a;b;\\mathbf{T}\\right)=\\frac{1}{\\Gamma_{m}\\left(a\\right)}\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{T}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\,{\\left|\\mathbf{I}+\\mathbf{X}\\right|}^{b-a-\\frac{1}{2}(m+1)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.6.2}",
+              "L^{(\\gamma)}_{\\nu}\\left(\\mathbf{T}\\right)=\\frac{\\Gamma_{m}\\left(\\gamma+\\nu+\\frac{1}{2}(m+1)\\right)}{\\Gamma_{m}\\left(\\gamma+\\frac{1}{2}(m+1)\\right)}\\,{{}_{1}F_{1}}\\left({-\\nu\\atop\\gamma+\\frac{1}{2}(m+1)};\\mathbf{T}\\right), \\tag{35.6.3}",
+              "{{}_{1}F_{1}}\\left({a\\atop b};\\mathbf{T}\\right)=\\frac{1}{\\mathrm{B}_{m}\\left(a,b-a\\right)}\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{I}}\\operatorname{etr}\\left(\\mathbf{T}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\left|\\mathbf{I}-\\mathbf{X}\\right|^{b-a-\\frac{1}{2}(m+1)}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.6.4}",
+              "\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{T}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{b-\\frac{1}{2}(m+1)}{{}_{1}F_{1}}\\left({a\\atop b};\\mathbf{S}\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}=\\Gamma_{m}\\left(b\\right)\\left|\\mathbf{I}-\\mathbf{S}\\mathbf{T}^{-1}\\right|^{-a}\\left|\\mathbf{T}\\right|^{-b}, \\tag{35.6.5}",
+              "\\mathrm{B}_{m}\\left(b_{1},b_{2}\\right)\\left|\\mathbf{T}\\right|^{b_{1}+b_{2}-\\frac{1}{2}(m+1)}{{}_{1}F_{1}}\\left({a_{1}+a_{2}\\atop b_{1}+b_{2}};\\mathbf{T}\\right)=\\int_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{T}}\\left|\\mathbf{X}\\right|^{b_{1}-\\frac{1}{2}(m+1)}{{}_{1}F_{1}}\\left({a_{1}\\atop b_{1}};\\mathbf{X}\\right){\\left|\\mathbf{T}-\\mathbf{X}\\right|}^{b_{2}-\\frac{1}{2}(m+1)}{{}_{1}F_{1}}\\left({a_{2}\\atop b_{2}};\\mathbf{T}-\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.6.6}",
+              "{{}_{1}F_{1}}\\left({a\\atop b};\\mathbf{T}\\right)=\\operatorname{etr}\\left(\\mathbf{T}\\right){{}_{1}F_{1}}\\left({b-a\\atop b};-\\mathbf{T}\\right). \\tag{35.6.7}",
+              "\\int_{\\boldsymbol{\\Omega}}\\left|\\mathbf{T}\\right|^{c-\\frac{1}{2}(m+1)}\\Psi\\left(a;b;\\mathbf{T}\\right)\\,\\mathrm{d}{\\mathbf{T}}=\\frac{\\Gamma_{m}\\left(c\\right)\\Gamma_{m}\\left(a-c\\right)\\Gamma_{m}\\left(c-b+\\frac{1}{2}(m+1)\\right)}{\\Gamma_{m}\\left(a\\right)\\Gamma_{m}\\left(a-b+\\frac{1}{2}(m+1)\\right)}, \\tag{35.6.8}",
+              "\\lim_{a\\to\\infty}{{}_{1}F_{1}}\\left({a\\atop\\nu+\\frac{1}{2}(m+1)};-a^{-1}\\mathbf{T}\\right)=\\frac{A_{\\nu}\\left(\\mathbf{T}\\right)}{A_{\\nu}\\left(\\boldsymbol{{0}}\\right)}. \\tag{35.6.9}",
+              "\\lim_{a\\to\\infty}\\Gamma_{m}\\left(a\\right)\\Psi\\left(a+\\nu;\\nu+\\tfrac{1}{2}(m+1);a^{-1}\\mathbf{T}\\right)=B_{\\nu}\\left(\\mathbf{T}\\right). \\tag{35.6.10}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "confluent hypergeometric functions",
+                "of matrix argument",
+                "definition",
+                "Laguerre form",
+                "properties",
+                "Bessel functions",
+                "relations to Bessel functions of matrix argument",
+                "relations to confluent hypergeometric functions of matrix argument",
+                "asymptotic approximations"
+              ],
+              "notas_bibliograficas": [
+                "See Koecher ([1954](./bib/K.html#bib1301 \"Zur Theorie der Modulformen n -ten Grades. I\")), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 472–473). See also Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), Muirhead ([1978](./bib/M.html#bib1666 \"Latent roots and matrix variates: A review of some asymptotic results\")).",
+                "See Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 264–266, 472–473). For ( 35.6.6 ) apply ( 35.2.3 ) and ( 35.6.5 ). See also Shimura ([1982](./bib/S.html#bib2067 \"Confluent hypergeometric functions on tube domains\")).",
+                "See Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), Muirhead ([1978](./bib/M.html#bib1666 \"Latent roots and matrix variates: A review of some asymptotic results\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35",
+                "Annotations for §35.6 and Ch.35",
+                "Annotations for §35.6(i) , §35.6 and Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1954",
+                "archivo_destino": "bib/K.html#bib1301",
+                "titulo_referencia": "Zur Theorie der Modulformen n -ten Grades. I"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1978",
+                "archivo_destino": "bib/M.html#bib1666",
+                "titulo_referencia": "Latent roots and matrix variates: A review of some asymptotic results"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/S.html#bib2067",
+                "titulo_referencia": "Confluent hypergeometric functions on tube domains"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1978",
+                "archivo_destino": "bib/M.html#bib1666",
+                "titulo_referencia": "Latent roots and matrix variates: A review of some asymptotic results"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "2002",
+                "archivo_destino": "bib/B.html#bib393",
+                "titulo_referencia": "Laplace approximations for hypergeometric functions with matrix argument"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "35.7",
+          "titulo_original": "Gaussian Hypergeometric Function of Matrix Argument",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.7.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.7.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.7 Gaussian Hypergeometric Function of Matrix Argument",
+            "prosa_teorica": "Let $f:{\\boldsymbol{\\Omega}}\\to\\mathbb{C}$ (a) be *orthogonally invariant* , so that $f(\\mathbf{T})$ is a symmetric function of $t_{1},\\dots,t_{m}$ , the eigenvalues of the matrix argument $\\mathbf{T}\\in{\\boldsymbol{\\Omega}}$ ; (b) be analytic in $t_{1},\\dots,t_{m}$ in a neighborhood of $\\mathbf{T}=\\boldsymbol{{0}}$ ; (c) satisfy $f(\\boldsymbol{{0}})=1$ . Subject to the conditions (a)–(c), the function $f(\\mathbf{T})={{}_{2}F_{1}}\\left(a,b;c;\\mathbf{T}\\right)$ is the unique solution of each partial differential equation\nfor $j=1,\\dots,m$ .\nSystems of partial differential equations for the ${{}_{0}F_{1}}$ (defined in § [35.8](./35.8.md \"§35.8 Generalized Hypergeometric Functions of Matrix Argument ‣ Properties ‣ Chapter 35 Functions of Matrix Argument\") ) and ${{}_{1}F_{1}}$ functions of matrix argument can be obtained by applying ( 35.8.9 ) and ( 35.8.10 ) to ( 35.7.9 ).\nButler and Wood ([2002](./bib/B.html#bib393 \"Laplace approximations for hypergeometric functions with matrix argument\")) applies Laplace’s method (§ 2.3(iii) ) to ( 35.7.5 ) to derive uniform asymptotic approximations for the functions\nand\nas $\\alpha\\to\\infty$ . These approximations are in terms of elementary functions.\nFor other asymptotic approximations for Gaussian hypergeometric functions of matrix argument, see Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 264–281, 290, 472, 563), and Butler and Wood ([2002](./bib/B.html#bib393 \"Laplace approximations for hypergeometric functions with matrix argument\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "35.7.1",
+                "latex": "{{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{T}\\right)=\\sum_{k=0}^{\\infty}\\frac{1}{k!}\\sum_{|\\kappa|=k}\\frac{{\\left[a\\right]_{\\kappa}}{\\left[b\\right]_{\\kappa}}}{{\\left[c\\right]_{\\kappa}}}Z_{\\kappa}\\left(\\mathbf{T}\\right)}, \\tag{35.7.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "35.7.2",
+                "latex": "P^{(\\gamma,\\delta)}_{\\nu}\\left(\\mathbf{T}\\right)=\\frac{\\Gamma_{m}\\left(\\gamma+\\nu+\\frac{1}{2}(m+1)\\right)}{\\Gamma_{m}\\left(\\gamma+\\frac{1}{2}(m+1)\\right)}\\,{{}_{2}F_{1}}\\left({-\\nu,\\gamma+\\delta+\\nu+\\frac{1}{2}(m+1)\\atop\\gamma+\\frac{1}{2}(m+1)};\\mathbf{T}\\right), \\tag{35.7.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "35.7.3",
+                "latex": "{{}_{2}F_{1}}\\left({a,b\\atop c};\\begin{bmatrix}t_{1}&0\\\\\n0&t_{2}\\end{bmatrix}\\right)=\\sum_{k=0}^{\\infty}\\frac{{\\left(a\\right)_{k}}{\\left(c-a\\right)_{k}}{\\left(b\\right)_{k}}{\\left(c-b\\right)_{k}}}{k!\\,{\\left(c\\right)_{2k}}{\\left(c-\\tfrac{1}{2}\\right)_{k}}}\\,(t_{1}t_{2})^{k}{{}_{2}F_{1}}\\left({a+k,b+k\\atop c+2k};t_{1}+t_{2}-t_{1}t_{2}\\right). \\tag{35.7.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "35.7.4",
+                "latex": "\\lim_{c\\to\\infty}{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{I}-c\\mathbf{T}^{-1}\\right)=\\left|\\mathbf{T}\\right|^{b}\\Psi\\left(b;b-a+\\tfrac{1}{2}(m+1);\\mathbf{T}\\right). \\tag{35.7.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "35.7.5",
+                "latex": "{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{T}\\right)=\\frac{1}{\\mathrm{B}_{m}\\left(a,c-a\\right)}\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{I}}\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\,{\\left|\\mathbf{I}-\\mathbf{X}\\right|}^{c-a-\\frac{1}{2}(m+1)}{\\left|\\mathbf{I}-\\mathbf{T}\\mathbf{X}\\right|}^{-b}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.7.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "35.7.6",
+                "latex": "{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{T}\\right)=\\left|\\mathbf{I}-\\mathbf{T}\\right|^{c-a-b}{{}_{2}F_{1}}\\left({c-a,c-b\\atop c};\\mathbf{T}\\right)=\\left|\\mathbf{I}-\\mathbf{T}\\right|^{-a}{{}_{2}F_{1}}\\left({a,c-b\\atop c};-\\mathbf{T}(\\mathbf{I}-\\mathbf{T})^{-1}\\right)=\\left|\\mathbf{I}-\\mathbf{T}\\right|^{-b}{{}_{2}F_{1}}\\left({c-a,b\\atop c};-\\mathbf{T}(\\mathbf{I}-\\mathbf{T})^{-1}\\right). \\tag{35.7.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "35.7.7",
+                "latex": "{{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{I}\\right)=\\frac{\\Gamma_{m}\\left(c\\right)\\Gamma_{m}\\left(c-a-b\\right)}{\\Gamma_{m}\\left(c-a\\right)\\Gamma_{m}\\left(c-b\\right)}}, \\tag{35.7.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "35.7.8",
+                "latex": "{{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{T}\\right)=\\frac{\\Gamma_{m}\\left(c\\right)\\Gamma_{m}\\left(c-a-b\\right)}{\\Gamma_{m}\\left(c-a\\right)\\Gamma_{m}\\left(c-b\\right)}}\\,{{}_{2}F_{1}}\\left({a,b\\atop a+b-c+\\frac{1}{2}(m+1)};\\mathbf{I}-\\mathbf{T}\\right), \\tag{35.7.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "35.7.9",
+                "latex": "t_{j}(1-t_{j})\\frac{{\\partial}^{2}F}{{\\partial t_{j}}^{2}}-\\frac{1}{2}\\sum_{\\begin{subarray}{c}k=1\\\\\nk\\neq j\\end{subarray}}^{m}\\frac{t_{k}(1-t_{k})}{t_{j}-t_{k}}\\frac{\\partial F}{\\partial t_{k}}+\\left({c-\\tfrac{1}{2}(m-1)-\\left(a+b-\\tfrac{1}{2}(m-3)\\right)t_{j}}+\\frac{1}{2}\\sum_{\\begin{subarray}{c}k=1\\\\\nk\\neq j\\end{subarray}}^{m}\\frac{t_{j}(1-t_{j})}{t_{j}-t_{k}}\\right)\\frac{\\partial F}{\\partial t_{j}}=abF, \\tag{35.7.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "35.7.10",
+                "latex": "{{}_{2}F_{1}}\\left({\\alpha a,\\alpha b\\atop\\alpha c};\\mathbf{T}\\right) \\tag{35.7.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "35.7.11",
+                "latex": "{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{I}-\\alpha^{-1}\\mathbf{T}\\right) \\tag{35.7.11}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "{{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{T}\\right)=\\sum_{k=0}^{\\infty}\\frac{1}{k!}\\sum_{|\\kappa|=k}\\frac{{\\left[a\\right]_{\\kappa}}{\\left[b\\right]_{\\kappa}}}{{\\left[c\\right]_{\\kappa}}}Z_{\\kappa}\\left(\\mathbf{T}\\right)}, \\tag{35.7.1}",
+              "P^{(\\gamma,\\delta)}_{\\nu}\\left(\\mathbf{T}\\right)=\\frac{\\Gamma_{m}\\left(\\gamma+\\nu+\\frac{1}{2}(m+1)\\right)}{\\Gamma_{m}\\left(\\gamma+\\frac{1}{2}(m+1)\\right)}\\,{{}_{2}F_{1}}\\left({-\\nu,\\gamma+\\delta+\\nu+\\frac{1}{2}(m+1)\\atop\\gamma+\\frac{1}{2}(m+1)};\\mathbf{T}\\right), \\tag{35.7.2}",
+              "{{}_{2}F_{1}}\\left({a,b\\atop c};\\begin{bmatrix}t_{1}&0\\\\\n0&t_{2}\\end{bmatrix}\\right)=\\sum_{k=0}^{\\infty}\\frac{{\\left(a\\right)_{k}}{\\left(c-a\\right)_{k}}{\\left(b\\right)_{k}}{\\left(c-b\\right)_{k}}}{k!\\,{\\left(c\\right)_{2k}}{\\left(c-\\tfrac{1}{2}\\right)_{k}}}\\,(t_{1}t_{2})^{k}{{}_{2}F_{1}}\\left({a+k,b+k\\atop c+2k};t_{1}+t_{2}-t_{1}t_{2}\\right). \\tag{35.7.3}",
+              "\\lim_{c\\to\\infty}{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{I}-c\\mathbf{T}^{-1}\\right)=\\left|\\mathbf{T}\\right|^{b}\\Psi\\left(b;b-a+\\tfrac{1}{2}(m+1);\\mathbf{T}\\right). \\tag{35.7.4}",
+              "{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{T}\\right)=\\frac{1}{\\mathrm{B}_{m}\\left(a,c-a\\right)}\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{I}}\\left|\\mathbf{X}\\right|^{a-\\frac{1}{2}(m+1)}\\,{\\left|\\mathbf{I}-\\mathbf{X}\\right|}^{c-a-\\frac{1}{2}(m+1)}{\\left|\\mathbf{I}-\\mathbf{T}\\mathbf{X}\\right|}^{-b}\\,\\mathrm{d}{\\mathbf{X}}, \\tag{35.7.5}",
+              "{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{T}\\right)=\\left|\\mathbf{I}-\\mathbf{T}\\right|^{c-a-b}{{}_{2}F_{1}}\\left({c-a,c-b\\atop c};\\mathbf{T}\\right)=\\left|\\mathbf{I}-\\mathbf{T}\\right|^{-a}{{}_{2}F_{1}}\\left({a,c-b\\atop c};-\\mathbf{T}(\\mathbf{I}-\\mathbf{T})^{-1}\\right)=\\left|\\mathbf{I}-\\mathbf{T}\\right|^{-b}{{}_{2}F_{1}}\\left({c-a,b\\atop c};-\\mathbf{T}(\\mathbf{I}-\\mathbf{T})^{-1}\\right). \\tag{35.7.6}",
+              "{{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{I}\\right)=\\frac{\\Gamma_{m}\\left(c\\right)\\Gamma_{m}\\left(c-a-b\\right)}{\\Gamma_{m}\\left(c-a\\right)\\Gamma_{m}\\left(c-b\\right)}}, \\tag{35.7.7}",
+              "{{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{T}\\right)=\\frac{\\Gamma_{m}\\left(c\\right)\\Gamma_{m}\\left(c-a-b\\right)}{\\Gamma_{m}\\left(c-a\\right)\\Gamma_{m}\\left(c-b\\right)}}\\,{{}_{2}F_{1}}\\left({a,b\\atop a+b-c+\\frac{1}{2}(m+1)};\\mathbf{I}-\\mathbf{T}\\right), \\tag{35.7.8}",
+              "t_{j}(1-t_{j})\\frac{{\\partial}^{2}F}{{\\partial t_{j}}^{2}}-\\frac{1}{2}\\sum_{\\begin{subarray}{c}k=1\\\\\nk\\neq j\\end{subarray}}^{m}\\frac{t_{k}(1-t_{k})}{t_{j}-t_{k}}\\frac{\\partial F}{\\partial t_{k}}+\\left({c-\\tfrac{1}{2}(m-1)-\\left(a+b-\\tfrac{1}{2}(m-3)\\right)t_{j}}+\\frac{1}{2}\\sum_{\\begin{subarray}{c}k=1\\\\\nk\\neq j\\end{subarray}}^{m}\\frac{t_{j}(1-t_{j})}{t_{j}-t_{k}}\\right)\\frac{\\partial F}{\\partial t_{j}}=abF, \\tag{35.7.9}",
+              "{{}_{2}F_{1}}\\left({\\alpha a,\\alpha b\\atop\\alpha c};\\mathbf{T}\\right) \\tag{35.7.10}",
+              "{{}_{2}F_{1}}\\left({a,b\\atop c};\\mathbf{I}-\\alpha^{-1}\\mathbf{T}\\right) \\tag{35.7.11}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Gaussian hypergeometric function",
+                "of matrix argument",
+                "definition",
+                "Jacobi form",
+                "basic properties",
+                "case $m=2$",
+                "confluent form",
+                "integral representation",
+                "transformations of parameters",
+                "Gauss formula",
+                "reflection formula",
+                "functions of matrix argument",
+                "orthogonal invariance",
+                "partial differential equations",
+                "asymptotic approximations"
+              ],
+              "referenciado_por": [
+                "§35.10",
+                "§35.9"
+              ],
+              "notas_bibliograficas": [
+                "See Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 264–281, 290, 472), Faraut and Korányi ([1994](./bib/F.html#bib775 \"Analysis on Symmetric Cones\"), pp. 337–340).",
+                "See Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 264–281, 290, 472). For ( 35.7.8 ) see Zheng ([1997](./bib/Z.html#bib2494 \"Generalized Watson Transforms and Applications to Group Representations\")). See also Koornwinder and Sprinkhuizen-Kuyper ([1978](./bib/K.html#bib1332 \"Hypergeometric functions of × 2 2 matrix argument are expressible in terms of Appel’s functions F 4\")), Macdonald ([1990](./bib/M.html#bib1517 \"Hypergeometric Functions\")), Ding et al. ([1996](./bib/D.html#bib669 \"Ramanujan’s master theorem for symmetric cones\")).",
+                "See Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 264–281, 290, 472), Faraut and Korányi ([1994](./bib/F.html#bib775 \"Analysis on Symmetric Cones\"), pp. 337–340). See also Gross and Richards ([1991](./bib/G.html#bib997 \"Hypergeometric functions on complex matrix space\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35",
+                "Annotations for §35.7 and Ch.35",
+                "Annotations for §35.7(i) , §35.7 and Ch.35",
+                "Annotations for §35.7(ii) , §35.7 and Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/F.html#bib775",
+                "titulo_referencia": "Analysis on Symmetric Cones"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1997",
+                "archivo_destino": "bib/Z.html#bib2494",
+                "titulo_referencia": "Generalized Watson Transforms and Applications to Group Representations"
+              },
+              {
+                "texto": "1978",
+                "archivo_destino": "bib/K.html#bib1332",
+                "titulo_referencia": "Hypergeometric functions of × 2 2 matrix argument are expressible in terms of Appel’s functions F 4"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/M.html#bib1517",
+                "titulo_referencia": "Hypergeometric Functions"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/D.html#bib669",
+                "titulo_referencia": "Ramanujan’s master theorem for symmetric cones"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/F.html#bib775",
+                "titulo_referencia": "Analysis on Symmetric Cones"
+              },
+              {
+                "texto": "1991",
+                "archivo_destino": "bib/G.html#bib997",
+                "titulo_referencia": "Hypergeometric functions on complex matrix space"
+              },
+              {
+                "texto": "35.8",
+                "archivo_destino": "35.8.md",
+                "titulo_referencia": "§35.8 Generalized Hypergeometric Functions of Matrix Argument ‣ Properties ‣ Chapter 35 Functions of Matrix Argument"
+              },
+              {
+                "texto": "2002",
+                "archivo_destino": "bib/B.html#bib393",
+                "titulo_referencia": "Laplace approximations for hypergeometric functions with matrix argument"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "2002",
+                "archivo_destino": "bib/B.html#bib393",
+                "titulo_referencia": "Laplace approximations for hypergeometric functions with matrix argument"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "35.8",
+          "titulo_original": "Generalized Hypergeometric Functions of Matrix Argument",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.8.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.8.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.8 Generalized Hypergeometric Functions of Matrix Argument",
+            "prosa_teorica": "Let $p$ and $q$ be nonnegative integers; $a_{1},\\dots,a_{p}\\in\\mathbb{C}$ ; $b_{1},\\dots,b_{q}\\in\\mathbb{C}$ ; $-b_{j}+\\tfrac{1}{2}(k+1)\\notin\\mathbb{N}$ , $1\\leq j\\leq q$ , $1\\leq k\\leq m$ . The generalized hypergeometric function ${{}_{p}F_{q}}$ with matrix argument $\\mathbf{T}\\in\\boldsymbol{\\mathcal{S}}$ , numerator parameters $a_{1},\\dots,a_{p}$ , and denominator parameters $b_{1},\\dots,b_{q}$ is\nIf $-a_{j}+\\tfrac{1}{2}(k+1)\\in\\mathbb{N}$ for some $j,k$ satisfying $1\\leq j\\leq p$ , $1\\leq k\\leq m$ , then the series expansion ( 35.8.1 ) terminates.\nIf $p\\leq q$ , then ( 35.8.1 ) converges for all $\\mathbf{T}$ .\nIf $p=q+1$ , then ( 35.8.1 ) converges absolutely for $\\|\\mathbf{T}\\|<1$ and diverges for $\\|\\mathbf{T}\\|>1$ .\nIf $p>q+1$ , then ( 35.8.1 ) diverges unless it terminates.\nLet $c=b_{1}+b_{2}-a_{1}-a_{2}-a_{3}$ . Then\nLet $a_{1}+a_{2}+a_{3}+\\frac{1}{2}(m+1)=b_{1}+b_{2}$ ; one of the $a_{j}$ be a negative integer; $\\Re\\left(b_{1}-a_{1}\\right)$ , $\\Re\\left(b_{1}-a_{2}\\right)$ , $\\Re\\left(b_{1}-a_{3}\\right)$ , $\\Re\\left(b_{1}-a_{1}-a_{2}-a_{3}\\right)>\\frac{1}{2}(m-1)$ . Then\nAgain, let $c=b_{1}+b_{2}-a_{1}-a_{2}-a_{3}$ . Then\nMultidimensional Mellin–Barnes integrals are established in Ding et al. ([1996](./bib/D.html#bib669 \"Ramanujan’s master theorem for symmetric cones\")) for the functions ${{}_{p}F_{q}}$ and ${{}_{p+1}F_{p}}$ of matrix argument. A similar result for the ${{}_{0}F_{1}}$ function of matrix argument is given in Faraut and Korányi ([1994](./bib/F.html#bib775 \"Analysis on Symmetric Cones\"), p. 346). These multidimensional integrals reduce to the classical Mellin–Barnes integrals (§ 5.19(ii) ) in the special case $m=1$ .\nSee also Faraut and Korányi ([1994](./bib/F.html#bib775 \"Analysis on Symmetric Cones\"), pp. 318–340).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "35.8.1",
+                "latex": "{{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{T}\\right)=\\sum_{k=0}^{\\infty}\\frac{1}{k!}\\sum_{|\\kappa|=k}\\frac{{\\left[a_{1}\\right]_{\\kappa}}\\cdots{\\left[a_{p}\\right]_{\\kappa}}}{{\\left[b_{1}\\right]_{\\kappa}}\\cdots{\\left[b_{q}\\right]_{\\kappa}}}Z_{\\kappa}\\left(\\mathbf{T}\\right). \\tag{35.8.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "35.8.2",
+                "latex": "{{}_{0}F_{0}}\\left({-\\atop-};\\mathbf{T}\\right)=\\operatorname{etr}\\left(\\mathbf{T}\\right), \\tag{35.8.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "35.8.3",
+                "latex": "{{}_{2}F_{1}}\\left({a,b\\atop b};\\mathbf{T}\\right)={{}_{1}F_{0}}\\left({a\\atop-};\\mathbf{T}\\right)=\\left|\\mathbf{I}-\\mathbf{T}\\right|^{-a}, \\tag{35.8.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "35.8.4",
+                "latex": "A_{\\nu}\\left(\\mathbf{T}\\right)=\\dfrac{1}{\\Gamma_{m}\\left(\\nu+\\frac{1}{2}(m+1)\\right)}{{}_{0}F_{1}}\\left({-\\atop\\nu+\\frac{1}{2}(m+1)};-\\mathbf{T}\\right), \\tag{35.8.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "35.8.5",
+                "latex": "{{}_{3}F_{2}}\\left({a_{1},a_{2},a_{3}\\atop b_{1},b_{2}};\\mathbf{I}\\right)=\\frac{\\Gamma_{m}\\left(b_{2}\\right)\\Gamma_{m}\\left(c\\right)}{\\Gamma_{m}\\left(b_{2}-a_{3}\\right)\\Gamma_{m}\\left(c+a_{3}\\right)}\\,{{}_{3}F_{2}}\\left({b_{1}-a_{1},b_{1}-a_{2},a_{3}\\atop b_{1},c+a_{3}};\\mathbf{I}\\right), \\tag{35.8.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "35.8.6",
+                "latex": "{{}_{3}F_{2}}\\left({a_{1},a_{2},a_{3}\\atop b_{1},b_{2}};\\mathbf{I}\\right)=\\frac{\\Gamma_{m}\\left(b_{1}-a_{1}\\right)\\Gamma_{m}\\left(b_{1}-a_{2}\\right)}{\\Gamma_{m}\\left(b_{1}\\right)\\Gamma_{m}\\left(b_{1}-a_{1}-a_{2}\\right)}\\,\\frac{\\Gamma_{m}\\left(b_{1}-a_{3}\\right)\\Gamma_{m}\\left(b_{1}-a_{1}-a_{2}-a_{3}\\right)}{\\Gamma_{m}\\left(b_{1}-a_{1}-a_{3}\\right)\\Gamma_{m}\\left(b_{1}-a_{2}-a_{3}\\right)}. \\tag{35.8.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "35.8.7",
+                "latex": "{{}_{3}F_{2}}\\left({a_{1},a_{2},a_{3}\\atop b_{1},b_{2}};\\mathbf{I}\\right)=\\frac{\\Gamma_{m}\\left(b_{1}\\right)\\Gamma_{m}\\left(b_{2}\\right)\\Gamma\\left(c\\right)}{\\Gamma_{m}\\left(a_{1}\\right)\\Gamma_{m}\\left(c+a_{2}\\right)\\Gamma\\left(c+a_{3}\\right)}\\,{{}_{3}F_{2}}\\left({b_{1}-a_{1},b_{2}-a_{2},c\\atop c+a_{2},c+a_{3}};\\mathbf{I}\\right), \\tag{35.8.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "35.8.8",
+                "latex": "{{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\boldsymbol{{0}}\\right)=1. \\tag{35.8.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "35.8.9",
+                "latex": "\\lim_{\\gamma\\to\\infty}{{}_{p+1}F_{q}}\\left({a_{1},\\dots,a_{p},\\gamma\\atop b_{1},\\dots,b_{q}};\\gamma^{-1}\\mathbf{T}\\right)={{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{T}\\right), \\tag{35.8.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "35.8.10",
+                "latex": "\\lim_{\\gamma\\to\\infty}{{}_{p}F_{q+1}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q},\\gamma};\\gamma\\mathbf{T}\\right)={{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{T}\\right). \\tag{35.8.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "35.8.11",
+                "latex": "{{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{H}\\mathbf{T}\\mathbf{H}^{-1}\\right)={{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{T}\\right), \\tag{35.8.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "35.8.12",
+                "latex": "{\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{T}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{\\gamma-\\frac{1}{2}(m+1)}\\,{{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};-\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}}=\\Gamma_{m}\\left(\\gamma\\right)\\left|\\mathbf{T}\\right|^{-\\gamma}{{}_{p+1}F_{q}}\\left({a_{1},\\dots,a_{p},\\gamma\\atop b_{1},\\dots,b_{q}};-\\mathbf{T}^{-1}\\right), \\tag{35.8.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "35.8.13",
+                "latex": "\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{I}}\\left|\\mathbf{X}\\right|^{a_{1}-\\frac{1}{2}(m+1)}{\\left|\\mathbf{I}-\\mathbf{X}\\right|}^{b_{1}-a_{1}-\\frac{1}{2}(m+1)}\\,{{}_{p}F_{q}}\\left({a_{2},\\dots,a_{p+1}\\atop b_{2},\\dots,b_{q+1}};\\mathbf{T}\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}=\\frac{1}{\\mathrm{B}_{m}\\left(b_{1}-a_{1},a_{1}\\right)}{{}_{p+1}F_{q+1}}\\left({a_{1},\\dots,a_{p+1}\\atop b_{1},\\dots,b_{q+1}};\\mathbf{T}\\right), \\tag{35.8.13}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "{{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{T}\\right)=\\sum_{k=0}^{\\infty}\\frac{1}{k!}\\sum_{|\\kappa|=k}\\frac{{\\left[a_{1}\\right]_{\\kappa}}\\cdots{\\left[a_{p}\\right]_{\\kappa}}}{{\\left[b_{1}\\right]_{\\kappa}}\\cdots{\\left[b_{q}\\right]_{\\kappa}}}Z_{\\kappa}\\left(\\mathbf{T}\\right). \\tag{35.8.1}",
+              "{{}_{0}F_{0}}\\left({-\\atop-};\\mathbf{T}\\right)=\\operatorname{etr}\\left(\\mathbf{T}\\right), \\tag{35.8.2}",
+              "{{}_{2}F_{1}}\\left({a,b\\atop b};\\mathbf{T}\\right)={{}_{1}F_{0}}\\left({a\\atop-};\\mathbf{T}\\right)=\\left|\\mathbf{I}-\\mathbf{T}\\right|^{-a}, \\tag{35.8.3}",
+              "A_{\\nu}\\left(\\mathbf{T}\\right)=\\dfrac{1}{\\Gamma_{m}\\left(\\nu+\\frac{1}{2}(m+1)\\right)}{{}_{0}F_{1}}\\left({-\\atop\\nu+\\frac{1}{2}(m+1)};-\\mathbf{T}\\right), \\tag{35.8.4}",
+              "{{}_{3}F_{2}}\\left({a_{1},a_{2},a_{3}\\atop b_{1},b_{2}};\\mathbf{I}\\right)=\\frac{\\Gamma_{m}\\left(b_{2}\\right)\\Gamma_{m}\\left(c\\right)}{\\Gamma_{m}\\left(b_{2}-a_{3}\\right)\\Gamma_{m}\\left(c+a_{3}\\right)}\\,{{}_{3}F_{2}}\\left({b_{1}-a_{1},b_{1}-a_{2},a_{3}\\atop b_{1},c+a_{3}};\\mathbf{I}\\right), \\tag{35.8.5}",
+              "{{}_{3}F_{2}}\\left({a_{1},a_{2},a_{3}\\atop b_{1},b_{2}};\\mathbf{I}\\right)=\\frac{\\Gamma_{m}\\left(b_{1}-a_{1}\\right)\\Gamma_{m}\\left(b_{1}-a_{2}\\right)}{\\Gamma_{m}\\left(b_{1}\\right)\\Gamma_{m}\\left(b_{1}-a_{1}-a_{2}\\right)}\\,\\frac{\\Gamma_{m}\\left(b_{1}-a_{3}\\right)\\Gamma_{m}\\left(b_{1}-a_{1}-a_{2}-a_{3}\\right)}{\\Gamma_{m}\\left(b_{1}-a_{1}-a_{3}\\right)\\Gamma_{m}\\left(b_{1}-a_{2}-a_{3}\\right)}. \\tag{35.8.6}",
+              "{{}_{3}F_{2}}\\left({a_{1},a_{2},a_{3}\\atop b_{1},b_{2}};\\mathbf{I}\\right)=\\frac{\\Gamma_{m}\\left(b_{1}\\right)\\Gamma_{m}\\left(b_{2}\\right)\\Gamma\\left(c\\right)}{\\Gamma_{m}\\left(a_{1}\\right)\\Gamma_{m}\\left(c+a_{2}\\right)\\Gamma\\left(c+a_{3}\\right)}\\,{{}_{3}F_{2}}\\left({b_{1}-a_{1},b_{2}-a_{2},c\\atop c+a_{2},c+a_{3}};\\mathbf{I}\\right), \\tag{35.8.7}",
+              "{{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\boldsymbol{{0}}\\right)=1. \\tag{35.8.8}",
+              "\\lim_{\\gamma\\to\\infty}{{}_{p+1}F_{q}}\\left({a_{1},\\dots,a_{p},\\gamma\\atop b_{1},\\dots,b_{q}};\\gamma^{-1}\\mathbf{T}\\right)={{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{T}\\right), \\tag{35.8.9}",
+              "\\lim_{\\gamma\\to\\infty}{{}_{p}F_{q+1}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q},\\gamma};\\gamma\\mathbf{T}\\right)={{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{T}\\right). \\tag{35.8.10}",
+              "{{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{H}\\mathbf{T}\\mathbf{H}^{-1}\\right)={{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};\\mathbf{T}\\right), \\tag{35.8.11}",
+              "{\\int_{\\boldsymbol{\\Omega}}\\operatorname{etr}\\left(-\\mathbf{T}\\mathbf{X}\\right)\\left|\\mathbf{X}\\right|^{\\gamma-\\frac{1}{2}(m+1)}\\,{{}_{p}F_{q}}\\left({a_{1},\\dots,a_{p}\\atop b_{1},\\dots,b_{q}};-\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}}=\\Gamma_{m}\\left(\\gamma\\right)\\left|\\mathbf{T}\\right|^{-\\gamma}{{}_{p+1}F_{q}}\\left({a_{1},\\dots,a_{p},\\gamma\\atop b_{1},\\dots,b_{q}};-\\mathbf{T}^{-1}\\right), \\tag{35.8.12}",
+              "\\int\\limits_{\\boldsymbol{{0}}<\\mathbf{X}<\\mathbf{I}}\\left|\\mathbf{X}\\right|^{a_{1}-\\frac{1}{2}(m+1)}{\\left|\\mathbf{I}-\\mathbf{X}\\right|}^{b_{1}-a_{1}-\\frac{1}{2}(m+1)}\\,{{}_{p}F_{q}}\\left({a_{2},\\dots,a_{p+1}\\atop b_{2},\\dots,b_{q+1}};\\mathbf{T}\\mathbf{X}\\right)\\,\\mathrm{d}{\\mathbf{X}}=\\frac{1}{\\mathrm{B}_{m}\\left(b_{1}-a_{1},a_{1}\\right)}{{}_{p+1}F_{q+1}}\\left({a_{1},\\dots,a_{p+1}\\atop b_{1},\\dots,b_{q+1}};\\mathbf{T}\\right), \\tag{35.8.13}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "generalized hypergeometric functions",
+                "of matrix argument",
+                "definition",
+                "expansion in zonal polynomials",
+                "convergence properties",
+                "relations to other functions",
+                "${{}_{3}F_{2}}$ case",
+                "Kummer transformation",
+                "Kummer’s transformations",
+                "for ${{}_{3}F_{2}}$ hypergeometric functions of matrix argument",
+                "${{}_{3}F_{2}}$ functions of matrix argument",
+                "Pfaff–Saalschütz formula",
+                "Thomae transformation",
+                "general properties",
+                "value at $\\mathbf{T}=\\boldsymbol{{0}}$",
+                "confluence",
+                "invariance",
+                "Laplace transform",
+                "Euler integral",
+                "Mellin–Barnes integrals"
+              ],
+              "referenciado_por": [
+                "§35.7(iii)"
+              ],
+              "notas_bibliograficas": [
+                "See Gross and Richards ([1987](./bib/G.html#bib996 \"Special functions of matrix argument. I. Algebraic induction, zonal polynomials, and hypergeometric functions\")), Faraut and Korányi ([1994](./bib/F.html#bib775 \"Analysis on Symmetric Cones\"), pp. 318–340). See also Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), James ([1964](./bib/J.html#bib1161 \"Distributions of matrix variates and latent roots derived from normal samples\")), Gross and Richards ([1991](./bib/G.html#bib997 \"Hypergeometric functions on complex matrix space\")), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 259–262).",
+                "See Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 259–262). See also James ([1964](./bib/J.html#bib1161 \"Distributions of matrix variates and latent roots derived from normal samples\")), Gross and Richards ([1987](./bib/G.html#bib996 \"Special functions of matrix argument. I. Algebraic induction, zonal polynomials, and hypergeometric functions\"), [1991](./bib/G.html#bib997 \"Hypergeometric functions on complex matrix space\")).",
+                "See Gross and Richards ([1991](./bib/G.html#bib997 \"Hypergeometric functions on complex matrix space\")), Macdonald ([1990](./bib/M.html#bib1517 \"Hypergeometric Functions\")).",
+                "See Herz ([1955](./bib/H.html#bib1074 \"Bessel functions of matrix argument\")), James ([1964](./bib/J.html#bib1161 \"Distributions of matrix variates and latent roots derived from normal samples\")), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), pp. 259–262), Gross and Richards ([1987](./bib/G.html#bib996 \"Special functions of matrix argument. I. Algebraic induction, zonal polynomials, and hypergeometric functions\"), [1991](./bib/G.html#bib997 \"Hypergeometric functions on complex matrix space\")), Ding et al. ([1996](./bib/D.html#bib669 \"Ramanujan’s master theorem for symmetric cones\")), Faraut and Korányi ([1994](./bib/F.html#bib775 \"Analysis on Symmetric Cones\"), pp. 318–340)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35",
+                "Annotations for §35.8 and Ch.35",
+                "Annotations for §35.8(i) , §35.8 and Ch.35",
+                "Annotations for §35.8(iii) , §35.8 and Ch.35",
+                "Annotations for §35.8(iv) , §35.8 and Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1987",
+                "archivo_destino": "bib/G.html#bib996",
+                "titulo_referencia": "Special functions of matrix argument. I. Algebraic induction, zonal polynomials, and hypergeometric functions"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/F.html#bib775",
+                "titulo_referencia": "Analysis on Symmetric Cones"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/J.html#bib1161",
+                "titulo_referencia": "Distributions of matrix variates and latent roots derived from normal samples"
+              },
+              {
+                "texto": "1991",
+                "archivo_destino": "bib/G.html#bib997",
+                "titulo_referencia": "Hypergeometric functions on complex matrix space"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/J.html#bib1161",
+                "titulo_referencia": "Distributions of matrix variates and latent roots derived from normal samples"
+              },
+              {
+                "texto": "1987",
+                "archivo_destino": "bib/G.html#bib996",
+                "titulo_referencia": "Special functions of matrix argument. I. Algebraic induction, zonal polynomials, and hypergeometric functions"
+              },
+              {
+                "texto": "1991",
+                "archivo_destino": "bib/G.html#bib997",
+                "titulo_referencia": "Hypergeometric functions on complex matrix space"
+              },
+              {
+                "texto": "1991",
+                "archivo_destino": "bib/G.html#bib997",
+                "titulo_referencia": "Hypergeometric functions on complex matrix space"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/M.html#bib1517",
+                "titulo_referencia": "Hypergeometric Functions"
+              },
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/H.html#bib1074",
+                "titulo_referencia": "Bessel functions of matrix argument"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/J.html#bib1161",
+                "titulo_referencia": "Distributions of matrix variates and latent roots derived from normal samples"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1987",
+                "archivo_destino": "bib/G.html#bib996",
+                "titulo_referencia": "Special functions of matrix argument. I. Algebraic induction, zonal polynomials, and hypergeometric functions"
+              },
+              {
+                "texto": "1991",
+                "archivo_destino": "bib/G.html#bib997",
+                "titulo_referencia": "Hypergeometric functions on complex matrix space"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/D.html#bib669",
+                "titulo_referencia": "Ramanujan’s master theorem for symmetric cones"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/F.html#bib775",
+                "titulo_referencia": "Analysis on Symmetric Cones"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/D.html#bib669",
+                "titulo_referencia": "Ramanujan’s master theorem for symmetric cones"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/F.html#bib775",
+                "titulo_referencia": "Analysis on Symmetric Cones"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/F.html#bib775",
+                "titulo_referencia": "Analysis on Symmetric Cones"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Applications",
+      "secciones": [
+        {
+          "seccion_id": "35.9",
+          "titulo_original": "Applications",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.9.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.9.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.9 Applications",
+            "prosa_teorica": "In multivariate statistical analysis based on the multivariate normal distribution, the probability density functions of many random matrices are expressible in terms of generalized hypergeometric functions of matrix argument ${{}_{p}F_{q}}$ , with $p\\leq 2$ and $q\\leq 1$ . See James ([1964](./bib/J.html#bib1161 \"Distributions of matrix variates and latent roots derived from normal samples\")), Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\")), Takemura ([1984](./bib/T.html#bib2200 \"Zonal Polynomials\")), Farrell ([1985](./bib/F.html#bib776 \"Multivariate Calculation. Use of the Continuous Groups\")), and Chikuse ([2003](./bib/C.html#bib492 \"Statistics on Special Manifolds\")) for extensive treatments.\nFor other statistical applications of ${{}_{p}F_{q}}$ functions of matrix argument see Perlman and Olkin ([1980](./bib/P.html#bib1866 \"Unbiasedness of invariant tests for MANOVA and other multivariate problems\")), Groeneboom and Truax ([2000](./bib/G.html#bib987 \"A monotonicity property of the power function of multivariate tests\")), Bhaumik and Sarkar ([2002](./bib/B.html#bib275 \"On the power function of the likelihood ratio test for MANOVA\")), Richards ([2004](./bib/R.html#bib1948 \"Total positivity properties of generalized hypergeometric functions of matrix argument\")) (monotonicity of power functions of multivariate statistical test criteria), Bingham et al. ([1992](./bib/B.html#bib285 \"Approximating the matrix Fisher and Bingham distributions: Applications to spherical regression and Procrustes analysis\")) (Procrustes analysis), and Phillips ([1986](./bib/P.html#bib1874 \"The exact distribution of the Wald statistic\")) (exact distributions of statistical test criteria). These references all use results related to the integral formulas ( 35.4.7 ) and ( 35.5.8 ).\nFor applications of the integral representation ( 35.5.3 ) see McFarland and Richards ([2001](./bib/M.html#bib1580 \"Exact misclassification probabilities for plug-in normal quadratic discriminant functions. I. The equal-means case\"), [2002](./bib/M.html#bib1581 \"Exact misclassification probabilities for plug-in normal quadratic discriminant functions. II. The heterogeneous case\")) (statistical estimation of misclassification probabilities for discriminating between multivariate normal populations). The asymptotic approximations of § 35.7(iv) are applied in numerous statistical contexts in Butler and Wood ([2002](./bib/B.html#bib393 \"Laplace approximations for hypergeometric functions with matrix argument\")).\nIn chemistry, Wei and Eichinger ([1993](./bib/W.html#bib2385 \"Asymptotic expansions of some matrix argument hypergeometric functions, with applications to macromolecules\")) expresses the probability density functions of macromolecules in terms of generalized hypergeometric functions of matrix argument, and develop asymptotic approximations for these density functions.\nIn the nascent area of applications of zonal polynomials to the limiting probability distributions of symmetric random matrices, one of the most comprehensive accounts is Rains ([1998](./bib/R.html#bib1920 \"Normal limit theorems for symmetric random matrices\")).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Bessel functions",
+                "Gaussian hypergeometric function",
+                "applications",
+                "functions of matrix argument",
+                "generalized hypergeometric functions",
+                "multivariate",
+                "of matrix argument",
+                "statistical analysis",
+                "statistical applications",
+                "zonal polynomials"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/J.html#bib1161",
+                "titulo_referencia": "Distributions of matrix variates and latent roots derived from normal samples"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              },
+              {
+                "texto": "1984",
+                "archivo_destino": "bib/T.html#bib2200",
+                "titulo_referencia": "Zonal Polynomials"
+              },
+              {
+                "texto": "1985",
+                "archivo_destino": "bib/F.html#bib776",
+                "titulo_referencia": "Multivariate Calculation. Use of the Continuous Groups"
+              },
+              {
+                "texto": "2003",
+                "archivo_destino": "bib/C.html#bib492",
+                "titulo_referencia": "Statistics on Special Manifolds"
+              },
+              {
+                "texto": "1980",
+                "archivo_destino": "bib/P.html#bib1866",
+                "titulo_referencia": "Unbiasedness of invariant tests for MANOVA and other multivariate problems"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/G.html#bib987",
+                "titulo_referencia": "A monotonicity property of the power function of multivariate tests"
+              },
+              {
+                "texto": "2002",
+                "archivo_destino": "bib/B.html#bib275",
+                "titulo_referencia": "On the power function of the likelihood ratio test for MANOVA"
+              },
+              {
+                "texto": "2004",
+                "archivo_destino": "bib/R.html#bib1948",
+                "titulo_referencia": "Total positivity properties of generalized hypergeometric functions of matrix argument"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/B.html#bib285",
+                "titulo_referencia": "Approximating the matrix Fisher and Bingham distributions: Applications to spherical regression and Procrustes analysis"
+              },
+              {
+                "texto": "1986",
+                "archivo_destino": "bib/P.html#bib1874",
+                "titulo_referencia": "The exact distribution of the Wald statistic"
+              },
+              {
+                "texto": "2001",
+                "archivo_destino": "bib/M.html#bib1580",
+                "titulo_referencia": "Exact misclassification probabilities for plug-in normal quadratic discriminant functions. I. The equal-means case"
+              },
+              {
+                "texto": "2002",
+                "archivo_destino": "bib/M.html#bib1581",
+                "titulo_referencia": "Exact misclassification probabilities for plug-in normal quadratic discriminant functions. II. The heterogeneous case"
+              },
+              {
+                "texto": "2002",
+                "archivo_destino": "bib/B.html#bib393",
+                "titulo_referencia": "Laplace approximations for hypergeometric functions with matrix argument"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/W.html#bib2385",
+                "titulo_referencia": "Asymptotic expansions of some matrix argument hypergeometric functions, with applications to macromolecules"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/R.html#bib1920",
+                "titulo_referencia": "Normal limit theorems for symmetric random matrices"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Computation",
+      "secciones": [
+        {
+          "seccion_id": "35.10",
+          "titulo_original": "Methods of Computation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.10.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.10.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.10 Methods of Computation",
+            "prosa_teorica": "For small values of $\\|\\mathbf{T}\\|$ the zonal polynomial expansion given by ( 35.8.1 ) can be summed numerically. For large $\\|\\mathbf{T}\\|$ the asymptotic approximations referred to in § 35.7(iv) are available.\nOther methods include numerical quadrature applied to double and multiple integral representations. See Yan ([1992](./bib/Y.html#bib2467 \"Generalized Hypergeometric Functions and Laguerre Polynomials in Two Variables\")) for the ${{}_{1}F_{1}}$ and ${{}_{2}F_{1}}$ functions of matrix argument in the case $m=2$ , and Bingham et al. ([1992](./bib/B.html#bib285 \"Approximating the matrix Fisher and Bingham distributions: Applications to spherical regression and Procrustes analysis\")) for Monte Carlo simulation on $\\mathbf{O}(m)$ applied to a generalization of the integral ( 35.5.8 ).\nKoev and Edelman ([2006](./bib/K.html#bib1306 \"The efficient evaluation of the hypergeometric function of a matrix argument\")) utilizes combinatorial identities for the zonal polynomials to develop computational algorithms for approximating the series expansion ( 35.8.1 ). These algorithms are extremely efficient, converge rapidly even for large values of $m$ , and have complexity linear in $m$ .",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Gaussian hypergeometric function",
+                "computation",
+                "confluent hypergeometric functions",
+                "generalized hypergeometric functions",
+                "of matrix argument"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/Y.html#bib2467",
+                "titulo_referencia": "Generalized Hypergeometric Functions and Laguerre Polynomials in Two Variables"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/B.html#bib285",
+                "titulo_referencia": "Approximating the matrix Fisher and Bingham distributions: Applications to spherical regression and Procrustes analysis"
+              },
+              {
+                "texto": "2006",
+                "archivo_destino": "bib/K.html#bib1306",
+                "titulo_referencia": "The efficient evaluation of the hypergeometric function of a matrix argument"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "35.11",
+          "titulo_original": "Tables",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.11.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.11.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.11 Tables",
+            "prosa_teorica": "Tables of zonal polynomials are given in James ([1964](./bib/J.html#bib1161 \"Distributions of matrix variates and latent roots derived from normal samples\")) for $|\\kappa|\\leq 6$ , Parkhurst and James ([1974](./bib/P.html#bib1849 \"Zonal Polynomials of Order 1 Through 12\")) for $|\\kappa|\\leq 12$ , and Muirhead ([1982](./bib/M.html#bib1667 \"Aspects of Multivariate Statistical Theory\"), p. 238) for $|\\kappa|\\leq 5$ . Each table expresses the zonal polynomials as linear combinations of monomial symmetric functions.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "tables",
+                "zonal polynomials"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/J.html#bib1161",
+                "titulo_referencia": "Distributions of matrix variates and latent roots derived from normal samples"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/P.html#bib1849",
+                "titulo_referencia": "Zonal Polynomials of Order 1 Through 12"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/M.html#bib1667",
+                "titulo_referencia": "Aspects of Multivariate Statistical Theory"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "35.12",
+          "titulo_original": "Software",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/35/35.12.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/35/35.12.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§35.12 Software",
+            "prosa_teorica": "In this section we provide links to the research literature describing the implementation of algorithms in software for the evaluation of functions described in this chapter. Citations in the bulleted list refer to papers for which research software has been made available and can be downloaded via the Web. References to research software that is available in other ways is listed separately.\n* Demmel and Koev ([2006](./bib/D.html#bib649 \"Accurate and efficient evaluation of Schur and Jack functions\")). Computation of zonal polynomials in MATLAB.\n* Koev and Edelman ([2006](./bib/K.html#bib1306 \"The efficient evaluation of the hypergeometric function of a matrix argument\")). Computation of hypergeometric functions of matrix argument in MATLAB.\n* Stembridge ([1995](./bib/S.html#bib2167 \"A Maple package for symmetric functions\")). Maple software for zonal polynomials.\nFor an algorithm to evaluate zonal polynomials, and an implementation of the algorithm in Maple by Zeilberger, see Lapointe and Vinet ([1996](./bib/L.html#bib1380 \"Exact operator solution of the Calogero-Sutherland model\")).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "referenciado_por": [
+                "§ ‣ Software Cross Index"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.35"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "2006",
+                "archivo_destino": "bib/D.html#bib649",
+                "titulo_referencia": "Accurate and efficient evaluation of Schur and Jack functions"
+              },
+              {
+                "texto": "2006",
+                "archivo_destino": "bib/K.html#bib1306",
+                "titulo_referencia": "The efficient evaluation of the hypergeometric function of a matrix argument"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/S.html#bib2167",
+                "titulo_referencia": "A Maple package for symmetric functions"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/L.html#bib1380",
+                "titulo_referencia": "Exact operator solution of the Calogero-Sutherland model"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "agradecimientos_capitulo": "With deep gratitude to Ingram Olkin for advice and support regarding the final version of this material.",
+  "referencias_capitulo": [
+    "*Profile* Donald St. P. Richards",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Associate Editors",
+    "Erratum (V1.0.19) for Chapter 35 Functions of Matrix Argument",
+    "Organization and Objective",
+    "§ ‣ Software Cross Index"
+  ],
+  "estado_extraccion": "completado",
+  "total_formulas_extraidas": 62,
+  "estado_metadatos": "verificado_y_refinado"
+}

@@ -1,0 +1,22 @@
+{
+    "title": "Ecuaciones, Inecuaciones y Sistemas Lineales",
+    "date": "2026-07-22",
+    "categories": [
+        "algebra",
+        "ecuaciones",
+        "desigualdades",
+        "sistemas lineales"
+    ],
+    "id": "msc12_ecuaciones_desigualdades",
+    "pilar": "02_estructuras_algebraicas",
+    "msc_code": "12D-05",
+    "tags": [
+        "algebra",
+        "ecuaciones",
+        "desigualdades",
+        "sistemas lineales"
+    ],
+    "nivel": "intro",
+    "updated": "2026-07-22",
+    "status": "stable"
+}

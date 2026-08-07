@@ -1,0 +1,102 @@
+---
+id: "33C20"
+title: "Hipergeometricas Generalizadas Meijer G"
+pilar: "03_analisis_continuidad"
+msc_code: "33C20, 33C60"
+difficulty: "abstracto"
+tags:
+  - 33C20
+  - 33C60
+---
+
+# Hipergeometricas Generalizadas Meijer G
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 16 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+{{}_{p}F_{q}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q}};z\right)=\sum_{k=0}^{\infty}\frac{{\left(a_{1}\right)_{k}}\cdots{\left(a_{p}\right)_{k}}}{{\left(b_{1}\right)_{k}}\cdots{\left(b_{q}\right)_{k}}}\frac{z^{k}}{k!}. \tag{16.2.1}
+$$
+
+$$
+\left(z\frac{\mathrm{d}}{\mathrm{d}z}z\right)^{n}=z^{n}\frac{{\mathrm{d}}^{n}}{{\mathrm{d}z}^{n}}z^{n}, \tag{16.3.5}
+$$
+
+$$
+\displaystyle D \displaystyle=\frac{\mathrm{d}}{\mathrm{d}z}, \tag{16.8.2}
+$$
+
+$$
+\displaystyle\vartheta \displaystyle=z\frac{\mathrm{d}}{\mathrm{d}z},
+$$
+
+$$
+\displaystyle w_{0}(z) \displaystyle={{}_{p}F_{q}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q}};z\right), \tag{16.8.6}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\gamma_{q}=(b_{1}+\dots+b_{q})-(a_{1}+\dots+a_{q+1}). \tag{16.2.2}
+$$
+
+$$
+{{}_{p+1}F_{q}}\left({-m,\mathbf{a}\atop\mathbf{b}};z\right)=\frac{{\left(\mathbf{a}\right)_{m}}(-z)^{m}}{{\left(\mathbf{b}\right)_{m}}}{{}_{q+1}F_{p}}\left({-m,1-m-\mathbf{b}\atop 1-m-\mathbf{a}};\frac{(-1)^{p+q}}{z}\right) \tag{16.2.3}
+$$
+
+$$
+\sum_{k=0}^{m}\frac{{\left(\mathbf{a}\right)_{k}}}{{\left(\mathbf{b}\right)_{k}}}\frac{z^{k}}{k!}=\frac{{\left(\mathbf{a}\right)_{m}}z^{m}}{{\left(\mathbf{b}\right)_{m}}m!}{{}_{q+2}F_{p}}\left({-m,1,1-m-\mathbf{b}\atop 1-m-\mathbf{a}};\frac{(-1)^{p+q+1}}{z}\right). \tag{16.2.4}
+$$
+
+$$
+{{}_{p}{\mathbf{F}}_{q}}\left(\mathbf{a};\mathbf{b};z\right)=\frac{{{}_{p}F_{q}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q}};z\right)}{\left(\Gamma\left(b_{1}\right)\cdots\Gamma\left(b_{q}\right)\right)}=\sum_{k=0}^{\infty}\frac{{\left(a_{1}\right)_{k}}\cdots{\left(a_{p}\right)_{k}}}{\Gamma\left(b_{1}+k\right)\cdots\Gamma\left(b_{q}+k\right)}\frac{z^{k}}{k!}; \tag{16.2.5}
+$$
+
+$$
+\frac{{\mathrm{d}}^{n}}{{\mathrm{d}z}^{n}}{{}_{p}F_{q}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q}};z\right)=\frac{{\left(\mathbf{a}\right)_{n}}}{{\left(\mathbf{b}\right)_{n}}}{{}_{p}F_{q}}\left({a_{1}+n,\dots,a_{p}+n\atop b_{1}+n,\dots,b_{q}+n};z\right), \tag{16.3.1}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\lim_{|\alpha|\to\infty}{{}_{p+1}F_{q}}\left({a_{1},\dots,a_{p},\alpha\atop b_{1},\dots,b_{q}};\frac{z}{\alpha}\right)={{}_{p}F_{q}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q}};z\right). \tag{16.8.10}
+$$
+
+$$
+\lim_{|\beta|\to\infty}{{}_{p}F_{q+1}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q},\beta};\beta z\right)={{}_{p}F_{q}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q}};z\right), \tag{16.8.11}
+$$
+
+$$
+\left({\textstyle\frac{\prod\limits_{\ell=1}^{q}\Gamma\left(a_{\ell}\right)}{\prod\limits_{\ell=1}^{q}\Gamma\left(b_{\ell}\right)}}\right){{}_{q}F_{q}}\left({a_{1},\dots,a_{q}\atop b_{1},\dots,b_{q}};z\right)\sim H_{q,q}(z{\mathrm{e}}^{\mp\pi\mathrm{i}})+E_{q,q}(z). \tag{16.11.7}
+$$
+
+$$
+\left({\textstyle\frac{\prod\limits_{\ell=1}^{q-1}\Gamma\left(a_{\ell}\right)}{\prod\limits_{\ell=1}^{q}\Gamma\left(b_{\ell}\right)}}\right){{}_{q-1}F_{q}}\left({a_{1},\dots,a_{q-1}\atop b_{1},\dots,b_{q}};-z\right)\sim H_{q-1,q}(z)+E_{q-1,q}(ze^{-\pi\mathrm{i}})+E_{q-1,q}(ze^{\pi\mathrm{i}}), \tag{16.11.8}
+$$
+
+$$
+\left({\textstyle\frac{\prod\limits_{\ell=1}^{p}\Gamma\left(a_{\ell}\right)}{\prod\limits_{\ell=1}^{q}\Gamma\left(b_{\ell}\right)}}\right){{}_{p}F_{q}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q}};-z\right)\sim E_{p,q}(ze^{-\pi\mathrm{i}})+E_{p,q}(ze^{\pi\mathrm{i}}), \tag{16.11.9}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

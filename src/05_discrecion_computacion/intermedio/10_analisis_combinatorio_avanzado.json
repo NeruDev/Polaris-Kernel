@@ -1,0 +1,9 @@
+{
+  "id": "05A15",
+  "title": "Analisis Combinatorio Avanzado",
+  "pilar": "05_discrecion_computacion",
+  "msc_code": "05A15, 05A19",
+  "difficulty": "intermedio",
+  "source_dlmf_chapter": 26,
+  "status": "volcado_estructural_completado"
+}

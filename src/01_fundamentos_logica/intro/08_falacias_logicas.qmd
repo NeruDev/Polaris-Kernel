@@ -1,0 +1,51 @@
+---
+title: "Falacias Lógicas y Errores de Argumentación"
+date: "2026-07-22"
+categories: ["logica", "falacias", "argumentacion", "razonamiento"]
+id: "msc03_falacias_logicas"
+---
+
+## Concepto Intuitivo
+
+Una falacia lógica es un defecto o error oculto en la estructura de un razonamiento deductivo o inductivo.
+A diferencia de un error factual, que ocurre cuando partimos de premisas falsas, una falacia formal se produce cuando el esqueleto lógico de nuestro argumento es inválido, independientemente de la veracidad de las premisas.
+Identificar falacias es crucial en matemáticas para evitar "demostraciones" inválidas que aparentan ser correctas.
+En el lenguaje formal, las falacias suelen presentarse como tautologías invertidas o implicaciones bidireccionales falsas que el cerebro humano procesa erróneamente por hábito o intuición.
+
+## Afirmación del Consecuente
+
+Una de las falacias formales más comunes en las demostraciones matemáticas tempranas es la "Afirmación del Consecuente".
+Se comete cuando se asume que la implicación condicional es conmutativa o bidireccional sin serlo.
+La estructura válida de un modus ponens dicta que si $P \implies Q$ es cierto, y $P$ es cierto, entonces $Q$ es cierto innegablemente.
+Sin embargo, la falacia ocurre cuando se invierte la lógica: asumiendo $P \implies Q$ y luego observando que $Q$ es cierto, se concluye falsamente que $P$ debe ser cierto.
+
+$$
+\text{Falacia:} \quad ((P \implies Q) \land Q) \implies P
+$$
+
+Esta estructura deductiva es inválida porque $Q$ puede ser provocado por una miríada de causas adicionales ajenas a $P$.
+
+![](falacias_logicas.svg)
+
+## Negación del Antecedente
+
+Otra falacia hermana de la anterior es la "Negación del Antecedente".
+Este error lógico asume que si la condición inicial no se cumple, entonces el resultado final es estrictamente imposible.
+Su estructura se presenta al aceptar $P \implies Q$, y dada la negación $\neg P$, concluir erróneamente $\neg Q$.
+
+$$
+\text{Falacia:} \quad ((P \implies Q) \land \neg P) \implies \neg Q
+$$
+
+En el universo matemático, una precondición fallida no anula la posibilidad de que la conclusión se cumpla a través de otras rutas o teoremas.
+Solo una estructura bicondicional ($P \iff Q$) permitiría afirmar con certeza absoluta que la ausencia de $P$ garantiza la ausencia de $Q$.
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| :--- | :--- | :--- |
+| $P$ | Antecedente o premisa hipotética de una implicación lógica. | Proposición booleana |
+| $Q$ | Consecuente o conclusión esperada tras el antecedente. | Proposición booleana |
+| $\implies$ | Operador de implicación lógica (si... entonces). | Operador relacional |
+| $\land$ | Operador lógico de conjunción (AND). | Operador binario |
+| $\neg$ | Operador lógico de negación (NOT). | Operador unario |

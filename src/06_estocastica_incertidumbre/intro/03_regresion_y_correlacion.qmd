@@ -1,0 +1,58 @@
+---
+title: "Regresión Lineal Simple y Correlación de Pearson"
+subtitle: "Modelado de Relaciones Lineales entre Variables"
+date: "2026-07-22"
+categories: ["estadística", "regresión", "correlación", "modelado"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Regresión Lineal Simple y Correlación de Pearson
+
+## Introducción
+
+En el análisis de datos, con frecuencia buscamos determinar si existe una relación sistemática entre dos variables cuantitativas.
+La regresión lineal simple y el coeficiente de correlación de Pearson son las herramientas estadísticas fundamentales para este propósito.
+Mientras que la correlación cuantifica la fuerza y dirección de la relación lineal, la regresión construye un modelo predictivo explícito.
+Estas técnicas asumen una dependencia lineal subyacente y son muy sensibles a la presencia de valores atípicos (outliers).
+
+## Coeficiente de Correlación de Pearson
+
+El coeficiente de correlación $r$ mide el grado de asociación lineal entre dos variables, $X$ e $Y$.
+Su valor oscila siempre entre $-1$ y $1$, donde $1$ indica una relación lineal positiva perfecta, $-1$ una negativa perfecta y $0$ la ausencia de relación lineal.
+Se calcula como el cociente entre la covarianza de las variables y el producto de sus desviaciones estándar.
+Es crucial recordar el adagio estadístico: "correlación no implica causalidad"; $r$ solo detecta covariación, no dirección causal.
+
+## Modelo de Regresión Lineal Simple
+
+La regresión lineal busca ajustar una línea recta a un conjunto de datos bivariados que mejor represente la tendencia general.
+La ecuación del modelo es $\hat{y} = \beta_0 + \beta_1 x$, donde $\hat{y}$ es el valor predicho, $\beta_0$ es el intercepto y $\beta_1$ es la pendiente.
+El método más utilizado para estimar los coeficientes $\beta_0$ y $\beta_1$ es el de Mínimos Cuadrados Ordinarios (OLS, por sus siglas en inglés).
+Este método minimiza la suma de los cuadrados de los residuos, es decir, las diferencias verticales entre los valores observados y los valores predichos por la línea.
+
+## Evaluación del Modelo
+
+Para medir la bondad de ajuste de la recta de regresión, se utiliza el coeficiente de determinación $R^2$.
+En el contexto de la regresión lineal simple, $R^2$ es exactamente el cuadrado del coeficiente de correlación de Pearson ($r^2$).
+Representa la proporción de la varianza en la variable dependiente $Y$ que es predecible a partir de la variable independiente $X$.
+Un $R^2$ cercano a $1$ indica que el modelo explica casi toda la variabilidad de los datos.
+
+## Representación Visual
+
+El diagrama de dispersión es la herramienta visual primaria para evaluar relaciones bivariadas antes e incorporar el ajuste lineal.
+
+![Diagrama de dispersión y recta de regresión](regresion_y_correlacion.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $X, Y$ | Variables independiente y dependiente | variable |
+| $r$ | Coeficiente de correlación de Pearson | escalar |
+| $\hat{y}$ | Valor predicho por el modelo de regresión | escalar |
+| $\beta_0$ | Intercepto de la recta de regresión | parámetro |
+| $\beta_1$ | Pendiente de la recta de regresión | parámetro |
+| $R^2$ | Coeficiente de determinación | escalar |

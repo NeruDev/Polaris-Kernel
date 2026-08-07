@@ -1,0 +1,83 @@
+---
+id: "14K25"
+title: "Funciones Theta Multidimensionales"
+pilar: "03_analisis_continuidad"
+msc_code: "14K25, 32G20"
+difficulty: "abstracto"
+tags:
+  - 14K25
+  - 32G20
+---
+
+# Funciones Theta Multidimensionales
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 21 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\theta\genfrac{[}{]}{0.0pt}{}{\boldsymbol{{0}}}{\boldsymbol{{0}}}\left(\mathbf{z}\middle|\boldsymbol{{\Omega}}\right)=\theta\left(\mathbf{z}\middle|\boldsymbol{{\Omega}}\right). \tag{21.2.7}
+$$
+
+$$
+\theta\left(z\middle|\Omega\right)=\theta_{3}\left(\pi z\middle|\Omega\right), \tag{21.2.8}
+$$
+
+$$
+\displaystyle\theta_{2}\left(\pi z\middle|\Omega\right) \displaystyle=\theta\genfrac{[}{]}{0.0pt}{}{\tfrac{1}{2}}{0}\left(z\middle|\Omega\right), \tag{21.2.10}
+$$
+
+$$
+\displaystyle\theta_{3}\left(\pi z\middle|\Omega\right) \displaystyle=\theta\genfrac{[}{]}{0.0pt}{}{0}{0}\left(z\middle|\Omega\right), \tag{21.2.11}
+$$
+
+$$
+\displaystyle\theta_{4}\left(\pi z\middle|\Omega\right) \displaystyle=\theta\genfrac{[}{]}{0.0pt}{}{0}{\tfrac{1}{2}}\left(z\middle|\Omega\right). \tag{21.2.12}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\theta\left(\mathbf{z}\middle|\boldsymbol{{\Omega}}\right)=\sum_{\mathbf{n}\in{\mathbb{Z}}^{g}}e^{2\pi i\left(\frac{1}{2}\mathbf{n}\cdot\boldsymbol{{\Omega}}\cdot\mathbf{n}+\mathbf{n}\cdot\mathbf{z}\right)}. \tag{21.2.1}
+$$
+
+$$
+\hat{\theta}\left(\mathbf{z}\middle|\boldsymbol{{\Omega}}\right)=e^{-\pi[\Im\mathbf{z}]\cdot[\Im\boldsymbol{{\Omega}}]^{-1}\cdot[\Im\mathbf{z}]}\theta\left(\mathbf{z}\middle|\boldsymbol{{\Omega}}\right). \tag{21.2.2}
+$$
+
+$$
+\theta\left(z_{1},z_{2}\middle|\begin{bmatrix}i&-\tfrac{1}{2}\\
+-\tfrac{1}{2}&i\end{bmatrix}\right)=\sum_{n_{1}=-\infty}^{\infty}\sum_{n_{2}=-\infty}^{\infty}e^{-\pi(n_{1}^{2}+n_{2}^{2})}e^{-i\pi n_{1}n_{2}}e^{2\pi i(n_{1}z_{1}+n_{2}z_{2})}. \tag{21.2.3}
+$$
+
+$$
+\hat{\theta}\left(x_{1}+iy_{1},x_{2}+iy_{2}\middle|\begin{bmatrix}i&-\tfrac{1}{2}\\
+-\tfrac{1}{2}&i\end{bmatrix}\right)=\sum_{n_{1}=-\infty}^{\infty}\sum_{n_{2}=-\infty}^{\infty}e^{-\pi(n_{1}+y_{1})^{2}-\pi(n_{2}+y_{2})^{2}}\,e^{\pi i(2n_{1}x_{1}+2n_{2}x_{2}-n_{1}n_{2})}. \tag{21.2.4}
+$$
+
+$$
+\theta\genfrac{[}{]}{0.0pt}{}{\boldsymbol{{\alpha}}}{\boldsymbol{{\beta}}}\left(\mathbf{z}\middle|\boldsymbol{{\Omega}}\right)=\sum_{\mathbf{n}\in{\mathbb{Z}}^{g}}e^{2\pi i\left(\frac{1}{2}[\mathbf{n}+\boldsymbol{{\alpha}}]\cdot\boldsymbol{{\Omega}}\cdot[\mathbf{n}+\boldsymbol{{\alpha}}]+[\mathbf{n}+\boldsymbol{{\alpha}}]\cdot[\mathbf{z}+\boldsymbol{{\beta}}]\right)}. \tag{21.2.5}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+El comportamiento límite se rige por las propiedades analíticas en la esfera de Riemann.
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

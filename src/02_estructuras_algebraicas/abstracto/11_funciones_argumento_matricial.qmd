@@ -1,0 +1,103 @@
+---
+id: "15A15"
+title: "Funciones Argumento Matricial"
+pilar: "02_estructuras_algebraicas"
+msc_code: "15A15, 33C99"
+difficulty: "abstracto"
+tags:
+  - 15A15
+  - 33C99
+---
+
+# Funciones Argumento Matricial
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 35 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\Gamma_{m}\left(a,\dots,a\right)=\Gamma_{m}\left(a\right). \tag{35.3.6}
+$$
+
+$$
+Z_{\kappa}\left(\boldsymbol{{0}}\right)=\begin{cases}1,&\kappa=(0,\dots,0),\\
+0,&\kappa\neq(0,\dots,0).\end{cases} \tag{35.4.4}
+$$
+
+$$
+\sum_{|\kappa|=k}Z_{\kappa}\left(\mathbf{T}\right)=(\operatorname{tr}{\mathbf{T}})^{k}. \tag{35.4.6}
+$$
+
+$$
+{{}_{1}F_{1}}\left({a\atop b};\mathbf{T}\right)=\sum_{k=0}^{\infty}\frac{1}{k!}\sum_{|\kappa|=k}\frac{{\left[a\right]_{\kappa}}}{{\left[b\right]_{\kappa}}}Z_{\kappa}\left(\mathbf{T}\right). \tag{35.6.1}
+$$
+
+$$
+{{{}_{2}F_{1}}\left({a,b\atop c};\mathbf{T}\right)=\sum_{k=0}^{\infty}\frac{1}{k!}\sum_{|\kappa|=k}\frac{{\left[a\right]_{\kappa}}{\left[b\right]_{\kappa}}}{{\left[c\right]_{\kappa}}}Z_{\kappa}\left(\mathbf{T}\right)}, \tag{35.7.1}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+g(\mathbf{Z})=\int_{\boldsymbol{\Omega}}\operatorname{etr}\left(-\mathbf{Z}\mathbf{X}\right)f(\mathbf{X})\,\mathrm{d}{\mathbf{X}}, \tag{35.2.1}
+$$
+
+$$
+f(\mathbf{X})=\dfrac{1}{(2\pi\mathrm{i})^{m(m+1)/2}}\int\operatorname{etr}\left(\mathbf{Z}\mathbf{X}\right)g(\mathbf{Z})\,\mathrm{d}{\mathbf{Z}}, \tag{35.2.2}
+$$
+
+$$
+f_{1}*f_{2}(\mathbf{T})=\int\limits_{\boldsymbol{{0}}<\mathbf{X}<\mathbf{T}}f_{1}(\mathbf{T}-\mathbf{X})f_{2}(\mathbf{X})\,\mathrm{d}{\mathbf{X}}. \tag{35.2.3}
+$$
+
+$$
+\Gamma_{m}\left(a\right)=\int_{\boldsymbol{\Omega}}\operatorname{etr}\left(-\mathbf{X}\right)\left|\mathbf{X}\right|^{a-\frac{1}{2}(m+1)}\,\mathrm{d}{\mathbf{X}}, \tag{35.3.1}
+$$
+
+$$
+\Gamma_{m}\left(s_{1},\dots,s_{m}\right)=\int_{\boldsymbol{\Omega}}\operatorname{etr}\left(-\mathbf{X}\right)\left|\mathbf{X}\right|^{s_{m}-\frac{1}{2}(m+1)}\prod_{j=1}^{m-1}|(\mathbf{X})_{j}|^{s_{j}-s_{j+1}}\,\mathrm{d}{\mathbf{X}}, \tag{35.3.2}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\lim_{a\to\infty}{{}_{1}F_{1}}\left({a\atop\nu+\frac{1}{2}(m+1)};-a^{-1}\mathbf{T}\right)=\frac{A_{\nu}\left(\mathbf{T}\right)}{A_{\nu}\left(\boldsymbol{{0}}\right)}. \tag{35.6.9}
+$$
+
+$$
+\lim_{a\to\infty}\Gamma_{m}\left(a\right)\Psi\left(a+\nu;\nu+\tfrac{1}{2}(m+1);a^{-1}\mathbf{T}\right)=B_{\nu}\left(\mathbf{T}\right). \tag{35.6.10}
+$$
+
+$$
+\lim_{c\to\infty}{{}_{2}F_{1}}\left({a,b\atop c};\mathbf{I}-c\mathbf{T}^{-1}\right)=\left|\mathbf{T}\right|^{b}\Psi\left(b;b-a+\tfrac{1}{2}(m+1);\mathbf{T}\right). \tag{35.7.4}
+$$
+
+$$
+\lim_{\gamma\to\infty}{{}_{p+1}F_{q}}\left({a_{1},\dots,a_{p},\gamma\atop b_{1},\dots,b_{q}};\gamma^{-1}\mathbf{T}\right)={{}_{p}F_{q}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q}};\mathbf{T}\right), \tag{35.8.9}
+$$
+
+$$
+\lim_{\gamma\to\infty}{{}_{p}F_{q+1}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q},\gamma};\gamma\mathbf{T}\right)={{}_{p}F_{q}}\left({a_{1},\dots,a_{p}\atop b_{1},\dots,b_{q}};\mathbf{T}\right). \tag{35.8.10}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

@@ -1,0 +1,73 @@
+---
+# --- Metadatos Estándar de Quarto ---
+title: "Funciones e Inyectividad, Sobreyectividad y Biyectividad"
+date: "2026-07-22"
+categories: [funciones, mapeos, conjuntos, inyectividad, biyectividad]
+
+# --- Metadatos Estructurales (Polaris Kernel) ---
+id: msc03_funciones_mapeos
+pilar: "01_fundamentos_logica"
+msc_code: "03E-05"
+tags: [funciones, mapeos, conjuntos, inyectividad, biyectividad]
+nivel: intro
+updated: "2026-07-22"
+status: "stable"
+---
+
+# Funciones y Mapeos
+
+Una función es una relación fundamental entre dos conjuntos que asigna a cada elemento del primer conjunto exactamente un elemento del segundo conjunto.
+Este concepto es la base para modelar transformaciones, dependencias y procesos dinámicos en todas las ramas de las matemáticas.
+Formalmente, una función $f$ de un conjunto $A$ a un conjunto $B$ se denota como $f: A \to B$.
+
+## Dominio, Codominio e Imagen
+
+Para comprender plenamente el comportamiento de una función, es necesario definir de forma rigurosa los conjuntos sobre los que opera.
+El **dominio** (o conjunto de partida) es el conjunto $A$ que contiene todos los valores de entrada válidos para la función.
+El **codominio** (o conjunto de llegada) es el conjunto $B$ que contiene todos los posibles valores de salida, independientemente de si la función los alcanza todos o no.
+La **imagen** (o rango) es el subconjunto estricto del codominio formado exclusivamente por los valores que la función realmente adopta.
+En notación conjuntista, la imagen de $f$ se define como:
+$$
+\text{Im}(f) = \{ y \in B \mid \exists x \in A \text{ tal que } f(x) = y \}
+$$
+Esta distinción entre codominio e imagen es crucial en el análisis matemático para determinar las propiedades estructurales del mapeo.
+
+## Clasificación de Funciones
+
+Las funciones se clasifican según cómo mapean los elementos de su dominio a su codominio.
+Estas clasificaciones determinan si una función es reversible y preserva la dimensionalidad o el cardinal de los conjuntos.
+
+### Funciones Inyectivas (Uno a Uno)
+Una función es inyectiva si nunca asigna el mismo valor de salida a dos valores de entrada distintos.
+De forma equivalente, cada elemento de la imagen es apuntado por un único elemento del dominio.
+Matemáticamente, $f: A \to B$ es inyectiva si para todo $x_1, x_2 \in A$:
+$$
+f(x_1) = f(x_2) \implies x_1 = x_2
+$$
+
+### Funciones Sobreyectivas (Sobre)
+Una función es sobreyectiva si su imagen es exactamente igual a su codominio.
+Esto significa que no queda ningún elemento en el conjunto de llegada sin ser el resultado de aplicar la función a algún elemento del dominio.
+Formalmente, $f$ es sobreyectiva si para todo $y \in B$, existe al menos un $x \in A$ tal que $f(x) = y$.
+
+### Funciones Biyectivas
+Una función es biyectiva si es simultáneamente inyectiva y sobreyectiva.
+Las biyecciones establecen un emparejamiento perfecto (correspondencia uno a uno) entre los elementos del dominio y del codominio.
+Si existe una biyección entre dos conjuntos finitos, ambos conjuntos deben tener exactamente la misma cantidad de elementos.
+Solamente las funciones biyectivas poseen una función inversa bien definida $f^{-1}: B \to A$.
+
+## Representación Visual de Mapeos
+
+![Diagrama ilustrativo de los tres tipos de mapeos fundamentales entre conjuntos finitos](funciones_y_mapeos.svg)
+
+## Glosario de variables
+
+| Símbolo | Nombre | Tipo |
+| --- | --- | --- |
+| $A$ | Dominio de la función | conjunto |
+| $B$ | Codominio de la función | conjunto |
+| $f$ | Función o mapeo | operador relacional |
+| $x$ | Elemento del dominio | variable |
+| $y$ | Elemento del codominio | variable |
+| $\text{Im}(f)$ | Imagen de la función | conjunto |
+| $f^{-1}$ | Función inversa | operador relacional |

@@ -1,0 +1,9 @@
+{
+  "id": "11B68",
+  "title": "Polinomios Bernoulli Euler",
+  "pilar": "02_estructuras_algebraicas",
+  "msc_code": "11B68, 33E20",
+  "difficulty": "intermedio",
+  "source_dlmf_chapter": 24,
+  "status": "volcado_estructural_completado"
+}

@@ -1,0 +1,56 @@
+---
+title: "Variables Aleatorias y Distribuciones Estándar"
+subtitle: "Modelado Matemático de la Incertidumbre"
+date: "2026-07-22"
+categories: ["probabilidad", "variables aleatorias", "distribuciones", "estadística"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Variables Aleatorias y Distribuciones Estándar
+
+## Introducción
+
+Una variable aleatoria es una función que asocia un número real a cada resultado de un espacio muestral.
+Es el puente fundamental entre los eventos abstractos de probabilidad y el análisis matemático.
+Su comportamiento se describe mediante distribuciones de probabilidad, que especifican qué tan probable es observar cada valor o rango de valores posibles.
+Existen dos tipos principales: discretas (valores contables) y continuas (valores en un intervalo continuo).
+
+## Distribuciones Discretas
+
+Las variables aleatorias discretas se caracterizan por su Función de Masa de Probabilidad (FMP), denotada $P(X=x)$.
+La distribución Binomial modela el número de éxitos en $n$ ensayos independientes de Bernoulli, cada uno con probabilidad de éxito $p$.
+Otra distribución vital es la de Poisson, que describe la probabilidad de un número dado de eventos que ocurren en un intervalo de tiempo o espacio fijo.
+Ambas distribuciones son fundamentales en el control de calidad, colas de espera y análisis de fallos.
+
+## Distribuciones Continuas
+
+Para las variables continuas, utilizamos la Función de Densidad de Probabilidad (FDP), donde la probabilidad de un punto exacto es cero, pero la probabilidad en un intervalo se halla integrando la FDP.
+La distribución Normal o Gaussiana es la más ubicua en la naturaleza y la estadística, caracterizada por su forma de campana definida por su media $\mu$ y varianza $\sigma^2$.
+Otras distribuciones continuas incluyen la Uniforme (donde todos los subintervalos de igual longitud son equiprobables) y la Exponencial (utilizada para modelar tiempos de espera entre eventos de Poisson).
+
+## Función de Distribución Acumulada
+
+Tanto para variables discretas como continuas, la Función de Distribución Acumulada (FDA), $F(x) = P(X \leq x)$, unifica el concepto de probabilidad acumulada.
+La FDA es siempre no decreciente, acotada entre $0$ y $1$, y continua por la derecha.
+Para las variables continuas, la FDP es simplemente la derivada de la FDA, facilitando el paso del cálculo de áreas a la evaluación de densidades puntuales.
+
+## Representación Visual
+
+El siguiente gráfico ilustra una distribución Normal estándar, resaltando el área bajo la curva que representa la probabilidad acumulada.
+
+![Distribución Normal y Probabilidad](distribuciones_probabilidad.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $X$ | Variable aleatoria (discreta o continua) | variable |
+| $x$ | Valor específico de la variable aleatoria $X$ | escalar |
+| $P(X=x)$ | Función de masa de probabilidad (discreta) | función |
+| $f(x)$ | Función de densidad de probabilidad (continua) | función |
+| $F(x)$ | Función de distribución acumulada | función |
+| $\mu, \sigma$ | Media y desviación estándar | parámetro |

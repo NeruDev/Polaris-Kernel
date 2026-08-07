@@ -1,0 +1,2644 @@
+{
+  "capitulo": 11,
+  "titulo_original": "Struve and Related Functions",
+  "archivo_metadata": "metadata/DLMF_data/11_Struve_and_Related_Functions.json",
+  "rutas_docs": {
+    "docs_original": "docs/DLMF-markdown-main/markdown/11/11.md",
+    "docs_directorio_original": "docs/DLMF-markdown-main/markdown/11/",
+    "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.md"
+  },
+  "total_categorias": 5,
+  "total_secciones": 16,
+  "categorias": [
+    {
+      "categoria": "Notation",
+      "secciones": [
+        {
+          "seccion_id": "11.1",
+          "titulo_original": "Special Notation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.1.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.1.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.1 Special Notation",
+            "prosa_teorica": "(For other notation see Notation for the Special Functions .)\n*Unless indicated otherwise* , primes denote derivatives with respect to the argument. For the functions $J_{\\nu}\\left(z\\right)$ , $Y_{\\nu}\\left(z\\right)$ , ${H^{(1)}_{\\nu}}\\left(z\\right)$ , ${H^{(2)}_{\\nu}}\\left(z\\right)$ , $I_{\\nu}\\left(z\\right)$ , and $K_{\\nu}\\left(z\\right)$ see §§ 10.2(ii) , 10.25(ii) .\nThe functions treated in this chapter are the Struve functions $\\mathbf{H}_{\\nu}\\left(z\\right)$ and $\\mathbf{K}_{\\nu}\\left(z\\right)$ , the modified Struve functions $\\mathbf{L}_{\\nu}\\left(z\\right)$ and $\\mathbf{M}_{\\nu}\\left(z\\right)$ , the Lommel functions $s_{{\\mu},{\\nu}}\\left(z\\right)$ and $S_{{\\mu},{\\nu}}\\left(z\\right)$ , the Anger function $\\mathbf{J}_{\\nu}\\left(z\\right)$ , the Weber function $\\mathbf{E}_{\\nu}\\left(z\\right)$ , and the associated Anger–Weber function $\\mathbf{A}_{\\nu}\\left(z\\right)$ .",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Anger–Weber functions",
+                "Lommel functions",
+                "Struve functions and modified Struve functions",
+                "notation",
+                "order"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "tablas": [
+              {
+                "encabezados": [
+                  "$x$",
+                  "real variable."
+                ],
+                "filas": [
+                  {
+                    "$x$": "$z$",
+                    "real variable.": "complex variable."
+                  },
+                  {
+                    "$x$": "$\\nu$",
+                    "real variable.": "real or complex order."
+                  },
+                  {
+                    "$x$": "$n$",
+                    "real variable.": "integer order."
+                  },
+                  {
+                    "$x$": "$k$",
+                    "real variable.": "nonnegative integer."
+                  },
+                  {
+                    "$x$": "$\\delta$",
+                    "real variable.": "arbitrary small positive constant."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Struve and Modified Struve Functions",
+      "secciones": [
+        {
+          "seccion_id": "11.2",
+          "titulo_original": "Definitions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.2.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.2.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.2 Definitions",
+            "prosa_teorica": "Principal values correspond to principal values of $(\\tfrac{1}{2}z)^{\\nu+1}$ ; compare § 4.2(i) .\nThe expansions ( 11.2.1 ) and ( 11.2.2 ) are absolutely convergent for all finite values of $z$ . The functions $z^{-\\nu-1}\\mathbf{H}_{\\nu}\\left(z\\right)$ and $z^{-\\nu-1}\\mathbf{L}_{\\nu}\\left(z\\right)$ are entire functions of $z$ and $\\nu$ .\nPrincipal values of $\\mathbf{K}_{\\nu}\\left(z\\right)$ and $\\mathbf{M}_{\\nu}\\left(z\\right)$ correspond to principal values of the functions on the right-hand sides of ( 11.2.5 ) and ( 11.2.6 ).\n*Unless indicated otherwise* , $\\mathbf{H}_{\\nu}\\left(z\\right)$ , $\\mathbf{K}_{\\nu}\\left(z\\right)$ , $\\mathbf{L}_{\\nu}\\left(z\\right)$ , and $\\mathbf{M}_{\\nu}\\left(z\\right)$ assume their principal values throughout the DLMF.\nParticular solutions:\nParticular solutions:\nIn this subsection $A$ and $B$ are arbitrary constants.\nWhen $z=x$ , $0<x<\\infty$ , and $\\Re\\nu\\geq 0$ , numerically satisfactory general solutions of ( 11.2.7 ) are given by\n( 11.2.11 ) applies when $x$ is bounded, and ( 11.2.12 ) applies when $x$ is bounded away from the origin.\nWhen $z\\in\\mathbb{C}$ and $\\Re\\nu\\geq 0$ , numerically satisfactory general solutions of ( 11.2.7 ) are given by\n( 11.2.13 ) applies when $0\\leq\\operatorname{ph}z\\leq\\pi$ and $|z|$ is bounded. ( 11.2.14 ) applies when $-\\pi\\leq\\operatorname{ph}z\\leq 0$ and $|z|$ is bounded. ( 11.2.15 ) applies when $\\left|\\operatorname{ph}z\\right|\\leq\\pi$ and $z$ is bounded away from the origin.\nWhen $\\Re\\nu\\geq 0$ , numerically satisfactory general solutions of ( 11.2.9 ) are given by\n( 11.2.16 ) applies when $|\\operatorname{ph}z|\\leq\\tfrac{1}{2}\\pi$ with $|z|$ bounded. ( 11.2.17 ) applies when $|\\operatorname{ph}z|\\leq\\tfrac{1}{2}\\pi$ with $z$ bounded away from the origin.",
+            "formulas_clave": [
+              {
+                "id": "EGx1",
+                "tag": "11.2.1",
+                "latex": "\\displaystyle\\mathbf{H}_{\\nu}\\left(z\\right) \\displaystyle=(\\tfrac{1}{2}z)^{\\nu+1}\\sum_{n=0}^{\\infty}\\frac{(-1)^{n}(\\tfrac{1}{2}z)^{2n}}{\\Gamma\\left(n+\\tfrac{3}{2}\\right)\\Gamma\\left(n+\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.2.1}"
+              },
+              {
+                "id": "",
+                "tag": "11.2.2",
+                "latex": "\\displaystyle\\mathbf{L}_{\\nu}\\left(z\\right) \\displaystyle=-ie^{-\\frac{1}{2}\\pi i\\nu}\\mathbf{H}_{\\nu}\\left(iz\\right)=(\\tfrac{1}{2}z)^{\\nu+1}\\sum_{n=0}^{\\infty}\\frac{(\\tfrac{1}{2}z)^{2n}}{\\Gamma\\left(n+\\tfrac{3}{2}\\right)\\Gamma\\left(n+\\nu+\\tfrac{3}{2}\\right)}. \\tag{11.2.2}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "11.2.3",
+                "latex": "\\displaystyle\\mathbf{H}_{0}\\left(z\\right) \\displaystyle=\\frac{2}{\\pi}\\left(z-\\frac{z^{3}}{1^{2}\\cdot 3^{2}}+\\frac{z^{5}}{1^{2}\\cdot 3^{2}\\cdot 5^{2}}-\\cdots\\right), \\tag{11.2.3}"
+              },
+              {
+                "id": "",
+                "tag": "11.2.4",
+                "latex": "\\displaystyle\\mathbf{L}_{0}\\left(z\\right) \\displaystyle=\\frac{2}{\\pi}\\left(z+\\frac{z^{3}}{1^{2}\\cdot 3^{2}}+\\frac{z^{5}}{1^{2}\\cdot 3^{2}\\cdot 5^{2}}+\\cdots\\right). \\tag{11.2.4}"
+              },
+              {
+                "id": "EGx3",
+                "tag": "11.2.5",
+                "latex": "\\displaystyle\\mathbf{K}_{\\nu}\\left(z\\right) \\displaystyle=\\mathbf{H}_{\\nu}\\left(z\\right)-Y_{\\nu}\\left(z\\right), \\tag{11.2.5}"
+              },
+              {
+                "id": "",
+                "tag": "11.2.6",
+                "latex": "\\displaystyle\\mathbf{M}_{\\nu}\\left(z\\right) \\displaystyle=\\mathbf{L}_{\\nu}\\left(z\\right)-I_{\\nu}\\left(z\\right). \\tag{11.2.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "11.2.7",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\frac{1}{z}\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\left(1-\\frac{\\nu^{2}}{z^{2}}\\right)w=\\frac{(\\tfrac{1}{2}z)^{\\nu-1}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}. \\tag{11.2.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "11.2.8",
+                "latex": "w=\\mathbf{H}_{\\nu}\\left(z\\right),\\mathbf{K}_{\\nu}\\left(z\\right). \\tag{11.2.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "11.2.9",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\frac{1}{z}\\frac{\\mathrm{d}w}{\\mathrm{d}z}-\\left(1+\\frac{\\nu^{2}}{z^{2}}\\right)w=\\frac{(\\tfrac{1}{2}z)^{\\nu-1}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}. \\tag{11.2.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "11.2.10",
+                "latex": "w=\\mathbf{L}_{\\nu}\\left(z\\right),\\mathbf{M}_{\\nu}\\left(z\\right). \\tag{11.2.10}"
+              },
+              {
+                "id": "EGx4",
+                "tag": "11.2.11",
+                "latex": "\\displaystyle w \\displaystyle=\\mathbf{H}_{\\nu}\\left(x\\right)+AJ_{\\nu}\\left(x\\right)+BY_{\\nu}\\left(x\\right), \\tag{11.2.11}"
+              },
+              {
+                "id": "",
+                "tag": "11.2.12",
+                "latex": "\\displaystyle w \\displaystyle=\\mathbf{K}_{\\nu}\\left(x\\right)+AJ_{\\nu}\\left(x\\right)+BY_{\\nu}\\left(x\\right). \\tag{11.2.12}"
+              },
+              {
+                "id": "EGx5",
+                "tag": "11.2.13",
+                "latex": "\\displaystyle w \\displaystyle=\\mathbf{H}_{\\nu}\\left(z\\right)+AJ_{\\nu}\\left(z\\right)+B{H^{(1)}_{\\nu}}\\left(z\\right), \\tag{11.2.13}"
+              },
+              {
+                "id": "",
+                "tag": "11.2.14",
+                "latex": "\\displaystyle w \\displaystyle=\\mathbf{H}_{\\nu}\\left(z\\right)+AJ_{\\nu}\\left(z\\right)+B{H^{(2)}_{\\nu}}\\left(z\\right), \\tag{11.2.14}"
+              },
+              {
+                "id": "",
+                "tag": "11.2.15",
+                "latex": "\\displaystyle w \\displaystyle=\\mathbf{K}_{\\nu}\\left(z\\right)+A{H^{(1)}_{\\nu}}\\left(z\\right)+B{H^{(2)}_{\\nu}}\\left(z\\right). \\tag{11.2.15}"
+              },
+              {
+                "id": "EGx6",
+                "tag": "11.2.16",
+                "latex": "\\displaystyle w \\displaystyle=\\mathbf{L}_{\\nu}\\left(z\\right)+AK_{\\nu}\\left(z\\right)+BI_{\\nu}\\left(z\\right), \\tag{11.2.16}"
+              },
+              {
+                "id": "",
+                "tag": "11.2.17",
+                "latex": "\\displaystyle w \\displaystyle=\\mathbf{M}_{\\nu}\\left(z\\right)+AK_{\\nu}\\left(z\\right)+BI_{\\nu}\\left(z\\right). \\tag{11.2.17}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle\\mathbf{H}_{\\nu}\\left(z\\right) \\displaystyle=(\\tfrac{1}{2}z)^{\\nu+1}\\sum_{n=0}^{\\infty}\\frac{(-1)^{n}(\\tfrac{1}{2}z)^{2n}}{\\Gamma\\left(n+\\tfrac{3}{2}\\right)\\Gamma\\left(n+\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.2.1}",
+              "\\displaystyle\\mathbf{L}_{\\nu}\\left(z\\right) \\displaystyle=-ie^{-\\frac{1}{2}\\pi i\\nu}\\mathbf{H}_{\\nu}\\left(iz\\right)=(\\tfrac{1}{2}z)^{\\nu+1}\\sum_{n=0}^{\\infty}\\frac{(\\tfrac{1}{2}z)^{2n}}{\\Gamma\\left(n+\\tfrac{3}{2}\\right)\\Gamma\\left(n+\\nu+\\tfrac{3}{2}\\right)}. \\tag{11.2.2}",
+              "\\displaystyle\\mathbf{H}_{0}\\left(z\\right) \\displaystyle=\\frac{2}{\\pi}\\left(z-\\frac{z^{3}}{1^{2}\\cdot 3^{2}}+\\frac{z^{5}}{1^{2}\\cdot 3^{2}\\cdot 5^{2}}-\\cdots\\right), \\tag{11.2.3}",
+              "\\displaystyle\\mathbf{L}_{0}\\left(z\\right) \\displaystyle=\\frac{2}{\\pi}\\left(z+\\frac{z^{3}}{1^{2}\\cdot 3^{2}}+\\frac{z^{5}}{1^{2}\\cdot 3^{2}\\cdot 5^{2}}+\\cdots\\right). \\tag{11.2.4}",
+              "\\displaystyle\\mathbf{K}_{\\nu}\\left(z\\right) \\displaystyle=\\mathbf{H}_{\\nu}\\left(z\\right)-Y_{\\nu}\\left(z\\right), \\tag{11.2.5}",
+              "\\displaystyle\\mathbf{M}_{\\nu}\\left(z\\right) \\displaystyle=\\mathbf{L}_{\\nu}\\left(z\\right)-I_{\\nu}\\left(z\\right). \\tag{11.2.6}",
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\frac{1}{z}\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\left(1-\\frac{\\nu^{2}}{z^{2}}\\right)w=\\frac{(\\tfrac{1}{2}z)^{\\nu-1}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}. \\tag{11.2.7}",
+              "w=\\mathbf{H}_{\\nu}\\left(z\\right),\\mathbf{K}_{\\nu}\\left(z\\right). \\tag{11.2.8}",
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\frac{1}{z}\\frac{\\mathrm{d}w}{\\mathrm{d}z}-\\left(1+\\frac{\\nu^{2}}{z^{2}}\\right)w=\\frac{(\\tfrac{1}{2}z)^{\\nu-1}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}. \\tag{11.2.9}",
+              "w=\\mathbf{L}_{\\nu}\\left(z\\right),\\mathbf{M}_{\\nu}\\left(z\\right). \\tag{11.2.10}",
+              "\\displaystyle w \\displaystyle=\\mathbf{H}_{\\nu}\\left(x\\right)+AJ_{\\nu}\\left(x\\right)+BY_{\\nu}\\left(x\\right), \\tag{11.2.11}",
+              "\\displaystyle w \\displaystyle=\\mathbf{K}_{\\nu}\\left(x\\right)+AJ_{\\nu}\\left(x\\right)+BY_{\\nu}\\left(x\\right). \\tag{11.2.12}",
+              "\\displaystyle w \\displaystyle=\\mathbf{H}_{\\nu}\\left(z\\right)+AJ_{\\nu}\\left(z\\right)+B{H^{(1)}_{\\nu}}\\left(z\\right), \\tag{11.2.13}",
+              "\\displaystyle w \\displaystyle=\\mathbf{H}_{\\nu}\\left(z\\right)+AJ_{\\nu}\\left(z\\right)+B{H^{(2)}_{\\nu}}\\left(z\\right), \\tag{11.2.14}",
+              "\\displaystyle w \\displaystyle=\\mathbf{K}_{\\nu}\\left(z\\right)+A{H^{(1)}_{\\nu}}\\left(z\\right)+B{H^{(2)}_{\\nu}}\\left(z\\right). \\tag{11.2.15}",
+              "\\displaystyle w \\displaystyle=\\mathbf{L}_{\\nu}\\left(z\\right)+AK_{\\nu}\\left(z\\right)+BI_{\\nu}\\left(z\\right), \\tag{11.2.16}",
+              "\\displaystyle w \\displaystyle=\\mathbf{M}_{\\nu}\\left(z\\right)+AK_{\\nu}\\left(z\\right)+BI_{\\nu}\\left(z\\right). \\tag{11.2.17}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Struve functions and modified Struve functions",
+                "definitions",
+                "power series",
+                "principal values",
+                "series expansions",
+                "Bessel’s equation",
+                "differential equations",
+                "inhomogeneous forms",
+                "particular solutions",
+                "modified Bessel’s equation",
+                "numerically satisfactory solutions"
+              ],
+              "definiciones": [
+                "$\\mathbf{H}_{\\nu}\\left(z\\right)$ : Struve function",
+                "$\\mathbf{L}_{\\nu}\\left(z\\right)$ : modified Struve function",
+                "$\\mathbf{K}_{\\nu}\\left(z\\right)$ : Struve function",
+                "$\\mathbf{M}_{\\nu}\\left(z\\right)$ : modified Struve function"
+              ],
+              "simbolos": [
+                "$\\Gamma\\left(z\\right)$: gamma function , $z$: complex variable , $\\nu$: real or complex order and $n$: integer order",
+                "$\\Gamma\\left(z\\right)$: gamma function , $\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathrm{e}$: base of natural logarithm , $\\mathrm{i}$: imaginary unit , $z$: complex variable , $\\nu$: real or complex order and $n$: integer order",
+                "$\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $\\pi$: the ratio of the circumference of a circle to its diameter and $z$: complex variable",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathbf{L}_{\\nu}\\left(z\\right)$: modified Struve function and $z$: complex variable",
+                "$Y_{\\nu}\\left(z\\right)$: Bessel function of the second kind , $\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $z$: complex variable and $\\nu$: real or complex order",
+                "$I_{\\nu}\\left(z\\right)$: modified Bessel function of the first kind , $\\mathbf{L}_{\\nu}\\left(z\\right)$: modified Struve function , $z$: complex variable and $\\nu$: real or complex order",
+                "$J_{\\nu}\\left(z\\right)$: Bessel function of the first kind , $Y_{\\nu}\\left(z\\right)$: Bessel function of the second kind , $\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $x$: real variable , $\\nu$: real or complex order , $A$: arbitrary constant and $B$: arbitrary constant",
+                "$J_{\\nu}\\left(z\\right)$: Bessel function of the first kind , $Y_{\\nu}\\left(z\\right)$: Bessel function of the second kind , $\\mathbf{K}_{\\nu}\\left(z\\right)$: Struve function , $x$: real variable , $\\nu$: real or complex order , $A$: arbitrary constant and $B$: arbitrary constant",
+                "$J_{\\nu}\\left(z\\right)$: Bessel function of the first kind , ${H^{(1)}_{\\nu}}\\left(z\\right)$: Bessel function of the third kind (or Hankel function) , $\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $z$: complex variable , $\\nu$: real or complex order , $A$: arbitrary constant and $B$: arbitrary constant",
+                "$J_{\\nu}\\left(z\\right)$: Bessel function of the first kind , ${H^{(2)}_{\\nu}}\\left(z\\right)$: Bessel function of the third kind (or Hankel function) , $\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $z$: complex variable , $\\nu$: real or complex order , $A$: arbitrary constant and $B$: arbitrary constant",
+                "${H^{(1)}_{\\nu}}\\left(z\\right)$: Bessel function of the third kind (or Hankel function) , ${H^{(2)}_{\\nu}}\\left(z\\right)$: Bessel function of the third kind (or Hankel function) , $\\mathbf{K}_{\\nu}\\left(z\\right)$: Struve function , $z$: complex variable , $\\nu$: real or complex order , $A$: arbitrary constant and $B$: arbitrary constant",
+                "$I_{\\nu}\\left(z\\right)$: modified Bessel function of the first kind , $K_{\\nu}\\left(z\\right)$: modified Bessel function of the second kind , $\\mathbf{L}_{\\nu}\\left(z\\right)$: modified Struve function , $z$: complex variable , $\\nu$: real or complex order , $A$: arbitrary constant and $B$: arbitrary constant",
+                "$\\mathbf{M}_{\\nu}\\left(z\\right)$: modified Struve function , $I_{\\nu}\\left(z\\right)$: modified Bessel function of the first kind , $K_{\\nu}\\left(z\\right)$: modified Bessel function of the second kind , $z$: complex variable , $\\nu$: real or complex order , $A$: arbitrary constant and $B$: arbitrary constant"
+              ],
+              "referenciado_por": [
+                "§10.22(i)",
+                "§10.43(i)",
+                "§11.13(iv)",
+                "§11.10(vi)",
+                "§11.13(ii)",
+                "§11.2(i)",
+                "§11.4(iii)",
+                "§11.6(ii)",
+                "§11.4(i)",
+                "§11.5(ii)",
+                "§11.5(i)",
+                "§11.13(iii)",
+                "§11.6(i)",
+                "§11.6(iii)",
+                "§11.2(iii)"
+              ],
+              "notas_bibliograficas": [
+                "See Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), pp. 328–329) and Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), pp. 274–276). The notation $\\mathbf{M}_{\\nu}\\left(z\\right)$ is new and this function has been introduced to play a similar role to $\\mathbf{L}_{\\nu}\\left(z\\right)$ that $\\mathbf{K}_{\\nu}\\left(z\\right)$ does to $\\mathbf{H}_{\\nu}\\left(z\\right)$ .",
+                "See Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), pp. 328–329) and Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), pp. 274–276).",
+                "See § 2.7(iv) and Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), pp. 274–277). The last reference restricts ( 11.2.15 ) to the sector $\\left|\\operatorname{ph}z\\right|\\leq\\tfrac{1}{2}\\pi$ , and instead covers the sector $\\tfrac{1}{2}\\pi\\leq\\operatorname{ph}z\\leq\\tfrac{3}{2}\\pi$ with another set of solutions. (Similarly for the conjugate sector $-\\tfrac{3}{2}\\pi\\leq\\operatorname{ph}z\\leq-\\tfrac{1}{2}\\pi$ .)"
+              ],
+              "referencias_abramowitz_stegun": [
+                "12.1.3",
+                "12.2.1",
+                "12.1.4"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.2 and Ch.11",
+                "Annotations for §11.2(i) , §11.2 and Ch.11",
+                "Annotations for §11.2(ii) , §11.2 and Ch.11",
+                "Annotations for §11.2(iii) , §11.2 and Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              },
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "11.3",
+          "titulo_original": "Graphics",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.3.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.3.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.3 Graphics",
+            "prosa_teorica": "<a id=\"i.fig1\"></a>\n![Figure 11.3.1: $\\mathbf{H}_{\\nu}\\left(x\\right)$ for $0\\leq x\\leq 12$ and $\\nu=0,\\frac{1}{2},1,\\frac{3}{2},2,3$ .](../html/11/3/F1.png)\n<a id=\"i.fig2\"></a>\n![Figure 11.3.3: $\\mathbf{H}_{\\nu}\\left(x\\right)$ for $0\\leq x\\leq 12$ and $\\nu=-3,-2,-\\frac{3}{2},-1,-\\frac{1}{2}$ .](../html/11/3/F3.png)\n<a id=\"i.fig3\"></a>\n![Figure 11.3.5: $\\mathbf{H}_{\\nu}\\left(x\\right)$ for $0\\leq x\\leq 8$ and $-4\\leq\\nu\\leq 4$ . 3D Help](../html/11/3/F5.png)\n<a id=\"i.fig4\"></a>\n![Figure 11.3.7: $\\left|\\mathbf{H}_{0}\\left(x+iy\\right)\\right|$ for $-8\\leq x\\leq 8$ and $-3\\leq y\\leq 3$ . 3D Help](../html/11/3/F7.png)\n<a id=\"i.fig5\"></a>\n![Figure 11.3.9: $|\\mathbf{H}_{\\frac{1}{2}}\\left(x+iy\\right)|$ (principal value) for $-8\\leq x\\leq 8$ and $-3\\leq y\\leq 3$ . There is a cut along the negative real axis. 3D Help](../html/11/3/F9.png)\n<a id=\"i.fig6\"></a>\n![Figure 11.3.11: $\\left|\\mathbf{H}_{1}\\left(x+iy\\right)\\right|$ for $-8.5\\leq x\\leq 8.5$ and $-3\\leq y\\leq 3$ . 3D Help](../html/11/3/F11.png)\n<a id=\"ii.fig1\"></a>\n![Figure 11.3.13: $\\mathbf{L}_{\\nu}\\left(x\\right)$ for $0\\leq x<4.38$ and $\\nu=0,\\frac{1}{2},1,\\frac{3}{2},2,3$ .](../html/11/3/F13.png)\n<a id=\"ii.fig2\"></a>\n![Figure 11.3.15: $\\mathbf{L}_{\\nu}\\left(x\\right)$ for $0\\leq x<4.25$ and $\\nu=-3,-2,-\\frac{3}{2},-1,-\\frac{1}{2}$ .](../html/11/3/F15.png)\n<a id=\"ii.fig3\"></a>\n![Figure 11.3.17: $\\mathbf{L}_{\\nu}\\left(x\\right)$ for $0\\leq x\\leq 5.6$ and $-4\\leq\\nu\\leq 4$ . 3D Help](../html/11/3/F17.png)\n<a id=\"ii.fig4\"></a>\n![Figure 11.3.19: $|\\mathbf{M}_{-\\frac{1}{2}}\\left(x+iy\\right)|$ (principal value) for $-3\\leq x\\leq 3$ and $-3\\leq y\\leq 3$ . There is a cut along the negative real axis. 3D Help](../html/11/3/F19.png)",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Struve functions and modified Struve functions",
+                "graphics"
+              ],
+              "simbolos": [
+                "$\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $x$: real variable and $\\nu$: real or complex order",
+                "$\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $\\mathrm{i}$: imaginary unit and $x$: real variable",
+                "$\\mathbf{L}_{\\nu}\\left(z\\right)$: modified Struve function , $x$: real variable and $\\nu$: real or complex order",
+                "$\\mathbf{M}_{\\nu}\\left(z\\right)$: modified Struve function , $\\mathrm{i}$: imaginary unit and $x$: real variable"
+              ],
+              "notas_bibliograficas": [
+                "These graphics were produced at NIST.",
+                "These graphics were produced at NIST."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.3 and Ch.11",
+                "Annotations for §11.3(i) , §11.3 and Ch.11",
+                "Annotations for §11.3(ii) , §11.3 and Ch.11"
+              ]
+            },
+            "estado": "completado"
+          }
+        },
+        {
+          "seccion_id": "11.4",
+          "titulo_original": "Basic Properties",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.4.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.4.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.4 Basic Properties",
+            "prosa_teorica": "For $n=0,1,2,\\dots$ ,\nwhere\nand $|\\nu_{0}+\\tfrac{3}{2}|$ is the smallest of the numbers $|\\nu+\\tfrac{3}{2}|$ , $|\\nu+\\tfrac{5}{2}|$ , $|\\nu+\\tfrac{9}{2}|,\\dots$ .\nFor these and further results see Luke ([1969b](./bib/L.html#bib1496 \"The Special Functions and their Approximations. Vol. 2\"), §9.4.5), and § 10.23(iii) .\nwhere ${\\cal H}_{\\nu}(z)$ denotes either $\\mathbf{H}_{\\nu}\\left(z\\right)$ or $\\mathbf{L}_{\\nu}\\left(z\\right)$ .\n<a id=\"E32\"></a>\n<a id=\"E33\"></a>\nFor derivatives with respect to the order $\\nu$ , see Apelblat ([1989](./bib/index.html#bib112 \"Derivatives and integrals with respect to the order of the Struve functions ⁢ H ν ( x ) and ⁢ L ν ( x )\")) and Brychkov and Geddes ([2005](./bib/B.html#bib2640 \"On the derivatives of the Bessel and Struve functions with respect to the order\")).\nFor properties of zeros of $\\mathbf{H}_{\\nu}\\left(x\\right)$ see Steinig ([1970](./bib/S.html#bib2166 \"The real zeros of Struve’s function\")).\nFor asymptotic expansions of zeros of $\\mathbf{H}_{0}\\left(x\\right)$ see MacLeod ([2002a](./bib/M.html#bib1527 \"Asymptotic expansions for the zeros of certain special functions\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "11.4.1",
+                "latex": "\\mathbf{K}_{n+\\frac{1}{2}}\\left(z\\right)=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\sum_{m=0}^{n}\\frac{(2m)!\\,2^{-2m}}{m!\\,(n-m)!}\\,(\\tfrac{1}{2}z)^{n-2m}, \\tag{11.4.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "11.4.2",
+                "latex": "\\mathbf{L}_{n+\\frac{1}{2}}\\left(z\\right)=I_{-n-\\frac{1}{2}}\\left(z\\right)-\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\sum_{m=0}^{n}\\frac{(-1)^{m}(2m)!\\,2^{-2m}}{m!\\,(n-m)!}\\,(\\tfrac{1}{2}z)^{n-2m}, \\tag{11.4.2}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "11.4.3",
+                "latex": "\\displaystyle\\mathbf{H}_{-n-\\frac{1}{2}}\\left(z\\right) \\displaystyle=(-1)^{n}J_{n+\\frac{1}{2}}\\left(z\\right), \\tag{11.4.3}"
+              },
+              {
+                "id": "",
+                "tag": "11.4.4",
+                "latex": "\\displaystyle\\mathbf{L}_{-n-\\frac{1}{2}}\\left(z\\right) \\displaystyle=I_{n+\\frac{1}{2}}\\left(z\\right). \\tag{11.4.4}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "11.4.5",
+                "latex": "\\displaystyle\\mathbf{H}_{\\frac{1}{2}}\\left(z\\right) \\displaystyle=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}(1-\\cos z), \\tag{11.4.5}"
+              },
+              {
+                "id": "",
+                "tag": "11.4.6",
+                "latex": "\\displaystyle\\mathbf{H}_{-\\frac{1}{2}}\\left(z\\right) \\displaystyle=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\sin z, \\tag{11.4.6}"
+              },
+              {
+                "id": "EGx3",
+                "tag": "11.4.7",
+                "latex": "\\displaystyle\\mathbf{L}_{\\frac{1}{2}}\\left(z\\right) \\displaystyle=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}(\\cosh z-1), \\tag{11.4.7}"
+              },
+              {
+                "id": "",
+                "tag": "11.4.8",
+                "latex": "\\displaystyle\\mathbf{L}_{-\\frac{1}{2}}\\left(z\\right) \\displaystyle=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\sinh z, \\tag{11.4.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "11.4.9",
+                "latex": "\\mathbf{H}_{\\frac{3}{2}}\\left(z\\right)=\\left(\\frac{z}{2\\pi}\\right)^{\\frac{1}{2}}\\left(1+\\frac{2}{z^{2}}\\right)-\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\left(\\sin z+\\frac{\\cos z}{z}\\right), \\tag{11.4.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "11.4.10",
+                "latex": "\\mathbf{H}_{-\\frac{3}{2}}\\left(z\\right)=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\left(\\cos z-\\frac{\\sin z}{z}\\right), \\tag{11.4.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "11.4.11",
+                "latex": "\\mathbf{L}_{\\frac{3}{2}}\\left(z\\right)=-\\left(\\frac{z}{2\\pi}\\right)^{\\frac{1}{2}}\\left(1-\\frac{2}{z^{2}}\\right)+\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\left(\\sinh z-\\frac{\\cosh z}{z}\\right), \\tag{11.4.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "11.4.12",
+                "latex": "\\mathbf{L}_{-\\frac{3}{2}}\\left(z\\right)=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\left(\\cosh z-\\frac{\\sinh z}{z}\\right). \\tag{11.4.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "11.4.13",
+                "latex": "\\mathbf{H}_{\\nu}\\left(x\\right)\\geq 0, \\tag{11.4.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "11.4.14",
+                "latex": "\\mathbf{H}_{\\nu}\\left(z\\right)=\\frac{2(\\tfrac{1}{2}z)^{\\nu+1}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}(1+\\vartheta), \\tag{11.4.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "11.4.15",
+                "latex": "|\\vartheta|<\\frac{2}{3}\\exp\\left(\\frac{\\tfrac{1}{4}|z|^{2}}{|\\nu_{0}+\\tfrac{3}{2}|}-1\\right), \\tag{11.4.15}"
+              },
+              {
+                "id": "E16",
+                "tag": "11.4.16",
+                "latex": "\\mathbf{H}_{\\nu}\\left(ze^{m\\pi i}\\right)=e^{m\\pi i(\\nu+1)}\\mathbf{H}_{\\nu}\\left(z\\right), \\tag{11.4.16}"
+              },
+              {
+                "id": "E17",
+                "tag": "11.4.17",
+                "latex": "\\mathbf{L}_{\\nu}\\left(ze^{m\\pi i}\\right)=e^{m\\pi i(\\nu+1)}\\mathbf{L}_{\\nu}\\left(z\\right), \\tag{11.4.17}"
+              },
+              {
+                "id": "E18",
+                "tag": "11.4.18",
+                "latex": "\\mathbf{H}_{\\nu}\\left(z\\right)=\\frac{4}{\\pi^{1/2}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\,\\sum_{k=0}^{\\infty}\\frac{(2k+\\nu+1)\\Gamma\\left(k+\\nu+1\\right)}{k!(2k+1)(2k+2\\nu+1)}J_{2k+\\nu+1}\\left(z\\right), \\tag{11.4.18}"
+              },
+              {
+                "id": "E19",
+                "tag": "11.4.19",
+                "latex": "\\mathbf{H}_{\\nu}\\left(z\\right)=\\left(\\frac{z}{2\\pi}\\right)^{1/2}\\sum_{k=0}^{\\infty}\\frac{(\\tfrac{1}{2}z)^{k}}{k!(k+\\tfrac{1}{2})}J_{k+\\nu+\\frac{1}{2}}\\left(z\\right), \\tag{11.4.19}"
+              },
+              {
+                "id": "E20",
+                "tag": "11.4.20",
+                "latex": "\\mathbf{H}_{\\nu}\\left(z\\right)=\\frac{(\\tfrac{1}{2}z)^{\\nu+\\frac{1}{2}}}{\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\sum_{k=0}^{\\infty}\\frac{(\\tfrac{1}{2}z)^{k}}{k!(k+\\nu+\\tfrac{1}{2})}J_{k+\\frac{1}{2}}\\left(z\\right), \\tag{11.4.20}"
+              },
+              {
+                "id": "E21",
+                "tag": "11.4.21",
+                "latex": "\\mathbf{H}_{0}\\left(z\\right)=\\frac{4}{\\pi}\\sum_{k=0}^{\\infty}\\frac{J_{2k+1}\\left(z\\right)}{2k+1}=2\\sum_{k=0}^{\\infty}(-1)^{k}{J_{k+\\frac{1}{2}}}^{2}\\left(\\tfrac{1}{2}z\\right), \\tag{11.4.21}"
+              },
+              {
+                "id": "E22",
+                "tag": "11.4.22",
+                "latex": "\\mathbf{H}_{1}\\left(z\\right)=\\frac{2}{\\pi}(1-J_{0}\\left(z\\right))+\\frac{4}{\\pi}\\sum_{k=1}^{\\infty}\\frac{J_{2k}\\left(z\\right)}{4k^{2}-1}=4\\sum_{k=0}^{\\infty}J_{2k+\\frac{1}{2}}\\left(\\tfrac{1}{2}z\\right)J_{2k+\\frac{3}{2}}\\left(\\tfrac{1}{2}z\\right). \\tag{11.4.22}"
+              },
+              {
+                "id": "EGx4",
+                "tag": "11.4.23",
+                "latex": "\\displaystyle\\mathbf{H}_{\\nu-1}\\left(z\\right)+\\mathbf{H}_{\\nu+1}\\left(z\\right) \\displaystyle=\\frac{2\\nu}{z}\\mathbf{H}_{\\nu}\\left(z\\right)+\\frac{(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.4.23}"
+              },
+              {
+                "id": "",
+                "tag": "11.4.24",
+                "latex": "\\displaystyle\\mathbf{H}_{\\nu-1}\\left(z\\right)-\\mathbf{H}_{\\nu+1}\\left(z\\right) \\displaystyle=2\\mathbf{H}_{\\nu}'\\left(z\\right)-\\frac{(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.4.24}"
+              },
+              {
+                "id": "",
+                "tag": "11.4.25",
+                "latex": "\\displaystyle\\mathbf{L}_{\\nu-1}\\left(z\\right)-\\mathbf{L}_{\\nu+1}\\left(z\\right) \\displaystyle=\\frac{2\\nu}{z}\\mathbf{L}_{\\nu}\\left(z\\right)+\\frac{(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.4.25}"
+              },
+              {
+                "id": "",
+                "tag": "11.4.26",
+                "latex": "\\displaystyle\\mathbf{L}_{\\nu-1}\\left(z\\right)+\\mathbf{L}_{\\nu+1}\\left(z\\right) \\displaystyle=2\\mathbf{L}_{\\nu}'\\left(z\\right)-\\frac{(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}. \\tag{11.4.26}"
+              },
+              {
+                "id": "E27",
+                "tag": "11.4.27",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left(z^{\\nu}\\mathbf{H}_{\\nu}\\left(z\\right)\\right)=z^{\\nu}\\mathbf{H}_{\\nu-1}\\left(z\\right), \\tag{11.4.27}"
+              },
+              {
+                "id": "E28",
+                "tag": "11.4.28",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left(z^{-\\nu}\\mathbf{H}_{\\nu}\\left(z\\right)\\right)=\\frac{2^{-\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}-z^{-\\nu}\\mathbf{H}_{\\nu+1}\\left(z\\right), \\tag{11.4.28}"
+              },
+              {
+                "id": "E29",
+                "tag": "11.4.29",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left(z^{\\nu}\\mathbf{L}_{\\nu}\\left(z\\right)\\right)=z^{\\nu}\\mathbf{L}_{\\nu-1}\\left(z\\right), \\tag{11.4.29}"
+              },
+              {
+                "id": "E30",
+                "tag": "11.4.30",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left(z^{-\\nu}\\mathbf{L}_{\\nu}\\left(z\\right)\\right)=\\frac{2^{-\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}+z^{-\\nu}\\mathbf{L}_{\\nu+1}\\left(z\\right). \\tag{11.4.30}"
+              },
+              {
+                "id": "E31",
+                "tag": "11.4.31",
+                "latex": "{\\cal H}_{\\nu-m}(z)=z^{m-\\nu}\\left(\\frac{1}{z}\\frac{\\mathrm{d}}{\\mathrm{d}z}\\right)^{m}(z^{\\nu}{\\cal H}_{\\nu}(z)), \\tag{11.4.31}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "11.4.32",
+                "latex": "\\displaystyle\\mathbf{H}_{0}'\\left(z\\right) \\displaystyle=\\frac{2}{\\pi}-\\mathbf{H}_{1}\\left(z\\right), \\tag{11.4.32}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\frac{\\mathrm{d}}{\\mathrm{d}z}(z\\mathbf{H}_{1}\\left(z\\right)) \\displaystyle=z\\mathbf{H}_{0}\\left(z\\right),"
+              },
+              {
+                "id": "Ex3",
+                "tag": "11.4.33",
+                "latex": "\\displaystyle\\mathbf{L}_{0}'\\left(z\\right) \\displaystyle=\\frac{2}{\\pi}+\\mathbf{L}_{1}\\left(z\\right), \\tag{11.4.33}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle\\frac{\\mathrm{d}}{\\mathrm{d}z}(z\\mathbf{L}_{1}\\left(z\\right)) \\displaystyle=z\\mathbf{L}_{0}\\left(z\\right)."
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\mathbf{K}_{n+\\frac{1}{2}}\\left(z\\right)=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\sum_{m=0}^{n}\\frac{(2m)!\\,2^{-2m}}{m!\\,(n-m)!}\\,(\\tfrac{1}{2}z)^{n-2m}, \\tag{11.4.1}",
+              "\\mathbf{L}_{n+\\frac{1}{2}}\\left(z\\right)=I_{-n-\\frac{1}{2}}\\left(z\\right)-\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\sum_{m=0}^{n}\\frac{(-1)^{m}(2m)!\\,2^{-2m}}{m!\\,(n-m)!}\\,(\\tfrac{1}{2}z)^{n-2m}, \\tag{11.4.2}",
+              "\\displaystyle\\mathbf{H}_{-n-\\frac{1}{2}}\\left(z\\right) \\displaystyle=(-1)^{n}J_{n+\\frac{1}{2}}\\left(z\\right), \\tag{11.4.3}",
+              "\\displaystyle\\mathbf{L}_{-n-\\frac{1}{2}}\\left(z\\right) \\displaystyle=I_{n+\\frac{1}{2}}\\left(z\\right). \\tag{11.4.4}",
+              "\\displaystyle\\mathbf{H}_{\\frac{1}{2}}\\left(z\\right) \\displaystyle=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}(1-\\cos z), \\tag{11.4.5}",
+              "\\displaystyle\\mathbf{H}_{-\\frac{1}{2}}\\left(z\\right) \\displaystyle=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\sin z, \\tag{11.4.6}",
+              "\\displaystyle\\mathbf{L}_{\\frac{1}{2}}\\left(z\\right) \\displaystyle=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}(\\cosh z-1), \\tag{11.4.7}",
+              "\\displaystyle\\mathbf{L}_{-\\frac{1}{2}}\\left(z\\right) \\displaystyle=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\sinh z, \\tag{11.4.8}",
+              "\\mathbf{H}_{\\frac{3}{2}}\\left(z\\right)=\\left(\\frac{z}{2\\pi}\\right)^{\\frac{1}{2}}\\left(1+\\frac{2}{z^{2}}\\right)-\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\left(\\sin z+\\frac{\\cos z}{z}\\right), \\tag{11.4.9}",
+              "\\mathbf{H}_{-\\frac{3}{2}}\\left(z\\right)=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\left(\\cos z-\\frac{\\sin z}{z}\\right), \\tag{11.4.10}",
+              "\\mathbf{L}_{\\frac{3}{2}}\\left(z\\right)=-\\left(\\frac{z}{2\\pi}\\right)^{\\frac{1}{2}}\\left(1-\\frac{2}{z^{2}}\\right)+\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\left(\\sinh z-\\frac{\\cosh z}{z}\\right), \\tag{11.4.11}",
+              "\\mathbf{L}_{-\\frac{3}{2}}\\left(z\\right)=\\left(\\frac{2}{\\pi z}\\right)^{\\frac{1}{2}}\\left(\\cosh z-\\frac{\\sinh z}{z}\\right). \\tag{11.4.12}",
+              "\\mathbf{H}_{\\nu}\\left(x\\right)\\geq 0, \\tag{11.4.13}",
+              "\\mathbf{H}_{\\nu}\\left(z\\right)=\\frac{2(\\tfrac{1}{2}z)^{\\nu+1}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}(1+\\vartheta), \\tag{11.4.14}",
+              "|\\vartheta|<\\frac{2}{3}\\exp\\left(\\frac{\\tfrac{1}{4}|z|^{2}}{|\\nu_{0}+\\tfrac{3}{2}|}-1\\right), \\tag{11.4.15}",
+              "\\mathbf{H}_{\\nu}\\left(ze^{m\\pi i}\\right)=e^{m\\pi i(\\nu+1)}\\mathbf{H}_{\\nu}\\left(z\\right), \\tag{11.4.16}",
+              "\\mathbf{L}_{\\nu}\\left(ze^{m\\pi i}\\right)=e^{m\\pi i(\\nu+1)}\\mathbf{L}_{\\nu}\\left(z\\right), \\tag{11.4.17}",
+              "\\mathbf{H}_{\\nu}\\left(z\\right)=\\frac{4}{\\pi^{1/2}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\,\\sum_{k=0}^{\\infty}\\frac{(2k+\\nu+1)\\Gamma\\left(k+\\nu+1\\right)}{k!(2k+1)(2k+2\\nu+1)}J_{2k+\\nu+1}\\left(z\\right), \\tag{11.4.18}",
+              "\\mathbf{H}_{\\nu}\\left(z\\right)=\\left(\\frac{z}{2\\pi}\\right)^{1/2}\\sum_{k=0}^{\\infty}\\frac{(\\tfrac{1}{2}z)^{k}}{k!(k+\\tfrac{1}{2})}J_{k+\\nu+\\frac{1}{2}}\\left(z\\right), \\tag{11.4.19}",
+              "\\mathbf{H}_{\\nu}\\left(z\\right)=\\frac{(\\tfrac{1}{2}z)^{\\nu+\\frac{1}{2}}}{\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\sum_{k=0}^{\\infty}\\frac{(\\tfrac{1}{2}z)^{k}}{k!(k+\\nu+\\tfrac{1}{2})}J_{k+\\frac{1}{2}}\\left(z\\right), \\tag{11.4.20}",
+              "\\mathbf{H}_{0}\\left(z\\right)=\\frac{4}{\\pi}\\sum_{k=0}^{\\infty}\\frac{J_{2k+1}\\left(z\\right)}{2k+1}=2\\sum_{k=0}^{\\infty}(-1)^{k}{J_{k+\\frac{1}{2}}}^{2}\\left(\\tfrac{1}{2}z\\right), \\tag{11.4.21}",
+              "\\mathbf{H}_{1}\\left(z\\right)=\\frac{2}{\\pi}(1-J_{0}\\left(z\\right))+\\frac{4}{\\pi}\\sum_{k=1}^{\\infty}\\frac{J_{2k}\\left(z\\right)}{4k^{2}-1}=4\\sum_{k=0}^{\\infty}J_{2k+\\frac{1}{2}}\\left(\\tfrac{1}{2}z\\right)J_{2k+\\frac{3}{2}}\\left(\\tfrac{1}{2}z\\right). \\tag{11.4.22}",
+              "\\displaystyle\\mathbf{H}_{\\nu-1}\\left(z\\right)+\\mathbf{H}_{\\nu+1}\\left(z\\right) \\displaystyle=\\frac{2\\nu}{z}\\mathbf{H}_{\\nu}\\left(z\\right)+\\frac{(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.4.23}",
+              "\\displaystyle\\mathbf{H}_{\\nu-1}\\left(z\\right)-\\mathbf{H}_{\\nu+1}\\left(z\\right) \\displaystyle=2\\mathbf{H}_{\\nu}'\\left(z\\right)-\\frac{(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.4.24}",
+              "\\displaystyle\\mathbf{L}_{\\nu-1}\\left(z\\right)-\\mathbf{L}_{\\nu+1}\\left(z\\right) \\displaystyle=\\frac{2\\nu}{z}\\mathbf{L}_{\\nu}\\left(z\\right)+\\frac{(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.4.25}",
+              "\\displaystyle\\mathbf{L}_{\\nu-1}\\left(z\\right)+\\mathbf{L}_{\\nu+1}\\left(z\\right) \\displaystyle=2\\mathbf{L}_{\\nu}'\\left(z\\right)-\\frac{(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}. \\tag{11.4.26}",
+              "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left(z^{\\nu}\\mathbf{H}_{\\nu}\\left(z\\right)\\right)=z^{\\nu}\\mathbf{H}_{\\nu-1}\\left(z\\right), \\tag{11.4.27}",
+              "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left(z^{-\\nu}\\mathbf{H}_{\\nu}\\left(z\\right)\\right)=\\frac{2^{-\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}-z^{-\\nu}\\mathbf{H}_{\\nu+1}\\left(z\\right), \\tag{11.4.28}",
+              "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left(z^{\\nu}\\mathbf{L}_{\\nu}\\left(z\\right)\\right)=z^{\\nu}\\mathbf{L}_{\\nu-1}\\left(z\\right), \\tag{11.4.29}",
+              "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left(z^{-\\nu}\\mathbf{L}_{\\nu}\\left(z\\right)\\right)=\\frac{2^{-\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}+z^{-\\nu}\\mathbf{L}_{\\nu+1}\\left(z\\right). \\tag{11.4.30}",
+              "{\\cal H}_{\\nu-m}(z)=z^{m-\\nu}\\left(\\frac{1}{z}\\frac{\\mathrm{d}}{\\mathrm{d}z}\\right)^{m}(z^{\\nu}{\\cal H}_{\\nu}(z)), \\tag{11.4.31}",
+              "\\displaystyle\\mathbf{H}_{0}'\\left(z\\right) \\displaystyle=\\frac{2}{\\pi}-\\mathbf{H}_{1}\\left(z\\right), \\tag{11.4.32}",
+              "\\displaystyle\\frac{\\mathrm{d}}{\\mathrm{d}z}(z\\mathbf{H}_{1}\\left(z\\right)) \\displaystyle=z\\mathbf{H}_{0}\\left(z\\right),",
+              "\\displaystyle\\mathbf{L}_{0}'\\left(z\\right) \\displaystyle=\\frac{2}{\\pi}+\\mathbf{L}_{1}\\left(z\\right), \\tag{11.4.33}",
+              "\\displaystyle\\frac{\\mathrm{d}}{\\mathrm{d}z}(z\\mathbf{L}_{1}\\left(z\\right)) \\displaystyle=z\\mathbf{L}_{0}\\left(z\\right)."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Struve functions and modified Struve functions",
+                "half-integer orders",
+                "inequalities",
+                "analytic continuation",
+                "Bessel functions",
+                "series expansions",
+                "derivatives",
+                "recurrence relations",
+                "with respect to order",
+                "zeros"
+              ],
+              "simbolos": [
+                "$J_{\\nu}\\left(z\\right)$: Bessel function of the first kind , $\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $z$: complex variable and $n$: integer order",
+                "$I_{\\nu}\\left(z\\right)$: modified Bessel function of the first kind , $\\mathbf{L}_{\\nu}\\left(z\\right)$: modified Struve function , $z$: complex variable and $n$: integer order",
+                "$\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\cosz$: cosine function and $z$: complex variable",
+                "$\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\sinz$: sine function and $z$: complex variable",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\coshz$: hyperbolic cosine function , $\\mathbf{L}_{\\nu}\\left(z\\right)$: modified Struve function and $z$: complex variable",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\sinhz$: hyperbolic sine function , $\\mathbf{L}_{\\nu}\\left(z\\right)$: modified Struve function and $z$: complex variable",
+                "$\\Gamma\\left(z\\right)$: gamma function , $\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $\\pi$: the ratio of the circumference of a circle to its diameter , $z$: complex variable and $\\nu$: real or complex order",
+                "$\\Gamma\\left(z\\right)$: gamma function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathbf{L}_{\\nu}\\left(z\\right)$: modified Struve function , $z$: complex variable and $\\nu$: real or complex order",
+                "$\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\frac{\\mathrm{d}f}{\\mathrm{d}x}$: derivative of $f$ with respect to $x$ and $z$: complex variable",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\frac{\\mathrm{d}f}{\\mathrm{d}x}$: derivative of $f$ with respect to $x$ , $\\mathbf{L}_{\\nu}\\left(z\\right)$: modified Struve function and $z$: complex variable"
+              ],
+              "referenciado_por": [
+                "§11.4(i)",
+                "§11.13(ii)",
+                "§11.7(i)",
+                "§11.13(v)"
+              ],
+              "notas_bibliograficas": [
+                "( 11.4.1 ) and ( 11.4.2 ) both follow from Erdélyi et al. ([1953b](./bib/E.html#bib752 \"Higher Transcendental Functions. Vol. II\"), p. 39, Eq. (64)): for ( 11.4.1 ) set $\\xi=z$ and use ( 11.2.5 ); for ( 11.4.2 ) replace $Y_{n+\\frac{1}{2}}\\left(\\xi\\right)$ by $(-1)^{n+1}J_{-n-\\frac{1}{2}}\\left(\\xi\\right)$ in consequence of ( 10.2.3 ), then set $\\xi=\\mathrm{i}z$ and use ( 11.2.2 ), ( 10.27.6 ). For ( 11.4.3 ), ( 11.4.4 ) see Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), pp. 64 and 75). For ( 11.4.5 )–( 11.4.12 ) combine ( 11.4.3 ), ( 11.4.4 ) with ( 10.47.3 ), ( 10.47.7 ), § 10.49(i) , § 10.49(ii) , ( 11.4.23 ), ( 11.4.25 ).",
+                "See Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), §§10.4 and 10.45).",
+                "These results follow from ( 11.2.1 ) and ( 11.2.2 ).",
+                "See Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), p. 329). For ( 11.4.31 ) see Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), pp. 60, 74)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "12.1.15",
+                "12.2.10",
+                "12.1.16",
+                "12.1.9--12.1.13 12.2.4--12.2.5"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.4 and Ch.11",
+                "Annotations for §11.4(i) , §11.4 and Ch.11",
+                "Annotations for §11.4(v) , §11.4 and Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1953b",
+                "archivo_destino": "bib/E.html#bib752",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. II"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1969b",
+                "archivo_destino": "bib/L.html#bib1496",
+                "titulo_referencia": "The Special Functions and their Approximations. Vol. 2"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/index.html#bib112",
+                "titulo_referencia": "Derivatives and integrals with respect to the order of the Struve functions ⁢ H ν ( x ) and ⁢ L ν ( x )"
+              },
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/B.html#bib2640",
+                "titulo_referencia": "On the derivatives of the Bessel and Struve functions with respect to the order"
+              },
+              {
+                "texto": "1970",
+                "archivo_destino": "bib/S.html#bib2166",
+                "titulo_referencia": "The real zeros of Struve’s function"
+              },
+              {
+                "texto": "2002a",
+                "archivo_destino": "bib/M.html#bib1527",
+                "titulo_referencia": "Asymptotic expansions for the zeros of certain special functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "11.5",
+          "titulo_original": "Integral Representations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.5.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.5.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.5 Integral Representations",
+            "prosa_teorica": "For loop-integral versions of ( 11.5.1 ), ( 11.5.2 ), ( 11.5.4 ), and ( 11.5.7 ) see Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), §§3.3 and 3.14).\nIn ( 11.5.8 ) and ( 11.5.9 ) the path of integration separates the poles of the integrand at $s=0,1,2,\\dots$ from those at $s=-1,-2,-3,\\dots$ .\nFor further integral representations see Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), §§3.3, 3.14), Erdélyi et al. ([1954a](./bib/E.html#bib753 \"Tables of Integral Transforms. Vol. I\"), §§5.17, 15.3), Magnus et al. ([1966](./bib/M.html#bib1534 \"Formulas and Theorems for the Special Functions of Mathematical Physics\"), p. 114), Oberhettinger ([1972](./bib/O.html#bib1742 \"Tables of Bessel Transforms\")), Oberhettinger ([1974](./bib/O.html#bib1744 \"Tables of Mellin Transforms\"), §2.7), Oberhettinger and Badii ([1973](./bib/O.html#bib1746 \"Tables of Laplace Transforms\"), §2.14), and Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), pp. 330, 374, and 426).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "11.5.1",
+                "latex": "\\mathbf{H}_{\\nu}\\left(z\\right)=\\frac{2(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{1}(1-t^{2})^{\\nu-\\frac{1}{2}}\\sin\\left(zt\\right)\\,\\mathrm{d}t=\\frac{2(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{\\pi/2}\\sin\\left(z\\cos\\theta\\right)(\\sin\\theta)^{2\\nu}\\,\\mathrm{d}\\theta, \\tag{11.5.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "11.5.2",
+                "latex": "\\mathbf{K}_{\\nu}\\left(z\\right)=\\frac{2(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{\\infty}e^{-zt}(1+t^{2})^{\\nu-\\frac{1}{2}}\\,\\mathrm{d}t, \\tag{11.5.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "11.5.3",
+                "latex": "\\mathbf{K}_{0}\\left(z\\right)=\\frac{2}{\\pi}\\int_{0}^{\\infty}e^{-z\\sinh t}\\,\\mathrm{d}t, \\tag{11.5.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "11.5.4",
+                "latex": "\\mathbf{M}_{\\nu}\\left(z\\right)=-\\frac{2(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{1}e^{-zt}(1-t^{2})^{\\nu-\\frac{1}{2}}\\,\\mathrm{d}t, \\tag{11.5.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "11.5.5",
+                "latex": "\\mathbf{M}_{0}\\left(z\\right)=-\\frac{2}{\\pi}\\int_{0}^{\\pi/2}e^{-z\\cos\\theta}\\,\\mathrm{d}\\theta, \\tag{11.5.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "11.5.6",
+                "latex": "\\mathbf{L}_{\\nu}\\left(z\\right)=\\frac{2(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{\\pi/2}\\sinh\\left(z\\cos\\theta\\right)(\\sin\\theta)^{2\\nu}\\,\\mathrm{d}\\theta, \\tag{11.5.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "11.5.7",
+                "latex": "I_{-\\nu}\\left(x\\right)-\\mathbf{L}_{\\nu}\\left(x\\right)=\\frac{2(\\tfrac{1}{2}x)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{\\infty}(1+t^{2})^{\\nu-\\frac{1}{2}}\\sin\\left(xt\\right)\\,\\mathrm{d}t, \\tag{11.5.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "11.5.8",
+                "latex": "(\\tfrac{1}{2}x)^{-\\nu-1}\\mathbf{H}_{\\nu}\\left(x\\right)=-\\frac{1}{2\\pi i}\\int_{-i\\infty}^{i\\infty}\\frac{\\pi\\csc\\left(\\pi s\\right)}{\\Gamma\\left(\\tfrac{3}{2}+s\\right)\\Gamma\\left(\\tfrac{3}{2}+\\nu+s\\right)}(\\tfrac{1}{4}x^{2})^{s}\\,\\mathrm{d}s, \\tag{11.5.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "11.5.9",
+                "latex": "(\\tfrac{1}{2}z)^{-\\nu-1}\\mathbf{L}_{\\nu}\\left(z\\right)=\\frac{1}{2\\pi i}\\int_{\\infty}^{(0+)}\\frac{\\pi\\csc\\left(\\pi s\\right)}{\\Gamma\\left(\\tfrac{3}{2}+s\\right)\\Gamma\\left(\\tfrac{3}{2}+\\nu+s\\right)}(-\\tfrac{1}{4}z^{2})^{s}\\,\\mathrm{d}s. \\tag{11.5.9}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\mathbf{H}_{\\nu}\\left(z\\right)=\\frac{2(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{1}(1-t^{2})^{\\nu-\\frac{1}{2}}\\sin\\left(zt\\right)\\,\\mathrm{d}t=\\frac{2(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{\\pi/2}\\sin\\left(z\\cos\\theta\\right)(\\sin\\theta)^{2\\nu}\\,\\mathrm{d}\\theta, \\tag{11.5.1}",
+              "\\mathbf{K}_{\\nu}\\left(z\\right)=\\frac{2(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{\\infty}e^{-zt}(1+t^{2})^{\\nu-\\frac{1}{2}}\\,\\mathrm{d}t, \\tag{11.5.2}",
+              "\\mathbf{K}_{0}\\left(z\\right)=\\frac{2}{\\pi}\\int_{0}^{\\infty}e^{-z\\sinh t}\\,\\mathrm{d}t, \\tag{11.5.3}",
+              "\\mathbf{M}_{\\nu}\\left(z\\right)=-\\frac{2(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{1}e^{-zt}(1-t^{2})^{\\nu-\\frac{1}{2}}\\,\\mathrm{d}t, \\tag{11.5.4}",
+              "\\mathbf{M}_{0}\\left(z\\right)=-\\frac{2}{\\pi}\\int_{0}^{\\pi/2}e^{-z\\cos\\theta}\\,\\mathrm{d}\\theta, \\tag{11.5.5}",
+              "\\mathbf{L}_{\\nu}\\left(z\\right)=\\frac{2(\\tfrac{1}{2}z)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{\\pi/2}\\sinh\\left(z\\cos\\theta\\right)(\\sin\\theta)^{2\\nu}\\,\\mathrm{d}\\theta, \\tag{11.5.6}",
+              "I_{-\\nu}\\left(x\\right)-\\mathbf{L}_{\\nu}\\left(x\\right)=\\frac{2(\\tfrac{1}{2}x)^{\\nu}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\int_{0}^{\\infty}(1+t^{2})^{\\nu-\\frac{1}{2}}\\sin\\left(xt\\right)\\,\\mathrm{d}t, \\tag{11.5.7}",
+              "(\\tfrac{1}{2}x)^{-\\nu-1}\\mathbf{H}_{\\nu}\\left(x\\right)=-\\frac{1}{2\\pi i}\\int_{-i\\infty}^{i\\infty}\\frac{\\pi\\csc\\left(\\pi s\\right)}{\\Gamma\\left(\\tfrac{3}{2}+s\\right)\\Gamma\\left(\\tfrac{3}{2}+\\nu+s\\right)}(\\tfrac{1}{4}x^{2})^{s}\\,\\mathrm{d}s, \\tag{11.5.8}",
+              "(\\tfrac{1}{2}z)^{-\\nu-1}\\mathbf{L}_{\\nu}\\left(z\\right)=\\frac{1}{2\\pi i}\\int_{\\infty}^{(0+)}\\frac{\\pi\\csc\\left(\\pi s\\right)}{\\Gamma\\left(\\tfrac{3}{2}+s\\right)\\Gamma\\left(\\tfrac{3}{2}+\\nu+s\\right)}(-\\tfrac{1}{4}z^{2})^{s}\\,\\mathrm{d}s. \\tag{11.5.9}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Struve functions and modified Struve functions",
+                "along real line",
+                "integral representations",
+                "contour integrals",
+                "Mellin–Barnes type",
+                "compendia"
+              ],
+              "referenciado_por": [
+                "§11.13(iii)"
+              ],
+              "notas_bibliograficas": [
+                "For ( 11.5.1 )–( 11.5.3 ), ( 11.5.6 ), and ( 11.5.7 ) see Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), pp. 328,331,332), together with ( 11.2.5 ) in the case of ( 11.5.2 ) and ( 11.5.3 ), and ( 11.2.2 ) in the case of ( 11.5.6 ). For ( 11.5.4 ) and ( 11.5.5 ) see Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), Eq. (3.102)) and collapse the integration path onto the interval $[0,1]$ .",
+                "For ( 11.5.8 ) see Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), §3.7) with modified convergence conditions. For ( 11.5.9 ) deform the integration path in ( 11.5.8 ) into a loop and use ( 11.2.2 )."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.5 and Ch.11",
+                "Annotations for §11.5(ii) , §11.5 and Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1954a",
+                "archivo_destino": "bib/E.html#bib753",
+                "titulo_referencia": "Tables of Integral Transforms. Vol. I"
+              },
+              {
+                "texto": "1966",
+                "archivo_destino": "bib/M.html#bib1534",
+                "titulo_referencia": "Formulas and Theorems for the Special Functions of Mathematical Physics"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/O.html#bib1742",
+                "titulo_referencia": "Tables of Bessel Transforms"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/O.html#bib1744",
+                "titulo_referencia": "Tables of Mellin Transforms"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/O.html#bib1746",
+                "titulo_referencia": "Tables of Laplace Transforms"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "11.6",
+          "titulo_original": "Asymptotic Expansions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.6.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.6.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.6 Asymptotic Expansions",
+            "prosa_teorica": "where $\\delta$ is an arbitrary small positive constant. If the series on the right-hand side of ( 11.6.1 ) is truncated after $m(\\geq 0)$ terms, then the remainder term $R_{m}(z)$ is $O\\left(z^{\\nu-2m-1}\\right)$ . If $\\nu$ is real, $z$ is positive, and $m+\\tfrac{1}{2}-\\nu\\geq 0$ , then $R_{m}(z)$ is of the same sign and numerically less than the first neglected term.\nFor re-expansions of the remainder terms in ( 11.6.1 ) and ( 11.6.2 ), see Dingle ([1973](./bib/D.html#bib670 \"Asymptotic Expansions: Their Derivation and Interpretation\"), p. 445).\nFor the corresponding expansions for $\\mathbf{H}_{\\nu}\\left(z\\right)$ and $\\mathbf{L}_{\\nu}\\left(z\\right)$ combine ( 11.6.1 ), ( 11.6.2 ) with ( 11.2.5 ), ( 11.2.6 ), ( 10.17.4 ), and ( 10.40.1 ).\nwhere $\\gamma$ is Euler’s constant (§ 5.2(ii) ).\nMore fully, the series ( 11.2.1 ) and ( 11.2.2 ) can be regarded as generalized asymptotic expansions (§ 2.1(v) ).\nFor fixed $\\lambda(>1)$\nand for fixed $\\lambda$ $(>0)$\nHere\n<a id=\"E8\"></a>\nThese and higher coefficients $c_{k}(\\lambda)$ can be computed via the representations in Nemes ([2015b](./bib/N.html#bib2867 \"On the large argument asymptotics of the Lommel function via Stieltjes transforms\")).\nFor the corresponding result for $\\mathbf{H}_{\\nu}\\left(\\lambda\\nu\\right)$ use ( 11.2.5 ) and ( 10.19.6 ). See also Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), p. 336).\nFor fixed $\\lambda$ $(>0)$\nand for an estimate of the relative error in this approximation see Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), p. 336).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "11.6.1",
+                "latex": "\\mathbf{K}_{\\nu}\\left(z\\right)\\sim\\frac{1}{\\pi}\\sum_{k=0}^{\\infty}\\frac{\\Gamma\\left(k+\\tfrac{1}{2}\\right)(\\tfrac{1}{2}z)^{\\nu-2k-1}}{\\Gamma\\left(\\nu+\\tfrac{1}{2}-k\\right)}, \\tag{11.6.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "11.6.2",
+                "latex": "\\mathbf{M}_{\\nu}\\left(z\\right)\\sim\\frac{1}{\\pi}\\sum_{k=0}^{\\infty}(-1)^{k+1}\\frac{\\Gamma\\left(k+\\tfrac{1}{2}\\right)(\\tfrac{1}{2}z)^{\\nu-2k-1}}{\\Gamma\\left(\\nu+\\tfrac{1}{2}-k\\right)}, \\tag{11.6.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "11.6.3",
+                "latex": "\\int_{0}^{z}\\mathbf{K}_{0}\\left(t\\right)\\,\\mathrm{d}t-\\frac{2}{\\pi}(\\ln\\left(2z\\right)+\\gamma)\\sim\\frac{2}{\\pi}\\sum_{k=1}^{\\infty}(-1)^{k+1}\\frac{(2k)!(2k-1)!}{(k!)^{2}(2z)^{2k}}, \\tag{11.6.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "11.6.4",
+                "latex": "\\int_{0}^{z}\\mathbf{M}_{0}\\left(t\\right)\\,\\mathrm{d}t+\\frac{2}{\\pi}(\\ln\\left(2z\\right)+\\gamma)\\sim\\frac{2}{\\pi}\\sum_{k=1}^{\\infty}\\frac{(2k)!(2k-1)!}{(k!)^{2}(2z)^{2k}}, \\tag{11.6.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "11.6.5",
+                "latex": "\\mathbf{H}_{\\nu}\\left(z\\right),\\mathbf{L}_{\\nu}\\left(z\\right)\\sim\\frac{z}{\\pi\\nu\\sqrt{2}}\\left(\\frac{ez}{2\\nu}\\right)^{\\nu}, \\tag{11.6.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "11.6.6",
+                "latex": "\\mathbf{K}_{\\nu}\\left(\\lambda\\nu\\right)\\sim\\frac{(\\tfrac{1}{2}\\lambda\\nu)^{\\nu-1}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\sum_{k=0}^{\\infty}\\frac{k!c_{k}(\\lambda)}{\\nu^{k}}, \\tag{11.6.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "11.6.7",
+                "latex": "\\mathbf{M}_{\\nu}\\left(\\lambda\\nu\\right)\\sim-\\frac{(\\frac{1}{2}\\lambda\\nu)^{\\nu-1}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\frac{1}{2}\\right)}\\sum_{k=0}^{\\infty}\\frac{k!c_{k}(i\\lambda)}{\\nu^{k}}, \\tag{11.6.7}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "11.6.8",
+                "latex": "\\displaystyle c_{0}(\\lambda) \\displaystyle=1, \\tag{11.6.8}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle c_{1}(\\lambda) \\displaystyle=2\\lambda^{-2},"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle c_{2}(\\lambda) \\displaystyle=6\\lambda^{-4}-\\tfrac{1}{2}\\lambda^{-2},"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle c_{3}(\\lambda) \\displaystyle=20\\lambda^{-6}-4\\lambda^{-4},"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle c_{4}(\\lambda) \\displaystyle=70\\lambda^{-8}-\\tfrac{45}{2}\\lambda^{-6}+\\tfrac{3}{8}\\lambda^{-4}."
+              },
+              {
+                "id": "E9",
+                "tag": "11.6.9",
+                "latex": "\\mathbf{L}_{\\nu}\\left(\\lambda\\nu\\right)\\sim I_{\\nu}\\left(\\lambda\\nu\\right), \\tag{11.6.9}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\mathbf{K}_{\\nu}\\left(z\\right)\\sim\\frac{1}{\\pi}\\sum_{k=0}^{\\infty}\\frac{\\Gamma\\left(k+\\tfrac{1}{2}\\right)(\\tfrac{1}{2}z)^{\\nu-2k-1}}{\\Gamma\\left(\\nu+\\tfrac{1}{2}-k\\right)}, \\tag{11.6.1}",
+              "\\mathbf{M}_{\\nu}\\left(z\\right)\\sim\\frac{1}{\\pi}\\sum_{k=0}^{\\infty}(-1)^{k+1}\\frac{\\Gamma\\left(k+\\tfrac{1}{2}\\right)(\\tfrac{1}{2}z)^{\\nu-2k-1}}{\\Gamma\\left(\\nu+\\tfrac{1}{2}-k\\right)}, \\tag{11.6.2}",
+              "\\int_{0}^{z}\\mathbf{K}_{0}\\left(t\\right)\\,\\mathrm{d}t-\\frac{2}{\\pi}(\\ln\\left(2z\\right)+\\gamma)\\sim\\frac{2}{\\pi}\\sum_{k=1}^{\\infty}(-1)^{k+1}\\frac{(2k)!(2k-1)!}{(k!)^{2}(2z)^{2k}}, \\tag{11.6.3}",
+              "\\int_{0}^{z}\\mathbf{M}_{0}\\left(t\\right)\\,\\mathrm{d}t+\\frac{2}{\\pi}(\\ln\\left(2z\\right)+\\gamma)\\sim\\frac{2}{\\pi}\\sum_{k=1}^{\\infty}\\frac{(2k)!(2k-1)!}{(k!)^{2}(2z)^{2k}}, \\tag{11.6.4}",
+              "\\mathbf{H}_{\\nu}\\left(z\\right),\\mathbf{L}_{\\nu}\\left(z\\right)\\sim\\frac{z}{\\pi\\nu\\sqrt{2}}\\left(\\frac{ez}{2\\nu}\\right)^{\\nu}, \\tag{11.6.5}",
+              "\\mathbf{K}_{\\nu}\\left(\\lambda\\nu\\right)\\sim\\frac{(\\tfrac{1}{2}\\lambda\\nu)^{\\nu-1}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}\\sum_{k=0}^{\\infty}\\frac{k!c_{k}(\\lambda)}{\\nu^{k}}, \\tag{11.6.6}",
+              "\\mathbf{M}_{\\nu}\\left(\\lambda\\nu\\right)\\sim-\\frac{(\\frac{1}{2}\\lambda\\nu)^{\\nu-1}}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\frac{1}{2}\\right)}\\sum_{k=0}^{\\infty}\\frac{k!c_{k}(i\\lambda)}{\\nu^{k}}, \\tag{11.6.7}",
+              "\\displaystyle c_{0}(\\lambda) \\displaystyle=1, \\tag{11.6.8}",
+              "\\displaystyle c_{1}(\\lambda) \\displaystyle=2\\lambda^{-2},",
+              "\\displaystyle c_{2}(\\lambda) \\displaystyle=6\\lambda^{-4}-\\tfrac{1}{2}\\lambda^{-2},",
+              "\\displaystyle c_{3}(\\lambda) \\displaystyle=20\\lambda^{-6}-4\\lambda^{-4},",
+              "\\displaystyle c_{4}(\\lambda) \\displaystyle=70\\lambda^{-8}-\\tfrac{45}{2}\\lambda^{-6}+\\tfrac{3}{8}\\lambda^{-4}.",
+              "\\mathbf{L}_{\\nu}\\left(\\lambda\\nu\\right)\\sim I_{\\nu}\\left(\\lambda\\nu\\right), \\tag{11.6.9}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Struve functions and modified Struve functions",
+                "asymptotic expansions",
+                "large argument",
+                "remainder terms",
+                "generalized",
+                "large order"
+              ],
+              "simbolos": [
+                "$\\lambda$: parameter and $c_{k}(\\lambda)$: expansion function"
+              ],
+              "referenciado_por": [
+                "§11.13(ii)",
+                "§11.13(iv)",
+                "Erratum (V1.0.11) for References  **Change (effective with 1.0.11):**  The phrase “and for higher coefficients $c_{k}(\\lambda)$ see Dingle ([1973](./bib/D.html#bib670 \"Asymptotic Expansions: Their Derivation and Interpretation\")",
+                "p. 203)” that appeared formerly below ( 11.6.8 ) was replaced by a sentence with reference to Nemes ([2015b](./bib/N.html#bib2867 \"On the large argument asymptotics of the Lommel function via Stieltjes transforms\")).",
+                "§11.6(iii)"
+              ],
+              "notas_bibliograficas": [
+                "For ( 11.6.1 ) apply Watson’s lemma (§ 2.4(i) ) to ( 11.5.2 ), or combine Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), p. 333, Eq. (2)) with ( 11.2.5 ). See also the subsequent text in this reference, and Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), p. 277, Ex. 15.5). For ( 11.6.2 ) convert ( 11.5.4 ) to a loop integral $\\int_{0}^{(1+)}$ to remove the restriction $\\Re\\nu>-\\frac{1}{2}$ , extend the loop to pass through the point $t=\\infty$ on the positive real axis, then apply Laplace’s method (§ 2.4(iii) ) to each of the two integrals with paths from $t=0$ to $t=\\infty$ , one passing below $t=1$ and the other passing above $t=1$ . For ( 11.6.3 ) write the integrals over the intervals $[0,\\infty)$ and $[z,\\infty)$ ; use ( 11.6.1 ) with the first term extracted, and a limiting procedure on the integral over $[0,\\infty)$ . For ( 11.6.4 ) replace $z$ by $iz$ in ( 11.6.3 ) and apply ( 11.2.5 ), ( 11.2.6 ), ( 10.27.11 ).",
+                "Apply ( 5.11.7 ) to ( 11.2.1 ), ( 11.2.2 ).",
+                "For ( 11.6.6 ) and ( 11.6.9 ) see Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), §10.43): a similar method can be used for ( 11.6.7 ), starting from ( 11.5.4 )."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.6 and Ch.11",
+                "Annotations for §11.6(iii) , §11.6 and Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              },
+              {
+                "texto": "0,\\infty)$ and $[z,\\infty)$ ; use ( 11.6.1 ) with the first term extracted, and a limiting procedure on the integral over $[0,\\infty)$ . For ( 11.6.4 ) replace $z$ by $iz$ in ( 11.6.3 ) and apply ( 11.2.5 ), ( 11.2.6 ), ( 10.27.11 ).\n\n**Referenced by:**\n\n§11.13(iv)\n\n**See also:**\n\nAnnotations for §11.6 and Ch.11\n:::\n\n\n<a id=\"E1\"></a>\n$$\n\\mathbf{K}_{\\nu}\\left(z\\right)\\sim\\frac{1}{\\pi}\\sum_{k=0}^{\\infty}\\frac{\\Gamma\\left(k+\\tfrac{1}{2}\\right)(\\tfrac{1}{2}z)^{\\nu-2k-1}}{\\Gamma\\left(\\nu+\\tfrac{1}{2}-k\\right)}, \\tag{11.6.1}\n$$\n\nwhere $\\delta$ is an arbitrary small positive constant. If the series on the right-hand side of ( 11.6.1 ) is truncated after $m(\\geq 0)$ terms, then the remainder term $R_{m}(z)$ is $O\\left(z^{\\nu-2m-1}\\right)$ . If $\\nu$ is real, $z$ is positive, and $m+\\tfrac{1}{2}-\\nu\\geq 0$ , then $R_{m}(z)$ is of the same sign and numerically less than the first neglected term.\n\n\n<a id=\"E2\"></a>\n$$\n\\mathbf{M}_{\\nu}\\left(z\\right)\\sim\\frac{1}{\\pi}\\sum_{k=0}^{\\infty}(-1)^{k+1}\\frac{\\Gamma\\left(k+\\tfrac{1}{2}\\right)(\\tfrac{1}{2}z)^{\\nu-2k-1}}{\\Gamma\\left(\\nu+\\tfrac{1}{2}-k\\right)}, \\tag{11.6.2}\n$$\n\nFor re-expansions of the remainder terms in ( 11.6.1 ) and ( 11.6.2 ), see Dingle ([1973",
+                "archivo_destino": "bib/D.html#bib670",
+                "titulo_referencia": "Asymptotic Expansions: Their Derivation and Interpretation"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/D.html#bib670",
+                "titulo_referencia": "Asymptotic Expansions: Their Derivation and Interpretation"
+              },
+              {
+                "texto": "2015b",
+                "archivo_destino": "bib/N.html#bib2867",
+                "titulo_referencia": "On the large argument asymptotics of the Lommel function via Stieltjes transforms"
+              },
+              {
+                "texto": "2015b",
+                "archivo_destino": "bib/N.html#bib2867",
+                "titulo_referencia": "On the large argument asymptotics of the Lommel function via Stieltjes transforms"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "11.7",
+          "titulo_original": "Integrals and Sums",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.7.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.7.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.7 Integrals and Sums",
+            "prosa_teorica": "If\nthen\n<a id=\"E8\"></a>\nFor other integrals involving products of Struve functions see Zanovello ([1978](./bib/Z.html#bib2482 \"Su un integrale definito del prodotto di due funzioni di Struve\"), [1995](./bib/Z.html#bib2483 \"Numerical analysis of Struve functions with applications to other special functions\")). For integrals involving products of $\\mathbf{M}_{\\nu}\\left(t\\right)$ functions, see Paris and Sy ([1983](./bib/P.html#bib1846 \"Influence of equilibrium shear flow along the magnetic field on the resistive tearing instability\"), Appendix).\nThe following Laplace transforms of $\\mathbf{H}_{\\nu}\\left(t\\right)$ require $\\Re a>0$ for convergence, while those of $\\mathbf{L}_{\\nu}\\left(t\\right)$ require $\\Re a>1$ .\n<a id=\"E16\"></a>\nFor integrals of $\\mathbf{H}_{\\nu}\\left(x\\right)$ and $\\mathbf{L}_{\\nu}\\left(x\\right)$ with respect to the order $\\nu$ , see Apelblat ([1989](./bib/index.html#bib112 \"Derivatives and integrals with respect to the order of the Struve functions ⁢ H ν ( x ) and ⁢ L ν ( x )\")).\nFor further integrals see Apelblat ([1983](./bib/index.html#bib111 \"Table of Definite and Infinite Integrals\"), §12.16), Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), Chapter 3), Erdélyi et al. ([1954a](./bib/E.html#bib753 \"Tables of Integral Transforms. Vol. I\"), §§4.19, 6.8, 8.15, 9.4, 10.3, 11.3, and 15.3), Luke ([1962](./bib/L.html#bib1492 \"Integrals of Bessel Functions\"), Chapters 9, 11), Gradshteyn and Ryzhik ([2015](./bib/G.html#bib972 \"Table of integrals, series, and products\"), §6.8), Marichev ([1983](./bib/M.html#bib1546 \"Handbook of Integral Transforms of Higher Transcendental Functions: Theory and Algorithmic Tables\"), pp. 192–193 and 215–216), Oberhettinger ([1972](./bib/O.html#bib1742 \"Tables of Bessel Transforms\")), Oberhettinger ([1974](./bib/O.html#bib1744 \"Tables of Mellin Transforms\"), §1.12), Oberhettinger ([1990](./bib/O.html#bib1745 \"Tables of Fourier Transforms and Fourier Transforms of Distributions\"), §§1.21 and 2.21), Oberhettinger and Badii ([1973](./bib/O.html#bib1746 \"Tables of Laplace Transforms\"), §1.16), Prudnikov et al. ([1990](./bib/P.html#bib1905 \"Integrals and Series: More Special Functions, Vol. 3\"), §§1.4 and 2.7), Prudnikov et al. ([1992a](./bib/P.html#bib1906 \"Integrals and Series: Direct Laplace Transforms, Vol. 4\"), §3.17), and Prudnikov et al. ([1992b](./bib/P.html#bib1907 \"Integrals and Series: Inverse Laplace Transforms, Vol. 5\"), §3.17).\nFor sums of Struve functions see Hansen ([1975](./bib/H.html#bib1035 \"A Table of Series and Products\"), p. 456) and Prudnikov et al. ([1990](./bib/P.html#bib1905 \"Integrals and Series: More Special Functions, Vol. 3\"), §6.4.1). See also Baricz and Pogány ([2013](./bib/B.html#bib12 \"Integral representations and summations of the modified Struve function\"))",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "11.7.1",
+                "latex": "\\int z^{\\nu}\\mathbf{H}_{\\nu-1}\\left(z\\right)\\,\\mathrm{d}z=z^{\\nu}\\mathbf{H}_{\\nu}\\left(z\\right), \\tag{11.7.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "11.7.2",
+                "latex": "\\int z^{-\\nu}\\mathbf{H}_{\\nu+1}\\left(z\\right)\\,\\mathrm{d}z=-z^{-\\nu}\\mathbf{H}_{\\nu}\\left(z\\right)+\\frac{2^{-\\nu}z}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.7.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "11.7.3",
+                "latex": "\\int z^{\\nu}\\mathbf{L}_{\\nu-1}\\left(z\\right)\\,\\mathrm{d}z=z^{\\nu}\\mathbf{L}_{\\nu}\\left(z\\right), \\tag{11.7.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "11.7.4",
+                "latex": "\\int z^{-\\nu}\\mathbf{L}_{\\nu+1}\\left(z\\right)\\,\\mathrm{d}z=z^{-\\nu}\\mathbf{L}_{\\nu}\\left(z\\right)-\\frac{2^{-\\nu}z}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}. \\tag{11.7.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "11.7.5",
+                "latex": "f_{\\nu}(z)=\\int_{0}^{z}t^{\\nu}\\mathbf{H}_{\\nu}\\left(t\\right)\\,\\mathrm{d}t, \\tag{11.7.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "11.7.6",
+                "latex": "f_{\\nu+1}(z)=(2\\nu+1)f_{\\nu}(z)-z^{\\nu+1}\\mathbf{H}_{\\nu}\\left(z\\right)+\\frac{(\\tfrac{1}{2}z^{2})^{\\nu+1}}{(\\nu+1)\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.7.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "11.7.7",
+                "latex": "\\int_{0}^{\\pi/2}\\mathbf{H}_{\\nu}\\left(z\\sin\\theta\\right)\\frac{(\\sin\\theta)^{\\nu+1}}{(\\cos\\theta)^{2\\nu}}\\,\\mathrm{d}\\theta=\\frac{2^{-\\nu}}{\\sqrt{\\pi}}\\Gamma\\left(\\tfrac{1}{2}-\\nu\\right)z^{\\nu-1}(1-\\cos z), \\tag{11.7.7}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "11.7.8",
+                "latex": "\\displaystyle\\int_{0}^{\\infty}\\mathbf{H}_{0}\\left(t\\right)\\,\\frac{\\,\\mathrm{d}t}{t} \\displaystyle=\\tfrac{1}{2}\\pi, \\tag{11.7.8}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\int_{0}^{\\infty}\\mathbf{H}_{1}\\left(t\\right)\\,\\frac{\\,\\mathrm{d}t}{t^{2}} \\displaystyle=\\tfrac{1}{4}\\pi,"
+              },
+              {
+                "id": "E9",
+                "tag": "11.7.9",
+                "latex": "\\int_{0}^{\\infty}\\mathbf{H}_{\\nu}\\left(t\\right)\\,\\mathrm{d}t=-\\cot\\left(\\tfrac{1}{2}\\pi\\nu\\right), \\tag{11.7.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "11.7.10",
+                "latex": "\\int_{0}^{\\infty}t^{-\\nu-1}\\mathbf{H}_{\\nu}\\left(t\\right)\\,\\mathrm{d}t=\\frac{\\pi}{2^{\\nu+1}\\Gamma\\left(\\nu+1\\right)}, \\tag{11.7.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "11.7.11",
+                "latex": "\\int_{0}^{\\infty}t^{\\mu-\\nu-1}\\mathbf{H}_{\\nu}\\left(t\\right)\\,\\mathrm{d}t=\\frac{\\Gamma\\left(\\tfrac{1}{2}\\mu\\right)2^{\\mu-\\nu-1}\\tan\\left(\\tfrac{1}{2}\\pi\\mu\\right)}{\\Gamma\\left(\\nu-\\tfrac{1}{2}\\mu+1\\right)}, \\tag{11.7.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "11.7.12",
+                "latex": "\\int_{0}^{\\infty}t^{-\\mu-\\nu}\\mathbf{H}_{\\mu}\\left(t\\right)\\mathbf{H}_{\\nu}\\left(t\\right)\\,\\mathrm{d}t=\\frac{\\sqrt{\\pi}\\Gamma\\left(\\mu+\\nu\\right)}{2^{\\mu+\\nu}\\Gamma\\left(\\mu+\\nu+\\tfrac{1}{2}\\right)\\Gamma\\left(\\mu+\\tfrac{1}{2}\\right)\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}, \\tag{11.7.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "11.7.13",
+                "latex": "\\int_{0}^{\\infty}e^{-at}\\mathbf{H}_{0}\\left(t\\right)\\,\\mathrm{d}t=\\frac{2}{\\pi\\sqrt{1+a^{2}}}\\ln\\left(\\frac{1+\\sqrt{1+a^{2}}}{a}\\right), \\tag{11.7.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "11.7.14",
+                "latex": "\\int_{0}^{\\infty}e^{-at}\\mathbf{H}_{1}\\left(t\\right)\\,\\mathrm{d}t=\\frac{2}{\\pi\na}-\\frac{2a}{\\pi\\sqrt{1+a^{2}}}\\ln\\left(\\frac{1+\\sqrt{1+a^{2}}}{a}\\right), \\tag{11.7.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "11.7.15",
+                "latex": "\\int_{0}^{\\infty}e^{-at}\\mathbf{L}_{0}\\left(t\\right)\\,\\mathrm{d}t=\\frac{2}{\\pi\\sqrt{a^{2}\\!-\\!1}}\\operatorname{arcsin}\\left(\\frac{1}{a}\\right), \\tag{11.7.15}"
+              },
+              {
+                "id": "Ex3",
+                "tag": "11.7.16",
+                "latex": "\\int_{0}^{\\infty}e^{-at}\\mathbf{L}_{1}\\left(t\\right)\\,\\mathrm{d}t \\tag{11.7.16}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle=\\frac{2a}{\\pi\\sqrt{a^{2}\\!-\\!1}}\\operatorname{arctan}\\left(\\frac{1}{\\sqrt{a^{2}\\!-\\!1}}\\right)-\\frac{2}{\\pi a}."
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\int z^{\\nu}\\mathbf{H}_{\\nu-1}\\left(z\\right)\\,\\mathrm{d}z=z^{\\nu}\\mathbf{H}_{\\nu}\\left(z\\right), \\tag{11.7.1}",
+              "\\int z^{-\\nu}\\mathbf{H}_{\\nu+1}\\left(z\\right)\\,\\mathrm{d}z=-z^{-\\nu}\\mathbf{H}_{\\nu}\\left(z\\right)+\\frac{2^{-\\nu}z}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.7.2}",
+              "\\int z^{\\nu}\\mathbf{L}_{\\nu-1}\\left(z\\right)\\,\\mathrm{d}z=z^{\\nu}\\mathbf{L}_{\\nu}\\left(z\\right), \\tag{11.7.3}",
+              "\\int z^{-\\nu}\\mathbf{L}_{\\nu+1}\\left(z\\right)\\,\\mathrm{d}z=z^{-\\nu}\\mathbf{L}_{\\nu}\\left(z\\right)-\\frac{2^{-\\nu}z}{\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}. \\tag{11.7.4}",
+              "f_{\\nu}(z)=\\int_{0}^{z}t^{\\nu}\\mathbf{H}_{\\nu}\\left(t\\right)\\,\\mathrm{d}t, \\tag{11.7.5}",
+              "f_{\\nu+1}(z)=(2\\nu+1)f_{\\nu}(z)-z^{\\nu+1}\\mathbf{H}_{\\nu}\\left(z\\right)+\\frac{(\\tfrac{1}{2}z^{2})^{\\nu+1}}{(\\nu+1)\\sqrt{\\pi}\\Gamma\\left(\\nu+\\tfrac{3}{2}\\right)}, \\tag{11.7.6}",
+              "\\int_{0}^{\\pi/2}\\mathbf{H}_{\\nu}\\left(z\\sin\\theta\\right)\\frac{(\\sin\\theta)^{\\nu+1}}{(\\cos\\theta)^{2\\nu}}\\,\\mathrm{d}\\theta=\\frac{2^{-\\nu}}{\\sqrt{\\pi}}\\Gamma\\left(\\tfrac{1}{2}-\\nu\\right)z^{\\nu-1}(1-\\cos z), \\tag{11.7.7}",
+              "\\displaystyle\\int_{0}^{\\infty}\\mathbf{H}_{0}\\left(t\\right)\\,\\frac{\\,\\mathrm{d}t}{t} \\displaystyle=\\tfrac{1}{2}\\pi, \\tag{11.7.8}",
+              "\\displaystyle\\int_{0}^{\\infty}\\mathbf{H}_{1}\\left(t\\right)\\,\\frac{\\,\\mathrm{d}t}{t^{2}} \\displaystyle=\\tfrac{1}{4}\\pi,",
+              "\\int_{0}^{\\infty}\\mathbf{H}_{\\nu}\\left(t\\right)\\,\\mathrm{d}t=-\\cot\\left(\\tfrac{1}{2}\\pi\\nu\\right), \\tag{11.7.9}",
+              "\\int_{0}^{\\infty}t^{-\\nu-1}\\mathbf{H}_{\\nu}\\left(t\\right)\\,\\mathrm{d}t=\\frac{\\pi}{2^{\\nu+1}\\Gamma\\left(\\nu+1\\right)}, \\tag{11.7.10}",
+              "\\int_{0}^{\\infty}t^{\\mu-\\nu-1}\\mathbf{H}_{\\nu}\\left(t\\right)\\,\\mathrm{d}t=\\frac{\\Gamma\\left(\\tfrac{1}{2}\\mu\\right)2^{\\mu-\\nu-1}\\tan\\left(\\tfrac{1}{2}\\pi\\mu\\right)}{\\Gamma\\left(\\nu-\\tfrac{1}{2}\\mu+1\\right)}, \\tag{11.7.11}",
+              "\\int_{0}^{\\infty}t^{-\\mu-\\nu}\\mathbf{H}_{\\mu}\\left(t\\right)\\mathbf{H}_{\\nu}\\left(t\\right)\\,\\mathrm{d}t=\\frac{\\sqrt{\\pi}\\Gamma\\left(\\mu+\\nu\\right)}{2^{\\mu+\\nu}\\Gamma\\left(\\mu+\\nu+\\tfrac{1}{2}\\right)\\Gamma\\left(\\mu+\\tfrac{1}{2}\\right)\\Gamma\\left(\\nu+\\tfrac{1}{2}\\right)}, \\tag{11.7.12}",
+              "\\int_{0}^{\\infty}e^{-at}\\mathbf{H}_{0}\\left(t\\right)\\,\\mathrm{d}t=\\frac{2}{\\pi\\sqrt{1+a^{2}}}\\ln\\left(\\frac{1+\\sqrt{1+a^{2}}}{a}\\right), \\tag{11.7.13}",
+              "\\int_{0}^{\\infty}e^{-at}\\mathbf{H}_{1}\\left(t\\right)\\,\\mathrm{d}t=\\frac{2}{\\pi\na}-\\frac{2a}{\\pi\\sqrt{1+a^{2}}}\\ln\\left(\\frac{1+\\sqrt{1+a^{2}}}{a}\\right), \\tag{11.7.14}",
+              "\\int_{0}^{\\infty}e^{-at}\\mathbf{L}_{0}\\left(t\\right)\\,\\mathrm{d}t=\\frac{2}{\\pi\\sqrt{a^{2}\\!-\\!1}}\\operatorname{arcsin}\\left(\\frac{1}{a}\\right), \\tag{11.7.15}",
+              "\\int_{0}^{\\infty}e^{-at}\\mathbf{L}_{1}\\left(t\\right)\\,\\mathrm{d}t \\tag{11.7.16}",
+              "\\displaystyle=\\frac{2a}{\\pi\\sqrt{a^{2}\\!-\\!1}}\\operatorname{arctan}\\left(\\frac{1}{\\sqrt{a^{2}\\!-\\!1}}\\right)-\\frac{2}{\\pi a}."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Struve functions and modified Struve functions",
+                "indefinite",
+                "integrals",
+                "definite",
+                "products",
+                "Laplace transforms",
+                "with respect to order",
+                "compendia",
+                "sums"
+              ],
+              "simbolos": [
+                "$\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\,\\mathrm{d}x$: differential of $x$ and $\\int$: integral",
+                "$\\pi$: the ratio of the circumference of a circle to its diameter , $\\,\\mathrm{d}x$: differential of $x$ , $\\mathrm{e}$: base of natural logarithm , $\\int$: integral , $\\operatorname{arctan}z$: arctangent function , $\\mathbf{L}_{\\nu}\\left(z\\right)$: modified Struve function and $a$: parameter"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.0.10) for References"
+              ],
+              "notas_bibliograficas": [
+                "Use § 11.4(v) .",
+                "See Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), pp. 68 and 71–72) and Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), pp. 392 and 397).",
+                "See Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), §§ 3.13, 3.15)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "12.1.22"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.7 and Ch.11",
+                "Annotations for §11.7(ii) , §11.7 and Ch.11",
+                "Annotations for §11.7(iii) , §11.7 and Ch.11"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.0.10)",
+                  "descripcion": "A reference to Baricz and Pogány ([2013](./bib/B.html#bib12 \"Integral representations and summations of the modified Struve function\")) was added at the end of this section."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1978",
+                "archivo_destino": "bib/Z.html#bib2482",
+                "titulo_referencia": "Su un integrale definito del prodotto di due funzioni di Struve"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/Z.html#bib2483",
+                "titulo_referencia": "Numerical analysis of Struve functions with applications to other special functions"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/P.html#bib1846",
+                "titulo_referencia": "Influence of equilibrium shear flow along the magnetic field on the resistive tearing instability"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/index.html#bib112",
+                "titulo_referencia": "Derivatives and integrals with respect to the order of the Struve functions ⁢ H ν ( x ) and ⁢ L ν ( x )"
+              },
+              {
+                "texto": "2013",
+                "archivo_destino": "bib/B.html#bib12",
+                "titulo_referencia": "Integral representations and summations of the modified Struve function"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/index.html#bib111",
+                "titulo_referencia": "Table of Definite and Infinite Integrals"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1954a",
+                "archivo_destino": "bib/E.html#bib753",
+                "titulo_referencia": "Tables of Integral Transforms. Vol. I"
+              },
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/L.html#bib1492",
+                "titulo_referencia": "Integrals of Bessel Functions"
+              },
+              {
+                "texto": "2015",
+                "archivo_destino": "bib/G.html#bib972",
+                "titulo_referencia": "Table of integrals, series, and products"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/M.html#bib1546",
+                "titulo_referencia": "Handbook of Integral Transforms of Higher Transcendental Functions: Theory and Algorithmic Tables"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/O.html#bib1742",
+                "titulo_referencia": "Tables of Bessel Transforms"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/O.html#bib1744",
+                "titulo_referencia": "Tables of Mellin Transforms"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/O.html#bib1745",
+                "titulo_referencia": "Tables of Fourier Transforms and Fourier Transforms of Distributions"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/O.html#bib1746",
+                "titulo_referencia": "Tables of Laplace Transforms"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/P.html#bib1905",
+                "titulo_referencia": "Integrals and Series: More Special Functions, Vol. 3"
+              },
+              {
+                "texto": "1992a",
+                "archivo_destino": "bib/P.html#bib1906",
+                "titulo_referencia": "Integrals and Series: Direct Laplace Transforms, Vol. 4"
+              },
+              {
+                "texto": "1992b",
+                "archivo_destino": "bib/P.html#bib1907",
+                "titulo_referencia": "Integrals and Series: Inverse Laplace Transforms, Vol. 5"
+              },
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/H.html#bib1035",
+                "titulo_referencia": "A Table of Series and Products"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/P.html#bib1905",
+                "titulo_referencia": "Integrals and Series: More Special Functions, Vol. 3"
+              },
+              {
+                "texto": "2013",
+                "archivo_destino": "bib/B.html#bib12",
+                "titulo_referencia": "Integral representations and summations of the modified Struve function"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "11.8",
+          "titulo_original": "Analogs to Kelvin Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.8.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.8.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.8 Analogs to Kelvin Functions",
+            "prosa_teorica": "For properties of Struve functions of argument $xe^{\\pm 3\\pi i/4}$ see McLachlan and Meyers ([1936](./bib/M.html#bib1586 \"The ster and stei functions\")).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Kelvin-function analogs",
+                "Struve functions and modified Struve functions",
+                "argument $xe^{\\pm 3\\pi i/4}$"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1936",
+                "archivo_destino": "bib/M.html#bib1586",
+                "titulo_referencia": "The ster and stei functions"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Related Functions",
+      "secciones": [
+        {
+          "seccion_id": "11.9",
+          "titulo_original": "Lommel Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.9.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.9.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.9 Lommel Functions",
+            "prosa_teorica": "The inhomogeneous Bessel differential equation\ncan be regarded as a generalization of ( 11.2.7 ). Provided that $\\mu\\pm\\nu\\neq-1,-3,-5,\\dots$ , ( 11.9.1 ) has the general solution\nwhere $A$ , $B$ are arbitrary constants, $s_{{\\mu},{\\nu}}\\left(z\\right)$ is the *Lommel function* defined by\nand\nAnother solution of ( 11.9.1 ) that is defined for all values of $\\mu$ and $\\nu$ is $S_{{\\mu},{\\nu}}\\left(z\\right)$ , where\nthe right-hand side being replaced by its limiting form when $\\mu\\pm\\nu$ is an odd negative integer.\n<a id=\"E6\"></a>\nFor the foregoing results and further information see Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), §§10.7–10.73) and Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), §3.16).\nWhen $\\mu\\pm\\nu\\neq-1,-2,-3,\\dots$ ,\nFor these and further results see Luke ([1969b](./bib/L.html#bib1496 \"The Special Functions and their Approximations. Vol. 2\"), §9.4.5).\nFor fixed $\\mu$ and $\\nu$ ,\nFor $a_{k}(\\mu,\\nu)$ see ( 11.9.4 ). If either of $\\mu\\pm\\nu$ equals an odd positive integer, then the right-hand side of ( 11.9.9 ) terminates and represents $S_{{\\mu},{\\nu}}\\left(z\\right)$ exactly.\nFor uniform asymptotic expansions, for large $\\nu$ and fixed $\\mu=-1,0,1,2,\\dots$ , of solutions of the inhomogeneous modified Bessel differential equation that corresponds to ( 11.9.1 ) see Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), pp. 388–390). For an error bound for ( 11.9.9 ) and an exponentially-improved extension see Nemes ([2015b](./bib/N.html#bib2867 \"On the large argument asymptotics of the Lommel function via Stieltjes transforms\")).\nFor further information on Lommel functions see Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), §§10.7–10.75) and Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), Chapter 3). For descriptive properties of $s_{{\\mu},{\\nu}}\\left(x\\right)$ see Steinig ([1972](./bib/S.html#bib2168 \"The sign of Lommel’s function\")).\nFor collections of integral representations and integrals see Apelblat ([1983](./bib/index.html#bib111 \"Table of Definite and Infinite Integrals\"), §12.17), Babister ([1967](./bib/B.html#bib166 \"Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations\"), p. 85), Erdélyi et al. ([1954a](./bib/E.html#bib753 \"Tables of Integral Transforms. Vol. I\"), §§4.19 and 5.17), Gradshteyn and Ryzhik ([2015](./bib/G.html#bib972 \"Table of integrals, series, and products\"), §6.86), Marichev ([1983](./bib/M.html#bib1546 \"Handbook of Integral Transforms of Higher Transcendental Functions: Theory and Algorithmic Tables\"), p. 193), Oberhettinger ([1972](./bib/O.html#bib1742 \"Tables of Bessel Transforms\"), pp. 127–128, 168–169, and 188–189), Oberhettinger ([1974](./bib/O.html#bib1744 \"Tables of Mellin Transforms\"), §§1.12 and 2.7), Oberhettinger ([1990](./bib/O.html#bib1745 \"Tables of Fourier Transforms and Fourier Transforms of Distributions\"), pp. 105–106 and 191–192), Oberhettinger and Badii ([1973](./bib/O.html#bib1746 \"Tables of Laplace Transforms\"), §2.14), Prudnikov et al. ([1990](./bib/P.html#bib1905 \"Integrals and Series: More Special Functions, Vol. 3\"), §§1.6 and 2.9), Prudnikov et al. ([1992a](./bib/P.html#bib1906 \"Integrals and Series: Direct Laplace Transforms, Vol. 4\"), §3.34), and Prudnikov et al. ([1992b](./bib/P.html#bib1907 \"Integrals and Series: Inverse Laplace Transforms, Vol. 5\"), §3.32).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "11.9.1",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\frac{1}{z}\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\left(1-\\frac{\\nu^{2}}{z^{2}}\\right)w=z^{\\mu-1} \\tag{11.9.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "11.9.2",
+                "latex": "w=s_{{\\mu},{\\nu}}\\left(z\\right)+AJ_{\\nu}\\left(z\\right)+BY_{\\nu}\\left(z\\right), \\tag{11.9.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "11.9.3",
+                "latex": "s_{{\\mu},{\\nu}}\\left(z\\right)=z^{\\mu+1}\\sum_{k=0}^{\\infty}(-1)^{k}\\frac{z^{2k}}{a_{k+1}(\\mu,\\nu)}, \\tag{11.9.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "11.9.4",
+                "latex": "a_{k}(\\mu,\\nu)=\\prod_{m=1}^{k}\\left((\\mu+2m-1)^{2}-\\nu^{2}\\right)=4^{k}{\\left(\\frac{\\mu-\\nu+1}{2}\\right)_{k}}{\\left(\\frac{\\mu+\\nu+1}{2}\\right)_{k}}, \\tag{11.9.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "11.9.5",
+                "latex": "S_{{\\mu},{\\nu}}\\left(z\\right)=s_{{\\mu},{\\nu}}\\left(z\\right)+2^{\\mu-1}\\Gamma\\left(\\tfrac{1}{2}\\mu+\\tfrac{1}{2}\\nu+\\tfrac{1}{2}\\right)\\Gamma\\left(\\tfrac{1}{2}\\mu-\\tfrac{1}{2}\\nu+\\tfrac{1}{2}\\right)\\,\\left(\\sin\\left(\\tfrac{1}{2}(\\mu-\\nu)\\pi\\right)\\,J_{\\nu}\\left(z\\right)-\\cos\\left(\\tfrac{1}{2}(\\mu-\\nu)\\pi\\right)\\,Y_{\\nu}\\left(z\\right)\\right), \\tag{11.9.5}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "11.9.6",
+                "latex": "\\displaystyle s_{{\\mu},{-\\nu}}\\left(z\\right) \\displaystyle=s_{{\\mu},{\\nu}}\\left(z\\right), \\tag{11.9.6}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle S_{{\\mu},{-\\nu}}\\left(z\\right) \\displaystyle=S_{{\\mu},{\\nu}}\\left(z\\right)."
+              },
+              {
+                "id": "E7",
+                "tag": "11.9.7",
+                "latex": "s_{{\\mu},{\\nu}}\\left(z\\right)=2^{\\mu+1}\\sum_{k=0}^{\\infty}\\,\\frac{(2k+\\mu+1)\\Gamma\\left(k+\\mu+1\\right)}{k!(2k+\\mu-\\nu+1)(2k+\\mu+\\nu+1)}J_{2k+\\mu+1}\\left(z\\right), \\tag{11.9.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "11.9.8",
+                "latex": "s_{{\\mu},{\\nu}}\\left(z\\right)=2^{(\\mu+\\nu-1)/2}\\Gamma\\left(\\tfrac{1}{2}\\mu+\\tfrac{1}{2}\\nu+\\tfrac{1}{2}\\right)z^{(\\mu+1-\\nu)/2}\\,\\sum_{k=0}^{\\infty}\\frac{(\\tfrac{1}{2}z)^{k}}{k!(2k+\\mu-\\nu+1)}J_{k+\\frac{1}{2}(\\mu+\\nu+1)}\\left(z\\right). \\tag{11.9.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "11.9.9",
+                "latex": "S_{{\\mu},{\\nu}}\\left(z\\right)\\sim z^{\\mu-1}\\sum_{k=0}^{\\infty}(-1)^{k}a_{k}(-\\mu,\\nu)z^{-2k}, \\tag{11.9.9}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\frac{1}{z}\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\left(1-\\frac{\\nu^{2}}{z^{2}}\\right)w=z^{\\mu-1} \\tag{11.9.1}",
+              "w=s_{{\\mu},{\\nu}}\\left(z\\right)+AJ_{\\nu}\\left(z\\right)+BY_{\\nu}\\left(z\\right), \\tag{11.9.2}",
+              "s_{{\\mu},{\\nu}}\\left(z\\right)=z^{\\mu+1}\\sum_{k=0}^{\\infty}(-1)^{k}\\frac{z^{2k}}{a_{k+1}(\\mu,\\nu)}, \\tag{11.9.3}",
+              "a_{k}(\\mu,\\nu)=\\prod_{m=1}^{k}\\left((\\mu+2m-1)^{2}-\\nu^{2}\\right)=4^{k}{\\left(\\frac{\\mu-\\nu+1}{2}\\right)_{k}}{\\left(\\frac{\\mu+\\nu+1}{2}\\right)_{k}}, \\tag{11.9.4}",
+              "S_{{\\mu},{\\nu}}\\left(z\\right)=s_{{\\mu},{\\nu}}\\left(z\\right)+2^{\\mu-1}\\Gamma\\left(\\tfrac{1}{2}\\mu+\\tfrac{1}{2}\\nu+\\tfrac{1}{2}\\right)\\Gamma\\left(\\tfrac{1}{2}\\mu-\\tfrac{1}{2}\\nu+\\tfrac{1}{2}\\right)\\,\\left(\\sin\\left(\\tfrac{1}{2}(\\mu-\\nu)\\pi\\right)\\,J_{\\nu}\\left(z\\right)-\\cos\\left(\\tfrac{1}{2}(\\mu-\\nu)\\pi\\right)\\,Y_{\\nu}\\left(z\\right)\\right), \\tag{11.9.5}",
+              "\\displaystyle s_{{\\mu},{-\\nu}}\\left(z\\right) \\displaystyle=s_{{\\mu},{\\nu}}\\left(z\\right), \\tag{11.9.6}",
+              "\\displaystyle S_{{\\mu},{-\\nu}}\\left(z\\right) \\displaystyle=S_{{\\mu},{\\nu}}\\left(z\\right).",
+              "s_{{\\mu},{\\nu}}\\left(z\\right)=2^{\\mu+1}\\sum_{k=0}^{\\infty}\\,\\frac{(2k+\\mu+1)\\Gamma\\left(k+\\mu+1\\right)}{k!(2k+\\mu-\\nu+1)(2k+\\mu+\\nu+1)}J_{2k+\\mu+1}\\left(z\\right), \\tag{11.9.7}",
+              "s_{{\\mu},{\\nu}}\\left(z\\right)=2^{(\\mu+\\nu-1)/2}\\Gamma\\left(\\tfrac{1}{2}\\mu+\\tfrac{1}{2}\\nu+\\tfrac{1}{2}\\right)z^{(\\mu+1-\\nu)/2}\\,\\sum_{k=0}^{\\infty}\\frac{(\\tfrac{1}{2}z)^{k}}{k!(2k+\\mu-\\nu+1)}J_{k+\\frac{1}{2}(\\mu+\\nu+1)}\\left(z\\right). \\tag{11.9.8}",
+              "S_{{\\mu},{\\nu}}\\left(z\\right)\\sim z^{\\mu-1}\\sum_{k=0}^{\\infty}(-1)^{k}a_{k}(-\\mu,\\nu)z^{-2k}, \\tag{11.9.9}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Lommel functions",
+                "definitions",
+                "Bessel’s equation",
+                "differential equation",
+                "inhomogeneous forms",
+                "power series",
+                "series expansions",
+                "reflection formulas",
+                "Bessel functions",
+                "asymptotic expansions for large argument",
+                "modified Bessel’s equation",
+                "integral representations",
+                "integrals"
+              ],
+              "simbolos": [
+                "$S_{{\\mu},{\\nu}}\\left(z\\right)$: Lommel function , $s_{{\\mu},{\\nu}}\\left(z\\right)$: Lommel function , $z$: complex variable and $\\nu$: real or complex order"
+              ],
+              "referenciado_por": [
+                "§11.9(iii)",
+                "Erratum (V1.0.11) for References"
+              ],
+              "notas_bibliograficas": [
+                "See Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), §10.75)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.9 and Ch.11",
+                "Annotations for §11.9(i) , §11.9 and Ch.11",
+                "Annotations for §11.9(i) , §11.9(i) , §11.9 and Ch.11"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.0.11)",
+                  "descripcion": "A sentence was added at the end of 11.9(iii) including a new reference to Nemes ([2015b](./bib/N.html#bib2867 \"On the large argument asymptotics of the Lommel function via Stieltjes transforms\")). *Suggested 2015-10-27 by Gergő Nemes*"
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1969b",
+                "archivo_destino": "bib/L.html#bib1496",
+                "titulo_referencia": "The Special Functions and their Approximations. Vol. 2"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "2015b",
+                "archivo_destino": "bib/N.html#bib2867",
+                "titulo_referencia": "On the large argument asymptotics of the Lommel function via Stieltjes transforms"
+              },
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              },
+              {
+                "texto": "2015b",
+                "archivo_destino": "bib/N.html#bib2867",
+                "titulo_referencia": "On the large argument asymptotics of the Lommel function via Stieltjes transforms"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/S.html#bib2168",
+                "titulo_referencia": "The sign of Lommel’s function"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/index.html#bib111",
+                "titulo_referencia": "Table of Definite and Infinite Integrals"
+              },
+              {
+                "texto": "1967",
+                "archivo_destino": "bib/B.html#bib166",
+                "titulo_referencia": "Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations"
+              },
+              {
+                "texto": "1954a",
+                "archivo_destino": "bib/E.html#bib753",
+                "titulo_referencia": "Tables of Integral Transforms. Vol. I"
+              },
+              {
+                "texto": "2015",
+                "archivo_destino": "bib/G.html#bib972",
+                "titulo_referencia": "Table of integrals, series, and products"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/M.html#bib1546",
+                "titulo_referencia": "Handbook of Integral Transforms of Higher Transcendental Functions: Theory and Algorithmic Tables"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/O.html#bib1742",
+                "titulo_referencia": "Tables of Bessel Transforms"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/O.html#bib1744",
+                "titulo_referencia": "Tables of Mellin Transforms"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/O.html#bib1745",
+                "titulo_referencia": "Tables of Fourier Transforms and Fourier Transforms of Distributions"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/O.html#bib1746",
+                "titulo_referencia": "Tables of Laplace Transforms"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/P.html#bib1905",
+                "titulo_referencia": "Integrals and Series: More Special Functions, Vol. 3"
+              },
+              {
+                "texto": "1992a",
+                "archivo_destino": "bib/P.html#bib1906",
+                "titulo_referencia": "Integrals and Series: Direct Laplace Transforms, Vol. 4"
+              },
+              {
+                "texto": "1992b",
+                "archivo_destino": "bib/P.html#bib1907",
+                "titulo_referencia": "Integrals and Series: Inverse Laplace Transforms, Vol. 5"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "11.10",
+          "titulo_original": "Anger–Weber Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.10.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.10.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.10 Anger–Weber Functions",
+            "prosa_teorica": "The Anger function $\\mathbf{J}_{\\nu}\\left(z\\right)$ and Weber function $\\mathbf{E}_{\\nu}\\left(z\\right)$ are defined by\nEach is an entire function of $z$ and $\\nu$ . Also,\nThe associated Anger–Weber function $\\mathbf{A}_{\\nu}\\left(z\\right)$ is defined by\n( 11.10.4 ) also applies when $\\Re z=0$ and $\\Re\\nu>0$ .\nThe Anger and Weber functions satisfy the inhomogeneous Bessel differential equation\nwhere\nor\nwhere\nThese expansions converge absolutely for all finite values of $z$ .\n<a id=\"iv.fig1\"></a>\n![Figure 11.10.1: Anger function $\\mathbf{J}_{\\nu}\\left(x\\right)$ for $-8\\leq x\\leq 8$ and $\\nu=0,\\frac{1}{2},1,\\frac{3}{2}$ .](../html/11/10/F1.png)\n<a id=\"iv.fig2\"></a>\n![Figure 11.10.3: Anger function $\\mathbf{J}_{\\nu}\\left(x\\right)$ for $-10\\leq x\\leq 10$ and $0\\leq\\nu\\leq 5$ . 3D Help](../html/11/10/F3.png)\n<a id=\"E12\"></a>\nwhere\n<a id=\"E21\"></a>\nFor the Fresnel integrals $C$ and $S$ see § 7.2(iii) .\nFor $n=1,2,3,\\dots$ ,\nand\nwhere\n<a id=\"E24\"></a>\nwhere the prime on the second summation symbols means that the first term is to be halved.\nFor collections of integral representations and integrals see Erdélyi et al. ([1954a](./bib/E.html#bib753 \"Tables of Integral Transforms. Vol. I\"), §§4.19 and 5.17), Marichev ([1983](./bib/M.html#bib1546 \"Handbook of Integral Transforms of Higher Transcendental Functions: Theory and Algorithmic Tables\"), pp. 194–195 and 214–215), Oberhettinger ([1972](./bib/O.html#bib1742 \"Tables of Bessel Transforms\"), p. 128), Oberhettinger ([1974](./bib/O.html#bib1744 \"Tables of Mellin Transforms\"), §§1.12 and 2.7), Oberhettinger ([1990](./bib/O.html#bib1745 \"Tables of Fourier Transforms and Fourier Transforms of Distributions\"), pp. 105 and 189–190), Prudnikov et al. ([1990](./bib/P.html#bib1905 \"Integrals and Series: More Special Functions, Vol. 3\"), §§1.5 and 2.8), Prudnikov et al. ([1992a](./bib/P.html#bib1906 \"Integrals and Series: Direct Laplace Transforms, Vol. 4\"), §3.18), Prudnikov et al. ([1992b](./bib/P.html#bib1907 \"Integrals and Series: Inverse Laplace Transforms, Vol. 5\"), §3.18), and Zanovello ([1977](./bib/Z.html#bib2481 \"Integrali di funzioni di Anger, Weber ed Airy-Hardy\")).\nFor sums see Hansen ([1975](./bib/H.html#bib1035 \"A Table of Series and Products\"), pp. 456–457) and Prudnikov et al. ([1990](./bib/P.html#bib1905 \"Integrals and Series: More Special Functions, Vol. 3\"), §§6.4.2–6.4.3).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "11.10.1",
+                "latex": "\\mathbf{J}_{\\nu}\\left(z\\right)=\\frac{1}{\\pi}\\int_{0}^{\\pi}\\cos\\left(\\nu\\theta-z\\sin\\theta\\right)\\,\\mathrm{d}\\theta, \\tag{11.10.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "11.10.2",
+                "latex": "\\mathbf{E}_{\\nu}\\left(z\\right)=\\frac{1}{\\pi}\\int_{0}^{\\pi}\\sin\\left(\\nu\\theta-z\\sin\\theta\\right)\\,\\mathrm{d}\\theta. \\tag{11.10.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "11.10.3",
+                "latex": "\\frac{1}{\\pi}\\int_{0}^{2\\pi}\\cos\\left(\\nu\\theta-z\\sin\\theta\\right)\\,\\mathrm{d}\\theta=(1+\\cos\\left(2\\pi\\nu\\right))\\,\\mathbf{J}_{\\nu}\\left(z\\right)+\\sin\\left(2\\pi\\nu\\right)\\mathbf{E}_{\\nu}\\left(z\\right). \\tag{11.10.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "11.10.4",
+                "latex": "\\mathbf{A}_{\\nu}\\left(z\\right)=\\frac{1}{\\pi}\\int_{0}^{\\infty}e^{-\\nu t-z\\sinh t}\\,\\mathrm{d}t, \\tag{11.10.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "11.10.5",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\frac{1}{z}\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\left(1-\\frac{\\nu^{2}}{z^{2}}\\right)w=f(\\nu,z), \\tag{11.10.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "11.10.6",
+                "latex": "f(\\nu,z)=\\frac{(z-\\nu)}{\\pi z^{2}}\\sin\\left(\\pi\\nu\\right), \\tag{11.10.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "11.10.7",
+                "latex": "f(\\nu,z)=-\\frac{1}{\\pi z^{2}}(z+\\nu+(z-\\nu)\\cos\\left(\\pi\\nu\\right)), \\tag{11.10.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "11.10.8",
+                "latex": "\\mathbf{J}_{\\nu}\\left(z\\right)=\\cos\\left(\\tfrac{1}{2}\\pi\\nu\\right)\\,S_{1}(\\nu,z)+\\sin\\left(\\tfrac{1}{2}\\pi\\nu\\right)\\,S_{2}(\\nu,z), \\tag{11.10.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "11.10.9",
+                "latex": "\\mathbf{E}_{\\nu}\\left(z\\right)=\\sin\\left(\\tfrac{1}{2}\\pi\\nu\\right)\\,S_{1}(\\nu,z)-\\cos\\left(\\tfrac{1}{2}\\pi\\nu\\right)\\,S_{2}(\\nu,z), \\tag{11.10.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "11.10.10",
+                "latex": "S_{1}(\\nu,z)=\\sum_{k=0}^{\\infty}\\frac{(-1)^{k}(\\tfrac{1}{2}z)^{2k}}{\\Gamma\\left(k\\!+\\!\\tfrac{1}{2}\\nu+1\\right)\\Gamma\\left(k\\!-\\!\\tfrac{1}{2}\\nu\\!+\\!1\\right)}, \\tag{11.10.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "11.10.11",
+                "latex": "S_{2}(\\nu,z)=\\sum_{k=0}^{\\infty}\\frac{(-1)^{k}(\\tfrac{1}{2}z)^{2k+1}}{\\Gamma\\left(k\\!+\\!\\tfrac{1}{2}\\nu\\!+\\!\\tfrac{3}{2}\\right)\\Gamma\\left(k\\!-\\!\\tfrac{1}{2}\\nu\\!+\\!\\tfrac{3}{2}\\right)}. \\tag{11.10.11}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "11.10.12",
+                "latex": "\\displaystyle\\mathbf{J}_{\\nu}\\left(-z\\right) \\displaystyle=\\mathbf{J}_{-\\nu}\\left(z\\right), \\tag{11.10.12}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\mathbf{E}_{\\nu}\\left(-z\\right) \\displaystyle=-\\mathbf{E}_{-\\nu}\\left(z\\right)."
+              },
+              {
+                "id": "EGx1",
+                "tag": "11.10.13",
+                "latex": "\\displaystyle\\sin\\left(\\pi\\nu\\right)\\,\\mathbf{J}_{\\nu}\\left(z\\right) \\displaystyle=\\cos\\left(\\pi\\nu\\right)\\,\\mathbf{E}_{\\nu}\\left(z\\right)-\\mathbf{E}_{-\\nu}\\left(z\\right), \\tag{11.10.13}"
+              },
+              {
+                "id": "",
+                "tag": "11.10.14",
+                "latex": "\\displaystyle\\sin\\left(\\pi\\nu\\right)\\,\\mathbf{E}_{\\nu}\\left(z\\right) \\displaystyle=\\mathbf{J}_{-\\nu}\\left(z\\right)-\\cos\\left(\\pi\\nu\\right)\\,\\mathbf{J}_{\\nu}\\left(z\\right). \\tag{11.10.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "11.10.15",
+                "latex": "\\mathbf{J}_{\\nu}\\left(z\\right)=J_{\\nu}\\left(z\\right)+\\sin\\left(\\pi\\nu\\right)\\,\\mathbf{A}_{\\nu}\\left(z\\right), \\tag{11.10.15}"
+              },
+              {
+                "id": "E16",
+                "tag": "11.10.16",
+                "latex": "\\mathbf{E}_{\\nu}\\left(z\\right)=-Y_{\\nu}\\left(z\\right)-\\cos\\left(\\pi\\nu\\right)\\,\\mathbf{A}_{\\nu}\\left(z\\right)-\\mathbf{A}_{-\\nu}\\left(z\\right). \\tag{11.10.16}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "11.10.17",
+                "latex": "\\displaystyle\\mathbf{J}_{\\nu}\\left(z\\right) \\displaystyle=\\frac{\\sin\\left(\\pi\\nu\\right)}{\\pi}(s_{{0},{\\nu}}\\left(z\\right)-\\nu s_{{-1},{\\nu}}\\left(z\\right)), \\tag{11.10.17}"
+              },
+              {
+                "id": "",
+                "tag": "11.10.18",
+                "latex": "\\displaystyle\\mathbf{E}_{\\nu}\\left(z\\right) \\displaystyle=-\\frac{1}{\\pi}(1+\\cos\\left(\\pi\\nu\\right))s_{{0},{\\nu}}\\left(z\\right)\\\\\n-\\frac{\\nu}{\\pi}(1-\\cos\\left(\\pi\\nu\\right))s_{{-1},{\\nu}}\\left(z\\right). \\tag{11.10.18}"
+              },
+              {
+                "id": "EGx3",
+                "tag": "11.10.19",
+                "latex": "\\displaystyle\\mathbf{J}_{-\\frac{1}{2}}\\left(z\\right) \\displaystyle=\\mathbf{E}_{\\frac{1}{2}}\\left(z\\right)=(\\tfrac{1}{2}\\pi z)^{-\\frac{1}{2}}(A_{+}(\\chi)\\cos z-A_{-}(\\chi)\\sin z), \\tag{11.10.19}"
+              },
+              {
+                "id": "",
+                "tag": "11.10.20",
+                "latex": "\\displaystyle\\mathbf{J}_{\\frac{1}{2}}\\left(z\\right) \\displaystyle=-\\mathbf{E}_{-\\frac{1}{2}}\\left(z\\right)=(\\tfrac{1}{2}\\pi z)^{-\\frac{1}{2}}(A_{+}(\\chi)\\sin z+A_{-}(\\chi)\\cos z), \\tag{11.10.20}"
+              },
+              {
+                "id": "Ex3",
+                "tag": "11.10.21",
+                "latex": "\\displaystyle A_{\\pm}(\\chi) \\displaystyle=C\\left(\\chi\\right)\\pm S\\left(\\chi\\right), \\tag{11.10.21}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle\\chi \\displaystyle=(2z/\\pi)^{\\frac{1}{2}}."
+              },
+              {
+                "id": "E22",
+                "tag": "11.10.22",
+                "latex": "\\mathbf{E}_{n}\\left(z\\right)=-\\mathbf{H}_{n}\\left(z\\right)+\\frac{1}{\\pi}\\sum_{k=0}^{m_{1}}\\frac{\\Gamma\\left(k+\\tfrac{1}{2}\\right)}{\\Gamma\\left(n\\!+\\!\\tfrac{1}{2}\\!-\\!k\\right)}(\\tfrac{1}{2}z)^{n-2k-1}, \\tag{11.10.22}"
+              },
+              {
+                "id": "E23",
+                "tag": "11.10.23",
+                "latex": "\\mathbf{E}_{-n}\\left(z\\right)=-\\mathbf{H}_{-n}\\left(z\\right)+\\frac{(-1)^{n+1}}{\\pi}\\sum_{k=0}^{m_{2}}\\frac{\\Gamma\\left(n\\!-\\!k\\!-\\!\\tfrac{1}{2}\\right)}{\\Gamma\\left(k+\\tfrac{3}{2}\\right)}(\\tfrac{1}{2}z)^{-n+2k+1}, \\tag{11.10.23}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "11.10.24",
+                "latex": "\\displaystyle m_{1} \\displaystyle=\\left\\lfloor\\tfrac{1}{2}n-\\tfrac{1}{2}\\right\\rfloor, \\tag{11.10.24}"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle m_{2} \\displaystyle=\\left\\lceil\\tfrac{1}{2}n-\\tfrac{3}{2}\\right\\rceil."
+              },
+              {
+                "id": "Sx2.EGx1",
+                "tag": "11.10.25",
+                "latex": "\\displaystyle\\mathbf{J}_{\\nu}\\left(0\\right) \\displaystyle=\\frac{\\sin\\left(\\pi\\nu\\right)}{\\pi\\nu}, \\displaystyle\\mathbf{E}_{\\nu}\\left(0\\right) \\displaystyle=\\frac{1-\\cos\\left(\\pi\\nu\\right)}{\\pi\\nu}. \\tag{11.10.25}"
+              },
+              {
+                "id": "",
+                "tag": "11.10.26",
+                "latex": "\\displaystyle\\mathbf{E}_{0}\\left(z\\right) \\displaystyle=-\\mathbf{H}_{0}\\left(z\\right), \\displaystyle\\mathbf{E}_{1}\\left(z\\right) \\displaystyle=\\frac{2}{\\pi}-\\mathbf{H}_{1}\\left(z\\right). \\tag{11.10.26}"
+              },
+              {
+                "id": "EGx4",
+                "tag": "11.10.27",
+                "latex": "\\displaystyle\\left.\\frac{\\partial}{\\partial\\nu}\\mathbf{J}_{\\nu}\\left(z\\right)\\right|_{\\nu=0} \\displaystyle=\\tfrac{1}{2}\\pi\\mathbf{H}_{0}\\left(z\\right), \\tag{11.10.27}"
+              },
+              {
+                "id": "",
+                "tag": "11.10.28",
+                "latex": "\\displaystyle\\left.\\frac{\\partial}{\\partial\\nu}\\mathbf{E}_{\\nu}\\left(z\\right)\\right|_{\\nu=0} \\displaystyle=\\tfrac{1}{2}\\pi J_{0}\\left(z\\right). \\tag{11.10.28}"
+              },
+              {
+                "id": "E29",
+                "tag": "11.10.29",
+                "latex": "\\mathbf{J}_{n}\\left(z\\right)=J_{n}\\left(z\\right), \\tag{11.10.29}"
+              },
+              {
+                "id": "E30",
+                "tag": "11.10.30",
+                "latex": "{\\mathbf{J}_{\\nu}\\left(z\\right)=}\\\\\n{2\\sin\\left(\\tfrac{1}{2}\\nu\\pi\\right)\\sum_{k=0}^{\\infty}(-1)^{k}J_{k-\\frac{1}{2}\\nu+\\frac{1}{2}}\\left(\\tfrac{1}{2}z\\right)J_{k+\\frac{1}{2}\\nu+\\frac{1}{2}}\\left(\\tfrac{1}{2}z\\right)}+{2\\cos\\left(\\tfrac{1}{2}\\nu\\pi\\right)\\sideset{}{{}^{\\prime}}{\\sum}_{k=0}^{\\infty}(-1)^{k}J_{k-\\frac{1}{2}\\nu}\\left(\\tfrac{1}{2}z\\right)J_{k+\\frac{1}{2}\\nu}\\left(\\tfrac{1}{2}z\\right)}, \\tag{11.10.30}"
+              },
+              {
+                "id": "E31",
+                "tag": "11.10.31",
+                "latex": "{\\mathbf{E}_{\\nu}\\left(z\\right)=}\\\\\n{-2\\cos\\left(\\tfrac{1}{2}\\nu\\pi\\right)\\sum_{k=0}^{\\infty}(-1)^{k}J_{k-\\frac{1}{2}\\nu+\\frac{1}{2}}\\left(\\tfrac{1}{2}z\\right)J_{k+\\frac{1}{2}\\nu+\\frac{1}{2}}\\left(\\tfrac{1}{2}z\\right)}+{2\\sin\\left(\\tfrac{1}{2}\\nu\\pi\\right)\\sideset{}{{}^{\\prime}}{\\sum}_{k=0}^{\\infty}(-1)^{k}J_{k-\\frac{1}{2}\\nu}\\left(\\tfrac{1}{2}z\\right)J_{k+\\frac{1}{2}\\nu}\\left(\\tfrac{1}{2}z\\right)}, \\tag{11.10.31}"
+              },
+              {
+                "id": "E32",
+                "tag": "11.10.32",
+                "latex": "\\mathbf{J}_{\\nu-1}\\left(z\\right)+\\mathbf{J}_{\\nu+1}\\left(z\\right)=\\frac{2\\nu}{z}\\mathbf{J}_{\\nu}\\left(z\\right)-\\frac{2}{\\pi z}\\sin\\left(\\pi\\nu\\right), \\tag{11.10.32}"
+              },
+              {
+                "id": "E33",
+                "tag": "11.10.33",
+                "latex": "\\mathbf{E}_{\\nu-1}\\left(z\\right)+\\mathbf{E}_{\\nu+1}\\left(z\\right)=\\frac{2\\nu}{z}\\mathbf{E}_{\\nu}\\left(z\\right)-\\frac{2}{\\pi z}(1-\\cos\\left(\\pi\\nu\\right)). \\tag{11.10.33}"
+              },
+              {
+                "id": "EGx5",
+                "tag": "11.10.34",
+                "latex": "\\displaystyle 2\\mathbf{J}_{\\nu}'\\left(z\\right) \\displaystyle=\\mathbf{J}_{\\nu-1}\\left(z\\right)-\\mathbf{J}_{\\nu+1}\\left(z\\right), \\tag{11.10.34}"
+              },
+              {
+                "id": "",
+                "tag": "11.10.35",
+                "latex": "\\displaystyle 2\\mathbf{E}_{\\nu}'\\left(z\\right) \\displaystyle=\\mathbf{E}_{\\nu-1}\\left(z\\right)-\\mathbf{E}_{\\nu+1}\\left(z\\right), \\tag{11.10.35}"
+              },
+              {
+                "id": "E36",
+                "tag": "11.10.36",
+                "latex": "z\\mathbf{J}_{\\nu}'\\left(z\\right)\\pm\\nu\\mathbf{J}_{\\nu}\\left(z\\right)=\\pm z\\mathbf{J}_{\\nu\\mp 1}\\left(z\\right)\\pm\\frac{\\sin\\left(\\pi\\nu\\right)}{\\pi}, \\tag{11.10.36}"
+              },
+              {
+                "id": "E37",
+                "tag": "11.10.37",
+                "latex": "z\\mathbf{E}_{\\nu}'\\left(z\\right)\\pm\\nu\\mathbf{E}_{\\nu}\\left(z\\right)=\\pm z\\mathbf{E}_{\\nu\\mp 1}\\left(z\\right)\\pm\\frac{(1-\\cos\\left(\\pi\\nu\\right))}{\\pi}. \\tag{11.10.37}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\mathbf{J}_{\\nu}\\left(z\\right)=\\frac{1}{\\pi}\\int_{0}^{\\pi}\\cos\\left(\\nu\\theta-z\\sin\\theta\\right)\\,\\mathrm{d}\\theta, \\tag{11.10.1}",
+              "\\mathbf{E}_{\\nu}\\left(z\\right)=\\frac{1}{\\pi}\\int_{0}^{\\pi}\\sin\\left(\\nu\\theta-z\\sin\\theta\\right)\\,\\mathrm{d}\\theta. \\tag{11.10.2}",
+              "\\frac{1}{\\pi}\\int_{0}^{2\\pi}\\cos\\left(\\nu\\theta-z\\sin\\theta\\right)\\,\\mathrm{d}\\theta=(1+\\cos\\left(2\\pi\\nu\\right))\\,\\mathbf{J}_{\\nu}\\left(z\\right)+\\sin\\left(2\\pi\\nu\\right)\\mathbf{E}_{\\nu}\\left(z\\right). \\tag{11.10.3}",
+              "\\mathbf{A}_{\\nu}\\left(z\\right)=\\frac{1}{\\pi}\\int_{0}^{\\infty}e^{-\\nu t-z\\sinh t}\\,\\mathrm{d}t, \\tag{11.10.4}",
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\frac{1}{z}\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\left(1-\\frac{\\nu^{2}}{z^{2}}\\right)w=f(\\nu,z), \\tag{11.10.5}",
+              "f(\\nu,z)=\\frac{(z-\\nu)}{\\pi z^{2}}\\sin\\left(\\pi\\nu\\right), \\tag{11.10.6}",
+              "f(\\nu,z)=-\\frac{1}{\\pi z^{2}}(z+\\nu+(z-\\nu)\\cos\\left(\\pi\\nu\\right)), \\tag{11.10.7}",
+              "\\mathbf{J}_{\\nu}\\left(z\\right)=\\cos\\left(\\tfrac{1}{2}\\pi\\nu\\right)\\,S_{1}(\\nu,z)+\\sin\\left(\\tfrac{1}{2}\\pi\\nu\\right)\\,S_{2}(\\nu,z), \\tag{11.10.8}",
+              "\\mathbf{E}_{\\nu}\\left(z\\right)=\\sin\\left(\\tfrac{1}{2}\\pi\\nu\\right)\\,S_{1}(\\nu,z)-\\cos\\left(\\tfrac{1}{2}\\pi\\nu\\right)\\,S_{2}(\\nu,z), \\tag{11.10.9}",
+              "S_{1}(\\nu,z)=\\sum_{k=0}^{\\infty}\\frac{(-1)^{k}(\\tfrac{1}{2}z)^{2k}}{\\Gamma\\left(k\\!+\\!\\tfrac{1}{2}\\nu+1\\right)\\Gamma\\left(k\\!-\\!\\tfrac{1}{2}\\nu\\!+\\!1\\right)}, \\tag{11.10.10}",
+              "S_{2}(\\nu,z)=\\sum_{k=0}^{\\infty}\\frac{(-1)^{k}(\\tfrac{1}{2}z)^{2k+1}}{\\Gamma\\left(k\\!+\\!\\tfrac{1}{2}\\nu\\!+\\!\\tfrac{3}{2}\\right)\\Gamma\\left(k\\!-\\!\\tfrac{1}{2}\\nu\\!+\\!\\tfrac{3}{2}\\right)}. \\tag{11.10.11}",
+              "\\displaystyle\\mathbf{J}_{\\nu}\\left(-z\\right) \\displaystyle=\\mathbf{J}_{-\\nu}\\left(z\\right), \\tag{11.10.12}",
+              "\\displaystyle\\mathbf{E}_{\\nu}\\left(-z\\right) \\displaystyle=-\\mathbf{E}_{-\\nu}\\left(z\\right).",
+              "\\displaystyle\\sin\\left(\\pi\\nu\\right)\\,\\mathbf{J}_{\\nu}\\left(z\\right) \\displaystyle=\\cos\\left(\\pi\\nu\\right)\\,\\mathbf{E}_{\\nu}\\left(z\\right)-\\mathbf{E}_{-\\nu}\\left(z\\right), \\tag{11.10.13}",
+              "\\displaystyle\\sin\\left(\\pi\\nu\\right)\\,\\mathbf{E}_{\\nu}\\left(z\\right) \\displaystyle=\\mathbf{J}_{-\\nu}\\left(z\\right)-\\cos\\left(\\pi\\nu\\right)\\,\\mathbf{J}_{\\nu}\\left(z\\right). \\tag{11.10.14}",
+              "\\mathbf{J}_{\\nu}\\left(z\\right)=J_{\\nu}\\left(z\\right)+\\sin\\left(\\pi\\nu\\right)\\,\\mathbf{A}_{\\nu}\\left(z\\right), \\tag{11.10.15}",
+              "\\mathbf{E}_{\\nu}\\left(z\\right)=-Y_{\\nu}\\left(z\\right)-\\cos\\left(\\pi\\nu\\right)\\,\\mathbf{A}_{\\nu}\\left(z\\right)-\\mathbf{A}_{-\\nu}\\left(z\\right). \\tag{11.10.16}",
+              "\\displaystyle\\mathbf{J}_{\\nu}\\left(z\\right) \\displaystyle=\\frac{\\sin\\left(\\pi\\nu\\right)}{\\pi}(s_{{0},{\\nu}}\\left(z\\right)-\\nu s_{{-1},{\\nu}}\\left(z\\right)), \\tag{11.10.17}",
+              "\\displaystyle\\mathbf{E}_{\\nu}\\left(z\\right) \\displaystyle=-\\frac{1}{\\pi}(1+\\cos\\left(\\pi\\nu\\right))s_{{0},{\\nu}}\\left(z\\right)\\\\\n-\\frac{\\nu}{\\pi}(1-\\cos\\left(\\pi\\nu\\right))s_{{-1},{\\nu}}\\left(z\\right). \\tag{11.10.18}",
+              "\\displaystyle\\mathbf{J}_{-\\frac{1}{2}}\\left(z\\right) \\displaystyle=\\mathbf{E}_{\\frac{1}{2}}\\left(z\\right)=(\\tfrac{1}{2}\\pi z)^{-\\frac{1}{2}}(A_{+}(\\chi)\\cos z-A_{-}(\\chi)\\sin z), \\tag{11.10.19}",
+              "\\displaystyle\\mathbf{J}_{\\frac{1}{2}}\\left(z\\right) \\displaystyle=-\\mathbf{E}_{-\\frac{1}{2}}\\left(z\\right)=(\\tfrac{1}{2}\\pi z)^{-\\frac{1}{2}}(A_{+}(\\chi)\\sin z+A_{-}(\\chi)\\cos z), \\tag{11.10.20}",
+              "\\displaystyle A_{\\pm}(\\chi) \\displaystyle=C\\left(\\chi\\right)\\pm S\\left(\\chi\\right), \\tag{11.10.21}",
+              "\\displaystyle\\chi \\displaystyle=(2z/\\pi)^{\\frac{1}{2}}.",
+              "\\mathbf{E}_{n}\\left(z\\right)=-\\mathbf{H}_{n}\\left(z\\right)+\\frac{1}{\\pi}\\sum_{k=0}^{m_{1}}\\frac{\\Gamma\\left(k+\\tfrac{1}{2}\\right)}{\\Gamma\\left(n\\!+\\!\\tfrac{1}{2}\\!-\\!k\\right)}(\\tfrac{1}{2}z)^{n-2k-1}, \\tag{11.10.22}",
+              "\\mathbf{E}_{-n}\\left(z\\right)=-\\mathbf{H}_{-n}\\left(z\\right)+\\frac{(-1)^{n+1}}{\\pi}\\sum_{k=0}^{m_{2}}\\frac{\\Gamma\\left(n\\!-\\!k\\!-\\!\\tfrac{1}{2}\\right)}{\\Gamma\\left(k+\\tfrac{3}{2}\\right)}(\\tfrac{1}{2}z)^{-n+2k+1}, \\tag{11.10.23}",
+              "\\displaystyle m_{1} \\displaystyle=\\left\\lfloor\\tfrac{1}{2}n-\\tfrac{1}{2}\\right\\rfloor, \\tag{11.10.24}",
+              "\\displaystyle m_{2} \\displaystyle=\\left\\lceil\\tfrac{1}{2}n-\\tfrac{3}{2}\\right\\rceil.",
+              "\\displaystyle\\mathbf{J}_{\\nu}\\left(0\\right) \\displaystyle=\\frac{\\sin\\left(\\pi\\nu\\right)}{\\pi\\nu}, \\displaystyle\\mathbf{E}_{\\nu}\\left(0\\right) \\displaystyle=\\frac{1-\\cos\\left(\\pi\\nu\\right)}{\\pi\\nu}. \\tag{11.10.25}",
+              "\\displaystyle\\mathbf{E}_{0}\\left(z\\right) \\displaystyle=-\\mathbf{H}_{0}\\left(z\\right), \\displaystyle\\mathbf{E}_{1}\\left(z\\right) \\displaystyle=\\frac{2}{\\pi}-\\mathbf{H}_{1}\\left(z\\right). \\tag{11.10.26}",
+              "\\displaystyle\\left.\\frac{\\partial}{\\partial\\nu}\\mathbf{J}_{\\nu}\\left(z\\right)\\right|_{\\nu=0} \\displaystyle=\\tfrac{1}{2}\\pi\\mathbf{H}_{0}\\left(z\\right), \\tag{11.10.27}",
+              "\\displaystyle\\left.\\frac{\\partial}{\\partial\\nu}\\mathbf{E}_{\\nu}\\left(z\\right)\\right|_{\\nu=0} \\displaystyle=\\tfrac{1}{2}\\pi J_{0}\\left(z\\right). \\tag{11.10.28}",
+              "\\mathbf{J}_{n}\\left(z\\right)=J_{n}\\left(z\\right), \\tag{11.10.29}",
+              "{\\mathbf{J}_{\\nu}\\left(z\\right)=}\\\\\n{2\\sin\\left(\\tfrac{1}{2}\\nu\\pi\\right)\\sum_{k=0}^{\\infty}(-1)^{k}J_{k-\\frac{1}{2}\\nu+\\frac{1}{2}}\\left(\\tfrac{1}{2}z\\right)J_{k+\\frac{1}{2}\\nu+\\frac{1}{2}}\\left(\\tfrac{1}{2}z\\right)}+{2\\cos\\left(\\tfrac{1}{2}\\nu\\pi\\right)\\sideset{}{{}^{\\prime}}{\\sum}_{k=0}^{\\infty}(-1)^{k}J_{k-\\frac{1}{2}\\nu}\\left(\\tfrac{1}{2}z\\right)J_{k+\\frac{1}{2}\\nu}\\left(\\tfrac{1}{2}z\\right)}, \\tag{11.10.30}",
+              "{\\mathbf{E}_{\\nu}\\left(z\\right)=}\\\\\n{-2\\cos\\left(\\tfrac{1}{2}\\nu\\pi\\right)\\sum_{k=0}^{\\infty}(-1)^{k}J_{k-\\frac{1}{2}\\nu+\\frac{1}{2}}\\left(\\tfrac{1}{2}z\\right)J_{k+\\frac{1}{2}\\nu+\\frac{1}{2}}\\left(\\tfrac{1}{2}z\\right)}+{2\\sin\\left(\\tfrac{1}{2}\\nu\\pi\\right)\\sideset{}{{}^{\\prime}}{\\sum}_{k=0}^{\\infty}(-1)^{k}J_{k-\\frac{1}{2}\\nu}\\left(\\tfrac{1}{2}z\\right)J_{k+\\frac{1}{2}\\nu}\\left(\\tfrac{1}{2}z\\right)}, \\tag{11.10.31}",
+              "\\mathbf{J}_{\\nu-1}\\left(z\\right)+\\mathbf{J}_{\\nu+1}\\left(z\\right)=\\frac{2\\nu}{z}\\mathbf{J}_{\\nu}\\left(z\\right)-\\frac{2}{\\pi z}\\sin\\left(\\pi\\nu\\right), \\tag{11.10.32}",
+              "\\mathbf{E}_{\\nu-1}\\left(z\\right)+\\mathbf{E}_{\\nu+1}\\left(z\\right)=\\frac{2\\nu}{z}\\mathbf{E}_{\\nu}\\left(z\\right)-\\frac{2}{\\pi z}(1-\\cos\\left(\\pi\\nu\\right)). \\tag{11.10.33}",
+              "\\displaystyle 2\\mathbf{J}_{\\nu}'\\left(z\\right) \\displaystyle=\\mathbf{J}_{\\nu-1}\\left(z\\right)-\\mathbf{J}_{\\nu+1}\\left(z\\right), \\tag{11.10.34}",
+              "\\displaystyle 2\\mathbf{E}_{\\nu}'\\left(z\\right) \\displaystyle=\\mathbf{E}_{\\nu-1}\\left(z\\right)-\\mathbf{E}_{\\nu+1}\\left(z\\right), \\tag{11.10.35}",
+              "z\\mathbf{J}_{\\nu}'\\left(z\\right)\\pm\\nu\\mathbf{J}_{\\nu}\\left(z\\right)=\\pm z\\mathbf{J}_{\\nu\\mp 1}\\left(z\\right)\\pm\\frac{\\sin\\left(\\pi\\nu\\right)}{\\pi}, \\tag{11.10.36}",
+              "z\\mathbf{E}_{\\nu}'\\left(z\\right)\\pm\\nu\\mathbf{E}_{\\nu}\\left(z\\right)=\\pm z\\mathbf{E}_{\\nu\\mp 1}\\left(z\\right)\\pm\\frac{(1-\\cos\\left(\\pi\\nu\\right))}{\\pi}. \\tag{11.10.37}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Anger–Weber functions",
+                "analytic properties",
+                "definitions",
+                "integral representations",
+                "Bessel’s equation",
+                "differential equation",
+                "inhomogeneous forms",
+                "Maclaurin series",
+                "power series",
+                "series expansions",
+                "graphics",
+                "interrelations",
+                "Fresnel integrals",
+                "Lommel functions",
+                "Struve functions",
+                "Struve functions and modified Struve functions",
+                "relation to Anger–Weber functions",
+                "relations to Anger–Weber functions",
+                "relations to other functions",
+                "special values",
+                "products of Bessel functions",
+                "derivatives",
+                "recurrence relations",
+                "integrals",
+                "sums"
+              ],
+              "simbolos": [
+                "$\\mathbf{J}_{\\nu}\\left(z\\right)$: Anger function , $x$: real variable and $\\nu$: real or complex order",
+                "$\\mathbf{J}_{\\nu}\\left(z\\right)$: Anger function , $\\mathbf{E}_{\\nu}\\left(z\\right)$: Weber function , $z$: complex variable and $\\nu$: real or complex order",
+                "$\\mathbf{J}_{\\nu}\\left(z\\right)$: Anger function , $\\mathbf{E}_{\\nu}\\left(z\\right)$: Weber function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\cosz$: cosine function , $\\sinz$: sine function , $z$: complex variable and $\\nu$: real or complex order",
+                "$\\mathbf{J}_{\\nu}\\left(z\\right)$: Anger function , $s_{{\\mu},{\\nu}}\\left(z\\right)$: Lommel function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\sinz$: sine function , $z$: complex variable and $\\nu$: real or complex order",
+                "$s_{{\\mu},{\\nu}}\\left(z\\right)$: Lommel function , $\\mathbf{E}_{\\nu}\\left(z\\right)$: Weber function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\cosz$: cosine function , $z$: complex variable and $\\nu$: real or complex order",
+                "$\\mathbf{J}_{\\nu}\\left(z\\right)$: Anger function , $\\mathbf{E}_{\\nu}\\left(z\\right)$: Weber function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\cosz$: cosine function , $\\sinz$: sine function , $z$: complex variable , $A$: expansion function and $\\chi$",
+                "$C\\left(z\\right)$: Fresnel integral , $S\\left(z\\right)$: Fresnel integral , $\\pi$: the ratio of the circumference of a circle to its diameter , $z$: complex variable , $A$: expansion function and $\\chi$",
+                "$\\left\\lceilx\\right\\rceil$: ceiling of $x$ , $\\left\\lfloorx\\right\\rfloor$: floor of $x$ and $n$: integer order",
+                "$\\mathbf{J}_{\\nu}\\left(z\\right)$: Anger function , $\\mathbf{E}_{\\nu}\\left(z\\right)$: Weber function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\cosz$: cosine function , $\\sinz$: sine function and $\\nu$: real or complex order",
+                "$\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $\\mathbf{E}_{\\nu}\\left(z\\right)$: Weber function , $\\pi$: the ratio of the circumference of a circle to its diameter and $z$: complex variable",
+                "$\\mathbf{J}_{\\nu}\\left(z\\right)$: Anger function , $\\mathbf{H}_{\\nu}\\left(z\\right)$: Struve function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\frac{\\partialf}{\\partialx}$: partial derivative of $f$ with respect to $x$ , $\\,\\partialx$: partial differential of $x$ , $z$: complex variable and $\\nu$: real or complex order",
+                "$J_{\\nu}\\left(z\\right)$: Bessel function of the first kind , $\\mathbf{E}_{\\nu}\\left(z\\right)$: Weber function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\frac{\\partialf}{\\partialx}$: partial derivative of $f$ with respect to $x$ , $\\,\\partialx$: partial differential of $x$ , $z$: complex variable and $\\nu$: real or complex order",
+                "$\\mathbf{J}_{\\nu}\\left(z\\right)$: Anger function , $z$: complex variable and $\\nu$: real or complex order",
+                "$\\mathbf{E}_{\\nu}\\left(z\\right)$: Weber function , $z$: complex variable and $\\nu$: real or complex order"
+              ],
+              "referenciado_por": [
+                "§3.6(vi)",
+                "§11.10(v)",
+                "§11.10(vi)",
+                "§11.10(vii)"
+              ],
+              "notas_bibliograficas": [
+                "See Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), pp. 308 and 312). The notation $\\mathbf{A}_{\\nu}\\left(z\\right)$ , without the factor $1/\\pi$ , was introduced in Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), p. 84).",
+                "See Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), p. 312).",
+                "See Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), §10.1).",
+                "These graphics were produced at NIST.",
+                "For ( 11.10.12 ) use ( 11.10.1 ), ( 11.10.2 ). For ( 11.10.13 )–( 11.10.15 ) see Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), pp. 311–312). For ( 11.10.16 ) combine ( 11.10.14 ), ( 11.10.15 ), and ( 10.2.3 ).",
+                "For ( 11.10.17 ), ( 11.10.18 ) see Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), pp. 308–310). For ( 11.10.19 ), ( 11.10.20 ), use ( 11.10.8 )–( 11.10.11 ) with $\\nu=\\pm\\frac{1}{2}$ and identify the resulting sums with those associated with the right-hand sides via ( 7.6.5 ), ( 7.6.7 ). For ( 11.10.22 ), ( 11.10.23 ) see Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), pp. 336–337) or Erdélyi et al. ([1953b](./bib/E.html#bib752 \"Higher Transcendental Functions. Vol. II\"), p. 40). The upper summation limit in ( 11.10.23 ) is given incorrectly in Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), p. 337), and this error is reproduced in Erdélyi et al. ([1953b](./bib/E.html#bib752 \"Higher Transcendental Functions. Vol. II\")), as well as in later printings of Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Chapter 12)—earlier printings of the last reference contained a different error. ( 11.10.23 ) can be derived by combining ( 11.2.1 ) with ( 11.10.12 ), ( 11.10.22 ).",
+                "For ( 11.10.25 ) use ( 11.10.1 ) and ( 11.10.2 ). For ( 11.10.26 ) use ( 11.10.22 ). ( 11.10.27 ) and ( 11.10.28 ) can be obtained by differentiation of ( 11.10.1 ) and ( 11.10.2 ), followed by straightforward manipulation of the integrals and comparison with ( 11.5.1 ) and ( 11.10.1 ). For ( 11.10.29 ) use ( 11.10.1 ) and ( 10.9.2 ).",
+                "See Luke ([1969b](./bib/L.html#bib1496 \"The Special Functions and their Approximations. Vol. 2\"), p. 55).",
+                "See Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), pp. 311–312)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "12.3.4",
+                "12.3.5"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.10 and Ch.11",
+                "Annotations for §11.10(iv) , §11.10 and Ch.11",
+                "Annotations for §11.10(v) , §11.10 and Ch.11",
+                "Annotations for §11.10(vi) , §11.10 and Ch.11",
+                "Annotations for §11.10(vii) , §11.10 and Ch.11",
+                "Annotations for §11.10(ix) , §11.10 and Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1953b",
+                "archivo_destino": "bib/E.html#bib752",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. II"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1953b",
+                "archivo_destino": "bib/E.html#bib752",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. II"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              },
+              {
+                "texto": "1969b",
+                "archivo_destino": "bib/L.html#bib1496",
+                "titulo_referencia": "The Special Functions and their Approximations. Vol. 2"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "1954a",
+                "archivo_destino": "bib/E.html#bib753",
+                "titulo_referencia": "Tables of Integral Transforms. Vol. I"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/M.html#bib1546",
+                "titulo_referencia": "Handbook of Integral Transforms of Higher Transcendental Functions: Theory and Algorithmic Tables"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/O.html#bib1742",
+                "titulo_referencia": "Tables of Bessel Transforms"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/O.html#bib1744",
+                "titulo_referencia": "Tables of Mellin Transforms"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/O.html#bib1745",
+                "titulo_referencia": "Tables of Fourier Transforms and Fourier Transforms of Distributions"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/P.html#bib1905",
+                "titulo_referencia": "Integrals and Series: More Special Functions, Vol. 3"
+              },
+              {
+                "texto": "1992a",
+                "archivo_destino": "bib/P.html#bib1906",
+                "titulo_referencia": "Integrals and Series: Direct Laplace Transforms, Vol. 4"
+              },
+              {
+                "texto": "1992b",
+                "archivo_destino": "bib/P.html#bib1907",
+                "titulo_referencia": "Integrals and Series: Inverse Laplace Transforms, Vol. 5"
+              },
+              {
+                "texto": "1977",
+                "archivo_destino": "bib/Z.html#bib2481",
+                "titulo_referencia": "Integrali di funzioni di Anger, Weber ed Airy-Hardy"
+              },
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/H.html#bib1035",
+                "titulo_referencia": "A Table of Series and Products"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/P.html#bib1905",
+                "titulo_referencia": "Integrals and Series: More Special Functions, Vol. 3"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "11.11",
+          "titulo_original": "Asymptotic Expansions of Anger–Weber Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.11.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.11.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.11 Asymptotic Expansions of Anger–Weber Functions",
+            "prosa_teorica": "Let $F_{0}(\\nu)=G_{0}(\\nu)=1$ , and for $k=1,2,3,\\dots$ ,\n<a id=\"E1\"></a>\nThen as $z\\to\\infty$ in $|\\operatorname{ph}z|\\leq\\pi-\\delta$\nFor sharp error bounds and exponentially-improved extensions, see Nemes ([2018](./bib/N.html#bib2941 \"Error bounds for the large-argument asymptotic expansions of the Lommel and allied functions\")).\nIf $z$ is fixed, and $\\nu\\to\\infty$ in $|\\operatorname{ph}\\nu|\\leq\\pi$ in such a way that $\\nu$ is bounded away from the set of all integers, then\nIf $\\nu=n(\\in\\mathbb{Z})$ , then ( 11.10.29 ) applies for $\\mathbf{J}_{n}\\left(z\\right)$ , and\n<a id=\"E7\"></a>\nas $n\\to\\pm\\infty$ .\nFor fixed $\\lambda$ $(>0)$ ,\nwhere\n<a id=\"E9\"></a>\nIn general,\nFor fixed $\\lambda(>1)$ ,\nFor fixed $\\lambda$ , $0<\\lambda<1$ ,\nwhere\nand\n<a id=\"E13\"></a>\nIn general,\nwith the $U_{k}$ defined in § 10.41(ii) .\nIn particular, as $\\nu\\to\\infty$ ,\nAlso, as $\\nu\\to\\infty$ in $|\\operatorname{ph}\\nu|\\leq 2\\pi-\\delta$ ,\nand\nuniformly for bounded complex values of $a$ . For the Scorer function $\\operatorname{Hi}$ see § 9.12(i) .\nError bounds for ( 11.11.8 ) and ( 11.11.10 ) are given in Meijer ([1932](./bib/M.html#bib3095 \"Über die asymptotische Entwicklung von ∫ 0 - - ∞ ⁢ i ( - arg w μ ) ⁢ e - ⁢ ν z ⁢ w sinh z d z , ( - π 2 < μ < π 2 ) für große Werte von | w | und | ν | . I, II\")) and Nemes ([2014b](./bib/N.html#bib2950 \"The resurgence properties of the large order asymptotics of the Anger-Weber function I\"), [c](./bib/N.html#bib2951 \"The resurgence properties of the large order asymptotics of the Anger-Weber function II\")). The later references also contain exponentially-improved extensions of ( 11.11.8 ) and ( 11.11.10 ). For an extension of ( 11.11.17 ) (and ( 11.11.16 )) into a complete asymptotic expansion, see Nemes ([2020](./bib/N.html#bib2952 \"An extension of Laplace’s method\")).\nWhen $\\nu$ is real and positive, all of ( 11.11.10 )–( 11.11.17 ) can be regarded as special cases of two asymptotic expansions given in Olver ([1997b](./bib/O.html#bib1809 \"Asymptotics and Special Functions\"), pp. 352–360) for $\\mathbf{A}_{-\\nu}\\left(\\lambda\\nu\\right)$ as $\\nu\\to+\\infty$ , one being uniform for $0<\\lambda\\leq 1$ , and the other being uniform for $\\lambda\\geq 1$ . (Note that Olver’s definition of $\\mathbf{A}_{\\nu}\\left(z\\right)$ omits the factor $1/\\pi$ in ( 11.10.4 ).) See also Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), §10.15).\nLastly, corresponding asymptotic approximations and expansions for $\\mathbf{J}_{\\nu}\\left(\\lambda\\nu\\right)$ and $\\mathbf{E}_{\\nu}\\left(\\lambda\\nu\\right)$ , with $0<\\lambda<1$ or $\\lambda>1$ , follow from ( 11.10.15 ) and ( 11.10.16 ) and the corresponding asymptotic expansions for the Bessel functions $J_{\\nu}\\left(z\\right)$ and $Y_{\\nu}\\left(z\\right)$ ; see § 10.19(ii) . Furthermore,",
+            "formulas_clave": [
+              {
+                "id": "E1X",
+                "tag": "11.11.1",
+                "latex": "\\displaystyle F_{k}(\\nu) \\displaystyle=(\\nu^{2}-1^{2})(\\nu^{2}-3^{2})\\cdots(\\nu^{2}-(2k-1)^{2})=(-4)^{k}{\\left(\\frac{1}{2}-\\frac{\\nu}{2}\\right)_{k}}{\\left(\\frac{1}{2}+\\frac{\\nu}{2}\\right)_{k}}, \\tag{11.11.1}"
+              },
+              {
+                "id": "E1Xa",
+                "tag": "",
+                "latex": "\\displaystyle G_{k}(\\nu) \\displaystyle=(\\nu^{2}-2^{2})(\\nu^{2}-4^{2})\\cdots(\\nu^{2}-(2k)^{2})=(-4)^{k}{\\left(1-\\frac{\\nu}{2}\\right)_{k}}{\\left(1+\\frac{\\nu}{2}\\right)_{k}}."
+              },
+              {
+                "id": "E2",
+                "tag": "11.11.2",
+                "latex": "\\mathbf{J}_{\\nu}\\left(z\\right)\\sim J_{\\nu}\\left(z\\right)\\\\\n+\\frac{\\sin\\left(\\pi\\nu\\right)}{\\pi z}\\left(\\sum_{k=0}^{\\infty}\\frac{F_{k}(\\nu)}{z^{2k}}-\\frac{\\nu}{z}\\sum_{k=0}^{\\infty}\\frac{G_{k}(\\nu)}{z^{2k}}\\right), \\tag{11.11.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "11.11.3",
+                "latex": "\\mathbf{E}_{\\nu}\\left(z\\right)\\sim-Y_{\\nu}\\left(z\\right)-\\frac{1+\\cos\\left(\\pi\\nu\\right)}{\\pi z}\\sum_{k=0}^{\\infty}\\frac{F_{k}(\\nu)}{z^{2k}}-\\frac{\\nu(1-\\cos\\left(\\pi\\nu\\right))}{\\pi z^{2}}\\sum_{k=0}^{\\infty}\\frac{G_{k}(\\nu)}{z^{2k}}, \\tag{11.11.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "11.11.4",
+                "latex": "\\mathbf{A}_{\\nu}\\left(z\\right)\\sim\\frac{1}{\\pi z}\\sum_{k=0}^{\\infty}\\frac{F_{k}(\\nu)}{z^{2k}}-\\frac{\\nu}{\\pi z^{2}}\\sum_{k=0}^{\\infty}\\frac{G_{k}(\\nu)}{z^{2k}}. \\tag{11.11.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "11.11.5",
+                "latex": "\\mathbf{J}_{\\nu}\\left(z\\right)=\\frac{\\sin\\left(\\pi\\nu\\right)}{\\pi\\nu}\\left(1-\\frac{\\nu z}{\\nu^{2}-1}+O\\left(\\frac{1}{\\nu^{2}}\\right)\\right), \\tag{11.11.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "11.11.6",
+                "latex": "\\mathbf{E}_{\\nu}\\left(z\\right)=\\frac{2}{\\pi\\nu}\\left({\\sin}^{2}\\left(\\tfrac{1}{2}\\pi\\nu\\right)+\\frac{\\nu z}{\\nu^{2}-1}{\\cos}^{2}\\left(\\tfrac{1}{2}\\pi\\nu\\right)+O\\left(\\frac{1}{\\nu^{2}}\\right)\\right). \\tag{11.11.6}"
+              },
+              {
+                "id": "E7X",
+                "tag": "11.11.7",
+                "latex": "\\displaystyle\\mathbf{E}_{2n}\\left(z\\right) \\displaystyle\\sim\\frac{2z}{(4n^{2}-1)\\pi}, \\tag{11.11.7}"
+              },
+              {
+                "id": "E7Xa",
+                "tag": "",
+                "latex": "\\displaystyle\\mathbf{E}_{2n+1}\\left(z\\right) \\displaystyle\\sim\\frac{2}{(2n+1)\\pi},"
+              },
+              {
+                "id": "E8",
+                "tag": "11.11.8",
+                "latex": "\\mathbf{A}_{\\nu}\\left(\\lambda\\nu\\right)\\sim\\frac{1}{\\pi}\\sum_{k=0}^{\\infty}\\frac{(2k)!\\,a_{k}(\\lambda)}{\\nu^{2k+1}}, \\tag{11.11.8}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "11.11.9",
+                "latex": "\\displaystyle a_{0}(\\lambda) \\displaystyle=\\frac{1}{1+\\lambda}, \\tag{11.11.9}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle a_{1}(\\lambda) \\displaystyle=-\\frac{\\lambda}{2(1+\\lambda)^{4}},"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle a_{2}(\\lambda) \\displaystyle=\\frac{9\\lambda^{2}-\\lambda}{24(1+\\lambda)^{7}},"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle a_{3}(\\lambda) \\displaystyle=-\\frac{225\\lambda^{3}-54\\lambda^{2}+\\lambda}{720(1+\\lambda)^{10}}."
+              },
+              {
+                "id": "E9_5",
+                "tag": "11.11.9_5",
+                "latex": "a_{k+1}(\\lambda)=\\frac{\\lambda}{1-\\lambda^{2}}\\frac{\\lambda a^{\\prime\\prime}_{k}(\\lambda)+a^{\\prime}_{k}(\\lambda)}{(2k+1)(2k+2)}, \\tag{11.11.9_5}"
+              },
+              {
+                "id": "E10",
+                "tag": "11.11.10",
+                "latex": "\\mathbf{A}_{-\\nu}\\left(\\lambda\\nu\\right)\\sim-\\frac{1}{\\pi}\\sum_{k=0}^{\\infty}\\frac{(2k)!\\,a_{k}(-\\lambda)}{\\nu^{2k+1}}, \\tag{11.11.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "11.11.11",
+                "latex": "\\mathbf{A}_{-\\nu}\\left(\\lambda\\nu\\right)\\sim\\left(\\frac{2}{\\pi\\nu}\\right)^{1/2}e^{-\\nu\\mu}\\sum_{k=0}^{\\infty}\\frac{{\\left(\\tfrac{1}{2}\\right)_{k}}b_{k}(\\lambda)}{\\nu^{k}}, \\tag{11.11.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "11.11.12",
+                "latex": "\\mu=\\sqrt{1-\\lambda^{2}}-\\ln\\left(\\frac{1+\\sqrt{1-\\lambda^{2}}}{\\lambda}\\right), \\tag{11.11.12}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "11.11.13",
+                "latex": "\\displaystyle b_{0}(\\lambda) \\displaystyle=\\frac{1}{(1-\\lambda^{2})^{1/4}} \\tag{11.11.13}"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle b_{1}(\\lambda) \\displaystyle=\\frac{2+3\\lambda^{2}}{12(1-\\lambda^{2})^{7/4}},"
+              },
+              {
+                "id": "Ex7",
+                "tag": "",
+                "latex": "\\displaystyle b_{2}(\\lambda) \\displaystyle=\\frac{4+300\\lambda^{2}+81\\lambda^{4}}{864(1-\\lambda^{2})^{13/4}}"
+              },
+              {
+                "id": "E13_5",
+                "tag": "11.11.13_5",
+                "latex": "{\\left(\\tfrac{1}{2}\\right)_{k}}b_{k}(\\lambda)=\\frac{(-1)^{k}}{\\left(1-\\lambda^{2}\\right)^{1/4}}U_{k}\\left(\\frac{1}{\\sqrt{1-\\lambda^{2}}}\\right), \\tag{11.11.13_5}"
+              },
+              {
+                "id": "E14",
+                "tag": "11.11.14",
+                "latex": "\\mathbf{A}_{-\\nu}\\left(\\lambda\\nu\\right)\\sim\\frac{1}{\\pi\\nu(\\lambda-1)}, \\tag{11.11.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "11.11.15",
+                "latex": "\\mathbf{A}_{-\\nu}\\left(\\lambda\\nu\\right)\\sim\\left(\\frac{2}{\\pi\\nu}\\right)^{1/2}\\left(\\frac{1+\\sqrt{1-\\lambda^{2}}}{\\lambda}\\right)^{\\nu}\\frac{e^{-\\nu\\sqrt{1-\\lambda^{2}}}}{(1-\\lambda^{2})^{1/4}}, \\tag{11.11.15}"
+              },
+              {
+                "id": "E16",
+                "tag": "11.11.16",
+                "latex": "\\mathbf{A}_{-\\nu}\\left(\\nu\\right)\\sim\\frac{2^{4/3}}{3^{7/6}\\Gamma\\left(\\tfrac{2}{3}\\right)\\nu^{1/3}}, \\tag{11.11.16}"
+              },
+              {
+                "id": "E17",
+                "tag": "11.11.17",
+                "latex": "\\mathbf{A}_{-\\nu}\\left(\\nu+a\\nu^{1/3}\\right)=2^{1/3}\\nu^{-1/3}\\operatorname{Hi}\\left(-2^{1/3}a\\right)+O\\left(\\nu^{-1}\\right), \\tag{11.11.17}"
+              },
+              {
+                "id": "E18",
+                "tag": "11.11.18",
+                "latex": "\\mathbf{J}_{\\nu}\\left(\\nu\\right)\\sim\\frac{2^{1/3}}{3^{2/3}\\Gamma\\left(\\tfrac{2}{3}\\right)\\nu^{1/3}}, \\tag{11.11.18}"
+              },
+              {
+                "id": "E19",
+                "tag": "11.11.19",
+                "latex": "\\mathbf{E}_{\\nu}\\left(\\nu\\right)\\sim\\frac{2^{1/3}}{3^{7/6}\\Gamma\\left(\\tfrac{2}{3}\\right)\\nu^{1/3}}, \\tag{11.11.19}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle F_{k}(\\nu) \\displaystyle=(\\nu^{2}-1^{2})(\\nu^{2}-3^{2})\\cdots(\\nu^{2}-(2k-1)^{2})=(-4)^{k}{\\left(\\frac{1}{2}-\\frac{\\nu}{2}\\right)_{k}}{\\left(\\frac{1}{2}+\\frac{\\nu}{2}\\right)_{k}}, \\tag{11.11.1}",
+              "\\displaystyle G_{k}(\\nu) \\displaystyle=(\\nu^{2}-2^{2})(\\nu^{2}-4^{2})\\cdots(\\nu^{2}-(2k)^{2})=(-4)^{k}{\\left(1-\\frac{\\nu}{2}\\right)_{k}}{\\left(1+\\frac{\\nu}{2}\\right)_{k}}.",
+              "\\mathbf{J}_{\\nu}\\left(z\\right)\\sim J_{\\nu}\\left(z\\right)\\\\\n+\\frac{\\sin\\left(\\pi\\nu\\right)}{\\pi z}\\left(\\sum_{k=0}^{\\infty}\\frac{F_{k}(\\nu)}{z^{2k}}-\\frac{\\nu}{z}\\sum_{k=0}^{\\infty}\\frac{G_{k}(\\nu)}{z^{2k}}\\right), \\tag{11.11.2}",
+              "\\mathbf{E}_{\\nu}\\left(z\\right)\\sim-Y_{\\nu}\\left(z\\right)-\\frac{1+\\cos\\left(\\pi\\nu\\right)}{\\pi z}\\sum_{k=0}^{\\infty}\\frac{F_{k}(\\nu)}{z^{2k}}-\\frac{\\nu(1-\\cos\\left(\\pi\\nu\\right))}{\\pi z^{2}}\\sum_{k=0}^{\\infty}\\frac{G_{k}(\\nu)}{z^{2k}}, \\tag{11.11.3}",
+              "\\mathbf{A}_{\\nu}\\left(z\\right)\\sim\\frac{1}{\\pi z}\\sum_{k=0}^{\\infty}\\frac{F_{k}(\\nu)}{z^{2k}}-\\frac{\\nu}{\\pi z^{2}}\\sum_{k=0}^{\\infty}\\frac{G_{k}(\\nu)}{z^{2k}}. \\tag{11.11.4}",
+              "\\mathbf{J}_{\\nu}\\left(z\\right)=\\frac{\\sin\\left(\\pi\\nu\\right)}{\\pi\\nu}\\left(1-\\frac{\\nu z}{\\nu^{2}-1}+O\\left(\\frac{1}{\\nu^{2}}\\right)\\right), \\tag{11.11.5}",
+              "\\mathbf{E}_{\\nu}\\left(z\\right)=\\frac{2}{\\pi\\nu}\\left({\\sin}^{2}\\left(\\tfrac{1}{2}\\pi\\nu\\right)+\\frac{\\nu z}{\\nu^{2}-1}{\\cos}^{2}\\left(\\tfrac{1}{2}\\pi\\nu\\right)+O\\left(\\frac{1}{\\nu^{2}}\\right)\\right). \\tag{11.11.6}",
+              "\\displaystyle\\mathbf{E}_{2n}\\left(z\\right) \\displaystyle\\sim\\frac{2z}{(4n^{2}-1)\\pi}, \\tag{11.11.7}",
+              "\\displaystyle\\mathbf{E}_{2n+1}\\left(z\\right) \\displaystyle\\sim\\frac{2}{(2n+1)\\pi},",
+              "\\mathbf{A}_{\\nu}\\left(\\lambda\\nu\\right)\\sim\\frac{1}{\\pi}\\sum_{k=0}^{\\infty}\\frac{(2k)!\\,a_{k}(\\lambda)}{\\nu^{2k+1}}, \\tag{11.11.8}",
+              "\\displaystyle a_{0}(\\lambda) \\displaystyle=\\frac{1}{1+\\lambda}, \\tag{11.11.9}",
+              "\\displaystyle a_{1}(\\lambda) \\displaystyle=-\\frac{\\lambda}{2(1+\\lambda)^{4}},",
+              "\\displaystyle a_{2}(\\lambda) \\displaystyle=\\frac{9\\lambda^{2}-\\lambda}{24(1+\\lambda)^{7}},",
+              "\\displaystyle a_{3}(\\lambda) \\displaystyle=-\\frac{225\\lambda^{3}-54\\lambda^{2}+\\lambda}{720(1+\\lambda)^{10}}.",
+              "a_{k+1}(\\lambda)=\\frac{\\lambda}{1-\\lambda^{2}}\\frac{\\lambda a^{\\prime\\prime}_{k}(\\lambda)+a^{\\prime}_{k}(\\lambda)}{(2k+1)(2k+2)}, \\tag{11.11.9_5}",
+              "\\mathbf{A}_{-\\nu}\\left(\\lambda\\nu\\right)\\sim-\\frac{1}{\\pi}\\sum_{k=0}^{\\infty}\\frac{(2k)!\\,a_{k}(-\\lambda)}{\\nu^{2k+1}}, \\tag{11.11.10}",
+              "\\mathbf{A}_{-\\nu}\\left(\\lambda\\nu\\right)\\sim\\left(\\frac{2}{\\pi\\nu}\\right)^{1/2}e^{-\\nu\\mu}\\sum_{k=0}^{\\infty}\\frac{{\\left(\\tfrac{1}{2}\\right)_{k}}b_{k}(\\lambda)}{\\nu^{k}}, \\tag{11.11.11}",
+              "\\mu=\\sqrt{1-\\lambda^{2}}-\\ln\\left(\\frac{1+\\sqrt{1-\\lambda^{2}}}{\\lambda}\\right), \\tag{11.11.12}",
+              "\\displaystyle b_{0}(\\lambda) \\displaystyle=\\frac{1}{(1-\\lambda^{2})^{1/4}} \\tag{11.11.13}",
+              "\\displaystyle b_{1}(\\lambda) \\displaystyle=\\frac{2+3\\lambda^{2}}{12(1-\\lambda^{2})^{7/4}},",
+              "\\displaystyle b_{2}(\\lambda) \\displaystyle=\\frac{4+300\\lambda^{2}+81\\lambda^{4}}{864(1-\\lambda^{2})^{13/4}}",
+              "{\\left(\\tfrac{1}{2}\\right)_{k}}b_{k}(\\lambda)=\\frac{(-1)^{k}}{\\left(1-\\lambda^{2}\\right)^{1/4}}U_{k}\\left(\\frac{1}{\\sqrt{1-\\lambda^{2}}}\\right), \\tag{11.11.13_5}",
+              "\\mathbf{A}_{-\\nu}\\left(\\lambda\\nu\\right)\\sim\\frac{1}{\\pi\\nu(\\lambda-1)}, \\tag{11.11.14}",
+              "\\mathbf{A}_{-\\nu}\\left(\\lambda\\nu\\right)\\sim\\left(\\frac{2}{\\pi\\nu}\\right)^{1/2}\\left(\\frac{1+\\sqrt{1-\\lambda^{2}}}{\\lambda}\\right)^{\\nu}\\frac{e^{-\\nu\\sqrt{1-\\lambda^{2}}}}{(1-\\lambda^{2})^{1/4}}, \\tag{11.11.15}",
+              "\\mathbf{A}_{-\\nu}\\left(\\nu\\right)\\sim\\frac{2^{4/3}}{3^{7/6}\\Gamma\\left(\\tfrac{2}{3}\\right)\\nu^{1/3}}, \\tag{11.11.16}",
+              "\\mathbf{A}_{-\\nu}\\left(\\nu+a\\nu^{1/3}\\right)=2^{1/3}\\nu^{-1/3}\\operatorname{Hi}\\left(-2^{1/3}a\\right)+O\\left(\\nu^{-1}\\right), \\tag{11.11.17}",
+              "\\mathbf{J}_{\\nu}\\left(\\nu\\right)\\sim\\frac{2^{1/3}}{3^{2/3}\\Gamma\\left(\\tfrac{2}{3}\\right)\\nu^{1/3}}, \\tag{11.11.18}",
+              "\\mathbf{E}_{\\nu}\\left(\\nu\\right)\\sim\\frac{2^{1/3}}{3^{7/6}\\Gamma\\left(\\tfrac{2}{3}\\right)\\nu^{1/3}}, \\tag{11.11.19}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Anger–Weber functions",
+                "asymptotic expansions",
+                "large argument",
+                "large order"
+              ],
+              "simbolos": [
+                "${\\left(a\\right)_{n}}$: Pochhammer’s symbol (or shifted factorial) , $\\nu$: real or complex order , $k$: nonnegative integer , $F_{k}(\\nu)$: expansion functions and $G_{k}(\\nu)$: expansion functions",
+                "$\\mathbf{E}_{\\nu}\\left(z\\right)$: Weber function , $\\sim$: asymptotic equality , $\\pi$: the ratio of the circumference of a circle to its diameter , $z$: complex variable and $n$: integer order  **Proof sketch:**  Derivable using ( 11.6.5 ).",
+                "$\\lambda$: parameter and $a_{k}(\\lambda)$: expansion function",
+                "$\\lambda$: parameter and $b_{k}(\\lambda)$: expansion function"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.1.2) for Section 11.11",
+                "Erratum (V1.1.2) for Citations",
+                "Erratum (V1.0.11) for Clarifications",
+                "Erratum (V1.1.2) for Equation (11.11.1)",
+                "§3.6(vi)"
+              ],
+              "notas_bibliograficas": [
+                "See Watson ([1944](./bib/W.html#bib2380 \"A Treatise on the Theory of Bessel Functions\"), §10.14)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.11 and Ch.11",
+                "Annotations for §11.11(i) , §11.11 and Ch.11",
+                "Annotations for §11.11(ii) , §11.11 and Ch.11",
+                "Annotations for §11.11(iii) , §11.11 and Ch.11"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Clarification (effective with 1.1.2)",
+                  "descripcion": "Just above ( 11.11.2 ) the restriction $\\delta<\\pi$ was removed. A sentence was added at the end of the subsection indicating that one may find sharp error bounds and exponentially-improved extensions in Nemes ([2018](./bib/N.html#bib2941 \"Error bounds for the large-argument asymptotic expansions of the Lommel and allied functions\"))."
+                },
+                {
+                  "tipo_evento": "Addition (effective with 1.1.2)",
+                  "descripcion": "Pochhammer symbol representations for $F_{k}(\\nu)$ and $G_{k}(\\nu)$ were inserted."
+                },
+                {
+                  "tipo_evento": "Correction (effective with 1.0.11)",
+                  "descripcion": "Originally the subscript $k$ on the left-hand side was written in an incorrect font as $\\mathrm{k}$ ."
+                },
+                {
+                  "tipo_evento": "Modification (effective with 1.1.2)",
+                  "descripcion": "In the sentence just above ( 11.11.14 ), $\\nu\\to+\\infty$ has been replaced with $\\nu\\to\\infty$ . In the sentence just above ( 11.11.16 ), the text $\\nu\\to+\\infty$ has been updated to include “in $|\\operatorname{ph}\\nu|\\leq 2\\pi-\\delta$ ”. In the text immediately below ( 11.11.17 ), “bounded real values of $a$ ” have been changed to “bounded complex values of $a$ ”. The following two paragraphs immediately above ( 11.11.18 ) and ( 11.11.19 ) have been extensively modified."
+                },
+                {
+                  "tipo_evento": "Clarification (effective with 1.0.11)",
+                  "descripcion": "Originally the argument $\\lambda$ of these functions was suppressed; as a notational clarification, the argument has been made explicit."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              },
+              {
+                "texto": "2018",
+                "archivo_destino": "bib/N.html#bib2941",
+                "titulo_referencia": "Error bounds for the large-argument asymptotic expansions of the Lommel and allied functions"
+              },
+              {
+                "texto": "2018",
+                "archivo_destino": "bib/N.html#bib2941",
+                "titulo_referencia": "Error bounds for the large-argument asymptotic expansions of the Lommel and allied functions"
+              },
+              {
+                "texto": "1932",
+                "archivo_destino": "bib/M.html#bib3095",
+                "titulo_referencia": "Über die asymptotische Entwicklung von ∫ 0 - - ∞ ⁢ i ( - arg w μ ) ⁢ e - ⁢ ν z ⁢ w sinh z d z , ( - π 2 < μ < π 2 ) für große Werte von | w | und | ν | . I, II"
+              },
+              {
+                "texto": "2014b",
+                "archivo_destino": "bib/N.html#bib2950",
+                "titulo_referencia": "The resurgence properties of the large order asymptotics of the Anger-Weber function I"
+              },
+              {
+                "texto": "c",
+                "archivo_destino": "bib/N.html#bib2951",
+                "titulo_referencia": "The resurgence properties of the large order asymptotics of the Anger-Weber function II"
+              },
+              {
+                "texto": "2020",
+                "archivo_destino": "bib/N.html#bib2952",
+                "titulo_referencia": "An extension of Laplace’s method"
+              },
+              {
+                "texto": "1997b",
+                "archivo_destino": "bib/O.html#bib1809",
+                "titulo_referencia": "Asymptotics and Special Functions"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/W.html#bib2380",
+                "titulo_referencia": "A Treatise on the Theory of Bessel Functions"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Applications",
+      "secciones": [
+        {
+          "seccion_id": "11.12",
+          "titulo_original": "Physical Applications",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.12.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.12.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.12 Physical Applications",
+            "prosa_teorica": "Applications of Struve functions occur in water-wave and surface-wave problems (Hirata ([1975](./bib/H.html#bib1087 \"Flow near the bow of a steadily turning ship\")) and Ahmadi and Widnall ([1985](./bib/index.html#bib41 \"Unsteady lifting-line theory as a singular-perturbation problem\"))), unsteady aerodynamics (Shaw ([1985](./bib/S.html#bib2060 \"Perturbational results for diffraction of water-waves by nearly-vertical barriers\")) and Wehausen and Laitone ([1960](./bib/W.html#bib2384 \"Surface Waves\"))), distribution of fluid pressure over a vibrating disk (McLachlan ([1934](./bib/M.html#bib1584 \"Loud Speakers: Theory, Performance, Testing and Design\"))), resistive MHD instability theory (Paris and Sy ([1983](./bib/P.html#bib1846 \"Influence of equilibrium shear flow along the magnetic field on the resistive tearing instability\"))), and optical diffraction (Levine and Schwinger ([1948](./bib/L.html#bib2639 \"On the theory of diffraction by an aperture in an infinite plane screen. I\"))). More recently Struve functions have appeared in many particle quantum dynamical studies of spin decoherence (Shao and Hänggi ([1998](./bib/S.html#bib2642 \"Decoherent dynamics of a two-level system coupled to a sea of spins\"))) and nanotubes (Pedersen ([2003](./bib/P.html#bib2641 \"Variational approach to excitons in carbon nanotubes\"))).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Struve functions",
+                "Struve functions and modified Struve functions",
+                "aerodynamics",
+                "applications",
+                "fluid dynamics",
+                "nanotubes",
+                "optical diffraction",
+                "physical",
+                "quantum mechanics",
+                "resistive MHD instability theory",
+                "surface-wave problems",
+                "water waves"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/H.html#bib1087",
+                "titulo_referencia": "Flow near the bow of a steadily turning ship"
+              },
+              {
+                "texto": "1985",
+                "archivo_destino": "bib/index.html#bib41",
+                "titulo_referencia": "Unsteady lifting-line theory as a singular-perturbation problem"
+              },
+              {
+                "texto": "1985",
+                "archivo_destino": "bib/S.html#bib2060",
+                "titulo_referencia": "Perturbational results for diffraction of water-waves by nearly-vertical barriers"
+              },
+              {
+                "texto": "1960",
+                "archivo_destino": "bib/W.html#bib2384",
+                "titulo_referencia": "Surface Waves"
+              },
+              {
+                "texto": "1934",
+                "archivo_destino": "bib/M.html#bib1584",
+                "titulo_referencia": "Loud Speakers: Theory, Performance, Testing and Design"
+              },
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/P.html#bib1846",
+                "titulo_referencia": "Influence of equilibrium shear flow along the magnetic field on the resistive tearing instability"
+              },
+              {
+                "texto": "1948",
+                "archivo_destino": "bib/L.html#bib2639",
+                "titulo_referencia": "On the theory of diffraction by an aperture in an infinite plane screen. I"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/S.html#bib2642",
+                "titulo_referencia": "Decoherent dynamics of a two-level system coupled to a sea of spins"
+              },
+              {
+                "texto": "2003",
+                "archivo_destino": "bib/P.html#bib2641",
+                "titulo_referencia": "Variational approach to excitons in carbon nanotubes"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Computation",
+      "secciones": [
+        {
+          "seccion_id": "11.13",
+          "titulo_original": "Methods of Computation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.13.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.13.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.13 Methods of Computation",
+            "prosa_teorica": "Subsequent subsections treat the computation of Struve functions. The treatment of Lommel and Anger–Weber functions is similar. For a review of methods for the computation of $\\mathbf{H}_{\\nu}\\left(z\\right)$ see Zanovello ([1975](./bib/Z.html#bib2480 \"Sul calcolo numerico della funzione di Struve ⁢ H ν ( z )\")). For simple and effective approximations to $\\mathbf{H}_{0}\\left(z\\right)$ and $\\mathbf{H}_{1}\\left(z\\right)$ see Aarts and Janssen ([2016](./bib/index.html#bib2895 \"Efficient approximation of the Struve functions H n occurring in the calculation of sound radiation quantities\")).\nAlthough the power-series expansions ( 11.2.1 ) and ( 11.2.2 ), and the Bessel-function expansions of § 11.4(iv) converge for all finite values of $z$ , they are cumbersome to use when $|z|$ is large owing to slowness of convergence and cancellation. For large $|z|$ and/or $|\\nu|$ the asymptotic expansions given in § [11.6](./11.6.md \"§11.6 Asymptotic Expansions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions\") should be used instead.\nFor numerical purposes the most convenient of the representations given in § [11.5](./11.5.md \"§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions\") , at least for real variables, include the integrals ( 11.5.2 )–( 11.5.5 ) for $\\mathbf{K}_{\\nu}\\left(z\\right)$ and $\\mathbf{M}_{\\nu}\\left(z\\right)$ . Subsequently $\\mathbf{H}_{\\nu}\\left(z\\right)$ and $\\mathbf{L}_{\\nu}\\left(z\\right)$ are obtainable via ( 11.2.5 ) and ( 11.2.6 ). Other integrals that appear in § 11.5(i) have highly oscillatory integrands unless $z$ is small.\nFor complex variables the methods described in §§ 3.5(viii) and 3.5(ix) are available.\nA comprehensive approach is to integrate the defining inhomogeneous differential equations ( 11.2.7 ) and ( 11.2.9 ) numerically, using methods described in § [3.7](./3.7.md \"§3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods\") . To insure stability the integration path must be chosen so that as we proceed along it the wanted solution grows in magnitude at least as rapidly as the complementary solutions.\nSuppose $\\nu\\geq 0$ and $x$ is real and positive. Then from the limiting forms for small argument (§§ 11.2(i) , 10.7(i) , 10.30(i) ), limiting forms for large argument (§§ 11.6(i) , 10.7(ii) , 10.30(ii) ), and the connection formulas ( 11.2.5 ) and ( 11.2.6 ), it is seen that $\\mathbf{H}_{\\nu}\\left(x\\right)$ and $\\mathbf{L}_{\\nu}\\left(x\\right)$ can be computed in a stable manner by integrating forwards, that is, from the origin toward infinity. The solution $\\mathbf{K}_{\\nu}\\left(x\\right)$ needs to be integrated backwards for small $x$ , and either forwards or backwards for large $x$ depending whether or not $\\nu$ exceeds $\\tfrac{1}{2}$ . For $\\mathbf{M}_{\\nu}\\left(x\\right)$ both forward and backward integration are unstable, and boundary-value methods are required (§ 3.7(iii) ).\nSequences of values of $\\mathbf{H}_{\\nu}\\left(z\\right)$ and $\\mathbf{L}_{\\nu}\\left(z\\right)$ , with $z$ fixed, can be computed by application of the inhomogeneous difference equations ( 11.4.23 ) and ( 11.4.25 ). There are similar problems to those described in § 11.13(iv) concerning stability. In consequence forward recurrence, backward recurrence, or boundary-value methods may be necessary. See § [3.6](./3.6.md \"§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods\") for implementation of these methods, and with the Weber function $\\mathbf{E}_{n}\\left(x\\right)$ as an example.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Anger–Weber functions",
+                "Lommel functions",
+                "Struve functions and modified Struve functions",
+                "computation"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.0.16) for Subsection §11.13(i)",
+                "§11.13(v)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.13 and Ch.11"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.0.16)",
+                  "descripcion": "A reference to Aarts and Janssen ([2016](./bib/index.html#bib2895 \"Efficient approximation of the Struve functions H n occurring in the calculation of sound radiation quantities\")) was added in this subsection."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "2016",
+                "archivo_destino": "bib/index.html#bib2895",
+                "titulo_referencia": "Efficient approximation of the Struve functions H n occurring in the calculation of sound radiation quantities"
+              },
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/Z.html#bib2480",
+                "titulo_referencia": "Sul calcolo numerico della funzione di Struve ⁢ H ν ( z )"
+              },
+              {
+                "texto": "2016",
+                "archivo_destino": "bib/index.html#bib2895",
+                "titulo_referencia": "Efficient approximation of the Struve functions H n occurring in the calculation of sound radiation quantities"
+              },
+              {
+                "texto": "11.6",
+                "archivo_destino": "11.6.md",
+                "titulo_referencia": "§11.6 Asymptotic Expansions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"
+              },
+              {
+                "texto": "11.5",
+                "archivo_destino": "11.5.md",
+                "titulo_referencia": "§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"
+              },
+              {
+                "texto": "3.7",
+                "archivo_destino": "3.7.md",
+                "titulo_referencia": "§3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"
+              },
+              {
+                "texto": "3.6",
+                "archivo_destino": "3.6.md",
+                "titulo_referencia": "§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "11.14",
+          "titulo_original": "Tables",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.14.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.14.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.14 Tables",
+            "prosa_teorica": "For tables before 1961 see Fletcher et al. ([1962](./bib/F.html#bib810 \"An Index of Mathematical Tables. Vols. I, II\")) and Lebedev and Fedorova ([1960](./bib/L.html#bib1392 \"A Guide to Mathematical Tables\")). Tables listed in these Indices are omitted from the subsections that follow.\n* Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Chapter 12) tabulates $\\mathbf{H}_{n}\\left(x\\right)$ , $\\mathbf{H}_{n}\\left(x\\right)-Y_{n}\\left(x\\right)$ , and $I_{n}\\left(x\\right)-\\mathbf{L}_{n}\\left(x\\right)$ for $n=0,1$ and $x=0(.1)5$ , $x^{-1}=0(.01)0.2$ to 6D or 7D.\n* Agrest et al. ([1982](./bib/index.html#bib38 \"Tablitsy funktsii Struve i integralov ot nikh\")) tabulates $\\mathbf{H}_{n}\\left(x\\right)$ and $e^{-x}\\mathbf{L}_{n}\\left(x\\right)$ for $n=0,1$ and $x=0(.001)5(.005)15(.01)100$ to 11D.\n* Barrett ([1964](./bib/B.html#bib203 \"Tables of modified Struve functions of orders zero and unity\")) tabulates $\\mathbf{L}_{n}\\left(x\\right)$ for $n=0,1$ and $x=0.2(.005)4(.05)10(.1)19.2$ to 5 or 6S, $x=6(.25)59.5(.5)100$ to 2S.\n* Zanovello ([1975](./bib/Z.html#bib2480 \"Sul calcolo numerico della funzione di Struve ⁢ H ν ( z )\")) tabulates $\\mathbf{H}_{n}\\left(x\\right)$ for $n=-4(1)15$ and $x=0.5(.5)26$ to 8D or 9S.\n* Zhang and Jin ([1996](./bib/Z.html#bib2493 \"Computation of Special Functions\")) tabulates $\\mathbf{H}_{n}\\left(x\\right)$ and $\\mathbf{L}_{n}\\left(x\\right)$ for $n=-4(1)3$ and $x=0(1)20$ to 8D or 7S.\n* Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Chapter 12) tabulates $\\int_{0}^{x}(I_{0}\\left(t\\right)-\\mathbf{L}_{0}\\left(t\\right))\\,\\mathrm{d}t$ and $(2/\\pi)\\int_{x}^{\\infty}t^{-1}\\mathbf{H}_{0}\\left(t\\right)\\,\\mathrm{d}t$ for $x=0(.1)5$ to 5D or 7D; $\\int_{0}^{x}(\\mathbf{H}_{0}\\left(t\\right)-Y_{0}\\left(t\\right))\\,\\mathrm{d}t-(2/\\pi)\\ln x$ , $\\int_{0}^{x}(I_{0}\\left(t\\right)-\\mathbf{L}_{0}\\left(t\\right))\\,\\mathrm{d}t-(2/\\pi)\\ln x$ , and $\\int_{x}^{\\infty}t^{-1}(\\mathbf{H}_{0}\\left(t\\right)-Y_{0}\\left(t\\right))\\,\\mathrm{d}t$ for $x^{-1}=0(.01)0.2$ to 6D.\n* Agrest et al. ([1982](./bib/index.html#bib38 \"Tablitsy funktsii Struve i integralov ot nikh\")) tabulates $\\int_{0}^{x}\\mathbf{H}_{0}\\left(t\\right)\\,\\mathrm{d}t$ and $e^{-x}\\int_{0}^{x}\\mathbf{L}_{0}\\left(t\\right)\\,\\mathrm{d}t$ for $x=0(.001)5(.005)15(.01)100$ to 11D.\n* Bernard and Ishimaru ([1962](./bib/B.html#bib239 \"Tables of the Anger and Lommel-Weber Functions\")) tabulates $\\mathbf{J}_{\\nu}\\left(x\\right)$ and $\\mathbf{E}_{\\nu}\\left(x\\right)$ for $\\nu=-10(.1)10$ and $x=0(.1)10$ to 5D.\n* Jahnke and Emde ([1945](./bib/J.html#bib1158 \"Tables of Functions with Formulae and Curves\")) tabulates $\\mathbf{E}_{n}\\left(x\\right)$ for $n=1,2$ and $x=0(.01)14.99$ to 4D.\n* Agrest and Maksimov ([1971](./bib/index.html#bib39 \"Theory of Incomplete Cylindrical Functions and Their Applications\"), Chapter 11) defines *incomplete* Struve, Anger, and Weber functions and includes tables of an incomplete Struve function $\\mathbf{H}_{n}\\left(x,\\alpha\\right)$ for $n=0,1$ , $x=0(.2)10$ , and $\\alpha=0(.2)1.4,\\tfrac{1}{2}\\pi$ , together with surface plots.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Struve functions and modified Struve functions",
+                "tables",
+                "integrals",
+                "Anger–Weber functions",
+                "incomplete"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.14 and Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/F.html#bib810",
+                "titulo_referencia": "An Index of Mathematical Tables. Vols. I, II"
+              },
+              {
+                "texto": "1960",
+                "archivo_destino": "bib/L.html#bib1392",
+                "titulo_referencia": "A Guide to Mathematical Tables"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/index.html#bib38",
+                "titulo_referencia": "Tablitsy funktsii Struve i integralov ot nikh"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/B.html#bib203",
+                "titulo_referencia": "Tables of modified Struve functions of orders zero and unity"
+              },
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/Z.html#bib2480",
+                "titulo_referencia": "Sul calcolo numerico della funzione di Struve ⁢ H ν ( z )"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/Z.html#bib2493",
+                "titulo_referencia": "Computation of Special Functions"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/index.html#bib38",
+                "titulo_referencia": "Tablitsy funktsii Struve i integralov ot nikh"
+              },
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/B.html#bib239",
+                "titulo_referencia": "Tables of the Anger and Lommel-Weber Functions"
+              },
+              {
+                "texto": "1945",
+                "archivo_destino": "bib/J.html#bib1158",
+                "titulo_referencia": "Tables of Functions with Formulae and Curves"
+              },
+              {
+                "texto": "1971",
+                "archivo_destino": "bib/index.html#bib39",
+                "titulo_referencia": "Theory of Incomplete Cylindrical Functions and Their Applications"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "11.15",
+          "titulo_original": "Approximations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.15.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.15.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.15 Approximations",
+            "prosa_teorica": "* Luke ([1975](./bib/L.html#bib1501 \"Mathematical Functions and their Approximations\"), pp. 416–421) gives Chebyshev-series expansions for $\\mathbf{H}_{n}\\left(x\\right)$ , $\\mathbf{L}_{n}\\left(x\\right)$ , $0\\leq\\left|x\\right|\\leq 8$ , and $\\mathbf{H}_{n}\\left(x\\right)-Y_{n}\\left(x\\right)$ , $x\\geq 8$ , for $n=0,1$ ; $\\int_{0}^{x}t^{-m}\\mathbf{H}_{0}\\left(t\\right)\\,\\mathrm{d}t$ , $\\int_{0}^{x}t^{-m}\\mathbf{L}_{0}\\left(t\\right)\\,\\mathrm{d}t$ , $0\\leq\\left|x\\right|\\leq 8$ , $m=0,1$ and $\\int_{0}^{x}(\\mathbf{H}_{0}\\left(t\\right)-Y_{0}\\left(t\\right))\\,\\mathrm{d}t$ , $\\int_{x}^{\\infty}t^{-1}(\\mathbf{H}_{0}\\left(t\\right)-Y_{0}\\left(t\\right))\\,\\mathrm{d}t$ , $x\\geq 8$ ; the coefficients are to 20D.\n* MacLeod ([1993](./bib/M.html#bib1522 \"Chebyshev expansions for modified Struve and related functions\")) gives Chebyshev-series expansions for $\\mathbf{L}_{0}\\left(x\\right)$ , $\\mathbf{L}_{1}\\left(x\\right)$ , $0\\leq x\\leq 16$ , and $I_{0}\\left(x\\right)-\\mathbf{L}_{0}\\left(x\\right)$ , $I_{1}\\left(x\\right)-\\mathbf{L}_{1}\\left(x\\right)$ , $x\\geq 16$ ; the coefficients are to 20D.\n* Newman ([1984](./bib/N.html#bib1714 \"Approximations for the Bessel and Struve functions\")) gives polynomial approximations for $\\mathbf{H}_{n}\\left(x\\right)$ for $n=0,1$ , $0\\leq x\\leq 3$ , and rational-fraction approximations for $\\mathbf{H}_{n}\\left(x\\right)-Y_{n}\\left(x\\right)$ for $n=0,1$ , $x\\geq 3$ . The maximum errors do not exceed 1.2×10⁻⁸ for the former and 2.5×10⁻⁸ for the latter.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Chebyshev",
+                "Struve functions and modified Struve functions",
+                "approximations",
+                "series expansions"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.15 and Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1975",
+                "archivo_destino": "bib/L.html#bib1501",
+                "titulo_referencia": "Mathematical Functions and their Approximations"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/M.html#bib1522",
+                "titulo_referencia": "Chebyshev expansions for modified Struve and related functions"
+              },
+              {
+                "texto": "1984",
+                "archivo_destino": "bib/N.html#bib1714",
+                "titulo_referencia": "Approximations for the Bessel and Struve functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "11.16",
+          "titulo_original": "Software",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/11/11.16.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/11/11.16.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§11.16 Software",
+            "prosa_teorica": "In this section we provide links to the research literature describing the implementation of algorithms in software for the evaluation of functions described in this chapter. Citations in bulleted lists refer to papers for which research software has been made available and can be downloaded via the Web. References to research software that is available in other ways is listed separately.\nA more complete list of available software for computing these functions is found in the [Software Index](./software/index.md) . For another listing of Web-accessible software for the functions in this chapter, see [GAMS (class C10e)](https://gams.nist.gov/serve.cgi/Class/C10e/) .\n* MacLeod ([1996a](./bib/M.html#bib1524 \"Algorithm 757: MISCFUN, a software package to compute uncommon special functions\")). Fortran.\nNo research software has been found for these functions. For other software see the [Software Index](./software/index.md) .\nNo research software has been found for these functions. For other software see the [Software Index](./software/index.md) .\nNo research software has been found for these functions. For other software see the [Software Index](./software/index.md) .\nNo research software has been found for these functions. For other software see the [Software Index](./software/index.md) .",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "referenciado_por": [
+                "§ ‣ Software Cross Index"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.11",
+                "Annotations for §11.16 and Ch.11"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              },
+              {
+                "texto": "1996a",
+                "archivo_destino": "bib/M.html#bib1524",
+                "titulo_referencia": "Algorithm 757: MISCFUN, a software package to compute uncommon special functions"
+              },
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              },
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              },
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              },
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "agradecimientos_capitulo": "This chapter is based in part on Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Chapter 12) by M. Abramowitz. The author is indebted to Adri Olde Daalhuis for correcting a long-standing error in Eq. ( 11.10.23 ) in previous literature.",
+  "referencias_capitulo": [
+    "New Associate Editors for the DLMF",
+    "*Profile* Gergő Nemes",
+    "*Profile* Richard B. Paris",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Associate Editors",
+    "§ ‣ Associate Editors",
+    "§ ‣ Software Cross Index"
+  ],
+  "estado_extraccion": "completado",
+  "total_formulas_extraidas": 170,
+  "estado_metadatos": "verificado_y_refinado"
+}

@@ -1,0 +1,56 @@
+---
+title: "Teorema del Límite Central y Leyes de Grandes Números"
+subtitle: "Convergencia Estocástica y Comportamiento Asintótico"
+date: "2026-07-22"
+categories: ["probabilidad", "teoremas límite", "TLC", "estadística matemática"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Teorema del Límite Central y Leyes de Grandes Números
+
+## Introducción
+
+Los teoremas límite son la piedra angular de la teoría de la probabilidad y la inferencia estadística moderna.
+Describen el comportamiento de secuencias de variables aleatorias a medida que el tamaño de la muestra tiende a infinito.
+Permiten hacer aproximaciones precisas sobre poblaciones complejas utilizando distribuciones conocidas y tratables analíticamente.
+Sin estos teoremas, construir intervalos de confianza o realizar pruebas de hipótesis sobre parámetros desconocidos sería prácticamente imposible en la mayoría de escenarios reales.
+
+## La Ley de los Grandes Números (LGN)
+
+La Ley de los Grandes Números garantiza que, a largo plazo, los resultados empíricos convergen a los valores teóricos esperados.
+Si observamos una secuencia de variables aleatorias independientes e idénticamente distribuidas (i.i.d.) con media finita $\mu$, la media muestral $\bar{X}_n$ converge a $\mu$ cuando $n \to \infty$.
+Existen dos formulaciones rigurosas: la LGN Débil (convergencia en probabilidad) y la LGN Fuerte (convergencia casi segura).
+En la práctica, esto significa que aumentar el tamaño muestral siempre incrementa la precisión de la estimación de la media poblacional.
+
+## El Teorema del Límite Central (TLC)
+
+El Teorema del Límite Central es, quizás, el resultado más extraordinario de toda la estocástica.
+Establece que la suma (y por ende la media) de un gran número de variables aleatorias i.i.d. con varianza finita se aproxima a una distribución Normal, sin importar la distribución original de las variables.
+Matemáticamente, la variable estandarizada $Z_n = \frac{\bar{X}_n - \mu}{\sigma / \sqrt{n}}$ converge en distribución a una Normal estándar $\mathcal{N}(0,1)$.
+Esta es la razón profunda por la cual la curva de Gauss aparece en fenómenos tan diversos como las estaturas humanas, errores de medición o el ruido térmico.
+
+## Implicaciones para la Inferencia
+
+El TLC justifica el uso de métodos paramétricos que asumen normalidad en muestras grandes (típicamente $n \geq 30$).
+Permite transformar un problema donde se desconoce la forma de la distribución subyacente en uno tratable bajo el marco Gaussiano.
+La desviación estándar de la media muestral, $\sigma / \sqrt{n}$, se conoce como error estándar y demuestra matemáticamente cómo la incertidumbre disminuye al aumentar la información.
+
+## Representación Visual
+
+La convergencia de una distribución uniforme hacia una campana de Gauss al sumar múltiples variables aleatorias ilustra el mecanismo del TLC.
+
+![Convergencia hacia la distribución Normal (TLC)](teoremas_limite.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $n$ | Tamaño de la muestra | escalar |
+| $\bar{X}_n$ | Media muestral de $n$ observaciones | variable |
+| $\mu$ | Media poblacional verdadera | parámetro |
+| $\sigma$ | Desviación estándar poblacional | parámetro |
+| $Z_n$ | Variable estandarizada para evaluar convergencia | variable |

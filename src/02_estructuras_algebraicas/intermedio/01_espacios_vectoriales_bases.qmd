@@ -1,0 +1,54 @@
+---
+# --- Metadatos Estándar de Quarto ---
+title: "Espacios Vectoriales, Bases y Dimensión"
+date: "2026-07-22"
+categories: [algebra lineal, vectores, espacios vectoriales, bases, dimension]
+
+# --- Metadatos Estructurales (Polaris Kernel) ---
+id: msc15_espacios_vectoriales_bases
+pilar: "02_estructuras_algebraicas"
+msc_code: "15A-04"
+tags: [algebra lineal, vectores, espacios vectoriales, bases, dimension]
+nivel: intermedio
+updated: "2026-07-22"
+status: "stable"
+---
+
+# Espacios Vectoriales Abstractos
+
+El concepto de espacio vectorial generaliza la intuición geométrica de los vectores tridimensionales a dimensiones superiores y estructuras abstractas.
+Un espacio vectorial $V$ sobre un cuerpo $K$ (generalmente los reales $\mathbb{R}$ o los complejos $\mathbb{C}$) es un conjunto no vacío dotado de dos operaciones fundamentales.
+Estas operaciones son la suma vectorial interna y la multiplicación escalar por elementos del cuerpo $K$.
+Para que el conjunto sea formalmente un espacio vectorial, estas operaciones deben satisfacer rigurosamente ocho axiomas, incluyendo la conmutatividad y asociatividad de la suma, la existencia de un vector nulo $\mathbf{0}$, y propiedades distributivas respecto a los escalares.
+Ejemplos comunes de espacios vectoriales incluyen los vectores coordenados $\mathbb{R}^n$, el conjunto de matrices de tamaño fijo, y el espacio infinito de las funciones continuas.
+
+## Independencia Lineal y Generación
+
+Una combinación lineal es una expresión construida multiplicando un conjunto de vectores por escalares y sumando todos los resultados.
+Se dice que un conjunto de vectores genera al espacio $V$ si absolutamente todo elemento de $V$ puede escribirse como una combinación lineal de esos vectores.
+Por otro lado, un conjunto de vectores es linealmente independiente si la única forma de obtener el vector nulo mediante una combinación lineal es usando escalares que sean todos estrictamente cero.
+En otras palabras, ningún vector del conjunto independiente puede ser expresado redundante como una combinación lineal de los demás.
+La independencia lineal asegura que el conjunto de vectores no contenga información o direcciones solapadas, siendo una colección mínima y eficiente.
+
+## Base y Dimensión
+
+Una base de un espacio vectorial es un subconjunto de vectores que es simultáneamente generador del espacio y linealmente independiente.
+Las bases son fundamentales porque permiten establecer un sistema de coordenadas único para todo el espacio abstracto.
+Si $B = \{v_1, v_2, \dots, v_n\}$ es una base de $V$, entonces cada vector en $V$ se puede expresar de una y solo una manera como combinación lineal de los vectores en $B$.
+La dimensión de un espacio vectorial se define invariablemente como la cantidad exacta de vectores que contiene cualquiera de sus bases.
+Es un teorema profundo del álgebra lineal que, aunque un espacio puede tener infinitas bases distintas, todas ellas compartirán exactamente la misma cardinalidad (dimensión).
+
+## Representación de Independencia y Bases
+
+![Visualización geométrica de vectores dependientes e independientes en un plano](espacios_vectoriales_bases.svg)
+
+## Glosario de variables
+
+| Símbolo | Nombre | Tipo |
+| --- | --- | --- |
+| $V$ | Espacio vectorial | conjunto |
+| $K$ | Cuerpo de escalares | cuerpo algebraico |
+| $\mathbf{v}, \mathbf{u}$ | Vectores abstractos | vector |
+| $c, \lambda$ | Escalares | escalar |
+| $B$ | Base vectorial | conjunto ordenado |
+| $\dim(V)$ | Dimensión del espacio | entero no negativo |

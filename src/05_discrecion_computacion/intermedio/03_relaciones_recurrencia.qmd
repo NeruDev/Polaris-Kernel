@@ -1,0 +1,56 @@
+---
+title: "Relaciones de Recurrencia y Funciones Generatrices"
+subtitle: "Modelado y Resolución de Sucesiones Discretas"
+date: "2026-07-22"
+categories: ["matemática discreta", "recurrencia", "sucesiones", "combinatoria"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Relaciones de Recurrencia y Funciones Generatrices
+
+## Introducción
+
+Las relaciones de recurrencia son ecuaciones que definen el $n$-ésimo término de una sucesión en función de uno o más términos anteriores.
+Constituyen la contraparte discreta de las ecuaciones diferenciales y son fundamentales para analizar la eficiencia de algoritmos recursivos.
+La sucesión de Fibonacci, definida como $F_n = F_{n-1} + F_{n-2}$, es el ejemplo clásico de una relación de recurrencia lineal homogénea.
+Para resolver estas relaciones, es decir, encontrar una fórmula explícita no recursiva, existen múltiples métodos algebraicos.
+
+## Ecuaciones Lineales Homogéneas
+
+Una relación de recurrencia lineal homogénea con coeficientes constantes tiene la forma $a_n = c_1 a_{n-1} + c_2 a_{n-2} + \dots + c_k a_{n-k}$.
+El método principal para resolverlas implica plantear su ecuación característica sustituyendo $a_n$ por $r^n$.
+Las raíces de esta ecuación polinómica determinan la solución general de la sucesión.
+Por ejemplo, para una recurrencia de segundo orden con raíces distintas $r_1$ y $r_2$, la solución adopta la forma $a_n = A r_1^n + B r_2^n$.
+
+## Funciones Generatrices
+
+Las funciones generatrices son series de potencias formales donde los coeficientes representan los términos de una sucesión discreta.
+La función generatriz ordinaria de la sucesión $a_n$ es $G(x) = \sum_{n=0}^{\infty} a_n x^n$.
+Esta técnica transforma un problema discreto sobre sucesiones en un problema algebraico sobre funciones analíticas.
+Operar con $G(x)$ mediante derivación, integración o fracciones parciales permite deducir expresiones cerradas para $a_n$.
+
+## Aplicaciones en Algoritmia
+
+En ciencias de la computación, el análisis del tiempo de ejecución de algoritmos del tipo divide y vencerás conduce directamente a relaciones de recurrencia.
+El Teorema Maestro proporciona una "receta" rápida para evaluar recurrencias de la forma $T(n) = aT(n/b) + f(n)$.
+Comprender las recurrencias es esencial para predecir si un algoritmo escalará eficientemente ante grandes conjuntos de datos.
+
+## Representación Visual
+
+El árbol de recursión es una herramienta visual excelente para entender cómo se expande una relación de recurrencia en cada paso hasta alcanzar los casos base.
+
+![Árbol de Recursión Típico](relaciones_recurrencia.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $a_n$ | El $n$-ésimo término de una sucesión discreta | secuencia |
+| $c_i$ | Coeficientes de la relación de recurrencia | constante |
+| $r$ | Raíces de la ecuación característica | variable |
+| $G(x)$ | Función generatriz ordinaria | función |
+| $T(n)$ | Tiempo de ejecución de un algoritmo | función |

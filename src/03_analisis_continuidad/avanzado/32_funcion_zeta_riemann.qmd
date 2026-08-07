@@ -1,0 +1,102 @@
+---
+id: "11M06"
+title: "Funcion Zeta Riemann"
+pilar: "03_analisis_continuidad"
+msc_code: "11M06, 11M35"
+difficulty: "avanzado"
+tags:
+  - 11M06
+  - 11M35
+---
+
+# Funcion Zeta Riemann
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 25 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\zeta\left(s\right)=\sum_{n=1}^{\infty}\frac{1}{n^{s}}. \tag{25.2.1}
+$$
+
+$$
+c\equiv-\ln\left(2\pi\right)-\tfrac{1}{2}\pi\mathrm{i}. \tag{25.4.6}
+$$
+
+$$
+\displaystyle\zeta\left(2\right) \displaystyle=\frac{\pi^{2}}{6},
+$$
+
+$$
+\displaystyle\zeta\left(4\right) \displaystyle=\frac{\pi^{4}}{90},
+$$
+
+$$
+\displaystyle\zeta\left(6\right) \displaystyle=\frac{\pi^{6}}{945}.
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\zeta\left(s\right)=\frac{1}{1-2^{-s}}\sum_{n=0}^{\infty}\frac{1}{(2n+1)^{s}}, \tag{25.2.2}
+$$
+
+$$
+\zeta\left(s\right)=\frac{1}{1-2^{1-s}}\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^{s}}, \tag{25.2.3}
+$$
+
+$$
+\zeta\left(s\right)=\frac{1}{s-1}+\sum_{n=0}^{\infty}\frac{(-1)^{n}}{n!}\gamma_{n}(s-1)^{n}, \tag{25.2.4}
+$$
+
+$$
+\zeta'\left(s\right)=-\sum_{n=2}^{\infty}(\ln n)n^{-s}, \tag{25.2.6}
+$$
+
+$$
+{\zeta}^{(k)}\left(s\right)=(-1)^{k}\sum_{n=2}^{\infty}(\ln n)^{k}n^{-s}, \tag{25.2.7}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\gamma_{n}=\lim_{m\to\infty}\left(\sum_{k=1}^{m}\frac{(\ln k)^{n}}{k}-\frac{(\ln m)^{n+1}}{n+1}\right). \tag{25.2.5}
+$$
+
+$$
+\zeta\left(s,\alpha+i\beta\right)\to 0, \tag{25.11.42}
+$$
+
+$$
+\zeta\left(s,a\right)-\frac{a^{1-s}}{s-1}-\frac{1}{2}a^{-s}\sim\sum_{k=1}^{\infty}\frac{B_{2k}}{(2k)!}{\left(s\right)_{2k-1}}a^{1-s-2k}. \tag{25.11.43}
+$$
+
+$$
+\zeta'\left(-1,a\right)-\frac{1}{12}+\frac{1}{4}a^{2}-\left(\frac{1}{12}-\frac{1}{2}a+\frac{1}{2}a^{2}\right)\ln a\sim-\sum_{k=1}^{\infty}\frac{B_{2k+2}}{(2k+2)(2k+1)2k}a^{-2k}, \tag{25.11.44}
+$$
+
+$$
+\zeta'\left(-2,a\right)-\frac{1}{12}a+\frac{1}{9}a^{3}-\left(\frac{1}{6}a-\frac{1}{2}a^{2}+\frac{1}{3}a^{3}\right)\ln a\sim\sum_{k=1}^{\infty}\frac{2B_{2k+2}}{(2k+2)(2k+1)2k(2k-1)}a^{-(2k-1)}. \tag{25.11.45}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

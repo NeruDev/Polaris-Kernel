@@ -1,0 +1,24 @@
+{
+    "title": "Espacios Vectoriales, Bases y Dimensión",
+    "date": "2026-07-22",
+    "categories": [
+        "algebra lineal",
+        "vectores",
+        "espacios vectoriales",
+        "bases",
+        "dimension"
+    ],
+    "id": "msc15_espacios_vectoriales_bases",
+    "pilar": "02_estructuras_algebraicas",
+    "msc_code": "15A-04",
+    "tags": [
+        "algebra lineal",
+        "vectores",
+        "espacios vectoriales",
+        "bases",
+        "dimension"
+    ],
+    "nivel": "intermedio",
+    "updated": "2026-07-22",
+    "status": "stable"
+}

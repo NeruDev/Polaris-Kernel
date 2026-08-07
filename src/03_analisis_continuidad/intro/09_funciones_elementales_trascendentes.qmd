@@ -1,0 +1,101 @@
+---
+id: "33B10"
+title: "Funciones Elementales Trascendentes"
+pilar: "03_analisis_continuidad"
+msc_code: "33B10"
+difficulty: "intro"
+tags:
+  - 33B10
+---
+
+# Funciones Elementales Trascendentes
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 4 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\operatorname{Ln}z=\int_{1}^{z}\frac{\,\mathrm{d}t}{t}, \tag{4.2.1}
+$$
+
+$$
+\ln z=\int_{1}^{z}\frac{\,\mathrm{d}t}{t}, \tag{4.2.2}
+$$
+
+$$
+z=x, \tag{4.2.4}
+$$
+
+$$
+\ln\left(x\pm\mathrm{i}0\right)=\ln|x|\pm i\pi, \tag{4.2.7}
+$$
+
+$$
+\displaystyle\operatorname{log}_{a}z \displaystyle=\frac{\ln z}{\ln a}, \tag{4.2.8}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\ln z=\ln\left|z\right|+\mathrm{i}\operatorname{ph}z, \tag{4.2.3}
+$$
+
+$$
+\ln z=\ln\left|z\right|+\mathrm{i}\operatorname{ph}z, \tag{4.2.5}
+$$
+
+$$
+\operatorname{Ln}z=\ln z+2k\pi\mathrm{i}, \tag{4.2.6}
+$$
+
+$$
+\exp z=1+\frac{z}{1!}+\frac{z^{2}}{2!}+\frac{z^{3}}{3!}+\cdots. \tag{4.2.19}
+$$
+
+$$
+\exp\left(z+2\pi i\right)=\exp z. \tag{4.2.20}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\lim_{x\to\infty}x^{-a}\ln x=0, \tag{4.4.13}
+$$
+
+$$
+\lim_{x\to 0}x^{a}\ln x=0, \tag{4.4.14}
+$$
+
+$$
+\lim_{x\to\infty}x^{a}e^{-x}=0, \tag{4.4.15}
+$$
+
+$$
+\lim_{z\to\infty}z^{a}e^{-z}=0, \tag{4.4.16}
+$$
+
+$$
+\lim_{n\to\infty}\left(1+\frac{z}{n}\right)^{n}=e^{z}, \tag{4.4.17}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

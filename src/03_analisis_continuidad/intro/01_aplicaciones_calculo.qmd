@@ -1,0 +1,65 @@
+---
+title: "Aplicaciones del Cálculo: Optimización y Áreas"
+subtitle: "Resolución de Problemas Prácticos mediante Derivadas e Integrales"
+date: "2026-07-22"
+categories: ["análisis", "aplicaciones", "optimización", "cálculo"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Aplicaciones del Cálculo: Optimización y Áreas
+
+## Introducción
+
+El cálculo diferencial e integral proporciona herramientas matemáticas poderosas para resolver problemas concretos de la física, la economía y la ingeniería.
+La derivada permite encontrar tasas de cambio y valores extremos, lo que es esencial para la optimización de recursos.
+La integral, por su parte, se utiliza para acumular cantidades continuas, permitiendo el cálculo de áreas, volúmenes, trabajo y centros de masa.
+El puente entre ambos enfoques es el Teorema Fundamental del Cálculo.
+
+## Optimización mediante Derivadas
+
+Los problemas de optimización buscan maximizar o minimizar una magnitud, sujeta a ciertas restricciones.
+El primer paso consiste en formular una función objetivo y establecer su dominio en base a las condiciones del problema.
+Los valores extremos ocurren en los puntos críticos, donde la primera derivada es cero o no existe, o en los extremos del dominio.
+$$
+f'(c) = 0
+$$
+El criterio de la segunda derivada permite determinar si el punto crítico corresponde a un máximo local ($f''(c) < 0$) o a un mínimo local ($f''(c) > 0$).
+
+## Cálculo de Áreas entre Curvas
+
+La integral definida mide el área neta bajo una curva respecto al eje de las abscisas.
+Para encontrar el área de una región acotada entre dos curvas $f(x)$ y $g(x)$, se integra la diferencia entre la función superior y la inferior.
+$$
+A = \int_{a}^{b} [f(x) - g(x)] dx \quad \text{con } f(x) \geq g(x) \text{ en } [a, b]
+$$
+Los límites de integración $a$ y $b$ corresponden usualmente a los puntos de intersección de las dos gráficas.
+
+## Volumen de Sólidos de Revolución
+
+Al girar una región plana alrededor de un eje, se genera un sólido de revolución cuyo volumen puede ser calculado por integración.
+El método de los discos consiste en sumar los volúmenes de discos infinitesimales perpendiculares al eje de rotación.
+$$
+V = \pi \int_{a}^{b} [R(x)]^2 dx
+$$
+Otros métodos, como el de arandelas o el de cascarones cilíndricos, ofrecen flexibilidad dependiendo de la geometría de la región y el eje elegido.
+
+## Representación Visual
+
+La optimización busca los picos y valles de una función, que representan los valores máximos y mínimos respectivamente.
+
+![Máximos y mínimos locales para optimización](aplicaciones_calculo.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $f(x), g(x)$ | Funciones objetivo o curvas frontera | función |
+| $f'(x), f''(x)$ | Primera y segunda derivada de la función $f$ | función |
+| $c$ | Punto crítico en el dominio de $f$ | constante |
+| $A$ | Área de una región geométrica | escalar |
+| $V$ | Volumen de un sólido | escalar |
+| $R(x)$ | Radio del disco o arandela | función |

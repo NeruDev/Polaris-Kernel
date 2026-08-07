@@ -1,0 +1,2590 @@
+{
+  "capitulo": 31,
+  "titulo_original": "Heun Functions",
+  "archivo_metadata": "metadata/DLMF_data/31_Heun_Functions.json",
+  "rutas_docs": {
+    "docs_original": "docs/DLMF-markdown-main/markdown/31/31.md",
+    "docs_directorio_original": "docs/DLMF-markdown-main/markdown/31/",
+    "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.md"
+  },
+  "total_categorias": 4,
+  "total_secciones": 18,
+  "categorias": [
+    {
+      "categoria": "Notation",
+      "secciones": [
+        {
+          "seccion_id": "31.1",
+          "titulo_original": "Special Notation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.1.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.1.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.1 Special Notation",
+            "prosa_teorica": "(For other notation see Notation for the Special Functions .)\nThe main functions treated in this chapter are $\\mathit{H\\!\\ell}\\left(a,q;\\alpha,\\beta,\\gamma,\\delta;z\\right)$ , $(s_{1},s_{2})\\mathit{Hf}_{m}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right)$ , $(s_{1},s_{2})\\mathit{Hf}_{m}^{\\nu}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right)$ , and the polynomial $\\mathit{Hp}_{n,m}\\left(a,q_{n,m};-n,\\beta,\\gamma,\\delta;z\\right)$ . These notations were introduced by Arscott in Ronveaux ([1995](./bib/R.html#bib1965 \"Heun’s Differential Equations\"), pp. 34–44). Sometimes the parameters are suppressed.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun functions",
+                "Heun’s equation",
+                "differential equation",
+                "notation",
+                "solutions analytic at three singularities",
+                "solutions analytic at two singularities"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "tablas": [
+              {
+                "encabezados": [
+                  "$x$ , $y$",
+                  "real variables."
+                ],
+                "filas": [
+                  {
+                    "$x$ , $y$": "$z$ , $\\zeta$ , $w$ , $W$",
+                    "real variables.": "complex variables."
+                  },
+                  {
+                    "$x$ , $y$": "$j$ , $k$ , $\\ell$ , $m$ , $n$",
+                    "real variables.": "nonnegative integers."
+                  },
+                  {
+                    "$x$ , $y$": "$q,\\alpha,\\beta,\\gamma,\\delta,\\epsilon,\\nu$",
+                    "real variables.": "complex parameters."
+                  }
+                ]
+              }
+            ],
+            "referencias_cruzadas": [
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1965",
+                "titulo_referencia": "Heun’s Differential Equations"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Properties",
+      "secciones": [
+        {
+          "seccion_id": "31.2",
+          "titulo_original": "Differential Equations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.2.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.2.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.2 Differential Equations",
+            "prosa_teorica": "This equation has regular singularities at $0,1,a,\\infty$ , with corresponding exponents $\\{0,1-\\gamma\\}$ , $\\{0,1-\\delta\\}$ , $\\{0,1-\\epsilon\\}$ , $\\{\\alpha,\\beta\\}$ , respectively (§ 2.7(i) ). All other homogeneous linear differential equations of the second order having four regular singularities in the extended complex plane, $\\mathbb{C}\\cup\\{\\infty\\}$ , can be transformed into ( 31.2.1 ).\nThe parameters play different roles: $a$ is the *singularity parameter* ; $\\alpha,\\beta,\\gamma,\\delta,\\epsilon$ are *exponent parameters* ; $q$ is the *accessory parameter* . The total number of free parameters is six.\n<a id=\"E4\"></a>\nWith the notation of § [22.2](./22.2.md \"§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions\") let\n<a id=\"E7\"></a>\nThen (suppressing the parameter $k$ )\nWith the notation of §§ 19.2(ii) and [23.2](./23.2.md \"§23.2 Definitions and Periodic Properties ‣ Weierstrass Elliptic Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions\") let\n<a id=\"E9\"></a>\nwhere $2\\omega_{1}$ and $2\\omega_{3}$ with $\\Im\\left(\\omega_{3}/\\omega_{1}\\right)>0$ are generators of the lattice $\\mathbb{L}$ for $\\wp\\left(z|\\mathbb{L}\\right)$ . Then\nwhere $W(\\xi)$ satisfies\nwith\n<a id=\"E12\"></a>\n$w(z)=z^{1-\\gamma}w_{1}(z)$ satisfies ( 31.2.1 ) if $w_{1}$ is a solution of ( 31.2.1 ) with transformed parameters $q_{1}=q+(a\\delta+\\epsilon)(1-\\gamma)$ ; $\\alpha_{1}=\\alpha+1-\\gamma$ , $\\beta_{1}=\\beta+1-\\gamma$ , $\\gamma_{1}=2-\\gamma$ . Next, $w(z)=(z-1)^{1-\\delta}w_{2}(z)$ satisfies ( 31.2.1 ) if $w_{2}$ is a solution of ( 31.2.1 ) with transformed parameters $q_{2}=q+a\\gamma(1-\\delta)$ ; $\\alpha_{2}=\\alpha+1-\\delta$ , $\\beta_{2}=\\beta+1-\\delta$ , $\\delta_{2}=2-\\delta$ . Lastly, $w(z)=(z-a)^{1-\\epsilon}w_{3}(z)$ satisfies ( 31.2.1 ) if $w_{3}$ is a solution of ( 31.2.1 ) with transformed parameters $q_{3}=q+\\gamma(1-\\epsilon)$ ; $\\alpha_{3}=\\alpha+1-\\epsilon$ , $\\beta_{3}=\\beta+1-\\epsilon$ , $\\epsilon_{3}=2-\\epsilon$ . By composing these three steps, there result $2^{3}=8$ possible transformations of the dependent variable (including the identity transformation) that preserve the form of ( 31.2.1 ).\nThere are $4!=24$ homographies $\\tilde{z}(z)=(Az+B)/(Cz+D)$ that take $0,1,a,\\infty$ to some permutation of $0,1,a^{\\prime},\\infty$ , where $a^{\\prime}$ may differ from $a$ . If $\\tilde{z}=\\tilde{z}(z)$ is one of the $3!=6$ homographies that map $\\infty$ to $\\infty$ , then $w(z)=\\tilde{w}(\\tilde{z})$ satisfies ( 31.2.1 ) if $\\tilde{w}(\\tilde{z})$ is a solution of ( 31.2.1 ) with $z$ replaced by $\\tilde{z}$ and appropriately transformed parameters. For example, if $\\tilde{z}=z/a$ , then the parameters are $\\tilde{a}=1/a$ , $\\tilde{q}=q/a$ ; $\\tilde{\\delta}=\\epsilon$ , $\\tilde{\\epsilon}=\\delta$ . If $\\tilde{z}=\\tilde{z}(z)$ is one of the $4!-3!=18$ homographies that do not map $\\infty$ to $\\infty$ , then an appropriate prefactor must be included on the right-hand side. For example, $w(z)=(1-z)^{-\\alpha}\\tilde{w}(z/(z-1))$ , which arises from $\\tilde{z}=z/(z-1)$ , satisfies ( 31.2.1 ) if $\\tilde{w}(\\tilde{z})$ is a solution of ( 31.2.1 ) with $z$ replaced by $\\tilde{z}$ and transformed parameters $\\tilde{a}=a/(a-1)$ , $\\tilde{q}=-(q-a\\alpha\\gamma)/(a-1)$ ; $\\tilde{\\beta}=\\alpha+1-\\delta$ , $\\tilde{\\delta}=\\alpha+1-\\beta$ .\nThere are $8\\cdot 24=192$ automorphisms of equation ( 31.2.1 ) by compositions of $F$ -homotopic and homographic transformations. Each is a substitution of dependent and/or independent variables that preserves the form of ( 31.2.1 ). Except for the identity automorphism, each alters the parameters.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.2.1",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\frac{\\gamma}{z}+\\frac{\\delta}{z-1}+\\frac{\\epsilon}{z-a}\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\frac{\\alpha\\beta z-q}{z(z-1)(z-a)}w=0, \\tag{31.2.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.2.2",
+                "latex": "w(z)=z^{-\\gamma/2}(z-1)^{-\\delta/2}(z-a)^{-\\epsilon/2}W(z), \\tag{31.2.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "31.2.3",
+                "latex": "\\frac{{\\mathrm{d}}^{2}W}{{\\mathrm{d}z}^{2}}=\\left(\\frac{A}{z}+\\frac{B}{z-1}+\\frac{C}{z-a}+\\frac{D}{z^{2}}+\\frac{E}{(z-1)^{2}}+\\frac{F}{(z-a)^{2}}\\right)W, \\tag{31.2.3}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "31.2.4",
+                "latex": "\\displaystyle A \\displaystyle=-\\frac{\\gamma\\delta}{2}-\\frac{\\gamma\\epsilon}{2a}+\\frac{q}{a}, \\tag{31.2.4}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle B \\displaystyle=\\frac{\\gamma\\delta}{2}-\\frac{\\delta\\epsilon}{2(a-1)}-\\frac{q-\\alpha\\beta}{a-1},"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle C \\displaystyle=\\frac{\\gamma\\epsilon}{2a}+\\frac{\\delta\\epsilon}{2(a-1)}-\\frac{a\\alpha\\beta-q}{a(a-1)},"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle D \\displaystyle=\\tfrac{1}{2}\\gamma\\left(\\tfrac{1}{2}\\gamma-1\\right),"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle E \\displaystyle=\\tfrac{1}{2}\\delta\\left(\\tfrac{1}{2}\\delta-1\\right),"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle F \\displaystyle=\\tfrac{1}{2}\\epsilon\\left(\\tfrac{1}{2}\\epsilon-1\\right)."
+              },
+              {
+                "id": "E5",
+                "tag": "31.2.5",
+                "latex": "z={\\sin}^{2}\\theta, \\tag{31.2.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "31.2.6",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}\\theta}^{2}}+\\left({(2\\gamma-1)\\cot\\theta-(2\\delta-1)\\tan\\theta}-\\frac{\\epsilon\\sin\\left(2\\theta\\right)}{a-{\\sin}^{2}\\theta}\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}\\theta}+4\\frac{\\alpha\\beta{\\sin}^{2}\\theta-q}{a-{\\sin}^{2}\\theta}w=0. \\tag{31.2.6}"
+              },
+              {
+                "id": "Ex7",
+                "tag": "31.2.7",
+                "latex": "\\displaystyle a \\displaystyle=k^{-2}, \\tag{31.2.7}"
+              },
+              {
+                "id": "Ex8",
+                "tag": "",
+                "latex": "\\displaystyle z \\displaystyle={\\operatorname{sn}}^{2}\\left(\\zeta,k\\right)."
+              },
+              {
+                "id": "E8",
+                "tag": "31.2.8",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}\\zeta}^{2}}+\\left((2\\gamma-1)\\frac{\\operatorname{cn}\\zeta\\operatorname{dn}\\zeta}{\\operatorname{sn}\\zeta}-(2\\delta-1)\\frac{\\operatorname{sn}\\zeta\\operatorname{dn}\\zeta}{\\operatorname{cn}\\zeta}-(2\\epsilon-1)k^{2}\\frac{\\operatorname{sn}\\zeta\\operatorname{cn}\\zeta}{\\operatorname{dn}\\zeta}\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}\\zeta}+4k^{2}(\\alpha\\beta{\\operatorname{sn}}^{2}\\zeta-q)w=0. \\tag{31.2.8}"
+              },
+              {
+                "id": "Ex9",
+                "tag": "31.2.9",
+                "latex": "\\displaystyle k^{2} \\displaystyle=(e_{2}-e_{3})/(e_{1}-e_{3}), \\tag{31.2.9}"
+              },
+              {
+                "id": "Ex10",
+                "tag": "",
+                "latex": "\\displaystyle\\zeta \\displaystyle=\\mathrm{i}{K^{\\prime}}+\\xi(e_{1}-e_{3})^{1/2},"
+              },
+              {
+                "id": "Ex11",
+                "tag": "",
+                "latex": "\\displaystyle e_{1} \\displaystyle=\\wp\\left(\\omega_{1}\\right),"
+              },
+              {
+                "id": "Ex12",
+                "tag": "",
+                "latex": "\\displaystyle e_{2} \\displaystyle=\\wp\\left(\\omega_{2}\\right),"
+              },
+              {
+                "id": "Ex13",
+                "tag": "",
+                "latex": "\\displaystyle e_{3} \\displaystyle=\\wp\\left(\\omega_{3}\\right),"
+              },
+              {
+                "id": "Ex14",
+                "tag": "",
+                "latex": "\\displaystyle e_{1}+e_{2}+e_{3}=0,"
+              },
+              {
+                "id": "E10",
+                "tag": "31.2.10",
+                "latex": "w(\\xi)=\\left(\\wp\\left(\\xi\\right)-e_{3}\\right)^{(1-2\\gamma)/4}\\left(\\wp\\left(\\xi\\right)-e_{2}\\right)^{(1-2\\delta)/4}\\,\\left(\\wp\\left(\\xi\\right)-e_{1}\\right)^{(1-2\\epsilon)/4}W(\\xi), \\tag{31.2.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "31.2.11",
+                "latex": "\\frac{{\\mathrm{d}}^{2}W}{{\\mathrm{d}\\xi}^{2}}+\\left(H+b_{0}\\wp\\left(\\xi\\right)+b_{1}\\wp\\left(\\xi+\\omega_{1}\\right)+b_{2}\\wp\\left(\\xi+\\omega_{2}\\right)+b_{3}\\wp\\left(\\xi+\\omega_{3}\\right)\\right)W=0, \\tag{31.2.11}"
+              },
+              {
+                "id": "Ex15",
+                "tag": "31.2.12",
+                "latex": "\\displaystyle b_{0} \\displaystyle=4\\alpha\\beta-(\\gamma+\\delta+\\epsilon-\\tfrac{1}{2})(\\gamma+\\delta+\\epsilon-\\tfrac{3}{2}), \\tag{31.2.12}"
+              },
+              {
+                "id": "Ex16",
+                "tag": "",
+                "latex": "\\displaystyle b_{1} \\displaystyle=-(\\epsilon-\\tfrac{1}{2})(\\epsilon-\\tfrac{3}{2}),"
+              },
+              {
+                "id": "Ex17",
+                "tag": "",
+                "latex": "\\displaystyle b_{2} \\displaystyle=-(\\delta-\\tfrac{1}{2})(\\delta-\\tfrac{3}{2}),"
+              },
+              {
+                "id": "Ex18",
+                "tag": "",
+                "latex": "\\displaystyle b_{3} \\displaystyle=-(\\gamma-\\tfrac{1}{2})(\\gamma-\\tfrac{3}{2}),"
+              },
+              {
+                "id": "Ex19",
+                "tag": "",
+                "latex": "\\displaystyle H \\displaystyle=e_{1}(\\gamma+\\delta-1)^{2}+e_{2}(\\gamma+\\epsilon-1)^{2}+e_{3}(\\delta+\\epsilon-1)^{2}-4\\alpha\\beta e_{3}-4q(e_{2}-e_{3})."
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\frac{\\gamma}{z}+\\frac{\\delta}{z-1}+\\frac{\\epsilon}{z-a}\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\frac{\\alpha\\beta z-q}{z(z-1)(z-a)}w=0, \\tag{31.2.1}",
+              "w(z)=z^{-\\gamma/2}(z-1)^{-\\delta/2}(z-a)^{-\\epsilon/2}W(z), \\tag{31.2.2}",
+              "\\frac{{\\mathrm{d}}^{2}W}{{\\mathrm{d}z}^{2}}=\\left(\\frac{A}{z}+\\frac{B}{z-1}+\\frac{C}{z-a}+\\frac{D}{z^{2}}+\\frac{E}{(z-1)^{2}}+\\frac{F}{(z-a)^{2}}\\right)W, \\tag{31.2.3}",
+              "\\displaystyle A \\displaystyle=-\\frac{\\gamma\\delta}{2}-\\frac{\\gamma\\epsilon}{2a}+\\frac{q}{a}, \\tag{31.2.4}",
+              "\\displaystyle B \\displaystyle=\\frac{\\gamma\\delta}{2}-\\frac{\\delta\\epsilon}{2(a-1)}-\\frac{q-\\alpha\\beta}{a-1},",
+              "\\displaystyle C \\displaystyle=\\frac{\\gamma\\epsilon}{2a}+\\frac{\\delta\\epsilon}{2(a-1)}-\\frac{a\\alpha\\beta-q}{a(a-1)},",
+              "\\displaystyle D \\displaystyle=\\tfrac{1}{2}\\gamma\\left(\\tfrac{1}{2}\\gamma-1\\right),",
+              "\\displaystyle E \\displaystyle=\\tfrac{1}{2}\\delta\\left(\\tfrac{1}{2}\\delta-1\\right),",
+              "\\displaystyle F \\displaystyle=\\tfrac{1}{2}\\epsilon\\left(\\tfrac{1}{2}\\epsilon-1\\right).",
+              "z={\\sin}^{2}\\theta, \\tag{31.2.5}",
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}\\theta}^{2}}+\\left({(2\\gamma-1)\\cot\\theta-(2\\delta-1)\\tan\\theta}-\\frac{\\epsilon\\sin\\left(2\\theta\\right)}{a-{\\sin}^{2}\\theta}\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}\\theta}+4\\frac{\\alpha\\beta{\\sin}^{2}\\theta-q}{a-{\\sin}^{2}\\theta}w=0. \\tag{31.2.6}",
+              "\\displaystyle a \\displaystyle=k^{-2}, \\tag{31.2.7}",
+              "\\displaystyle z \\displaystyle={\\operatorname{sn}}^{2}\\left(\\zeta,k\\right).",
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}\\zeta}^{2}}+\\left((2\\gamma-1)\\frac{\\operatorname{cn}\\zeta\\operatorname{dn}\\zeta}{\\operatorname{sn}\\zeta}-(2\\delta-1)\\frac{\\operatorname{sn}\\zeta\\operatorname{dn}\\zeta}{\\operatorname{cn}\\zeta}-(2\\epsilon-1)k^{2}\\frac{\\operatorname{sn}\\zeta\\operatorname{cn}\\zeta}{\\operatorname{dn}\\zeta}\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}\\zeta}+4k^{2}(\\alpha\\beta{\\operatorname{sn}}^{2}\\zeta-q)w=0. \\tag{31.2.8}",
+              "\\displaystyle k^{2} \\displaystyle=(e_{2}-e_{3})/(e_{1}-e_{3}), \\tag{31.2.9}",
+              "\\displaystyle\\zeta \\displaystyle=\\mathrm{i}{K^{\\prime}}+\\xi(e_{1}-e_{3})^{1/2},",
+              "\\displaystyle e_{1} \\displaystyle=\\wp\\left(\\omega_{1}\\right),",
+              "\\displaystyle e_{2} \\displaystyle=\\wp\\left(\\omega_{2}\\right),",
+              "\\displaystyle e_{3} \\displaystyle=\\wp\\left(\\omega_{3}\\right),",
+              "\\displaystyle e_{1}+e_{2}+e_{3}=0,",
+              "w(\\xi)=\\left(\\wp\\left(\\xi\\right)-e_{3}\\right)^{(1-2\\gamma)/4}\\left(\\wp\\left(\\xi\\right)-e_{2}\\right)^{(1-2\\delta)/4}\\,\\left(\\wp\\left(\\xi\\right)-e_{1}\\right)^{(1-2\\epsilon)/4}W(\\xi), \\tag{31.2.10}",
+              "\\frac{{\\mathrm{d}}^{2}W}{{\\mathrm{d}\\xi}^{2}}+\\left(H+b_{0}\\wp\\left(\\xi\\right)+b_{1}\\wp\\left(\\xi+\\omega_{1}\\right)+b_{2}\\wp\\left(\\xi+\\omega_{2}\\right)+b_{3}\\wp\\left(\\xi+\\omega_{3}\\right)\\right)W=0, \\tag{31.2.11}",
+              "\\displaystyle b_{0} \\displaystyle=4\\alpha\\beta-(\\gamma+\\delta+\\epsilon-\\tfrac{1}{2})(\\gamma+\\delta+\\epsilon-\\tfrac{3}{2}), \\tag{31.2.12}",
+              "\\displaystyle b_{1} \\displaystyle=-(\\epsilon-\\tfrac{1}{2})(\\epsilon-\\tfrac{3}{2}),",
+              "\\displaystyle b_{2} \\displaystyle=-(\\delta-\\tfrac{1}{2})(\\delta-\\tfrac{3}{2}),",
+              "\\displaystyle b_{3} \\displaystyle=-(\\gamma-\\tfrac{1}{2})(\\gamma-\\tfrac{3}{2}),",
+              "\\displaystyle H \\displaystyle=e_{1}(\\gamma+\\delta-1)^{2}+e_{2}(\\gamma+\\epsilon-1)^{2}+e_{3}(\\delta+\\epsilon-1)^{2}-4\\alpha\\beta e_{3}-4q(e_{2}-e_{3})."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun equation",
+                "Heun’s equation",
+                "accessory parameter",
+                "classification",
+                "classification of parameters",
+                "exponent parameters",
+                "parameters",
+                "singularities",
+                "singularity parameter",
+                "normal form",
+                "trigonometric form",
+                "Jacobi’s elliptic",
+                "Jacobi’s elliptic form",
+                "doubly-periodic forms",
+                "Weierstrass’s",
+                "Weierstrass’s form",
+                "automorphisms",
+                "$F$-homotopic transformations",
+                "homographic transformations",
+                "composite"
+              ],
+              "definiciones": [
+                "$A$ (locally) , $B$ (locally) , $C$ (locally) , $D$ (locally) , $E$ (locally) and $F$ (locally)",
+                "$k$ : modulus (locally)",
+                "$\\zeta$ : change of variable (locally)",
+                "$b_{j}$ : coefficients (locally) and $H$ (locally)"
+              ],
+              "simbolos": [
+                "$\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $\\epsilon$: real or complex parameter , $a$: complex parameter , $q$: real or complex parameter , $\\alpha$: real or complex parameter and $\\beta$: real or complex parameter",
+                "$\\operatorname{sn}\\left(z,k\\right)$: Jacobian elliptic function , $z$: complex variable , $a$: complex parameter and $\\zeta$: change of variable",
+                "$\\wp\\left(z\\right)$ (= $\\wp\\left(z|\\mathbb{L}\\right)$ = $\\wp\\left(z;g_{2},g_{3}\\right)$): Weierstrass $\\wp$-function , $e_{j}$: Weierstrass lattice roots , ${K^{\\prime}}\\left(k\\right)$: Legendre’s complementary complete elliptic integral of the first kind , $\\mathrm{i}$: imaginary unit , $\\omega_{j}$: nonzero complex number , $\\mathbb{L}$: lattice and $k$: modulus",
+                "$e_{j}$: Weierstrass lattice roots , $\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $\\epsilon$: real or complex parameter , $j$: nonnegative integer , $q$: real or complex parameter , $\\alpha$: real or complex parameter , $\\beta$: real or complex parameter and $\\mathbb{L}$: lattice"
+              ],
+              "referenciado_por": [
+                "§31.3(iii)",
+                "§31.8"
+              ],
+              "notas_bibliograficas": [
+                "See Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\"), Chapter XV) and Ronveaux ([1995](./bib/R.html#bib1965 \"Heun’s Differential Equations\"), Part A, p. 7).",
+                "See Ronveaux ([1995](./bib/R.html#bib1965 \"Heun’s Differential Equations\"), Part A, p. 26).",
+                "See Ronveaux ([1995](./bib/R.html#bib1965 \"Heun’s Differential Equations\"), Part A, p. 16)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.2 and Ch.31",
+                "Annotations for §31.2(ii) , §31.2 and Ch.31",
+                "Annotations for §31.2(iv) , §31.2 and Ch.31",
+                "Annotations for §31.2(iv) , §31.2(iv) , §31.2 and Ch.31",
+                "Annotations for §31.2(v) , §31.2 and Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1965",
+                "titulo_referencia": "Heun’s Differential Equations"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1965",
+                "titulo_referencia": "Heun’s Differential Equations"
+              },
+              {
+                "texto": "22.2",
+                "archivo_destino": "22.2.md",
+                "titulo_referencia": "§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"
+              },
+              {
+                "texto": "23.2",
+                "archivo_destino": "23.2.md",
+                "titulo_referencia": "§23.2 Definitions and Periodic Properties ‣ Weierstrass Elliptic Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1965",
+                "titulo_referencia": "Heun’s Differential Equations"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.3",
+          "titulo_original": "Basic Solutions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.3.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.3.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.3 Basic Solutions",
+            "prosa_teorica": "$\\mathit{H\\!\\ell}\\left(a,q;\\alpha,\\beta,\\gamma,\\delta;z\\right)$ denotes the solution of ( 31.2.1 ) that corresponds to the exponent $0$ at $z=0$ and assumes the value $1$ there. If the other exponent is not a positive integer, that is, if $\\gamma\\neq 0,-1,-2,\\dots$ , then from § 2.7(i) it follows that $\\mathit{H\\!\\ell}\\left(a,q;\\alpha,\\beta,\\gamma,\\delta;z\\right)$ exists, is analytic in the disk $|z|<1$ , and has the Maclaurin expansion\nwhere $c_{0}=1$ ,\nwith\n<a id=\"E4\"></a>\nSimilarly, if $\\gamma\\neq 1,2,3,\\dots$ , then the solution of ( 31.2.1 ) that corresponds to the exponent $1-\\gamma$ at $z=0$ is\nWhen $\\gamma\\in\\mathbb{Z}$ , linearly independent solutions can be constructed as in § 2.7(i) . In general, one of them has a logarithmic singularity at $z=0$ .\nWith similar restrictions to those given in § 31.3(i) , the following results apply. Solutions of ( 31.2.1 ) corresponding to the exponents $0$ and $1-\\delta$ at $z=1$ are respectively,\nSolutions of ( 31.2.1 ) corresponding to the exponents $0$ and $1-\\epsilon$ at $z=a$ are respectively,\nSolutions of ( 31.2.1 ) corresponding to the exponents $\\alpha$ and $\\beta$ at $z=\\infty$ are respectively,\nSolutions ( 31.3.1 ) and ( 31.3.5 )–( 31.3.11 ) comprise a set of 8 local solutions of ( 31.2.1 ): 2 per singular point. Each is related to the solution ( 31.3.1 ) by one of the automorphisms of § 31.2(v) . There are 192 automorphisms in all, so there are $192/8=24$ equivalent expressions for each of the 8. For example, $\\mathit{H\\!\\ell}\\left(a,q;\\alpha,\\beta,\\gamma,\\delta;z\\right)$ is equal to\nwhich arises from the homography $\\tilde{z}=z/a$ , and to\nwhich arises from $\\tilde{z}=z/(z-1)$ , and also to 21 further expressions. The full set of 192 local solutions of ( 31.2.1 ), equivalent in 8 sets of 24, resembles Kummer’s set of 24 local solutions of the hypergeometric equation, which are equivalent in 4 sets of 6 solutions (§ 15.10(ii) ); see Maier ([2007](./bib/M.html#bib1538 \"The 192 solutions of the Heun equation\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.3.1",
+                "latex": "\\mathit{H\\!\\ell}\\left(a,q;\\alpha,\\beta,\\gamma,\\delta;z\\right)=\\sum_{j=0}^{\\infty}c_{j}z^{j}, \\tag{31.3.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.3.2",
+                "latex": "a\\gamma c_{1}-qc_{0}=0, \\tag{31.3.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "31.3.3",
+                "latex": "R_{j}c_{j+1}-(Q_{j}+q)c_{j}+P_{j}c_{j-1}=0, \\tag{31.3.3}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "31.3.4",
+                "latex": "\\displaystyle P_{j} \\displaystyle=(j-1+\\alpha)(j-1+\\beta), \\tag{31.3.4}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle Q_{j} \\displaystyle=j\\left((j-1+\\gamma)(1+a)+a\\delta+\\epsilon\\right),"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle R_{j} \\displaystyle=a(j+1)(j+\\gamma)."
+              },
+              {
+                "id": "E5",
+                "tag": "31.3.5",
+                "latex": "z^{1-\\gamma}\\mathit{H\\!\\ell}\\left(a,(a\\delta+\\epsilon)(1-\\gamma)+q;\\alpha+1-\\gamma,\\beta+1-\\gamma,2-\\gamma,\\delta;z\\right). \\tag{31.3.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "31.3.6",
+                "latex": "\\mathit{H\\!\\ell}\\left(1-a,\\alpha\\beta-q;\\alpha,\\beta,\\delta,\\gamma;1-z\\right), \\tag{31.3.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "31.3.7",
+                "latex": "(1-z)^{1-\\delta}\\,\\mathit{H\\!\\ell}\\left(1-a,((1-a)\\gamma+\\epsilon)(1-\\delta)+\\alpha\\beta-q;\\alpha+1-\\delta,\\beta+1-\\delta,2-\\delta,\\gamma;1-z\\right). \\tag{31.3.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "31.3.8",
+                "latex": "\\mathit{H\\!\\ell}\\left(\\frac{a}{a-1},\\frac{\\alpha\\beta a-q}{a-1};\\alpha,\\beta,\\epsilon,\\delta;\\frac{a-z}{a-1}\\right), \\tag{31.3.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "31.3.9",
+                "latex": "\\left(\\frac{a-z}{a-1}\\right)^{1-\\epsilon}\\mathit{H\\!\\ell}\\left(\\frac{a}{a-1},\\frac{(a(\\delta+\\gamma)-\\gamma)(1-\\epsilon)}{a-1}+\\frac{\\alpha\\beta a-q}{a-1};\\alpha+1-\\epsilon,\\beta+1-\\epsilon,2-\\epsilon,\\delta;\\frac{a-z}{a-1}\\right). \\tag{31.3.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "31.3.10",
+                "latex": "z^{-\\alpha}\\mathit{H\\!\\ell}\\left(\\frac{1}{a},\\frac{q}{a}-\\alpha\\left(\\beta-\\epsilon\\right)-\\frac{\\alpha}{a}\\left(\\beta-\\delta\\right);\\alpha,\\alpha-\\gamma+1,\\alpha-\\beta+1,\\delta;\\frac{1}{z}\\right), \\tag{31.3.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "31.3.11",
+                "latex": "z^{-\\beta}\\mathit{H\\!\\ell}\\left(\\frac{1}{a},\\frac{q}{a}-\\beta\\left(\\alpha-\\epsilon\\right)-\\frac{\\beta}{a}\\left(\\alpha-\\delta\\right);\\beta,\\beta-\\gamma+1,\\beta-\\alpha+1,\\delta;\\frac{1}{z}\\right). \\tag{31.3.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "31.3.12",
+                "latex": "\\mathit{H\\!\\ell}\\left(1/a,q/a;\\alpha,\\beta,\\gamma,\\alpha+\\beta+1-\\gamma-\\delta;z/a\\right), \\tag{31.3.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "31.3.13",
+                "latex": "(1-z)^{-\\alpha}\\,\\mathit{H\\!\\ell}\\left(\\frac{a}{a-1},-\\frac{q-a\\alpha\\gamma}{a-1};\\alpha,\\alpha+1-\\delta,\\gamma,\\alpha+1-\\beta;\\frac{z}{z-1}\\right), \\tag{31.3.13}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\mathit{H\\!\\ell}\\left(a,q;\\alpha,\\beta,\\gamma,\\delta;z\\right)=\\sum_{j=0}^{\\infty}c_{j}z^{j}, \\tag{31.3.1}",
+              "a\\gamma c_{1}-qc_{0}=0, \\tag{31.3.2}",
+              "R_{j}c_{j+1}-(Q_{j}+q)c_{j}+P_{j}c_{j-1}=0, \\tag{31.3.3}",
+              "\\displaystyle P_{j} \\displaystyle=(j-1+\\alpha)(j-1+\\beta), \\tag{31.3.4}",
+              "\\displaystyle Q_{j} \\displaystyle=j\\left((j-1+\\gamma)(1+a)+a\\delta+\\epsilon\\right),",
+              "\\displaystyle R_{j} \\displaystyle=a(j+1)(j+\\gamma).",
+              "z^{1-\\gamma}\\mathit{H\\!\\ell}\\left(a,(a\\delta+\\epsilon)(1-\\gamma)+q;\\alpha+1-\\gamma,\\beta+1-\\gamma,2-\\gamma,\\delta;z\\right). \\tag{31.3.5}",
+              "\\mathit{H\\!\\ell}\\left(1-a,\\alpha\\beta-q;\\alpha,\\beta,\\delta,\\gamma;1-z\\right), \\tag{31.3.6}",
+              "(1-z)^{1-\\delta}\\,\\mathit{H\\!\\ell}\\left(1-a,((1-a)\\gamma+\\epsilon)(1-\\delta)+\\alpha\\beta-q;\\alpha+1-\\delta,\\beta+1-\\delta,2-\\delta,\\gamma;1-z\\right). \\tag{31.3.7}",
+              "\\mathit{H\\!\\ell}\\left(\\frac{a}{a-1},\\frac{\\alpha\\beta a-q}{a-1};\\alpha,\\beta,\\epsilon,\\delta;\\frac{a-z}{a-1}\\right), \\tag{31.3.8}",
+              "\\left(\\frac{a-z}{a-1}\\right)^{1-\\epsilon}\\mathit{H\\!\\ell}\\left(\\frac{a}{a-1},\\frac{(a(\\delta+\\gamma)-\\gamma)(1-\\epsilon)}{a-1}+\\frac{\\alpha\\beta a-q}{a-1};\\alpha+1-\\epsilon,\\beta+1-\\epsilon,2-\\epsilon,\\delta;\\frac{a-z}{a-1}\\right). \\tag{31.3.9}",
+              "z^{-\\alpha}\\mathit{H\\!\\ell}\\left(\\frac{1}{a},\\frac{q}{a}-\\alpha\\left(\\beta-\\epsilon\\right)-\\frac{\\alpha}{a}\\left(\\beta-\\delta\\right);\\alpha,\\alpha-\\gamma+1,\\alpha-\\beta+1,\\delta;\\frac{1}{z}\\right), \\tag{31.3.10}",
+              "z^{-\\beta}\\mathit{H\\!\\ell}\\left(\\frac{1}{a},\\frac{q}{a}-\\beta\\left(\\alpha-\\epsilon\\right)-\\frac{\\beta}{a}\\left(\\alpha-\\delta\\right);\\beta,\\beta-\\gamma+1,\\beta-\\alpha+1,\\delta;\\frac{1}{z}\\right). \\tag{31.3.11}",
+              "\\mathit{H\\!\\ell}\\left(1/a,q/a;\\alpha,\\beta,\\gamma,\\alpha+\\beta+1-\\gamma-\\delta;z/a\\right), \\tag{31.3.12}",
+              "(1-z)^{-\\alpha}\\,\\mathit{H\\!\\ell}\\left(\\frac{a}{a-1},-\\frac{q-a\\alpha\\gamma}{a-1};\\alpha,\\alpha+1-\\delta,\\gamma,\\alpha+1-\\beta;\\frac{z}{z-1}\\right), \\tag{31.3.13}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Fuchs–Frobenius",
+                "Heun’s equation",
+                "basic solutions",
+                "automorphisms",
+                "equivalent expressions"
+              ],
+              "definiciones": [
+                "$P_{j}$ : coefficient (locally) , $Q_{j}$ : coefficient (locally) and $R_{j}$ : coefficient (locally)"
+              ],
+              "simbolos": [
+                "$\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $\\epsilon$: real or complex parameter , $j$: nonnegative integer , $a$: complex parameter , $\\alpha$: real or complex parameter and $\\beta$: real or complex parameter"
+              ],
+              "referenciado_por": [
+                "§31.18",
+                "§31.3(ii)",
+                "§31.4",
+                "§31.5",
+                "§31.7(ii)"
+              ],
+              "notas_bibliograficas": [
+                "See Ronveaux ([1995](./bib/R.html#bib1965 \"Heun’s Differential Equations\"), Part A, pp. 36–41).",
+                "See Snow ([1952](./bib/S.html#bib2131 \"Hypergeometric and Legendre Functions with Applications to Integral Equations of Potential Theory\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.3 and Ch.31",
+                "Annotations for §31.3(i) , §31.3 and Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1965",
+                "titulo_referencia": "Heun’s Differential Equations"
+              },
+              {
+                "texto": "1952",
+                "archivo_destino": "bib/S.html#bib2131",
+                "titulo_referencia": "Hypergeometric and Legendre Functions with Applications to Integral Equations of Potential Theory"
+              },
+              {
+                "texto": "2007",
+                "archivo_destino": "bib/M.html#bib1538",
+                "titulo_referencia": "The 192 solutions of the Heun equation"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.4",
+          "titulo_original": "Solutions Analytic at Two Singularities: Heun Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.4.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.4.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.4 Solutions Analytic at Two Singularities: Heun Functions",
+            "prosa_teorica": "For an infinite set of discrete values $q_{m}$ , $m=0,1,2,\\dots$ , of the accessory parameter $q$ , the function $\\mathit{H\\!\\ell}\\left(a,q;\\alpha,\\beta,\\gamma,\\delta;z\\right)$ is analytic at $z=1$ , and hence also throughout the disk $|z|<a$ . To emphasize this property this set of functions is denoted by\nThe eigenvalues $q_{m}$ satisfy the continued-fraction equation\nin which $P_{j},Q_{j},R_{j}$ are as in § 31.3(i) .\nMore generally,\nwith $(s_{1},s_{2})\\in\\{0,1,a,\\infty\\}$ , denotes a set of solutions of ( 31.2.1 ), each of which is analytic at $s_{1}$ and $s_{2}$ . The set $q_{m}$ depends on the choice of $s_{1}$ and $s_{2}$ .\nThe solutions ( 31.4.3 ) are called the *Heun functions* . See Ronveaux ([1995](./bib/R.html#bib1965 \"Heun’s Differential Equations\"), pp. 39–41).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.4.1",
+                "latex": "(0,1)\\mathit{Hf}_{m}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right), \\tag{31.4.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.4.2",
+                "latex": "q=\\cfrac{a\\gamma P_{1}}{Q_{1}+q-\\cfrac{R_{1}P_{2}}{Q_{2}+q-\\cfrac{R_{2}P_{3}}{Q_{3}+q-\\cdots}}}, \\tag{31.4.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "31.4.3",
+                "latex": "(s_{1},s_{2})\\mathit{Hf}_{m}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right), \\tag{31.4.3}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "(0,1)\\mathit{Hf}_{m}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right), \\tag{31.4.1}",
+              "q=\\cfrac{a\\gamma P_{1}}{Q_{1}+q-\\cfrac{R_{1}P_{2}}{Q_{2}+q-\\cfrac{R_{2}P_{3}}{Q_{3}+q-\\cdots}}}, \\tag{31.4.2}",
+              "(s_{1},s_{2})\\mathit{Hf}_{m}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right), \\tag{31.4.3}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun functions",
+                "Heun’s equation",
+                "definition",
+                "eigenvalues of accessory parameter"
+              ],
+              "definiciones": [
+                "$(s_{1},s_{2})\\mathit{Hf}_{m}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right)$ : Heun functions"
+              ],
+              "referenciado_por": [
+                "§31.11(iii)",
+                "§31.11(iv)",
+                "§31.9(i)"
+              ],
+              "notas_bibliograficas": [
+                "See Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\"), Chapter XV) and Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\"), Chapter IX)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1965",
+                "titulo_referencia": "Heun’s Differential Equations"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.5",
+          "titulo_original": "Solutions Analytic at Three Singularities: Heun Polynomials",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.5.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.5.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.5 Solutions Analytic at Three Singularities: Heun Polynomials",
+            "prosa_teorica": "Let $\\alpha=-n$ , $n=0,1,2,\\dots$ , and $q_{n,m}$ , $m=0,1,\\dots,n$ , be the eigenvalues of the tridiagonal matrix\nwhere $P_{j},Q_{j},R_{j}$ are again defined as in § 31.3(i) . Then\nis a polynomial of degree $n$ , and hence a solution of ( 31.2.1 ) that is analytic at all three finite singularities $0,1,a$ . These solutions are the *Heun polynomials* . Some properties are included as special cases of properties given in § [31.15](./31.15.md \"§31.15 Stieltjes Polynomials ‣ Properties ‣ Chapter 31 Heun Functions\") below.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.5.1",
+                "latex": "\\begin{bmatrix}0&a\\gamma&0&\\dots&0\\\\\nP_{1}&-Q_{1}&R_{1}&\\dots&0\\\\\n0&P_{2}&-Q_{2}&&\\vdots\\\\\n\\vdots&\\vdots&&\\ddots&R_{n-1}\\\\\n0&0&\\dots&P_{n}&-Q_{n}\\end{bmatrix}, \\tag{31.5.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.5.2",
+                "latex": "\\mathit{Hp}_{n,m}\\left(a,q_{n,m};-n,\\beta,\\gamma,\\delta;z\\right)=\\mathit{H\\!\\ell}\\left(a,q_{n,m};-n,\\beta,\\gamma,\\delta;z\\right) \\tag{31.5.2}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\begin{bmatrix}0&a\\gamma&0&\\dots&0\\\\\nP_{1}&-Q_{1}&R_{1}&\\dots&0\\\\\n0&P_{2}&-Q_{2}&&\\vdots\\\\\n\\vdots&\\vdots&&\\ddots&R_{n-1}\\\\\n0&0&\\dots&P_{n}&-Q_{n}\\end{bmatrix}, \\tag{31.5.1}",
+              "\\mathit{Hp}_{n,m}\\left(a,q_{n,m};-n,\\beta,\\gamma,\\delta;z\\right)=\\mathit{H\\!\\ell}\\left(a,q_{n,m};-n,\\beta,\\gamma,\\delta;z\\right) \\tag{31.5.2}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun polynomials",
+                "definitions",
+                "notation"
+              ],
+              "referenciado_por": [
+                "§31.9(i)"
+              ],
+              "notas_bibliograficas": [
+                "See e.g. Erdélyi et al. ([1955](./bib/E.html#bib755 \"Higher Transcendental Functions. Vol. III\"), Chapter XV) and Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\"), Chapter IX)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1955",
+                "archivo_destino": "bib/E.html#bib755",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. III"
+              },
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              },
+              {
+                "texto": "31.15",
+                "archivo_destino": "31.15.md",
+                "titulo_referencia": "§31.15 Stieltjes Polynomials ‣ Properties ‣ Chapter 31 Heun Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.6",
+          "titulo_original": "Path-Multiplicative Solutions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.6.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.6.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.6 Path-Multiplicative Solutions",
+            "prosa_teorica": "A further extension of the notation ( 31.4.1 ) and ( 31.4.3 ) is given by\nwith $(s_{1},s_{2})\\in\\{0,1,a\\}$ , but with another set of $\\{q_{m}\\}$ . This denotes a set of solutions of ( 31.2.1 ) with the property that if we pass around a simple closed contour in the $z$ -plane that encircles $s_{1}$ and $s_{2}$ once in the positive sense, but not the remaining finite singularity, then the solution is multiplied by a constant factor ${\\mathrm{e}}^{2\\nu\\pi i}$ . These solutions are called *path-multiplicative* . See Schmidt ([1979](./bib/S.html#bib2011 \"Die Lösung der linearen Differentialgleichung 2. Ordnung um zwei einfache Singularitäten durch Reihen nach hypergeometrischen Funktionen\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.6.1",
+                "latex": "(s_{1},s_{2})\\mathit{Hf}_{m}^{\\nu}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right), \\tag{31.6.1}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "(s_{1},s_{2})\\mathit{Hf}_{m}^{\\nu}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right), \\tag{31.6.1}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun’s equation",
+                "path-multiplicative solutions"
+              ],
+              "referenciado_por": [
+                "§31.11(v)",
+                "§31.8"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1979",
+                "archivo_destino": "bib/S.html#bib2011",
+                "titulo_referencia": "Die Lösung der linearen Differentialgleichung 2. Ordnung um zwei einfache Singularitäten durch Reihen nach hypergeometrischen Funktionen"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.7",
+          "titulo_original": "Relations to Other Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.7.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.7.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.7 Relations to Other Functions",
+            "prosa_teorica": "Other reductions of $\\mathit{H\\!\\ell}$ to a ${{}_{2}F_{1}}$ , with at least one free parameter, exist iff the pair $(a,p)$ takes one of a finite number of values, where $q=\\alpha\\beta p$ . Below are three such reductions with three and two parameters. They are analogous to quadratic and cubic hypergeometric transformations (§§ 15.8(iii) – 15.8(v) ).\nFor additional reductions, see Maier ([2005](./bib/M.html#bib1537 \"On reducing the Heun equation to the hypergeometric equation\")). Joyce ([1994](./bib/J.html#bib1195 \"On the cubic lattice Green functions\")) gives a reduction in which the independent variable is transformed not polynomially or rationally, but algebraically.\nWith $z={\\operatorname{sn}}^{2}\\left(\\zeta,k\\right)$ and\n<a id=\"E5\"></a>\nequation ( 31.2.1 ) becomes Lamé’s equation with independent variable $\\zeta$ ; compare ( 29.2.1 ) and ( 31.2.8 ). The solutions ( 31.3.1 ) and ( 31.3.5 ) transform into even and odd solutions of Lamé’s equation, respectively. Similar specializations of formulas in § 31.3(ii) yield solutions in the neighborhoods of the singularities $\\zeta=K$ , $K+i{K^{\\prime}}$ , and $i{K^{\\prime}}$ , where $K$ and ${K^{\\prime}}$ are related to $k$ as in § 19.2(ii) .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.7.1",
+                "latex": "{{}_{2}F_{1}}\\left(\\alpha,\\beta;\\gamma;z\\right)=\\mathit{H\\!\\ell}\\left(1,\\alpha\\beta;\\alpha,\\beta,\\gamma,\\delta;z\\right)=\\mathit{H\\!\\ell}\\left(0,0;\\alpha,\\beta,\\gamma,\\alpha+\\beta+1-\\gamma;z\\right)=\\mathit{H\\!\\ell}\\left(a,a\\alpha\\beta;\\alpha,\\beta,\\gamma,\\alpha+\\beta+1-\\gamma;z\\right). \\tag{31.7.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.7.2",
+                "latex": "\\mathit{H\\!\\ell}\\left(2,\\alpha\\beta;\\alpha,\\beta,\\gamma,\\alpha+\\beta-2\\gamma+1;z\\right)={{}_{2}F_{1}}\\left(\\tfrac{1}{2}\\alpha,\\tfrac{1}{2}\\beta;\\gamma;1-(1-z)^{2}\\right), \\tag{31.7.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "31.7.3",
+                "latex": "\\mathit{H\\!\\ell}\\left(4,\\alpha\\beta;\\alpha,\\beta,\\tfrac{1}{2},\\tfrac{2}{3}(\\alpha+\\beta);z\\right)={{}_{2}F_{1}}\\left(\\tfrac{1}{3}\\alpha,\\tfrac{1}{3}\\beta;\\tfrac{1}{2};1-(1-z)^{2}(1-\\tfrac{1}{4}z)\\right), \\tag{31.7.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "31.7.4",
+                "latex": "\\mathit{H\\!\\ell}\\left(\\tfrac{1}{2}+i\\tfrac{\\sqrt{3}}{2},\\alpha\\beta(\\tfrac{1}{2}+i\\tfrac{\\sqrt{3}}{6});\\alpha,\\beta,\\tfrac{1}{3}(\\alpha+\\beta+1),\\tfrac{1}{3}(\\alpha+\\beta+1);z\\right)={{}_{2}F_{1}}\\left(\\tfrac{1}{3}\\alpha,\\tfrac{1}{3}\\beta;\\tfrac{1}{3}(\\alpha+\\beta+1);1-\\left(1-\\left(\\tfrac{3}{2}-i\\tfrac{\\sqrt{3}}{2}\\right)z\\right)^{3}\\right). \\tag{31.7.4}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "31.7.5",
+                "latex": "\\displaystyle a \\displaystyle=k^{-2}, \\tag{31.7.5}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle q \\displaystyle=-\\tfrac{1}{4}ah,"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle\\alpha \\displaystyle=-\\tfrac{1}{2}\\nu,"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle\\beta \\displaystyle=\\tfrac{1}{2}(\\nu+1),"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle\\gamma \\displaystyle=\\delta=\\epsilon=\\tfrac{1}{2},"
+              }
+            ],
+            "ecuaciones_latex": [
+              "{{}_{2}F_{1}}\\left(\\alpha,\\beta;\\gamma;z\\right)=\\mathit{H\\!\\ell}\\left(1,\\alpha\\beta;\\alpha,\\beta,\\gamma,\\delta;z\\right)=\\mathit{H\\!\\ell}\\left(0,0;\\alpha,\\beta,\\gamma,\\alpha+\\beta+1-\\gamma;z\\right)=\\mathit{H\\!\\ell}\\left(a,a\\alpha\\beta;\\alpha,\\beta,\\gamma,\\alpha+\\beta+1-\\gamma;z\\right). \\tag{31.7.1}",
+              "\\mathit{H\\!\\ell}\\left(2,\\alpha\\beta;\\alpha,\\beta,\\gamma,\\alpha+\\beta-2\\gamma+1;z\\right)={{}_{2}F_{1}}\\left(\\tfrac{1}{2}\\alpha,\\tfrac{1}{2}\\beta;\\gamma;1-(1-z)^{2}\\right), \\tag{31.7.2}",
+              "\\mathit{H\\!\\ell}\\left(4,\\alpha\\beta;\\alpha,\\beta,\\tfrac{1}{2},\\tfrac{2}{3}(\\alpha+\\beta);z\\right)={{}_{2}F_{1}}\\left(\\tfrac{1}{3}\\alpha,\\tfrac{1}{3}\\beta;\\tfrac{1}{2};1-(1-z)^{2}(1-\\tfrac{1}{4}z)\\right), \\tag{31.7.3}",
+              "\\mathit{H\\!\\ell}\\left(\\tfrac{1}{2}+i\\tfrac{\\sqrt{3}}{2},\\alpha\\beta(\\tfrac{1}{2}+i\\tfrac{\\sqrt{3}}{6});\\alpha,\\beta,\\tfrac{1}{3}(\\alpha+\\beta+1),\\tfrac{1}{3}(\\alpha+\\beta+1);z\\right)={{}_{2}F_{1}}\\left(\\tfrac{1}{3}\\alpha,\\tfrac{1}{3}\\beta;\\tfrac{1}{3}(\\alpha+\\beta+1);1-\\left(1-\\left(\\tfrac{3}{2}-i\\tfrac{\\sqrt{3}}{2}\\right)z\\right)^{3}\\right). \\tag{31.7.4}",
+              "\\displaystyle a \\displaystyle=k^{-2}, \\tag{31.7.5}",
+              "\\displaystyle q \\displaystyle=-\\tfrac{1}{4}ah,",
+              "\\displaystyle\\alpha \\displaystyle=-\\tfrac{1}{2}\\nu,",
+              "\\displaystyle\\beta \\displaystyle=\\tfrac{1}{2}(\\nu+1),",
+              "\\displaystyle\\gamma \\displaystyle=\\delta=\\epsilon=\\tfrac{1}{2},"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun functions",
+                "hypergeometric function",
+                "relations to hypergeometric function",
+                "relations to other functions",
+                "Lamé functions",
+                "relations to Heun functions",
+                "relations to Lamé functions"
+              ],
+              "definiciones": [
+                "$k$ : modulus (locally)"
+              ],
+              "simbolos": [
+                "$\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $\\epsilon$: real or complex parameter , $\\nu$: real or complex parameter , $a$: complex parameter , $q$: real or complex parameter , $\\alpha$: real or complex parameter and $\\beta$: real or complex parameter"
+              ],
+              "notas_bibliograficas": [
+                "See Ronveaux ([1995](./bib/R.html#bib1965 \"Heun’s Differential Equations\"), Part A, p. 10)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.7 and Ch.31",
+                "Annotations for §31.7(ii) , §31.7 and Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "2005",
+                "archivo_destino": "bib/M.html#bib1537",
+                "titulo_referencia": "On reducing the Heun equation to the hypergeometric equation"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/J.html#bib1195",
+                "titulo_referencia": "On the cubic lattice Green functions"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1965",
+                "titulo_referencia": "Heun’s Differential Equations"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.8",
+          "titulo_original": "Solutions via Quadratures",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.8.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.8.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.8 Solutions via Quadratures",
+            "prosa_teorica": "For half-odd-integer values of the exponent parameters:\n<a id=\"E1\"></a>\nthe Hermite–Darboux method (see Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), pp. 570–572)) can be applied to construct solutions of ( 31.2.1 ) expressed in quadratures, as follows.\nDenote $\\mathbf{m}=(m_{0},m_{1},m_{2},m_{3})$ and $\\lambda=-4q$ . Then\nare two independent solutions of ( 31.2.1 ). Here $\\Psi_{g,N}(\\lambda,z)$ is a polynomial of degree $g$ in $\\lambda$ and of degree $N=m_{0}+m_{1}+m_{2}+m_{3}$ in $z$ , that is a solution of the third-order differential equation satisfied by a product of any two solutions of Heun’s equation. The degree $g$ is given by\nThe variables $\\lambda$ and $\\nu$ are two coordinates of the associated hyperelliptic (spectral) curve $\\Gamma:\\nu^{2}=\\prod_{j=1}^{2g+1}(\\lambda-\\lambda_{j})$ . (This $\\nu$ is unrelated to the $\\nu$ in § [31.6](./31.6.md \"§31.6 Path-Multiplicative Solutions ‣ Properties ‣ Chapter 31 Heun Functions\") .) Lastly, $\\lambda_{j}$ , $j=1,2,\\ldots,2g+1$ , are the zeros of the Wronskian of $w_{+}(\\mathbf{m};\\lambda;z)$ and $w_{-}(\\mathbf{m};\\lambda;z)$ .\nBy automorphisms from § 31.2(v) , similar solutions also exist for $m_{0},m_{1},m_{2},m_{3}\\in\\mathbb{Z}$ , and $\\Psi_{g,N}(\\lambda,z)$ may become a rational function in $z$ . For instance,\n<a id=\"E4\"></a>\nand\n<a id=\"E5\"></a>\nFor $\\mathbf{m}=(m_{0},0,0,0)$ , these solutions reduce to Hermite’s solutions (Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), §23.7)) of the Lamé equation in its algebraic form. The curve $\\Gamma$ reflects the finite-gap property of Equation ( 31.2.1 ) when the exponent parameters satisfy ( 31.8.1 ) for $m_{j}\\in\\mathbb{Z}$ . When $\\lambda=-4q$ approaches the ends of the gaps, the solution ( 31.8.2 ) becomes the corresponding Heun polynomial. For more details see Smirnov ([2002](./bib/S.html#bib2118 \"Elliptic Solitons and Heun’s Equation\")).\nThe solutions in this section are finite-term Liouvillean solutions which can be constructed via Kovacic’s algorithm; see § 31.14(ii) .",
+            "formulas_clave": [
+              {
+                "id": "Ex1",
+                "tag": "31.8.1",
+                "latex": "\\displaystyle\\beta-\\alpha \\displaystyle=m_{0}+\\tfrac{1}{2}, \\tag{31.8.1}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\gamma \\displaystyle=-m_{1}+\\tfrac{1}{2},"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle\\delta \\displaystyle=-m_{2}+\\tfrac{1}{2},"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle\\epsilon \\displaystyle=-m_{3}+\\tfrac{1}{2}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.8.2",
+                "latex": "w_{\\pm}(\\mathbf{m};\\lambda;z)=\\sqrt{\\Psi_{g,N}(\\lambda,z)}\\,\\exp\\left(\\pm\\frac{i\\nu(\\lambda)}{2}\\int_{z_{0}}^{z}\\frac{t^{m_{1}}(t-1)^{m_{2}}(t-a)^{m_{3}}\\,\\mathrm{d}t}{\\Psi_{g,N}(\\lambda,t)\\sqrt{t(t-1)(t-a)}}\\right) \\tag{31.8.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "31.8.3",
+                "latex": "g=\\tfrac{1}{2}\\max\\left(2\\max_{0\\leq k\\leq 3}m_{k},1+N-(1+(-1)^{N})\\left(\\tfrac{1}{2}+\\min_{0\\leq k\\leq 3}m_{k}\\right)\\right). \\tag{31.8.3}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "31.8.4",
+                "latex": "\\displaystyle\\Psi_{1,2} \\displaystyle=z^{2}+\\lambda z+a, \\tag{31.8.4}"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle\\nu^{2} \\displaystyle=(\\lambda+a+1)(\\lambda^{2}-4a)"
+              },
+              {
+                "id": "Ex7",
+                "tag": "31.8.5",
+                "latex": "\\displaystyle\\Psi_{1,-1} \\displaystyle=\\left(z^{2}+(\\lambda+3a+3)z+a\\right)/z^{3}, \\tag{31.8.5}"
+              },
+              {
+                "id": "Ex8",
+                "tag": "",
+                "latex": "\\displaystyle\\nu^{2} \\displaystyle=(\\lambda+4a+4)\\left((\\lambda+3a+3)^{2}-4a\\right)"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle\\beta-\\alpha \\displaystyle=m_{0}+\\tfrac{1}{2}, \\tag{31.8.1}",
+              "\\displaystyle\\gamma \\displaystyle=-m_{1}+\\tfrac{1}{2},",
+              "\\displaystyle\\delta \\displaystyle=-m_{2}+\\tfrac{1}{2},",
+              "\\displaystyle\\epsilon \\displaystyle=-m_{3}+\\tfrac{1}{2}",
+              "w_{\\pm}(\\mathbf{m};\\lambda;z)=\\sqrt{\\Psi_{g,N}(\\lambda,z)}\\,\\exp\\left(\\pm\\frac{i\\nu(\\lambda)}{2}\\int_{z_{0}}^{z}\\frac{t^{m_{1}}(t-1)^{m_{2}}(t-a)^{m_{3}}\\,\\mathrm{d}t}{\\Psi_{g,N}(\\lambda,t)\\sqrt{t(t-1)(t-a)}}\\right) \\tag{31.8.2}",
+              "g=\\tfrac{1}{2}\\max\\left(2\\max_{0\\leq k\\leq 3}m_{k},1+N-(1+(-1)^{N})\\left(\\tfrac{1}{2}+\\min_{0\\leq k\\leq 3}m_{k}\\right)\\right). \\tag{31.8.3}",
+              "\\displaystyle\\Psi_{1,2} \\displaystyle=z^{2}+\\lambda z+a, \\tag{31.8.4}",
+              "\\displaystyle\\nu^{2} \\displaystyle=(\\lambda+a+1)(\\lambda^{2}-4a)",
+              "\\displaystyle\\Psi_{1,-1} \\displaystyle=\\left(z^{2}+(\\lambda+3a+3)z+a\\right)/z^{3}, \\tag{31.8.5}",
+              "\\displaystyle\\nu^{2} \\displaystyle=(\\lambda+4a+4)\\left((\\lambda+3a+3)^{2}-4a\\right)"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Hermite–Darboux method",
+                "Heun functions",
+                "Heun’s equation",
+                "Kovacic’s algorithm",
+                "Lamé functions",
+                "Liouvillean solutions",
+                "automorphisms",
+                "relations to Heun functions",
+                "solutions via quadratures"
+              ],
+              "simbolos": [
+                "$\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $\\epsilon$: real or complex parameter , $m$: nonnegative integer , $\\alpha$: real or complex parameter and $\\beta$: real or complex parameter",
+                "$z$: complex variable , $\\nu$: real or complex parameter , $a$: complex parameter , $\\lambda=-4q$ and $\\Psi_{g,N}(\\lambda,z)$: polynomial"
+              ],
+              "referenciado_por": [
+                "§31.8",
+                "Erratum (V1.0.7) for Equation (31.8.5)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.8 and Ch.31"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Errata (effective with 1.0.7)",
+                  "descripcion": "Originally the first term on the right side of the equation for $\\Psi_{1,-1}$ was $z^{3}$ . The correct term is $z^{2}$ . *Reported 2013-07-25 by Christopher Künstler*"
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "31.6",
+                "archivo_destino": "31.6.md",
+                "titulo_referencia": "§31.6 Path-Multiplicative Solutions ‣ Properties ‣ Chapter 31 Heun Functions"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "2002",
+                "archivo_destino": "bib/S.html#bib2118",
+                "titulo_referencia": "Elliptic Solitons and Heun’s Equation"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.9",
+          "titulo_original": "Orthogonality",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.9.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.9.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.9 Orthogonality",
+            "prosa_teorica": "With\nwe have\nHere $\\zeta$ is an arbitrary point in the interval $(0,1)$ . The integration path begins at $z=\\zeta$ , encircles $z=1$ once in the positive sense, followed by $z=0$ once in the positive sense, and so on, returning finally to $z=\\zeta$ . The integration path is called a *Pochhammer double-loop contour* (compare Figure 5.12.3 ). The branches of the many-valued functions are continuous on the path, and assume their principal values at the beginning.\nThe normalization constant $\\theta_{m}$ is given by\nwhere\n<a id=\"E4\"></a>\nand $\\mathscr{W}$ denotes the Wronskian (§ 1.13(i) ). The right-hand side may be evaluated at any convenient value, or limiting value, of $\\zeta$ in $(0,1)$ since it is independent of $\\zeta$ .\nFor corresponding orthogonality relations for Heun functions (§ [31.4](./31.4.md \"§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions\") ) and Heun polynomials (§ [31.5](./31.5.md \"§31.5 Solutions Analytic at Three Singularities: Heun Polynomials ‣ Properties ‣ Chapter 31 Heun Functions\") ), see Lambe and Ward ([1934](./bib/L.html#bib1372 \"Some differential equations and associated integral equations\")), Erdélyi ([1944](./bib/E.html#bib750 \"Certain expansions of solutions of the Heun equation\")), Sleeman ([1966a](./bib/S.html#bib2107 \"Some Boundary Value Problems Associated with the Heun Equation\")), and Ronveaux ([1995](./bib/R.html#bib1965 \"Heun’s Differential Equations\"), Part A, pp. 59–64).\nHeun polynomials $w_{j}=\\mathit{Hp}_{n_{j},m_{j}}$ , $j=1,2$ , satisfy\nwhere\nand the integration paths $\\mathcal{L}_{1}$ , $\\mathcal{L}_{2}$ are Pochhammer double-loop contours encircling distinct pairs of singularities $\\{0,1\\}$ , $\\{0,a\\}$ , $\\{1,a\\}$ .\nFor further information, including normalization constants, see Sleeman ([1966a](./bib/S.html#bib2107 \"Some Boundary Value Problems Associated with the Heun Equation\")). For bi-orthogonal relations for path-multiplicative solutions see Schmidt ([1979](./bib/S.html#bib2011 \"Die Lösung der linearen Differentialgleichung 2. Ordnung um zwei einfache Singularitäten durch Reihen nach hypergeometrischen Funktionen\"), §2.2). For other generalizations see Arscott ([1964b](./bib/index.html#bib142 \"Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions\"), pp. 206–207 and 241).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.9.1",
+                "latex": "w_{m}(z)=(0,1)\\mathit{Hf}_{m}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right), \\tag{31.9.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.9.2",
+                "latex": "\\int_{\\zeta}^{(1+,0+,1-,0-)}t^{\\gamma-1}(1-t)^{\\delta-1}(t-a)^{\\epsilon-1}\\,w_{m}(t)w_{k}(t)\\,\\mathrm{d}t=\\delta_{m,k}\\theta_{m}. \\tag{31.9.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "31.9.3",
+                "latex": "\\theta_{m}=(1-{\\mathrm{e}}^{2\\pi i\\gamma})(1-{\\mathrm{e}}^{2\\pi i\\delta})\\zeta^{\\gamma}(1-\\zeta)^{\\delta}(\\zeta-a)^{\\epsilon}\\,\\frac{f_{0}(q,\\zeta)}{f_{1}(q,\\zeta)}\\left.\\frac{\\partial}{\\partial q}\\mathscr{W}\\left\\{f_{0}(q,\\zeta),f_{1}(q,\\zeta)\\right\\}\\right|_{q=q_{m}}, \\tag{31.9.3}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "31.9.4",
+                "latex": "\\displaystyle f_{0}(q_{m},z) \\displaystyle=\\mathit{H\\!\\ell}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right), \\tag{31.9.4}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle f_{1}(q_{m},z) \\displaystyle=\\mathit{H\\!\\ell}\\left(1-a,\\alpha\\beta-q_{m};\\alpha,\\beta,\\delta,\\gamma;1-z\\right),"
+              },
+              {
+                "id": "E5",
+                "tag": "31.9.5",
+                "latex": "\\int_{\\mathcal{L}_{1}}\\int_{\\mathcal{L}_{2}}\\rho(s,t)w_{1}(s)w_{1}(t)w_{2}(s)w_{2}(t)\\,\\mathrm{d}s\\,\\mathrm{d}t=0, \\tag{31.9.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "31.9.6",
+                "latex": "\\rho(s,t)=(s-t)(st)^{\\gamma-1}\\left((s-1)(t-1)\\right)^{\\delta-1}\\,\\left((s-a)(t-a)\\right)^{\\epsilon-1}, \\tag{31.9.6}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "w_{m}(z)=(0,1)\\mathit{Hf}_{m}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right), \\tag{31.9.1}",
+              "\\int_{\\zeta}^{(1+,0+,1-,0-)}t^{\\gamma-1}(1-t)^{\\delta-1}(t-a)^{\\epsilon-1}\\,w_{m}(t)w_{k}(t)\\,\\mathrm{d}t=\\delta_{m,k}\\theta_{m}. \\tag{31.9.2}",
+              "\\theta_{m}=(1-{\\mathrm{e}}^{2\\pi i\\gamma})(1-{\\mathrm{e}}^{2\\pi i\\delta})\\zeta^{\\gamma}(1-\\zeta)^{\\delta}(\\zeta-a)^{\\epsilon}\\,\\frac{f_{0}(q,\\zeta)}{f_{1}(q,\\zeta)}\\left.\\frac{\\partial}{\\partial q}\\mathscr{W}\\left\\{f_{0}(q,\\zeta),f_{1}(q,\\zeta)\\right\\}\\right|_{q=q_{m}}, \\tag{31.9.3}",
+              "\\displaystyle f_{0}(q_{m},z) \\displaystyle=\\mathit{H\\!\\ell}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right), \\tag{31.9.4}",
+              "\\displaystyle f_{1}(q_{m},z) \\displaystyle=\\mathit{H\\!\\ell}\\left(1-a,\\alpha\\beta-q_{m};\\alpha,\\beta,\\delta,\\gamma;1-z\\right),",
+              "\\int_{\\mathcal{L}_{1}}\\int_{\\mathcal{L}_{2}}\\rho(s,t)w_{1}(s)w_{1}(t)w_{2}(s)w_{2}(t)\\,\\mathrm{d}s\\,\\mathrm{d}t=0, \\tag{31.9.5}",
+              "\\rho(s,t)=(s-t)(st)^{\\gamma-1}\\left((s-1)(t-1)\\right)^{\\delta-1}\\,\\left((s-a)(t-a)\\right)^{\\epsilon-1}, \\tag{31.9.6}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun functions",
+                "Heun polynomials",
+                "Pochhammer double-loop contour",
+                "Pochhammer’s integral",
+                "orthogonality",
+                "single",
+                "Heun’s equation",
+                "biorthogonality",
+                "double",
+                "path-multiplicative solutions"
+              ],
+              "definiciones": [
+                "$f_{0}(q_{m},z)$ , $f_{1}(q_{m},z)$ : coefficients (locally)"
+              ],
+              "simbolos": [
+                "$\\mathit{H\\!\\ell}\\left(a,q;\\alpha,\\beta,\\gamma,\\delta;z\\right)$: Heun functions , $z$: complex variable , $\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $m$: nonnegative integer , $a$: complex parameter , $q$: real or complex parameter , $\\alpha$: real or complex parameter and $\\beta$: real or complex parameter"
+              ],
+              "referenciado_por": [
+                "§31.10(i)",
+                "§31.11(i)"
+              ],
+              "notas_bibliograficas": [
+                "See Becker ([1997](./bib/B.html#bib226 \"Normalization integrals of orthogonal Heun functions\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.9 and Ch.31",
+                "Annotations for §31.9(i) , §31.9 and Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1997",
+                "archivo_destino": "bib/B.html#bib226",
+                "titulo_referencia": "Normalization integrals of orthogonal Heun functions"
+              },
+              {
+                "texto": "31.4",
+                "archivo_destino": "31.4.md",
+                "titulo_referencia": "§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions"
+              },
+              {
+                "texto": "31.5",
+                "archivo_destino": "31.5.md",
+                "titulo_referencia": "§31.5 Solutions Analytic at Three Singularities: Heun Polynomials ‣ Properties ‣ Chapter 31 Heun Functions"
+              },
+              {
+                "texto": "1934",
+                "archivo_destino": "bib/L.html#bib1372",
+                "titulo_referencia": "Some differential equations and associated integral equations"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/E.html#bib750",
+                "titulo_referencia": "Certain expansions of solutions of the Heun equation"
+              },
+              {
+                "texto": "1966a",
+                "archivo_destino": "bib/S.html#bib2107",
+                "titulo_referencia": "Some Boundary Value Problems Associated with the Heun Equation"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1965",
+                "titulo_referencia": "Heun’s Differential Equations"
+              },
+              {
+                "texto": "1966a",
+                "archivo_destino": "bib/S.html#bib2107",
+                "titulo_referencia": "Some Boundary Value Problems Associated with the Heun Equation"
+              },
+              {
+                "texto": "1979",
+                "archivo_destino": "bib/S.html#bib2011",
+                "titulo_referencia": "Die Lösung der linearen Differentialgleichung 2. Ordnung um zwei einfache Singularitäten durch Reihen nach hypergeometrischen Funktionen"
+              },
+              {
+                "texto": "1964b",
+                "archivo_destino": "bib/index.html#bib142",
+                "titulo_referencia": "Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.10",
+          "titulo_original": "Integral Equations and Representations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.10.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.10.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.10 Integral Equations and Representations",
+            "prosa_teorica": "If $w(z)$ is a solution of Heun’s equation, then another solution $W(z)$ (possibly a multiple of $w(z)$ ) can be represented as\nfor a suitable contour $C$ . The weight function is given by\nand the kernel $\\mathcal{K}(z,t)$ is a solution of the partial differential equation\nwhere $\\mathcal{D}_{z}$ is *Heun’s operator in the variable $z$* :\nThe contour $C$ must be such that\nwhere\nSet\n<a id=\"E7\"></a>\nThe kernel $\\mathcal{K}$ must satisfy\nThe solutions of ( 31.10.8 ) are given in terms of the Riemann $P$ -symbol (see § 15.11(i) ) as\nwhere $\\sigma$ is a *separation constant* . For integral equations satisfied by the Heun polynomial $\\mathit{Hp}_{n,m}\\left(z\\right)$ we have $\\sigma=\\frac{1}{2}-\\delta-j$ , $j=0,1,\\dots,n$ .\nFor suitable choices of the branches of the $P$ -symbols in ( 31.10.9 ) and the contour $C$ , we can obtain both integral equations satisfied by Heun functions, as well as the integral representations of a distinct solution of Heun’s equation in terms of a Heun function (polynomial, path-multiplicative solution).\nLet\nwhere $\\Re\\gamma>0$ , $\\Re\\delta>0$ , and $C$ be the Pochhammer double-loop contour about 0 and 1 (as in § 31.9(i) ). Then the integral equation ( 31.10.1 ) is satisfied by $w(z)=w_{m}(z)$ and $W(z)=\\kappa_{m}w_{m}(z)$ , where $w_{m}(z)=(0,1)\\mathit{Hf}_{m}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right)$ and $\\kappa_{m}$ is the corresponding eigenvalue.\nFuchs–Frobenius solutions $W_{m}(z)=\\tilde{\\kappa}_{m}z^{-\\alpha}\\mathit{H\\!\\ell}\\left(1/a,q_{m};\\alpha,\\alpha-\\gamma+1,\\alpha-\\beta+1,\\delta;1/z\\right)$ are represented in terms of Heun functions $w_{m}(z)=(0,1)\\mathit{Hf}_{m}\\left(a,q_{m};\\alpha,\\beta,\\gamma,\\delta;z\\right)$ by ( 31.10.1 ) with $W(z)=W_{m}(z)$ , $w(z)=w_{m}(z)$ , and with kernel chosen from\nHere $\\tilde{\\kappa}_{m}$ is a normalization constant and $C$ is the contour of Example 1.\nIf $w(z)$ is a solution of Heun’s equation, then another solution $W(z)$ (possibly a multiple of $w(z)$ ) can be represented as\nfor suitable contours $C_{1}$ , $C_{2}$ . The weight function is\nand the kernel $\\mathcal{K}(z;s,t)$ is a solution of the partial differential equation\nwhere $\\mathcal{D}_{z}$ is given by ( 31.10.4 ). The contours $C_{1}$ , $C_{2}$ must be chosen so that\nwhere $p(t)$ is given by ( 31.10.6 ).\nSet\n<a id=\"E17\"></a>\nThe kernel $\\mathcal{K}$ must satisfy\nThis equation can be solved in terms of cylinder functions $\\mathscr{C}_{\\nu}\\left(z\\right)$ (§ 10.2(ii) ):\nwhere $\\sigma_{1}$ and $\\sigma_{2}$ are separation constants.\nA further change of variables, to spherical coordinates,\n<a id=\"E20\"></a>\nleads to the kernel equation\nThis equation can be solved in terms of hypergeometric functions (§ 15.11(i) ):\nwith\n<a id=\"E23\"></a>\nand $\\sigma_{1}$ and $\\sigma_{2}$ are separation constants.\nFor integral equations for special confluent Heun functions (§ [31.12](./31.12.md \"§31.12 Confluent Forms of Heun’s Equation ‣ Properties ‣ Chapter 31 Heun Functions\") ) see Kazakov and Slavyanov ([1996](./bib/K.html#bib1237 \"Integral equations for special functions of Heun class\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.10.1",
+                "latex": "W(z)=\\int_{C}\\mathcal{K}(z,t)w(t)\\rho(t)\\,\\mathrm{d}t \\tag{31.10.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.10.2",
+                "latex": "\\rho(t)=t^{\\gamma-1}(t-1)^{\\delta-1}(t-a)^{\\epsilon-1}, \\tag{31.10.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "31.10.3",
+                "latex": "(\\mathcal{D}_{z}-\\mathcal{D}_{t})\\mathcal{K}=0, \\tag{31.10.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "31.10.4",
+                "latex": "\\mathcal{D}_{z}=z(z-1)(z-a)(\\frac{{\\partial}^{2}}{{\\partial z}^{2}})+\\left(\\gamma(z-1)(z-a)+\\delta z(z-a)+\\epsilon z(z-1)\\right)(\\frac{\\partial}{\\partial z})+\\alpha\\beta z. \\tag{31.10.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "31.10.5",
+                "latex": "\\left.p(t)\\left(\\frac{\\partial\\mathcal{K}}{\\partial t}w(t)-\\mathcal{K}\\frac{\\mathrm{d}w(t)}{\\mathrm{d}t}\\right)\\right|_{C}=0, \\tag{31.10.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "31.10.6",
+                "latex": "p(t)=t^{\\gamma}(t-1)^{\\delta}(t-a)^{\\epsilon}. \\tag{31.10.6}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "31.10.7",
+                "latex": "\\displaystyle\\cos\\theta \\displaystyle=\\left(\\frac{zt}{a}\\right)^{1/2}, \\tag{31.10.7}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\sin\\theta\\cos\\phi \\displaystyle=\\mathrm{i}\\left(\\frac{(z-a)(t-a)}{a(1-a)}\\right)^{1/2},"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle\\sin\\theta\\sin\\phi \\displaystyle=\\left(\\frac{(z-1)(t-1)}{1-a}\\right)^{1/2}."
+              },
+              {
+                "id": "E8",
+                "tag": "31.10.8",
+                "latex": "{\\sin}^{2}\\theta\\left(\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial\\theta}^{2}}+\\left((1-2\\gamma)\\tan\\theta+2(\\delta+\\epsilon-\\tfrac{1}{2})\\cot\\theta\\right)\\frac{\\partial\\mathcal{K}}{\\partial\\theta}-4\\alpha\\beta\\mathcal{K}\\right)+\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial\\phi}^{2}}+\\left((1-2\\delta)\\cot\\phi-(1-2\\epsilon)\\tan\\phi\\right)\\frac{\\partial\\mathcal{K}}{\\partial\\phi}=0. \\tag{31.10.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "31.10.9",
+                "latex": "\\mathcal{K}(\\theta,\\phi)=P\\begin{Bmatrix}0&1&\\infty&\\\\[1.0pt]\n0&\\frac{1}{2}-\\delta-\\sigma&\\alpha&{\\cos}^{2}\\theta\\\\[1.0pt]\n1-\\gamma&\\frac{1}{2}-\\epsilon+\\sigma&\\beta&\\end{Bmatrix}\\,P\\begin{Bmatrix}0&1&\\infty&\\\\[1.0pt]\n0&0&-\\frac{1}{2}+\\delta+\\sigma&{\\cos}^{2}\\phi\\\\[1.0pt]\n1-\\epsilon&1-\\delta&-\\frac{1}{2}+\\epsilon-\\sigma&\\end{Bmatrix}, \\tag{31.10.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "31.10.10",
+                "latex": "\\mathcal{K}(z,t)=(zt-a)^{\\frac{1}{2}-\\delta-\\sigma}\\,{{}_{2}F_{1}}\\left({\\frac{1}{2}-\\delta-\\sigma+\\alpha,\\frac{1}{2}-\\delta-\\sigma+\\beta\\atop\\gamma};\\frac{zt}{a}\\right)\\,{{}_{2}F_{1}}\\left({-\\frac{1}{2}+\\delta+\\sigma,-\\frac{1}{2}+\\epsilon-\\sigma\\atop\\delta};\\frac{a(z-1)(t-1)}{(a-1)(zt-a)}\\right), \\tag{31.10.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "31.10.11",
+                "latex": "\\mathcal{K}(z,t)=(zt-a)^{\\frac{1}{2}-\\delta-\\sigma}\\left(\\frac{zt}{a}\\right)^{-\\frac{1}{2}+\\delta+\\sigma-\\alpha}\\,{{}_{2}F_{1}}\\left({\\frac{1}{2}-\\delta-\\sigma+\\alpha,\\frac{3}{2}-\\delta-\\sigma+\\alpha-\\gamma\\atop\\alpha-\\beta+1};\\frac{a}{zt}\\right)\\,P\\begin{Bmatrix}0&1&\\infty&\\\\\n0&0&-\\frac{1}{2}+\\delta+\\sigma&\\dfrac{(z-a)(t-a)}{(1-a)(zt-a)}\\\\\n1-\\epsilon&1-\\delta&-\\frac{1}{2}+\\epsilon-\\sigma&\\end{Bmatrix}. \\tag{31.10.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "31.10.12",
+                "latex": "W(z)=\\int_{C_{1}}\\int_{C_{2}}\\mathcal{K}(z;s,t)w(s)w(t)\\rho(s,t)\\,\\mathrm{d}s\\,\\mathrm{d}t \\tag{31.10.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "31.10.13",
+                "latex": "\\rho(s,t)=(s-t)(st)^{\\gamma-1}\\left((1-s)(1-t)\\right)^{\\delta-1}\\,\\left((1-(s/a))(1-(t/a))\\right)^{\\epsilon-1}, \\tag{31.10.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "31.10.14",
+                "latex": "\\left((t-z)\\mathcal{D}_{s}+(z-s)\\mathcal{D}_{t}+(s-t)\\mathcal{D}_{z}\\right)\\mathcal{K}=0, \\tag{31.10.14}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "31.10.15",
+                "latex": "\\displaystyle\\left.p(t)\\left(\\frac{\\partial\\mathcal{K}}{\\partial t}w(t)-\\mathcal{K}\\frac{\\mathrm{d}w(t)}{\\mathrm{d}t}\\right)\\right|_{C_{1}} \\displaystyle=0, \\tag{31.10.15}"
+              },
+              {
+                "id": "",
+                "tag": "31.10.16",
+                "latex": "\\displaystyle\\left.p(s)\\left(\\frac{\\partial\\mathcal{K}}{\\partial s}w(s)-\\mathcal{K}\\frac{\\mathrm{d}w(s)}{\\mathrm{d}s}\\right)\\right|_{C_{2}} \\displaystyle=0, \\tag{31.10.16}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "31.10.17",
+                "latex": "\\displaystyle u \\displaystyle=\\frac{(stz)^{1/2}}{a}, \\tag{31.10.17}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle v \\displaystyle=\\left(\\frac{(s-1)(t-1)(z-1)}{1-a}\\right)^{1/2},"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle w \\displaystyle=i\\left(\\frac{(s-a)(t-a)(z-a)}{a(1-a)}\\right)^{1/2}."
+              },
+              {
+                "id": "E18",
+                "tag": "31.10.18",
+                "latex": "\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial u}^{2}}+\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial v}^{2}}+\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial w}^{2}}+\\frac{2\\gamma-1}{u}\\frac{\\partial\\mathcal{K}}{\\partial u}+\\frac{2\\delta-1}{v}\\frac{\\partial\\mathcal{K}}{\\partial v}+\\frac{2\\epsilon-1}{w}\\frac{\\partial\\mathcal{K}}{\\partial w}=0. \\tag{31.10.18}"
+              },
+              {
+                "id": "E19",
+                "tag": "31.10.19",
+                "latex": "\\mathcal{K}(u,v,w)=u^{1-\\gamma}v^{1-\\delta}w^{1-\\epsilon}\\mathscr{C}_{1-\\gamma}\\left(u\\sqrt{\\sigma_{1}}\\right)\\,\\mathscr{C}_{1-\\delta}\\left(v\\sqrt{\\sigma_{2}}\\right)\\mathscr{C}_{1-\\epsilon}\\left(\\mathrm{i}w\\sqrt{\\sigma_{1}+\\sigma_{2}}\\right), \\tag{31.10.19}"
+              },
+              {
+                "id": "Ex7",
+                "tag": "31.10.20",
+                "latex": "\\displaystyle u \\displaystyle=r\\cos\\theta, \\tag{31.10.20}"
+              },
+              {
+                "id": "Ex8",
+                "tag": "",
+                "latex": "\\displaystyle v \\displaystyle=r\\sin\\theta\\sin\\phi,"
+              },
+              {
+                "id": "Ex9",
+                "tag": "",
+                "latex": "\\displaystyle w \\displaystyle=r\\sin\\theta\\cos\\phi,"
+              },
+              {
+                "id": "E21",
+                "tag": "31.10.21",
+                "latex": "\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial r}^{2}}+\\frac{2(\\gamma+\\delta+\\epsilon)-1}{r}\\frac{\\partial\\mathcal{K}}{\\partial r}+\\frac{1}{r^{2}}\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial\\theta}^{2}}+\\frac{(2(\\delta+\\epsilon)-1)\\cot\\theta-(2\\gamma-1)\\tan\\theta}{r^{2}}\\frac{\\partial\\mathcal{K}}{\\partial\\theta}+\\frac{1}{r^{2}{\\sin}^{2}\\theta}\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial\\phi}^{2}}+\\frac{(2\\delta-1)\\cot\\phi-(2\\epsilon-1)\\tan\\phi}{r^{2}{\\sin}^{2}\\theta}\\frac{\\partial\\mathcal{K}}{\\partial\\phi}=0. \\tag{31.10.21}"
+              },
+              {
+                "id": "E22",
+                "tag": "31.10.22",
+                "latex": "\\mathcal{K}(r,\\theta,\\phi)=r^{m}{\\sin}^{2p}\\theta P\\begin{Bmatrix}0&1&\\infty&\\\\\n0&0&a&{\\cos}^{2}\\theta\\\\\n\\tfrac{1}{2}(3-\\gamma)&c&b&\\end{Bmatrix}\\,P\\begin{Bmatrix}0&1&\\infty&\\\\\n0&0&a^{\\prime}&{\\cos}^{2}\\phi\\\\\n1-\\epsilon&1-\\delta&b^{\\prime}&\\end{Bmatrix}, \\tag{31.10.22}"
+              },
+              {
+                "id": "Ex10",
+                "tag": "31.10.23",
+                "latex": "\\displaystyle m^{2}+2(\\alpha+\\beta)m-\\sigma_{1}=0, \\tag{31.10.23}"
+              },
+              {
+                "id": "Ex11",
+                "tag": "",
+                "latex": "\\displaystyle p^{2}+(\\alpha+\\beta-\\gamma-\\tfrac{1}{2})p-\\tfrac{1}{4}\\sigma_{2}=0,"
+              },
+              {
+                "id": "Ex12",
+                "tag": "",
+                "latex": "\\displaystyle a+b \\displaystyle=2(\\alpha+\\beta+p)-1,"
+              },
+              {
+                "id": "Ex13",
+                "tag": "",
+                "latex": "\\displaystyle ab \\displaystyle=p^{2}-p(1-\\alpha-\\beta)-\\tfrac{1}{4}\\sigma_{1},"
+              },
+              {
+                "id": "Ex14",
+                "tag": "",
+                "latex": "\\displaystyle c \\displaystyle=\\gamma-\\tfrac{1}{2}-2(\\alpha+\\beta+p),"
+              },
+              {
+                "id": "Ex15",
+                "tag": "",
+                "latex": "\\displaystyle a^{\\prime}+b^{\\prime} \\displaystyle=\\delta+\\epsilon-1,"
+              },
+              {
+                "id": "Ex16",
+                "tag": "",
+                "latex": "\\displaystyle a^{\\prime}b^{\\prime} \\displaystyle=-\\tfrac{1}{4}\\sigma_{2},"
+              }
+            ],
+            "ecuaciones_latex": [
+              "W(z)=\\int_{C}\\mathcal{K}(z,t)w(t)\\rho(t)\\,\\mathrm{d}t \\tag{31.10.1}",
+              "\\rho(t)=t^{\\gamma-1}(t-1)^{\\delta-1}(t-a)^{\\epsilon-1}, \\tag{31.10.2}",
+              "(\\mathcal{D}_{z}-\\mathcal{D}_{t})\\mathcal{K}=0, \\tag{31.10.3}",
+              "\\mathcal{D}_{z}=z(z-1)(z-a)(\\frac{{\\partial}^{2}}{{\\partial z}^{2}})+\\left(\\gamma(z-1)(z-a)+\\delta z(z-a)+\\epsilon z(z-1)\\right)(\\frac{\\partial}{\\partial z})+\\alpha\\beta z. \\tag{31.10.4}",
+              "\\left.p(t)\\left(\\frac{\\partial\\mathcal{K}}{\\partial t}w(t)-\\mathcal{K}\\frac{\\mathrm{d}w(t)}{\\mathrm{d}t}\\right)\\right|_{C}=0, \\tag{31.10.5}",
+              "p(t)=t^{\\gamma}(t-1)^{\\delta}(t-a)^{\\epsilon}. \\tag{31.10.6}",
+              "\\displaystyle\\cos\\theta \\displaystyle=\\left(\\frac{zt}{a}\\right)^{1/2}, \\tag{31.10.7}",
+              "\\displaystyle\\sin\\theta\\cos\\phi \\displaystyle=\\mathrm{i}\\left(\\frac{(z-a)(t-a)}{a(1-a)}\\right)^{1/2},",
+              "\\displaystyle\\sin\\theta\\sin\\phi \\displaystyle=\\left(\\frac{(z-1)(t-1)}{1-a}\\right)^{1/2}.",
+              "{\\sin}^{2}\\theta\\left(\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial\\theta}^{2}}+\\left((1-2\\gamma)\\tan\\theta+2(\\delta+\\epsilon-\\tfrac{1}{2})\\cot\\theta\\right)\\frac{\\partial\\mathcal{K}}{\\partial\\theta}-4\\alpha\\beta\\mathcal{K}\\right)+\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial\\phi}^{2}}+\\left((1-2\\delta)\\cot\\phi-(1-2\\epsilon)\\tan\\phi\\right)\\frac{\\partial\\mathcal{K}}{\\partial\\phi}=0. \\tag{31.10.8}",
+              "\\mathcal{K}(\\theta,\\phi)=P\\begin{Bmatrix}0&1&\\infty&\\\\[1.0pt]\n0&\\frac{1}{2}-\\delta-\\sigma&\\alpha&{\\cos}^{2}\\theta\\\\[1.0pt]\n1-\\gamma&\\frac{1}{2}-\\epsilon+\\sigma&\\beta&\\end{Bmatrix}\\,P\\begin{Bmatrix}0&1&\\infty&\\\\[1.0pt]\n0&0&-\\frac{1}{2}+\\delta+\\sigma&{\\cos}^{2}\\phi\\\\[1.0pt]\n1-\\epsilon&1-\\delta&-\\frac{1}{2}+\\epsilon-\\sigma&\\end{Bmatrix}, \\tag{31.10.9}",
+              "\\mathcal{K}(z,t)=(zt-a)^{\\frac{1}{2}-\\delta-\\sigma}\\,{{}_{2}F_{1}}\\left({\\frac{1}{2}-\\delta-\\sigma+\\alpha,\\frac{1}{2}-\\delta-\\sigma+\\beta\\atop\\gamma};\\frac{zt}{a}\\right)\\,{{}_{2}F_{1}}\\left({-\\frac{1}{2}+\\delta+\\sigma,-\\frac{1}{2}+\\epsilon-\\sigma\\atop\\delta};\\frac{a(z-1)(t-1)}{(a-1)(zt-a)}\\right), \\tag{31.10.10}",
+              "\\mathcal{K}(z,t)=(zt-a)^{\\frac{1}{2}-\\delta-\\sigma}\\left(\\frac{zt}{a}\\right)^{-\\frac{1}{2}+\\delta+\\sigma-\\alpha}\\,{{}_{2}F_{1}}\\left({\\frac{1}{2}-\\delta-\\sigma+\\alpha,\\frac{3}{2}-\\delta-\\sigma+\\alpha-\\gamma\\atop\\alpha-\\beta+1};\\frac{a}{zt}\\right)\\,P\\begin{Bmatrix}0&1&\\infty&\\\\\n0&0&-\\frac{1}{2}+\\delta+\\sigma&\\dfrac{(z-a)(t-a)}{(1-a)(zt-a)}\\\\\n1-\\epsilon&1-\\delta&-\\frac{1}{2}+\\epsilon-\\sigma&\\end{Bmatrix}. \\tag{31.10.11}",
+              "W(z)=\\int_{C_{1}}\\int_{C_{2}}\\mathcal{K}(z;s,t)w(s)w(t)\\rho(s,t)\\,\\mathrm{d}s\\,\\mathrm{d}t \\tag{31.10.12}",
+              "\\rho(s,t)=(s-t)(st)^{\\gamma-1}\\left((1-s)(1-t)\\right)^{\\delta-1}\\,\\left((1-(s/a))(1-(t/a))\\right)^{\\epsilon-1}, \\tag{31.10.13}",
+              "\\left((t-z)\\mathcal{D}_{s}+(z-s)\\mathcal{D}_{t}+(s-t)\\mathcal{D}_{z}\\right)\\mathcal{K}=0, \\tag{31.10.14}",
+              "\\displaystyle\\left.p(t)\\left(\\frac{\\partial\\mathcal{K}}{\\partial t}w(t)-\\mathcal{K}\\frac{\\mathrm{d}w(t)}{\\mathrm{d}t}\\right)\\right|_{C_{1}} \\displaystyle=0, \\tag{31.10.15}",
+              "\\displaystyle\\left.p(s)\\left(\\frac{\\partial\\mathcal{K}}{\\partial s}w(s)-\\mathcal{K}\\frac{\\mathrm{d}w(s)}{\\mathrm{d}s}\\right)\\right|_{C_{2}} \\displaystyle=0, \\tag{31.10.16}",
+              "\\displaystyle u \\displaystyle=\\frac{(stz)^{1/2}}{a}, \\tag{31.10.17}",
+              "\\displaystyle v \\displaystyle=\\left(\\frac{(s-1)(t-1)(z-1)}{1-a}\\right)^{1/2},",
+              "\\displaystyle w \\displaystyle=i\\left(\\frac{(s-a)(t-a)(z-a)}{a(1-a)}\\right)^{1/2}.",
+              "\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial u}^{2}}+\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial v}^{2}}+\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial w}^{2}}+\\frac{2\\gamma-1}{u}\\frac{\\partial\\mathcal{K}}{\\partial u}+\\frac{2\\delta-1}{v}\\frac{\\partial\\mathcal{K}}{\\partial v}+\\frac{2\\epsilon-1}{w}\\frac{\\partial\\mathcal{K}}{\\partial w}=0. \\tag{31.10.18}",
+              "\\mathcal{K}(u,v,w)=u^{1-\\gamma}v^{1-\\delta}w^{1-\\epsilon}\\mathscr{C}_{1-\\gamma}\\left(u\\sqrt{\\sigma_{1}}\\right)\\,\\mathscr{C}_{1-\\delta}\\left(v\\sqrt{\\sigma_{2}}\\right)\\mathscr{C}_{1-\\epsilon}\\left(\\mathrm{i}w\\sqrt{\\sigma_{1}+\\sigma_{2}}\\right), \\tag{31.10.19}",
+              "\\displaystyle u \\displaystyle=r\\cos\\theta, \\tag{31.10.20}",
+              "\\displaystyle v \\displaystyle=r\\sin\\theta\\sin\\phi,",
+              "\\displaystyle w \\displaystyle=r\\sin\\theta\\cos\\phi,",
+              "\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial r}^{2}}+\\frac{2(\\gamma+\\delta+\\epsilon)-1}{r}\\frac{\\partial\\mathcal{K}}{\\partial r}+\\frac{1}{r^{2}}\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial\\theta}^{2}}+\\frac{(2(\\delta+\\epsilon)-1)\\cot\\theta-(2\\gamma-1)\\tan\\theta}{r^{2}}\\frac{\\partial\\mathcal{K}}{\\partial\\theta}+\\frac{1}{r^{2}{\\sin}^{2}\\theta}\\frac{{\\partial}^{2}\\mathcal{K}}{{\\partial\\phi}^{2}}+\\frac{(2\\delta-1)\\cot\\phi-(2\\epsilon-1)\\tan\\phi}{r^{2}{\\sin}^{2}\\theta}\\frac{\\partial\\mathcal{K}}{\\partial\\phi}=0. \\tag{31.10.21}",
+              "\\mathcal{K}(r,\\theta,\\phi)=r^{m}{\\sin}^{2p}\\theta P\\begin{Bmatrix}0&1&\\infty&\\\\\n0&0&a&{\\cos}^{2}\\theta\\\\\n\\tfrac{1}{2}(3-\\gamma)&c&b&\\end{Bmatrix}\\,P\\begin{Bmatrix}0&1&\\infty&\\\\\n0&0&a^{\\prime}&{\\cos}^{2}\\phi\\\\\n1-\\epsilon&1-\\delta&b^{\\prime}&\\end{Bmatrix}, \\tag{31.10.22}",
+              "\\displaystyle m^{2}+2(\\alpha+\\beta)m-\\sigma_{1}=0, \\tag{31.10.23}",
+              "\\displaystyle p^{2}+(\\alpha+\\beta-\\gamma-\\tfrac{1}{2})p-\\tfrac{1}{4}\\sigma_{2}=0,",
+              "\\displaystyle a+b \\displaystyle=2(\\alpha+\\beta+p)-1,",
+              "\\displaystyle ab \\displaystyle=p^{2}-p(1-\\alpha-\\beta)-\\tfrac{1}{4}\\sigma_{1},",
+              "\\displaystyle c \\displaystyle=\\gamma-\\tfrac{1}{2}-2(\\alpha+\\beta+p),",
+              "\\displaystyle a^{\\prime}+b^{\\prime} \\displaystyle=\\delta+\\epsilon-1,",
+              "\\displaystyle a^{\\prime}b^{\\prime} \\displaystyle=-\\tfrac{1}{4}\\sigma_{2},"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun functions",
+                "Heun’s equation",
+                "integral equations",
+                "integral equations and representations",
+                "integral representation of solutions",
+                "Heun’s operator",
+                "Heun polynomials",
+                "kernel equations",
+                "kernel functions",
+                "separation constant",
+                "confluent forms"
+              ],
+              "definiciones": [
+                "$\\theta$ : angle (locally) and $\\phi$ : angle (locally)",
+                "$u$ (locally) , $v$ (locally) and $w$ (locally)",
+                "$b$ (locally) and $c$ (locally)"
+              ],
+              "simbolos": [
+                "$\\cosz$: cosine function , $\\mathrm{i}$: imaginary unit , $\\sinz$: sine function , $z$: complex variable and $a$: complex parameter",
+                "$\\frac{\\mathrm{d}f}{\\mathrm{d}x}$: derivative of $f$ with respect to $x$ , $\\frac{\\partialf}{\\partialx}$: partial derivative of $f$ with respect to $x$ , $\\,\\partialx$: partial differential of $x$ , $C_{1}$, $C_{2}$: contours , $\\mathcal{K}(z;s,t)$: kernel and $w$",
+                "$\\mathrm{i}$: imaginary unit , $z$: complex variable and $a$: complex parameter",
+                "$\\cosz$: cosine function , $\\sinz$: sine function , $u$ , $v$ , $w$ , $r$: radius , $\\theta$: angle and $\\phi$: angle",
+                "$\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $\\epsilon$: real or complex parameter , $m$: nonnegative integer , $a$: complex parameter , $\\alpha$: real or complex parameter , $\\beta$: real or complex parameter and $\\sigma_{1}$, $\\sigma_{2}$: separation constants"
+              ],
+              "notas_bibliograficas": [
+                "See Lambe and Ward ([1934](./bib/L.html#bib1372 \"Some differential equations and associated integral equations\")) and Erdélyi ([1942a](./bib/E.html#bib749 \"Integral equations for Heun functions\")). See also Valent ([1986](./bib/V.html#bib2301 \"An integral transform involving Heun functions and a related eigenvalue problem\")).",
+                "See Sleeman ([1969](./bib/S.html#bib2111 \"Non-linear integral equations for Heun functions\")). An error in this reference is corrected here."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.10 and Ch.31",
+                "Annotations for §31.10(i) , §31.10 and Ch.31",
+                "Annotations for §31.10(i) , §31.10(i) , §31.10 and Ch.31",
+                "Annotations for §31.10(ii) , §31.10 and Ch.31",
+                "Annotations for §31.10(ii) , §31.10(ii) , §31.10 and Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1934",
+                "archivo_destino": "bib/L.html#bib1372",
+                "titulo_referencia": "Some differential equations and associated integral equations"
+              },
+              {
+                "texto": "1942a",
+                "archivo_destino": "bib/E.html#bib749",
+                "titulo_referencia": "Integral equations for Heun functions"
+              },
+              {
+                "texto": "1986",
+                "archivo_destino": "bib/V.html#bib2301",
+                "titulo_referencia": "An integral transform involving Heun functions and a related eigenvalue problem"
+              },
+              {
+                "texto": "1969",
+                "archivo_destino": "bib/S.html#bib2111",
+                "titulo_referencia": "Non-linear integral equations for Heun functions"
+              },
+              {
+                "texto": "31.12",
+                "archivo_destino": "31.12.md",
+                "titulo_referencia": "§31.12 Confluent Forms of Heun’s Equation ‣ Properties ‣ Chapter 31 Heun Functions"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/K.html#bib1237",
+                "titulo_referencia": "Integral equations for special functions of Heun class"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.11",
+          "titulo_original": "Expansions in Series of Hypergeometric Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.11.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.11.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.11 Expansions in Series of Hypergeometric Functions",
+            "prosa_teorica": "The formulas in this section are given in Svartholm ([1939](./bib/S.html#bib2186 \"Die Lösung der Fuchsschen Differentialgleichung zweiter Ordnung durch hypergeometrische Polynome\")) and Erdélyi ([1942b](./bib/E.html#bib748 \"The Fuchsian equation of second order with four singularities\"), [1944](./bib/E.html#bib750 \"Certain expansions of solutions of the Heun equation\")).\nThe series of Type I (§ 31.11(iii) ) are useful since they represent the functions in large domains. Series of Type II (§ 31.11(iv) ) are expansions in orthogonal polynomials, which are useful in calculations of normalization integrals for Heun functions; see Erdélyi ([1944](./bib/E.html#bib750 \"Certain expansions of solutions of the Heun equation\")) and § 31.9(i) .\nFor other expansions see § 31.16(ii) .\nLet $w(z)$ be any Fuchs–Frobenius solution of Heun’s equation. Expand\nwhere (§ 15.11(i) )\nwith\nThe Fuchs-Frobenius solutions at $\\infty$ are\nTaking $P_{j}=P_{j}^{5}$ or $P_{j}=P_{j}^{6}$ the coefficients $c_{j}$ satisfy the equations\nwhere we take $c_{0}=1$ and where\n$\\lambda$ , $\\mu$ must also satisfy the condition\nHere\n<a id=\"E10\"></a>\nor\n<a id=\"E11\"></a>\nThen condition ( 31.11.9 ) is satisfied.\nEvery Fuchs–Frobenius solution of Heun’s equation ( 31.2.1 ) can be represented by a series of Type I. For instance, choose ( 31.11.10 ). Then the Fuchs–Frobenius solution at $\\infty$ belonging to the exponent $\\alpha$ has the expansion ( 31.11.1 ) with\nand ( 31.11.1 ) converges to ( 31.3.10 ) outside the ellipse $\\mathcal{E}$ in the $z$ -plane with foci at 0, 1, and passing through the third finite singularity at $z=a$ .\nEvery Heun function (§ [31.4](./31.4.md \"§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions\") ) can be represented by a series of Type I convergent in the whole plane cut along a line joining the two singularities of the Heun function.\nFor example, consider the Heun function which is analytic at $z=a$ and has exponent $\\alpha$ at $\\infty$ . The expansion ( 31.11.1 ) with ( 31.11.12 ) is convergent in the plane cut along the line joining the two singularities $z=0$ and $z=1$ . In this case the accessory parameter $q$ is a root of the continued-fraction equation\nThe case $\\alpha=-n$ for nonnegative integer $n$ corresponds to the Heun polynomial $\\mathit{Hp}_{n,m}\\left(z\\right)$ .\nThe expansion ( 31.11.1 ) for a Heun function that is associated with any branch of ( 31.11.2 )—other than a multiple of the right-hand side of ( 31.11.12 )—is convergent inside the ellipse $\\mathcal{E}$ .\nHere one of the following four pairs of conditions is satisfied:\n<a id=\"EGx2\"></a>\nIn each case $P_{j}^{6}$ can be expressed in terms of a Jacobi polynomial (§ [18.3](./18.3.md \"§18.3 Definitions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials\") ). Such series diverge for Fuchs–Frobenius solutions. For Heun functions (§ [31.4](./31.4.md \"§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions\") ) they are convergent inside the ellipse $\\mathcal{E}$ . Every Heun function can be represented by a series of Type II.\nSchmidt ([1979](./bib/S.html#bib2011 \"Die Lösung der linearen Differentialgleichung 2. Ordnung um zwei einfache Singularitäten durch Reihen nach hypergeometrischen Funktionen\")) gives expansions of path-multiplicative solutions (§ [31.6](./31.6.md \"§31.6 Path-Multiplicative Solutions ‣ Properties ‣ Chapter 31 Heun Functions\") ) in terms of doubly-infinite series of hypergeometric functions.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.11.1",
+                "latex": "w(z)=\\sum_{j=0}^{\\infty}c_{j}P_{j}, \\tag{31.11.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.11.2",
+                "latex": "P_{j}=P\\begin{Bmatrix}0&1&\\infty&\\\\\n0&0&\\lambda+j&z\\\\\n1-\\gamma&1-\\delta&\\mu-j&\\end{Bmatrix}, \\tag{31.11.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "31.11.3",
+                "latex": "\\lambda+\\mu=\\gamma+\\delta-1=\\alpha+\\beta-\\epsilon. \\tag{31.11.3}"
+              },
+              {
+                "id": "E3_1",
+                "tag": "31.11.3_1",
+                "latex": "P_{j}^{5}=\\frac{{\\left(\\lambda\\right)_{j}}{\\left(1-\\gamma+\\lambda\\right)_{j}}}{{\\left(1+\\lambda-\\mu\\right)_{2j}}}z^{-\\lambda-j}\\,{{}_{2}F_{1}}\\left({\\lambda+j,1-\\gamma+\\lambda+j\\atop 1+\\lambda-\\mu+2j};\\frac{1}{z}\\right), \\tag{31.11.3_1}"
+              },
+              {
+                "id": "E3_2",
+                "tag": "31.11.3_2",
+                "latex": "P_{j}^{6}=\\frac{{\\left(\\lambda-\\mu\\right)_{2j}}}{{\\left(1-\\mu\\right)_{j}}{\\left(\\gamma-\\mu\\right)_{j}}}z^{-\\mu+j}\\,{{}_{2}F_{1}}\\left({\\mu-j,1-\\gamma+\\mu-j\\atop 1-\\lambda+\\mu-2j};\\frac{1}{z}\\right). \\tag{31.11.3_2}"
+              },
+              {
+                "id": "E4",
+                "tag": "31.11.4",
+                "latex": "L_{0}c_{0}+M_{0}c_{1}=0, \\tag{31.11.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "31.11.5",
+                "latex": "K_{j}c_{j-1}+L_{j}c_{j}+M_{j}c_{j+1}=0, \\tag{31.11.5}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "31.11.6",
+                "latex": "\\displaystyle K_{j} \\displaystyle=\\frac{(j+\\alpha-\\mu-1)(j+\\beta-\\mu-1)(j+\\gamma-\\mu-1)(j-\\mu)}{(2j+\\lambda-\\mu-1)(2j+\\lambda-\\mu-2)}, \\tag{31.11.6}"
+              },
+              {
+                "id": "",
+                "tag": "31.11.7",
+                "latex": "\\displaystyle L_{j} \\displaystyle=a(\\lambda+j)(\\mu-j)-q+\\frac{(j+\\alpha-\\mu)(j+\\beta-\\mu)(j+\\gamma-\\mu)(j+\\lambda)}{(2j+\\lambda-\\mu)(2j+\\lambda-\\mu+1)}+\\frac{(j-\\alpha+\\lambda)(j-\\beta+\\lambda)(j-\\gamma+\\lambda)(j-\\mu)}{(2j+\\lambda-\\mu)(2j+\\lambda-\\mu-1)}, \\tag{31.11.7}"
+              },
+              {
+                "id": "",
+                "tag": "31.11.8",
+                "latex": "\\displaystyle M_{j} \\displaystyle=\\frac{(j-\\alpha+\\lambda+1)(j-\\beta+\\lambda+1)(j-\\gamma+\\lambda+1)(j+\\lambda)}{(2j+\\lambda-\\mu+1)(2j+\\lambda-\\mu+2)}. \\tag{31.11.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "31.11.9",
+                "latex": "M_{-1}P_{-1}=0. \\tag{31.11.9}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "31.11.10",
+                "latex": "\\displaystyle\\lambda \\displaystyle=\\alpha, \\tag{31.11.10}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\mu \\displaystyle=\\beta-\\epsilon,"
+              },
+              {
+                "id": "Ex3",
+                "tag": "31.11.11",
+                "latex": "\\displaystyle\\lambda \\displaystyle=\\beta, \\tag{31.11.11}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle\\mu \\displaystyle=\\alpha-\\epsilon."
+              },
+              {
+                "id": "E12",
+                "tag": "31.11.12",
+                "latex": "P_{j}^{5}=\\frac{{\\left(\\alpha\\right)_{j}}{\\left(1-\\gamma+\\alpha\\right)_{j}}}{{\\left(1+\\alpha-\\beta+\\epsilon\\right)_{2j}}}z^{-\\alpha-j}\\,{{}_{2}F_{1}}\\left({\\alpha+j,1-\\gamma+\\alpha+j\\atop 1+\\alpha-\\beta+\\epsilon+2j};\\frac{1}{z}\\right), \\tag{31.11.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "31.11.13",
+                "latex": "\\left(L_{0}/M_{0}\\right)-\\cfrac{K_{1}/M_{1}}{L_{1}/M_{1}-\\cfrac{K_{2}/M_{2}}{L_{2}/M_{2}-\\cdots}}=0. \\tag{31.11.13}"
+              },
+              {
+                "id": "Ex5",
+                "tag": "31.11.14",
+                "latex": "\\displaystyle\\lambda \\displaystyle=\\gamma+\\delta-1, \\tag{31.11.14}"
+              },
+              {
+                "id": "Ex6",
+                "tag": "",
+                "latex": "\\displaystyle\\mu \\displaystyle=0,"
+              },
+              {
+                "id": "Ex7",
+                "tag": "31.11.15",
+                "latex": "\\displaystyle\\lambda \\displaystyle=\\gamma, \\tag{31.11.15}"
+              },
+              {
+                "id": "Ex8",
+                "tag": "",
+                "latex": "\\displaystyle\\mu \\displaystyle=\\delta-1,"
+              },
+              {
+                "id": "Ex9",
+                "tag": "31.11.16",
+                "latex": "\\displaystyle\\lambda \\displaystyle=\\delta, \\tag{31.11.16}"
+              },
+              {
+                "id": "Ex10",
+                "tag": "",
+                "latex": "\\displaystyle\\mu \\displaystyle=\\gamma-1,"
+              },
+              {
+                "id": "Ex11",
+                "tag": "31.11.17",
+                "latex": "\\displaystyle\\lambda \\displaystyle=1, \\tag{31.11.17}"
+              },
+              {
+                "id": "Ex12",
+                "tag": "",
+                "latex": "\\displaystyle\\mu \\displaystyle=\\gamma+\\delta-2."
+              }
+            ],
+            "ecuaciones_latex": [
+              "w(z)=\\sum_{j=0}^{\\infty}c_{j}P_{j}, \\tag{31.11.1}",
+              "P_{j}=P\\begin{Bmatrix}0&1&\\infty&\\\\\n0&0&\\lambda+j&z\\\\\n1-\\gamma&1-\\delta&\\mu-j&\\end{Bmatrix}, \\tag{31.11.2}",
+              "\\lambda+\\mu=\\gamma+\\delta-1=\\alpha+\\beta-\\epsilon. \\tag{31.11.3}",
+              "P_{j}^{5}=\\frac{{\\left(\\lambda\\right)_{j}}{\\left(1-\\gamma+\\lambda\\right)_{j}}}{{\\left(1+\\lambda-\\mu\\right)_{2j}}}z^{-\\lambda-j}\\,{{}_{2}F_{1}}\\left({\\lambda+j,1-\\gamma+\\lambda+j\\atop 1+\\lambda-\\mu+2j};\\frac{1}{z}\\right), \\tag{31.11.3_1}",
+              "P_{j}^{6}=\\frac{{\\left(\\lambda-\\mu\\right)_{2j}}}{{\\left(1-\\mu\\right)_{j}}{\\left(\\gamma-\\mu\\right)_{j}}}z^{-\\mu+j}\\,{{}_{2}F_{1}}\\left({\\mu-j,1-\\gamma+\\mu-j\\atop 1-\\lambda+\\mu-2j};\\frac{1}{z}\\right). \\tag{31.11.3_2}",
+              "L_{0}c_{0}+M_{0}c_{1}=0, \\tag{31.11.4}",
+              "K_{j}c_{j-1}+L_{j}c_{j}+M_{j}c_{j+1}=0, \\tag{31.11.5}",
+              "\\displaystyle K_{j} \\displaystyle=\\frac{(j+\\alpha-\\mu-1)(j+\\beta-\\mu-1)(j+\\gamma-\\mu-1)(j-\\mu)}{(2j+\\lambda-\\mu-1)(2j+\\lambda-\\mu-2)}, \\tag{31.11.6}",
+              "\\displaystyle L_{j} \\displaystyle=a(\\lambda+j)(\\mu-j)-q+\\frac{(j+\\alpha-\\mu)(j+\\beta-\\mu)(j+\\gamma-\\mu)(j+\\lambda)}{(2j+\\lambda-\\mu)(2j+\\lambda-\\mu+1)}+\\frac{(j-\\alpha+\\lambda)(j-\\beta+\\lambda)(j-\\gamma+\\lambda)(j-\\mu)}{(2j+\\lambda-\\mu)(2j+\\lambda-\\mu-1)}, \\tag{31.11.7}",
+              "\\displaystyle M_{j} \\displaystyle=\\frac{(j-\\alpha+\\lambda+1)(j-\\beta+\\lambda+1)(j-\\gamma+\\lambda+1)(j+\\lambda)}{(2j+\\lambda-\\mu+1)(2j+\\lambda-\\mu+2)}. \\tag{31.11.8}",
+              "M_{-1}P_{-1}=0. \\tag{31.11.9}",
+              "\\displaystyle\\lambda \\displaystyle=\\alpha, \\tag{31.11.10}",
+              "\\displaystyle\\mu \\displaystyle=\\beta-\\epsilon,",
+              "\\displaystyle\\lambda \\displaystyle=\\beta, \\tag{31.11.11}",
+              "\\displaystyle\\mu \\displaystyle=\\alpha-\\epsilon.",
+              "P_{j}^{5}=\\frac{{\\left(\\alpha\\right)_{j}}{\\left(1-\\gamma+\\alpha\\right)_{j}}}{{\\left(1+\\alpha-\\beta+\\epsilon\\right)_{2j}}}z^{-\\alpha-j}\\,{{}_{2}F_{1}}\\left({\\alpha+j,1-\\gamma+\\alpha+j\\atop 1+\\alpha-\\beta+\\epsilon+2j};\\frac{1}{z}\\right), \\tag{31.11.12}",
+              "\\left(L_{0}/M_{0}\\right)-\\cfrac{K_{1}/M_{1}}{L_{1}/M_{1}-\\cfrac{K_{2}/M_{2}}{L_{2}/M_{2}-\\cdots}}=0. \\tag{31.11.13}",
+              "\\displaystyle\\lambda \\displaystyle=\\gamma+\\delta-1, \\tag{31.11.14}",
+              "\\displaystyle\\mu \\displaystyle=0,",
+              "\\displaystyle\\lambda \\displaystyle=\\gamma, \\tag{31.11.15}",
+              "\\displaystyle\\mu \\displaystyle=\\delta-1,",
+              "\\displaystyle\\lambda \\displaystyle=\\delta, \\tag{31.11.16}",
+              "\\displaystyle\\mu \\displaystyle=\\gamma-1,",
+              "\\displaystyle\\lambda \\displaystyle=1, \\tag{31.11.17}",
+              "\\displaystyle\\mu \\displaystyle=\\gamma+\\delta-2."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun functions",
+                "Heun’s equation",
+                "expansions in series of",
+                "expansions of solutions in series of",
+                "hypergeometric functions",
+                "orthogonal polynomials",
+                "expansions in series of hypergeometric functions",
+                "path-multiplicative solutions"
+              ],
+              "simbolos": [
+                "$\\gamma$: real or complex parameter , $j$: nonnegative integer , $\\alpha$: real or complex parameter , $\\beta$: real or complex parameter , $\\lambda$ , $\\mu$ and $K_{j}$: coefficients",
+                "$\\gamma$: real or complex parameter , $j$: nonnegative integer , $a$: complex parameter , $q$: real or complex parameter , $\\alpha$: real or complex parameter , $\\beta$: real or complex parameter , $\\lambda$ , $\\mu$ and $L_{j}$: coefficients",
+                "$\\gamma$: real or complex parameter , $j$: nonnegative integer , $\\alpha$: real or complex parameter , $\\beta$: real or complex parameter , $\\lambda$ , $\\mu$ and $M_{j}$: coefficients",
+                "$\\epsilon$: real or complex parameter , $\\alpha$: real or complex parameter , $\\beta$: real or complex parameter , $\\lambda$ and $\\mu$",
+                "$\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $\\lambda$ and $\\mu$"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.1.7) for Subsection 31.11(ii)",
+                "Erratum (V1.1.7) for Equation (31.11.6)",
+                "Erratum (V1.1.7) for Equation (31.11.8)",
+                "§31.11(i)",
+                "Erratum (V1.1.7) for Subsection 31.11(iii)",
+                "§31.11(iii)",
+                "Erratum (V1.1.7) for Subsection 31.11(iv)",
+                "§31.11(iv)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.11 and Ch.31",
+                "Annotations for §31.11(ii) , §31.11 and Ch.31",
+                "Annotations for §31.11(iii) , §31.11 and Ch.31",
+                "Annotations for §31.11(iv) , §31.11 and Ch.31"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.1.7)",
+                  "descripcion": "Equations ( 31.11.3_1 ), ( 31.11.3_2 ), and some explanatory text were added. *Suggested 2022-09-14 by Hans Volkmer*"
+                },
+                {
+                  "tipo_evento": "Clarification (effective with 1.1.7)",
+                  "descripcion": "Just below ( 31.11.5 ), we mention that we take $c_{0}=1$ . *Suggested 2022-09-14 by Hans Volkmer*"
+                },
+                {
+                  "tipo_evento": "Correction (effective with 1.1.7)",
+                  "descripcion": "The sign has been corrected and the final term in the numerator $(j+\\lambda-1)$ has been corrected to be $(j-\\mu)$ . *Suggested 2022-09-14 by Hans Volkmer*"
+                },
+                {
+                  "tipo_evento": "Correction (effective with 1.1.7)",
+                  "descripcion": "The sign has been corrected and the final term in the numerator $(j-\\mu+1)$ has been corrected to be $(j+\\lambda)$ . *Suggested 2022-09-14 by Hans Volkmer*"
+                },
+                {
+                  "tipo_evento": "Clarification (effective with 1.1.7)",
+                  "descripcion": "It is mentioned just below ( 31.11.12 ) that ( 31.11.1 ) converges to ( 31.3.10 ) in the prescribed manner."
+                },
+                {
+                  "tipo_evento": "Clarification (effective with 1.1.7)",
+                  "descripcion": "Just below ( 31.11.17 ), $P_{j}$ has been replaced with $P_{j}^{6}$ ."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1939",
+                "archivo_destino": "bib/S.html#bib2186",
+                "titulo_referencia": "Die Lösung der Fuchsschen Differentialgleichung zweiter Ordnung durch hypergeometrische Polynome"
+              },
+              {
+                "texto": "1942b",
+                "archivo_destino": "bib/E.html#bib748",
+                "titulo_referencia": "The Fuchsian equation of second order with four singularities"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/E.html#bib750",
+                "titulo_referencia": "Certain expansions of solutions of the Heun equation"
+              },
+              {
+                "texto": "1944",
+                "archivo_destino": "bib/E.html#bib750",
+                "titulo_referencia": "Certain expansions of solutions of the Heun equation"
+              },
+              {
+                "texto": "31.4",
+                "archivo_destino": "31.4.md",
+                "titulo_referencia": "§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions"
+              },
+              {
+                "texto": "18.3",
+                "archivo_destino": "18.3.md",
+                "titulo_referencia": "§18.3 Definitions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"
+              },
+              {
+                "texto": "31.4",
+                "archivo_destino": "31.4.md",
+                "titulo_referencia": "§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions"
+              },
+              {
+                "texto": "1979",
+                "archivo_destino": "bib/S.html#bib2011",
+                "titulo_referencia": "Die Lösung der linearen Differentialgleichung 2. Ordnung um zwei einfache Singularitäten durch Reihen nach hypergeometrischen Funktionen"
+              },
+              {
+                "texto": "31.6",
+                "archivo_destino": "31.6.md",
+                "titulo_referencia": "§31.6 Path-Multiplicative Solutions ‣ Properties ‣ Chapter 31 Heun Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.12",
+          "titulo_original": "Confluent Forms of Heun’s Equation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.12.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.12.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.12 Confluent Forms of Heun’s Equation",
+            "prosa_teorica": "Confluent forms of Heun’s differential equation ( 31.2.1 ) arise when two or more of the regular singularities merge to form an irregular singularity. This is analogous to the derivation of the confluent hypergeometric equation from the hypergeometric equation in § 13.2(i) . There are four standard forms, as follows:\nThis has regular singularities at $z=0$ and $1$ , and an irregular singularity of rank 1 at $z=\\infty$ .\nMathieu functions (Chapter [28](./28.md \"Chapter 28 Mathieu Functions and Hill’s Equation\") ), spheroidal wave functions (Chapter [30](./30.md \"Chapter 30 Spheroidal Wave Functions\") ), and Coulomb spheroidal functions (§ [30.12](./30.12.md \"§30.12 Generalized and Coulomb Spheroidal Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions\") ) are special cases of solutions of the confluent Heun equation.\nThis has irregular singularities at $z=0$ and $\\infty$ , each of rank $1$ .\nThis has a regular singularity at $z=0$ , and an irregular singularity at $\\infty$ of rank $2$ .\nThis has one singularity, an irregular singularity of rank $3$ at $z=\\infty$ .\nFor properties of the solutions of ( 31.12.1 )–( 31.12.4 ), including connection formulas, see Bühring ([1994](./bib/B.html#bib371 \"The double confluent Heun equation: Characteristic exponent and connection formulae\")), Ronveaux ([1995](./bib/R.html#bib1965 \"Heun’s Differential Equations\"), Parts B,C,D,E), Wolf ([1998](./bib/W.html#bib2427 \"On the central connection problem for the double confluent Heun equation\")), Lay and Slavyanov ([1998](./bib/L.html#bib1388 \"The central two-point connection problem for the Heun class of ODEs\")), and Slavyanov and Lay ([2000](./bib/S.html#bib2105 \"Special Functions: A Unified Theory Based on Singularities\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.12.1",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\frac{\\gamma}{z}+\\frac{\\delta}{z-1}+\\epsilon\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\frac{\\alpha z-q}{z(z-1)}w=0. \\tag{31.12.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.12.2",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\frac{\\delta}{z^{2}}+\\frac{\\gamma}{z}+1\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\frac{\\alpha z-q}{z^{2}}w=0. \\tag{31.12.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "31.12.3",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}-\\left(\\frac{\\gamma}{z}+\\delta+z\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\frac{\\alpha z-q}{z}w=0. \\tag{31.12.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "31.12.4",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\gamma+z\\right)z\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\left(\\alpha z-q\\right)w=0. \\tag{31.12.4}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\frac{\\gamma}{z}+\\frac{\\delta}{z-1}+\\epsilon\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\frac{\\alpha z-q}{z(z-1)}w=0. \\tag{31.12.1}",
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\frac{\\delta}{z^{2}}+\\frac{\\gamma}{z}+1\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\frac{\\alpha z-q}{z^{2}}w=0. \\tag{31.12.2}",
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}-\\left(\\frac{\\gamma}{z}+\\delta+z\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\frac{\\alpha z-q}{z}w=0. \\tag{31.12.3}",
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\gamma+z\\right)z\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\left(\\alpha z-q\\right)w=0. \\tag{31.12.4}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun’s equation",
+                "confluent forms",
+                "Coulomb spheroidal functions",
+                "Mathieu functions",
+                "as confluent Heun functions",
+                "confluent Heun equation",
+                "confluent Heun functions",
+                "relations to other functions",
+                "special cases",
+                "spheroidal wave functions",
+                "doubly-confluent",
+                "doubly-confluent Heun equation",
+                "biconfluent",
+                "biconfluent Heun equation",
+                "applications",
+                "properties of solutions",
+                "triconfluent",
+                "triconfluent Heun equation"
+              ],
+              "referenciado_por": [
+                "§31.10(ii)"
+              ],
+              "notas_bibliograficas": [
+                "The process of confluence is discussed in Ince ([1926](./bib/I.html#bib1125 \"Ordinary Differential Equations\")). See Decarreau et al. ([1978a](./bib/D.html#bib630 \"Formes canoniques des équations confluentes de l’équation de Heun\"), [b](./bib/D.html#bib631 \"Sur les équations confluentes de l’équation de Heun\")) for the classification of confluent forms."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.12 and Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1926",
+                "archivo_destino": "bib/I.html#bib1125",
+                "titulo_referencia": "Ordinary Differential Equations"
+              },
+              {
+                "texto": "1978a",
+                "archivo_destino": "bib/D.html#bib630",
+                "titulo_referencia": "Formes canoniques des équations confluentes de l’équation de Heun"
+              },
+              {
+                "texto": "b",
+                "archivo_destino": "bib/D.html#bib631",
+                "titulo_referencia": "Sur les équations confluentes de l’équation de Heun"
+              },
+              {
+                "texto": "28",
+                "archivo_destino": "28.md",
+                "titulo_referencia": "Chapter 28 Mathieu Functions and Hill’s Equation"
+              },
+              {
+                "texto": "30",
+                "archivo_destino": "30.md",
+                "titulo_referencia": "Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "30.12",
+                "archivo_destino": "30.12.md",
+                "titulo_referencia": "§30.12 Generalized and Coulomb Spheroidal Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/B.html#bib371",
+                "titulo_referencia": "The double confluent Heun equation: Characteristic exponent and connection formulae"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1965",
+                "titulo_referencia": "Heun’s Differential Equations"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/W.html#bib2427",
+                "titulo_referencia": "On the central connection problem for the double confluent Heun equation"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/L.html#bib1388",
+                "titulo_referencia": "The central two-point connection problem for the Heun class of ODEs"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/S.html#bib2105",
+                "titulo_referencia": "Special Functions: A Unified Theory Based on Singularities"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.13",
+          "titulo_original": "Asymptotic Approximations",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.13.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.13.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.13 Asymptotic Approximations",
+            "prosa_teorica": "For asymptotic approximations for the accessory parameter eigenvalues $q_{m}$ , see Fedoryuk ([1991](./bib/F.html#bib780 \"Asymptotics of the spectrum of the Heun equation and of Heun functions\")) and Slavyanov ([1996](./bib/S.html#bib2104 \"Asymptotic Solutions of the One-dimensional Schrödinger Equation\")).\nFor asymptotic approximations of the solutions of Heun’s equation ( 31.2.1 ) when two singularities are close together, see Lay and Slavyanov ([1999](./bib/L.html#bib1389 \"Heun’s equation with nearby singularities\")).\nFor asymptotic approximations of the solutions of confluent forms of Heun’s equation in the neighborhood of irregular singularities, see Komarov et al. ([1976](./bib/K.html#bib1319 \"Sferoidalnye i kulonovskie sferoidalnye funktsii\")), Ronveaux ([1995](./bib/R.html#bib1965 \"Heun’s Differential Equations\"), Parts B,C,D,E), Bogush and Otchik ([1997](./bib/B.html#bib312 \"Problem of two Coulomb centres at large intercentre separation: Asymptotic expansions from analytical solutions of the Heun equation\")), Slavyanov and Veshev ([1997](./bib/S.html#bib2106 \"Structure of avoided crossings for eigenvalues related to equations of Heun’s class\")), and Lay et al. ([1998](./bib/L.html#bib1387 \"Asymptotic and numeric study of eigenvalues of the double confluent Heun equation\")).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun functions",
+                "Heun’s equation",
+                "accessory parameter",
+                "asymptotic approximations",
+                "confluent forms",
+                "eigenvalues of accessory parameters",
+                "solutions near irregular singularities",
+                "solutions of confluent forms",
+                "solutions with coalescing singularities"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1991",
+                "archivo_destino": "bib/F.html#bib780",
+                "titulo_referencia": "Asymptotics of the spectrum of the Heun equation and of Heun functions"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/S.html#bib2104",
+                "titulo_referencia": "Asymptotic Solutions of the One-dimensional Schrödinger Equation"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/L.html#bib1389",
+                "titulo_referencia": "Heun’s equation with nearby singularities"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/K.html#bib1319",
+                "titulo_referencia": "Sferoidalnye i kulonovskie sferoidalnye funktsii"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1965",
+                "titulo_referencia": "Heun’s Differential Equations"
+              },
+              {
+                "texto": "1997",
+                "archivo_destino": "bib/B.html#bib312",
+                "titulo_referencia": "Problem of two Coulomb centres at large intercentre separation: Asymptotic expansions from analytical solutions of the Heun equation"
+              },
+              {
+                "texto": "1997",
+                "archivo_destino": "bib/S.html#bib2106",
+                "titulo_referencia": "Structure of avoided crossings for eigenvalues related to equations of Heun’s class"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/L.html#bib1387",
+                "titulo_referencia": "Asymptotic and numeric study of eigenvalues of the double confluent Heun equation"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.14",
+          "titulo_original": "General Fuchsian Equation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.14.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.14.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.14 General Fuchsian Equation",
+            "prosa_teorica": "The general second-order *Fuchsian equation* with $N+1$ regular singularities at $z=a_{j}$ , $j=1,2,\\dots,N$ , and at $\\infty$ , is given by\nThe exponents at the finite singularities $a_{j}$ are $\\{0,{1-\\gamma_{j}}\\}$ and those at $\\infty$ are $\\{\\alpha,\\beta\\}$ , where\n<a id=\"E2\"></a>\nThe three sets of parameters comprise the *singularity parameters* $a_{j}$ , the *exponent parameters* $\\alpha,\\beta,\\gamma_{j}$ , and the $N-2$ free *accessory parameters* $q_{j}$ . With $a_{1}=0$ and $a_{2}=1$ the total number of free parameters is $3N-3$ . Heun’s equation ( 31.2.1 ) corresponds to $N=3$ .\n<a id=\"E5\"></a>\nAn algorithm given in Kovacic ([1986](./bib/K.html#bib1339 \"An algorithm for solving second order linear homogeneous differential equations\")) determines if a given (not necessarily Fuchsian) second-order homogeneous linear differential equation with rational coefficients has solutions expressible in finite terms (Liouvillean solutions). The algorithm returns a list of solutions if they exist.\nFor applications of Kovacic’s algorithm in spatio-temporal dynamics see Rod and Sleeman ([1995](./bib/R.html#bib1964 \"Complexity in spatio-temporal dynamics\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.14.1",
+                "latex": "{\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\sum_{j=1}^{N}\\frac{\\gamma_{j}}{z-a_{j}}\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\left(\\sum_{j=1}^{N}\\frac{q_{j}}{z-a_{j}}\\right)w=0}, \\tag{31.14.1}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "31.14.2",
+                "latex": "\\displaystyle\\alpha+\\beta+1 \\displaystyle=\\sum_{j=1}^{N}\\gamma_{j}, \\tag{31.14.2}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\alpha\\beta \\displaystyle=\\sum_{j=1}^{N}a_{j}q_{j}."
+              },
+              {
+                "id": "E3",
+                "tag": "31.14.3",
+                "latex": "w(z)=\\left(\\prod_{j=1}^{N}(z-a_{j})^{-\\gamma_{j}/2}\\right)W(z), \\tag{31.14.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "31.14.4",
+                "latex": "\\frac{{\\mathrm{d}}^{2}W}{{\\mathrm{d}z}^{2}}=\\sum_{j=1}^{N}\\left(\\frac{\\tilde{\\gamma}_{j}}{(z-a_{j})^{2}}+\\frac{\\tilde{q}_{j}}{z-a_{j}}\\right)W, \\tag{31.14.4}"
+              },
+              {
+                "id": "Ex3",
+                "tag": "31.14.5",
+                "latex": "\\displaystyle\\tilde{q}_{j} \\displaystyle=\\frac{1}{2}\\sum_{\\begin{subarray}{c}k=1\\\\\nk\\neq j\\end{subarray}}^{N}\\frac{\\gamma_{j}\\gamma_{k}}{a_{j}-a_{k}}-q_{j}, \\tag{31.14.5}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle\\tilde{\\gamma}_{j} \\displaystyle=\\frac{\\gamma_{j}}{2}\\left(\\frac{\\gamma_{j}}{2}-1\\right)."
+              }
+            ],
+            "ecuaciones_latex": [
+              "{\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\sum_{j=1}^{N}\\frac{\\gamma_{j}}{z-a_{j}}\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\left(\\sum_{j=1}^{N}\\frac{q_{j}}{z-a_{j}}\\right)w=0}, \\tag{31.14.1}",
+              "\\displaystyle\\alpha+\\beta+1 \\displaystyle=\\sum_{j=1}^{N}\\gamma_{j}, \\tag{31.14.2}",
+              "\\displaystyle\\alpha\\beta \\displaystyle=\\sum_{j=1}^{N}a_{j}q_{j}.",
+              "w(z)=\\left(\\prod_{j=1}^{N}(z-a_{j})^{-\\gamma_{j}/2}\\right)W(z), \\tag{31.14.3}",
+              "\\frac{{\\mathrm{d}}^{2}W}{{\\mathrm{d}z}^{2}}=\\sum_{j=1}^{N}\\left(\\frac{\\tilde{\\gamma}_{j}}{(z-a_{j})^{2}}+\\frac{\\tilde{q}_{j}}{z-a_{j}}\\right)W, \\tag{31.14.4}",
+              "\\displaystyle\\tilde{q}_{j} \\displaystyle=\\frac{1}{2}\\sum_{\\begin{subarray}{c}k=1\\\\\nk\\neq j\\end{subarray}}^{N}\\frac{\\gamma_{j}\\gamma_{k}}{a_{j}-a_{k}}-q_{j}, \\tag{31.14.5}",
+              "\\displaystyle\\tilde{\\gamma}_{j} \\displaystyle=\\frac{\\gamma_{j}}{2}\\left(\\frac{\\gamma_{j}}{2}-1\\right)."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Fuchsian equation",
+                "classification of parameters",
+                "definitions",
+                "Heun’s equation",
+                "normal form",
+                "relation to Fuchsian equation",
+                "relation to Heun’s equation",
+                "Heun functions",
+                "Kovacic’s algorithm",
+                "spatio-temporal dynamics"
+              ],
+              "simbolos": [
+                "$\\gamma$: real or complex parameter , $j$: nonnegative integer , $a$: complex parameter , $q$: real or complex parameter , $\\alpha$: real or complex parameter , $\\beta$: real or complex parameter and $N+1$: number of singularities",
+                "$\\gamma$: real or complex parameter , $j$: nonnegative integer , $a$: complex parameter , $q$: real or complex parameter and $N+1$: number of singularities"
+              ],
+              "referenciado_por": [
+                "§31.8"
+              ],
+              "notas_bibliograficas": [
+                "See Ince ([1926](./bib/I.html#bib1125 \"Ordinary Differential Equations\"), Chapter XV)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.14 and Ch.31",
+                "Annotations for §31.14(i) , §31.14 and Ch.31",
+                "Annotations for §31.14(i) , §31.14(i) , §31.14 and Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1926",
+                "archivo_destino": "bib/I.html#bib1125",
+                "titulo_referencia": "Ordinary Differential Equations"
+              },
+              {
+                "texto": "1986",
+                "archivo_destino": "bib/K.html#bib1339",
+                "titulo_referencia": "An algorithm for solving second order linear homogeneous differential equations"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/R.html#bib1964",
+                "titulo_referencia": "Complexity in spatio-temporal dynamics"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.15",
+          "titulo_original": "Stieltjes Polynomials",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.15.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.15.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.15 Stieltjes Polynomials",
+            "prosa_teorica": "Stieltjes polynomials are polynomial solutions of the Fuchsian equation ( 31.14.1 ). Rewrite ( 31.14.1 ) in the form\nwhere $\\Phi(z)$ is a polynomial of degree not exceeding $N-2$ . There exist at most $\\genfrac{(}{)}{0.0pt}{}{n+N-2}{N-2}$ polynomials $V(z)$ of degree not exceeding $N-2$ such that for $\\Phi(z)=V(z)$ , ( 31.15.1 ) has a polynomial solution $w=S(z)$ of degree $n$ . The $V(z)$ are called *Van Vleck polynomials* and the corresponding $S(z)$ *Stieltjes polynomials* .\nIf $z_{1},z_{2},\\dots,z_{n}$ are the zeros of an $n$ th degree Stieltjes polynomial $S(z)$ , then every zero $z_{k}$ is either one of the parameters $a_{j}$ or a solution of the system of equations\nIf $t_{k}$ is a zero of the Van Vleck polynomial $V(z)$ , corresponding to an $n$ th degree Stieltjes polynomial $S(z)$ , and $z_{1}^{\\prime},z_{2}^{\\prime},\\dots,z_{n-1}^{\\prime}$ are the zeros of $S^{\\prime}(z)$ (the derivative of $S(z)$ ), then $t_{k}$ is either a zero of $S^{\\prime}(z)$ or a solution of the equation\nThe system ( 31.15.2 ) determines the $z_{k}$ as the points of equilibrium of $n$ movable (interacting) particles with unit charges in a field of $N$ particles with the charges $\\gamma_{j}/2$ fixed at $a_{j}$ . This is the *Stieltjes electrostatic interpretation* .\nThe zeros $z_{k}$ , $k=1,2,\\ldots,n$ , of the Stieltjes polynomial $S(z)$ are the critical points of the function $G$ , that is, points at which $\\frac{\\partial G}{\\partial\\zeta_{k}=0}$ , $k=1,2,\\ldots,n$ , where\nIf the following conditions are satisfied:\n<a id=\"E5\"></a>\nand\nthen there are *exactly* $\\genfrac{(}{)}{0.0pt}{}{n+N-2}{N-2}$ polynomials $S(z)$ , each of which corresponds to each of the $\\genfrac{(}{)}{0.0pt}{}{n+N-2}{N-2}$ ways of distributing its $n$ zeros among $N-1$ intervals $(a_{j},a_{j+1})$ , $j=1,2,\\dots,N-1$ . In this case the accessory parameters $q_{j}$ are given by\nSee Marden ([1966](./bib/M.html#bib1545 \"Geometry of Polynomials\")), Alam ([1979](./bib/index.html#bib53 \"Zeros of Stieltjes and Van Vleck polynomials\")), and Al-Rashed and Zaheer ([1985](./bib/index.html#bib50 \"Zeros of Stieltjes and Van Vleck polynomials and applications\")) for further results on the location of the zeros of Stieltjes and Van Vleck polynomials.\nIf the exponent and singularity parameters satisfy ( 31.15.5 )–( 31.15.6 ), then for every multi-index $\\mathbf{m}=(m_{1},m_{2},\\dots,m_{N-1})$ , where each $m_{j}$ is a nonnegative integer, there is a unique Stieltjes polynomial with $m_{j}$ zeros in the open interval $(a_{j},a_{j+1})$ for each $j=1,2,\\dots,N-1$ . We denote this Stieltjes polynomial by $S_{\\mathbf{m}}(z)$ .\nLet $S_{\\mathbf{m}}(z)$ and $S_{\\mathbf{l}}(z)$ be Stieltjes polynomials corresponding to two distinct multi-indices $\\mathbf{m}=(m_{1},m_{2},\\dots,m_{N-1})$ and $\\mathbf{l}=(\\ell_{1},\\ell_{2},\\dots,\\ell_{N-1})$ . The products\nare mutually orthogonal over the set $Q$ :\nwith respect to the inner product\nwith weight function\nThe normalized system of products ( 31.15.8 ) forms an orthonormal basis in the Hilbert space $L_{\\rho}^{2}(Q)$ . For further details and for the expansions of analytic functions in this basis see Volkmer ([1999](./bib/V.html#bib2342 \"Expansions in products of Heine-Stieltjes polynomials\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.15.1",
+                "latex": "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\sum_{j=1}^{N}\\frac{\\gamma_{j}}{z-a_{j}}\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\frac{\\Phi(z)}{\\prod_{j=1}^{N}(z-a_{j})}w=0, \\tag{31.15.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "31.15.2",
+                "latex": "\\sum_{j=1}^{N}\\frac{\\gamma_{j}/2}{z_{k}-a_{j}}+\\sum_{\\begin{subarray}{c}j=1\\\\\nj\\neq k\\end{subarray}}^{n}\\frac{1}{z_{k}-z_{j}}=0, \\tag{31.15.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "31.15.3",
+                "latex": "\\sum_{j=1}^{N}\\frac{\\gamma_{j}}{t_{k}-a_{j}}+\\sum_{j=1}^{n-1}\\frac{1}{t_{k}-z_{j}^{\\prime}}=0. \\tag{31.15.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "31.15.4",
+                "latex": "G(\\zeta_{1},\\zeta_{2},\\dots,\\zeta_{n})=\\prod_{k=1}^{n}\\prod_{\\ell=1}^{N}(\\zeta_{k}-a_{\\ell})^{\\frac{\\gamma_{\\ell}}{2}}\\prod_{j=k+1}^{n}(\\zeta_{k}-\\zeta_{j}). \\tag{31.15.4}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "31.15.5",
+                "latex": "\\displaystyle\\gamma_{j} \\displaystyle>0, \\tag{31.15.5}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle a_{j} \\displaystyle\\in\\mathbb{R}"
+              },
+              {
+                "id": "E6",
+                "tag": "31.15.6",
+                "latex": "a_{j}<a_{j+1}, \\tag{31.15.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "31.15.7",
+                "latex": "q_{j}=\\gamma_{j}\\sum_{k=1}^{n}\\frac{1}{z_{k}-a_{j}}, \\tag{31.15.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "31.15.8",
+                "latex": "S_{\\mathbf{m}}(z_{1})S_{\\mathbf{m}}(z_{2})\\cdots S_{\\mathbf{m}}(z_{N-1}), \\tag{31.15.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "31.15.9",
+                "latex": "S_{\\mathbf{l}}(z_{1})S_{\\mathbf{l}}(z_{2})\\cdots S_{\\mathbf{l}}(z_{N-1}), \\tag{31.15.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "31.15.10",
+                "latex": "Q=(a_{1},a_{2})\\times(a_{2},a_{3})\\times\\cdots\\times(a_{N-1},a_{N}), \\tag{31.15.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "31.15.11",
+                "latex": "(f,g)_{\\rho}=\\int_{Q}f(z)\\overline{g(z)}\\rho(z)\\,\\mathrm{d}z, \\tag{31.15.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "31.15.12",
+                "latex": "\\rho(z)=\\left(\\prod_{j=1}^{N-1}\\prod_{k=1}^{N}|z_{j}-a_{k}|^{\\gamma_{k}-1}\\right)\\left(\\prod_{j<k}^{N-1}(z_{k}-z_{j})\\right). \\tag{31.15.12}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\frac{{\\mathrm{d}}^{2}w}{{\\mathrm{d}z}^{2}}+\\left(\\sum_{j=1}^{N}\\frac{\\gamma_{j}}{z-a_{j}}\\right)\\frac{\\mathrm{d}w}{\\mathrm{d}z}+\\frac{\\Phi(z)}{\\prod_{j=1}^{N}(z-a_{j})}w=0, \\tag{31.15.1}",
+              "\\sum_{j=1}^{N}\\frac{\\gamma_{j}/2}{z_{k}-a_{j}}+\\sum_{\\begin{subarray}{c}j=1\\\\\nj\\neq k\\end{subarray}}^{n}\\frac{1}{z_{k}-z_{j}}=0, \\tag{31.15.2}",
+              "\\sum_{j=1}^{N}\\frac{\\gamma_{j}}{t_{k}-a_{j}}+\\sum_{j=1}^{n-1}\\frac{1}{t_{k}-z_{j}^{\\prime}}=0. \\tag{31.15.3}",
+              "G(\\zeta_{1},\\zeta_{2},\\dots,\\zeta_{n})=\\prod_{k=1}^{n}\\prod_{\\ell=1}^{N}(\\zeta_{k}-a_{\\ell})^{\\frac{\\gamma_{\\ell}}{2}}\\prod_{j=k+1}^{n}(\\zeta_{k}-\\zeta_{j}). \\tag{31.15.4}",
+              "\\displaystyle\\gamma_{j} \\displaystyle>0, \\tag{31.15.5}",
+              "\\displaystyle a_{j} \\displaystyle\\in\\mathbb{R}",
+              "a_{j}<a_{j+1}, \\tag{31.15.6}",
+              "q_{j}=\\gamma_{j}\\sum_{k=1}^{n}\\frac{1}{z_{k}-a_{j}}, \\tag{31.15.7}",
+              "S_{\\mathbf{m}}(z_{1})S_{\\mathbf{m}}(z_{2})\\cdots S_{\\mathbf{m}}(z_{N-1}), \\tag{31.15.8}",
+              "S_{\\mathbf{l}}(z_{1})S_{\\mathbf{l}}(z_{2})\\cdots S_{\\mathbf{l}}(z_{N-1}), \\tag{31.15.9}",
+              "Q=(a_{1},a_{2})\\times(a_{2},a_{3})\\times\\cdots\\times(a_{N-1},a_{N}), \\tag{31.15.10}",
+              "(f,g)_{\\rho}=\\int_{Q}f(z)\\overline{g(z)}\\rho(z)\\,\\mathrm{d}z, \\tag{31.15.11}",
+              "\\rho(z)=\\left(\\prod_{j=1}^{N-1}\\prod_{k=1}^{N}|z_{j}-a_{k}|^{\\gamma_{k}-1}\\right)\\left(\\prod_{j<k}^{N-1}(z_{k}-z_{j})\\right). \\tag{31.15.12}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Fuchsian equation",
+                "Stieltjes polynomials",
+                "Van Vleck polynomials",
+                "definition",
+                "polynomial solutions",
+                "Stieltjes electrostatic interpretation",
+                "electric particle field",
+                "electrostatic interpretation",
+                "zeros",
+                "Hilbert space",
+                "$L^{2}_{\\rho}(Q)$ orthonormal basis",
+                "orthogonality",
+                "products"
+              ],
+              "simbolos": [
+                "$\\in$: element of , $\\mathbb{R}$: real line , $\\gamma$: real or complex parameter , $j$: nonnegative integer , $a$: complex parameter and $N+1$: number of singularities"
+              ],
+              "referenciado_por": [
+                "§31.5",
+                "§31.15(iii)",
+                "Erratum (V1.0.19) for Notation"
+              ],
+              "notas_bibliograficas": [
+                "See Marden ([1966](./bib/M.html#bib1545 \"Geometry of Polynomials\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.15 and Ch.31",
+                "Annotations for §31.15(ii) , §31.15 and Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1966",
+                "archivo_destino": "bib/M.html#bib1545",
+                "titulo_referencia": "Geometry of Polynomials"
+              },
+              {
+                "texto": "1966",
+                "archivo_destino": "bib/M.html#bib1545",
+                "titulo_referencia": "Geometry of Polynomials"
+              },
+              {
+                "texto": "1979",
+                "archivo_destino": "bib/index.html#bib53",
+                "titulo_referencia": "Zeros of Stieltjes and Van Vleck polynomials"
+              },
+              {
+                "texto": "1985",
+                "archivo_destino": "bib/index.html#bib50",
+                "titulo_referencia": "Zeros of Stieltjes and Van Vleck polynomials and applications"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/V.html#bib2342",
+                "titulo_referencia": "Expansions in products of Heine-Stieltjes polynomials"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Applications",
+      "secciones": [
+        {
+          "seccion_id": "31.16",
+          "titulo_original": "Mathematical Applications",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.16.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.16.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.16 Mathematical Applications",
+            "prosa_teorica": "The main part of Smirnov ([1996](./bib/S.html#bib2119 \"Izbrannye Trudy. Analiticheskaya teoriya obyknovennykh differentsialnykh uravnenii\")) consists of V. I. Smirnov’s 1918 M. Sc. thesis “Inversion problem for a second-order linear differential equation with four singular points”. It describes the monodromy group of Heun’s equation for specific values of the accessory parameter.\nExpansions of Heun polynomial products in terms of Jacobi polynomial (§ [18.3](./18.3.md \"§18.3 Definitions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials\") ) products are derived in Kalnins and Miller ([1991a](./bib/K.html#bib1210 \"Hypergeometric expansions of Heun polynomials\"), [b](./bib/K.html#bib1211 \"Addendum: “Hypergeometric expansions of Heun polynomials”\"), [1993](./bib/K.html#bib1212 \"Orthogonal Polynomials on n -spheres: Gegenbauer, Jacobi and Heun\")) from the viewpoint of interrelation between two bases in a Hilbert space:\nwhere $n=0,1,\\dots$ , $m=0,1,\\dots,n$ , and $x,y$ are implicitly defined by\n<a id=\"E2\"></a>\nThe coefficients $A_{j}$ satisfy the relations:\nwhere\nBy specifying either $\\theta$ or $\\phi$ in ( 31.16.1 ) and ( 31.16.2 ) we obtain expansions in terms of one variable.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "31.16.1",
+                "latex": "\\mathit{Hp}_{n,m}\\left(x\\right)\\mathit{Hp}_{n,m}\\left(y\\right)=\\sum_{j=0}^{n}A_{j}{\\sin}^{2j}\\theta\\,P^{(\\gamma+\\delta+2j-1,\\epsilon-1)}_{n-j}\\left(\\cos\\left(2\\theta\\right)\\right)P^{(\\delta-1,\\gamma-1)}_{j}\\left(\\cos\\left(2\\phi\\right)\\right), \\tag{31.16.1}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "31.16.2",
+                "latex": "\\displaystyle xy \\displaystyle=a{\\sin}^{2}\\theta{\\cos}^{2}\\phi, \\tag{31.16.2}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle(x-1)(y-1) \\displaystyle=(1-a){\\sin}^{2}\\theta{\\sin}^{2}\\phi,"
+              },
+              {
+                "id": "Ex3",
+                "tag": "",
+                "latex": "\\displaystyle(x-a)(y-a) \\displaystyle=a(a-1){\\cos}^{2}\\theta."
+              },
+              {
+                "id": "E3",
+                "tag": "31.16.3",
+                "latex": "A_{0}=\\frac{n!}{{\\left(\\gamma+\\delta\\right)_{n}}}\\mathit{Hp}_{n,m}\\left(1\\right),\\quad Q_{0}A_{0}+R_{0}A_{1}=0, \\tag{31.16.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "31.16.4",
+                "latex": "P_{j}A_{j-1}+Q_{j}A_{j}+R_{j}A_{j+1}=0, \\tag{31.16.4}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "31.16.5",
+                "latex": "\\displaystyle P_{j} \\displaystyle=\\frac{(\\epsilon-j+n)j(\\beta+j-1)(\\gamma+\\delta+j-2)}{(\\gamma+\\delta+2j-3)(\\gamma+\\delta+2j-2)}, \\tag{31.16.5}"
+              },
+              {
+                "id": "",
+                "tag": "31.16.6",
+                "latex": "\\displaystyle Q_{j} \\displaystyle=-aj(j+\\gamma+\\delta-1)-q+\\frac{(j-n)(j+\\beta)(j+\\gamma)(j+\\gamma+\\delta-1)}{(2j+\\gamma+\\delta)(2j+\\gamma+\\delta-1)}+\\frac{(j+n+\\gamma+\\delta-1)j(j+\\delta-1)(j-\\beta+\\gamma+\\delta-1)}{(2j+\\gamma+\\delta-1)(2j+\\gamma+\\delta-2)}, \\tag{31.16.6}"
+              },
+              {
+                "id": "",
+                "tag": "31.16.7",
+                "latex": "\\displaystyle R_{j} \\displaystyle=\\frac{(n-j)(j+n+\\gamma+\\delta)(j+\\gamma)(j+\\delta)}{(\\gamma+\\delta+2j)(\\gamma+\\delta+2j+1)}. \\tag{31.16.7}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\mathit{Hp}_{n,m}\\left(x\\right)\\mathit{Hp}_{n,m}\\left(y\\right)=\\sum_{j=0}^{n}A_{j}{\\sin}^{2j}\\theta\\,P^{(\\gamma+\\delta+2j-1,\\epsilon-1)}_{n-j}\\left(\\cos\\left(2\\theta\\right)\\right)P^{(\\delta-1,\\gamma-1)}_{j}\\left(\\cos\\left(2\\phi\\right)\\right), \\tag{31.16.1}",
+              "\\displaystyle xy \\displaystyle=a{\\sin}^{2}\\theta{\\cos}^{2}\\phi, \\tag{31.16.2}",
+              "\\displaystyle(x-1)(y-1) \\displaystyle=(1-a){\\sin}^{2}\\theta{\\sin}^{2}\\phi,",
+              "\\displaystyle(x-a)(y-a) \\displaystyle=a(a-1){\\cos}^{2}\\theta.",
+              "A_{0}=\\frac{n!}{{\\left(\\gamma+\\delta\\right)_{n}}}\\mathit{Hp}_{n,m}\\left(1\\right),\\quad Q_{0}A_{0}+R_{0}A_{1}=0, \\tag{31.16.3}",
+              "P_{j}A_{j-1}+Q_{j}A_{j}+R_{j}A_{j+1}=0, \\tag{31.16.4}",
+              "\\displaystyle P_{j} \\displaystyle=\\frac{(\\epsilon-j+n)j(\\beta+j-1)(\\gamma+\\delta+j-2)}{(\\gamma+\\delta+2j-3)(\\gamma+\\delta+2j-2)}, \\tag{31.16.5}",
+              "\\displaystyle Q_{j} \\displaystyle=-aj(j+\\gamma+\\delta-1)-q+\\frac{(j-n)(j+\\beta)(j+\\gamma)(j+\\gamma+\\delta-1)}{(2j+\\gamma+\\delta)(2j+\\gamma+\\delta-1)}+\\frac{(j+n+\\gamma+\\delta-1)j(j+\\delta-1)(j-\\beta+\\gamma+\\delta-1)}{(2j+\\gamma+\\delta-1)(2j+\\gamma+\\delta-2)}, \\tag{31.16.6}",
+              "\\displaystyle R_{j} \\displaystyle=\\frac{(n-j)(j+n+\\gamma+\\delta)(j+\\gamma)(j+\\delta)}{(\\gamma+\\delta+2j)(\\gamma+\\delta+2j+1)}. \\tag{31.16.7}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun functions",
+                "Heun’s equation",
+                "applications",
+                "mathematical",
+                "inversion problem",
+                "monodromy group",
+                "monodromy groups",
+                "uniformization problem",
+                "Heun polynomial products",
+                "Heun polynomials",
+                "Hilbert space",
+                "interrelation between bases",
+                "products"
+              ],
+              "definiciones": [
+                "$\\theta$ : angle (locally) , $\\phi$ : angle (locally) , $x$ : variable (locally) and $y$ : variable (locally)",
+                "$P_{j}$ (locally)",
+                "$Q_{j}$ (locally)",
+                "$R_{j}$ (locally)"
+              ],
+              "simbolos": [
+                "$\\cosz$: cosine function , $\\sinz$: sine function and $a$: complex parameter",
+                "$\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $\\epsilon$: real or complex parameter , $j$: nonnegative integer , $n$: nonnegative integer and $\\beta$: real or complex parameter",
+                "$\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $j$: nonnegative integer , $n$: nonnegative integer , $a$: complex parameter , $q$: real or complex parameter and $\\beta$: real or complex parameter",
+                "$\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $j$: nonnegative integer and $n$: nonnegative integer"
+              ],
+              "referenciado_por": [
+                "§31.11(i)",
+                "§31.16(ii)",
+                "Erratum (V1.0.21) for Equations (31.16.2) and (31.16.3)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.16 and Ch.31",
+                "Annotations for §31.16(ii) , §31.16 and Ch.31"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Correction (effective with 1.0.21)",
+                  "descripcion": "The Jacobi polynomials in ( 31.16.1 ) which previously linked incorrectly to the constants $P_{j}$ , now link correctly. Originally $x,y$ were incorrectly defined by the set of equations ( 31.16.2 ), given previously as “ $x={\\sin}^{2}\\theta{\\cos}^{2}\\phi,$ $y={\\sin}^{2}\\theta{\\sin}^{2}\\phi$ .” It now states that $x,y$ are implicitly defined by the corrected set of equations. In ( 31.16.3 ), the initial data $A_{0}$ , previously missing, has now been included."
+                },
+                {
+                  "tipo_evento": "Correction (effective with 1.0.21)",
+                  "descripcion": "Originally $x,y$ were incorrectly defined by the set of equations given previously as “ $x={\\sin}^{2}\\theta{\\cos}^{2}\\phi,$ $y={\\sin}^{2}\\theta{\\sin}^{2}\\phi$ ”. In fact, $x,y$ are implicitly defined by the corrected set of equations."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/S.html#bib2119",
+                "titulo_referencia": "Izbrannye Trudy. Analiticheskaya teoriya obyknovennykh differentsialnykh uravnenii"
+              },
+              {
+                "texto": "18.3",
+                "archivo_destino": "18.3.md",
+                "titulo_referencia": "§18.3 Definitions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"
+              },
+              {
+                "texto": "1991a",
+                "archivo_destino": "bib/K.html#bib1210",
+                "titulo_referencia": "Hypergeometric expansions of Heun polynomials"
+              },
+              {
+                "texto": "b",
+                "archivo_destino": "bib/K.html#bib1211",
+                "titulo_referencia": "Addendum: “Hypergeometric expansions of Heun polynomials”"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/K.html#bib1212",
+                "titulo_referencia": "Orthogonal Polynomials on n -spheres: Gegenbauer, Jacobi and Heun"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "31.17",
+          "titulo_original": "Physical Applications",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.17.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.17.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.17 Physical Applications",
+            "prosa_teorica": "The problem of adding three quantum spins $\\mathbf{s}$ , $\\mathbf{t}$ , and $\\mathbf{u}$ can be solved by the *method of separation of variables* , and the solution is given in terms of a product of two Heun functions. We use vector notation $[\\mathbf{s},\\mathbf{t},\\mathbf{u}]$ (respective scalar $(s,t,u)$ ) for any one of the three spin operators (respective spin values).\nConsider the following spectral problem on the sphere $S_{2}$ : $\\mathbf{x}^{2}=x_{s}^{2}+x_{t}^{2}+x_{u}^{2}=R^{2}$ .\n<a id=\"E1\"></a>\nfor the common eigenfunction $\\Psi(\\mathbf{x})=\\Psi(x_{s},x_{t},x_{u})$ , where $a$ is the coupling parameter of interacting spins. Introduce elliptic coordinates $z_{1}$ and $z_{2}$ on $S_{2}$ . Then\nwith\n<a id=\"E3\"></a>\nThe operators $\\mathbf{J}^{2}$ and $H_{s}$ admit separation of variables in $z_{1},z_{2}$ , leading to the following factorization of the eigenfunction $\\Psi(\\mathbf{x})$ :\nwhere $w(z)$ satisfies Heun’s equation ( 31.2.1 ) with $a$ as in ( 31.17.1 ) and the other parameters given by\n<a id=\"E5\"></a>\nFor more details about the method of separation of variables and relation to special functions see Olevskiĭ ([1950](./bib/O.html#bib1775 \"Triorthogonal systems in spaces of constant curvature in which the equation = + ⁢ Δ 2 u ⁢ λ u 0 allows a complete separation of variables\")), Kalnins et al. ([1976](./bib/K.html#bib1214 \"The group ⁢ O ( 4 ) , separation of variables and the hydrogen atom\")), Miller ([1977](./bib/M.html#bib1624 \"Symmetry and Separation of Variables\")), and Kalnins ([1986](./bib/K.html#bib1209 \"Separation of Variables for Riemannian Spaces of Constant Curvature\")).\nHeun functions appear in the theory of black holes (Kerr ([1963](./bib/K.html#bib1259 \"Gravitational field of a spinning mass as an example of algebraically special metrics\")), Teukolsky ([1972](./bib/T.html#bib2240 \"Rotating black holes: Separable wave equations for gravitational and electromagnetic perturbations\")), Chandrasekhar ([1984](./bib/C.html#bib463 \"The Mathematical Theory of Black Holes\")), Suzuki et al. ([1998](./bib/S.html#bib2185 \"Perturbations of Kerr-de Sitter black holes and Heun’s equations\")), Kalnins et al. ([2000](./bib/K.html#bib1213 \"Special Functions and Perturbations of Black Holes\"))), lattice systems in statistical mechanics (Joyce ([1973](./bib/J.html#bib1194 \"On the simple cubic lattice Green function\"), [1994](./bib/J.html#bib1195 \"On the cubic lattice Green functions\"))), dislocation theory (Lay and Slavyanov ([1999](./bib/L.html#bib1389 \"Heun’s equation with nearby singularities\"))), and solution of the Schrödinger equation of quantum mechanics (Bay et al. ([1997](./bib/B.html#bib222 \"Avoided crossings of the quartic oscillator\")), Tolstikhin and Matsuzawa ([2001](./bib/T.html#bib2261 \"Hyperspherical elliptic harmonics and their relation to the Heun equation\")), and Hall et al. ([2010](./bib/H.html#bib2751 \"Soft-core Coulomb potentials and Heun’s differential equation\"))).\nFor applications of Heun’s equation and functions in astrophysics see Debosscher ([1998](./bib/D.html#bib623 \"Unification of one-dimensional Fokker-Planck equations beyond hypergeometrics: Factorizer solution method and eigenvalue schemes\")) where different spectral problems for Heun’s equation are also considered. More applications—including those of generalized spheroidal wave functions and confluent Heun functions in mathematical physics, astrophysics, and the two-center problem in molecular quantum mechanics—can be found in Leaver ([1986](./bib/L.html#bib1391 \"Solutions to a generalized spheroidal wave equation: Teukolsky’s equations in general relativity, and the two-center problem in molecular quantum mechanics\")) and Slavyanov and Lay ([2000](./bib/S.html#bib2105 \"Special Functions: A Unified Theory Based on Singularities\"), Chapter 4). For application of biconfluent Heun functions in a model of an equatorially trapped Rossby wave in a shear flow in the ocean or atmosphere see Boyd and Natarov ([1998](./bib/B.html#bib330 \"A Sturm-Liouville eigenproblem of the fourth kind: A critical latitude with equatorial trapping\")).",
+            "formulas_clave": [
+              {
+                "id": "Ex1",
+                "tag": "31.17.1",
+                "latex": "\\displaystyle\\mathbf{J}^{2}\\Psi(\\mathbf{x}) \\displaystyle\\equiv(\\mathbf{s}+\\mathbf{t}+\\mathbf{u})^{2}\\Psi(\\mathbf{x})=j(j+1)\\Psi(\\mathbf{x}), \\tag{31.17.1}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle H_{s}\\Psi(\\mathbf{x}) \\displaystyle\\equiv(-2\\mathbf{s}\\cdot\\mathbf{t}-(\\frac{2}{a})\\mathbf{s}\\cdot\\mathbf{u})\\Psi(\\mathbf{x})=h_{s}\\Psi(\\mathbf{x}),"
+              },
+              {
+                "id": "E2",
+                "tag": "31.17.2",
+                "latex": "\\frac{x_{s}^{2}}{z_{k}}+\\frac{x_{t}^{2}}{z_{k}-1}+\\frac{x_{u}^{2}}{z_{k}-a}=0, \\tag{31.17.2}"
+              },
+              {
+                "id": "Ex3",
+                "tag": "31.17.3",
+                "latex": "\\displaystyle x_{s}^{2} \\displaystyle=R^{2}\\frac{z_{1}z_{2}}{a}, \\tag{31.17.3}"
+              },
+              {
+                "id": "Ex4",
+                "tag": "",
+                "latex": "\\displaystyle x_{t}^{2} \\displaystyle=R^{2}\\frac{(z_{1}-1)(z_{2}-1)}{1-a},"
+              },
+              {
+                "id": "Ex5",
+                "tag": "",
+                "latex": "\\displaystyle x_{u}^{2} \\displaystyle=R^{2}\\frac{(z_{1}-a)(z_{2}-a)}{a(a-1)}."
+              },
+              {
+                "id": "E4",
+                "tag": "31.17.4",
+                "latex": "\\Psi(\\mathbf{x})=(z_{1}z_{2})^{-s-\\frac{1}{4}}((z_{1}-1)(z_{2}-1))^{-t-\\frac{1}{4}}\\,((z_{1}-a)(z_{2}-a))^{-u-\\frac{1}{4}}w(z_{1})w(z_{2}), \\tag{31.17.4}"
+              },
+              {
+                "id": "Ex6",
+                "tag": "31.17.5",
+                "latex": "\\displaystyle\\alpha \\displaystyle=-s-t-u-j-1, \\tag{31.17.5}"
+              },
+              {
+                "id": "Ex7",
+                "tag": "",
+                "latex": "\\displaystyle\\beta \\displaystyle=j-s-t-u,"
+              },
+              {
+                "id": "Ex8",
+                "tag": "",
+                "latex": "\\displaystyle\\gamma \\displaystyle=-2s,"
+              },
+              {
+                "id": "Ex9",
+                "tag": "",
+                "latex": "\\displaystyle\\delta \\displaystyle=-2t,"
+              },
+              {
+                "id": "Ex10",
+                "tag": "",
+                "latex": "\\displaystyle\\epsilon \\displaystyle=-2u;"
+              },
+              {
+                "id": "Ex11",
+                "tag": "",
+                "latex": "\\displaystyle q \\displaystyle=ah_{s}+2s(at+u)."
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle\\mathbf{J}^{2}\\Psi(\\mathbf{x}) \\displaystyle\\equiv(\\mathbf{s}+\\mathbf{t}+\\mathbf{u})^{2}\\Psi(\\mathbf{x})=j(j+1)\\Psi(\\mathbf{x}), \\tag{31.17.1}",
+              "\\displaystyle H_{s}\\Psi(\\mathbf{x}) \\displaystyle\\equiv(-2\\mathbf{s}\\cdot\\mathbf{t}-(\\frac{2}{a})\\mathbf{s}\\cdot\\mathbf{u})\\Psi(\\mathbf{x})=h_{s}\\Psi(\\mathbf{x}),",
+              "\\frac{x_{s}^{2}}{z_{k}}+\\frac{x_{t}^{2}}{z_{k}-1}+\\frac{x_{u}^{2}}{z_{k}-a}=0, \\tag{31.17.2}",
+              "\\displaystyle x_{s}^{2} \\displaystyle=R^{2}\\frac{z_{1}z_{2}}{a}, \\tag{31.17.3}",
+              "\\displaystyle x_{t}^{2} \\displaystyle=R^{2}\\frac{(z_{1}-1)(z_{2}-1)}{1-a},",
+              "\\displaystyle x_{u}^{2} \\displaystyle=R^{2}\\frac{(z_{1}-a)(z_{2}-a)}{a(a-1)}.",
+              "\\Psi(\\mathbf{x})=(z_{1}z_{2})^{-s-\\frac{1}{4}}((z_{1}-1)(z_{2}-1))^{-t-\\frac{1}{4}}\\,((z_{1}-a)(z_{2}-a))^{-u-\\frac{1}{4}}w(z_{1})w(z_{2}), \\tag{31.17.4}",
+              "\\displaystyle\\alpha \\displaystyle=-s-t-u-j-1, \\tag{31.17.5}",
+              "\\displaystyle\\beta \\displaystyle=j-s-t-u,",
+              "\\displaystyle\\gamma \\displaystyle=-2s,",
+              "\\displaystyle\\delta \\displaystyle=-2t,",
+              "\\displaystyle\\epsilon \\displaystyle=-2u;",
+              "\\displaystyle q \\displaystyle=ah_{s}+2s(at+u)."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun functions",
+                "Heun’s equation",
+                "applications",
+                "physical",
+                "coordinate systems",
+                "elliptic",
+                "elliptic coordinates",
+                "quantum spins",
+                "separation of variables",
+                "spectral problems",
+                "Heun functions and Heun’s equation",
+                "Rossby waves",
+                "application to Rossby waves",
+                "astrophysics",
+                "biconfluent Heun equation",
+                "biconfluent Heun functions",
+                "black holes",
+                "confluent Heun equation",
+                "dislocation theory",
+                "quantum mechanics",
+                "quantum systems",
+                "statistical mechanics"
+              ],
+              "definiciones": [
+                "$H_{s}$ : operator (locally)",
+                "$x_{s}$ , $x_{t}$ , $x_{u}$ : coordinates (locally)"
+              ],
+              "simbolos": [
+                "$\\equiv$: equals by definition , $j$: nonnegative integer , $a$: complex parameter and $\\Psi(\\mathbf{x})$: common eigenfunction",
+                "$z$: complex variable , $a$: complex parameter and $R^{2}$: sphere",
+                "$\\gamma$: real or complex parameter , $\\delta$: real or complex parameter , $\\epsilon$: real or complex parameter , $j$: nonnegative integer , $a$: complex parameter , $q$: real or complex parameter , $\\alpha$: real or complex parameter and $\\beta$: real or complex parameter"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.0.19) for Notation",
+                "§31.17(i)",
+                "Erratum (V1.0.5) for References",
+                "Erratum (V1.0.5) for Clarifications"
+              ],
+              "notas_bibliograficas": [
+                "This subsection is based on the theory of the Gaudin magnet; see Gaudin ([1983](./bib/G.html#bib867 \"La fonction d’onde de Bethe\")) and Kuznetsov ([1992](./bib/K.html#bib1358 \"Equivalence of two graphical calculi\"))."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31",
+                "Annotations for §31.17 and Ch.31",
+                "Annotations for §31.17(i) , §31.17 and Ch.31"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.0.5)",
+                  "descripcion": "The reference to Hall et al. ([2010](./bib/H.html#bib2751 \"Soft-core Coulomb potentials and Heun’s differential equation\")) was added, together with a clarification of the text, in the first paragraph of this subsection."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1983",
+                "archivo_destino": "bib/G.html#bib867",
+                "titulo_referencia": "La fonction d’onde de Bethe"
+              },
+              {
+                "texto": "1992",
+                "archivo_destino": "bib/K.html#bib1358",
+                "titulo_referencia": "Equivalence of two graphical calculi"
+              },
+              {
+                "texto": "1950",
+                "archivo_destino": "bib/O.html#bib1775",
+                "titulo_referencia": "Triorthogonal systems in spaces of constant curvature in which the equation = + ⁢ Δ 2 u ⁢ λ u 0 allows a complete separation of variables"
+              },
+              {
+                "texto": "1976",
+                "archivo_destino": "bib/K.html#bib1214",
+                "titulo_referencia": "The group ⁢ O ( 4 ) , separation of variables and the hydrogen atom"
+              },
+              {
+                "texto": "1977",
+                "archivo_destino": "bib/M.html#bib1624",
+                "titulo_referencia": "Symmetry and Separation of Variables"
+              },
+              {
+                "texto": "1986",
+                "archivo_destino": "bib/K.html#bib1209",
+                "titulo_referencia": "Separation of Variables for Riemannian Spaces of Constant Curvature"
+              },
+              {
+                "texto": "2010",
+                "archivo_destino": "bib/H.html#bib2751",
+                "titulo_referencia": "Soft-core Coulomb potentials and Heun’s differential equation"
+              },
+              {
+                "texto": "1963",
+                "archivo_destino": "bib/K.html#bib1259",
+                "titulo_referencia": "Gravitational field of a spinning mass as an example of algebraically special metrics"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/T.html#bib2240",
+                "titulo_referencia": "Rotating black holes: Separable wave equations for gravitational and electromagnetic perturbations"
+              },
+              {
+                "texto": "1984",
+                "archivo_destino": "bib/C.html#bib463",
+                "titulo_referencia": "The Mathematical Theory of Black Holes"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/S.html#bib2185",
+                "titulo_referencia": "Perturbations of Kerr-de Sitter black holes and Heun’s equations"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/K.html#bib1213",
+                "titulo_referencia": "Special Functions and Perturbations of Black Holes"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/J.html#bib1194",
+                "titulo_referencia": "On the simple cubic lattice Green function"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/J.html#bib1195",
+                "titulo_referencia": "On the cubic lattice Green functions"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/L.html#bib1389",
+                "titulo_referencia": "Heun’s equation with nearby singularities"
+              },
+              {
+                "texto": "1997",
+                "archivo_destino": "bib/B.html#bib222",
+                "titulo_referencia": "Avoided crossings of the quartic oscillator"
+              },
+              {
+                "texto": "2001",
+                "archivo_destino": "bib/T.html#bib2261",
+                "titulo_referencia": "Hyperspherical elliptic harmonics and their relation to the Heun equation"
+              },
+              {
+                "texto": "2010",
+                "archivo_destino": "bib/H.html#bib2751",
+                "titulo_referencia": "Soft-core Coulomb potentials and Heun’s differential equation"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/D.html#bib623",
+                "titulo_referencia": "Unification of one-dimensional Fokker-Planck equations beyond hypergeometrics: Factorizer solution method and eigenvalue schemes"
+              },
+              {
+                "texto": "1986",
+                "archivo_destino": "bib/L.html#bib1391",
+                "titulo_referencia": "Solutions to a generalized spheroidal wave equation: Teukolsky’s equations in general relativity, and the two-center problem in molecular quantum mechanics"
+              },
+              {
+                "texto": "2000",
+                "archivo_destino": "bib/S.html#bib2105",
+                "titulo_referencia": "Special Functions: A Unified Theory Based on Singularities"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/B.html#bib330",
+                "titulo_referencia": "A Sturm-Liouville eigenproblem of the fourth kind: A critical latitude with equatorial trapping"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Computation",
+      "secciones": [
+        {
+          "seccion_id": "31.18",
+          "titulo_original": "Methods of Computation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/31/31.18.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/31/31.18.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§31.18 Methods of Computation",
+            "prosa_teorica": "Independent solutions of ( 31.2.1 ) can be computed in the neighborhoods of singularities from their Fuchs–Frobenius expansions (§ [31.3](./31.3.md \"§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions\") ), and elsewhere by numerical integration of ( 31.2.1 ). Subsequently, the coefficients in the necessary connection formulas can be calculated numerically by matching the values of solutions and their derivatives at suitably chosen values of $z$ ; see Laĭ ([1994](./bib/L.html#bib1386 \"The two-point connection problem for differential equations of the Heun class\")) and Lay et al. ([1998](./bib/L.html#bib1387 \"Asymptotic and numeric study of eigenvalues of the double confluent Heun equation\")). Care needs to be taken to choose integration paths in such a way that the wanted solution is growing in magnitude along the path at least as rapidly as all other solutions (§ 3.7(ii) ). The computation of the accessory parameter for the Heun functions is carried out via the continued-fraction equations ( 31.4.2 ) and ( 31.11.13 ) in the same way as for the Mathieu, Lamé, and spheroidal wave functions in Chapters [28](./28.md \"Chapter 28 Mathieu Functions and Hill’s Equation\") – [30](./30.md \"Chapter 30 Spheroidal Wave Functions\") .",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "Heun functions",
+                "Heun’s equation",
+                "computation",
+                "computation of solutions"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.31"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "31.3",
+                "archivo_destino": "31.3.md",
+                "titulo_referencia": "§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"
+              },
+              {
+                "texto": "1994",
+                "archivo_destino": "bib/L.html#bib1386",
+                "titulo_referencia": "The two-point connection problem for differential equations of the Heun class"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/L.html#bib1387",
+                "titulo_referencia": "Asymptotic and numeric study of eigenvalues of the double confluent Heun equation"
+              },
+              {
+                "texto": "28",
+                "archivo_destino": "28.md",
+                "titulo_referencia": "Chapter 28 Mathieu Functions and Hill’s Equation"
+              },
+              {
+                "texto": "30",
+                "archivo_destino": "30.md",
+                "titulo_referencia": "Chapter 30 Spheroidal Wave Functions"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "agradecimientos_capitulo": "",
+  "referencias_capitulo": [
+    "New Associate Editors for the DLMF",
+    "*Profile* Brian D. Sleeman",
+    "*Profile* Hans Volkmer",
+    "*Profile* Vadim B. Kuznetsov",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Associate Editors",
+    "§ ‣ Associate Editors",
+    "Organization and Objective"
+  ],
+  "estado_extraccion": "completado",
+  "total_formulas_extraidas": 180,
+  "estado_metadatos": "verificado_y_refinado"
+}

@@ -1,0 +1,18 @@
+{
+    "title": "Análisis de Complejidad Algorítmica",
+    "subtitle": "Notación Asintótica $O, \\Omega, \\Theta$ y Medición del Rendimiento",
+    "date": "2026-07-22",
+    "categories": [
+        "computación",
+        "complejidad",
+        "algoritmos",
+        "notación asintótica"
+    ],
+    "format": {
+        "html": {
+            "toc": true,
+            "toc-depth": 3,
+            "math": true
+        }
+    }
+}

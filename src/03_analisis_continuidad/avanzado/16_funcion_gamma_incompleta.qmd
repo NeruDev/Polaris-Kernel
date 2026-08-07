@@ -1,0 +1,103 @@
+---
+id: "33B20"
+title: "Funcion Gamma Incompleta"
+pilar: "03_analisis_continuidad"
+msc_code: "33B20"
+difficulty: "avanzado"
+tags:
+  - 33B20
+---
+
+# Funcion Gamma Incompleta
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 8 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\displaystyle P\left(a,z\right) \displaystyle=\frac{\gamma\left(a,z\right)}{\Gamma\left(a\right)}, \tag{8.2.4}
+$$
+
+$$
+\displaystyle Q\left(a,z\right) \displaystyle=\frac{\Gamma\left(a,z\right)}{\Gamma\left(a\right)},
+$$
+
+$$
+\displaystyle\gamma\left(a,ze^{2\pi mi}\right) \displaystyle=e^{2\pi mia}\gamma\left(a,z\right), \tag{8.2.8}
+$$
+
+$$
+e_{n}(z)=\sum_{k=0}^{n}\frac{z^{k}}{k!}. \tag{8.4.11}
+$$
+
+$$
+x^{1-a}e^{x}\Gamma\left(a,x\right)\leq 1, \tag{8.10.1}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\displaystyle\gamma\left(a,z\right) \displaystyle=\int_{0}^{z}t^{a-1}e^{-t}\,\mathrm{d}t, \tag{8.2.1}
+$$
+
+$$
+\displaystyle\Gamma\left(a,z\right) \displaystyle=\int_{z}^{\infty}t^{a-1}e^{-t}\,\mathrm{d}t, \tag{8.2.2}
+$$
+
+$$
+\gamma\left(a,z\right)+\Gamma\left(a,z\right)=\Gamma\left(a\right), \tag{8.2.3}
+$$
+
+$$
+P\left(a,z\right)+Q\left(a,z\right)=1. \tag{8.2.5}
+$$
+
+$$
+\gamma^{*}\left(a,z\right)=z^{-a}P\left(a,z\right)=\frac{z^{-a}}{\Gamma\left(a\right)}\gamma\left(a,z\right). \tag{8.2.6}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+P\left(a,z\right)\sim\frac{z^{a}e^{-z}}{\Gamma\left(1+a\right)}\sim(2\pi a)^{-\frac{1}{2}}e^{a-z}(z/a)^{a}, \tag{8.11.5}
+$$
+
+$$
+\gamma\left(a,z\right)\sim-z^{a}e^{-z}\sum_{k=0}^{\infty}\frac{(-a)^{k}b_{k}(\lambda)}{(z-a)^{2k+1}}, \tag{8.11.6}
+$$
+
+$$
+\Gamma\left(a,z\right)\sim z^{a}e^{-z}\sum_{k=0}^{\infty}\frac{(-a)^{k}b_{k}(\lambda)}{(z-a)^{2k+1}}, \tag{8.11.7}
+$$
+
+$$
+\Gamma\left(z,z\right)\sim z^{z-1}e^{-z}\left(\sqrt{\frac{\pi}{2}}z^{\frac{1}{2}}-\frac{1}{3}+\frac{\sqrt{2\pi}}{24z^{\frac{1}{2}}}-\frac{4}{135z}+\frac{\sqrt{2\pi}}{576z^{\frac{3}{2}}}+\frac{8}{2835z^{2}}+\dots\right), \tag{8.11.12}
+$$
+
+$$
+\lim_{n\to\infty}\frac{e_{n}(nx)}{e^{nx}}=\begin{cases}0,&x>1,\\
+\tfrac{1}{2},&x=1,\\
+1,&0\leq x<1.\end{cases} \tag{8.11.13}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

@@ -1,0 +1,102 @@
+---
+id: "33C10"
+title: "Funciones Airy"
+pilar: "03_analisis_continuidad"
+msc_code: "33C10, 34E20"
+difficulty: "avanzado"
+tags:
+  - 33C10
+  - 34E20
+---
+
+# Funciones Airy
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 9 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}=zw. \tag{9.2.1}
+$$
+
+$$
+w=\operatorname{Ai}\left(z\right),\;\operatorname{Bi}\left(z\right),\;\operatorname{Ai}\left(ze^{\mp 2\pi\mathrm{i}/3}\right). \tag{9.2.2}
+$$
+
+$$
+\displaystyle\operatorname{Ai}\left(0\right) \displaystyle=\frac{1}{3^{2/3}\Gamma\left(\tfrac{2}{3}\right)}=0.35502\;80538\ldots, \tag{9.2.3}
+$$
+
+$$
+\displaystyle\operatorname{Bi}\left(0\right) \displaystyle=\frac{1}{3^{1/6}\Gamma\left(\tfrac{2}{3}\right)}=0.61492\;66274\ldots, \tag{9.2.5}
+$$
+
+$$
+\displaystyle\operatorname{Bi}'\left(0\right) \displaystyle=\frac{3^{1/6}}{\Gamma\left(\tfrac{1}{3}\right)}=0.44828\;83573\ldots. \tag{9.2.6}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\displaystyle\operatorname{Ai}'\left(0\right) \displaystyle=-\frac{1}{3^{1/3}\Gamma\left(\tfrac{1}{3}\right)}=-0.25881\;94037\ldots, \tag{9.2.4}
+$$
+
+$$
+\mathscr{W}\left\{\operatorname{Ai}\left(ze^{-2\pi i/3}\right),\operatorname{Ai}\left(ze^{2\pi i/3}\right)\right\}=\frac{1}{2\pi i}. \tag{9.2.9}
+$$
+
+$$
+\operatorname{Bi}\left(z\right)=e^{-\pi i/6}\operatorname{Ai}\left(ze^{-2\pi i/3}\right)+e^{\pi i/6}\operatorname{Ai}\left(ze^{2\pi i/3}\right). \tag{9.2.10}
+$$
+
+$$
+\operatorname{Ai}\left(z\right)+e^{-2\pi i/3}\operatorname{Ai}\left(ze^{-2\pi i/3}\right)+e^{2\pi i/3}\operatorname{Ai}\left(ze^{2\pi i/3}\right)=0, \tag{9.2.12}
+$$
+
+$$
+\operatorname{Bi}\left(z\right)+e^{-2\pi i/3}\operatorname{Bi}\left(ze^{-2\pi i/3}\right)+e^{2\pi i/3}\operatorname{Bi}\left(ze^{2\pi i/3}\right)=0. \tag{9.2.13}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\chi(x)\sim(\tfrac{1}{2}\pi x)^{\frac{1}{2}}. \tag{9.7.4}
+$$
+
+$$
+\displaystyle\operatorname{Ai}\left(z\right) \displaystyle\sim\frac{e^{-\zeta}}{2\sqrt{\pi}z^{1/4}}\sum_{k=0}^{\infty}(-1)^{k}\frac{u_{k}}{\zeta^{k}}, \tag{9.7.5}
+$$
+
+$$
+\displaystyle\operatorname{Ai}'\left(z\right) \displaystyle\sim-\frac{z^{1/4}e^{-\zeta}}{2\sqrt{\pi}}\sum_{k=0}^{\infty}(-1)^{k}\frac{v_{k}}{\zeta^{k}}, \tag{9.7.6}
+$$
+
+$$
+\displaystyle\operatorname{Bi}\left(z\right) \displaystyle\sim\frac{e^{\zeta}}{\sqrt{\pi}z^{1/4}}\sum_{k=0}^{\infty}\frac{u_{k}}{\zeta^{k}}, \tag{9.7.7}
+$$
+
+$$
+\displaystyle\operatorname{Bi}'\left(z\right) \displaystyle\sim\frac{z^{1/4}e^{\zeta}}{\sqrt{\pi}}\sum_{k=0}^{\infty}\frac{v_{k}}{\zeta^{k}}, \tag{9.7.8}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

@@ -1,0 +1,90 @@
+---
+id: "22E70"
+title: "Simbolos Acoplamiento Angular"
+pilar: "02_estructuras_algebraicas"
+msc_code: "22E70, 81R05"
+difficulty: "avanzado"
+tags:
+  - 22E70
+  - 81R05
+---
+
+# Simbolos Acoplamiento Angular
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 34 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\begin{pmatrix}j_{1}&j_{2}&j_{3}\\
+m_{1}&m_{2}&m_{3}\end{pmatrix},
+$$
+
+$$
+\begin{Bmatrix}j_{1}&j_{2}&j_{3}\\
+l_{1}&l_{2}&l_{3}\end{Bmatrix},
+$$
+
+$$
+\begin{Bmatrix}j_{11}&j_{12}&j_{13}\\
+j_{21}&j_{22}&j_{23}\\
+j_{31}&j_{32}&j_{33}\end{Bmatrix}.
+$$
+
+$$
+|j_{r}-j_{s}|\leq j_{t}\leq j_{r}+j_{s}, \tag{34.2.1}
+$$
+
+$$
+\displaystyle\begin{pmatrix}j_{1}&j_{2}&j_{3}\\
+m_{1}&m_{2}&m_{3}\end{pmatrix} \displaystyle=\begin{pmatrix}j_{2}&j_{3}&j_{1}\\
+m_{2}&m_{3}&m_{1}\end{pmatrix}=\begin{pmatrix}j_{3}&j_{1}&j_{2}\\
+m_{3}&m_{1}&m_{2}\end{pmatrix}, \tag{34.3.8}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\left(j_{1}\;m_{1}\;j_{2}\;m_{2}|j_{1}\;j_{2}\;j_{3}\,\,m_{3}\right)=(-1)^{j_{1}-j_{2}+m_{3}}(2j_{3}+1)^{\frac{1}{2}}\begin{pmatrix}j_{1}&j_{2}&j_{3}\\
+m_{1}&m_{2}&-m_{3}\end{pmatrix}; \tag{34.1.1}
+$$
+
+$$
+m_{r}=-j_{r},-j_{r}+1,\dots,j_{r}-1,j_{r}, \tag{34.2.2}
+$$
+
+$$
+m_{1}+m_{2}+m_{3}=0. \tag{34.2.3}
+$$
+
+$$
+\begin{pmatrix}j_{1}&j_{2}&j_{3}\\
+m_{1}&m_{2}&m_{3}\end{pmatrix}={(-1)^{j_{1}-j_{2}-m_{3}}}\Delta(j_{1}j_{2}j_{3})\left((j_{1}+m_{1})!(j_{1}-m_{1})!(j_{2}+m_{2})!(j_{2}-m_{2})!(j_{3}+m_{3})!(j_{3}-m_{3})!\right)^{\frac{1}{2}}\,\sum_{s}\frac{(-1)^{s}}{s!(j_{1}+j_{2}-j_{3}-s)!(j_{1}-m_{1}-s)!(j_{2}+m_{2}-s)!(j_{3}-j_{2}+m_{1}+s)!(j_{3}-j_{1}-m_{2}+s)!}, \tag{34.2.4}
+$$
+
+$$
+\Delta(j_{1}j_{2}j_{3})=\left(\frac{(j_{1}+j_{2}-j_{3})!(j_{1}-j_{2}+j_{3})!(-j_{1}+j_{2}+j_{3})!}{(j_{1}+j_{2}+j_{3}+1)!}\right)^{\frac{1}{2}}, \tag{34.2.5}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+El comportamiento límite se rige por las propiedades analíticas en la esfera de Riemann.
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

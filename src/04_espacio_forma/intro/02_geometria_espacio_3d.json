@@ -1,0 +1,18 @@
+{
+    "title": "Geometría Analítica en el Espacio Tridimensional",
+    "subtitle": "Rectas, Planos y Vectores en $\\mathbb{R}^3$",
+    "date": "2026-07-22",
+    "categories": [
+        "geometría",
+        "espacio",
+        "vectores",
+        "planos"
+    ],
+    "format": {
+        "html": {
+            "toc": true,
+            "toc-depth": 3,
+            "math": true
+        }
+    }
+}

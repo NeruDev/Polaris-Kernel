@@ -1,0 +1,18 @@
+{
+    "title": "Aplicaciones del Cálculo: Optimización y Áreas",
+    "subtitle": "Resolución de Problemas Prácticos mediante Derivadas e Integrales",
+    "date": "2026-07-22",
+    "categories": [
+        "análisis",
+        "aplicaciones",
+        "optimización",
+        "cálculo"
+    ],
+    "format": {
+        "html": {
+            "toc": true,
+            "toc-depth": 3,
+            "math": true
+        }
+    }
+}

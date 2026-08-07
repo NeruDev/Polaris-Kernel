@@ -1,0 +1,101 @@
+---
+id: "33C10"
+title: "Funciones Struve"
+pilar: "03_analisis_continuidad"
+msc_code: "33C10"
+difficulty: "avanzado"
+tags:
+  - 33C10
+---
+
+# Funciones Struve
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 11 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+w=\mathbf{H}_{\nu}\left(z\right),\mathbf{K}_{\nu}\left(z\right). \tag{11.2.8}
+$$
+
+$$
+w=\mathbf{L}_{\nu}\left(z\right),\mathbf{M}_{\nu}\left(z\right). \tag{11.2.10}
+$$
+
+$$
+\mathbf{H}_{\nu}\left(x\right)\geq 0, \tag{11.4.13}
+$$
+
+$$
+|\vartheta|<\frac{2}{3}\exp\left(\frac{\tfrac{1}{4}|z|^{2}}{|\nu_{0}+\tfrac{3}{2}|}-1\right), \tag{11.4.15}
+$$
+
+$$
+\displaystyle\frac{\mathrm{d}}{\mathrm{d}z}(z\mathbf{H}_{1}\left(z\right)) \displaystyle=z\mathbf{H}_{0}\left(z\right),
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\displaystyle\mathbf{H}_{\nu}\left(z\right) \displaystyle=(\tfrac{1}{2}z)^{\nu+1}\sum_{n=0}^{\infty}\frac{(-1)^{n}(\tfrac{1}{2}z)^{2n}}{\Gamma\left(n+\tfrac{3}{2}\right)\Gamma\left(n+\nu+\tfrac{3}{2}\right)}, \tag{11.2.1}
+$$
+
+$$
+\displaystyle\mathbf{L}_{\nu}\left(z\right) \displaystyle=-ie^{-\frac{1}{2}\pi i\nu}\mathbf{H}_{\nu}\left(iz\right)=(\tfrac{1}{2}z)^{\nu+1}\sum_{n=0}^{\infty}\frac{(\tfrac{1}{2}z)^{2n}}{\Gamma\left(n+\tfrac{3}{2}\right)\Gamma\left(n+\nu+\tfrac{3}{2}\right)}. \tag{11.2.2}
+$$
+
+$$
+\displaystyle\mathbf{H}_{0}\left(z\right) \displaystyle=\frac{2}{\pi}\left(z-\frac{z^{3}}{1^{2}\cdot 3^{2}}+\frac{z^{5}}{1^{2}\cdot 3^{2}\cdot 5^{2}}-\cdots\right), \tag{11.2.3}
+$$
+
+$$
+\displaystyle\mathbf{L}_{0}\left(z\right) \displaystyle=\frac{2}{\pi}\left(z+\frac{z^{3}}{1^{2}\cdot 3^{2}}+\frac{z^{5}}{1^{2}\cdot 3^{2}\cdot 5^{2}}+\cdots\right). \tag{11.2.4}
+$$
+
+$$
+\displaystyle\mathbf{K}_{\nu}\left(z\right) \displaystyle=\mathbf{H}_{\nu}\left(z\right)-Y_{\nu}\left(z\right), \tag{11.2.5}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\mathbf{K}_{\nu}\left(z\right)\sim\frac{1}{\pi}\sum_{k=0}^{\infty}\frac{\Gamma\left(k+\tfrac{1}{2}\right)(\tfrac{1}{2}z)^{\nu-2k-1}}{\Gamma\left(\nu+\tfrac{1}{2}-k\right)}, \tag{11.6.1}
+$$
+
+$$
+\mathbf{M}_{\nu}\left(z\right)\sim\frac{1}{\pi}\sum_{k=0}^{\infty}(-1)^{k+1}\frac{\Gamma\left(k+\tfrac{1}{2}\right)(\tfrac{1}{2}z)^{\nu-2k-1}}{\Gamma\left(\nu+\tfrac{1}{2}-k\right)}, \tag{11.6.2}
+$$
+
+$$
+\int_{0}^{z}\mathbf{K}_{0}\left(t\right)\,\mathrm{d}t-\frac{2}{\pi}(\ln\left(2z\right)+\gamma)\sim\frac{2}{\pi}\sum_{k=1}^{\infty}(-1)^{k+1}\frac{(2k)!(2k-1)!}{(k!)^{2}(2z)^{2k}}, \tag{11.6.3}
+$$
+
+$$
+\int_{0}^{z}\mathbf{M}_{0}\left(t\right)\,\mathrm{d}t+\frac{2}{\pi}(\ln\left(2z\right)+\gamma)\sim\frac{2}{\pi}\sum_{k=1}^{\infty}\frac{(2k)!(2k-1)!}{(k!)^{2}(2z)^{2k}}, \tag{11.6.4}
+$$
+
+$$
+\mathbf{H}_{\nu}\left(z\right),\mathbf{L}_{\nu}\left(z\right)\sim\frac{z}{\pi\nu\sqrt{2}}\left(\frac{ez}{2\nu}\right)^{\nu}, \tag{11.6.5}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

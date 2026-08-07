@@ -9,6 +9,10 @@ En el paradigma original, ejecutaba scripts de Python locales (matplotlib).
 Bajo el nuevo paradigma Quarto/Typst, los nuevos gráficos deben
 orquestarse o compilarse usando Typst desde `scripts/grafics/typst_src/`
 hacia `.svg`. Este script mantiene retrocompatibilidad para ejecutar generadores `.py`.
+
+REGLA IMPORTANTE: Todas las imágenes generadas deben tener un nombre único
+y descriptivo, SIN NÚMEROS al inicio (es decir, no heredar "01_" del .qmd).
+Esto asegura que se identifiquen fácilmente y no se confundan con archivos fuente o metadatos.
 """
 
 import subprocess

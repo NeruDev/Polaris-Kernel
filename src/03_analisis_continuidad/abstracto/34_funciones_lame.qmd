@@ -1,0 +1,101 @@
+---
+id: "33E10"
+title: "Funciones Lame"
+pilar: "03_analisis_continuidad"
+msc_code: "33E10"
+difficulty: "abstracto"
+tags:
+  - 33E10
+---
+
+# Funciones Lame
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 29 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\displaystyle\mathit{Ec}^{2m}_{\nu}\left(z,k^{2}\right) \displaystyle=c_{\nu}^{2m}(k^{2}){\rm Ec}_{\nu}^{2m}(z,k^{2}),
+$$
+
+$$
+\displaystyle(c_{\nu}^{m}(k^{2}))^{2} \displaystyle=\frac{4}{\pi}\int_{0}^{K}\left(\mathit{Ec}^{m}_{\nu}\left(x,k^{2}\right)\right)^{2}\,\mathrm{d}x,
+$$
+
+$$
+\displaystyle(s_{\nu}^{m}(k^{2}))^{2} \displaystyle=\frac{4}{\pi}\int_{0}^{K}\left(\mathit{Es}^{m}_{\nu}\left(x,k^{2}\right)\right)^{2}\,\mathrm{d}x.
+$$
+
+$$
+\xi={\operatorname{sn}}^{2}\left(z,k\right). \tag{29.2.3}
+$$
+
+$$
+\zeta=\wp\left(\eta;g_{2},g_{3}\right)=\wp\left(\eta\right), \tag{29.2.11}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\displaystyle\mathit{Ec}^{2m}_{\nu}\left(z,k^{2}\right) \displaystyle=(-1)^{m}L_{c\nu}^{(2m)}(\psi,{k^{\prime}}^{2}),
+$$
+
+$$
+\displaystyle\mathit{Ec}^{2m+1}_{\nu}\left(z,k^{2}\right) \displaystyle=(-1)^{m}L_{s\nu}^{(2m+1)}(\psi,{k^{\prime}}^{2}),
+$$
+
+$$
+\displaystyle\mathit{Es}^{2m+1}_{\nu}\left(z,k^{2}\right) \displaystyle=(-1)^{m}L_{c\nu}^{(2m+1)}(\psi,{k^{\prime}}^{2}),
+$$
+
+$$
+\displaystyle\mathit{Es}^{2m+2}_{\nu}\left(z,k^{2}\right) \displaystyle=(-1)^{m}L_{s\nu}^{(2m+2)}(\psi,{k^{\prime}}^{2}),
+$$
+
+$$
+\displaystyle\mathit{Ec}^{2m+1}_{\nu}\left(z,k^{2}\right) \displaystyle=c_{\nu}^{2m+1}(k^{2}){\rm Es}_{\nu}^{2m+1}(z,k^{2}),
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\lim_{k\to 1-}a^{m}_{\nu}\left(k^{2}\right)=\lim_{k\to 1-}b^{m+1}_{\nu}\left(k^{2}\right)=\nu(\nu+1)-\mu^{2}, \tag{29.5.4}
+$$
+
+$$
+{\lim_{k\to 1-}\frac{\mathit{Ec}^{m}_{\nu}\left(z,k^{2}\right)}{\mathit{Ec}^{m}_{\nu}\left(0,k^{2}\right)}=\lim_{k\to 1-}\frac{\mathit{Es}^{m+1}_{\nu}\left(z,k^{2}\right)}{\mathit{Es}^{m+1}_{\nu}\left(0,k^{2}\right)}}=\frac{1}{(\cosh z)^{\mu}}F\left({\tfrac{1}{2}\mu-\tfrac{1}{2}\nu,\tfrac{1}{2}\mu+\tfrac{1}{2}\nu+\tfrac{1}{2}\atop\tfrac{1}{2}};{\tanh}^{2}z\right), \tag{29.5.5}
+$$
+
+$$
+\lim_{k\to 1-}\frac{\mathit{Ec}^{m}_{\nu}\left(z,k^{2}\right)}{\left.\frac{\mathrm{d}\mathit{Ec}^{m}_{\nu}\left(z,k^{2}\right)}{\mathrm{d}z}\right|_{z=0}}=\lim_{k\to 1-}\frac{\mathit{Es}^{m+1}_{\nu}\left(z,k^{2}\right)}{\left.\frac{\mathrm{d}\mathit{Es}^{m+1}_{\nu}\left(z,k^{2}\right)}{\mathrm{d}z}\right|_{z=0}}=\frac{\tanh z}{(\cosh z)^{\mu}}F\left({\tfrac{1}{2}\mu-\tfrac{1}{2}\nu+\tfrac{1}{2},\tfrac{1}{2}\mu+\tfrac{1}{2}\nu+1\atop\tfrac{3}{2}};{\tanh}^{2}z\right), \tag{29.5.6}
+$$
+
+$$
+\lim_{p\to\infty}\frac{A_{2p+2}}{A_{2p}}=\frac{k^{2}}{(1+k^{\prime})^{2}}, \tag{29.6.7}
+$$
+
+$$
+\lim_{p\to\infty}\frac{C_{2p+2}}{C_{2p}}=\frac{k^{2}}{(1+k^{\prime})^{2}}, \tag{29.6.14}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

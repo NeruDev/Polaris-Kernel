@@ -1,0 +1,18 @@
+{
+    "title": "Variables Aleatorias y Distribuciones Estándar",
+    "subtitle": "Modelado Matemático de la Incertidumbre",
+    "date": "2026-07-22",
+    "categories": [
+        "probabilidad",
+        "variables aleatorias",
+        "distribuciones",
+        "estadística"
+    ],
+    "format": {
+        "html": {
+            "toc": true,
+            "toc-depth": 3,
+            "math": true
+        }
+    }
+}

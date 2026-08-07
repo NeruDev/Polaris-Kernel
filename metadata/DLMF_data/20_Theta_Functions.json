@@ -1,0 +1,2306 @@
+{
+  "capitulo": 20,
+  "titulo_original": "Theta Functions",
+  "archivo_metadata": "metadata/DLMF_data/20_Theta_Functions.json",
+  "rutas_docs": {
+    "docs_original": "docs/DLMF-markdown-main/markdown/20/20.md",
+    "docs_directorio_original": "docs/DLMF-markdown-main/markdown/20/",
+    "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.md"
+  },
+  "total_categorias": 4,
+  "total_secciones": 16,
+  "categorias": [
+    {
+      "categoria": "Notation",
+      "secciones": [
+        {
+          "seccion_id": "20.1",
+          "titulo_original": "Special Notation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.1.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.1.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.1 Special Notation",
+            "prosa_teorica": "(For other notation see Notation for the Special Functions .)\nThe main functions treated in this chapter are the theta functions $\\theta_{j}\\left(z\\middle|\\tau\\right)=\\theta_{j}\\left(z,q\\right)$ where $j=1,2,3,4$ and $q=e^{i\\pi\\tau}$ . When $\\tau$ is fixed the notation is often abbreviated in the literature as $\\theta_{j}(z)$ , or even as simply $\\theta_{j}$ , it being then understood that the argument is the primary variable. Sometimes the theta functions are called the Jacobian or classical theta functions to distinguish them from generalizations; compare Chapter [21](./21.md \"Chapter 21 Multidimensional Theta Functions\") .\nPrimes on the $\\theta$ symbols indicate derivatives with respect to the argument of the $\\theta$ function.\nJacobi’s original notation: $\\Theta(z|\\tau)$ , $\\Theta_{1}(z|\\tau)$ , $\\mathrm{H}(z|\\tau)$ , $\\mathrm{H}_{1}(z|\\tau)$ , respectively, for $\\theta_{4}\\left(u\\middle|\\tau\\right)$ , $\\theta_{3}\\left(u\\middle|\\tau\\right)$ , $\\theta_{1}\\left(u\\middle|\\tau\\right)$ , $\\theta_{2}\\left(u\\middle|\\tau\\right)$ , where $u=z/{\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right)$ . Here the symbol $\\mathrm{H}$ denotes capital eta. See, for example, Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 479) and Copson ([1935](./bib/C.html#bib580 \"An Introduction to the Theory of Functions of a Complex Variable\"), pp. 405, 411).\nNeville’s notation: $\\theta_{s}(z|\\tau)$ , $\\theta_{c}(z|\\tau)$ , $\\theta_{d}(z|\\tau)$ , $\\theta_{n}(z|\\tau)$ , respectively, for ${\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right)\\frac{\\theta_{1}\\left(u\\middle|\\tau\\right)}{\\theta_{1}'\\left(0\\middle|\\tau\\right)}$ , $\\frac{\\theta_{2}\\left(u\\middle|\\tau\\right)}{\\theta_{2}\\left(0\\middle|\\tau\\right)}$ , $\\frac{\\theta_{3}\\left(u\\middle|\\tau\\right)}{\\theta_{3}\\left(0\\middle|\\tau\\right)}$ , $\\frac{\\theta_{4}\\left(u\\middle|\\tau\\right)}{\\theta_{4}\\left(0\\middle|\\tau\\right)}$ , where again $u=z/{\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right)$ . This notation simplifies the relationship of the theta functions to Jacobian elliptic functions (§ [22.2](./22.2.md \"§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions\") ); see Neville ([1951](./bib/N.html#bib1713 \"Jacobian Elliptic Functions\")).\nMcKean and Moll’s notation: $\\vartheta_{j}(z|\\tau)=\\theta_{j}\\left(\\pi z\\middle|\\tau\\right)$ , $j=1,2,3,4$ . See McKean and Moll ([1999](./bib/M.html#bib1582 \"Elliptic Curves\"), p. 125).\nAdditional notations that have been used in the literature are summarized in Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 487).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "lattice parameter",
+                "nome",
+                "notation",
+                "rectangular case",
+                "theta functions",
+                "Jacobi’s original notation",
+                "McKean and Moll’s",
+                "McKean and Moll’s theta functions",
+                "Neville’s",
+                "Neville’s theta functions"
+              ],
+              "referenciado_por": [
+                "§20.11(v)",
+                "§20.15",
+                "§20.7(ii)",
+                "§22.1",
+                "§22.2",
+                "§23.15(i)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.1 and Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "tablas": [
+              {
+                "encabezados": [
+                  "$m$ , $n$",
+                  "integers."
+                ],
+                "filas": [
+                  {
+                    "$m$ , $n$": "$z$ $(\\in\\mathbb{C})$",
+                    "integers.": "the argument."
+                  },
+                  {
+                    "$m$ , $n$": "$\\tau$ $(\\in\\mathbb{C})$",
+                    "integers.": "the lattice parameter, $\\Im\\tau>0$ ."
+                  },
+                  {
+                    "$m$ , $n$": "$q^{\\alpha}$",
+                    "integers.": "$e^{i\\alpha\\pi\\tau}$ for $\\alpha\\in\\mathbb{R}$ (resolving issues of choice of branch)."
+                  },
+                  {
+                    "$m$ , $n$": "$S_{1}/S_{2}$",
+                    "integers.": "set of all elements of $S_{1}$ , modulo elements of $S_{2}$ . Thus two elements of $S_{1}/S_{2}$ are equivalent if they are both in $S_{1}$ and their difference is in $S_{2}$ . (For an example see § 20.12(ii) .)"
+                  }
+                ]
+              }
+            ],
+            "referencias_cruzadas": [
+              {
+                "texto": "21",
+                "archivo_destino": "21.md",
+                "titulo_referencia": "Chapter 21 Multidimensional Theta Functions"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1935",
+                "archivo_destino": "bib/C.html#bib580",
+                "titulo_referencia": "An Introduction to the Theory of Functions of a Complex Variable"
+              },
+              {
+                "texto": "22.2",
+                "archivo_destino": "22.2.md",
+                "titulo_referencia": "§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"
+              },
+              {
+                "texto": "1951",
+                "archivo_destino": "bib/N.html#bib1713",
+                "titulo_referencia": "Jacobian Elliptic Functions"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/M.html#bib1582",
+                "titulo_referencia": "Elliptic Curves"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Properties",
+      "secciones": [
+        {
+          "seccion_id": "20.2",
+          "titulo_original": "Definitions and Periodic Properties",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.2.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.2.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.2 Definitions and Periodic Properties",
+            "prosa_teorica": "Corresponding expansions for $\\theta_{j}'\\left(z\\middle|\\tau\\right)$ , $j=1,2,3,4$ , can be found by differentiating ( 20.2.1 )–( 20.2.4 ) with respect to $z$ .\nFor fixed $\\tau$ , each $\\theta_{j}\\left(z\\middle|\\tau\\right)$ is an entire function of $z$ with period $2\\pi$ ; $\\theta_{1}\\left(z\\middle|\\tau\\right)$ is odd in $z$ and the others are even. For fixed $z$ , each of $\\frac{\\theta_{1}\\left(z\\middle|\\tau\\right)}{\\sin z}$ , $\\frac{\\theta_{2}\\left(z\\middle|\\tau\\right)}{\\cos z}$ , $\\theta_{3}\\left(z\\middle|\\tau\\right)$ , and $\\theta_{4}\\left(z\\middle|\\tau\\right)$ is an analytic function of $\\tau$ for $\\Im\\tau>0$ , with a natural boundary $\\Im\\tau=0$ , and correspondingly, an analytic function of $q$ for $\\left|q\\right|<1$ with a natural boundary $\\left|q\\right|=1$ .\nThe four points $(0,\\pi,\\pi+\\tau\\pi,\\tau\\pi)$ are the vertices of the *fundamental parallelogram* in the $z$ -plane; see Figure 20.2.1 . The points\nare the *lattice points* . The theta functions are quasi-periodic on the lattice:\n<a id=\"F1\"></a>\n![Figure 20.2.1: $z$ -plane. Fundamental parallelogram. Left-hand diagram is the rectangular case ( $\\tau$ purely imaginary); right-hand diagram is the general case. $\\bullet$ zeros of $\\theta_{1}\\left(z\\middle|\\tau\\right)$ , $\\blacksquare$ zeros of $\\theta_{2}\\left(z\\middle|\\tau\\right)$ , $\\blacktriangle$ zeros of $\\theta_{3}\\left(z\\middle|\\tau\\right)$ , $\\blacklozenge$ zeros of $\\theta_{4}\\left(z\\middle|\\tau\\right)$ .](../html/20/2/F1a.png)\nWith\nFor $m,n\\in\\mathbb{Z}$ , the $z$ -zeros of $\\theta_{j}\\left(z\\middle|\\tau\\right)$ , $j=1,2,3,4$ , are $(m+n\\tau)\\pi$ , $(m+\\tfrac{1}{2}+n\\tau)\\pi$ , $(m+\\tfrac{1}{2}+(n+\\tfrac{1}{2})\\tau)\\pi$ , $(m+(n+\\tfrac{1}{2})\\tau)\\pi$ respectively.",
+            "formulas_clave": [
+              {
+                "id": "EGx1",
+                "tag": "20.2.1",
+                "latex": "\\displaystyle\\theta_{1}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{1}\\left(z,q\\right)=2\\sum_{n=0}^{\\infty}(-1)^{n}q^{(n+\\frac{1}{2})^{2}}\\sin\\left((2n+1)z\\right), \\tag{20.2.1}"
+              },
+              {
+                "id": "",
+                "tag": "20.2.2",
+                "latex": "\\displaystyle\\theta_{2}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{2}\\left(z,q\\right)=2\\sum_{n=0}^{\\infty}q^{(n+\\frac{1}{2})^{2}}\\cos\\left((2n+1)z\\right), \\tag{20.2.2}"
+              },
+              {
+                "id": "",
+                "tag": "20.2.3",
+                "latex": "\\displaystyle\\theta_{3}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{3}\\left(z,q\\right)=1+2\\sum_{n=1}^{\\infty}q^{n^{2}}\\cos\\left(2nz\\right), \\tag{20.2.3}"
+              },
+              {
+                "id": "",
+                "tag": "20.2.4",
+                "latex": "\\displaystyle\\theta_{4}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{4}\\left(z,q\\right)=1+2\\sum_{n=1}^{\\infty}(-1)^{n}q^{n^{2}}\\cos\\left(2nz\\right). \\tag{20.2.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "20.2.5",
+                "latex": "z_{m,n}=(m+n\\tau)\\pi, \\tag{20.2.5}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "20.2.6",
+                "latex": "\\displaystyle\\theta_{1}\\left(z+(m+n\\tau)\\pi\\middle|\\tau\\right) \\displaystyle=(-1)^{m+n}q^{-n^{2}}e^{-2inz}\\theta_{1}\\left(z\\middle|\\tau\\right), \\tag{20.2.6}"
+              },
+              {
+                "id": "",
+                "tag": "20.2.7",
+                "latex": "\\displaystyle\\theta_{2}\\left(z+(m+n\\tau)\\pi\\middle|\\tau\\right) \\displaystyle=(-1)^{m}q^{-n^{2}}e^{-2inz}\\theta_{2}\\left(z\\middle|\\tau\\right), \\tag{20.2.7}"
+              },
+              {
+                "id": "",
+                "tag": "20.2.8",
+                "latex": "\\displaystyle\\theta_{3}\\left(z+(m+n\\tau)\\pi\\middle|\\tau\\right) \\displaystyle=q^{-n^{2}}e^{-2inz}\\theta_{3}\\left(z\\middle|\\tau\\right), \\tag{20.2.8}"
+              },
+              {
+                "id": "",
+                "tag": "20.2.9",
+                "latex": "\\displaystyle\\theta_{4}\\left(z+(m+n\\tau)\\pi\\middle|\\tau\\right) \\displaystyle=(-1)^{n}q^{-n^{2}}e^{-2inz}\\theta_{4}\\left(z\\middle|\\tau\\right). \\tag{20.2.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "20.2.10",
+                "latex": "M\\equiv M(z|\\tau)=e^{iz+(i\\pi\\tau/4)}, \\tag{20.2.10}"
+              },
+              {
+                "id": "EGx3",
+                "tag": "20.2.11",
+                "latex": "\\displaystyle\\theta_{1}\\left(z\\middle|\\tau\\right) \\displaystyle=-\\theta_{2}\\left(z+\\tfrac{1}{2}\\pi\\middle|\\tau\\right)=-iM\\theta_{4}\\left(z+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right)=-iM\\theta_{3}\\left(z+\\tfrac{1}{2}\\pi+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right), \\tag{20.2.11}"
+              },
+              {
+                "id": "",
+                "tag": "20.2.12",
+                "latex": "\\displaystyle\\theta_{2}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{1}\\left(z+\\tfrac{1}{2}\\pi\\middle|\\tau\\right)=M\\theta_{3}\\left(z+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right)=M\\theta_{4}\\left(z+\\tfrac{1}{2}\\pi+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right), \\tag{20.2.12}"
+              },
+              {
+                "id": "",
+                "tag": "20.2.13",
+                "latex": "\\displaystyle\\theta_{3}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{4}\\left(z+\\tfrac{1}{2}\\pi\\middle|\\tau\\right)=M\\theta_{2}\\left(z+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right)=M\\theta_{1}\\left(z+\\tfrac{1}{2}\\pi+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right), \\tag{20.2.13}"
+              },
+              {
+                "id": "",
+                "tag": "20.2.14",
+                "latex": "\\displaystyle\\theta_{4}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{3}\\left(z+\\tfrac{1}{2}\\pi\\middle|\\tau\\right)=-iM\\theta_{1}\\left(z+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right)=iM\\theta_{2}\\left(z+\\tfrac{1}{2}\\pi+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right). \\tag{20.2.14}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\displaystyle\\theta_{1}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{1}\\left(z,q\\right)=2\\sum_{n=0}^{\\infty}(-1)^{n}q^{(n+\\frac{1}{2})^{2}}\\sin\\left((2n+1)z\\right), \\tag{20.2.1}",
+              "\\displaystyle\\theta_{2}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{2}\\left(z,q\\right)=2\\sum_{n=0}^{\\infty}q^{(n+\\frac{1}{2})^{2}}\\cos\\left((2n+1)z\\right), \\tag{20.2.2}",
+              "\\displaystyle\\theta_{3}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{3}\\left(z,q\\right)=1+2\\sum_{n=1}^{\\infty}q^{n^{2}}\\cos\\left(2nz\\right), \\tag{20.2.3}",
+              "\\displaystyle\\theta_{4}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{4}\\left(z,q\\right)=1+2\\sum_{n=1}^{\\infty}(-1)^{n}q^{n^{2}}\\cos\\left(2nz\\right). \\tag{20.2.4}",
+              "z_{m,n}=(m+n\\tau)\\pi, \\tag{20.2.5}",
+              "\\displaystyle\\theta_{1}\\left(z+(m+n\\tau)\\pi\\middle|\\tau\\right) \\displaystyle=(-1)^{m+n}q^{-n^{2}}e^{-2inz}\\theta_{1}\\left(z\\middle|\\tau\\right), \\tag{20.2.6}",
+              "\\displaystyle\\theta_{2}\\left(z+(m+n\\tau)\\pi\\middle|\\tau\\right) \\displaystyle=(-1)^{m}q^{-n^{2}}e^{-2inz}\\theta_{2}\\left(z\\middle|\\tau\\right), \\tag{20.2.7}",
+              "\\displaystyle\\theta_{3}\\left(z+(m+n\\tau)\\pi\\middle|\\tau\\right) \\displaystyle=q^{-n^{2}}e^{-2inz}\\theta_{3}\\left(z\\middle|\\tau\\right), \\tag{20.2.8}",
+              "\\displaystyle\\theta_{4}\\left(z+(m+n\\tau)\\pi\\middle|\\tau\\right) \\displaystyle=(-1)^{n}q^{-n^{2}}e^{-2inz}\\theta_{4}\\left(z\\middle|\\tau\\right). \\tag{20.2.9}",
+              "M\\equiv M(z|\\tau)=e^{iz+(i\\pi\\tau/4)}, \\tag{20.2.10}",
+              "\\displaystyle\\theta_{1}\\left(z\\middle|\\tau\\right) \\displaystyle=-\\theta_{2}\\left(z+\\tfrac{1}{2}\\pi\\middle|\\tau\\right)=-iM\\theta_{4}\\left(z+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right)=-iM\\theta_{3}\\left(z+\\tfrac{1}{2}\\pi+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right), \\tag{20.2.11}",
+              "\\displaystyle\\theta_{2}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{1}\\left(z+\\tfrac{1}{2}\\pi\\middle|\\tau\\right)=M\\theta_{3}\\left(z+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right)=M\\theta_{4}\\left(z+\\tfrac{1}{2}\\pi+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right), \\tag{20.2.12}",
+              "\\displaystyle\\theta_{3}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{4}\\left(z+\\tfrac{1}{2}\\pi\\middle|\\tau\\right)=M\\theta_{2}\\left(z+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right)=M\\theta_{1}\\left(z+\\tfrac{1}{2}\\pi+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right), \\tag{20.2.13}",
+              "\\displaystyle\\theta_{4}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{3}\\left(z+\\tfrac{1}{2}\\pi\\middle|\\tau\\right)=-iM\\theta_{1}\\left(z+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right)=iM\\theta_{2}\\left(z+\\tfrac{1}{2}\\pi+\\tfrac{1}{2}\\pi\\tau\\middle|\\tau\\right). \\tag{20.2.14}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Fourier series",
+                "Jacobi’s theta functions",
+                "classical theta functions",
+                "multidimensional",
+                "theta functions",
+                "fundamental parallelogram",
+                "lattice points",
+                "periodicity",
+                "quasi-periodicity",
+                "translation by half-periods",
+                "zeros"
+              ],
+              "definiciones": [
+                "$\\theta_{j}\\left(z,q\\right)$ : theta function and $\\theta_{j}\\left(z\\middle|\\tau\\right)$ : theta function"
+              ],
+              "simbolos": [
+                "$\\theta_{j}\\left(z,q\\right)$: theta function , $\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\sinz$: sine function , $n$: integer , $z$: complex , $\\tau$: lattice parameter and $q$: nome",
+                "$\\theta_{j}\\left(z,q\\right)$: theta function , $\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\cosz$: cosine function , $n$: integer , $z$: complex , $\\tau$: lattice parameter and $q$: nome",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathrm{e}$: base of natural logarithm , $\\mathrm{i}$: imaginary unit , $m$: integer , $n$: integer , $z$: complex , $\\tau$: lattice parameter and $q$: nome",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $z$: complex and $\\tau$: lattice parameter",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathrm{i}$: imaginary unit , $z$: complex , $\\tau$: lattice parameter and $M$",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $z$: complex , $\\tau$: lattice parameter and $M$"
+              ],
+              "referenciado_por": [
+                "§20.14",
+                "§21.2(iii)",
+                "§22.16(ii)",
+                "§22.2",
+                "§23.15(ii)",
+                "§23.17(ii)",
+                "§25.5(ii)",
+                "§27.13(iv)",
+                "§20.2(i)",
+                "§20.10(i)",
+                "§20.13",
+                "§23.6(i)",
+                "§20.2(ii)",
+                "§21.3(ii)",
+                "Erratum (V1.0.19) for Notation",
+                "§20.7(iv)"
+              ],
+              "notas_bibliograficas": [
+                "See Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 464) or Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), p. 5).",
+                "See Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 463) and Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), pp. 5, 6).",
+                "See Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 464) and Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), pp. 5, 6).",
+                "See Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 465) and Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), p. 6)."
+              ],
+              "referencias_abramowitz_stegun": [
+                "16.27.1",
+                "16.27.2",
+                "16.27.3",
+                "16.27.4",
+                "16.33.2 (in different notation)",
+                "16.33.3 (in different notation)",
+                "16.33.4 (in different notation)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.2 and Ch.20",
+                "Annotations for §20.2(i) , §20.2 and Ch.20",
+                "Annotations for §20.2(ii) , §20.2 and Ch.20",
+                "Annotations for §20.2(iii) , §20.2 and Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.3",
+          "titulo_original": "Graphics",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.3.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.3.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.3 Graphics",
+            "prosa_teorica": "<a id=\"F1\"></a>\n![Figure 20.3.1: $\\theta_{j}\\left(\\pi x,0.15\\right)$ , $0\\leq x\\leq 2$ , $j=1,2,3,4$ .](../html/20/3/F1.png)\n<a id=\"i.fig1\"></a>\n![Figure 20.3.2: $\\theta_{1}\\left(\\pi x,q\\right)$ , $0\\leq x\\leq 2$ , $q$ = 0.05, 0.5, 0.7, 0.9. For $q\\leq q^{\\text{Dedekind}}$ , $\\theta_{1}\\left(\\pi x,q\\right)$ is convex in $x$ for $0<x<1$ . Here $q^{\\text{Dedekind}}=e^{-\\pi y_{0}}=0.19$ approximately, where $y=y_{0}$ corresponds to the maximum value of Dedekind’s eta function $\\eta\\left(iy\\right)$ as depicted in Figure 23.16.1 .](../html/20/3/F2.png)\n<a id=\"i.fig2\"></a>\n![Figure 20.3.4: $\\theta_{3}\\left(\\pi x,q\\right)$ , $0\\leq x\\leq 2$ , $q$ = 0.05, 0.5, 0.7, 0.9.](../html/20/3/F4.png)\n<a id=\"i.fig3\"></a>\n![Figure 20.3.6: $\\theta_{1}\\left(x,q\\right)$ , $0\\leq q\\leq 1$ , $x$ = 0, 0.4, 5, 10, 40.](../html/20/3/F6.png)\n<a id=\"i.fig4\"></a>\n![Figure 20.3.8: $\\theta_{3}\\left(x,q\\right)$ , $0\\leq q\\leq 1$ , $x$ = 0, 0.4, 5, 10, 40.](../html/20/3/F8.png)\n<a id=\"i.fig5\"></a>\n![Figure 20.3.10: $\\theta_{1}\\left(\\pi x,q\\right)$ , $0\\leq x\\leq 2$ , $0\\leq q\\leq 0.99$ . 3D Help](../html/20/3/F10.png)\n<a id=\"i.fig6\"></a>\n![Figure 20.3.12: $\\theta_{3}\\left(\\pi x,q\\right)$ , $0\\leq x\\leq 2$ , $0\\leq q\\leq 0.99$ . 3D Help](../html/20/3/F12.png)\nIn the graphics shown in this subsection, height corresponds to the absolute value of the function and color to the phase. See also [About Color Map](./help/vrml/aboutcolor.md \"In Viewing DLMF Interactive 3D Graphics ‣ Need Help?\") .\n<a id=\"ii.fig1\"></a>\n![Figure 20.3.14: $\\theta_{1}\\left(\\pi x+iy,0.12\\right)$ , $-1\\leq x\\leq 1$ , $-1\\leq y\\leq 2.3$ . 3D Help](../html/20/3/F14.png)\n<a id=\"ii.fig2\"></a>\n![Figure 20.3.16: $\\theta_{3}\\left(\\pi x+iy,0.12\\right)$ , $-1\\leq x\\leq 1$ , $-1\\leq y\\leq 1.5$ . 3D Help](../html/20/3/F16.png)\nIn the graphics shown in this subsection, height corresponds to the absolute value of the function and color to the phase. See also [About Color Map](./help/vrml/aboutcolor.md \"In Viewing DLMF Interactive 3D Graphics ‣ Need Help?\") .\n<a id=\"iii.fig1\"></a>\n![Figure 20.3.18: $\\theta_{1}\\left(0.1\\middle|u+iv\\right)$ , $-1\\leq u\\leq 1$ , $0.005\\leq v\\leq 0.5$ . The value 0.1 of $z$ is chosen arbitrarily since $\\theta_{1}$ vanishes identically when $z=0$ . 3D Help](../html/20/3/F18.png)\n<a id=\"iii.fig2\"></a>\n![Figure 20.3.20: $\\theta_{3}\\left(0\\middle|u+iv\\right)$ , $-1\\leq u\\leq 1$ , $0.005\\leq v\\leq 0.1$ . 3D Help](../html/20/3/F20.png)",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "graphics",
+                "real variables",
+                "theta functions",
+                "Dedekind’s eta function",
+                "modular functions",
+                "relations to other functions",
+                "relations to theta functions",
+                "complex variables"
+              ],
+              "simbolos": [
+                "$\\theta_{j}\\left(z,q\\right)$: theta function and $\\pi$: the ratio of the circumference of a circle to its diameter",
+                "$\\eta\\left(\\tau\\right)$: Dedekind’s eta function (or Dedekind modular function) , $\\theta_{j}\\left(z,q\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathrm{e}$: base of natural logarithm , $\\mathrm{i}$: imaginary unit and $q$: nome",
+                "$\\theta_{j}\\left(z,q\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter and $q$: nome",
+                "$\\theta_{j}\\left(z,q\\right)$: theta function and $q$: nome",
+                "$\\theta_{j}\\left(z,q\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter and $\\mathrm{i}$: imaginary unit",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\mathrm{i}$: imaginary unit and $z$: complex",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function and $\\mathrm{i}$: imaginary unit"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.0.16) for Figure 20.3.1",
+                "Figure 23.16.1",
+                "[Figure 23.16.1](./23.16.F1.mag.md \"In §23.16 Graphics ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions\")"
+              ],
+              "notas_bibliograficas": [
+                "These graphics were produced at NIST.",
+                "These surfaces were produced at NIST.",
+                "These surfaces were produced at NIST."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.3 and Ch.20",
+                "Annotations for §20.3(i) , §20.3 and Ch.20",
+                "Annotations for §20.3(ii) , §20.3 and Ch.20",
+                "Annotations for §20.3(iii) , §20.3 and Ch.20"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Errata (effective with 1.0.16)",
+                  "descripcion": "The locations of the tick marks denoting $1.5$ and $2$ on the $x$ -axis were corrected. *Reported 2017-05-22 by Paul Abbott*"
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "Figure 23.16.1",
+                "archivo_destino": "23.16.F1.mag.md",
+                "titulo_referencia": "In §23.16 Graphics ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"
+              },
+              {
+                "texto": "About Color Map",
+                "archivo_destino": "help/vrml/aboutcolor.md",
+                "titulo_referencia": "In Viewing DLMF Interactive 3D Graphics ‣ Need Help?"
+              },
+              {
+                "texto": "About Color Map",
+                "archivo_destino": "help/vrml/aboutcolor.md",
+                "titulo_referencia": "In Viewing DLMF Interactive 3D Graphics ‣ Need Help?"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.4",
+          "titulo_original": "Values at $z$ = 0",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.4.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.4.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.4 Values at z = 0",
+            "prosa_teorica": "",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "20.4.1",
+                "latex": "\\theta_{1}\\left(0,q\\right)=\\theta_{2}'\\left(0,q\\right)=\\theta_{3}'\\left(0,q\\right)=\\theta_{4}'\\left(0,q\\right)=0, \\tag{20.4.1}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "20.4.2",
+                "latex": "\\displaystyle\\theta_{1}'\\left(0,q\\right) \\displaystyle=2q^{1/4}\\prod_{n=1}^{\\infty}\\left(1-q^{2n}\\right)^{3}=2q^{1/4}{\\left(q^{2};q^{2}\\right)_{\\infty}}^{3}, \\tag{20.4.2}"
+              },
+              {
+                "id": "",
+                "tag": "20.4.3",
+                "latex": "\\displaystyle\\theta_{2}\\left(0,q\\right) \\displaystyle=2q^{1/4}\\prod\\limits_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1+q^{2n}\\right)^{2}, \\tag{20.4.3}"
+              },
+              {
+                "id": "",
+                "tag": "20.4.4",
+                "latex": "\\displaystyle\\theta_{3}\\left(0,q\\right) \\displaystyle=\\prod\\limits_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1+q^{2n-1}\\right)^{2}, \\tag{20.4.4}"
+              },
+              {
+                "id": "",
+                "tag": "20.4.5",
+                "latex": "\\displaystyle\\theta_{4}\\left(0,q\\right) \\displaystyle=\\prod\\limits_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1-q^{2n-1}\\right)^{2}. \\tag{20.4.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "20.4.6",
+                "latex": "\\theta_{1}'\\left(0,q\\right)=\\theta_{2}\\left(0,q\\right)\\theta_{3}\\left(0,q\\right)\\theta_{4}\\left(0,q\\right). \\tag{20.4.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "20.4.7",
+                "latex": "\\theta_{1}''\\left(0,q\\right)=\\theta_{2}'''\\left(0,q\\right)=\\theta_{3}'''\\left(0,q\\right)=\\theta_{4}'''\\left(0,q\\right)=0. \\tag{20.4.7}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "20.4.8",
+                "latex": "\\displaystyle\\frac{\\theta_{1}'''\\left(0,q\\right)}{\\theta_{1}'\\left(0,q\\right)} \\displaystyle=-1+24\\sum_{n=1}^{\\infty}\\frac{q^{2n}}{(1-q^{2n})^{2}}. \\tag{20.4.8}"
+              },
+              {
+                "id": "",
+                "tag": "20.4.9",
+                "latex": "\\displaystyle\\frac{\\theta_{2}''\\left(0,q\\right)}{\\theta_{2}\\left(0,q\\right)} \\displaystyle=-1-8\\sum_{n=1}^{\\infty}\\frac{q^{2n}}{(1+q^{2n})^{2}}, \\tag{20.4.9}"
+              },
+              {
+                "id": "",
+                "tag": "20.4.10",
+                "latex": "\\displaystyle\\frac{\\theta_{3}''\\left(0,q\\right)}{\\theta_{3}\\left(0,q\\right)} \\displaystyle=-8\\sum_{n=1}^{\\infty}\\frac{q^{2n-1}}{(1+q^{2n-1})^{2}}, \\tag{20.4.10}"
+              },
+              {
+                "id": "",
+                "tag": "20.4.11",
+                "latex": "\\displaystyle\\frac{\\theta_{4}''\\left(0,q\\right)}{\\theta_{4}\\left(0,q\\right)} \\displaystyle=8\\sum_{n=1}^{\\infty}\\frac{q^{2n-1}}{(1-q^{2n-1})^{2}}. \\tag{20.4.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "20.4.12",
+                "latex": "\\frac{\\theta_{1}'''\\left(0,q\\right)}{\\theta_{1}'\\left(0,q\\right)}=\\frac{\\theta_{2}''\\left(0,q\\right)}{\\theta_{2}\\left(0,q\\right)}+\\frac{\\theta_{3}''\\left(0,q\\right)}{\\theta_{3}\\left(0,q\\right)}+\\frac{\\theta_{4}''\\left(0,q\\right)}{\\theta_{4}\\left(0,q\\right)}. \\tag{20.4.12}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\theta_{1}\\left(0,q\\right)=\\theta_{2}'\\left(0,q\\right)=\\theta_{3}'\\left(0,q\\right)=\\theta_{4}'\\left(0,q\\right)=0, \\tag{20.4.1}",
+              "\\displaystyle\\theta_{1}'\\left(0,q\\right) \\displaystyle=2q^{1/4}\\prod_{n=1}^{\\infty}\\left(1-q^{2n}\\right)^{3}=2q^{1/4}{\\left(q^{2};q^{2}\\right)_{\\infty}}^{3}, \\tag{20.4.2}",
+              "\\displaystyle\\theta_{2}\\left(0,q\\right) \\displaystyle=2q^{1/4}\\prod\\limits_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1+q^{2n}\\right)^{2}, \\tag{20.4.3}",
+              "\\displaystyle\\theta_{3}\\left(0,q\\right) \\displaystyle=\\prod\\limits_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1+q^{2n-1}\\right)^{2}, \\tag{20.4.4}",
+              "\\displaystyle\\theta_{4}\\left(0,q\\right) \\displaystyle=\\prod\\limits_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1-q^{2n-1}\\right)^{2}. \\tag{20.4.5}",
+              "\\theta_{1}'\\left(0,q\\right)=\\theta_{2}\\left(0,q\\right)\\theta_{3}\\left(0,q\\right)\\theta_{4}\\left(0,q\\right). \\tag{20.4.6}",
+              "\\theta_{1}''\\left(0,q\\right)=\\theta_{2}'''\\left(0,q\\right)=\\theta_{3}'''\\left(0,q\\right)=\\theta_{4}'''\\left(0,q\\right)=0. \\tag{20.4.7}",
+              "\\displaystyle\\frac{\\theta_{1}'''\\left(0,q\\right)}{\\theta_{1}'\\left(0,q\\right)} \\displaystyle=-1+24\\sum_{n=1}^{\\infty}\\frac{q^{2n}}{(1-q^{2n})^{2}}. \\tag{20.4.8}",
+              "\\displaystyle\\frac{\\theta_{2}''\\left(0,q\\right)}{\\theta_{2}\\left(0,q\\right)} \\displaystyle=-1-8\\sum_{n=1}^{\\infty}\\frac{q^{2n}}{(1+q^{2n})^{2}}, \\tag{20.4.9}",
+              "\\displaystyle\\frac{\\theta_{3}''\\left(0,q\\right)}{\\theta_{3}\\left(0,q\\right)} \\displaystyle=-8\\sum_{n=1}^{\\infty}\\frac{q^{2n-1}}{(1+q^{2n-1})^{2}}, \\tag{20.4.10}",
+              "\\displaystyle\\frac{\\theta_{4}''\\left(0,q\\right)}{\\theta_{4}\\left(0,q\\right)} \\displaystyle=8\\sum_{n=1}^{\\infty}\\frac{q^{2n-1}}{(1-q^{2n-1})^{2}}. \\tag{20.4.11}",
+              "\\frac{\\theta_{1}'''\\left(0,q\\right)}{\\theta_{1}'\\left(0,q\\right)}=\\frac{\\theta_{2}''\\left(0,q\\right)}{\\theta_{2}\\left(0,q\\right)}+\\frac{\\theta_{3}''\\left(0,q\\right)}{\\theta_{3}\\left(0,q\\right)}+\\frac{\\theta_{4}''\\left(0,q\\right)}{\\theta_{4}\\left(0,q\\right)}. \\tag{20.4.12}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "derivatives",
+                "theta functions",
+                "values at $z=0$",
+                "Jacobi’s identity",
+                "Jacobi’s triple product"
+              ],
+              "simbolos": [
+                "$\\theta_{j}\\left(z,q\\right)$: theta function , $\\left(a;q\\right)_{n}$: $q$-Pochhammer symbol (or $q$-shifted factorial) , $n$: integer and $q$: nome",
+                "$\\theta_{j}\\left(z,q\\right)$: theta function , $n$: integer and $q$: nome"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.0.28) for Equation (20.4.2)",
+                "(20.10.3)",
+                "(20.10.2)",
+                "(20.10.1)",
+                "§23.12"
+              ],
+              "notas_bibliograficas": [
+                "See Walker ([1996](./bib/W.html#bib2359 \"Elliptic Functions. A Constructive Approach\"), pp. 90–92), Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), pp. 470–471), and Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), pp. 12–15). Note that these are special cases of ( 20.5.1 )–( 20.5.4 ).",
+                "See Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 471)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.4 and Ch.20",
+                "Annotations for §20.4(i) , §20.4 and Ch.20",
+                "Annotations for §20.4(ii) , §20.4 and Ch.20"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.0.28)",
+                  "descripcion": "The representation in terms of ${\\left(q^{2};q^{2}\\right)_{\\infty}}^{3}$ was added to this equation."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/W.html#bib2359",
+                "titulo_referencia": "Elliptic Functions. A Constructive Approach"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.5",
+          "titulo_original": "Infinite Products and Related Results",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.5.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.5.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.5 Infinite Products and Related Results",
+            "prosa_teorica": "where $p=e^{i\\pi z}$ , $q=e^{i\\pi\\tau}$ .\nWhen $\\left|\\Im z\\right|<\\pi\\Im\\tau$ ,\nThe left-hand sides of ( 20.5.10 ) and ( 20.5.11 ) are replaced by their limiting values when $\\cot z$ or $\\tan z$ are undefined.\nWhen $\\left|\\Im z\\right|<\\tfrac{1}{2}\\pi\\Im\\tau$ ,\nWith the given conditions the infinite series in ( 20.5.10 )–( 20.5.13 ) converge absolutely and uniformly in compact sets in the $z$ -plane.\nThese double products are not absolutely convergent; hence the order of the limits is important. The order shown is in accordance with the Eisenstein convention (Walker ([1996](./bib/W.html#bib2359 \"Elliptic Functions. A Constructive Approach\"), §0.3)).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "20.5.1",
+                "latex": "\\theta_{1}\\left(z,q\\right)=2q^{1/4}\\sin z\\prod\\limits_{n=1}^{\\infty}{\\left(1-q^{2n}\\right)}{\\left(1-2q^{2n}\\cos\\left(2z\\right)+q^{4n}\\right)}, \\tag{20.5.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "20.5.2",
+                "latex": "\\theta_{2}\\left(z,q\\right)=2q^{1/4}\\cos z\\prod\\limits_{n=1}^{\\infty}{\\left(1-q^{2n}\\right)}{\\left(1+2q^{2n}\\cos\\left(2z\\right)+q^{4n}\\right)}, \\tag{20.5.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "20.5.3",
+                "latex": "\\theta_{3}\\left(z,q\\right)=\\prod\\limits_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1+2q^{2n-1}\\cos\\left(2z\\right)+q^{4n-2}\\right), \\tag{20.5.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "20.5.4",
+                "latex": "\\theta_{4}\\left(z,q\\right)=\\prod\\limits_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1-2q^{2n-1}\\cos\\left(2z\\right)+q^{4n-2}\\right). \\tag{20.5.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "20.5.5",
+                "latex": "\\theta_{1}\\left(z\\middle|\\tau\\right)=\\theta_{1}'\\left(0\\middle|\\tau\\right)\\sin\nz\\prod_{n=1}^{\\infty}\\frac{\\sin\\left(n\\pi\\tau+z\\right)\\sin\\left(n\\pi\\tau-z\\right)}{{\\sin}^{2}\\left(n\\pi\\tau\\right)}, \\tag{20.5.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "20.5.6",
+                "latex": "\\theta_{2}\\left(z\\middle|\\tau\\right)=\\theta_{2}\\left(0\\middle|\\tau\\right)\\cos z\\prod_{n=1}^{\\infty}\\frac{\\cos\\left(n\\pi\\tau+z\\right)\\cos\\left(n\\pi\\tau-z\\right)}{{\\cos}^{2}\\left(n\\pi\\tau\\right)}, \\tag{20.5.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "20.5.7",
+                "latex": "\\theta_{3}\\left(z\\middle|\\tau\\right)=\\theta_{3}\\left(0\\middle|\\tau\\right)\\prod_{n=1}^{\\infty}\\frac{\\cos\\left((n-\\tfrac{1}{2})\\pi\\tau+z\\right)\\cos\\left((n-\\tfrac{1}{2})\\pi\\tau-z\\right)}{{\\cos}^{2}\\left((n-\\tfrac{1}{2})\\pi\\tau\\right)}, \\tag{20.5.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "20.5.8",
+                "latex": "\\theta_{4}\\left(z\\middle|\\tau\\right)=\\theta_{4}\\left(0\\middle|\\tau\\right)\\prod_{n=1}^{\\infty}\\frac{\\sin\\left((n-\\tfrac{1}{2})\\pi\\tau+z\\right)\\sin\\left((n-\\tfrac{1}{2})\\pi\\tau-z\\right)}{{\\sin}^{2}\\left((n-\\tfrac{1}{2})\\pi\\tau\\right)}. \\tag{20.5.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "20.5.9",
+                "latex": "\\theta_{3}\\left(\\pi z\\middle|\\tau\\right)=\\sum_{n=-\\infty}^{\\infty}p^{2n}q^{n^{2}}\\\\\n=\\prod_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1+q^{2n-1}p^{2}\\right)\\left(1+q^{2n-1}p^{-2}\\right), \\tag{20.5.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "20.5.10",
+                "latex": "\\frac{\\theta_{1}'\\left(z,q\\right)}{\\theta_{1}\\left(z,q\\right)}-\\cot z=4\\sin\\left(2z\\right)\\sum_{n=1}^{\\infty}\\frac{q^{2n}}{1-2q^{2n}\\cos\\left(2z\\right)+q^{4n}}=4\\sum_{n=1}^{\\infty}\\frac{q^{2n}}{1-q^{2n}}\\sin\\left(2nz\\right), \\tag{20.5.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "20.5.11",
+                "latex": "\\frac{\\theta_{2}'\\left(z,q\\right)}{\\theta_{2}\\left(z,q\\right)}+\\tan z=-4\\sin\\left(2z\\right)\\sum_{n=1}^{\\infty}\\frac{q^{2n}}{1+2q^{2n}\\cos\\left(2z\\right)+q^{4n}}=4\\sum_{n=1}^{\\infty}(-1)^{n}\\frac{q^{2n}}{1-q^{2n}}\\sin\\left(2nz\\right). \\tag{20.5.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "20.5.12",
+                "latex": "\\frac{\\theta_{3}'\\left(z,q\\right)}{\\theta_{3}\\left(z,q\\right)}=-4\\sin\\left(2z\\right)\\sum_{n=1}^{\\infty}\\frac{q^{2n-1}}{1+2q^{2n-1}\\cos\\left(2z\\right)+q^{4n-2}}=4\\sum_{n=1}^{\\infty}(-1)^{n}\\frac{q^{n}}{1-q^{2n}}\\sin\\left(2nz\\right), \\tag{20.5.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "20.5.13",
+                "latex": "\\frac{\\theta_{4}'\\left(z,q\\right)}{\\theta_{4}\\left(z,q\\right)}=4\\sin\\left(2z\\right)\\sum_{n=1}^{\\infty}\\frac{q^{2n-1}}{1-2q^{2n-1}\\cos\\left(2z\\right)+q^{4n-2}}=4\\sum_{n=1}^{\\infty}\\frac{q^{n}}{1-q^{2n}}\\sin\\left(2nz\\right). \\tag{20.5.13}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "20.5.14",
+                "latex": "\\displaystyle\\theta_{1}\\left(z\\middle|\\tau\\right) \\displaystyle=z\\theta_{1}'\\left(0\\middle|\\tau\\right)\\,\\lim_{N\\to\\infty}\\prod_{n=-N}^{N}\\lim_{M\\to\\infty}\\prod_{\\begin{subarray}{c}m=-M\\\\\n\\left|m\\right|+\\left|n\\right|\\neq 0\\end{subarray}}^{M}\\left(1+\\frac{z}{(m+n\\tau)\\pi}\\right), \\tag{20.5.14}"
+              },
+              {
+                "id": "",
+                "tag": "20.5.15",
+                "latex": "\\displaystyle\\theta_{2}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{2}\\left(0\\middle|\\tau\\right)\\,\\lim_{N\\to\\infty}\\prod_{n=-N}^{N}\\lim_{M\\to\\infty}\\prod_{m=1-M}^{M}\\left(1+\\frac{z}{(m-\\tfrac{1}{2}+n\\tau)\\pi}\\right), \\tag{20.5.15}"
+              },
+              {
+                "id": "",
+                "tag": "20.5.16",
+                "latex": "\\displaystyle\\theta_{3}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{3}\\left(0\\middle|\\tau\\right)\\,\\lim_{N\\to\\infty}\\prod_{n=1-N}^{N}\\lim_{M\\to\\infty}\\prod_{m=1-M}^{M}\\left(1+\\frac{z}{(m-\\tfrac{1}{2}+(n-\\tfrac{1}{2})\\tau)\\pi}\\right), \\tag{20.5.16}"
+              },
+              {
+                "id": "",
+                "tag": "20.5.17",
+                "latex": "\\displaystyle\\theta_{4}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{4}\\left(0\\middle|\\tau\\right)\\,\\lim_{N\\to\\infty}\\prod_{n=1-N}^{N}\\lim_{M\\to\\infty}\\prod_{m=-M}^{M}\\left(1+\\frac{z}{(m+(n-\\tfrac{1}{2})\\tau)\\pi}\\right). \\tag{20.5.17}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\theta_{1}\\left(z,q\\right)=2q^{1/4}\\sin z\\prod\\limits_{n=1}^{\\infty}{\\left(1-q^{2n}\\right)}{\\left(1-2q^{2n}\\cos\\left(2z\\right)+q^{4n}\\right)}, \\tag{20.5.1}",
+              "\\theta_{2}\\left(z,q\\right)=2q^{1/4}\\cos z\\prod\\limits_{n=1}^{\\infty}{\\left(1-q^{2n}\\right)}{\\left(1+2q^{2n}\\cos\\left(2z\\right)+q^{4n}\\right)}, \\tag{20.5.2}",
+              "\\theta_{3}\\left(z,q\\right)=\\prod\\limits_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1+2q^{2n-1}\\cos\\left(2z\\right)+q^{4n-2}\\right), \\tag{20.5.3}",
+              "\\theta_{4}\\left(z,q\\right)=\\prod\\limits_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1-2q^{2n-1}\\cos\\left(2z\\right)+q^{4n-2}\\right). \\tag{20.5.4}",
+              "\\theta_{1}\\left(z\\middle|\\tau\\right)=\\theta_{1}'\\left(0\\middle|\\tau\\right)\\sin\nz\\prod_{n=1}^{\\infty}\\frac{\\sin\\left(n\\pi\\tau+z\\right)\\sin\\left(n\\pi\\tau-z\\right)}{{\\sin}^{2}\\left(n\\pi\\tau\\right)}, \\tag{20.5.5}",
+              "\\theta_{2}\\left(z\\middle|\\tau\\right)=\\theta_{2}\\left(0\\middle|\\tau\\right)\\cos z\\prod_{n=1}^{\\infty}\\frac{\\cos\\left(n\\pi\\tau+z\\right)\\cos\\left(n\\pi\\tau-z\\right)}{{\\cos}^{2}\\left(n\\pi\\tau\\right)}, \\tag{20.5.6}",
+              "\\theta_{3}\\left(z\\middle|\\tau\\right)=\\theta_{3}\\left(0\\middle|\\tau\\right)\\prod_{n=1}^{\\infty}\\frac{\\cos\\left((n-\\tfrac{1}{2})\\pi\\tau+z\\right)\\cos\\left((n-\\tfrac{1}{2})\\pi\\tau-z\\right)}{{\\cos}^{2}\\left((n-\\tfrac{1}{2})\\pi\\tau\\right)}, \\tag{20.5.7}",
+              "\\theta_{4}\\left(z\\middle|\\tau\\right)=\\theta_{4}\\left(0\\middle|\\tau\\right)\\prod_{n=1}^{\\infty}\\frac{\\sin\\left((n-\\tfrac{1}{2})\\pi\\tau+z\\right)\\sin\\left((n-\\tfrac{1}{2})\\pi\\tau-z\\right)}{{\\sin}^{2}\\left((n-\\tfrac{1}{2})\\pi\\tau\\right)}. \\tag{20.5.8}",
+              "\\theta_{3}\\left(\\pi z\\middle|\\tau\\right)=\\sum_{n=-\\infty}^{\\infty}p^{2n}q^{n^{2}}\\\\\n=\\prod_{n=1}^{\\infty}\\left(1-q^{2n}\\right)\\left(1+q^{2n-1}p^{2}\\right)\\left(1+q^{2n-1}p^{-2}\\right), \\tag{20.5.9}",
+              "\\frac{\\theta_{1}'\\left(z,q\\right)}{\\theta_{1}\\left(z,q\\right)}-\\cot z=4\\sin\\left(2z\\right)\\sum_{n=1}^{\\infty}\\frac{q^{2n}}{1-2q^{2n}\\cos\\left(2z\\right)+q^{4n}}=4\\sum_{n=1}^{\\infty}\\frac{q^{2n}}{1-q^{2n}}\\sin\\left(2nz\\right), \\tag{20.5.10}",
+              "\\frac{\\theta_{2}'\\left(z,q\\right)}{\\theta_{2}\\left(z,q\\right)}+\\tan z=-4\\sin\\left(2z\\right)\\sum_{n=1}^{\\infty}\\frac{q^{2n}}{1+2q^{2n}\\cos\\left(2z\\right)+q^{4n}}=4\\sum_{n=1}^{\\infty}(-1)^{n}\\frac{q^{2n}}{1-q^{2n}}\\sin\\left(2nz\\right). \\tag{20.5.11}",
+              "\\frac{\\theta_{3}'\\left(z,q\\right)}{\\theta_{3}\\left(z,q\\right)}=-4\\sin\\left(2z\\right)\\sum_{n=1}^{\\infty}\\frac{q^{2n-1}}{1+2q^{2n-1}\\cos\\left(2z\\right)+q^{4n-2}}=4\\sum_{n=1}^{\\infty}(-1)^{n}\\frac{q^{n}}{1-q^{2n}}\\sin\\left(2nz\\right), \\tag{20.5.12}",
+              "\\frac{\\theta_{4}'\\left(z,q\\right)}{\\theta_{4}\\left(z,q\\right)}=4\\sin\\left(2z\\right)\\sum_{n=1}^{\\infty}\\frac{q^{2n-1}}{1-2q^{2n-1}\\cos\\left(2z\\right)+q^{4n-2}}=4\\sum_{n=1}^{\\infty}\\frac{q^{n}}{1-q^{2n}}\\sin\\left(2nz\\right). \\tag{20.5.13}",
+              "\\displaystyle\\theta_{1}\\left(z\\middle|\\tau\\right) \\displaystyle=z\\theta_{1}'\\left(0\\middle|\\tau\\right)\\,\\lim_{N\\to\\infty}\\prod_{n=-N}^{N}\\lim_{M\\to\\infty}\\prod_{\\begin{subarray}{c}m=-M\\\\\n\\left|m\\right|+\\left|n\\right|\\neq 0\\end{subarray}}^{M}\\left(1+\\frac{z}{(m+n\\tau)\\pi}\\right), \\tag{20.5.14}",
+              "\\displaystyle\\theta_{2}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{2}\\left(0\\middle|\\tau\\right)\\,\\lim_{N\\to\\infty}\\prod_{n=-N}^{N}\\lim_{M\\to\\infty}\\prod_{m=1-M}^{M}\\left(1+\\frac{z}{(m-\\tfrac{1}{2}+n\\tau)\\pi}\\right), \\tag{20.5.15}",
+              "\\displaystyle\\theta_{3}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{3}\\left(0\\middle|\\tau\\right)\\,\\lim_{N\\to\\infty}\\prod_{n=1-N}^{N}\\lim_{M\\to\\infty}\\prod_{m=1-M}^{M}\\left(1+\\frac{z}{(m-\\tfrac{1}{2}+(n-\\tfrac{1}{2})\\tau)\\pi}\\right), \\tag{20.5.16}",
+              "\\displaystyle\\theta_{4}\\left(z\\middle|\\tau\\right) \\displaystyle=\\theta_{4}\\left(0\\middle|\\tau\\right)\\,\\lim_{N\\to\\infty}\\prod_{n=1-N}^{N}\\lim_{M\\to\\infty}\\prod_{m=-M}^{M}\\left(1+\\frac{z}{(m+(n-\\tfrac{1}{2})\\tau)\\pi}\\right). \\tag{20.5.17}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "infinite products",
+                "theta functions",
+                "Jacobi’s triple product",
+                "derivatives",
+                "double products"
+              ],
+              "simbolos": [
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $m$: integer , $n$: integer , $z$: complex and $\\tau$: lattice parameter"
+              ],
+              "referenciado_por": [
+                "§17.3(iv)",
+                "§22.12",
+                "§20.6"
+              ],
+              "notas_bibliograficas": [
+                "See Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), p. 15) for ( 20.5.1 )–( 20.5.4 ), and Walker ([1996](./bib/W.html#bib2359 \"Elliptic Functions. A Constructive Approach\"), pp. 87–92) for ( 20.5.5 )–( 20.5.9 ).",
+                "See Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), p. 22), Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 471), and Bellman ([1961](./bib/B.html#bib231 \"A Brief Introduction to Theta Functions\"), p. 44).",
+                "These relations follow from equations ( 20.5.5 ) – ( 20.5.8 ) by use of the infinite products for the sine and cosine (§ [4.22](./4.22.md \"§4.22 Infinite Products and Partial Fractions ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions\") )."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.5 and Ch.20",
+                "Annotations for §20.5(i) , §20.5 and Ch.20",
+                "Annotations for §20.5(iii) , §20.5 and Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/W.html#bib2359",
+                "titulo_referencia": "Elliptic Functions. A Constructive Approach"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1961",
+                "archivo_destino": "bib/B.html#bib231",
+                "titulo_referencia": "A Brief Introduction to Theta Functions"
+              },
+              {
+                "texto": "4.22",
+                "archivo_destino": "4.22.md",
+                "titulo_referencia": "§4.22 Infinite Products and Partial Fractions ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/W.html#bib2359",
+                "titulo_referencia": "Elliptic Functions. A Constructive Approach"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.6",
+          "titulo_original": "Power Series",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.6.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.6.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.6 Power Series",
+            "prosa_teorica": "Assume\nwhere $z_{m,n}$ is given by ( 20.2.5 ) and the minimum is for $m,n\\in\\mathbb{Z}$ , except $m=n=0$ . Then\nHere the coefficients are given by\nand satisfy\n<a id=\"E10\"></a>\nIn the double series the order of summation is important only when $j=1$ . For further information on $\\delta_{2j}$ see § [23.9](./23.9.md \"§23.9 Laurent and Other Power Series ‣ Weierstrass Elliptic Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions\") : since the double sums in ( 20.6.6 ) and ( 23.9.1 ) are the same, we have $\\delta_{2n}=c_{n}/(2n-1)$ when $n\\geq 2$ .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "20.6.1",
+                "latex": "\\left|\\pi z\\right|<\\min\\left|z_{m,n}\\right|, \\tag{20.6.1}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "20.6.2",
+                "latex": "\\displaystyle\\theta_{1}\\left(\\pi z\\middle|\\tau\\right) \\displaystyle=\\pi z\\theta_{1}'\\left(0\\middle|\\tau\\right)\\exp\\left(-\\sum_{j=1}^{\\infty}\\frac{1}{2j}\\delta_{2j}(\\tau)z^{2j}\\right), \\tag{20.6.2}"
+              },
+              {
+                "id": "",
+                "tag": "20.6.3",
+                "latex": "\\displaystyle\\theta_{2}\\left(\\pi z\\middle|\\tau\\right) \\displaystyle=\\theta_{2}\\left(0\\middle|\\tau\\right)\\exp\\left(-\\sum_{j=1}^{\\infty}\\frac{1}{2j}\\alpha_{2j}(\\tau)z^{2j}\\right), \\tag{20.6.3}"
+              },
+              {
+                "id": "",
+                "tag": "20.6.4",
+                "latex": "\\displaystyle\\theta_{3}\\left(\\pi z\\middle|\\tau\\right) \\displaystyle=\\theta_{3}\\left(0\\middle|\\tau\\right)\\exp\\left(-\\sum_{j=1}^{\\infty}\\frac{1}{2j}\\beta_{2j}(\\tau)z^{2j}\\right), \\tag{20.6.4}"
+              },
+              {
+                "id": "",
+                "tag": "20.6.5",
+                "latex": "\\displaystyle\\theta_{4}\\left(\\pi z\\middle|\\tau\\right) \\displaystyle=\\theta_{4}\\left(0\\middle|\\tau\\right)\\exp\\left(-\\sum_{j=1}^{\\infty}\\frac{1}{2j}\\gamma_{2j}(\\tau)z^{2j}\\right). \\tag{20.6.5}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "20.6.6",
+                "latex": "\\displaystyle\\delta_{2j}(\\tau) \\displaystyle=\\left.\\sum_{n=-\\infty}^{\\infty}\\sum_{\\begin{subarray}{c}m=-\\infty\\\\\n\\left|m\\right|+\\left|n\\right|\\neq 0\\end{subarray}}^{\\infty}\\right.(m+n\\tau)^{-2j}, \\tag{20.6.6}"
+              },
+              {
+                "id": "",
+                "tag": "20.6.7",
+                "latex": "\\displaystyle\\alpha_{2j}(\\tau) \\displaystyle=\\sum_{n=-\\infty}^{\\infty}\\sum_{m=-\\infty}^{\\infty}(m-\\tfrac{1}{2}+n\\tau)^{-2j}, \\tag{20.6.7}"
+              },
+              {
+                "id": "",
+                "tag": "20.6.8",
+                "latex": "\\displaystyle\\beta_{2j}(\\tau) \\displaystyle=\\sum_{n=-\\infty}^{\\infty}\\sum_{m=-\\infty}^{\\infty}(m-\\tfrac{1}{2}+(n-\\tfrac{1}{2})\\tau)^{-2j}, \\tag{20.6.8}"
+              },
+              {
+                "id": "",
+                "tag": "20.6.9",
+                "latex": "\\displaystyle\\gamma_{2j}(\\tau) \\displaystyle=\\sum_{n=-\\infty}^{\\infty}\\sum_{m=-\\infty}^{\\infty}(m+(n-\\tfrac{1}{2})\\tau)^{-2j}, \\tag{20.6.9}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "20.6.10",
+                "latex": "\\displaystyle\\alpha_{2j}(\\tau) \\displaystyle=2^{2j}\\delta_{2j}(2\\tau)-\\delta_{2j}(\\tau), \\tag{20.6.10}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle\\beta_{2j}(\\tau) \\displaystyle=2^{2j}\\gamma_{2j}(2\\tau)-\\gamma_{2j}(\\tau)."
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\left|\\pi z\\right|<\\min\\left|z_{m,n}\\right|, \\tag{20.6.1}",
+              "\\displaystyle\\theta_{1}\\left(\\pi z\\middle|\\tau\\right) \\displaystyle=\\pi z\\theta_{1}'\\left(0\\middle|\\tau\\right)\\exp\\left(-\\sum_{j=1}^{\\infty}\\frac{1}{2j}\\delta_{2j}(\\tau)z^{2j}\\right), \\tag{20.6.2}",
+              "\\displaystyle\\theta_{2}\\left(\\pi z\\middle|\\tau\\right) \\displaystyle=\\theta_{2}\\left(0\\middle|\\tau\\right)\\exp\\left(-\\sum_{j=1}^{\\infty}\\frac{1}{2j}\\alpha_{2j}(\\tau)z^{2j}\\right), \\tag{20.6.3}",
+              "\\displaystyle\\theta_{3}\\left(\\pi z\\middle|\\tau\\right) \\displaystyle=\\theta_{3}\\left(0\\middle|\\tau\\right)\\exp\\left(-\\sum_{j=1}^{\\infty}\\frac{1}{2j}\\beta_{2j}(\\tau)z^{2j}\\right), \\tag{20.6.4}",
+              "\\displaystyle\\theta_{4}\\left(\\pi z\\middle|\\tau\\right) \\displaystyle=\\theta_{4}\\left(0\\middle|\\tau\\right)\\exp\\left(-\\sum_{j=1}^{\\infty}\\frac{1}{2j}\\gamma_{2j}(\\tau)z^{2j}\\right). \\tag{20.6.5}",
+              "\\displaystyle\\delta_{2j}(\\tau) \\displaystyle=\\left.\\sum_{n=-\\infty}^{\\infty}\\sum_{\\begin{subarray}{c}m=-\\infty\\\\\n\\left|m\\right|+\\left|n\\right|\\neq 0\\end{subarray}}^{\\infty}\\right.(m+n\\tau)^{-2j}, \\tag{20.6.6}",
+              "\\displaystyle\\alpha_{2j}(\\tau) \\displaystyle=\\sum_{n=-\\infty}^{\\infty}\\sum_{m=-\\infty}^{\\infty}(m-\\tfrac{1}{2}+n\\tau)^{-2j}, \\tag{20.6.7}",
+              "\\displaystyle\\beta_{2j}(\\tau) \\displaystyle=\\sum_{n=-\\infty}^{\\infty}\\sum_{m=-\\infty}^{\\infty}(m-\\tfrac{1}{2}+(n-\\tfrac{1}{2})\\tau)^{-2j}, \\tag{20.6.8}",
+              "\\displaystyle\\gamma_{2j}(\\tau) \\displaystyle=\\sum_{n=-\\infty}^{\\infty}\\sum_{m=-\\infty}^{\\infty}(m+(n-\\tfrac{1}{2})\\tau)^{-2j}, \\tag{20.6.9}",
+              "\\displaystyle\\alpha_{2j}(\\tau) \\displaystyle=2^{2j}\\delta_{2j}(2\\tau)-\\delta_{2j}(\\tau), \\tag{20.6.10}",
+              "\\displaystyle\\beta_{2j}(\\tau) \\displaystyle=2^{2j}\\gamma_{2j}(2\\tau)-\\gamma_{2j}(\\tau)."
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "power series",
+                "theta functions"
+              ],
+              "definiciones": [
+                "$\\delta_{2j}(\\tau)$ : coefficient (locally)",
+                "$\\alpha_{2j}(\\tau)$ : coefficient (locally)",
+                "$\\beta_{2j}(\\tau)$ : coefficient (locally)",
+                "$\\gamma_{2j}(\\tau)$ : coefficient (locally)"
+              ],
+              "simbolos": [
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\expz$: exponential function , $z$: complex , $\\tau$: lattice parameter and $\\delta_{2j}(\\tau)$: coefficient",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\expz$: exponential function , $z$: complex , $\\tau$: lattice parameter and $\\alpha_{2j}(\\tau)$: coefficient",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\expz$: exponential function , $z$: complex , $\\tau$: lattice parameter and $\\beta_{2j}(\\tau)$: coefficient",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\expz$: exponential function , $z$: complex , $\\tau$: lattice parameter and $\\gamma_{2j}(\\tau)$: coefficient",
+                "$m$: integer , $n$: integer and $\\tau$: lattice parameter",
+                "$\\tau$: lattice parameter , $\\delta_{2j}(\\tau)$: coefficient , $\\alpha_{2j}(\\tau)$: coefficient , $\\beta_{2j}(\\tau)$: coefficient and $\\gamma_{2j}(\\tau)$: coefficient"
+              ],
+              "referenciado_por": [
+                "§20.6"
+              ],
+              "notas_bibliograficas": [
+                "See Walker ([1996](./bib/W.html#bib2359 \"Elliptic Functions. A Constructive Approach\"), §3.2) and § [23.9](./23.9.md \"§23.9 Laurent and Other Power Series ‣ Weierstrass Elliptic Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions\") . ( 20.6.2 )–( 20.6.5 ) may be derived by termwise expansion in ( 20.5.14 )–( 20.5.17 ). ( 20.6.10 ) may be derived from ( 20.6.6 ) and ( 20.6.8 ) by subtraction of terms with even $j$ , in a similar manner to $\\sum_{n=1}^{\\infty}(-1)^{n-1}n^{-j}=(1-2^{1-j})\\sum_{n=1}^{\\infty}n^{-j}$ ."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.6 and Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/W.html#bib2359",
+                "titulo_referencia": "Elliptic Functions. A Constructive Approach"
+              },
+              {
+                "texto": "23.9",
+                "archivo_destino": "23.9.md",
+                "titulo_referencia": "§23.9 Laurent and Other Power Series ‣ Weierstrass Elliptic Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"
+              },
+              {
+                "texto": "23.9",
+                "archivo_destino": "23.9.md",
+                "titulo_referencia": "§23.9 Laurent and Other Power Series ‣ Weierstrass Elliptic Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.7",
+          "titulo_original": "Identities",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.7.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.7.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.7 Identities",
+            "prosa_teorica": "Also\nSee also Carlson ([2011](./bib/C.html#bib2789 \"Permutation symmetry for theta functions\"), §2).\nFor these and similar formulas see Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), §1.4), Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), pp. 487–488), and Carlson ([2011](./bib/C.html#bib2789 \"Permutation symmetry for theta functions\"), §5).\nAlso, in further development along the lines of the notations of Neville (§ [20.1](./20.1.md \"§20.1 Special Notation ‣ Notation ‣ Chapter 20 Theta Functions\") ) and of Glaisher (§ [22.2](./22.2.md \"§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions\") ), the identities ( 20.7.6 )–( 20.7.9 ) have been recast in a more symmetric manner with respect to suffices $2,3,4$ . The symmetry, applicable also to §§ 20.7(iii) and 20.7(vii) , is obtained by modifying traditional theta functions in the manner recommended by Carlson ([2011](./bib/C.html#bib2789 \"Permutation symmetry for theta functions\")) and used for further purposes by Fukushima ([2012](./bib/F.html#bib2754 \"Series expansions of symmetric elliptic integrals\")).\nSee also Carlson ([2011](./bib/C.html#bib2789 \"Permutation symmetry for theta functions\"), §§1 and 4).\nAddendum: For a companion equation see ( 20.7.34 ).\nWith\nNext, with\nSee Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), pp. 19–20). This reference also gives the eleven additional identities for the permutations of the four theta functions.\nSee also Carlson ([2011](./bib/C.html#bib2789 \"Permutation symmetry for theta functions\"), §3).\nIn the following equations $\\tau^{\\prime}=-1/\\tau$ , and all square roots assume their principal values.\nThese are specific examples of modular transformations as discussed in § [23.15](./23.15.md \"§23.15 Definitions ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions\") ; the corresponding results for the general case are given by Rademacher ([1973](./bib/R.html#bib1917 \"Topics in Analytic Number Theory\"), pp. 181–183).\nSee also ( 20.7.11 ) and ( 20.7.12 ).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "20.7.1",
+                "latex": "{\\theta_{3}}^{2}\\left(0,q\\right){\\theta_{3}}^{2}\\left(z,q\\right)={\\theta_{4}}^{2}\\left(0,q\\right){\\theta_{4}}^{2}\\left(z,q\\right)+{\\theta_{2}}^{2}\\left(0,q\\right){\\theta_{2}}^{2}\\left(z,q\\right), \\tag{20.7.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "20.7.2",
+                "latex": "{\\theta_{3}}^{2}\\left(0,q\\right){\\theta_{4}}^{2}\\left(z,q\\right)={\\theta_{2}}^{2}\\left(0,q\\right){\\theta_{1}}^{2}\\left(z,q\\right)+{\\theta_{4}}^{2}\\left(0,q\\right){\\theta_{3}}^{2}\\left(z,q\\right), \\tag{20.7.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "20.7.3",
+                "latex": "{\\theta_{2}}^{2}\\left(0,q\\right){\\theta_{4}}^{2}\\left(z,q\\right)={\\theta_{3}}^{2}\\left(0,q\\right){\\theta_{1}}^{2}\\left(z,q\\right)+{\\theta_{4}}^{2}\\left(0,q\\right){\\theta_{2}}^{2}\\left(z,q\\right), \\tag{20.7.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "20.7.4",
+                "latex": "{\\theta_{2}}^{2}\\left(0,q\\right){\\theta_{3}}^{2}\\left(z,q\\right)={\\theta_{4}}^{2}\\left(0,q\\right){\\theta_{1}}^{2}\\left(z,q\\right)+{\\theta_{3}}^{2}\\left(0,q\\right){\\theta_{2}}^{2}\\left(z,q\\right). \\tag{20.7.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "20.7.5",
+                "latex": "{\\theta_{3}}^{4}\\left(0,q\\right)={\\theta_{2}}^{4}\\left(0,q\\right)+{\\theta_{4}}^{4}\\left(0,q\\right). \\tag{20.7.5}"
+              },
+              {
+                "id": "E6",
+                "tag": "20.7.6",
+                "latex": "{\\theta_{4}}^{2}\\left(0,q\\right)\\theta_{1}\\left(w+z,q\\right)\\theta_{1}\\left(w-z,q\\right)={\\theta_{3}}^{2}\\left(w,q\\right){\\theta_{2}}^{2}\\left(z,q\\right)-{\\theta_{2}}^{2}\\left(w,q\\right){\\theta_{3}}^{2}\\left(z,q\\right), \\tag{20.7.6}"
+              },
+              {
+                "id": "E7",
+                "tag": "20.7.7",
+                "latex": "{\\theta_{4}}^{2}\\left(0,q\\right)\\theta_{2}\\left(w+z,q\\right)\\theta_{2}\\left(w-z,q\\right)={\\theta_{4}}^{2}\\left(w,q\\right){\\theta_{2}}^{2}\\left(z,q\\right)-{\\theta_{1}}^{2}\\left(w,q\\right){\\theta_{3}}^{2}\\left(z,q\\right), \\tag{20.7.7}"
+              },
+              {
+                "id": "E8",
+                "tag": "20.7.8",
+                "latex": "{\\theta_{4}}^{2}\\left(0,q\\right)\\theta_{3}\\left(w+z,q\\right)\\theta_{3}\\left(w-z,q\\right)={\\theta_{4}}^{2}\\left(w,q\\right){\\theta_{3}}^{2}\\left(z,q\\right)-{\\theta_{1}}^{2}\\left(w,q\\right){\\theta_{2}}^{2}\\left(z,q\\right), \\tag{20.7.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "20.7.9",
+                "latex": "{\\theta_{4}}^{2}\\left(0,q\\right)\\theta_{4}\\left(w+z,q\\right)\\theta_{4}\\left(w-z,q\\right)={\\theta_{3}}^{2}\\left(w,q\\right){\\theta_{3}}^{2}\\left(z,q\\right)-{\\theta_{2}}^{2}\\left(w,q\\right){\\theta_{2}}^{2}\\left(z,q\\right). \\tag{20.7.9}"
+              },
+              {
+                "id": "E10",
+                "tag": "20.7.10",
+                "latex": "\\theta_{1}\\left(2z,q\\right)=2\\frac{\\theta_{1}\\left(z,q\\right)\\theta_{2}\\left(z,q\\right)\\theta_{3}\\left(z,q\\right)\\theta_{4}\\left(z,q\\right)}{\\theta_{2}\\left(0,q\\right)\\theta_{3}\\left(0,q\\right)\\theta_{4}\\left(0,q\\right)}. \\tag{20.7.10}"
+              },
+              {
+                "id": "E11",
+                "tag": "20.7.11",
+                "latex": "\\frac{\\theta_{1}\\left(z,q\\right)\\theta_{2}\\left(z,q\\right)}{\\theta_{1}\\left(2z,q^{2}\\right)}=\\frac{\\theta_{3}\\left(z,q\\right)\\theta_{4}\\left(z,q\\right)}{\\theta_{4}\\left(2z,q^{2}\\right)}=\\theta_{4}\\left(0,q^{2}\\right), \\tag{20.7.11}"
+              },
+              {
+                "id": "E12",
+                "tag": "20.7.12",
+                "latex": "\\frac{\\theta_{1}\\left(z,q^{2}\\right)\\theta_{4}\\left(z,q^{2}\\right)}{\\theta_{1}\\left(z,q\\right)}=\\frac{\\theta_{2}\\left(z,q^{2}\\right)\\theta_{3}\\left(z,q^{2}\\right)}{\\theta_{2}\\left(z,q\\right)}=\\tfrac{1}{2}\\theta_{2}\\left(0,q\\right). \\tag{20.7.12}"
+              },
+              {
+                "id": "E13",
+                "tag": "20.7.13",
+                "latex": "\\theta_{1}\\left(z,q\\right)\\theta_{1}\\left(w,q\\right)=\\theta_{3}\\left(z+w,q^{2}\\right)\\theta_{2}\\left(z-w,q^{2}\\right)-\\theta_{2}\\left(z+w,q^{2}\\right)\\theta_{3}\\left(z-w,q^{2}\\right), \\tag{20.7.13}"
+              },
+              {
+                "id": "E14",
+                "tag": "20.7.14",
+                "latex": "\\theta_{3}\\left(z,q\\right)\\theta_{3}\\left(w,q\\right)=\\theta_{3}\\left(z+w,q^{2}\\right)\\theta_{3}\\left(z-w,q^{2}\\right)+\\theta_{2}\\left(z+w,q^{2}\\right)\\theta_{2}\\left(z-w,q^{2}\\right). \\tag{20.7.14}"
+              },
+              {
+                "id": "E15",
+                "tag": "20.7.15",
+                "latex": "A\\equiv A(\\tau)=\\frac{1}{\\theta_{4}\\left(0\\middle|2\\tau\\right)}, \\tag{20.7.15}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "20.7.16",
+                "latex": "\\displaystyle\\theta_{1}\\left(2z\\middle|2\\tau\\right) \\displaystyle=A\\theta_{1}\\left(z\\middle|\\tau\\right)\\theta_{2}\\left(z\\middle|\\tau\\right), \\tag{20.7.16}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.17",
+                "latex": "\\displaystyle\\theta_{2}\\left(2z\\middle|2\\tau\\right) \\displaystyle=A\\theta_{1}\\left(\\tfrac{1}{4}\\pi-z\\middle|\\tau\\right)\\theta_{1}\\left(\\tfrac{1}{4}\\pi+z\\middle|\\tau\\right), \\tag{20.7.17}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.18",
+                "latex": "\\displaystyle\\theta_{3}\\left(2z\\middle|2\\tau\\right) \\displaystyle=A\\theta_{3}\\left(\\tfrac{1}{4}\\pi-z\\middle|\\tau\\right)\\theta_{3}\\left(\\tfrac{1}{4}\\pi+z\\middle|\\tau\\right), \\tag{20.7.18}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.19",
+                "latex": "\\displaystyle\\theta_{4}\\left(2z\\middle|2\\tau\\right) \\displaystyle=A\\theta_{3}\\left(z\\middle|\\tau\\right)\\theta_{4}\\left(z\\middle|\\tau\\right). \\tag{20.7.19}"
+              },
+              {
+                "id": "E20",
+                "tag": "20.7.20",
+                "latex": "B\\equiv B(\\tau)=\\frac{1}{\\left(\\theta_{3}\\left(0\\middle|\\tau\\right)\\theta_{4}\\left(0\\middle|\\tau\\right)\\theta_{3}\\left(\\tfrac{1}{4}\\pi\\middle|\\tau\\right)\\right)}, \\tag{20.7.20}"
+              },
+              {
+                "id": "EGx2",
+                "tag": "20.7.21",
+                "latex": "\\displaystyle\\theta_{1}\\left(4z\\middle|4\\tau\\right) \\displaystyle=B\\theta_{1}\\left(z\\middle|\\tau\\right)\\theta_{1}\\left(\\tfrac{1}{4}\\pi-z\\middle|\\tau\\right)\\,\\theta_{1}\\left(\\tfrac{1}{4}\\pi+z\\middle|\\tau\\right)\\theta_{2}\\left(z\\middle|\\tau\\right), \\tag{20.7.21}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.22",
+                "latex": "\\displaystyle\\theta_{2}\\left(4z\\middle|4\\tau\\right) \\displaystyle=B\\theta_{2}\\left(\\tfrac{1}{8}\\pi-z\\middle|\\tau\\right)\\theta_{2}\\left(\\tfrac{1}{8}\\pi+z\\middle|\\tau\\right)\\,\\theta_{2}\\left(\\tfrac{3}{8}\\pi-z\\middle|\\tau\\right)\\theta_{2}\\left(\\tfrac{3}{8}\\pi+z\\middle|\\tau\\right), \\tag{20.7.22}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.23",
+                "latex": "\\displaystyle\\theta_{3}\\left(4z\\middle|4\\tau\\right) \\displaystyle=B\\theta_{3}\\left(\\tfrac{1}{8}\\pi-z\\middle|\\tau\\right)\\theta_{3}\\left(\\tfrac{1}{8}\\pi+z\\middle|\\tau\\right)\\,\\theta_{3}\\left(\\tfrac{3}{8}\\pi-z\\middle|\\tau\\right)\\theta_{3}\\left(\\tfrac{3}{8}\\pi+z\\middle|\\tau\\right), \\tag{20.7.23}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.24",
+                "latex": "\\displaystyle\\theta_{4}\\left(4z\\middle|4\\tau\\right) \\displaystyle=B\\theta_{4}\\left(z\\middle|\\tau\\right)\\theta_{4}\\left(\\tfrac{1}{4}\\pi-z\\middle|\\tau\\right)\\,\\theta_{4}\\left(\\tfrac{1}{4}\\pi+z\\middle|\\tau\\right)\\theta_{3}\\left(z\\middle|\\tau\\right). \\tag{20.7.24}"
+              },
+              {
+                "id": "E25",
+                "tag": "20.7.25",
+                "latex": "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left(\\frac{\\theta_{2}\\left(z\\middle|\\tau\\right)}{\\theta_{4}\\left(z\\middle|\\tau\\right)}\\right)=-\\frac{{\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right)\\theta_{1}\\left(z\\middle|\\tau\\right)\\theta_{3}\\left(z\\middle|\\tau\\right)}{{\\theta_{4}}^{2}\\left(z\\middle|\\tau\\right)}. \\tag{20.7.25}"
+              },
+              {
+                "id": "EGx3",
+                "tag": "20.7.26",
+                "latex": "\\displaystyle\\theta_{1}\\left(z\\middle|\\tau+1\\right) \\displaystyle=e^{i\\pi/4}\\theta_{1}\\left(z\\middle|\\tau\\right), \\tag{20.7.26}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.27",
+                "latex": "\\displaystyle\\theta_{2}\\left(z\\middle|\\tau+1\\right) \\displaystyle=e^{i\\pi/4}\\theta_{2}\\left(z\\middle|\\tau\\right), \\tag{20.7.27}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.28",
+                "latex": "\\displaystyle\\theta_{3}\\left(z\\middle|\\tau+1\\right) \\displaystyle=\\theta_{4}\\left(z\\middle|\\tau\\right), \\tag{20.7.28}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.29",
+                "latex": "\\displaystyle\\theta_{4}\\left(z\\middle|\\tau+1\\right) \\displaystyle=\\theta_{3}\\left(z\\middle|\\tau\\right). \\tag{20.7.29}"
+              },
+              {
+                "id": "EGx4",
+                "tag": "20.7.30",
+                "latex": "\\displaystyle(-i\\tau)^{1/2}\\theta_{1}\\left(z\\middle|\\tau\\right) \\displaystyle=-i\\exp\\left(i\\tau^{\\prime}z^{2}/\\pi\\right)\\theta_{1}\\left(z\\tau^{\\prime}\\middle|\\tau^{\\prime}\\right), \\tag{20.7.30}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.31",
+                "latex": "\\displaystyle(-i\\tau)^{1/2}\\theta_{2}\\left(z\\middle|\\tau\\right) \\displaystyle=\\exp\\left(i\\tau^{\\prime}z^{2}/\\pi\\right)\\theta_{4}\\left(z\\tau^{\\prime}\\middle|\\tau^{\\prime}\\right), \\tag{20.7.31}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.32",
+                "latex": "\\displaystyle(-i\\tau)^{1/2}\\theta_{3}\\left(z\\middle|\\tau\\right) \\displaystyle=\\exp\\left(i\\tau^{\\prime}z^{2}/\\pi\\right)\\theta_{3}\\left(z\\tau^{\\prime}\\middle|\\tau^{\\prime}\\right), \\tag{20.7.32}"
+              },
+              {
+                "id": "",
+                "tag": "20.7.33",
+                "latex": "\\displaystyle(-i\\tau)^{1/2}\\theta_{4}\\left(z\\middle|\\tau\\right) \\displaystyle=\\exp\\left(i\\tau^{\\prime}z^{2}/\\pi\\right)\\theta_{2}\\left(z\\tau^{\\prime}\\middle|\\tau^{\\prime}\\right). \\tag{20.7.33}"
+              },
+              {
+                "id": "E34",
+                "tag": "20.7.34",
+                "latex": "\\frac{\\theta_{1}\\left(z,q^{2}\\right)\\theta_{3}\\left(z,q^{2}\\right)}{\\theta_{1}\\left(z,iq\\right)}=\\frac{\\theta_{2}\\left(z,q^{2}\\right)\\theta_{4}\\left(z,q^{2}\\right)}{\\theta_{2}\\left(z,iq\\right)}=i^{-1/4}\\sqrt{\\frac{\\theta_{2}\\left(0,q^{2}\\right)\\theta_{4}\\left(0,q^{2}\\right)}{2}}. \\tag{20.7.34}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "{\\theta_{3}}^{2}\\left(0,q\\right){\\theta_{3}}^{2}\\left(z,q\\right)={\\theta_{4}}^{2}\\left(0,q\\right){\\theta_{4}}^{2}\\left(z,q\\right)+{\\theta_{2}}^{2}\\left(0,q\\right){\\theta_{2}}^{2}\\left(z,q\\right), \\tag{20.7.1}",
+              "{\\theta_{3}}^{2}\\left(0,q\\right){\\theta_{4}}^{2}\\left(z,q\\right)={\\theta_{2}}^{2}\\left(0,q\\right){\\theta_{1}}^{2}\\left(z,q\\right)+{\\theta_{4}}^{2}\\left(0,q\\right){\\theta_{3}}^{2}\\left(z,q\\right), \\tag{20.7.2}",
+              "{\\theta_{2}}^{2}\\left(0,q\\right){\\theta_{4}}^{2}\\left(z,q\\right)={\\theta_{3}}^{2}\\left(0,q\\right){\\theta_{1}}^{2}\\left(z,q\\right)+{\\theta_{4}}^{2}\\left(0,q\\right){\\theta_{2}}^{2}\\left(z,q\\right), \\tag{20.7.3}",
+              "{\\theta_{2}}^{2}\\left(0,q\\right){\\theta_{3}}^{2}\\left(z,q\\right)={\\theta_{4}}^{2}\\left(0,q\\right){\\theta_{1}}^{2}\\left(z,q\\right)+{\\theta_{3}}^{2}\\left(0,q\\right){\\theta_{2}}^{2}\\left(z,q\\right). \\tag{20.7.4}",
+              "{\\theta_{3}}^{4}\\left(0,q\\right)={\\theta_{2}}^{4}\\left(0,q\\right)+{\\theta_{4}}^{4}\\left(0,q\\right). \\tag{20.7.5}",
+              "{\\theta_{4}}^{2}\\left(0,q\\right)\\theta_{1}\\left(w+z,q\\right)\\theta_{1}\\left(w-z,q\\right)={\\theta_{3}}^{2}\\left(w,q\\right){\\theta_{2}}^{2}\\left(z,q\\right)-{\\theta_{2}}^{2}\\left(w,q\\right){\\theta_{3}}^{2}\\left(z,q\\right), \\tag{20.7.6}",
+              "{\\theta_{4}}^{2}\\left(0,q\\right)\\theta_{2}\\left(w+z,q\\right)\\theta_{2}\\left(w-z,q\\right)={\\theta_{4}}^{2}\\left(w,q\\right){\\theta_{2}}^{2}\\left(z,q\\right)-{\\theta_{1}}^{2}\\left(w,q\\right){\\theta_{3}}^{2}\\left(z,q\\right), \\tag{20.7.7}",
+              "{\\theta_{4}}^{2}\\left(0,q\\right)\\theta_{3}\\left(w+z,q\\right)\\theta_{3}\\left(w-z,q\\right)={\\theta_{4}}^{2}\\left(w,q\\right){\\theta_{3}}^{2}\\left(z,q\\right)-{\\theta_{1}}^{2}\\left(w,q\\right){\\theta_{2}}^{2}\\left(z,q\\right), \\tag{20.7.8}",
+              "{\\theta_{4}}^{2}\\left(0,q\\right)\\theta_{4}\\left(w+z,q\\right)\\theta_{4}\\left(w-z,q\\right)={\\theta_{3}}^{2}\\left(w,q\\right){\\theta_{3}}^{2}\\left(z,q\\right)-{\\theta_{2}}^{2}\\left(w,q\\right){\\theta_{2}}^{2}\\left(z,q\\right). \\tag{20.7.9}",
+              "\\theta_{1}\\left(2z,q\\right)=2\\frac{\\theta_{1}\\left(z,q\\right)\\theta_{2}\\left(z,q\\right)\\theta_{3}\\left(z,q\\right)\\theta_{4}\\left(z,q\\right)}{\\theta_{2}\\left(0,q\\right)\\theta_{3}\\left(0,q\\right)\\theta_{4}\\left(0,q\\right)}. \\tag{20.7.10}",
+              "\\frac{\\theta_{1}\\left(z,q\\right)\\theta_{2}\\left(z,q\\right)}{\\theta_{1}\\left(2z,q^{2}\\right)}=\\frac{\\theta_{3}\\left(z,q\\right)\\theta_{4}\\left(z,q\\right)}{\\theta_{4}\\left(2z,q^{2}\\right)}=\\theta_{4}\\left(0,q^{2}\\right), \\tag{20.7.11}",
+              "\\frac{\\theta_{1}\\left(z,q^{2}\\right)\\theta_{4}\\left(z,q^{2}\\right)}{\\theta_{1}\\left(z,q\\right)}=\\frac{\\theta_{2}\\left(z,q^{2}\\right)\\theta_{3}\\left(z,q^{2}\\right)}{\\theta_{2}\\left(z,q\\right)}=\\tfrac{1}{2}\\theta_{2}\\left(0,q\\right). \\tag{20.7.12}",
+              "\\theta_{1}\\left(z,q\\right)\\theta_{1}\\left(w,q\\right)=\\theta_{3}\\left(z+w,q^{2}\\right)\\theta_{2}\\left(z-w,q^{2}\\right)-\\theta_{2}\\left(z+w,q^{2}\\right)\\theta_{3}\\left(z-w,q^{2}\\right), \\tag{20.7.13}",
+              "\\theta_{3}\\left(z,q\\right)\\theta_{3}\\left(w,q\\right)=\\theta_{3}\\left(z+w,q^{2}\\right)\\theta_{3}\\left(z-w,q^{2}\\right)+\\theta_{2}\\left(z+w,q^{2}\\right)\\theta_{2}\\left(z-w,q^{2}\\right). \\tag{20.7.14}",
+              "A\\equiv A(\\tau)=\\frac{1}{\\theta_{4}\\left(0\\middle|2\\tau\\right)}, \\tag{20.7.15}",
+              "\\displaystyle\\theta_{1}\\left(2z\\middle|2\\tau\\right) \\displaystyle=A\\theta_{1}\\left(z\\middle|\\tau\\right)\\theta_{2}\\left(z\\middle|\\tau\\right), \\tag{20.7.16}",
+              "\\displaystyle\\theta_{2}\\left(2z\\middle|2\\tau\\right) \\displaystyle=A\\theta_{1}\\left(\\tfrac{1}{4}\\pi-z\\middle|\\tau\\right)\\theta_{1}\\left(\\tfrac{1}{4}\\pi+z\\middle|\\tau\\right), \\tag{20.7.17}",
+              "\\displaystyle\\theta_{3}\\left(2z\\middle|2\\tau\\right) \\displaystyle=A\\theta_{3}\\left(\\tfrac{1}{4}\\pi-z\\middle|\\tau\\right)\\theta_{3}\\left(\\tfrac{1}{4}\\pi+z\\middle|\\tau\\right), \\tag{20.7.18}",
+              "\\displaystyle\\theta_{4}\\left(2z\\middle|2\\tau\\right) \\displaystyle=A\\theta_{3}\\left(z\\middle|\\tau\\right)\\theta_{4}\\left(z\\middle|\\tau\\right). \\tag{20.7.19}",
+              "B\\equiv B(\\tau)=\\frac{1}{\\left(\\theta_{3}\\left(0\\middle|\\tau\\right)\\theta_{4}\\left(0\\middle|\\tau\\right)\\theta_{3}\\left(\\tfrac{1}{4}\\pi\\middle|\\tau\\right)\\right)}, \\tag{20.7.20}",
+              "\\displaystyle\\theta_{1}\\left(4z\\middle|4\\tau\\right) \\displaystyle=B\\theta_{1}\\left(z\\middle|\\tau\\right)\\theta_{1}\\left(\\tfrac{1}{4}\\pi-z\\middle|\\tau\\right)\\,\\theta_{1}\\left(\\tfrac{1}{4}\\pi+z\\middle|\\tau\\right)\\theta_{2}\\left(z\\middle|\\tau\\right), \\tag{20.7.21}",
+              "\\displaystyle\\theta_{2}\\left(4z\\middle|4\\tau\\right) \\displaystyle=B\\theta_{2}\\left(\\tfrac{1}{8}\\pi-z\\middle|\\tau\\right)\\theta_{2}\\left(\\tfrac{1}{8}\\pi+z\\middle|\\tau\\right)\\,\\theta_{2}\\left(\\tfrac{3}{8}\\pi-z\\middle|\\tau\\right)\\theta_{2}\\left(\\tfrac{3}{8}\\pi+z\\middle|\\tau\\right), \\tag{20.7.22}",
+              "\\displaystyle\\theta_{3}\\left(4z\\middle|4\\tau\\right) \\displaystyle=B\\theta_{3}\\left(\\tfrac{1}{8}\\pi-z\\middle|\\tau\\right)\\theta_{3}\\left(\\tfrac{1}{8}\\pi+z\\middle|\\tau\\right)\\,\\theta_{3}\\left(\\tfrac{3}{8}\\pi-z\\middle|\\tau\\right)\\theta_{3}\\left(\\tfrac{3}{8}\\pi+z\\middle|\\tau\\right), \\tag{20.7.23}",
+              "\\displaystyle\\theta_{4}\\left(4z\\middle|4\\tau\\right) \\displaystyle=B\\theta_{4}\\left(z\\middle|\\tau\\right)\\theta_{4}\\left(\\tfrac{1}{4}\\pi-z\\middle|\\tau\\right)\\,\\theta_{4}\\left(\\tfrac{1}{4}\\pi+z\\middle|\\tau\\right)\\theta_{3}\\left(z\\middle|\\tau\\right). \\tag{20.7.24}",
+              "\\frac{\\mathrm{d}}{\\mathrm{d}z}\\left(\\frac{\\theta_{2}\\left(z\\middle|\\tau\\right)}{\\theta_{4}\\left(z\\middle|\\tau\\right)}\\right)=-\\frac{{\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right)\\theta_{1}\\left(z\\middle|\\tau\\right)\\theta_{3}\\left(z\\middle|\\tau\\right)}{{\\theta_{4}}^{2}\\left(z\\middle|\\tau\\right)}. \\tag{20.7.25}",
+              "\\displaystyle\\theta_{1}\\left(z\\middle|\\tau+1\\right) \\displaystyle=e^{i\\pi/4}\\theta_{1}\\left(z\\middle|\\tau\\right), \\tag{20.7.26}",
+              "\\displaystyle\\theta_{2}\\left(z\\middle|\\tau+1\\right) \\displaystyle=e^{i\\pi/4}\\theta_{2}\\left(z\\middle|\\tau\\right), \\tag{20.7.27}",
+              "\\displaystyle\\theta_{3}\\left(z\\middle|\\tau+1\\right) \\displaystyle=\\theta_{4}\\left(z\\middle|\\tau\\right), \\tag{20.7.28}",
+              "\\displaystyle\\theta_{4}\\left(z\\middle|\\tau+1\\right) \\displaystyle=\\theta_{3}\\left(z\\middle|\\tau\\right). \\tag{20.7.29}",
+              "\\displaystyle(-i\\tau)^{1/2}\\theta_{1}\\left(z\\middle|\\tau\\right) \\displaystyle=-i\\exp\\left(i\\tau^{\\prime}z^{2}/\\pi\\right)\\theta_{1}\\left(z\\tau^{\\prime}\\middle|\\tau^{\\prime}\\right), \\tag{20.7.30}",
+              "\\displaystyle(-i\\tau)^{1/2}\\theta_{2}\\left(z\\middle|\\tau\\right) \\displaystyle=\\exp\\left(i\\tau^{\\prime}z^{2}/\\pi\\right)\\theta_{4}\\left(z\\tau^{\\prime}\\middle|\\tau^{\\prime}\\right), \\tag{20.7.31}",
+              "\\displaystyle(-i\\tau)^{1/2}\\theta_{3}\\left(z\\middle|\\tau\\right) \\displaystyle=\\exp\\left(i\\tau^{\\prime}z^{2}/\\pi\\right)\\theta_{3}\\left(z\\tau^{\\prime}\\middle|\\tau^{\\prime}\\right), \\tag{20.7.32}",
+              "\\displaystyle(-i\\tau)^{1/2}\\theta_{4}\\left(z\\middle|\\tau\\right) \\displaystyle=\\exp\\left(i\\tau^{\\prime}z^{2}/\\pi\\right)\\theta_{2}\\left(z\\tau^{\\prime}\\middle|\\tau^{\\prime}\\right). \\tag{20.7.33}",
+              "\\frac{\\theta_{1}\\left(z,q^{2}\\right)\\theta_{3}\\left(z,q^{2}\\right)}{\\theta_{1}\\left(z,iq\\right)}=\\frac{\\theta_{2}\\left(z,q^{2}\\right)\\theta_{4}\\left(z,q^{2}\\right)}{\\theta_{2}\\left(z,iq\\right)}=i^{-1/4}\\sqrt{\\frac{\\theta_{2}\\left(0,q^{2}\\right)\\theta_{4}\\left(0,q^{2}\\right)}{2}}. \\tag{20.7.34}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "sums of squares",
+                "theta functions",
+                "addition formulas",
+                "duplication formula",
+                "nome",
+                "transformation of",
+                "Watson’s identities",
+                "Jacobian elliptic functions",
+                "Landen transformation",
+                "Landen transformations",
+                "derivatives",
+                "of ratios",
+                "lattice parameter",
+                "modular transformations"
+              ],
+              "simbolos": [
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $z$: complex , $\\tau$: lattice parameter and $A$",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $z$: complex , $\\tau$: lattice parameter and $A$",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $z$: complex , $\\tau$: lattice parameter and $B$",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\mathrm{e}$: base of natural logarithm , $\\mathrm{i}$: imaginary unit , $z$: complex and $\\tau$: lattice parameter",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $z$: complex and $\\tau$: lattice parameter",
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $\\expz$: exponential function , $\\mathrm{i}$: imaginary unit , $z$: complex and $\\tau$: lattice parameter"
+              ],
+              "referenciado_por": [
+                "Erratum (V1.0.5) for References",
+                "§21.6(ii)",
+                "§20.7(ii)",
+                "§20.7(ix)",
+                "Erratum (V1.0.5) for Clarifications",
+                "Erratum (V1.0.19) for Notation",
+                "Erratum (V1.0.3) for References",
+                "§20.10(i)",
+                "§20.14",
+                "§20.7(viii)",
+                "§21.5(ii)",
+                "Erratum (V1.0.11) for References  **Change (effective with 1.0.11):**  The sentence",
+                "These are examples of modular transformations; see § [23.15](./23.15.md \"§23.15 Definitions ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions\") . at the end of 20.7(viii) now contains an additional reference to Rademacher ([1973](./bib/R.html#bib1917 \"Topics in Analytic Number Theory\")",
+                "pp. 181–183).",
+                "(20.10.1)",
+                "(20.10.2)",
+                "§20.13",
+                "(20.10.3)"
+              ],
+              "notas_bibliograficas": [
+                "See Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), p. 11).",
+                "See McKean and Moll ([1999](./bib/M.html#bib1582 \"Elliptic Curves\"), p. 129).",
+                "See Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), pp. 17, 18) and Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 477). The first equalities in ( 20.7.11 ) and ( 20.7.12 ) follow by translation of $z$ by $\\tfrac{1}{2}\\pi$ as in ( 20.2.11 )–( 20.2.14 ). The second equalities follow from ( 20.5.5 )–( 20.5.8 ) and the identity $\\prod_{n=1}^{\\infty}(1+q^{n})(1-q^{2n-1})=1$ (Walker ([1996](./bib/W.html#bib2359 \"Elliptic Functions. A Constructive Approach\"), p. 90)).",
+                "See McKean and Moll ([1999](./bib/M.html#bib1582 \"Elliptic Curves\"), p. 130) and Watson ([1935a](./bib/W.html#bib2377 \"Generating functions of class-numbers\")).",
+                "See Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), pp. 17–18).",
+                "See Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), pp. 16–17), Bellman ([1961](./bib/B.html#bib231 \"A Brief Introduction to Theta Functions\"), p. 61), Serre ([1973](./bib/S.html#bib2047 \"A Course in Arithmetic\"), p. 109), and Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), pp. 474–475).",
+                "See Walker ([2012](./bib/W.html#bib2753 \"Reduction formulae for products of theta functions\")). (The material in this subsection was added in Version 1.0.5. It will be incorporated into the next printed edition.)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.7 and Ch.20",
+                "Annotations for §20.7(vi) , §20.7 and Ch.20",
+                "Annotations for §20.7(viii) , §20.7 and Ch.20"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.0.5)",
+                  "descripcion": "The reference to Carlson ([2011](./bib/C.html#bib2789 \"Permutation symmetry for theta functions\")) was added at the end of this subsection."
+                },
+                {
+                  "tipo_evento": "Addition (effective with 1.0.5)",
+                  "descripcion": "The references to Carlson ([2011](./bib/C.html#bib2789 \"Permutation symmetry for theta functions\")) and Fukushima ([2012](./bib/F.html#bib2754 \"Series expansions of symmetric elliptic integrals\")), with explanatory text, were added in this subsection."
+                },
+                {
+                  "tipo_evento": "Addition (effective with 1.0.5)",
+                  "descripcion": "The reference to Carlson ([2011](./bib/C.html#bib2789 \"Permutation symmetry for theta functions\")) was added at the end of this subsection."
+                },
+                {
+                  "tipo_evento": "Clarification (effective with 1.0.5)",
+                  "descripcion": "The title of this subsection was changed to be more specific."
+                },
+                {
+                  "tipo_evento": "Addition (effective with 1.0.5)",
+                  "descripcion": "The reference to Carlson ([2011](./bib/C.html#bib2789 \"Permutation symmetry for theta functions\")) was added at the end of this subsection."
+                },
+                {
+                  "tipo_evento": "Clarification (effective with 1.0.3)",
+                  "descripcion": "The last sentence of this subsection was revised to state more precisely the content of Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), pp. 19–20)."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/C.html#bib2789",
+                "titulo_referencia": "Permutation symmetry for theta functions"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/C.html#bib2789",
+                "titulo_referencia": "Permutation symmetry for theta functions"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/C.html#bib2789",
+                "titulo_referencia": "Permutation symmetry for theta functions"
+              },
+              {
+                "texto": "2012",
+                "archivo_destino": "bib/F.html#bib2754",
+                "titulo_referencia": "Series expansions of symmetric elliptic integrals"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/C.html#bib2789",
+                "titulo_referencia": "Permutation symmetry for theta functions"
+              },
+              {
+                "texto": "20.1",
+                "archivo_destino": "20.1.md",
+                "titulo_referencia": "§20.1 Special Notation ‣ Notation ‣ Chapter 20 Theta Functions"
+              },
+              {
+                "texto": "22.2",
+                "archivo_destino": "22.2.md",
+                "titulo_referencia": "§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/C.html#bib2789",
+                "titulo_referencia": "Permutation symmetry for theta functions"
+              },
+              {
+                "texto": "2012",
+                "archivo_destino": "bib/F.html#bib2754",
+                "titulo_referencia": "Series expansions of symmetric elliptic integrals"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/M.html#bib1582",
+                "titulo_referencia": "Elliptic Curves"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/C.html#bib2789",
+                "titulo_referencia": "Permutation symmetry for theta functions"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/C.html#bib2789",
+                "titulo_referencia": "Permutation symmetry for theta functions"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/W.html#bib2359",
+                "titulo_referencia": "Elliptic Functions. A Constructive Approach"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/M.html#bib1582",
+                "titulo_referencia": "Elliptic Curves"
+              },
+              {
+                "texto": "1935a",
+                "archivo_destino": "bib/W.html#bib2377",
+                "titulo_referencia": "Generating functions of class-numbers"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/C.html#bib2789",
+                "titulo_referencia": "Permutation symmetry for theta functions"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/C.html#bib2789",
+                "titulo_referencia": "Permutation symmetry for theta functions"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1961",
+                "archivo_destino": "bib/B.html#bib231",
+                "titulo_referencia": "A Brief Introduction to Theta Functions"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/S.html#bib2047",
+                "titulo_referencia": "A Course in Arithmetic"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "23.15",
+                "archivo_destino": "23.15.md",
+                "titulo_referencia": "§23.15 Definitions ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/R.html#bib1917",
+                "titulo_referencia": "Topics in Analytic Number Theory"
+              },
+              {
+                "texto": "23.15",
+                "archivo_destino": "23.15.md",
+                "titulo_referencia": "§23.15 Definitions ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/R.html#bib1917",
+                "titulo_referencia": "Topics in Analytic Number Theory"
+              },
+              {
+                "texto": "2012",
+                "archivo_destino": "bib/W.html#bib2753",
+                "titulo_referencia": "Reduction formulae for products of theta functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.8",
+          "titulo_original": "Watson’s Expansions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.8.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.8.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.8 Watson’s Expansions",
+            "prosa_teorica": "See Watson ([1935a](./bib/W.html#bib2377 \"Generating functions of class-numbers\")). This reference and Bellman ([1961](./bib/B.html#bib231 \"A Brief Introduction to Theta Functions\"), pp. 46–47) include other expansions of this type.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "20.8.1",
+                "latex": "\\frac{\\theta_{2}\\left(0,q\\right)\\theta_{3}\\left(z,q\\right)\\theta_{4}\\left(z,q\\right)}{\\theta_{2}\\left(z,q\\right)}=2\\sum_{n=-\\infty}^{\\infty}\\frac{(-1)^{n}q^{n^{2}}e^{i2nz}}{q^{-n}e^{-iz}+q^{n}e^{iz}}. \\tag{20.8.1}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\frac{\\theta_{2}\\left(0,q\\right)\\theta_{3}\\left(z,q\\right)\\theta_{4}\\left(z,q\\right)}{\\theta_{2}\\left(z,q\\right)}=2\\sum_{n=-\\infty}^{\\infty}\\frac{(-1)^{n}q^{n^{2}}e^{i2nz}}{q^{-n}e^{-iz}+q^{n}e^{iz}}. \\tag{20.8.1}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Watson’s expansions",
+                "theta functions"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1935a",
+                "archivo_destino": "bib/W.html#bib2377",
+                "titulo_referencia": "Generating functions of class-numbers"
+              },
+              {
+                "texto": "1961",
+                "archivo_destino": "bib/B.html#bib231",
+                "titulo_referencia": "A Brief Introduction to Theta Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.9",
+          "titulo_original": "Relations to Other Functions",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.9.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.9.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.9 Relations to Other Functions",
+            "prosa_teorica": "With $k$ defined by\nand the notation of § 19.2(ii) , the complete Legendre integrals of the first kind may be expressed as theta functions:\n<a id=\"E2\"></a>\ntogether with ( 22.2.1 ).\nIn the case of the symmetric integrals, with the notation of § 19.16(i) we have\nSee §§ [22.2](./22.2.md \"§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions\") and 23.6(i) for the relations of Jacobian and Weierstrass elliptic functions to theta functions.\nThe relations ( 20.9.1 ) and ( 20.9.2 ) between $k$ and $\\tau$ (or $q$ ) are solutions of *Jacobi’s inversion problem* ; see Baker ([1995](./bib/B.html#bib178 \"Abelian Functions: Abel’s Theorem and the Allied Theory of Theta Functions\")) and Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), pp. 480–485).\nAs a function of $\\tau$ , $k^{2}$ is the *elliptic modular function* ; see Walker ([1996](./bib/W.html#bib2359 \"Elliptic Functions. A Constructive Approach\"), Chapter 7) and ( 23.15.2 ), ( 23.15.6 ).\nSee Koblitz ([1993](./bib/K.html#bib1299 \"Introduction to Elliptic Curves and Modular Forms\"), Ch. 2, §4) and Titchmarsh ([1986b](./bib/T.html#bib2255 \"The Theory of the Riemann Zeta-Function\"), pp. 21–22). See also §§ 20.10(i) and [25.2](./25.2.md \"§25.2 Definition and Expansions ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions\") .",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "20.9.1",
+                "latex": "k={\\theta_{2}}^{2}\\left(0\\middle|\\tau\\right)/{\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right) \\tag{20.9.1}"
+              },
+              {
+                "id": "Ex1",
+                "tag": "20.9.2",
+                "latex": "\\displaystyle K\\left(k\\right) \\displaystyle=\\tfrac{1}{2}\\pi{\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right), \\tag{20.9.2}"
+              },
+              {
+                "id": "Ex2",
+                "tag": "",
+                "latex": "\\displaystyle K'\\left(k\\right) \\displaystyle=-i\\tau K\\left(k\\right),"
+              },
+              {
+                "id": "E3",
+                "tag": "20.9.3",
+                "latex": "R_{F}\\left(\\frac{{\\theta_{2}}^{2}\\left(z,q\\right)}{{\\theta_{2}}^{2}\\left(0,q\\right)},\\frac{{\\theta_{3}}^{2}\\left(z,q\\right)}{{\\theta_{3}}^{2}\\left(0,q\\right)},\\frac{{\\theta_{4}}^{2}\\left(z,q\\right)}{{\\theta_{4}}^{2}\\left(0,q\\right)}\\right)=\\frac{\\theta_{1}'\\left(0,q\\right)}{\\theta_{1}\\left(z,q\\right)}z, \\tag{20.9.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "20.9.4",
+                "latex": "R_{F}\\left(0,{\\theta_{3}}^{4}\\left(0,q\\right),{\\theta_{4}}^{4}\\left(0,q\\right)\\right)=\\tfrac{1}{2}\\pi, \\tag{20.9.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "20.9.5",
+                "latex": "\\exp\\left(-\\frac{\\pi R_{F}\\left(0,k^{2},1\\right)}{R_{F}\\left(0,{k^{\\prime}}^{2},1\\right)}\\right)=q. \\tag{20.9.5}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "k={\\theta_{2}}^{2}\\left(0\\middle|\\tau\\right)/{\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right) \\tag{20.9.1}",
+              "\\displaystyle K\\left(k\\right) \\displaystyle=\\tfrac{1}{2}\\pi{\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right), \\tag{20.9.2}",
+              "\\displaystyle K'\\left(k\\right) \\displaystyle=-i\\tau K\\left(k\\right),",
+              "R_{F}\\left(\\frac{{\\theta_{2}}^{2}\\left(z,q\\right)}{{\\theta_{2}}^{2}\\left(0,q\\right)},\\frac{{\\theta_{3}}^{2}\\left(z,q\\right)}{{\\theta_{3}}^{2}\\left(0,q\\right)},\\frac{{\\theta_{4}}^{2}\\left(z,q\\right)}{{\\theta_{4}}^{2}\\left(0,q\\right)}\\right)=\\frac{\\theta_{1}'\\left(0,q\\right)}{\\theta_{1}\\left(z,q\\right)}z, \\tag{20.9.3}",
+              "R_{F}\\left(0,{\\theta_{3}}^{4}\\left(0,q\\right),{\\theta_{4}}^{4}\\left(0,q\\right)\\right)=\\tfrac{1}{2}\\pi, \\tag{20.9.4}",
+              "\\exp\\left(-\\frac{\\pi R_{F}\\left(0,k^{2},1\\right)}{R_{F}\\left(0,{k^{\\prime}}^{2},1\\right)}\\right)=q. \\tag{20.9.5}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "elliptic integrals",
+                "relations to other functions",
+                "theta functions",
+                "Jacobian elliptic functions",
+                "Jacobi’s inversion formula",
+                "Jacobi’s inversion problem for elliptic functions",
+                "Weierstrass elliptic functions",
+                "elliptic modular function",
+                "modular functions",
+                "relations to theta functions",
+                "Riemann zeta function"
+              ],
+              "simbolos": [
+                "$\\theta_{j}\\left(z\\middle|\\tau\\right)$: theta function , $\\pi$: the ratio of the circumference of a circle to its diameter , $K\\left(k\\right)$: Legendre’s complete elliptic integral of the first kind , $\\mathrm{i}$: imaginary unit , $\\tau$: lattice parameter and $k$: modulus"
+              ],
+              "referenciado_por": [
+                "§19.10(i)",
+                "§19.25(iv)",
+                "§23.22(ii)",
+                "§20.11(iii)",
+                "§20.9(i)",
+                "§20.9(ii)",
+                "§23.6(ii)"
+              ],
+              "notas_bibliograficas": [
+                "See Walker ([1996](./bib/W.html#bib2359 \"Elliptic Functions. A Constructive Approach\"), p. 156), Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 481), Serre ([1973](./bib/S.html#bib2047 \"A Course in Arithmetic\"), p. 109), and McKean and Moll ([1999](./bib/M.html#bib1582 \"Elliptic Curves\"), §3.3). For ( 20.9.3 ) combination of ( 20.4.6 ) and ( 23.6.5 ) – ( 23.6.7 ) yields $\\wp\\left(z\\right)-e_{j}=\\left(\\frac{v\\theta_{1}'\\left(0,q\\right)\\theta_{j+1}\\left(v,q\\right)}{z\\theta_{1}\\left(v,q\\right)\\theta_{j+1}\\left(0,q\\right)}\\right)^{2}$ , $j=1,2,3$ , where $v=\\pi z/(2\\omega_{1})$ . Then by application of ( 19.25.35 ) and use of the properties that $R_{F}$ is homogenous and of degree $-\\tfrac{1}{2}$ in its three variables (§§ 19.16(ii) , 19.16(iii) ), we derive $z=\\frac{z\\theta_{1}\\left(v,q\\right)}{v\\theta_{1}'\\left(0,q\\right)}R_{F}\\left(\\frac{{\\theta_{2}}^{2}\\left(v,q\\right)}{{\\theta_{2}}^{2}\\left(0,q\\right)},\\frac{{\\theta_{3}}^{2}\\left(v,q\\right)}{{\\theta_{3}}^{2}\\left(0,q\\right)},\\frac{{\\theta_{4}}^{2}\\left(v,q\\right)}{{\\theta_{4}}^{2}\\left(0,q\\right)}\\right)$ . This equation becomes ( 20.9.3 ) when the $z$ ’s are cancelled and $v$ is renamed $z$ . For ( 20.9.4 ), from ( 19.25.1 ) and Erdélyi et al. ([1953b](./bib/E.html#bib752 \"Higher Transcendental Functions. Vol. II\"), 13.20(11)) we have $K\\left(k\\right)=R_{F}\\left(0,\\frac{{\\theta_{4}}^{4}\\left(0,q\\right)}{{\\theta_{3}}^{4}\\left(0,q\\right)},1\\right)={\\theta_{3}}^{2}\\left(0,q\\right)R_{F}\\left(0,{\\theta_{3}}^{4}\\left(0,q\\right),{\\theta_{4}}^{4}\\left(0,q\\right)\\right)$ , where the second equality uses the homogeneity and symmetry of $R_{F}$ . Comparison with ( 20.9.2 ) proves ( 20.9.4 ). For ( 20.9.5 ), by ( 19.25.1 ) the left side is $\\exp\\left(-\\pi K\\left(k^{\\prime}\\right)/K\\left(k\\right)\\right)$ , which equals $q$ by Erdélyi et al. ([1953b](./bib/E.html#bib752 \"Higher Transcendental Functions. Vol. II\"), 13.19(4)).",
+                "See Walker ([1996](./bib/W.html#bib2359 \"Elliptic Functions. A Constructive Approach\"), p. 156), Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 481), Serre ([1973](./bib/S.html#bib2047 \"A Course in Arithmetic\"), p. 109), and McKean and Moll ([1999](./bib/M.html#bib1582 \"Elliptic Curves\"), §3.9)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.9 and Ch.20",
+                "Annotations for §20.9(i) , §20.9 and Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/W.html#bib2359",
+                "titulo_referencia": "Elliptic Functions. A Constructive Approach"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/S.html#bib2047",
+                "titulo_referencia": "A Course in Arithmetic"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/M.html#bib1582",
+                "titulo_referencia": "Elliptic Curves"
+              },
+              {
+                "texto": "1953b",
+                "archivo_destino": "bib/E.html#bib752",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. II"
+              },
+              {
+                "texto": "1953b",
+                "archivo_destino": "bib/E.html#bib752",
+                "titulo_referencia": "Higher Transcendental Functions. Vol. II"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/W.html#bib2359",
+                "titulo_referencia": "Elliptic Functions. A Constructive Approach"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/S.html#bib2047",
+                "titulo_referencia": "A Course in Arithmetic"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/M.html#bib1582",
+                "titulo_referencia": "Elliptic Curves"
+              },
+              {
+                "texto": "22.2",
+                "archivo_destino": "22.2.md",
+                "titulo_referencia": "§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/B.html#bib178",
+                "titulo_referencia": "Abelian Functions: Abel’s Theorem and the Allied Theory of Theta Functions"
+              },
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/W.html#bib2359",
+                "titulo_referencia": "Elliptic Functions. A Constructive Approach"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/K.html#bib1299",
+                "titulo_referencia": "Introduction to Elliptic Curves and Modular Forms"
+              },
+              {
+                "texto": "1986b",
+                "archivo_destino": "bib/T.html#bib2255",
+                "titulo_referencia": "The Theory of the Riemann Zeta-Function"
+              },
+              {
+                "texto": "25.2",
+                "archivo_destino": "25.2.md",
+                "titulo_referencia": "§25.2 Definition and Expansions ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.10",
+          "titulo_original": "Integrals",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.10.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.10.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.10 Integrals",
+            "prosa_teorica": "Here $\\zeta\\left(s\\right)$ again denotes the Riemann zeta function (§ [25.2](./25.2.md \"§25.2 Definition and Expansions ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions\") ).\nFor further results see Oberhettinger ([1974](./bib/O.html#bib1744 \"Tables of Mellin Transforms\"), pp. 157–159).\nLet $s$ , $\\ell$ , and $\\beta$ be constants such that $\\Re s>0$ , $\\ell>0$ , and $\\left|\\Re\\beta\\right|+\\left|\\Im\\beta\\right|\\leq\\ell$ . Then\nFor corresponding results for argument derivatives of the theta functions see Erdélyi et al. ([1954a](./bib/E.html#bib753 \"Tables of Integral Transforms. Vol. I\"), pp. 224–225) or Oberhettinger and Badii ([1973](./bib/O.html#bib1746 \"Tables of Laplace Transforms\"), p. 193).\nFor further integrals of theta functions see Erdélyi et al. ([1954a](./bib/E.html#bib753 \"Tables of Integral Transforms. Vol. I\"), pp. 61–62 and 339), Prudnikov et al. ([1990](./bib/P.html#bib1905 \"Integrals and Series: More Special Functions, Vol. 3\"), pp. 356–358), Prudnikov et al. ([1992a](./bib/P.html#bib1906 \"Integrals and Series: Direct Laplace Transforms, Vol. 4\"), §3.41), and Gradshteyn and Ryzhik ([2015](./bib/G.html#bib972 \"Table of integrals, series, and products\"), §6.16).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "20.10.1",
+                "latex": "\\int_{0}^{\\infty}x^{s-1}\\theta_{2}\\left(0\\middle|ix^{2}\\right)\\,\\mathrm{d}x=2^{s}(1-2^{-s})\\pi^{-s/2}\\Gamma\\left(\\tfrac{1}{2}s\\right)\\zeta\\left(s\\right), \\tag{20.10.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "20.10.2",
+                "latex": "\\int_{0}^{\\infty}x^{s-1}(\\theta_{3}\\left(0\\middle|ix^{2}\\right)-1)\\,\\mathrm{d}x=\\pi^{-s/2}\\Gamma\\left(\\tfrac{1}{2}s\\right)\\zeta\\left(s\\right), \\tag{20.10.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "20.10.3",
+                "latex": "\\int_{0}^{\\infty}x^{s-1}(1-\\theta_{4}\\left(0\\middle|ix^{2}\\right))\\,\\mathrm{d}x=(1-2^{1-s})\\pi^{-s/2}\\Gamma\\left(\\tfrac{1}{2}s\\right)\\zeta\\left(s\\right), \\tag{20.10.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "20.10.4",
+                "latex": "\\int_{0}^{\\infty}e^{-st}\\theta_{1}\\left(\\frac{\\beta\\pi}{2\\ell}\\middle|\\frac{i\\pi t}{\\ell^{2}}\\right)\\,\\mathrm{d}t=\\int_{0}^{\\infty}e^{-st}\\theta_{2}\\left(\\frac{(1+\\beta)\\pi}{2\\ell}\\middle|\\frac{i\\pi t}{\\ell^{2}}\\right)\\,\\mathrm{d}t=-\\frac{\\ell}{\\sqrt{s}}\\sinh\\left(\\beta\\sqrt{s}\\right)\\operatorname{sech}\\left(\\ell\\sqrt{s}\\right), \\tag{20.10.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "20.10.5",
+                "latex": "\\int_{0}^{\\infty}e^{-st}\\theta_{3}\\left(\\frac{(1+\\beta)\\pi}{2\\ell}\\middle|\\frac{i\\pi t}{\\ell^{2}}\\right)\\,\\mathrm{d}t=\\int_{0}^{\\infty}e^{-st}\\theta_{4}\\left(\\frac{\\beta\\pi}{2\\ell}\\middle|\\frac{i\\pi t}{\\ell^{2}}\\right)\\,\\mathrm{d}t=\\frac{\\ell}{\\sqrt{s}}\\cosh\\left(\\beta\\sqrt{s}\\right)\\operatorname{csch}\\left(\\ell\\sqrt{s}\\right). \\tag{20.10.5}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\int_{0}^{\\infty}x^{s-1}\\theta_{2}\\left(0\\middle|ix^{2}\\right)\\,\\mathrm{d}x=2^{s}(1-2^{-s})\\pi^{-s/2}\\Gamma\\left(\\tfrac{1}{2}s\\right)\\zeta\\left(s\\right), \\tag{20.10.1}",
+              "\\int_{0}^{\\infty}x^{s-1}(\\theta_{3}\\left(0\\middle|ix^{2}\\right)-1)\\,\\mathrm{d}x=\\pi^{-s/2}\\Gamma\\left(\\tfrac{1}{2}s\\right)\\zeta\\left(s\\right), \\tag{20.10.2}",
+              "\\int_{0}^{\\infty}x^{s-1}(1-\\theta_{4}\\left(0\\middle|ix^{2}\\right))\\,\\mathrm{d}x=(1-2^{1-s})\\pi^{-s/2}\\Gamma\\left(\\tfrac{1}{2}s\\right)\\zeta\\left(s\\right), \\tag{20.10.3}",
+              "\\int_{0}^{\\infty}e^{-st}\\theta_{1}\\left(\\frac{\\beta\\pi}{2\\ell}\\middle|\\frac{i\\pi t}{\\ell^{2}}\\right)\\,\\mathrm{d}t=\\int_{0}^{\\infty}e^{-st}\\theta_{2}\\left(\\frac{(1+\\beta)\\pi}{2\\ell}\\middle|\\frac{i\\pi t}{\\ell^{2}}\\right)\\,\\mathrm{d}t=-\\frac{\\ell}{\\sqrt{s}}\\sinh\\left(\\beta\\sqrt{s}\\right)\\operatorname{sech}\\left(\\ell\\sqrt{s}\\right), \\tag{20.10.4}",
+              "\\int_{0}^{\\infty}e^{-st}\\theta_{3}\\left(\\frac{(1+\\beta)\\pi}{2\\ell}\\middle|\\frac{i\\pi t}{\\ell^{2}}\\right)\\,\\mathrm{d}t=\\int_{0}^{\\infty}e^{-st}\\theta_{4}\\left(\\frac{\\beta\\pi}{2\\ell}\\middle|\\frac{i\\pi t}{\\ell^{2}}\\right)\\,\\mathrm{d}t=\\frac{\\ell}{\\sqrt{s}}\\cosh\\left(\\beta\\sqrt{s}\\right)\\operatorname{csch}\\left(\\ell\\sqrt{s}\\right). \\tag{20.10.5}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "integrals",
+                "theta functions",
+                "Mellin transform with respect to lattice parameter",
+                "Laplace transform with respect to lattice parameter"
+              ],
+              "referenciado_por": [
+                "§20.9(iii)  **Change (effective with 1.1.5):**  The general constraint $\\Re s>2$ at the start of this subsection has been made more specific in ( 20.10.1 )",
+                "( 20.10.2 ) and ( 20.10.3 ).",
+                "Erratum (V1.1.0) for Subsection 20.10(ii)"
+              ],
+              "notas_bibliograficas": [
+                "For ( 20.10.1 ) and ( 20.10.3 ) use § 20.7(viii) with appropriate changes of integration variable. For ( 20.10.2 ) use ( 20.2.3 ) with $z=0$ , $\\tau=\\mathrm{i}t$ , Bellman ([1961](./bib/B.html#bib231 \"A Brief Introduction to Theta Functions\"), pp. 28–32), Koblitz ([1993](./bib/K.html#bib1299 \"Introduction to Elliptic Curves and Modular Forms\"), pp. 70–75), and/or Titchmarsh ([1986b](./bib/T.html#bib2255 \"The Theory of the Riemann Zeta-Function\"), §2.6).",
+                "See Bellman ([1961](./bib/B.html#bib231 \"A Brief Introduction to Theta Functions\"), pp. 20–24)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.10 and Ch.20"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Correction (effective with 1.1.0)",
+                  "descripcion": "In the first sentence of this subsection, the constraint $\\sinh\\left|\\beta\\right|\\leq\\ell$ has been replaced with $\\left|\\Re\\beta\\right|+\\left|\\Im\\beta\\right|\\leq\\ell$ ."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1961",
+                "archivo_destino": "bib/B.html#bib231",
+                "titulo_referencia": "A Brief Introduction to Theta Functions"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/K.html#bib1299",
+                "titulo_referencia": "Introduction to Elliptic Curves and Modular Forms"
+              },
+              {
+                "texto": "1986b",
+                "archivo_destino": "bib/T.html#bib2255",
+                "titulo_referencia": "The Theory of the Riemann Zeta-Function"
+              },
+              {
+                "texto": "25.2",
+                "archivo_destino": "25.2.md",
+                "titulo_referencia": "§25.2 Definition and Expansions ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"
+              },
+              {
+                "texto": "1974",
+                "archivo_destino": "bib/O.html#bib1744",
+                "titulo_referencia": "Tables of Mellin Transforms"
+              },
+              {
+                "texto": "1961",
+                "archivo_destino": "bib/B.html#bib231",
+                "titulo_referencia": "A Brief Introduction to Theta Functions"
+              },
+              {
+                "texto": "1954a",
+                "archivo_destino": "bib/E.html#bib753",
+                "titulo_referencia": "Tables of Integral Transforms. Vol. I"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/O.html#bib1746",
+                "titulo_referencia": "Tables of Laplace Transforms"
+              },
+              {
+                "texto": "1954a",
+                "archivo_destino": "bib/E.html#bib753",
+                "titulo_referencia": "Tables of Integral Transforms. Vol. I"
+              },
+              {
+                "texto": "1990",
+                "archivo_destino": "bib/P.html#bib1905",
+                "titulo_referencia": "Integrals and Series: More Special Functions, Vol. 3"
+              },
+              {
+                "texto": "1992a",
+                "archivo_destino": "bib/P.html#bib1906",
+                "titulo_referencia": "Integrals and Series: Direct Laplace Transforms, Vol. 4"
+              },
+              {
+                "texto": "2015",
+                "archivo_destino": "bib/G.html#bib972",
+                "titulo_referencia": "Table of integrals, series, and products"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.11",
+          "titulo_original": "Generalizations and Analogs",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.11.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.11.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.11 Generalizations and Analogs",
+            "prosa_teorica": "For relatively prime integers $m,n$ with $n>0$ and $mn$ even, the *Gauss sum* $G(m,n)$ is defined by\nsee Lerch ([1903](./bib/L.html#bib1418 \"Zur Theorie der Gaußschen Summen\")). It is a discrete analog of theta functions. If both $m,n$ are positive, then $G(m,n)$ allows inversion of its arguments as a modular transformation (compare ( 23.15.3 ) and ( 23.15.4 )):\nThis is the discrete analog of the Poisson identity (§ 1.8(iv) ).\nRamanujan’s theta function $f(a,b)$ is defined by\nwhere $a,b\\in\\mathbb{C}$ and $\\left|ab\\right|<1$ . With the substitutions $a=qe^{2iz}$ , $b=qe^{-2iz}$ , with $q=e^{i\\pi\\tau}$ , we have\nIn the case $z=0$ identities for theta functions become identities in the complex variable $q$ , with $\\left|q\\right|<1$ , that involve rational functions, power series, and continued fractions; see Adiga et al. ([1985](./bib/index.html#bib34 \"Chapter 16 of Ramanujan’s second notebook: Theta-functions and q -series\")), McKean and Moll ([1999](./bib/M.html#bib1582 \"Elliptic Curves\"), pp. 156–158), and Andrews et al. ([1988](./bib/index.html#bib100 \"Ramanujan Revisited\"), §10.7).\nAs in § 20.11(ii) , the modulus $k$ of elliptic integrals (§ 19.2(ii) ), Jacobian elliptic functions (§ [22.2](./22.2.md \"§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions\") ), and Weierstrass elliptic functions (§ 23.6(ii) ) can be expanded in $q$ -series via ( 20.9.1 ). However, in this case $q$ is no longer regarded as an independent complex variable within the unit circle, because $k$ is related to the variable $\\tau=\\tau(k)$ of the theta functions via ( 20.9.2 ). This is Jacobi’s inversion problem of § 20.9(ii) .\nThe first of equations ( 20.9.2 ) can also be written\nsee § [19.5](./19.5.md \"§19.5 Maclaurin and Related Expansions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals\") . Similar identities can be constructed for ${{}_{2}F_{1}}\\left(\\tfrac{1}{3},\\tfrac{2}{3};1;k^{2}\\right)$ , ${{}_{2}F_{1}}\\left(\\tfrac{1}{4},\\tfrac{3}{4};1;k^{2}\\right)$ , and ${{}_{2}F_{1}}\\left(\\tfrac{1}{6},\\tfrac{5}{6};1;k^{2}\\right)$ . These results are called *Ramanujan’s changes of base* . Each provides an extension of Jacobi’s inversion problem. See Berndt et al. ([1995](./bib/B.html#bib245 \"Ramanujan’s theories of elliptic functions to alternative bases\")) and Shen ([1998](./bib/S.html#bib2064 \"On an identity of Ramanujan based on the hypergeometric series ⁢ F 1 2 ( 1 3 , 2 3 ; 1 2 ; x )\")). For applications to rapidly convergent expansions for $\\pi$ see Chudnovsky and Chudnovsky ([1988](./bib/C.html#bib502 \"Approximations and Complex Multiplication According to Ramanujan\")), and for applications in the construction of *elliptic-hypergeometric series* see Rosengren ([2004](./bib/R.html#bib1973 \"Elliptic hypergeometric series on root systems\")).\nMultidimensional *theta functions with characteristics* are defined in § 21.2(ii) and their properties are described in §§ 21.3(ii) , 21.5(ii) , and [21.6](./21.6.md \"§21.6 Products ‣ Properties ‣ Chapter 21 Multidimensional Theta Functions\") . For specialization to the one-dimensional theta functions treated in the present chapter, see Rauch and Lebowitz ([1973](./bib/R.html#bib1928 \"Elliptic Functions, Theta Functions, and Riemann Surfaces\")) and § 21.7(iii) .\nA further development on the lines of Neville’s notation (§ [20.1](./20.1.md \"§20.1 Special Notation ‣ Notation ‣ Chapter 20 Theta Functions\") ) is as follows.\nFor $m=1,2,3,4$ , $n=1,2,3,4$ , and $m\\neq n$ , define twelve *combined theta functions* $\\varphi_{m,n}\\left(z,q\\right)$ by\nThen\nThe importance of these combined theta functions is that sets of twelve equations for the theta functions often can be replaced by corresponding sets of three equations of the combined theta functions, plus permutation symmetry. Such sets of twelve equations include derivatives, differential equations, bisection relations, duplication relations, addition formulas (including new ones for theta functions), and pseudo-addition formulas.\nFor further information, see Carlson ([2011](./bib/C.html#bib2789 \"Permutation symmetry for theta functions\")).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "20.11.1",
+                "latex": "G(m,n)=\\sum\\limits_{k=0}^{n-1}e^{-\\pi ik^{2}m/n}; \\tag{20.11.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "20.11.2",
+                "latex": "\\frac{1}{\\sqrt{n}}G(m,n)=\\frac{1}{\\sqrt{n}}\\sum\\limits_{k=0}^{n-1}e^{-\\pi ik^{2}m/n}=\\frac{e^{-\\pi i/4}}{\\sqrt{m}}\\sum\\limits_{j=0}^{m-1}e^{\\pi ij^{2}n/m}=\\frac{e^{-\\pi i/4}}{\\sqrt{m}}G(-n,m). \\tag{20.11.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "20.11.3",
+                "latex": "f(a,b)=\\sum_{n=-\\infty}^{\\infty}a^{n(n+1)/2}b^{n(n-1)/2}, \\tag{20.11.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "20.11.4",
+                "latex": "f(a,b)=\\theta_{3}\\left(z\\middle|\\tau\\right). \\tag{20.11.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "20.11.5",
+                "latex": "{{}_{2}F_{1}}\\left(\\tfrac{1}{2},\\tfrac{1}{2};1;k^{2}\\right)={\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right); \\tag{20.11.5}"
+              },
+              {
+                "id": "EGx1",
+                "tag": "20.11.6",
+                "latex": "\\displaystyle\\varphi_{m,1}\\left(z,q\\right) \\displaystyle=\\frac{\\theta_{1}'\\left(0,q\\right)\\theta_{m}\\left(z,q\\right)}{\\theta_{m}\\left(0,q\\right)\\theta_{1}\\left(z,q\\right)}, \\tag{20.11.6}"
+              },
+              {
+                "id": "",
+                "tag": "20.11.7",
+                "latex": "\\displaystyle\\varphi_{1,n}\\left(z,q\\right) \\displaystyle=\\frac{\\theta_{n}\\left(0,q\\right)\\theta_{1}\\left(z,q\\right)}{\\theta_{1}'\\left(0,q\\right)\\theta_{n}\\left(z,q\\right)}, \\tag{20.11.7}"
+              },
+              {
+                "id": "",
+                "tag": "20.11.8",
+                "latex": "\\displaystyle\\varphi_{m,n}\\left(z,q\\right) \\displaystyle=\\frac{\\theta_{n}\\left(0,q\\right)\\theta_{m}\\left(z,q\\right)}{\\theta_{m}\\left(0,q\\right)\\theta_{n}\\left(z,q\\right)}, \\tag{20.11.8}"
+              },
+              {
+                "id": "E9",
+                "tag": "20.11.9",
+                "latex": "\\varphi_{m,n}\\left(z,q\\right)=\\varphi_{m,1}\\left(z,q\\right)\\varphi_{1,n}\\left(z,q\\right)=\\frac{1}{\\varphi_{n,m}\\left(z,q\\right)}=\\frac{\\varphi_{m,1}\\left(z,q\\right)}{\\varphi_{n,1}\\left(z,q\\right)}=\\frac{\\varphi_{1,n}\\left(z,q\\right)}{\\varphi_{1,m}\\left(z,q\\right)}. \\tag{20.11.9}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "G(m,n)=\\sum\\limits_{k=0}^{n-1}e^{-\\pi ik^{2}m/n}; \\tag{20.11.1}",
+              "\\frac{1}{\\sqrt{n}}G(m,n)=\\frac{1}{\\sqrt{n}}\\sum\\limits_{k=0}^{n-1}e^{-\\pi ik^{2}m/n}=\\frac{e^{-\\pi i/4}}{\\sqrt{m}}\\sum\\limits_{j=0}^{m-1}e^{\\pi ij^{2}n/m}=\\frac{e^{-\\pi i/4}}{\\sqrt{m}}G(-n,m). \\tag{20.11.2}",
+              "f(a,b)=\\sum_{n=-\\infty}^{\\infty}a^{n(n+1)/2}b^{n(n-1)/2}, \\tag{20.11.3}",
+              "f(a,b)=\\theta_{3}\\left(z\\middle|\\tau\\right). \\tag{20.11.4}",
+              "{{}_{2}F_{1}}\\left(\\tfrac{1}{2},\\tfrac{1}{2};1;k^{2}\\right)={\\theta_{3}}^{2}\\left(0\\middle|\\tau\\right); \\tag{20.11.5}",
+              "\\displaystyle\\varphi_{m,1}\\left(z,q\\right) \\displaystyle=\\frac{\\theta_{1}'\\left(0,q\\right)\\theta_{m}\\left(z,q\\right)}{\\theta_{m}\\left(0,q\\right)\\theta_{1}\\left(z,q\\right)}, \\tag{20.11.6}",
+              "\\displaystyle\\varphi_{1,n}\\left(z,q\\right) \\displaystyle=\\frac{\\theta_{n}\\left(0,q\\right)\\theta_{1}\\left(z,q\\right)}{\\theta_{1}'\\left(0,q\\right)\\theta_{n}\\left(z,q\\right)}, \\tag{20.11.7}",
+              "\\displaystyle\\varphi_{m,n}\\left(z,q\\right) \\displaystyle=\\frac{\\theta_{n}\\left(0,q\\right)\\theta_{m}\\left(z,q\\right)}{\\theta_{m}\\left(0,q\\right)\\theta_{n}\\left(z,q\\right)}, \\tag{20.11.8}",
+              "\\varphi_{m,n}\\left(z,q\\right)=\\varphi_{m,1}\\left(z,q\\right)\\varphi_{1,n}\\left(z,q\\right)=\\frac{1}{\\varphi_{n,m}\\left(z,q\\right)}=\\frac{\\varphi_{m,1}\\left(z,q\\right)}{\\varphi_{n,1}\\left(z,q\\right)}=\\frac{\\varphi_{1,n}\\left(z,q\\right)}{\\varphi_{1,m}\\left(z,q\\right)}. \\tag{20.11.9}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "generalizations",
+                "theta functions",
+                "Gauss sum",
+                "Gauss sums",
+                "Poisson identity",
+                "discrete analog",
+                "Ramanujan’s",
+                "Jacobi’s inversion formula",
+                "Ramanujan’s change of base",
+                "with characteristics",
+                "combined",
+                "permutation symmetry"
+              ],
+              "definiciones": [
+                "$\\varphi_{n,m}\\left(z,q\\right)$ : combined theta function"
+              ],
+              "simbolos": [
+                "$\\theta_{j}\\left(z,q\\right)$: theta function , $\\varphi_{n,m}\\left(z,q\\right)$: combined theta function , $m$: integer , $z$: complex and $q$: nome",
+                "$\\theta_{j}\\left(z,q\\right)$: theta function , $\\varphi_{n,m}\\left(z,q\\right)$: combined theta function , $n$: integer , $z$: complex and $q$: nome",
+                "$\\theta_{j}\\left(z,q\\right)$: theta function , $\\varphi_{n,m}\\left(z,q\\right)$: combined theta function , $m$: integer , $n$: integer , $z$: complex and $q$: nome"
+              ],
+              "referenciado_por": [
+                "§20.11(iii)",
+                "Erratum (V1.0.5) for Chapters 8",
+                "20",
+                "36"
+              ],
+              "notas_bibliograficas": [
+                "See Bellman ([1961](./bib/B.html#bib231 \"A Brief Introduction to Theta Functions\"), pp. 38–39), Walker ([1996](./bib/W.html#bib2359 \"Elliptic Functions. A Constructive Approach\"), pp. 181–182), and McKean and Moll ([1999](./bib/M.html#bib1582 \"Elliptic Curves\"), pp. 140–147 and 151–152)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.11 and Ch.20",
+                "Annotations for §20.11(v) , §20.11 and Ch.20"
+              ],
+              "historial_cambios": [
+                {
+                  "tipo_evento": "Addition (effective with 1.0.5)",
+                  "descripcion": "The material in this subsection has been added. It will be incorporated into the next printed edition."
+                }
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1961",
+                "archivo_destino": "bib/B.html#bib231",
+                "titulo_referencia": "A Brief Introduction to Theta Functions"
+              },
+              {
+                "texto": "1996",
+                "archivo_destino": "bib/W.html#bib2359",
+                "titulo_referencia": "Elliptic Functions. A Constructive Approach"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/M.html#bib1582",
+                "titulo_referencia": "Elliptic Curves"
+              },
+              {
+                "texto": "1903",
+                "archivo_destino": "bib/L.html#bib1418",
+                "titulo_referencia": "Zur Theorie der Gaußschen Summen"
+              },
+              {
+                "texto": "1985",
+                "archivo_destino": "bib/index.html#bib34",
+                "titulo_referencia": "Chapter 16 of Ramanujan’s second notebook: Theta-functions and q -series"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/M.html#bib1582",
+                "titulo_referencia": "Elliptic Curves"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/index.html#bib100",
+                "titulo_referencia": "Ramanujan Revisited"
+              },
+              {
+                "texto": "22.2",
+                "archivo_destino": "22.2.md",
+                "titulo_referencia": "§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"
+              },
+              {
+                "texto": "19.5",
+                "archivo_destino": "19.5.md",
+                "titulo_referencia": "§19.5 Maclaurin and Related Expansions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"
+              },
+              {
+                "texto": "1995",
+                "archivo_destino": "bib/B.html#bib245",
+                "titulo_referencia": "Ramanujan’s theories of elliptic functions to alternative bases"
+              },
+              {
+                "texto": "1998",
+                "archivo_destino": "bib/S.html#bib2064",
+                "titulo_referencia": "On an identity of Ramanujan based on the hypergeometric series ⁢ F 1 2 ( 1 3 , 2 3 ; 1 2 ; x )"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/C.html#bib502",
+                "titulo_referencia": "Approximations and Complex Multiplication According to Ramanujan"
+              },
+              {
+                "texto": "2004",
+                "archivo_destino": "bib/R.html#bib1973",
+                "titulo_referencia": "Elliptic hypergeometric series on root systems"
+              },
+              {
+                "texto": "21.6",
+                "archivo_destino": "21.6.md",
+                "titulo_referencia": "§21.6 Products ‣ Properties ‣ Chapter 21 Multidimensional Theta Functions"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/R.html#bib1928",
+                "titulo_referencia": "Elliptic Functions, Theta Functions, and Riemann Surfaces"
+              },
+              {
+                "texto": "20.1",
+                "archivo_destino": "20.1.md",
+                "titulo_referencia": "§20.1 Special Notation ‣ Notation ‣ Chapter 20 Theta Functions"
+              },
+              {
+                "texto": "2011",
+                "archivo_destino": "bib/C.html#bib2789",
+                "titulo_referencia": "Permutation symmetry for theta functions"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Applications",
+      "secciones": [
+        {
+          "seccion_id": "20.12",
+          "titulo_original": "Mathematical Applications",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.12.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.12.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.12 Mathematical Applications",
+            "prosa_teorica": "For applications of $\\theta_{3}\\left(0,q\\right)$ to problems involving sums of squares of integers see § 27.13(iv) , and for extensions see Estermann ([1959](./bib/E.html#bib758 \"On the representations of a number as a sum of three squares\")), Serre ([1973](./bib/S.html#bib2047 \"A Course in Arithmetic\"), pp. 106–109), Koblitz ([1993](./bib/K.html#bib1299 \"Introduction to Elliptic Curves and Modular Forms\"), pp. 176–177), and McKean and Moll ([1999](./bib/M.html#bib1582 \"Elliptic Curves\"), pp. 142–143).\nFor applications of Jacobi’s triple product ( 20.5.9 ) to Ramanujan’s $\\tau\\left(n\\right)$ function and Euler’s pentagonal numbers see Hardy and Wright ([1979](./bib/H.html#bib1047 \"An Introduction to the Theory of Numbers\"), pp. 132–160) and McKean and Moll ([1999](./bib/M.html#bib1582 \"Elliptic Curves\"), pp. 143–145). For an application of a generalization in affine root systems see Macdonald ([1972](./bib/M.html#bib1515 \"Affine root systems and Dedekind’s η -function\")).\nFor the terminology and notation see McKean and Moll ([1999](./bib/M.html#bib1582 \"Elliptic Curves\"), pp. 48–53).\nThe space of complex tori $\\mathbb{C}/(\\mathbb{Z}+\\tau\\mathbb{Z})$ (that is, the set of complex numbers $z$ in which two of these numbers $z_{1}$ and $z_{2}$ are regarded as equivalent if there exist integers $m,n$ such that $z_{1}-z_{2}=m+\\tau n$ ) is mapped into the projective space $P^{3}$ via the identification $z\\to(\\theta_{1}\\left(2z\\middle|\\tau\\right),\\theta_{2}\\left(2z\\middle|\\tau\\right),\\theta_{3}\\left(2z\\middle|\\tau\\right),\\theta_{4}\\left(2z\\middle|\\tau\\right))$ . Thus theta functions “uniformize” the complex torus. This ability to uniformize multiply-connected spaces (manifolds), or multi-sheeted functions of a complex variable (Riemann ([1899](./bib/R.html#bib1952 \"Elliptische Functionen\")), Rauch and Lebowitz ([1973](./bib/R.html#bib1928 \"Elliptic Functions, Theta Functions, and Riemann Surfaces\")), Siegel ([1988](./bib/S.html#bib2080 \"Topics in Complex Function Theory. Vol. I: Elliptic Functions and Uniformization Theory\"))) has led to applications in string theory (Green et al. ([1988a](./bib/G.html#bib979 \"Superstring Theory: Introduction, Vol. 1\"), [b](./bib/G.html#bib980 \"Superstring Theory: Loop Amplitudes, Anomalies and Phenomenolgy, Vol. 2\")), Krichever and Novikov ([1989](./bib/K.html#bib1350 \"Algebras of Virasoro type, the energy-momentum tensor, and operator expansions on Riemann surfaces\"))), and also in statistical mechanics (Baxter ([1982](./bib/B.html#bib221 \"Exactly Solved Models in Statistical Mechanics\"))).",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "applications",
+                "mathematical",
+                "theta functions",
+                "number theory",
+                "complex",
+                "complex tori",
+                "statistical mechanics",
+                "string theory",
+                "torus"
+              ],
+              "referenciado_por": [
+                "§20.1",
+                "§21.1",
+                "§23.1"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.12 and Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1959",
+                "archivo_destino": "bib/E.html#bib758",
+                "titulo_referencia": "On the representations of a number as a sum of three squares"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/S.html#bib2047",
+                "titulo_referencia": "A Course in Arithmetic"
+              },
+              {
+                "texto": "1993",
+                "archivo_destino": "bib/K.html#bib1299",
+                "titulo_referencia": "Introduction to Elliptic Curves and Modular Forms"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/M.html#bib1582",
+                "titulo_referencia": "Elliptic Curves"
+              },
+              {
+                "texto": "1979",
+                "archivo_destino": "bib/H.html#bib1047",
+                "titulo_referencia": "An Introduction to the Theory of Numbers"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/M.html#bib1582",
+                "titulo_referencia": "Elliptic Curves"
+              },
+              {
+                "texto": "1972",
+                "archivo_destino": "bib/M.html#bib1515",
+                "titulo_referencia": "Affine root systems and Dedekind’s η -function"
+              },
+              {
+                "texto": "1999",
+                "archivo_destino": "bib/M.html#bib1582",
+                "titulo_referencia": "Elliptic Curves"
+              },
+              {
+                "texto": "1899",
+                "archivo_destino": "bib/R.html#bib1952",
+                "titulo_referencia": "Elliptische Functionen"
+              },
+              {
+                "texto": "1973",
+                "archivo_destino": "bib/R.html#bib1928",
+                "titulo_referencia": "Elliptic Functions, Theta Functions, and Riemann Surfaces"
+              },
+              {
+                "texto": "1988",
+                "archivo_destino": "bib/S.html#bib2080",
+                "titulo_referencia": "Topics in Complex Function Theory. Vol. I: Elliptic Functions and Uniformization Theory"
+              },
+              {
+                "texto": "1988a",
+                "archivo_destino": "bib/G.html#bib979",
+                "titulo_referencia": "Superstring Theory: Introduction, Vol. 1"
+              },
+              {
+                "texto": "b",
+                "archivo_destino": "bib/G.html#bib980",
+                "titulo_referencia": "Superstring Theory: Loop Amplitudes, Anomalies and Phenomenolgy, Vol. 2"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/K.html#bib1350",
+                "titulo_referencia": "Algebras of Virasoro type, the energy-momentum tensor, and operator expansions on Riemann surfaces"
+              },
+              {
+                "texto": "1982",
+                "archivo_destino": "bib/B.html#bib221",
+                "titulo_referencia": "Exactly Solved Models in Statistical Mechanics"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.13",
+          "titulo_original": "Physical Applications",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.13.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.13.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.13 Physical Applications",
+            "prosa_teorica": "The functions $\\theta_{j}\\left(z\\middle|\\tau\\right)$ , $j=1,2,3,4$ , provide periodic solutions of the partial differential equation\nwith $\\kappa=-i\\pi/4$ .\nFor $\\tau=it$ , with $\\alpha,t,z$ real, ( 20.13.1 ) takes the form of a real-time $t$ diffusion equation\nwith diffusion constant $\\alpha=\\pi/4$ . Let $z,\\alpha,t\\in\\mathbb{R}$ . Then the nonperiodic Gaussian\nis also a solution of ( 20.13.2 ), and it approaches a Dirac delta (§ [1.17](./1.17.md \"§1.17 Integral and Series Representations of the Dirac Delta ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods\") ) at $t=0$ . These two apparently different solutions differ only in their normalization and boundary conditions. From ( 20.2.3 ), ( 20.2.4 ), ( 20.7.32 ), and ( 20.7.33 ),\nand\nThus the classical theta functions are “periodized”, or “anti-periodized”, Gaussians; see Bellman ([1961](./bib/B.html#bib231 \"A Brief Introduction to Theta Functions\"), pp. 18, 19). Theta-function solutions to the heat diffusion equation with simple boundary conditions are discussed in Lawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), pp. 1–3), and with more general boundary conditions in Körner ([1989](./bib/K.html#bib1335 \"Fourier Analysis\"), pp. 274–281).\nIn the singular limit $\\Im\\tau\\rightarrow 0+$ , the functions $\\theta_{j}\\left(z\\middle|\\tau\\right)$ , $j=1,2,3,4$ , become integral kernels of Feynman path integrals (distribution-valued Green’s functions); see Schulman ([1981](./bib/S.html#bib2022 \"Techniques and Applications of Path Integration\"), pp. 194–195). This allows analytic time propagation of quantum wave-packets in a box, or on a ring, as closed-form solutions of the time-dependent Schrödinger equation.",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "20.13.1",
+                "latex": "\\frac{\\partial\\theta(z|\\tau)}{\\partial\\tau}=\\kappa\\frac{{\\partial}^{2}\\theta(z|\\tau)}{{\\partial z}^{2}}, \\tag{20.13.1}"
+              },
+              {
+                "id": "E2",
+                "tag": "20.13.2",
+                "latex": "\\frac{\\partial\\theta}{\\partial t}=\\alpha\\frac{{\\partial}^{2}\\theta}{{\\partial z}^{2}}, \\tag{20.13.2}"
+              },
+              {
+                "id": "E3",
+                "tag": "20.13.3",
+                "latex": "g(z,t)=\\sqrt{\\frac{\\pi}{4\\alpha t}}\\exp\\left(-\\frac{z^{2}}{4\\alpha t}\\right) \\tag{20.13.3}"
+              },
+              {
+                "id": "E4",
+                "tag": "20.13.4",
+                "latex": "\\sqrt{\\frac{\\pi}{4\\alpha t}}\\sum\\limits_{n=-\\infty}^{\\infty}e^{-(n\\pi+z)^{2}/(4\\alpha t)}=\\theta_{3}\\left(z\\middle|i4\\alpha t/\\pi\\right), \\tag{20.13.4}"
+              },
+              {
+                "id": "E5",
+                "tag": "20.13.5",
+                "latex": "\\sqrt{\\frac{\\pi}{4\\alpha t}}\\sum\\limits_{n=-\\infty}^{\\infty}(-1)^{n}e^{-(n\\pi+z)^{2}/(4\\alpha t)}=\\theta_{4}\\left(z\\middle|i4\\alpha t/\\pi\\right). \\tag{20.13.5}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\frac{\\partial\\theta(z|\\tau)}{\\partial\\tau}=\\kappa\\frac{{\\partial}^{2}\\theta(z|\\tau)}{{\\partial z}^{2}}, \\tag{20.13.1}",
+              "\\frac{\\partial\\theta}{\\partial t}=\\alpha\\frac{{\\partial}^{2}\\theta}{{\\partial z}^{2}}, \\tag{20.13.2}",
+              "g(z,t)=\\sqrt{\\frac{\\pi}{4\\alpha t}}\\exp\\left(-\\frac{z^{2}}{4\\alpha t}\\right) \\tag{20.13.3}",
+              "\\sqrt{\\frac{\\pi}{4\\alpha t}}\\sum\\limits_{n=-\\infty}^{\\infty}e^{-(n\\pi+z)^{2}/(4\\alpha t)}=\\theta_{3}\\left(z\\middle|i4\\alpha t/\\pi\\right), \\tag{20.13.4}",
+              "\\sqrt{\\frac{\\pi}{4\\alpha t}}\\sum\\limits_{n=-\\infty}^{\\infty}(-1)^{n}e^{-(n\\pi+z)^{2}/(4\\alpha t)}=\\theta_{4}\\left(z\\middle|i4\\alpha t/\\pi\\right). \\tag{20.13.5}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "Feynman path integrals",
+                "Gaussian",
+                "Schrödinger equation",
+                "applications",
+                "diffusion equations",
+                "limit forms as $\\Im\\tau\\rightarrow 0+$",
+                "nonperiodic",
+                "physical",
+                "quantum wave-packets",
+                "theta functions"
+              ],
+              "notas_bibliograficas": [
+                "See Whittaker and Watson ([1927](./bib/W.html#bib2404 \"A Course of Modern Analysis\"), p. 470)."
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1927",
+                "archivo_destino": "bib/W.html#bib2404",
+                "titulo_referencia": "A Course of Modern Analysis"
+              },
+              {
+                "texto": "1.17",
+                "archivo_destino": "1.17.md",
+                "titulo_referencia": "§1.17 Integral and Series Representations of the Dirac Delta ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"
+              },
+              {
+                "texto": "1961",
+                "archivo_destino": "bib/B.html#bib231",
+                "titulo_referencia": "A Brief Introduction to Theta Functions"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/K.html#bib1335",
+                "titulo_referencia": "Fourier Analysis"
+              },
+              {
+                "texto": "1981",
+                "archivo_destino": "bib/S.html#bib2022",
+                "titulo_referencia": "Techniques and Applications of Path Integration"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "categoria": "Computation",
+      "secciones": [
+        {
+          "seccion_id": "20.14",
+          "titulo_original": "Methods of Computation",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.14.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.14.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.14 Methods of Computation",
+            "prosa_teorica": "The Fourier series of § 20.2(i) usually converge rapidly because of the factors $q^{(n+\\frac{1}{2})^{2}}$ or $q^{n^{2}}$ , and provide a convenient way of calculating values of $\\theta_{j}\\left(z\\middle|\\tau\\right)$ . Similarly, their $z$ -differentiated forms provide a convenient way of calculating the corresponding derivatives. For instance, the first three terms of ( 20.2.1 ) give the value of $\\theta_{1}\\left(2-i\\middle|i\\right)$ ( $=\\theta_{1}\\left(2-i,e^{-\\pi}\\right)$ ) to 12 decimal places.\nFor values of $\\left|q\\right|$ near $1$ the transformations of § 20.7(viii) can be used to replace $\\tau$ with a value that has a larger imaginary part and hence a smaller value of $\\left|q\\right|$ . For instance, to find $\\theta_{3}\\left(z,0.9\\right)$ we use ( 20.7.32 ) with $q=0.9=e^{i\\pi\\tau}$ , $\\tau=-i\\ln\\left(0.9\\right)/\\pi$ . Then $\\tau^{\\prime}=-1/\\tau=-i\\pi/\\ln\\left(0.9\\right)$ and $q^{\\prime}=e^{i\\pi\\tau^{\\prime}}=\\exp\\left(\\pi^{2}/\\ln\\left(0.9\\right)\\right)=(2.07\\dots)\\times 10^{-41}$ . Hence the first term of the series ( 20.2.3 ) for $\\theta_{3}\\left(z\\tau^{\\prime}\\middle|\\tau^{\\prime}\\right)$ suffices for most purposes. In theory, starting from any value of $\\tau$ , a finite number of applications of the transformations $\\tau\\to\\tau+1$ and $\\tau\\to-1/\\tau$ will result in a value of $\\tau$ with $\\Im\\tau\\geq\\sqrt{3}/2$ ; see § [23.18](./23.18.md \"§23.18 Modular Transformations ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions\") . In practice a value with, say, $\\Im\\tau\\geq 1/2$ , $\\left|q\\right|\\leq 0.2$ , is found quickly and is satisfactory for numerical evaluation.",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "palabras_clave": [
+                "computation",
+                "theta functions"
+              ],
+              "referenciado_por": [
+                "§22.20(i)",
+                "§22.20(iv)",
+                "§22.20(vi)",
+                "§23.22(i)"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "23.18",
+                "archivo_destino": "23.18.md",
+                "titulo_referencia": "§23.18 Modular Transformations ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.15",
+          "titulo_original": "Tables",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.15.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.15.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.15 Tables",
+            "prosa_teorica": "Theta functions are tabulated in Jahnke and Emde ([1945](./bib/J.html#bib1158 \"Tables of Functions with Formulae and Curves\"), p. 45). This reference gives $\\theta_{j}\\left(x,q\\right)$ , $j=1,2,3,4$ , and their logarithmic $x$ -derivatives to 4D for $x/\\pi=0(.1)1$ , $\\alpha=0(9^{\\circ})90^{\\circ}$ , where $\\alpha$ is the modular angle given by\nSpenceley and Spenceley ([1947](./bib/S.html#bib2139 \"Smithsonian Elliptic Functions Tables\")) tabulates $\\theta_{1}\\left(x,q\\right)/\\theta_{2}\\left(0,q\\right)$ , $\\theta_{2}\\left(x,q\\right)/\\theta_{2}\\left(0,q\\right)$ , $\\theta_{3}\\left(x,q\\right)/\\theta_{4}\\left(0,q\\right)$ , $\\theta_{4}\\left(x,q\\right)/\\theta_{4}\\left(0,q\\right)$ to 12D for $u=0(1^{\\circ})90^{\\circ}$ , $\\alpha=0(1^{\\circ})89^{\\circ}$ , where $u=2x/(\\pi{\\theta_{3}}^{2}\\left(0,q\\right))$ and $\\alpha$ is defined by ( 20.15.1 ), together with the corresponding values of $\\theta_{2}\\left(0,q\\right)$ and $\\theta_{4}\\left(0,q\\right)$ .\nLawden ([1989](./bib/L.html#bib1385 \"Elliptic Functions and Applications\"), pp. 270–279) tabulates $\\theta_{j}\\left(x,q\\right)$ , $j=1,2,3,4$ , to 5D for $x=0(1^{\\circ})90^{\\circ}$ , $q=0.1(.1)0.9$ , and also $q$ to 5D for $k^{2}=0(.01)1$ .\nTables of Neville’s theta functions $\\theta_{s}\\left(x,q\\right)$ , $\\theta_{c}\\left(x,q\\right)$ , $\\theta_{d}\\left(x,q\\right)$ , $\\theta_{n}\\left(x,q\\right)$ (see § [20.1](./20.1.md \"§20.1 Special Notation ‣ Notation ‣ Chapter 20 Theta Functions\") ) and their logarithmic $x$ -derivatives are given in Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), pp. 582–585) to 9D for $\\varepsilon,\\alpha=0(5^{\\circ})90^{\\circ}$ , where (in radian measure) $\\varepsilon=x/{\\theta_{3}}^{2}\\left(0,q\\right)=\\pi x/(2K\\left(k\\right))$ , and $\\alpha$ is defined by ( 20.15.1 ).\nFor other tables prior to 1961 see Fletcher et al. ([1962](./bib/F.html#bib810 \"An Index of Mathematical Tables. Vols. I, II\"), pp. 508–514) and Lebedev and Fedorova ([1960](./bib/L.html#bib1392 \"A Guide to Mathematical Tables\"), pp. 227–230).",
+            "formulas_clave": [
+              {
+                "id": "E1",
+                "tag": "20.15.1",
+                "latex": "\\sin\\alpha={\\theta_{2}}^{2}\\left(0,q\\right)/{\\theta_{3}}^{2}\\left(0,q\\right)=k. \\tag{20.15.1}"
+              }
+            ],
+            "ecuaciones_latex": [
+              "\\sin\\alpha={\\theta_{2}}^{2}\\left(0,q\\right)/{\\theta_{3}}^{2}\\left(0,q\\right)=k. \\tag{20.15.1}"
+            ],
+            "metadatos": {
+              "palabras_clave": [
+                "tables",
+                "theta functions"
+              ],
+              "referenciado_por": [
+                "§22.21"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "1945",
+                "archivo_destino": "bib/J.html#bib1158",
+                "titulo_referencia": "Tables of Functions with Formulae and Curves"
+              },
+              {
+                "texto": "1947",
+                "archivo_destino": "bib/S.html#bib2139",
+                "titulo_referencia": "Smithsonian Elliptic Functions Tables"
+              },
+              {
+                "texto": "1989",
+                "archivo_destino": "bib/L.html#bib1385",
+                "titulo_referencia": "Elliptic Functions and Applications"
+              },
+              {
+                "texto": "20.1",
+                "archivo_destino": "20.1.md",
+                "titulo_referencia": "§20.1 Special Notation ‣ Notation ‣ Chapter 20 Theta Functions"
+              },
+              {
+                "texto": "1964",
+                "archivo_destino": "bib/index.html#bib24",
+                "titulo_referencia": "Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables"
+              },
+              {
+                "texto": "1962",
+                "archivo_destino": "bib/F.html#bib810",
+                "titulo_referencia": "An Index of Mathematical Tables. Vols. I, II"
+              },
+              {
+                "texto": "1960",
+                "archivo_destino": "bib/L.html#bib1392",
+                "titulo_referencia": "A Guide to Mathematical Tables"
+              }
+            ]
+          }
+        },
+        {
+          "seccion_id": "20.16",
+          "titulo_original": "Software",
+          "rutas": {
+            "docs_original": "docs/DLMF-markdown-main/markdown/20/20.16.md",
+            "docs_traduccion": "docs/DLMF_markdown_traduccion/markdown/20/20.16.md"
+          },
+          "contenido": {
+            "titulo_seccion_md": "§20.16 Software",
+            "prosa_teorica": "In this section we provide links to the research literature describing the implementation of algorithms in software for the evaluation of functions described in this chapter. However, no research software has been found for these functions. For other software see the [Software Index](./software/index.md) .\nSee the [Software Index](./software/index.md) .\nSee the [Software Index](./software/index.md) .",
+            "formulas_clave": [],
+            "ecuaciones_latex": [],
+            "metadatos": {
+              "referenciado_por": [
+                "§ ‣ Software Cross Index"
+              ],
+              "ver_tambien": [
+                "Annotations for Ch.20",
+                "Annotations for §20.16 and Ch.20"
+              ]
+            },
+            "estado": "completado",
+            "referencias_cruzadas": [
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              },
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              },
+              {
+                "texto": "Software Index",
+                "archivo_destino": "software/index.md",
+                "titulo_referencia": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "agradecimientos_capitulo": "This chapter is based in part on Abramowitz and Stegun ([1964](./bib/index.html#bib24 \"Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables\"), Chapter 16), by L. M. Milne-Thomson.",
+  "referencias_capitulo": [
+    "New Associate Editors for the DLMF",
+    "*Profile* Peter L. Walker",
+    "*Profile* Victor Moll",
+    "*Profile* William P. Reinhardt",
+    "*Profile* William P. Reinhardt",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Chapter Authors",
+    "§ ‣ Associate Editors",
+    "§ ‣ Associate Editors",
+    "§ ‣ Associate Editors",
+    "Erratum (V1.0.1) for References",
+    "Erratum (V1.0.5) for Chapters 8",
+    "20",
+    "36",
+    "§ ‣ Software Cross Index\n\n**Addition (effective with 1.0.1):**\n\nArmitage and Eberlein ([2006](./bib/index.html#bib2736 \"Elliptic Functions\")) was added as a general reference for this chapter."
+  ],
+  "estado_extraccion": "completado",
+  "total_formulas_extraidas": 115,
+  "estado_metadatos": "verificado_y_refinado"
+}

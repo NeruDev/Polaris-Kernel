@@ -6,15 +6,20 @@
 Polaris Kernel is a structured repository of mathematics based on the Bourbaki pillars. It aims to provide an atomic, semantic, and illustrated knowledge base optimized for Retrieval-Augmented Generation (RAG) and autonomous software engineering. The content is interactively rendered via Quarto.
 
 ## Architecture
-- Root: `src/` (6 Pillars of Mathematics)
+- Root: `src/` (6 Pillars of Mathematics, documented in `src/README.md`)
+- Technical Docs: `docs/` (Architecture, Typst/Quarto guides, documented in `docs/README.md`)
+- Metadata & Datasets: `metadata/` (MSC2020 taxonomy, DLMF datasets in `metadata/DLMF_data/`, documented in `metadata/README.md`)
+- Orchestration: `scripts/` (Build system, assets generation, translation tools, documented in `scripts/README.md`)
 - Adjacency Rule: Every `.qmd` has a `.json` metadata counterpart in the same folder.
 - Governance: Validated via JSON Schemas in `metadata/schemas/`.
-- Automation: Orchestrated by `scripts/build.py` leveraging Quarto.
 
 ## Key Files for AI Agents
 - `AGENTS.md`: Global standards and naming conventions.
 - `ARQUITECTURE.md`: Deep technical design and segmentation rules.
 - `GEMINI.md`: Specific behavioral guidelines for LLMs.
+- `docs/README.md`: Index of technical specifications and rendering guides.
+- `metadata/README.md`: Overview of MSC2020 and DLMF NIST datasets.
+- `scripts/README.md`: Map of automation and processing scripts.
 - `GENERATED_ASSETS.md`: Registry of all SVG graphics.
 
 ## Technology Stack

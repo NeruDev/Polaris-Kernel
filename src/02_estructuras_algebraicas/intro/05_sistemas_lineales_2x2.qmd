@@ -1,0 +1,53 @@
+---
+title: "Sistemas de Ecuaciones Lineales Básicos (2x2)"
+date: "2026-07-22"
+categories: ["algebra", "sistemas_lineales", "ecuaciones", "matrices"]
+id: "msc15_sistemas_lineales_2x2"
+---
+
+## Concepto Intuitivo
+
+Un sistema de ecuaciones lineales $2 \times 2$ es un conjunto de dos ecuaciones algebraicas de primer grado que comparten dos variables desconocidas.
+Resolver el sistema significa encontrar, si existe, el par de valores que satisface ambas igualdades simultáneamente.
+Desde un punto de vista geométrico en el plano cartesiano, cada ecuación representa una línea recta continua.
+La solución del sistema se traduce visualmente en el punto de intersección exacto donde ambas rectas convergen.
+Si las líneas son paralelas y nunca se tocan, el sistema es inconsistente y carece de solución.
+Por el contrario, si las ecuaciones describen la misma recta subyacente superpuesta, el sistema tiene infinitas soluciones y se considera dependiente.
+
+## Métodos de Resolución Analítica
+
+La resolución algebraica clásica permite encontrar la intersección sin recurrir a gráficos, garantizando precisión infinita.
+Existen tres métodos canónicos para sistemas bidimensionales: sustitución, igualación y eliminación (o reducción).
+
+El **método de sustitución** consiste en despejar una variable en una de las ecuaciones y reemplazar esa expresión algebraica en la otra ecuación.
+Esto reduce el problema a una única ecuación unidimensional fácilmente resoluble.
+
+El **método de reducción**, por su parte, requiere multiplicar una o ambas ecuaciones por constantes estratégicas.
+El objetivo es lograr que los coeficientes de una de las variables sean inversos aditivos (ej. $3x$ y $-3x$).
+Al sumar ambas ecuaciones verticalmente, la variable seleccionada se aniquila matemáticamente, despejando el camino para resolver la variable restante.
+
+$$
+\begin{cases}
+a_{11}x + a_{12}y = b_1 \\
+a_{21}x + a_{22}y = b_2
+\end{cases}
+$$
+
+Este formato de llaves agrupa el sistema y es el precursor inmediato de la notación matricial $Ax = b$ que rige el álgebra lineal avanzada.
+
+![](sistemas_lineales_2x2.svg)
+
+## Representación Matricial Temprana
+
+Aunque un sistema $2 \times 2$ puede resolverse por manipulación algebraica básica, es la puerta de entrada a la teoría de matrices.
+Extraer los coeficientes de las variables y agruparlos en un arreglo rectangular permite separar la estructura del sistema de las incógnitas que procesa.
+Este enfoque estructural es el pilar sobre el cual se construyen los espacios vectoriales multidimensionales y las transformaciones lineales complejas.
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| :--- | :--- | :--- |
+| $x, y$ | Variables incógnitas principales del sistema bidimensional. | Variables reales |
+| $a_{ij}$ | Coeficiente numérico constante que multiplica a una variable. | Escalar real |
+| $b_i$ | Término independiente o constante en el lado derecho de la ecuación. | Escalar real |
+| $L_i$ | Notación para designar a la Línea o Recta i-ésima en el plano. | Entidad geométrica |

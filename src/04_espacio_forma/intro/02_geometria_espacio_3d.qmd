@@ -1,0 +1,69 @@
+---
+title: "Geometría Analítica en el Espacio Tridimensional"
+subtitle: "Rectas, Planos y Vectores en $\\mathbb{R}^3$"
+date: "2026-07-22"
+categories: ["geometría", "espacio", "vectores", "planos"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Geometría Analítica en $\mathbb{R}^3$
+
+## Introducción
+
+La geometría analítica en el espacio tridimensional extiende los conceptos del plano cartesiano añadiendo un tercer eje ortogonal, el eje Z.
+Esta disciplina matemática permite estudiar figuras sólidas, superficies y trayectorias espaciales utilizando herramientas del álgebra lineal.
+Las coordenadas de un punto en el espacio se representan mediante una terna ordenada $(x, y, z)$.
+El uso de vectores es indispensable para formular de manera compacta y general las ecuaciones de rectas y planos.
+
+## Vectores en el Espacio
+
+Un vector tridimensional posee magnitud y dirección, representado típicamente por sus componentes escalares respecto a una base ortonormal estándar $\mathbf{i}$, $\mathbf{j}$, y $\mathbf{k}$.
+Las operaciones básicas incluyen la suma vectorial, la multiplicación por un escalar y dos tipos de productos fundamentales.
+El producto escalar o punto devuelve un número real y se utiliza para encontrar el ángulo entre dos vectores y determinar ortogonalidad.
+El producto vectorial o cruz genera un nuevo vector ortogonal a los dos originales, y su magnitud equivale al área del paralelogramo que forman.
+
+## Ecuaciones de la Recta en $\mathbb{R}^3$
+
+A diferencia de una recta en el plano, que se define con una sola ecuación implícita, una recta en el espacio requiere sistemas paramétricos o vectoriales.
+Una recta está completamente determinada si se conoce un punto por donde pasa y un vector director que indica su orientación.
+$$
+\mathbf{r}(t) = \mathbf{r}_0 + t \mathbf{v}
+$$
+En esta ecuación vectorial, $\mathbf{r}_0$ es el vector posición de un punto de la recta, $\mathbf{v}$ es el vector director, y $t$ es un parámetro real continuo.
+Desglosando por componentes, se obtienen las ecuaciones paramétricas continuas.
+
+## Ecuaciones del Plano
+
+Un plano en el espacio se puede concebir como una superficie plana infinita.
+Queda determinado unívocamente por un punto contenido en él y un vector normal que es perpendicular a cualquier recta contenida en el plano.
+Si $\mathbf{n} = \langle a, b, c \rangle$ es el vector normal y $(x_0, y_0, z_0)$ es un punto del plano, la ecuación escalar del plano es:
+$$
+a(x - x_0) + b(y - y_0) + c(z - z_0) = 0
+$$
+Esta ecuación puede simplificarse a la forma general $ax + by + cz + d = 0$.
+
+## Intersecciones y Distancias
+
+El análisis de intersecciones entre rectas y planos es fundamental para la resolución de problemas geométricos.
+Dos planos no paralelos siempre se intersectan en una recta, cuyo vector director es el producto cruz de los vectores normales de ambos planos.
+La distancia de un punto a un plano o la distancia más corta entre dos rectas cruzadas se calculan eficientemente utilizando proyecciones ortogonales y propiedades del producto escalar y vectorial.
+
+## Representación Visual
+
+El gráfico a continuación muestra la representación de un sistema de coordenadas en tres dimensiones junto a un plano fundamental.
+
+![Plano en el espacio 3D](geometria_espacio_3d.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $(x, y, z)$ | Coordenadas de un punto en el espacio euclidiano $\mathbb{R}^3$ | vector |
+| $\mathbf{v}$, $\mathbf{n}$ | Vector director y vector normal respectivamente | vector |
+| $\mathbf{r}_0$ | Vector de posición inicial | vector |
+| $t$ | Parámetro que define un punto en una recta | escalar |
+| $a, b, c, d$ | Constantes en la ecuación general de un plano | escalar |

@@ -1,0 +1,18 @@
+{
+    "title": "Relaciones de Recurrencia y Funciones Generatrices",
+    "subtitle": "Modelado y Resolución de Sucesiones Discretas",
+    "date": "2026-07-22",
+    "categories": [
+        "matemática discreta",
+        "recurrencia",
+        "sucesiones",
+        "combinatoria"
+    ],
+    "format": {
+        "html": {
+            "toc": true,
+            "toc-depth": 3,
+            "math": true
+        }
+    }
+}

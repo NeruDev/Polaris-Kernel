@@ -1,0 +1,19 @@
+{
+    "title": "Funciones Exponenciales, Logarítmicas y Trigonométricas",
+    "subtitle": "Análisis y Propiedades de Funciones Transcendentes",
+    "date": "2026-07-22",
+    "categories": [
+        "análisis",
+        "funciones transcendentes",
+        "exponencial",
+        "logaritmo",
+        "trigonometría"
+    ],
+    "format": {
+        "html": {
+            "toc": true,
+            "toc-depth": 3,
+            "math": true
+        }
+    }
+}

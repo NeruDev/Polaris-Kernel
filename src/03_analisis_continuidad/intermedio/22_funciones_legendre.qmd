@@ -1,0 +1,102 @@
+---
+id: "33C45"
+title: "Funciones Legendre"
+pilar: "03_analisis_continuidad"
+msc_code: "33C45, 33C05"
+difficulty: "intermedio"
+tags:
+  - 33C45
+  - 33C05
+---
+
+# Funciones Legendre
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 14 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\mathbf{F}\left(a,b;c;x\right)=\frac{1}{\Gamma\left(c\right)}F\left(a,b;c;x\right) \tag{14.3.3}
+$$
+
+$$
+\mathsf{P}_{0}\left(x\right)=P_{0}\left(x\right)=1, \tag{14.5.5}
+$$
+
+$$
+\mathsf{P}_{1}\left(x\right)=P_{1}\left(x\right)=x. \tag{14.5.6}
+$$
+
+$$
+\mathsf{P}^{0}_{n}\left(x\right)=\mathsf{P}_{n}\left(x\right)=P^{0}_{n}\left(x\right)=P_{n}\left(x\right), \tag{14.7.1}
+$$
+
+$$
+\displaystyle W_{0}(x) \displaystyle=1, \tag{14.7.5}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\left(1-x^{2}\right)\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}x}^{2}}-2x\frac{\mathrm{d}w}{\mathrm{d}x}+\nu(\nu+1)w=0. \tag{14.2.1}
+$$
+
+$$
+\left(1-x^{2}\right)\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}x}^{2}}-2x\frac{\mathrm{d}w}{\mathrm{d}x}+\left(\nu(\nu+1)-\frac{\mu^{2}}{1-x^{2}}\right)w=0. \tag{14.2.2}
+$$
+
+$$
+\mathscr{W}\left\{\mathsf{P}^{-\mu}_{\nu}\left(x\right),\mathsf{P}^{-\mu}_{\nu}\left(-x\right)\right\}=\frac{2}{\Gamma\left(\mu-\nu\right)\Gamma\left(\nu+\mu+1\right)\left(1-x^{2}\right)}, \tag{14.2.3}
+$$
+
+$$
+\mathscr{W}\left\{\mathsf{P}^{\mu}_{\nu}\left(x\right),\mathsf{Q}^{\mu}_{\nu}\left(x\right)\right\}=\frac{\Gamma\left(\nu+\mu+1\right)}{\Gamma\left(\nu-\mu+1\right)\left(1-x^{2}\right)}, \tag{14.2.4}
+$$
+
+$$
+\mathsf{P}^{\mu}_{\nu+1}\left(x\right)\mathsf{Q}^{\mu}_{\nu}\left(x\right)-\mathsf{P}^{\mu}_{\nu}\left(x\right)\mathsf{Q}^{\mu}_{\nu+1}\left(x\right)=\frac{\Gamma\left(\nu+\mu+1\right)}{\Gamma\left(\nu-\mu+2\right)}, \tag{14.2.5}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\displaystyle\mathsf{P}^{\mu}_{\nu}\left(x\right) \displaystyle\sim\frac{1}{\Gamma\left(1-\mu\right)}\left(\frac{2}{1-x}\right)^{\mu/2}, \tag{14.8.1}
+$$
+
+$$
+\displaystyle\mathsf{P}^{m}_{\nu}\left(x\right) \displaystyle\sim(-1)^{m}\frac{{\left(\nu-m+1\right)_{2m}}}{m!}\left(\frac{1-x}{2}\right)^{m/2}, \tag{14.8.2}
+$$
+
+$$
+\mathsf{Q}^{\mu}_{\nu}\left(x\right)\sim\frac{1}{2}\cos\left(\mu\pi\right)\Gamma\left(\mu\right)\left(\frac{2}{1-x}\right)^{\mu/2}, \tag{14.8.4}
+$$
+
+$$
+\mathsf{Q}^{\mu}_{\nu}\left(x\right)\sim(-1)^{\mu+(1/2)}\frac{\pi\Gamma\left(\nu+\mu+1\right)}{2\Gamma\left(\mu+1\right)\Gamma\left(\nu-\mu+1\right)}\left(\frac{1-x}{2}\right)^{\mu/2}, \tag{14.8.5}
+$$
+
+$$
+\mathsf{Q}^{-\mu}_{\nu}\left(x\right)\sim\frac{\Gamma\left(\mu\right)\Gamma\left(\nu-\mu+1\right)}{2\Gamma\left(\nu+\mu+1\right)}\left(\frac{2}{1-x}\right)^{\mu/2}, \tag{14.8.6}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

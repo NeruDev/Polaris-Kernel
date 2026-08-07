@@ -1,0 +1,45 @@
+---
+title: "Geometría Plana: Polígonos, Perímetros y Áreas"
+date: "2026-07-22"
+categories: ["geometria", "poligonos", "area", "perimetro"]
+id: "msc51_poligonos_perimetros"
+---
+
+## Anatomía de los Polígonos
+
+Un polígono es una figura geométrica plana y cerrada, conformada por una secuencia finita de segmentos de recta llamados lados o aristas.
+El lugar exacto donde dos de estos segmentos se encuentran se denomina vértice, y el espacio interior delimitado por los lados define la región bidimensional del polígono.
+Los polígonos se clasifican primordialmente por su número de lados (triángulos, cuadriláteros, pentágonos, etc.) y por su regularidad geométrica.
+Un polígono se considera "regular" cuando exhibe una simetría perfecta: todos sus lados poseen exactamente la misma longitud y todos sus ángulos internos tienen la misma amplitud.
+Esta regularidad simplifica enormemente el cálculo de sus propiedades métricas, permitiendo abstraer fórmulas universales que aplican a infinitas formas.
+
+## Perímetro: La Frontera Unidimensional
+
+El perímetro es la medida total de la longitud del contorno que delimita al polígono.
+Geométricamente, representa una magnitud estrictamente unidimensional, calculada mediante la sumatoria lineal de las longitudes de todos los lados individuales de la figura.
+En el caso específico de un polígono regular de $n$ lados, donde cada lado mide $L$, el perímetro se simplifica a la expresión algebraica $P = n \cdot L$.
+Entender el perímetro es fundamental para resolver problemas de cerramientos, límites y fronteras topológicas simples, sirviendo como la frontera que separa el espacio interior del exterior.
+
+## Área: La Cuantificación del Espacio Bidimensional
+
+El área representa la magnitud matemática de la superficie bidimensional contenida estrictamente dentro del polígono.
+A diferencia del perímetro, el área no se mide en unidades lineales, sino en unidades cuadradas, indicando cuántos "cuadrados unitarios" caben dentro de la región delimitada.
+Para calcular el área de un polígono regular, se suele fragmentar mentalmente la figura en $n$ triángulos isósceles que convergen en el centro geométrico.
+La altura de estos triángulos imaginarios se denomina apotema ($a$), que es la distancia perpendicular más corta desde el centro de la figura hasta el punto medio de cualquier lado.
+La fórmula general sintetizada para cualquier polígono regular establece que el área es igual a la mitad del producto de su perímetro total por su apotema.
+
+$$
+A = \frac{P \cdot a}{2}
+$$
+
+![](poligonos_perimetros.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| :--- | :--- | :--- |
+| $P$ | Perímetro o longitud total del borde de la figura geométrica. | Magnitud escalar (1D) |
+| $A$ | Área o superficie bidimensional contenida dentro del polígono. | Magnitud escalar (2D) |
+| $L$ | Longitud individual de uno de los lados del polígono regular. | Magnitud escalar (1D) |
+| $a$ | Apotema, distancia desde el centro al punto medio de un lado. | Magnitud escalar (1D) |
+| $n$ | Número total de lados (y vértices) que posee el polígono. | Número natural entero |

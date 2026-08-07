@@ -1,0 +1,62 @@
+---
+# --- Metadatos Estándar de Quarto ---
+title: "Ecuaciones, Inecuaciones y Sistemas Lineales"
+date: "2026-07-22"
+categories: [algebra, ecuaciones, desigualdades, sistemas lineales]
+
+# --- Metadatos Estructurales (Polaris Kernel) ---
+id: msc12_ecuaciones_desigualdades
+pilar: "02_estructuras_algebraicas"
+msc_code: "12D-05"
+tags: [algebra, ecuaciones, desigualdades, sistemas lineales]
+nivel: intro
+updated: "2026-07-22"
+status: "stable"
+---
+
+# Ecuaciones y Desigualdades
+
+Las ecuaciones e inecuaciones (desigualdades) son expresiones algebraicas fundamentales que modelan la relación de igualdad o el orden estricto entre dos magnitudes.
+Resolver una ecuación consiste en encontrar el conjunto de todos los valores posibles de las variables que hacen que la proposición matemática sea verdadera.
+Las ecuaciones lineales de primer grado y las cuadráticas de segundo grado representan los cimientos de la resolución de problemas algebraicos.
+
+## Ecuaciones Lineales y Sistemas
+
+Una ecuación lineal en una variable tiene la forma estándar $ax + b = 0$, donde la solución única es trivialmente $x = -b/a$ siempre que $a \neq 0$.
+Cuando se modelan fenómenos con múltiples variables interdependientes, se construyen sistemas de ecuaciones lineales.
+Un sistema de $m$ ecuaciones con $n$ incógnitas se puede representar de forma matricial compacta como $Ax = b$.
+Para sistemas sencillos de $2 \times 2$ o $3 \times 3$, los métodos algebraicos de sustitución, igualación y reducción son suficientes.
+Geométricamente, resolver un sistema de dos ecuaciones lineales con dos variables equivale a encontrar el punto exacto de intersección de dos líneas rectas en el plano cartesiano.
+
+## Ecuaciones Cuadráticas
+
+Las ecuaciones polinomiales de segundo grado adoptan la forma general $ax^2 + bx + c = 0$.
+A diferencia de las ecuaciones lineales, una ecuación cuadrática puede tener dos soluciones reales, una solución real repetida, o ninguna solución real (soluciones complejas conjugadas).
+El discriminante $\Delta = b^2 - 4ac$ determina analíticamente la naturaleza de estas raíces.
+La fórmula cuadrática general que resuelve universalmente estas ecuaciones se expresa como:
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+Esta expresión es fundamental, ya que condensa en una sola operación el proceso completo de completar el cuadrado perfecto.
+
+## Desigualdades y Valor Absoluto
+
+Las inecuaciones introducen los operadores de relación de orden $<, >, \le, \ge$ en lugar del signo de igualdad.
+A diferencia de una ecuación típica que arroja valores discretos, la solución de una desigualdad es generalmente un intervalo continuo de la recta real.
+Es crucial recordar que, al multiplicar o dividir una desigualdad por un número estrictamente negativo, el sentido de la desigualdad debe invertirse obligatoriamente.
+El valor absoluto $|x|$ representa la distancia geométrica desde el origen hasta $x$ en la recta real, sin importar la dirección.
+Las inecuaciones con valor absoluto de la forma $|x - a| < \epsilon$ son esenciales en el análisis matemático para definir rigurosamente conceptos como el límite y la continuidad.
+
+## Representación Geométrica
+
+![Intersección de un sistema de ecuaciones lineales $2 \times 2$](ecuaciones_y_desigualdades.svg)
+
+## Glosario de variables
+
+| Símbolo | Nombre | Tipo |
+| --- | --- | --- |
+| $x, y$ | Variables o incógnitas | escalar |
+| $a, b, c$ | Coeficientes constantes | escalar |
+| $\Delta$ | Discriminante | escalar |
+| $|x|$ | Valor absoluto de $x$ | operador unitario |
+| $<$ | Relación de orden estricto (menor que) | operador relacional |

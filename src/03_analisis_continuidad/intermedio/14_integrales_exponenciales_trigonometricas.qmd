@@ -1,0 +1,101 @@
+---
+id: "33B20"
+title: "Integrales Exponenciales Trigonométricas"
+pilar: "03_analisis_continuidad"
+msc_code: "33B20"
+difficulty: "intermedio"
+tags:
+  - 33B20
+---
+
+# Integrales Exponenciales Trigonométricas
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 6 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\operatorname{li}\left(x\right)=\fint_{0}^{x}\frac{\,\mathrm{d}t}{\ln t}=\operatorname{Ei}\left(\ln x\right), \tag{6.2.8}
+$$
+
+$$
+\operatorname{Si}\left(z\right)=\int_{0}^{z}\frac{\sin t}{t}\,\mathrm{d}t. \tag{6.2.9}
+$$
+
+$$
+\displaystyle\operatorname{Shi}\left(z\right) \displaystyle=\int_{0}^{z}\frac{\sinh t}{t}\,\mathrm{d}t, \tag{6.2.15}
+$$
+
+$$
+\mathrm{g}\left(z\right)\pm i\mathrm{f}\left(z\right)=E_{1}\left(\mp iz\right)e^{\mp iz}. \tag{6.5.7}
+$$
+
+$$
+\displaystyle\mathrm{f}\left(z\right) \displaystyle=2\int_{0}^{\infty}K_{0}\left(2\sqrt{zt}\right)\cos t\,\mathrm{d}t, \tag{6.7.15}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+E_{1}\left(z\right)=\int_{z}^{\infty}\frac{e^{-t}}{t}\,\mathrm{d}t, \tag{6.2.1}
+$$
+
+$$
+E_{1}\left(z\right)=e^{-z}\int_{0}^{\infty}\frac{e^{-t}}{t+z}\,\mathrm{d}t, \tag{6.2.2}
+$$
+
+$$
+\operatorname{Ein}\left(z\right)=\int_{0}^{z}\frac{1-e^{-t}}{t}\,\mathrm{d}t. \tag{6.2.3}
+$$
+
+$$
+E_{1}\left(z\right)=\operatorname{Ein}\left(z\right)-\ln z-\gamma. \tag{6.2.4}
+$$
+
+$$
+\operatorname{Ei}\left(x\right)=-\,\fint_{-x}^{\infty}\frac{e^{-t}}{t}\,\mathrm{d}t=\fint_{-\infty}^{x}\frac{e^{t}}{t}\,\mathrm{d}t, \tag{6.2.5}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\displaystyle\lim_{x\to\infty}\operatorname{Si}\left(x\right) \displaystyle=\tfrac{1}{2}\pi, \tag{6.2.14}
+$$
+
+$$
+\displaystyle\lim_{x\to\infty}\operatorname{Ci}\left(x\right) \displaystyle=0.
+$$
+
+$$
+E_{1}\left(z\right)\sim\frac{e^{-z}}{z}\left(1-\frac{1!}{z}+\frac{2!}{z^{2}}-\frac{3!}{z^{3}}+\cdots\right), \tag{6.12.1}
+$$
+
+$$
+\operatorname{Ei}\left(x\right)\sim\frac{e^{x}}{x}\left(1+\frac{1!}{x}+\frac{2!}{x^{2}}+\frac{3!}{x^{3}}+\cdots\right), \tag{6.12.2}
+$$
+
+$$
+\displaystyle\mathrm{f}\left(z\right) \displaystyle\sim\frac{1}{z}\left(1-\frac{2!}{z^{2}}+\frac{4!}{z^{4}}-\frac{6!}{z^{6}}+\cdots\right), \tag{6.12.3}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

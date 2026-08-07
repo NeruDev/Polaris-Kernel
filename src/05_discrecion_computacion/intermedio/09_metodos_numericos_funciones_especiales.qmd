@@ -1,0 +1,102 @@
+---
+id: "65D20"
+title: "Metodos Numericos Funciones Especiales"
+pilar: "05_discrecion_computacion"
+msc_code: "65D20, 65D05"
+difficulty: "intermedio"
+tags:
+  - 65D20
+  - 65D05
+---
+
+# Metodos Numericos Funciones Especiales
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 3 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+N_{{\rm min}}\equiv 2^{E_{{\rm min}}}\leq|x|\leq 2^{E_{{\rm max}}+1}\left(1-2^{-p}\right)\equiv N_{{\rm max}}. \tag{3.1.3}
+$$
+
+$$
+I*J=\{x*y\,|\,x\in I,y\in J\}, \tag{3.1.6}
+$$
+
+$$
+\displaystyle\ln_{0}(x) \displaystyle=x, \tag{3.1.7}
+$$
+
+$$
+\epsilon_{\mathit{rp}}=\left|\ln\left(\frac{x^{*}}{x}\right)\right|, \tag{3.1.10}
+$$
+
+$$
+\mathbf{A}\mathbf{x}=\mathbf{b}, \tag{3.2.1}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+x=(-1)^{s}\cdot(b_{0}.b_{1}b_{2}\dots b_{p-1})\cdot 2^{E}, \tag{3.1.1}
+$$
+
+$$
+(-1)^{s}2^{E}\sum_{j=0}^{p-1}b_{j}2^{-j}, \tag{3.1.2}
+$$
+
+$$
+x=(1.b_{1}b_{2}\dots b_{p-1}b_{p}b_{p+1}\dots)\cdot 2^{E}, \tag{3.1.4}
+$$
+
+$$
+\displaystyle x_{-} \displaystyle=(1.b_{1}b_{2}\dots b_{p-1})\cdot 2^{E}, \tag{3.1.5}
+$$
+
+$$
+\displaystyle x_{+} \displaystyle=((1.b_{1}b_{2}\dots b_{p-1})+\epsilon_{M})\cdot 2^{E}.
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\operatorname{erfc}\lambda\sim\frac{e^{-\lambda^{2}}}{\sqrt{\pi}\lambda}, \tag{3.5.43}
+$$
+
+$$
+w_{n}/g_{n}\to 0, \tag{3.6.4}
+$$
+
+$$
+\displaystyle f_{n}/g_{n} \displaystyle\to 0, \tag{3.6.6}
+$$
+
+$$
+\displaystyle w_{n}/g_{n} \displaystyle\to 0.
+$$
+
+$$
+J_{n}\left(1\right)\sim\frac{1}{(2\pi n)^{1/2}}\left(\frac{e}{2n}\right)^{n}, \tag{3.6.12}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

@@ -1,0 +1,101 @@
+---
+id: "33C15"
+title: "Funciones Cilindro Parabolico"
+pilar: "03_analisis_continuidad"
+msc_code: "33C15"
+difficulty: "avanzado"
+tags:
+  - 33C15
+---
+
+# Funciones Cilindro Parabolico
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 12 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\mathscr{W}\left\{U\left(a,z\right),V\left(a,z\right)\right\}=\sqrt{2/\pi}, \tag{12.2.10}
+$$
+
+$$
+\displaystyle U\left(0,z\right) \displaystyle=\sqrt{\frac{z}{2\pi}}K_{\frac{1}{4}}\left(\tfrac{1}{4}z^{2}\right), \tag{12.7.10}
+$$
+
+$$
+\displaystyle a \displaystyle=\pm\tfrac{1}{2}\mu^{2}, \tag{12.10.1}
+$$
+
+$$
+\displaystyle x \displaystyle=\mu t\sqrt{2},
+$$
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}t}^{2}}=\mu^{4}(t^{2}\pm 1)w. \tag{12.10.2}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}+\left(az^{2}+bz+c\right)w=0, \tag{12.2.1}
+$$
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}-\left(\tfrac{1}{4}z^{2}+a\right)w=0, \tag{12.2.2}
+$$
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}+\left(\tfrac{1}{4}z^{2}-a\right)w=0, \tag{12.2.3}
+$$
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}+\left(\nu+\tfrac{1}{2}-\tfrac{1}{4}z^{2}\right)w=0. \tag{12.2.4}
+$$
+
+$$
+D_{\nu}\left(z\right)=U\left(-\tfrac{1}{2}-\nu,z\right). \tag{12.2.5}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+U\left(a,z\right)\sim e^{-\frac{1}{4}z^{2}}z^{-a-\frac{1}{2}}\sum_{s=0}^{\infty}(-1)^{s}\frac{{\left(\frac{1}{2}+a\right)_{2s}}}{s!(2z^{2})^{s}}, \tag{12.9.1}
+$$
+
+$$
+V\left(a,z\right)\sim\sqrt{\frac{2}{\pi}}e^{\frac{1}{4}z^{2}}z^{a-\frac{1}{2}}\sum_{s=0}^{\infty}\frac{{\left(\frac{1}{2}-a\right)_{2s}}}{s!(2z^{2})^{s}}, \tag{12.9.2}
+$$
+
+$$
+U\left(a,z\right)\sim e^{-\frac{1}{4}z^{2}}z^{-a-\frac{1}{2}}\sum_{s=0}^{\infty}(-1)^{s}\frac{{\left(\frac{1}{2}+a\right)_{2s}}}{s!(2z^{2})^{s}}\pm i\frac{\sqrt{2\pi}}{\Gamma\left(\tfrac{1}{2}+a\right)}e^{\mp i\pi a}e^{\frac{1}{4}z^{2}}z^{a-\frac{1}{2}}\sum_{s=0}^{\infty}\frac{{\left(\tfrac{1}{2}-a\right)_{2s}}}{s!(2z^{2})^{s}}, \tag{12.9.3}
+$$
+
+$$
+V\left(a,z\right)\sim\sqrt{\frac{2}{\pi}}e^{\frac{1}{4}z^{2}}z^{a-\frac{1}{2}}\sum_{s=0}^{\infty}\frac{{\left(\tfrac{1}{2}-a\right)_{2s}}}{s!(2z^{2})^{s}}\pm\frac{i}{\Gamma\left(\tfrac{1}{2}-a\right)}e^{-\frac{1}{4}z^{2}}z^{-a-\frac{1}{2}}\sum_{s=0}^{\infty}(-1)^{s}\frac{{\left(\tfrac{1}{2}+a\right)_{2s}}}{s!(2z^{2})^{s}}, \tag{12.9.4}
+$$
+
+$$
+U\left(-\tfrac{1}{2}\mu^{2},\mu t\sqrt{2}\right)\sim\frac{g(\mu)e^{-\mu^{2}\xi}}{(t^{2}-1)^{\frac{1}{4}}}\sum_{s=0}^{\infty}\frac{{\cal A}_{s}(t)}{\mu^{2s}}, \tag{12.10.3}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

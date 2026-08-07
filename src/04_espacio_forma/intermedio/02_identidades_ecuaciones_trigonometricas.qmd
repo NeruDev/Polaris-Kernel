@@ -1,0 +1,69 @@
+---
+title: "Identidades y Ecuaciones Trigonométricas Avanzadas"
+subtitle: "Transformaciones y Resolución de Sistemas Circulares"
+date: "2026-07-22"
+categories: ["geometría", "trigonometría", "identidades", "ecuaciones"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Identidades y Ecuaciones Trigonométricas
+
+## Introducción
+
+Las funciones trigonométricas no son entes aislados; están interconectadas por una vasta red de relaciones algebraicas conocidas como identidades trigonométricas.
+Estas identidades son igualdades matemáticas que se cumplen para cualquier valor de la variable angular dentro del dominio definido.
+Son herramientas indispensables para simplificar expresiones complejas, transformar integrales y resolver ecuaciones trigonométricas.
+Una ecuación trigonométrica, a diferencia de una identidad, solo se satisface para un conjunto específico de ángulos.
+
+## Identidades Fundamentales
+
+El núcleo de la trigonometría se basa en las relaciones recíprocas (cosecante, secante, cotangente) y de cociente (tangente como seno sobre coseno).
+A partir del teorema de Pitágoras aplicado al círculo unitario, surgen las identidades pitagóricas, siendo la principal $\sin^2(\theta) + \cos^2(\theta) = 1$.
+De esta identidad primaria se derivan inmediatamente $1 + \tan^2(\theta) = \sec^2(\theta)$ y $1 + \cot^2(\theta) = \csc^2(\theta)$.
+La memorización y fluidez en el manejo de estas expresiones base es crucial para realizar deducciones analíticas más avanzadas.
+
+## Fórmulas de Suma y Diferencia
+
+Las fórmulas para la suma y diferencia de ángulos permiten expandir funciones trigonométricas de binomios angulares.
+Por ejemplo, el seno de la suma de dos ángulos se expresa como:
+$$
+\sin(\alpha \pm \beta) = \sin(\alpha)\cos(\beta) \pm \cos(\alpha)\sin(\beta)
+$$
+De manera análoga, el coseno de una suma sigue la regla:
+$$
+\cos(\alpha \pm \beta) = \cos(\alpha)\cos(\beta) \mp \sin(\alpha)\sin(\beta)
+$$
+Estas identidades son el puente para demostrar fórmulas de ángulo doble, ángulo mitad y las fórmulas de suma a producto.
+
+## Resolución de Ecuaciones Trigonométricas
+
+Resolver una ecuación trigonométrica implica encontrar todos los ángulos que satisfacen la igualdad planteada.
+El proceso típicamente requiere utilizar identidades para reescribir la ecuación en términos de una sola función trigonométrica.
+Una vez aislada la función, se determinan los valores principales del ángulo mediante funciones trigonométricas inversas.
+Debido a la naturaleza periódica de las funciones, las soluciones generales incluyen un número entero de periodos $2k\pi$ o $k\pi$, generando infinitas soluciones posibles.
+
+## Aplicaciones Físicas y Señales
+
+En física e ingeniería, las identidades trigonométricas modelan la superposición de ondas.
+La suma de dos señales sinusoidales de diferentes frecuencias puede analizarse mediante las fórmulas de producto a suma, revelando fenómenos como las pulsaciones o batidos.
+El análisis de Fourier, que descompone cualquier señal periódica en sumas de senos y cosenos, descansa fundamentalmente sobre estas identidades ortogonales.
+
+## Representación Visual
+
+El círculo unitario es la representación visual por excelencia para comprender las simetrías que dan lugar a muchas identidades trigonométricas.
+
+![Simetrías en el círculo unitario](identidades_ecuaciones_trigonometricas.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $\theta, \alpha, \beta$ | Ángulos, típicamente medidos en radianes | escalar |
+| $\sin(\theta), \cos(\theta)$ | Funciones trigonométricas básicas (seno y coseno) | función |
+| $\tan(\theta), \cot(\theta)$ | Funciones tangente y cotangente | función |
+| $\sec(\theta), \csc(\theta)$ | Funciones secante y cosecante | función |
+| $k, n$ | Números enteros para periodicidad ($k \in \mathbb{Z}$) | constante |

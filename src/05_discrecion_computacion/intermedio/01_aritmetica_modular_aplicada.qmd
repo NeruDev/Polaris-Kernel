@@ -1,0 +1,58 @@
+---
+title: "Aritmética Modular Aplicada y Algoritmo de Euclides Extendido"
+subtitle: "Fundamentos Algebraicos de la Criptografía Moderna (RSA)"
+date: "2026-07-22"
+categories: ["teoría de números", "computación", "criptografía", "RSA"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Aritmética Modular, Euclides Extendido y RSA
+
+## Introducción
+
+La aritmética modular es un sistema matemático sobre los números enteros donde los números "dan la vuelta" o se reinician al alcanzar un valor determinado llamado módulo.
+Este concepto de congruencia es equiparable a la aritmética de un reloj de manecillas.
+A pesar de su aparente simplicidad, las propiedades algebraicas de los grupos modulares son el pilar de la criptografía de clave pública contemporánea.
+Conceptos como el inverso multiplicativo modular resultan indispensables en los sistemas de cifrado seguro.
+
+## Congruencias y el Inverso Multiplicativo
+
+Decimos que dos enteros $a$ y $b$ son congruentes módulo $m$ (es decir, $a \equiv b \pmod{m}$) si ambos dejan el mismo residuo al ser divididos por $m$.
+El inverso multiplicativo de un número $a$ módulo $m$ es un entero $x$ tal que $a \cdot x \equiv 1 \pmod{m}$.
+Este inverso existe única y exclusivamente si $a$ y $m$ son coprimos, es decir, su máximo común divisor (MCD) es 1.
+La existencia del inverso es análoga a la existencia de fracciones en la aritmética estándar, permitiendo resolver ecuaciones modulares de la forma $ax \equiv b \pmod{m}$.
+
+## Algoritmo de Euclides Extendido
+
+El algoritmo de Euclides es un procedimiento eficiente para encontrar el MCD de dos números.
+Su versión extendida no solo calcula $MCD(a, m)$, sino que también encuentra los coeficientes de Bézout $x$ e $y$ tales que $ax + my = MCD(a, m)$.
+Si $MCD(a, m) = 1$, entonces la ecuación se convierte en $ax + my = 1$, lo que implica directamente que $ax \equiv 1 \pmod{m}$.
+En consecuencia, el coeficiente $x$ resultante del algoritmo de Euclides Extendido es el inverso multiplicativo de $a$ módulo $m$.
+
+## Criptografía RSA
+
+El algoritmo RSA es un criptosistema asimétrico que aprovecha la dificultad computacional de factorizar el producto de dos números primos grandes.
+La generación de las claves pública y privada requiere generar el módulo $N = p \cdot q$ y elegir un exponente de cifrado $e$.
+La clave privada $d$ se calcula exactamente encontrando el inverso multiplicativo modular de $e$ respecto a la función totiente de Euler $\phi(N) = (p-1)(q-1)$.
+El cifrado del mensaje $M$ se realiza como $C \equiv M^e \pmod{N}$, y el descifrado como $M \equiv C^d \pmod{N}$, asegurando la comunicación sin intercambiar previamente claves secretas.
+
+## Representación Visual
+
+El reloj de aritmética modular ilustra cómo los valores enteros se envuelven en un ciclo continuo alrededor del módulo.
+
+![Reloj de Aritmética Modular (Módulo 12)](aritmetica_modular_aplicada.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $m, N$ | Módulos sobre los cuales se define la aritmética | constante |
+| $a, b, x, y$ | Números enteros | escalar |
+| $MCD(a, m)$ | Máximo común divisor de $a$ y $m$ | operador |
+| $p, q$ | Números primos grandes en RSA | constante |
+| $\phi(N)$ | Función totiente de Euler | función |
+| $e, d$ | Exponentes de cifrado y descifrado en RSA | escalar |

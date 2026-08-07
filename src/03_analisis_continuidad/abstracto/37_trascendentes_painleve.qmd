@@ -1,0 +1,104 @@
+---
+id: "34M55"
+title: "Trascendentes Painleve"
+pilar: "03_analisis_continuidad"
+msc_code: "34M55, 33E30"
+difficulty: "abstracto"
+tags:
+  - 34M55
+  - 33E30
+---
+
+# Trascendentes Painleve
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 32 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}=F\left(z,w,\frac{\mathrm{d}w}{\mathrm{d}z}\right), \tag{32.2.7}
+$$
+
+$$
+\displaystyle\zeta \displaystyle=\phi(z),
+$$
+
+$$
+\begin{array}[]{ccccccc}\text{\mbox{P}_{\mbox{\scriptsize VI}}$}&\longrightarrow&\text{\mbox{P}_{\mbox{\scriptsize V}}$}&\longrightarrow&\text{\mbox{P}_{\mbox{\scriptsize IV}}$}\\
+&&\big{\downarrow}&&\big{\downarrow}\\
+&&\text{\mbox{P}_{\mbox{\scriptsize III}}$}&\longrightarrow&\text{\mbox{P}_{\mbox{\scriptsize II}}$}&\longrightarrow&\text{\mbox{P}_{\mbox{\scriptsize I}}$}\end{array} \tag{32.2.24}
+$$
+
+$$
+\displaystyle\alpha \displaystyle=\frac{4}{\epsilon^{15}},
+$$
+
+$$
+\displaystyle z \displaystyle=\zeta^{2}, \tag{32.2.33}
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}=6w^{2}+z, \tag{32.2.1}
+$$
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}=2w^{3}+zw+\alpha, \tag{32.2.2}
+$$
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}=\frac{1}{w}\left(\frac{\mathrm{d}w}{\mathrm{d}z}\right)^{2}-\frac{1}{z}\frac{\mathrm{d}w}{\mathrm{d}z}+\frac{\alpha w^{2}+\beta}{z}+\gamma w^{3}+\frac{\delta}{w}, \tag{32.2.3}
+$$
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}=\frac{1}{2w}\left(\frac{\mathrm{d}w}{\mathrm{d}z}\right)^{2}+\frac{3}{2}w^{3}+4zw^{2}+2(z^{2}-\alpha)w+\frac{\beta}{w}, \tag{32.2.4}
+$$
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}z}^{2}}=\left(\frac{1}{2w}+\frac{1}{w-1}\right)\left(\frac{\mathrm{d}w}{\mathrm{d}z}\right)^{2}-\frac{1}{z}\frac{\mathrm{d}w}{\mathrm{d}z}+\frac{(w-1)^{2}}{z^{2}}\left(\alpha w+\frac{\beta}{w}\right)+\frac{\gamma w}{z}+\frac{\delta w(w+1)}{w-1}, \tag{32.2.5}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+w_{k}(x)\sim k\operatorname{Ai}\left(x\right), \tag{32.3.1}
+$$
+
+$$
+u\sim kU\left(-\nu-\tfrac{1}{2},x\right), \tag{32.3.3}
+$$
+
+$$
+w(x)\sim 2\sqrt{2}k^{2}{U}^{2}\left(-\nu-\tfrac{1}{2},\sqrt{2}x\right), \tag{32.3.5}
+$$
+
+$$
+w(z)\sim k\operatorname{Ai}\left(z\right), \tag{32.5.3}
+$$
+
+$$
+w(x)\sim\sqrt{\tfrac{1}{6}|x|}, \tag{32.11.3}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).

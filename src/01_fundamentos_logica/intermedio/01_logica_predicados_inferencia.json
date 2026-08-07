@@ -1,0 +1,24 @@
+{
+    "title": "Lógica de Predicados y Reglas Formales de Inferencia",
+    "date": "2026-07-22",
+    "categories": [
+        "logica",
+        "predicados",
+        "inferencia",
+        "deduccion",
+        "cuantificadores"
+    ],
+    "id": "msc03_logica_predicados_inferencia",
+    "pilar": "01_fundamentos_logica",
+    "msc_code": "03B-10",
+    "tags": [
+        "logica",
+        "predicados",
+        "inferencia",
+        "deduccion",
+        "cuantificadores"
+    ],
+    "nivel": "intermedio",
+    "updated": "2026-07-22",
+    "status": "stable"
+}

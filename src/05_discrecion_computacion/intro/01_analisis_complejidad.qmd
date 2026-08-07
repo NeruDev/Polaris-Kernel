@@ -1,0 +1,56 @@
+---
+title: "Análisis de Complejidad Algorítmica"
+subtitle: "Notación Asintótica $O, \\Omega, \\Theta$ y Medición del Rendimiento"
+date: "2026-07-22"
+categories: ["computación", "complejidad", "algoritmos", "notación asintótica"]
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    math: true
+---
+
+# Análisis de Complejidad Algorítmica
+
+## Introducción
+
+La complejidad algorítmica evalúa la cantidad de recursos (tiempo y memoria) que requiere un algoritmo para ejecutarse en función del tamaño de la entrada, denotado como $n$.
+Esta evaluación es independiente de la velocidad del hardware o del lenguaje de programación.
+Se centra en el comportamiento asintótico, es decir, cómo escala el consumo de recursos cuando $n$ tiende a infinito.
+Clasificar los algoritmos por su complejidad nos permite elegir la mejor solución para grandes conjuntos de datos.
+
+## Notación Big O ($O$)
+
+La notación $O$ (Big O) proporciona un límite superior o cota superior asintótica para el tiempo de ejecución.
+Decimos que $f(n) \in O(g(n))$ si existen constantes positivas $c$ y $n_0$ tales que $0 \leq f(n) \leq c \cdot g(n)$ para todo $n \geq n_0$.
+Se utiliza mayormente para describir el "peor caso" de un algoritmo, garantizando que el tiempo de ejecución no excederá cierto límite.
+Las clases comunes son $O(1)$ constante, $O(\log n)$ logarítmica, $O(n)$ lineal, $O(n \log n)$ cuasilineal y $O(n^2)$ cuadrática.
+
+## Notaciones Omega ($\Omega$) y Theta ($\Theta$)
+
+Mientras que $O$ acota por arriba, la notación $\Omega$ (Big Omega) proporciona una cota inferior, describiendo el "mejor caso".
+$f(n) \in \Omega(g(n))$ indica que el algoritmo tomará al menos una cantidad de tiempo proporcional a $g(n)$.
+Por su parte, la notación $\Theta$ (Big Theta) establece una cota ajustada tanto superior como inferior.
+Si $f(n) \in \Theta(g(n))$, el tiempo de ejecución crece exactamente al mismo ritmo que $g(n)$.
+
+## Complejidad Espacial
+
+El análisis de complejidad no se limita al tiempo; la memoria adicional que utiliza un algoritmo es igualmente importante.
+La complejidad espacial asintótica se denota también con Big O y mide la memoria de trabajo adicional, excluyendo el tamaño de la entrada.
+Es común enfrentar un compromiso entre tiempo y memoria: algunos algoritmos reducen el tiempo de ejecución almacenando resultados intermedios.
+
+## Representación Visual
+
+El siguiente gráfico compara las tasas de crecimiento asintótico más comunes al incrementar el tamaño de los datos de entrada $n$.
+
+![Comparación de Complejidades Algorítmicas Asintóticas](analisis_complejidad.svg)
+
+## Glosario de variables
+
+| Símbolo | Descripción | Tipo |
+| --- | --- | --- |
+| $n$ | Tamaño de los datos de entrada | variable |
+| $f(n)$ | Tiempo de ejecución real del algoritmo | función |
+| $g(n)$ | Función de referencia para cotas asintóticas | función |
+| $c$ | Constante multiplicativa real positiva | constante |
+| $n_0$ | Tamaño de entrada mínimo | constante |

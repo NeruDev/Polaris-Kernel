@@ -34,7 +34,7 @@ exclude = "(^site/|^assets/|^content/|^metadata/|^\\.venv/|^venv/)"
 
 [project]
 name = "polaris-kernel"
-version = "2.0.0"
+version = "2.2.0"
 dependencies = [
     "markdown==3.6",
     "types-Markdown==3.6.0.20240316",

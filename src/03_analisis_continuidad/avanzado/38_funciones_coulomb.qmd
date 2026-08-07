@@ -1,0 +1,102 @@
+---
+id: "33C15"
+title: "Funciones Coulomb"
+pilar: "03_analisis_continuidad"
+msc_code: "33C15, 81V45"
+difficulty: "avanzado"
+tags:
+  - 33C15
+  - 81V45
+---
+
+# Funciones Coulomb
+
+Este documento establece los fundamentos analíticos y algebraicos de las funciones tratadas en el Capítulo 33 de la DLMF.
+Su clasificación responde a los requerimientos de rigor de Polaris Kernel.
+
+## 1. Definiciones y Construcción Axiomática
+
+La conceptualización principal se define mediante expresiones generadoras.
+Las ecuaciones fundamentales que describen esta estructura son:
+
+$$
+\mathscr{W}\left\{G_{\ell},F_{\ell}\right\}=\mathscr{W}\left\{{H^{\pm}_{\ell}},F_{\ell}\right\}=1. \tag{33.2.12}
+$$
+
+$$
+\displaystyle F_{\ell}\left(0,\rho\right) \displaystyle=\rho\mathsf{j}_{\ell}\left(\rho\right), \tag{33.5.3}
+$$
+
+$$
+\displaystyle F_{0}\left(0,\rho\right) \displaystyle=\sin\rho, \tag{33.5.5}
+$$
+
+$$
+\displaystyle G_{0}\left(0,\rho\right) \displaystyle=\cos\rho,
+$$
+
+$$
+\displaystyle{H^{\pm}_{0}}\left(0,\rho\right) \displaystyle=e^{\pm\mathrm{i}\rho}.
+$$
+
+
+## 2. Identidades y Relaciones de Recurrencia
+
+Se deducen analíticamente las propiedades de simetría y ecuaciones diferenciales asociadas.
+A continuación se presentan las identidades clave:
+
+$$
+\frac{{\mathrm{d}}^{2}w}{{\mathrm{d}\rho}^{2}}+\left(1-\frac{2\eta}{\rho}-\frac{\ell(\ell+1)}{\rho^{2}}\right)w=0, \tag{33.2.1}
+$$
+
+$$
+\rho_{\operatorname{tp}}\left(\eta,\ell\right)=\eta+(\eta^{2}+\ell(\ell+1))^{1/2}. \tag{33.2.2}
+$$
+
+$$
+F_{\ell}\left(\eta,\rho\right)=C_{\ell}\left(\eta\right)2^{-\ell-1}(\mp\mathrm{i})^{\ell+1}M_{\pm\mathrm{i}\eta,\ell+\frac{1}{2}}\left(\pm 2\mathrm{i}\rho\right), \tag{33.2.3}
+$$
+
+$$
+F_{\ell}\left(\eta,\rho\right)=C_{\ell}\left(\eta\right)\rho^{\ell+1}e^{\mp\mathrm{i}\rho}M\left(\ell+1\mp\mathrm{i}\eta,2\ell+2,\pm 2\mathrm{i}\rho\right), \tag{33.2.4}
+$$
+
+$$
+C_{\ell}\left(\eta\right)=\frac{2^{\ell}e^{-\pi\eta/2}|\Gamma\left(\ell+1+\mathrm{i}\eta\right)|}{(2\ell+1)!}. \tag{33.2.5}
+$$
+
+
+## 3. Comportamiento Asintótico y Polos
+
+El análisis asintótico revela el crecimiento de la función para valores límite.
+Las expansiones asintóticas predominantes se expresan como:
+
+$$
+\displaystyle F_{\ell}\left(\eta,\rho\right) \displaystyle\sim C_{\ell}\left(\eta\right)\rho^{\ell+1}, \tag{33.5.1}
+$$
+
+$$
+\displaystyle F_{\ell}'\left(\eta,\rho\right) \displaystyle\sim(\ell+1)C_{\ell}\left(\eta\right)\rho^{\ell}.
+$$
+
+$$
+\displaystyle G_{\ell}\left(\eta,\rho\right) \displaystyle\sim\frac{\rho^{-\ell}}{(2\ell+1)C_{\ell}\left(\eta\right)}, \tag{33.5.2}
+$$
+
+$$
+\displaystyle G_{\ell}'\left(\eta,\rho\right) \displaystyle\sim-\frac{\ell\rho^{-\ell-1}}{(2\ell+1)C_{\ell}\left(\eta\right)},
+$$
+
+$$
+{\sigma_{0}}\left(\eta\right)\sim-\gamma\eta, \tag{33.5.7}
+$$
+
+
+## 4. Clasificación de Fórmulas y Simetrías
+
+Las transformaciones modulares y funcionales subyacentes se preservan bajo operaciones continuas.
+Esta clasificación permite derivar propiedades de ortogonalidad complejas.
+
+## 5. Representación Gráfica e Interactividad
+
+(Espacio reservado para diagramas generados mediante la integración con Typst).
