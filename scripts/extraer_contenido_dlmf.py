@@ -1,5 +1,5 @@
-import os
 import json
+import os
 import re
 import sys
 
@@ -200,7 +200,7 @@ def main():
 
         for cat in sec_json["categorias"]:
             for sec in cat["secciones"]:
-                sec_id = sec["seccion_id"]
+                sec["seccion_id"]
                 rel_doc_path = sec["rutas"]["docs_original"]
                 full_doc_path = os.path.join(BASE_DIR, rel_doc_path)
 

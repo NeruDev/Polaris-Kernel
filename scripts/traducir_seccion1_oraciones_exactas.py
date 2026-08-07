@@ -28,7 +28,6 @@ ORACIONES_EXACTAS = {
     "integers.": "enteros.",
     "nonnegative integers, unless specified otherwise.": "enteros no negativos, a menos que se especifique lo contrario.",
     "inner, or scalar, product for real or complex vectors or functions.": "producto interno, o escalar, para vectores o funciones reales o complejas.",
-    "the space of all Lebesgue–Stieltjes measurable functions on $X$ which are square integrable with respect to $\\mathrm{d}\\alpha$ .": "el espacio de todas las funciones medibles en el sentido de Lebesgue–Stieltjes sobre $X$ que son de cuadrado integrable con respecto a $\\mathrm{d}\\alpha$ .",
     "a testing function.": "una función de prueba.",
     "action of distribution $\\Lambda$ on test function $\\phi$ .": "acción de la distribución $\\Lambda$ sobre la función de prueba $\\phi$ .",
     "degree.": "grado.",

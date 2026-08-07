@@ -140,7 +140,6 @@ def sanitizar_contenido(content: str) -> tuple[str, dict]:
     # 9. Limpiar entidades HTML dentro de expresiones y matrices LaTeX (ej. &amp; -> &)
     def replace_html_entities_in_math(match):
         block = match.group(0)
-        original = block
         block = block.replace('&amp;', '&')
         block = block.replace('&lt;', '<')
         block = block.replace('&gt;', '>')

@@ -1,7 +1,7 @@
-import os
 import json
 import re
 from pathlib import Path
+
 
 def get_level_index(level):
     levels = {"intro": 0, "intermedio": 1, "avanzado": 2, "abstracto": 3}
@@ -27,7 +27,7 @@ def main():
             try:
                 with open(jf, "r", encoding="utf-8") as f:
                     data = json.load(f)
-            except Exception as e:
+            except Exception:
                 continue
                 
             nivel = data.get("nivel", "intro").lower()

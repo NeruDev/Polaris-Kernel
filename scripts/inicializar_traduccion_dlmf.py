@@ -8,8 +8,6 @@ Lee toc.md y toc_full.md de docs/DLMF-markdown-main/markdown y genera:
 - Un archivo JSON de mapeo de títulos traducidos (metadata/mapeo_titulos_dlmf.json)
 """
 
-import json
-import re
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent

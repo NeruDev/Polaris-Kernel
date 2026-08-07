@@ -1,6 +1,6 @@
-import os
 import re
 from pathlib import Path
+
 
 def main():
     root = Path(__file__).resolve().parents[1]
@@ -33,7 +33,7 @@ def main():
                         target_qmd = qmd
                         target_nivel = qmd.parent.name
                         break
-                except Exception as e:
+                except Exception:
                     pass
             
             if target_qmd:
@@ -65,7 +65,6 @@ def main():
             try:
                 content = qmd.read_text(encoding="utf-8")
                 new_content = content
-                modified = False
                 
                 # Buscar imagenes markdown ![alt](ruta)
                 # que tengan un path con carpetas, ej. src/01_fundamentos/img.svg o ../img.svg
@@ -81,7 +80,7 @@ def main():
                     print(f"  [FIX] Corrigiendo {count} rutas en {qmd.name}")
                     qmd.write_text(new_content, encoding="utf-8")
                     
-            except Exception as e:
+            except Exception:
                 pass
 
 if __name__ == '__main__':

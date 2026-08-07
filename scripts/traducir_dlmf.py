@@ -10,7 +10,6 @@ import os
 import re
 import sys
 from pathlib import Path
-from glosario_matematico import GLOSARIO_MATEMATICO
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 ORIGINAL_MD_DIR = BASE_DIR / "docs" / "DLMF-markdown-main" / "markdown"

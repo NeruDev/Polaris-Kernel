@@ -1,6 +1,6 @@
-import os
 import re
 from pathlib import Path
+
 
 def audit_formulas():
     src_dir = Path("src")

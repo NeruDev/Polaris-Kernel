@@ -1,6 +1,7 @@
-import os
 import json
+import os
 import re
+
 
 def parse_markdown_section(filepath):
     if not os.path.exists(filepath):
@@ -14,7 +15,6 @@ def parse_markdown_section(filepath):
     title = title_match.group(1).strip() if title_match else ""
 
     # Extract Infoboxes (:::{note} ... :::)
-    infoboxes = []
     note_blocks = re.findall(r':::\s*\{note\}\s*\n(.*?)\n:::', content, re.DOTALL)
     
     defines = []

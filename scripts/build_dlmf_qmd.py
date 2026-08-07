@@ -1,8 +1,7 @@
-import os
 import json
 import re
-import sys
 from pathlib import Path
+
 try:
     from deep_translator import GoogleTranslator
 except ImportError:
@@ -106,7 +105,7 @@ def build_qmd():
             for sec in cat.get("secciones", []):
                 contenido = sec.get("contenido", {})
                 eqs = contenido.get("ecuaciones_latex", [])
-                prosa = contenido.get("prosa_teorica", "")
+                contenido.get("prosa_teorica", "")
                 
                 # Split formulas intuitively based on common symbols (just for placing them in subdivisions)
                 for eq in eqs:
